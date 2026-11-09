@@ -5,8 +5,9 @@ description: Fas R1 i Giffå. Använd efter bekräftad fas 0 för att samla in v
 
 # Fas R1 – Samla in
 
-Gå igenom varje källa i `KALLOR.md` för perioden och anteckna varje träff
-som rör en ort i `OMRADE.md`:
+Börja alltid med skillen `skanna-systerrepona`. Gå sedan igenom övriga
+källor i `KALLOR.md` för perioden och anteckna varje träff som rör en ort i
+`OMRADE.md` eller en plats i `platser.csv`:
 
 - **Kallelser, handlingar och protokoll** för KS, KSAU och nämnderna: i
   första hand ur poolen i `moggleif/kommunhandlingar`, som redan har dem
