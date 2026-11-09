@@ -54,7 +54,8 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Varför den är byggd så (beslut)                 | `beslut/` (MADR)          |
 | Vilka orter och områden som bevakas             | `OMRADE.md`               |
 | Skolor, boenden, idrott, föreningar, planer     | `platser.csv`             |
-| Varifrån uppgifterna hämtas                     | `KALLOR.md`               |
+| Varifrån uppgifterna hämtas och hur             | `KALLOR.md`               |
+| Bakgrund om orterna och vad som pågår           | `kunskap/`                |
 | Hur ett ärende skrivs (filnamn, front matter)   | `bevakning/README.md`     |
 | Ett ärendes fakta och källor                    | ärendets fil i `bevakning/` |
 

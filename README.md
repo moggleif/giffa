@@ -15,6 +15,7 @@ beslut/      Beslut som är svåra att ändra.
 KRAV.md      Vad bevakningen ska göra.
 docs/        Den publicerade sidan.
 KALLOR.md    Varifrån uppgifterna hämtas.
+kunskap/     Bakgrund om södra Kungsbacka, med källor.
 OMRADE.md    Vilka orter och områden som räknas till bevakningen.
 platser.csv  Skolor, boenden, idrott, föreningar och planer i orterna.
 ```
