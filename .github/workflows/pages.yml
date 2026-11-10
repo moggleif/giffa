@@ -27,7 +27,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Bygg sidan
         run: python3 -m webbplats _site "${{ github.server_url }}/${{ github.repository }}"
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - id: publicering
