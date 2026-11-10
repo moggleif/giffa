@@ -187,3 +187,12 @@ räknat från byggdagen, och sedan, under en egen rubrik med datumet, de som
 inte har det, med en mening om att det som inte syns i källorna inte
 betyder att inget har hänt. Kortet visar när det senaste steget togs (K16).
 Ärendefilernas status ändras inte.
+
+## K20 – Korten på mobilen
+
+**Givet** en lista med ärenden,
+**när** den visas på en skärm högst 640 punkter bred (40 rem à 16
+punkter i mediefrågan),
+**så** visas korten och teckenförklaringen men inte tidslinjen; korten har
+samma ärenden och länkar till ärendenas sidor. På en bredare skärm visas
+tidslinjen också.
