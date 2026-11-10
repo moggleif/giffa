@@ -2,6 +2,7 @@
 rubrik: Gruppboende på Må 3:100
 ort: Fjärås
 organ: Byggnadsnämndens arbetsutskott
+diarienummer: 2017-0738
 status: beslutat
 ---
 

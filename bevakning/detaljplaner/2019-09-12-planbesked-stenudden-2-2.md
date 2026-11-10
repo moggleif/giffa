@@ -2,6 +2,7 @@
 rubrik: Planbesked för bostäder inom Stenudden 2:2 på Ölmanäs
 ort: Åsa
 organ: Byggnadsnämnden
+diarienummer: PL/2019:24
 status: avbrutet
 ---
 

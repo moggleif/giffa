@@ -2,6 +2,7 @@
 rubrik: Större VA-ledningar Allatorp–Äskatorp
 ort: Gällinge, Fjärås
 organ: Nämnden för Teknik
+diarienummer: TE-2020-00341
 status: klart
 ---
 

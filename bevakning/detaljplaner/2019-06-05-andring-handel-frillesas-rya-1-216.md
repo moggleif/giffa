@@ -2,7 +2,7 @@
 rubrik: Detaljplan och ändring för centrum och handel inom Frillesås-Rya 1:216
 ort: Frillesås
 organ: Byggnadsnämnden
-diarienummer: BN-2021-00010
+diarienummer: PL/2016:93, BN-2021-00010
 status: beslutat
 ---
 

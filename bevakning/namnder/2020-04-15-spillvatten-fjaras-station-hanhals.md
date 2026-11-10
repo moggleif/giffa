@@ -2,13 +2,14 @@
 rubrik: Spillvattenledning Fjärås station–Hanhals
 ort: Fjärås
 organ: Nämnden för Teknik
+diarienummer: TE-2020-00342
 status: klart
 ---
 
-Cirka 4,5 kilometer spillvattenledning mellan Fjärås station och Hanhals,
-för mer kapacitet och mindre risk för bräddning till Hovmanneån och Rolfsån;
-samtidigt förnyades vattenledningen och fibernätet byggdes ut. Slutredovisad
-2020.
+Cirka 4,5 kilometer spillvattenledning mellan Fjärås station och Hanhals.
+Syftet var mer kapacitet, mindre risk för bräddning till Hovmanneån och
+Rolfsån och mindre tillskottsvatten, och att samtidigt förnya
+vattenledningen och bygga ut fibernätet. Slutredovisad 2020.
 
 ## Händelser
 

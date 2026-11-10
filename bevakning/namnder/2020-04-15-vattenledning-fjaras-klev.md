@@ -2,6 +2,7 @@
 rubrik: Dricksvattenledning Fjärås–Klev
 ort: Fjärås
 organ: Nämnden för Teknik
+diarienummer: TE-2020-00338
 status: klart
 ---
 
