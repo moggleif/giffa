@@ -28,7 +28,7 @@ docs/        Sidans stil och skript, som kopieras med i bygget.
 skanning/    Söker igenom kommunhandlingar inför månadens runda.
 tests/       Testerna för bygget och skanningen.
 KALLOR.md    Varifrån uppgifterna hämtas.
-kunskap/     Bakgrund om södra Kungsbacka, med källor.
+kunskap/     Bakgrund om södra Kungsbacka och om sidans läsare, med källor.
 OMRADE.md    Vilka orter och områden som räknas till bevakningen.
 platser.csv  Skolor, boenden, idrott, föreningar och planer i orterna.
 ```
