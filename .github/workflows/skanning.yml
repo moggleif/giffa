@@ -1,0 +1,38 @@
+# Månadens skanning (K11, beslut 0003): söker igenom kommunhandlingar efter
+# orterna, platserna och de öppna ärendenas diarienummer sedan förra rundan
+# och öppnar ett issue med träffarna, som rundan sedan utgår från.
+name: Skanning
+
+on:
+  schedule:
+    - cron: "17 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  skanna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hämta årets och fjolårets handlingar ur kommunhandlingar
+        run: |
+          ar=$(date +%Y)
+          git clone --depth 1 --filter=blob:none --no-checkout \
+            https://github.com/moggleif/kommunhandlingar.git "$RUNNER_TEMP/kh"
+          git -C "$RUNNER_TEMP/kh" sparse-checkout set --no-cone \
+            "data/kungsbacka/*/$ar/" "data/kungsbacka/*/$((ar - 1))/"
+          git -C "$RUNNER_TEMP/kh" checkout
+      - name: Sök
+        run: |
+          python3 -m skanning "$RUNNER_TEMP/kh/data/kungsbacka" \
+            https://moggleif.github.io/kommunhandlingar > "$RUNNER_TEMP/traffar.md"
+      - name: Öppna månadens issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create runda --force --description "Underlag för månadens bevakningsrunda"
+          gh issue create --label runda --body-file "$RUNNER_TEMP/traffar.md" \
+            --title "Bevakningsrunda $(date +%Y-%m): träffar i kommunhandlingar"

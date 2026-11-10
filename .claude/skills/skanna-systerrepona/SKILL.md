@@ -8,6 +8,20 @@ description: Använd i fas R1 av varje bevakningsrunda och innan ett nytt ärend
 Sök alltid igenom båda repona, även när en annan källa redan gett svar.
 Läs bara; ändra inget i dem.
 
+## Börja med månadens issue
+
+`skanning.yml` öppnar den första i varje månad ett issue med etiketten
+`runda` med träffarna i kommunhandlingars dokument sedan förra rundan
+([beslut 0003](../../../beslut/0003-manadens-skanning-i-actions.md)). Finns
+inget sådant issue för perioden, kör samma sökning lokalt från repots rot:
+
+```
+python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar
+```
+
+Läs sedan de sidor som issuet pekar på, och sök det som skriptet inte
+täcker – tabellerna nedan och moggleif/politik – för hand.
+
 ## Söktermer
 
 - Varje ort i `OMRADE.md`.

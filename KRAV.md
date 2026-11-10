@@ -81,3 +81,16 @@ okänd status, ort, steg, nyckel eller okänt avsnitt, ett datum som inte går a
 en källa utan `https`-länk eller händelser som inte står nyast först –
 **när** sidan byggs,
 **så** avbryts bygget med filens namn och felet, och inget publiceras.
+
+## K11 – Månadens skanning
+
+**Givet** orterna i `OMRADE.md`, platserna i `platser.csv`, diarienumren i
+de ärenden som inte är klara eller avbrutna och förra rundan i
+`bevakning/rundor.csv`,
+**när** arbetsflödet `skanning.yml` körs den första i månaden eller för
+hand,
+**så** öppnas ett issue med etiketten `runda` som för varje dokument i
+kommunhandlingar från dagen efter förra rundan listar datum, organ, de
+sidor som nämner en term, en länk till den första och termerna – med
+kommande sammanträden för sig, utan text ur handlingarna, och med de
+källor som inte söktes automatiskt utskrivna.
