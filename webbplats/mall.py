@@ -10,7 +10,13 @@ from html import escape
 
 from webbplats.datum import tid
 
-MENY = (("index.html", "Start"), ("historik.html", "Historik"), ("bevakar.html", "Vad vi bevakar"))
+MENY = (
+    ("index.html", "Start"),
+    ("pagar.html", "Pågår"),
+    ("beslutat.html", "Beslutat"),
+    ("historik.html", "Historik"),
+    ("bevakar.html", "Vad vi bevakar"),
+)
 
 AKTUELL = ' aria-current="page"'
 

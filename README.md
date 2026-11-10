@@ -4,10 +4,10 @@ Vad som beslutas, planeras och byggs i Gällinge, Idala, Fjärås, Frillesås,
 Förlanda och Åsa: kommunstyrelsen, dess arbetsutskott, nämnderna, bygglov,
 detaljplaner och det kommunen publicerar på kungsbacka.se.
 
-**Sidan: <https://moggleif.github.io/giffa/>** – när och var man kan tycka
-till innan något beslutas, det nya sedan förra rundan, det som pågår och
-det som är beslutat, en historik över det som är
-klart, vad som bevakas och en egen sida för varje ärende. Den byggs ur ärendena av `webbplats/` och
+**Sidan: <https://moggleif.github.io/giffa/>** – på startsidan när och var
+man kan tycka till innan något beslutas och det nya sedan förra rundan;
+på egna sidor det som pågår, det som är beslutat, en historik över det som
+är klart, vad som bevakas och en sida för varje ärende. Den byggs ur ärendena av `webbplats/` och
 publiceras på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Bygg den lokalt med
 

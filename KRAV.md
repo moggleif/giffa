@@ -37,11 +37,14 @@ organ, diarienummer, senaste steget och en länk *Läs mer* till ärendets
 egen sida (K18). Raden i tabellen länkar också dit. Knappar ovanför visar bara ärendena i en vald ort; utan
 skriptet står alla.
 
-## K5 – Startsidan: pågår och beslutat
+## K5 – Kort startsida, listor på egna sidor
 
 **Givet** ärenden med `status` `pågår` eller `beslutat`,
 **när** sidan byggs,
-**så** visar startsidan dem under *Pågår* respektive *Beslutat*.
+**så** står de på sidorna *Pågår* respektive *Beslutat* i menyn, med
+tidslinjen och korten. Startsidan visar bara *Tycka till nu* (K12), det
+nya (K6) och hur många ärenden som står på *Pågår*, *Beslutat* och
+*Historik*, med länkar.
 
 ## K6 – Nytt sedan förra rundan
 
@@ -50,14 +53,14 @@ period,
 **när** sidan byggs,
 **så** visar startsidan överst perioden, radens anteckning och ett kort
 för varje ärende med en händelse i perioden. Kortet visar de nya händelserna med källor bakom en hopfälld
-del och länkar till ärendets kort. Har inget ärende en ny händelse står
+del och länkar till ärendets sida (K18). Har inget ärende en ny händelse står
 det, med perioden.
 
 ## K7 – Historik
 
 **Givet** ärenden med `status` `klart` eller `avbrutet`,
 **när** sidan byggs,
-**så** står de på historiksidan och inte på startsidan.
+**så** står de på historiksidan och inte på *Pågår* eller *Beslutat*.
 
 ## K8 – Vad som bevakas
 

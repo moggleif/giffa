@@ -18,7 +18,7 @@ from webbplats.arendesida import arendesida
 from webbplats.bevakar import bevakar
 from webbplats.kontroll import kontrollera
 from webbplats.mall import Sajt
-from webbplats.sidor import historik, startsida
+from webbplats.sidor import LISTOR, lista, startsida
 
 
 def las_arenden(rot: Path, orter: list[str]) -> list[Arende]:
@@ -52,9 +52,9 @@ def bygg(rot: Path, ut: Path, repo: str) -> None:
     shutil.copytree(rot / "docs", ut, dirs_exist_ok=True)
     sidor = {
         "index.html": startsida(sajt, arenden, runda),
-        "historik.html": historik(sajt, arenden),
         "bevakar.html": bevakar(sajt, platser, kallor),
     }
+    sidor |= {listan[0]: lista(sajt, arenden, listan) for listan in LISTOR}
     sidor |= {a.sida: arendesida(sajt, a) for a in arenden}
     (ut / "arende").mkdir(exist_ok=True)
     for namn, html in sidor.items():

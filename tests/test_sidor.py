@@ -13,7 +13,7 @@ from webbplats.bevakar import bevakar
 from webbplats.ikoner import BETYDER
 from webbplats.mall import Sajt
 from webbplats.paverka import SA_GOR
-from webbplats.sidor import historik, startsida
+from webbplats.sidor import LISTOR, lista, startsida
 from webbplats.underlag import Runda
 
 SAJT = Sajt(
@@ -40,17 +40,33 @@ def paverkbart(namn: str) -> object:
     return tolka(f"bevakning/ks/{namn}.md", text)
 
 
+def pagar(arenden: list) -> str:
+    return lista(SAJT, arenden, LISTOR[0])
+
+
+def historik(arenden: list) -> str:
+    return lista(SAJT, arenden, LISTOR[2])
+
+
 class Startsidan(unittest.TestCase):
-    def test_pagar_och_beslutat_men_inte_historiken(self):
-        html = startsida(
-            SAJT, [arende("pågår", "p"), arende("beslutat", "b"), arende("klart", "k")], RUNDA
-        )
-        self.assertLess(html.index("<h2>Pågår</h2>"), html.index('id="p"'))
-        self.assertLess(html.index("<h2>Beslutat</h2>"), html.index('id="b"'))
-        self.assertNotIn('id="k"', html)
+    def test_raknar_listorna_och_visar_inga_kort(self):
+        alla = [arende("pågår", "p"), arende("beslutat", "b"), arende("klart", "k")]
+        html = startsida(SAJT, alla, RUNDA)
+        self.assertIn('<li><a href="pagar.html">Pågår</a>: 1 ärende</li>', html)
+        self.assertIn('<li><a href="historik.html">Historik</a>: 1 ärende</li>', html)
+        self.assertNotIn("<article id=", html)
+        self.assertNotIn("tidslinje", html)
+        self.assertIn('<a href="beslutat.html">Beslutat</a></li>', html)
+
+    def test_varje_lista_har_sina_statusar(self):
+        alla = [arende("pågår", "p"), arende("beslutat", "b"), arende("klart", "k")]
+        html = lista(SAJT, alla, LISTOR[1])
+        self.assertIn("<h1>Beslutat</h1>", html)
+        self.assertIn('id="b"', html)
+        self.assertNotIn('id="p"', html)
 
     def test_tabellens_ar_ikoner_och_lank_till_kortet(self):
-        html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
+        html = pagar([arende("pågår", "p")])
         for ar in ("2025", "2026"):
             self.assertIn(f'<th scope="col">{ar}</th>', html)
         self.assertIn('<a href="arende/p.html">Ny förskola</a>', html)
@@ -58,7 +74,7 @@ class Startsidan(unittest.TestCase):
         self.assertIn('class="band start"', html)
 
     def test_kortet_lankar_till_arendets_sida(self):
-        html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
+        html = pagar([arende("pågår", "p")])
         self.assertIn('<a href="arende/p.html">Läs mer: alla 2 händelser med källor</a>', html)
         self.assertNotIn("Norra Halland", html)
 
@@ -71,7 +87,7 @@ class Startsidan(unittest.TestCase):
         self.assertIn("1 mars 2026</time> till <time datetime=\"2026-03-31\">31 mars 2026</time>. Startärenden.", nytt)
 
     def test_urval_per_ort_ur_omrade(self):
-        html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
+        html = pagar([arende("pågår", "p")])
         self.assertIn('<button type="button" data-urval="Fjärås">Fjärås</button>', html)
         self.assertIn('<tr data-ort="Åsa|Fjärås">', html)
         self.assertIn('<article id="p" data-ort="Åsa|Fjärås">', html)
@@ -90,7 +106,7 @@ class Startsidan(unittest.TestCase):
         self.assertIn("Så kan du påverka, steg för steg", nu)
 
     def test_markering_pa_kort_och_rad(self):
-        html = startsida(SAJT, [paverkbart("s")], RUNDA)
+        html = pagar([paverkbart("s")])
         self.assertIn('<small class="paverka">Tycka till <time datetime="2026-11-10">10 november 2026</time></small>', html)
         kortet = html[html.index('<article id="s"') :]
         self.assertIn('<div class="paverka"><p>Tycka till</p>', kortet)
@@ -100,7 +116,7 @@ class Startsidan(unittest.TestCase):
     def test_vantat_beslut_markeras_preliminart_i_tabellen(self):
         rader = "## Tycka till\n\n- 2026-11-24 · vantas · X. · [K](https://example.org/c)\n\n"
         text = ARENDE.replace("## I media", rader + "## I media")
-        html = startsida(SAJT, [tolka("bevakning/ks/v.md", text)], RUNDA)
+        html = pagar([tolka("bevakning/ks/v.md", text)])
         self.assertIn("24 november 2026</time> (preliminärt)</small>", html)
 
     def test_inga_tillfallen_sags(self):
@@ -114,13 +130,14 @@ class Startsidan(unittest.TestCase):
             '<footer><p>Källkod, ärenden och källor: <a href="https://github.com/agare/giffa">',
             html,
         )
-        self.assertIn("<h2>Pågår</h2><p>Inga ärenden ännu.</p>", html)
+        self.assertIn("<h1>Pågår</h1>\n<p>Ärenden som inte är avgjorda.</p>", pagar([]))
+        self.assertIn("<p>Inga ärenden ännu.</p>", pagar([]))
         self.assertIn('Sidan byggdes <time datetime="2026-11-10">10 november 2026</time>', html)
 
 
 class Lasbarhet(unittest.TestCase):
     def test_forsta_lanken_hoppar_till_innehallet(self):
-        for html in (startsida(SAJT, [], RUNDA), historik(SAJT, [])):
+        for html in (startsida(SAJT, [], RUNDA), historik([])):
             efter_body = html.split("<body>\n", 1)[1]
             self.assertTrue(efter_body.startswith('<a class="hoppa" href="#innehall">'))
             self.assertIn('<main id="innehall" tabindex="-1">', html)
@@ -138,12 +155,12 @@ class Lasbarhet(unittest.TestCase):
 
 class Klarsprak(unittest.TestCase):
     def test_ikoner_kort_och_teckenforklaring_i_klartext(self):
-        html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
+        html = pagar([arende("pågår", "p")])
         self.assertIn("<strong>Samråd</strong> – samråd eller remiss: öppet för synpunkter.", html)
         self.assertIn("Senaste steget: beslut, <time", html)
         self.assertIn("<span>Pågått 2025–2026</span>", html)
         self.assertIn('aria-label="Beslut 2 mars 2026: Nämnden beslutade.', html)
-        self.assertLess(html.index("<h2>Pågår</h2>"), html.index("Vad ikonerna betyder"))
+        self.assertLess(html.index("Vad ikonerna betyder"), html.index("tidslinje"))
 
 
     def test_teckenforklaringen_ar_densamma_som_formatets(self):
@@ -166,7 +183,7 @@ class SaGorDu(unittest.TestCase):
         self.assertIn("står i arbetsutskottets protokoll", rader[1])
         self.assertIn("Lämna skriftliga synpunkter senast sista dagen", rader[2])
         self.assertIn("<details open><summary>Så kan du påverka", nu)
-        self.assertEqual(html.count("Så gör du:"), 6)
+        self.assertEqual(pagar([paverkbart("s")]).count("Så gör du:"), 3)
 
     def test_ett_steg_en_rad(self):
         self.assertEqual(len(set(SA_GOR.values())), len(SA_GOR) - 1)
@@ -188,7 +205,7 @@ class Arendesidan(unittest.TestCase):
 
 class Historiken(unittest.TestCase):
     def test_bara_klart_och_avbrutet(self):
-        html = historik(SAJT, [arende("klart", "k"), arende("avbrutet", "x"), arende("pågår", "p")])
+        html = historik([arende("klart", "k"), arende("avbrutet", "x"), arende("pågår", "p")])
         self.assertIn('id="k"', html)
         self.assertIn('id="x"', html)
         self.assertNotIn('id="p"', html)
