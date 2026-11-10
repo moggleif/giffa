@@ -100,5 +100,5 @@ det viktigaste först och förklara fackord där de står.
 
 Det som inte tas med nu: en sökruta (webbläsarens egen sökning räcker när
 varje sida är kortare), utskriftsformat, mörkt läge och vilka ledamöterna i
-ett organ är och hur man når dem, som ingen av källorna i `KALLOR.md` ger. De prövas igen när
-sidan har använts en tid.
+ett organ är och hur man når dem, som ingen av källorna i `KALLOR.md` ger.
+De prövas igen när sidan har använts en tid.
