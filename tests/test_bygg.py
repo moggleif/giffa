@@ -26,6 +26,8 @@ class Bygg(unittest.TestCase):
             ".nojekyll",
         ):
             self.assertTrue((self.ut / namn).exists(), namn)
+        arenden = list(ROT.glob("bevakning/*/*.md"))
+        self.assertEqual(len(list(self.ut.glob("arende/*.html"))), len(arenden))
 
     def test_felaktigt_arende_stoppar_med_filens_namn(self):
         rot = self.ut / "repo"
@@ -37,6 +39,15 @@ class Bygg(unittest.TestCase):
         with self.assertRaises(SystemExit) as fel:
             bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
         self.assertIn(fil.name, str(fel.exception))
+
+    def test_samma_filnamn_i_tva_kataloger_stoppar(self):
+        rot = self.ut / "repo"
+        shutil.copytree(ROT, rot, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        fil = next(rot.glob("bevakning/ks/*.md"))
+        shutil.copy(fil, rot / "bevakning/namnder" / fil.name)
+        with self.assertRaises(SystemExit) as fel:
+            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
+        self.assertIn(fil.name.removesuffix(".md"), str(fel.exception))
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
-"""Krav: K4, K5, K6, K9 och K12 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9, K12 och K18 i KRAV.md. Test: tests/test_sidor.py.
 
-Ett kort per ärende under tabellen, och korten för det som är nytt sedan
-förra rundan överst på startsidan.
+Ett kort per ärende under tabellen, korten för det som är nytt sedan
+förra rundan överst på startsidan, och delarna som ärendets egen sida
+återanvänder.
 """
 
 from html import escape
@@ -21,11 +22,8 @@ def kort(arende: Arende, sajt: Sajt) -> str:
         + (f"<p>{escape(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
         + markering(arende, sajt.byggd.date())
-        + f"<details><summary>Läs mer: alla {len(arende.handelser)} händelser med källor"
-        "</summary>"
-        f"<ol>{''.join(post(h) for h in arende.handelser)}</ol>{media(arende)}"
-        f'<p><a href="{escape(sajt.repo)}/blob/main/{escape(arende.fil)}">Ärendet i repot</a>'
-        "</p></details></article>"
+        + f'<p><a href="{arende.sida}">Läs mer: alla {len(arende.handelser)} '
+        "händelser med källor</a></p></article>"
     )
 
 
@@ -57,15 +55,15 @@ def media(arende: Arende) -> str:
         f" – {escape(m.var)}</li>"
         for m in arende.media
     )
-    return f"<h4>I media och debatt</h4><ul>{poster}</ul>"
+    return f"<h2>I media och debatt</h2><ul>{poster}</ul>"
 
 
-def nytt_kort(arende: Arende, nya: list[Handelse], adress: str) -> str:
+def nytt_kort(arende: Arende, nya: list[Handelse]) -> str:
     return (
         f'<article data-ort="{escape("|".join(arende.orter))}">{markor(arende)}'
         f"<h3>{escape(arende.falt['rubrik'])}</h3>"
         f"<details><summary>{len(nya)} ny{'a' * (len(nya) > 1)} "
         f"händelse{'r' * (len(nya) > 1)}</summary>"
         f"<ol>{''.join(post(h) for h in nya)}</ol></details>"
-        f'<p><a href="{escape(adress)}#{arende.id}">Hela ärendet</a></p></article>'
+        f'<p><a href="{arende.sida}">Hela ärendet</a></p></article>'
     )

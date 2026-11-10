@@ -12,3 +12,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0003](0003-manadens-skanning-i-actions.md) | Månadens skanning i Actions, rundan skrivs av en agent |
 | [0004](0004-tycka-till-som-eget-avsnitt.md) | Tillfällen att tycka till som eget avsnitt i ärendet |
 | [0005](0005-veckans-kallelser.md) | Veckans kallelser i Actions |
+| [0006](0006-en-sida-per-arende.md) | En egen sida per ärende, med filnamnet som adress |

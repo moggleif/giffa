@@ -6,7 +6,7 @@ html { font-size: 112.5%; }
 body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 0 auto;
        padding: 0 1rem; line-height: 1.5; color: #1a1a1a; background: #fff; }
 [hidden] { display: none !important; }
-main > p, main > ul, main > details, ol.tillfallen { max-width: 32rem; }
+main > p, main > ul, main > details, ol.tillfallen, ol.handelser { max-width: 32rem; }
 :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; box-shadow: 0 0 0 6px #fff; }
 small { font-size: 0.85rem; }
 .hoppa { position: absolute; left: -999rem; }
@@ -65,10 +65,10 @@ table.tidslinje tbody tr:hover { background: var(--yta); }
                 display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
 .kort article:target { border-color: var(--accent); box-shadow: 0 0 0 2px var(--band); }
 .kort h3, .kort h4, .kort p { margin: 0; }
-.kort .organ { color: var(--dampad); font-size: 0.9rem; }
-.kort .paverka { background: var(--band); padding: 0.4rem 0.6rem; border-radius: 4px; }
-.kort .paverka p { font-weight: 600; }
-.kort .paverka ul { margin: 0.3rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
+.organ { color: var(--dampad); font-size: 0.9rem; }
+div.paverka { background: var(--band); padding: 0.4rem 0.6rem; border-radius: 4px; }
+div.paverka > p { font-weight: 600; }
+div.paverka ul { margin: 0.3rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
 table.tidslinje small.paverka { display: inline-block; margin-top: 0.2rem; padding: 0 0.4rem;
                                 border-radius: 999px; background: var(--band);
                                 color: var(--accent); }
@@ -76,7 +76,7 @@ ol.tillfallen { display: grid; gap: 0.5rem; padding-left: 1.2rem; }
 ol.tillfallen time { font-variant-numeric: tabular-nums; }
 .kort details ol, .kort details ul { padding-left: 1.2rem; display: grid; gap: 0.5rem;
                                      font-size: 0.9rem; }
-.kort time { font-variant-numeric: tabular-nums; color: var(--dampad); }
+.kort time, ol.handelser time { font-variant-numeric: tabular-nums; color: var(--dampad); }
 .markor { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .markor span { font-size: 0.85rem; padding: 0.05rem 0.5rem; border-radius: 999px;
                background: var(--band); color: var(--accent); }
@@ -88,3 +88,4 @@ footer { border-top: 1px solid var(--linje); margin-top: 3rem; padding: 1rem 0;
 .sa-gor { display: block; margin-top: 0.3rem; padding-left: 0.6rem;
           border-left: 3px solid var(--accent); }
 ol.tillfallen a.arende { font-weight: 600; }
+ol.handelser { display: grid; gap: 0.5rem; padding-left: 1.2rem; }

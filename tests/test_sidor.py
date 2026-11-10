@@ -8,6 +8,7 @@ from pathlib import Path
 
 from tests.test_arende import ARENDE
 from webbplats.arende import tolka
+from webbplats.arendesida import arendesida
 from webbplats.bevakar import bevakar
 from webbplats.ikoner import BETYDER
 from webbplats.mall import Sajt
@@ -52,21 +53,20 @@ class Startsidan(unittest.TestCase):
         html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
         for ar in ("2025", "2026"):
             self.assertIn(f'<th scope="col">{ar}</th>', html)
-        self.assertIn('<a href="#p">Ny förskola</a>', html)
+        self.assertIn('<a href="arende/p.html">Ny förskola</a>', html)
         self.assertIn('class="steg beslut" href="https://example.org/b#sida-2"', html)
         self.assertIn('class="band start"', html)
 
-    def test_kortet_har_historik_media_och_lank_till_repot(self):
+    def test_kortet_lankar_till_arendets_sida(self):
         html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
-        self.assertIn("Läs mer: alla 2 händelser med källor", html)
-        self.assertIn('<a href="https://example.org/m">Rubrik</a> – Norra Halland', html)
-        self.assertIn('href="https://github.com/agare/giffa/blob/main/bevakning/ks/p.md"', html)
+        self.assertIn('<a href="arende/p.html">Läs mer: alla 2 händelser med källor</a>', html)
+        self.assertNotIn("Norra Halland", html)
 
     def test_nytt_ar_handelserna_i_rundans_period(self):
         html = startsida(SAJT, [arende("klart", "k")], RUNDA)
         nytt = html[html.index('id="nytt"') :]
         self.assertIn("1 ny händelse", nytt)
-        self.assertIn('href="historik.html#k"', nytt)
+        self.assertIn('<a href="arende/k.html">Hela ärendet</a>', nytt)
         self.assertNotIn("Ett förslag.", nytt)
         self.assertIn("1 mars 2026</time> till <time datetime=\"2026-03-31\">31 mars 2026</time>. Startärenden.", nytt)
 
@@ -84,7 +84,7 @@ class Startsidan(unittest.TestCase):
         html = startsida(SAJT, [paverkbart("s"), arende("pågår", "p")], RUNDA)
         nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
         self.assertLess(nu.index("Beslut <time datetime=\"2026-11-10\">tisdag 10 november 2026</time>, i dag"), nu.index("synpunkter senast"))
-        self.assertIn('<a class="arende" href="#s">Ny förskola</a>', nu)
+        self.assertIn('<a class="arende" href="arende/s.html">Ny förskola</a>', nu)
         self.assertNotIn("2026-11-09", html)
         self.assertIn("1 december 2026</time>, om 21 dagar", nu)
         self.assertIn("Så kan du påverka, steg för steg", nu)
@@ -132,7 +132,7 @@ class Lasbarhet(unittest.TestCase):
         storlekar = re.findall(r"font-size: ([0-9.]+)(\w+|%)", stil)
         self.assertEqual({enhet for _, enhet in storlekar}, {"%", "rem"})
         self.assertGreaterEqual(min(float(s) for s, e in storlekar if e == "rem") * bas, 15)
-        spalt = float(re.search(r"ol\.tillfallen \{ max-width: ([0-9.]+)rem", stil).group(1))
+        spalt = float(re.search(r"ol\.handelser \{ max-width: ([0-9.]+)rem", stil).group(1))
         self.assertLessEqual(spalt * bas / 8.4, 70)
 
 
@@ -171,6 +171,19 @@ class SaGorDu(unittest.TestCase):
     def test_ett_steg_en_rad(self):
         self.assertEqual(len(set(SA_GOR.values())), len(SA_GOR) - 1)
         self.assertEqual(SA_GOR["yttrande"], SA_GOR["beslut"])
+
+
+class Arendesidan(unittest.TestCase):
+    def test_allt_om_arendet_med_fast_adress(self):
+        html = arendesida(SAJT, paverkbart("s"))
+        self.assertIn("<title>Ny förskola – Giffå</title>", html)
+        self.assertIn('href="../stil.css"', html)
+        self.assertIn('<a href="../index.html">Start</a>', html)
+        self.assertIn("status: pågår", html)
+        self.assertIn("Så gör du:", html)
+        self.assertIn("Ett förslag. <a", html)
+        self.assertIn('<a href="https://example.org/m">Rubrik</a> – Norra Halland', html)
+        self.assertIn('href="https://github.com/agare/giffa/blob/main/bevakning/ks/s.md"', html)
 
 
 class Historiken(unittest.TestCase):

@@ -7,7 +7,7 @@ detaljplaner och det kommunen publicerar på kungsbacka.se.
 **Sidan: <https://moggleif.github.io/giffa/>** – när och var man kan tycka
 till innan något beslutas, det nya sedan förra rundan, det som pågår och
 det som är beslutat, en historik över det som är
-klart och vad som bevakas. Den byggs ur ärendena av `webbplats/` och
+klart, vad som bevakas och en egen sida för varje ärende. Den byggs ur ärendena av `webbplats/` och
 publiceras på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Bygg den lokalt med
 
