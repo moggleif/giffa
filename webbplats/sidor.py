@@ -1,4 +1,4 @@
-"""Krav: K5, K6, K7 och K8 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K5, K6, K7, K8 och K12 i KRAV.md. Test: tests/test_sidor.py.
 
 Startsidan med det nya, det som pågår och det som är beslutat, historiken
 med det som är klart eller avbrutet och sidan om vad som bevakas.
@@ -10,6 +10,7 @@ from webbplats.arende import Arende
 from webbplats.ikoner import teckenforklaring
 from webbplats.kort import kort, nytt_kort
 from webbplats.mall import Sajt, sida, urval
+from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
 
@@ -26,7 +27,9 @@ def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
         "<p>Vad som beslutas, planeras och byggs i "
         f"{escape(', '.join(sajt.orter))}. Varje händelse länkar till sin källa.</p>"
     )
-    innehall = inledning + urval(sajt) + nytt(arenden, runda) + teckenforklaring() + delar
+    paverka = tycka_till_nu(arenden, sajt.byggd.date(), adress)
+    innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda)
+    innehall += teckenforklaring() + delar
     return sida(sajt, "index.html", "Giffå", innehall)
 
 
@@ -52,8 +55,9 @@ def adress(arende: Arende) -> str:
 def avsnitt(sajt: Sajt, rubrik: str, arenden: list[Arende]) -> str:
     if not arenden:
         return f"<h2>{rubrik}</h2><p>Inga ärenden ännu.</p>"
-    korten = "".join(kort(a, sajt.repo) for a in arenden)
-    return f'<h2>{rubrik}</h2>{tabell(arenden)}<div class="kort">{korten}</div>'
+    korten = "".join(kort(a, sajt) for a in arenden)
+    rader = tabell(arenden, sajt.byggd.date())
+    return f'<h2>{rubrik}</h2>{rader}<div class="kort">{korten}</div>'
 
 
 def historik(sajt: Sajt, arenden: list[Arende]) -> str:

@@ -1,10 +1,13 @@
 # Bygger sidan ur ärendena och publicerar den på GitHub Pages vid varje
-# ändring på main (K3, beslut 0002).
+# ändring på main och varje morgon, så att passerade tillfällen att tycka
+# till försvinner (K3, K12, beslut 0002 och 0004).
 name: Pages
 
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "23 4 * * *"
   workflow_dispatch:
 
 permissions:

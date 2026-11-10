@@ -22,6 +22,17 @@ def arende(status: str, namn: str = "a") -> object:
     return tolka(f"bevakning/ks/{namn}.md", ARENDE.replace("status: pågår", f"status: {status}"))
 
 
+def paverkbart(namn: str) -> object:
+    tillfallen = (
+        "## Tycka till\n\n"
+        "- 2026-12-01 · granskning · Granskningen. · [Underrättelse](https://example.org/g)\n"
+        "- 2026-11-10 · beslut · Nämnden beslutar. · [Kallelse](https://example.org/k)\n"
+        "- 2026-11-09 · beslut · Passerat. · [Kallelse](https://example.org/p)\n\n"
+    )
+    text = ARENDE.replace("## I media och debatt", tillfallen + "## I media och debatt")
+    return tolka(f"bevakning/ks/{namn}.md", text)
+
+
 class Startsidan(unittest.TestCase):
     def test_pagar_och_beslutat_men_inte_historiken(self):
         html = startsida(
@@ -63,13 +74,25 @@ class Startsidan(unittest.TestCase):
         html = startsida(SAJT, [arende("pågår")], Runda(date(2027, 1, 1), date(2027, 1, 31), ""))
         self.assertIn("Inga nya händelser.", html)
 
-    def test_synpunkter_visas(self):
-        text = ARENDE.replace(
-            "status: pågår",
-            "status: pågår\nsynpunkter: https://x.se/s\nsynpunkter_senast: 2026-04-01",
-        )
-        html = startsida(SAJT, [tolka("bevakning/ks/s.md", text)], RUNDA)
-        self.assertIn('Lämna synpunkter senast 2026-04-01: <a href="https://x.se/s">', html)
+    def test_tycka_till_nu_i_tur_och_ordning(self):
+        html = startsida(SAJT, [paverkbart("s"), arende("pågår", "p")], RUNDA)
+        nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
+        self.assertLess(nu.index("Beslut <time>2026-11-10"), nu.index("synpunkter senast"))
+        self.assertIn('<a href="#s">Ny förskola</a>', nu)
+        self.assertNotIn("2026-11-09", html)
+        self.assertIn("Så kan du påverka, steg för steg", nu)
+
+    def test_markering_pa_kort_och_rad(self):
+        html = startsida(SAJT, [paverkbart("s")], RUNDA)
+        self.assertIn('<small class="paverka">Tycka till 2026-11-10</small>', html)
+        kortet = html[html.index('<article id="s"') :]
+        self.assertIn('<div class="paverka"><p>Tycka till</p>', kortet)
+        self.assertIn("Granskning – synpunkter senast <time>2026-12-01", kortet)
+
+    def test_inga_tillfallen_sags(self):
+        html = startsida(SAJT, [arende("pågår")], RUNDA)
+        self.assertIn("Inga kända tillfällen.", html)
+        self.assertNotIn('class="paverka"', html)
 
     def test_sidfoten_lankar_till_repot(self):
         html = startsida(SAJT, [], RUNDA)

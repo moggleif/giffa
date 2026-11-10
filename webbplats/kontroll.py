@@ -1,13 +1,11 @@
-"""Krav: K10 i KRAV.md. Test: tests/test_arende.py.
+"""Krav: K10 och K12 i KRAV.md. Test: tests/test_arende.py.
 
 Det i ett ärende som bara går att pröva mot repots andra filer: orterna i
-OMRADE.md, statusen, datumen, länken för synpunkter och händelsernas
-ordning.
+OMRADE.md, statusen, händelsernas ordning och stegen för att tycka till.
 """
 
-from datetime import date
-
 from webbplats.arende import STATUS, Arende
+from webbplats.paverka import TILLFALLE
 
 
 def kontrollera(arende: Arende, orter: list[str]) -> None:
@@ -20,7 +18,5 @@ def kontrollera(arende: Arende, orter: list[str]) -> None:
     datumen = [h.datum for h in arende.handelser]
     if datumen != sorted(datumen, reverse=True):
         raise ValueError("händelserna står inte nyast först")
-    if senast := arende.falt.get("synpunkter_senast"):
-        date.fromisoformat(senast)
-    if not arende.falt.get("synpunkter", "https://").startswith("https://"):
-        raise ValueError("synpunkter är ingen https-länk")
+    if fel := [t.steg for t in arende.tillfallen if t.steg not in TILLFALLE]:
+        raise ValueError(f"steget går inte att tycka till om: {fel[0]}")

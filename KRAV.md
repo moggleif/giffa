@@ -22,7 +22,9 @@ uppdateras när händelsen ändrar den.
 
 **Givet** en ändring som sammanfogats till `main`,
 **när** arbetsflödet `pages.yml` har kört,
-**så** visar GitHub Pages sidan byggd ur den ändringen.
+**så** visar GitHub Pages sidan byggd ur den ändringen. Sidan byggs också
+om varje morgon, så att passerade tillfällen att tycka till försvinner
+(K12).
 
 ## K4 – Ärendena som tabell och kort
 
@@ -40,9 +42,7 @@ skriptet står alla.
 
 **Givet** ärenden med `status` `pågår` eller `beslutat`,
 **när** sidan byggs,
-**så** visar startsidan dem under *Pågår* respektive *Beslutat*. Ett
-pågående ärende med `synpunkter` visar var och senast när synpunkter kan
-lämnas.
+**så** visar startsidan dem under *Pågår* respektive *Beslutat*.
 
 ## K6 – Nytt sedan förra rundan
 
@@ -101,3 +101,16 @@ inte söktes automatiskt skrivs ut. Ett mellanslag i en term matchar också
 radbrott, och ett diarienummer räknas också med mellanslag efter
 prefixet. Blir rapporten för lång för ett issue kortas den, och hela finns
 som artefakt. Finns dagens issue redan öppnas inget nytt.
+
+## K12 – Tycka till i rätt tid
+
+**Givet** ärenden med avsnittet *Tycka till*, där varje rad är ett
+kommande samråd, en granskning, ett yttrande eller ett beslut med datum
+och källa,
+**när** sidan byggs,
+**så** listar startsidan under *Tycka till nu*, före det nya, alla
+tillfällen från och med byggdagen med det närmaste först och en länk till
+ärendet. Ärendets kort och rad i tabellen markerar dess kommande
+tillfällen, en kort förklaring säger vad man kan göra i varje steg, med
+källa, och det som har passerat visas inte. Ett annat steg i avsnittet
+stoppar bygget.

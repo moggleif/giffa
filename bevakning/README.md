@@ -25,8 +25,6 @@ ort: Åsa
 organ: Kommunstyrelsen
 diarienummer: KS-2003-00165
 status: pågår
-synpunkter: https://www.kungsbacka.se/...
-synpunkter_senast: 2026-12-01
 ---
 
 En eller två meningar om vad ärendet gäller, ur källan.
@@ -35,6 +33,10 @@ En eller två meningar om vad ärendet gäller, ur källan.
 
 - 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna. · [KS protokoll § 161](https://github.com/...#sida-21)
 - 2026-06-02 · forslag · KSAU föreslog samråd. · [KSAU protokoll § 209](https://github.com/...#sida-14)
+
+## Tycka till
+
+- 2026-12-01 · samrad · Samrådet om planprogrammet pågår. · [Samrådet på kungsbacka.se](https://www.kungsbacka.se/...)
 
 ## I media och debatt
 
@@ -50,8 +52,6 @@ En eller två meningar om vad ärendet gäller, ur källan.
 | `organ`             | Organet som driver ärendet                                     |
 | `diarienummer`      | När det finns                                                  |
 | `status`            | `pågår`, `beslutat`, `klart` eller `avbrutet` (se nedan)        |
-| `synpunkter`        | Var synpunkter lämnas, när ärendet är öppet för det (valfri)    |
-| `synpunkter_senast` | Sista dagen för synpunkter, `ÅÅÅÅ-MM-DD` (valfri)               |
 
 **Status** styr var ärendet står på sidan:
 
@@ -78,7 +78,20 @@ tabellen:
 | `avbrutet`   | avbrutet eller upphävt                          |
 | `info`       | information, avstämning eller överprövning      |
 
-Andra avsnitt än *Händelser* och *I media och debatt* stoppar bygget.
+**Tycka till** är valfritt: kommande tillfällen att påverka, i samma
+format som händelserna. Datumet är sista dagen för synpunkter eller
+sammanträdets dag, och steget är `samrad`, `granskning`, `yttrande` eller
+`beslut`. Källan är kallelsen, underrättelsen eller kommunens sida om
+samrådet. Ett kommande beslut tas med när kallelsen eller en annan handling
+säger att ärendet ska upp; sammanträdenas datum finns i kommunhandlingars
+[kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv).
+Det gäller alla sorters ärenden, också lokalbehov, handlingsplaner och
+initiativ. Startsidan visar dem under *Tycka till nu* och döljer dem som
+har passerat (K12). Raderna står kvar; när tillfället har ägt rum blir det
+en händelse.
+
+Andra avsnitt än *Händelser*, *Tycka till* och *I media och debatt*
+stoppar bygget.
 
 **I media och debatt** är valfritt: tidningsartiklar och diskussioner, en
 per rad med datum, rubriken som länk och var den stod. Kungsbacka-Posten och

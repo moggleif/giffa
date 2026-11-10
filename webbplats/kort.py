@@ -1,4 +1,4 @@
-"""Krav: K4, K5, K6 och K9 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9 och K12 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett kort per ärende under tabellen, och korten för det som är nytt sedan
 förra rundan överst på startsidan.
@@ -7,9 +7,11 @@ förra rundan överst på startsidan.
 from html import escape
 
 from webbplats.arende import STEG, Arende, Handelse
+from webbplats.mall import Sajt
+from webbplats.paverka import markering
 
 
-def kort(arende: Arende, repo: str) -> str:
+def kort(arende: Arende, sajt: Sajt) -> str:
     falt, senaste = arende.falt, arende.handelser[0]
     return (
         f'<article id="{arende.id}" data-ort="{escape("|".join(arende.orter))}">'
@@ -17,11 +19,11 @@ def kort(arende: Arende, repo: str) -> str:
         f'<p class="organ">{escape(organ(arende))}</p>'
         + (f"<p>{escape(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senast: {STEG[senaste.steg]} {senaste.datum}</p>"
-        + synpunkter(arende)
+        + markering(arende, sajt.byggd.date())
         + f"<details><summary>Läs mer: händelserna och källorna, "
         f"{len(arende.handelser)} st</summary>"
         f"<ol>{''.join(post(h) for h in arende.handelser)}</ol>{media(arende)}"
-        f'<p><a href="{escape(repo)}/blob/main/{escape(arende.fil)}">Ärendet i repot</a>'
+        f'<p><a href="{escape(sajt.repo)}/blob/main/{escape(arende.fil)}">Ärendet i repot</a>'
         "</p></details></article>"
     )
 
@@ -36,17 +38,6 @@ def markor(arende: Arende) -> str:
 def organ(arende: Arende) -> str:
     diarienummer = arende.falt.get("diarienummer")
     return arende.falt["organ"] + (f" · {diarienummer}" if diarienummer else "")
-
-
-def synpunkter(arende: Arende) -> str:
-    if "synpunkter" not in arende.falt:
-        return ""
-    senast = arende.falt.get("synpunkter_senast")
-    nar = f" senast {senast}" if senast else ""
-    return (
-        f'<p class="paverka">Lämna synpunkter{escape(nar)}: '
-        f'<a href="{escape(arende.falt["synpunkter"])}">så gör du</a></p>'
-    )
 
 
 def post(handelse: Handelse) -> str:

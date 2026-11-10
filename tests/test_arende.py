@@ -28,6 +28,9 @@ om ärendet.
 """
 
 
+FEL_STEG = "- 2026-12-01 · forslag · X. · [K](https://example.org/k)"
+
+
 def andrat(gammalt: str, nytt: str) -> str:
     return ARENDE.replace(gammalt, nytt)
 
@@ -68,9 +71,8 @@ class Kontrollera(unittest.TestCase):
             andrat("status: pågår", "status: oklart"),
             andrat("ort: Åsa, Fjärås", "ort: Åsa, Onsala"),
             andrat("- 2026-03-02", "- 2024-03-02"),
-            andrat("status: pågår", "status: pågår\nsynpunkter_senast: snart"),
+            andrat("## I media", f"## Tycka till\n\n{FEL_STEG}\n\n## I media"),
             ARENDE.split("## Händelser")[0],
-            andrat("status: pågår", "status: pågår\nsynpunkter: http://x.se"),
         ]
         for text in fel:
             with self.subTest(text=text), self.assertRaises(ValueError):

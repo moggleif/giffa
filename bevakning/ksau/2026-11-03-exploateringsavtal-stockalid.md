@@ -14,3 +14,7 @@ träda in i exploateringsavtalet. Kommunstyrelsen har inte beslutat än.
 ## Händelser
 
 - 2026-11-03 · forslag · Kommunstyrelsens arbetsutskott föreslog att Torps Gård Flerfamiljshus AB träder in som part i exploateringsavtalet i stället för Nordr Villatomter AB. · [KSAU protokoll § 329](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/protokoll.html#sida-10)
+
+## Tycka till
+
+- 2026-11-24 · beslut · Kommunstyrelsen väntas besluta om partsbytet, på sitt nästa sammanträde enligt kommunhandlingars kalender. Kallelsen har inte kommit, så det är inte säkert att ärendet tas upp då. · [KSAU protokoll § 329](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/protokoll.html#sida-10)
