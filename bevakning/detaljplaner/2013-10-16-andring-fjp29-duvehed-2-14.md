@@ -8,7 +8,9 @@ status: beslutat
 
 Ändringen ökar tillåten byggnadsarea inom del av Duveheds verksamhetsområde,
 justerar gata och natur och digitaliserar planen. Planprogrammet för
-verksamhetsområdet godkändes 2013.
+verksamhetsområdet godkändes 2013. Planprogrammet gällde hela
+verksamhetsområdet; den ursprungliga detaljplanen, som fick laga kraft 2016,
+syns inte i protokollen här.
 
 ## Händelser
 
