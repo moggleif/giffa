@@ -155,7 +155,7 @@ när sidan byggdes på samma sätt.
 **Givet** stegen i `bevakning/README.md`,
 **när** sidan byggs,
 **så** har varje steg ett kort namn och betydelsen ur tabellen där, som
-står i teckenförklaringen direkt ovanför varje tidslinje. Ikonens text
+står i teckenförklaringen överst på varje lista. Ikonens text
 börjar med stegets namn och datum, kortet säger *Senaste steget:* med
 namn och datum, och årtalen på kortet står som *Pågått 2014–2026*.
 
@@ -177,3 +177,13 @@ diarienummer, status, ingress, tillfällena att tycka till, alla händelser
 med källor, länkarna under *I media och debatt* och en länk till filen i
 repot. Kort, tabellrader, *Tycka till nu* och *Nytt sedan förra rundan*
 länkar dit, och adressen är densamma vilken status ärendet än har.
+
+## K19 – Det som rör sig först
+
+**Givet** ärenden med `status` `pågår`,
+**när** sidan *Pågår* byggs,
+**så** står först de som har en händelse de senaste två åren (730 dagar)
+räknat från byggdagen, och sedan, under en egen rubrik med datumet, de som
+inte har det, med en mening om att det som inte syns i källorna inte
+betyder att inget har hänt. Kortet visar när det senaste steget togs (K16).
+Ärendefilernas status ändras inte.
