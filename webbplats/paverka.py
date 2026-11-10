@@ -67,41 +67,39 @@ LOKALPLAN = (
     "https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-10-14/"
     "protokoll.html#sida-13"
 )
+KALLA_MOTET = f'<a href="{KALENDER}">Kommunhandlingars kalender</a>'
+KALLA_SAMRAD = f'<a href="{PBL}">Plan- och bygglagen 5 kap. 11 §</a>'
+KALLA_GRANSKNING = f'<a href="{PBL}">Plan- och bygglagen 5 kap. 18–19 §§</a>'
+FORE_MOTET = "Före sammanträdet går ledamöterna och partierna att nå med synpunkter."
+OVERKLAGA = (
+    "den som inte senast under granskningstiden har lämnat skriftliga synpunkter kan "
+    "förlora rätten att överklaga beslutet att anta planen."
+)
+SAMRADER = "kommunen samråder bland andra med sakägare, boende som berörs och enskilda med "
+SAMRADER += "väsentligt intresse."
+
 STEGEN = (
     "<li><strong>Inför ett beslut</strong> i en nämnd, ett arbetsutskott, kommunstyrelsen "
     "eller fullmäktige, också om lokalbehov, handlingsplaner och initiativ: förslaget står i "
-    "arbetsutskottets protokoll och i kallelsen till sammanträdet. Före sammanträdet går "
-    "ledamöterna och partierna att nå med synpunkter. Ett datum märkt preliminärt är "
-    "organets nästa sammanträde, innan kallelsen har kommit. "
-    f'<a href="{KALENDER}">Kommunhandlingars kalender</a></li>'
+    f"arbetsutskottets protokoll och i kallelsen till sammanträdet. {FORE_MOTET} Ett datum "
+    f"märkt preliminärt är organets nästa sammanträde, innan kallelsen har kommit. {KALLA_MOTET}</li>"
     "<li><strong>Lokalbehov</strong>: nämndernas behov sammanställs i kommunens lokalplan, "
     f'som är en del av flerårsbudgeten. <a href="{LOKALPLAN}">FG protokoll § 102</a></li>'
-    "<li><strong>Samråd</strong> om ett planprogram eller en detaljplan: kommunen samråder "
-    "bland andra med sakägare, boende som berörs och enskilda med väsentligt intresse. "
-    f'<a href="{PBL}">Plan- och bygglagen 5 kap. 11 §</a></li>'
+    f"<li><strong>Samråd</strong> om ett planprogram eller en detaljplan: {SAMRADER} "
+    f"{KALLA_SAMRAD}</li>"
     "<li><strong>Granskning</strong> av ett planförslag, minst två veckor och vid utökat "
-    "förfarande tre: den som inte "
-    "senast under granskningstiden har lämnat skriftliga synpunkter kan förlora rätten att "
-    f'överklaga beslutet att anta planen. <a href="{PBL}">'
-    "Plan- och bygglagen 5 kap. 18–19 §§</a></li>"
+    f"förfarande tre: {OVERKLAGA} {KALLA_GRANSKNING}</li>"
 )
+SA_GOR = {
+    "samrad": f"Lämna synpunkter till kommunen senast sista dagen; {SAMRADER} {KALLA_SAMRAD}",
+    "granskning": f"Lämna skriftliga synpunkter senast sista dagen; {OVERKLAGA} "
+    f"{KALLA_GRANSKNING}",
+    "yttrande": f"{FORE_MOTET} Förslaget står i kallelsen. {KALLA_MOTET}",
+    "beslut": f"{FORE_MOTET} Förslaget står i kallelsen. {KALLA_MOTET}",
+    "vantas": f"{FORE_MOTET} Förslaget står i arbetsutskottets protokoll. {KALLA_MOTET}",
+}
 
 
 def forklaring() -> str:
     rubrik = "<summary>Så kan du påverka, steg för steg</summary>"
     return f"<details open>{rubrik}<ul>{STEGEN}</ul></details>"
-
-
-MOTET = (
-    "Skriv eller ring till ledamöterna eller partierna i organet före sammanträdet; "
-    f'förslaget står i kallelsen. <a href="{KALENDER}">Sammanträdena</a>'
-)
-SA_GOR = {
-    "samrad": "Lämna skriftliga synpunkter till kommunen före sista dagen; hur står i "
-    f'samrådshandlingen. <a href="{PBL}">PBL 5 kap. 11 §</a>',
-    "granskning": "Lämna skriftliga synpunkter senast sista dagen. Den som inte gör det kan "
-    f'förlora rätten att överklaga. <a href="{PBL}">PBL 5 kap. 18–19 §§</a>',
-    "yttrande": MOTET,
-    "beslut": MOTET,
-    "vantas": "Datumet är organets nästa sammanträde, innan kallelsen har kommit. " + MOTET,
-}

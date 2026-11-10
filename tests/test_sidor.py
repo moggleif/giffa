@@ -11,6 +11,7 @@ from webbplats.arende import tolka
 from webbplats.bevakar import bevakar
 from webbplats.ikoner import BETYDER
 from webbplats.mall import Sajt
+from webbplats.paverka import SA_GOR
 from webbplats.sidor import historik, startsida
 from webbplats.underlag import Runda
 
@@ -157,10 +158,19 @@ class SaGorDu(unittest.TestCase):
     def test_varje_tillfalle_sager_vad_man_gor(self):
         html = startsida(SAJT, [paverkbart("s")], RUNDA)
         nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
-        self.assertEqual(nu.count("Så gör du:"), 3)
-        self.assertIn("förlora rätten att överklaga. <a", nu)
+        rader = nu.split("<li data-ort=")[1:]
+        self.assertEqual(len(rader), 3)
+        for rad in rader:
+            self.assertRegex(rad, r'^"[^"]+"><a class="arende" [^>]+>Ny förskola</a> <small>Åsa')
+        self.assertIn("Så gör du:</strong> Före sammanträdet går ledamöterna", rader[0])
+        self.assertIn("står i arbetsutskottets protokoll", rader[1])
+        self.assertIn("Lämna skriftliga synpunkter senast sista dagen", rader[2])
         self.assertIn("<details open><summary>Så kan du påverka", nu)
         self.assertEqual(html.count("Så gör du:"), 6)
+
+    def test_ett_steg_en_rad(self):
+        self.assertEqual(len(set(SA_GOR.values())), len(SA_GOR) - 1)
+        self.assertEqual(SA_GOR["yttrande"], SA_GOR["beslut"])
 
 
 class Historiken(unittest.TestCase):
