@@ -1,10 +1,11 @@
-"""Krav: K5, K6, K7 och K12 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K5, K6, K7, K12 och K19 i KRAV.md. Test: tests/test_sidor.py.
 
 Startsidan med det som går att påverka, det nya och hur många ärenden
 varje lista har, och listorna: det som pågår, det som är beslutat och
 historiken med det som är klart eller avbrutet.
 """
 
+from datetime import timedelta
 from html import escape
 
 from webbplats.arende import Arende
@@ -16,6 +17,7 @@ from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
 
+STILLA = timedelta(days=2 * 365)
 LISTOR = (
     ("pagar.html", "Pågår", ("pågår",), "Ärenden som inte är avgjorda."),
     ("beslutat.html", "Beslutat", ("beslutat",), "Ärenden som är avgjorda och att följa."),
@@ -69,8 +71,22 @@ def nytt(arenden: list[Arende], runda: Runda) -> str:
 def lista(sajt: Sajt, arenden: list[Arende], listan: tuple) -> str:
     adress, rubrik, statusar, inledning = listan
     valda = [a for a in arenden if a.falt["status"] in statusar]
-    innehall = f"<p>{inledning}</p>" + urval(sajt) + avsnitt(sajt, valda)
+    delar = pagar_delar(sajt, valda) if statusar == ("pågår",) else avsnitt(sajt, valda)
+    innehall = f"<p>{inledning}</p>" + urval(sajt) + teckenforklaring() + delar
     return sida(sajt, adress, rubrik, innehall)
+
+
+def pagar_delar(sajt: Sajt, arenden: list[Arende]) -> str:
+    grans = sajt.byggd.date() - STILLA
+    rorliga = [a for a in arenden if a.handelser[0].datum >= grans]
+    stilla = [a for a in arenden if a.handelser[0].datum < grans]
+    return (
+        f'<h2 id="rorliga">Med en händelse sedan {tid(grans)}</h2>{avsnitt(sajt, rorliga)}'
+        f'<h2 id="stilla">Ingen händelse sedan {tid(grans)}</h2>'
+        "<p>Ärenden som inte är avgjorda men där ingen ny händelse syns på två år. "
+        "Att inget syns i källorna betyder inte att inget har hänt.</p>"
+        f"{avsnitt(sajt, stilla)}"
+    )
 
 
 def avsnitt(sajt: Sajt, arenden: list[Arende]) -> str:
@@ -78,4 +94,4 @@ def avsnitt(sajt: Sajt, arenden: list[Arende]) -> str:
         return "<p>Inga ärenden ännu.</p>"
     korten = "".join(kort(a, sajt) for a in arenden)
     rader = tabell(arenden, sajt.byggd.date())
-    return f'{teckenforklaring()}{rader}<div class="kort">{korten}</div>'
+    return f'{rader}<div class="kort">{korten}</div>'
