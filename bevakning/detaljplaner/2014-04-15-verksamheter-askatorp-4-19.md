@@ -12,6 +12,8 @@ gavs 2016 utifrån ett planprogram från 2009. Arbetsutskottet föreslog
 antagande i november 2019, och planen FJP32 för Äskatorp togs 2021 med i
 kommunens VA-verksamhetsområde. Kommunen sålde sedan tomter i området, 2021
 och 2022.
+Redan 2014 överlät kommunen mark och gårdsbyggnader inom Äskatorp 4:19;
+kopplingen till detaljplanen från 2016 är osäker.
 
 ## Händelser
 
@@ -20,3 +22,4 @@ och 2022.
 - 2021-08-24 · beslut · Kommunstyrelsen godkände försäljning av del av Äskatorp 4:19 till Seagull-Eye Property AB för 14,8 miljoner kronor. · [KS protokoll § 204](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-08-24/protokoll.html#sida-16)
 - 2021-06-08 · info · Kommunfullmäktige tog med detaljplan FJP32 (Äskatorp) i verksamhetsområdet för vatten, spillvatten och dagvatten. · [KF protokoll § 99](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2021/2021-06-08/protokoll.html#sida-17)
 - 2019-11-28 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden antar detaljplanen för verksamheter inom Äskatorp 4:19 m.fl. · [Byggnadsnämndens AU protokoll § 580](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-11-28/protokoll.html#sida-14)
+- 2014-04-15 · beslut · Kommunstyrelsen godkände avtal om överlåtelse av mark och gårdsbyggnader inom Äskatorp 4:19. · [KS protokoll § 96](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-04-15/protokoll.html#sida-34)
