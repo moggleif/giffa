@@ -1,7 +1,9 @@
 """K4–K9: tabellen, korten, startsidan, historiken och sidan om bevakningen."""
 
+import re
 import unittest
 from datetime import date, datetime, timezone
+from pathlib import Path
 
 from tests.test_arende import ARENDE
 from webbplats.arende import tolka
@@ -109,6 +111,20 @@ class Startsidan(unittest.TestCase):
             html,
         )
         self.assertIn("<h2>Pågår</h2><p>Inga ärenden ännu.</p>", html)
+
+
+class Lasbarhet(unittest.TestCase):
+    def test_forsta_lanken_hoppar_till_innehallet(self):
+        for html in (startsida(SAJT, [], RUNDA), historik(SAJT, [])):
+            efter_body = html.split("<body>\n", 1)[1]
+            self.assertTrue(efter_body.startswith('<a class="hoppa" href="#innehall">'))
+            self.assertIn('<main id="innehall">', html)
+
+    def test_ingen_text_under_15_punkter(self):
+        stil = (Path(__file__).resolve().parent.parent / "docs/stil.css").read_text()
+        self.assertIn("html { font-size: 112.5%; }", stil)
+        storlekar = [float(s) for s in re.findall(r"font-size: ([0-9.]+)rem", stil)]
+        self.assertGreaterEqual(min(storlekar), 0.85)
 
 
 class Historiken(unittest.TestCase):

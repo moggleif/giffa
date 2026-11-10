@@ -1,4 +1,4 @@
-"""Krav: K9 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K9 och K14 i KRAV.md. Test: tests/test_sidor.py.
 
 Det varje sida har gemensamt: huvudet, menyn, urvalet och sidfoten med
 länken till repot.
@@ -30,8 +30,9 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 <link rel="stylesheet" href="stil.css">
 </head>
 <body>
+<a class="hoppa" href="#innehall">Hoppa till innehållet</a>
 {meny(adress)}
-<main>
+<main id="innehall">
 <h1>{escape(rubrik)}</h1>
 {innehall}
 </main>

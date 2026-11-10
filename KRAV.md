@@ -127,3 +127,12 @@ hopfällda och dokument utan text listade som inte sökta. Hela rapporten
 sparas som artefakt. Finns inga
 träffar öppnas inget issue, och finns veckans issue redan öppnas inget
 nytt.
+
+## K14 – Läsbar för alla
+
+**Givet** en sida på webbplatsen,
+**när** den visas,
+**så** är brödtexten minst 18 punkter och ingen text mindre än 15, den
+första länken hoppar förbi menyn till innehållet, allt som går att välja
+får en tydlig fokusram, knappar och stegikoner har träffytor på minst 32
+punkter och löptexten står i en spalt på högst cirka 70 tecken.
