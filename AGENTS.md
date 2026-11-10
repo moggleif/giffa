@@ -55,7 +55,7 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Vilka orter och områden som bevakas             | `OMRADE.md`               |
 | Skolor, boenden, idrott, föreningar, planer     | `platser.csv`             |
 | Varifrån uppgifterna hämtas och hur             | `KALLOR.md`               |
-| Bakgrund om orterna och vad som pågår           | `kunskap/`                |
+| Bakgrund om orterna, vad som pågår och läsarna  | `kunskap/`                |
 | Hur ett ärende skrivs (filnamn, front matter)   | `bevakning/README.md`     |
 | Rundornas perioder (vad som är nytt)            | `bevakning/rundor.csv`    |
 | Hur sidan byggs ur ärendena                     | `webbplats/`, beslut 0002 |

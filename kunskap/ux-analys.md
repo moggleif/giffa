@@ -2,9 +2,9 @@
 
 Varför sidan på <https://moggleif.github.io/giffa/> inte blev så bra som
 den borde, och vad som görs åt det. Analysen gjordes 2026-11-10 på sidan
-byggd ur `main` efter historiken (PR #15), med 108 ärenden. Måtten är
-uppmätta i Chromium, på en datorskärm 1280 punkter bred och på en mobil
-390 punkter bred. Varje åtgärd har ett issue med etiketten `ux`.
+byggd ur `main` efter historiken (PR #15, commit `eb92bdb`), med 108
+ärenden. Måtten är ögonblicksbilder, uppmätta med Playwright i Chromium på
+en datorskärm 1280 punkter bred och en emulerad iPhone 12, 390 punkter bred. Varje åtgärd har ett issue med etiketten `ux`.
 
 Läsarna som analysen utgår från:
 
@@ -20,8 +20,8 @@ kan tycka till och när**, så att man hinner före beslutet.
 
 Sidan byggdes inifrån och ut. Formatet för ärendena kom först, och sidan
 visar det formatet: tidslinjen är lånad från kommunhandlingars sidor om
-initiativ och lokalbehov, som är gjorda för den som analyserar många
-ärenden på en gång. Frågorna läsarna kommer med – *vad händer i min ort*,
+initiativ och lokalbehov (se [tabell.py](../webbplats/tabell.py)), och den
+ger mest åt den som jämför många ärenden på en gång. Frågorna läsarna kommer med – *vad händer i min ort*,
 *kan jag påverka det här*, *när* – fick ett avsnitt var, men aldrig sidans
 form. Med fyra startärenden märktes det inte; med 108 ärenden från tretton
 år gör det.
@@ -45,10 +45,13 @@ Fem saker förklarar det mesta:
    hopfälld ruta under listan. Ett tillfälle säger *Beslut väntas,
    preliminärt* men inte vad läsaren kan göra före det: vem man skriver
    till, eller att ett samråd är öppet för alla.
-5. **Historiken fyllde *Pågår*.** Ett ärende vars utfall inte syns i
-   poolen skrivs som `pågår` (se [lärdomarna](lardomar.md)). Av 39 ärenden
-   under *Pågår* har 22 ingen händelse sedan 2024 eller tidigare, ett sedan
-   2014. De döljer de 17 som rör sig nu.
+5. **Historiken fyllde *Pågår*.** Ett ärende som inte är avgjort, eller
+   vars utfall inte syns i poolen, har status `pågår`; ingressen säger då
+   att utfallet är okänt, som i
+   [planbeskedet för Må 2:210](../bevakning/ks/2022-03-08-planbesked-ma-2-210.md).
+   Av 39 ärenden under *Pågår* har 22 ingen händelse i år, 17 ingen sedan
+   2024 eller tidigare och ett ingen sedan 2014. De döljer de 17 som har
+   rört sig i år.
 
 Till det kommer att varje ärendes adress är ett ankare på den sida där det
 står. Ändrar ärendet status flyttar det till en annan sida, och länken
@@ -76,8 +79,7 @@ Uppmätt mot [WCAG 2.2](https://www.w3.org/TR/WCAG22/), nivå AA:
   tabellen, långt från ikonerna längre ner.
 - **Ortsvalet** glöms när man byter sida och går inte att dela som länk.
 
-Klarspråksråden från [Isof](https://www.isof.se/) gäller inte en
-privat sida, men råden passar läsarna: skriv datum som man säger dem, sätt
+Klarspråksråden från [Isof](https://www.isof.se/) passar läsarna: skriv datum som man säger dem, sätt
 det viktigaste först och förklara fackord där de står.
 
 ## Vad som görs
