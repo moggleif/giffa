@@ -17,7 +17,10 @@ där.
 
 ## Konsekvenser
 
-- En ärendefil byter inte namn sedan den publicerats (`bevakning/README.md`).
+- En ärendefil byter inte namn sedan den publicerats (`bevakning/README.md`),
+  inte heller när en tidigare händelse hittas.
+- Två ärendefiler får inte ha samma namn i olika kataloger; bygget stoppar
+  då (K10).
 - Listorna blir kortare, eftersom händelserna inte längre står på dem.
 - Bygget skriver en sida per ärende, och sidor i en underkatalog hämtar
   stilen och menyn med `../`.

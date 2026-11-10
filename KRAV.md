@@ -77,7 +77,8 @@ just de filerna, och länkar till dem för reglerna.
 
 **Givet** ett ärende som inte följer formatet i `bevakning/README.md` –
 okänd status, ort, steg, nyckel eller okänt avsnitt, ett datum som inte går att läsa,
-en källa utan `https`-länk eller händelser som inte står nyast först –
+en källa utan `https`-länk, händelser som inte står nyast först eller samma
+filnamn i två kataloger –
 **när** sidan byggs,
 **så** avbryts bygget med filens namn och felet, och inget publiceras.
 

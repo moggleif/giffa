@@ -23,6 +23,8 @@ from webbplats.sidor import historik, startsida
 
 def las_arenden(rot: Path, orter: list[str]) -> list[Arende]:
     arenden = [las_arende(rot, fil, orter) for fil in sorted(rot.glob("bevakning/*/*.md"))]
+    if dubbletter := sorted({a.id for a in arenden if [b.id for b in arenden].count(a.id) > 1}):
+        raise SystemExit(f"samma filnamn i flera kataloger: {', '.join(dubbletter)}")
     return sorted(arenden, key=lambda a: a.handelser[0].datum, reverse=True)
 
 

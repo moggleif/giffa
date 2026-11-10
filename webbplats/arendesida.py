@@ -14,7 +14,7 @@ from webbplats.paverka import markering
 
 def arendesida(sajt: Sajt, arende: Arende) -> str:
     innehall = (
-        f"{markor(arende)}<p>{escape(organ(arende))} · status: {arende.falt['status']}</p>"
+        f'{markor(arende)}<p class="organ">{escape(organ(arende))} · status: {arende.falt["status"]}</p>'
         + (f"<p>{escape(arende.ingress)}</p>" if arende.ingress else "")
         + markering(arende, sajt.byggd.date())
         + f"<h2>Händelser</h2><ol class=\"handelser\">{''.join(post(h) for h in arende.handelser)}</ol>"

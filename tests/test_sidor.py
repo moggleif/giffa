@@ -132,7 +132,7 @@ class Lasbarhet(unittest.TestCase):
         storlekar = re.findall(r"font-size: ([0-9.]+)(\w+|%)", stil)
         self.assertEqual({enhet for _, enhet in storlekar}, {"%", "rem"})
         self.assertGreaterEqual(min(float(s) for s, e in storlekar if e == "rem") * bas, 15)
-        spalt = float(re.search(r"ol\.tillfallen \{ max-width: ([0-9.]+)rem", stil).group(1))
+        spalt = float(re.search(r"ol\.handelser \{ max-width: ([0-9.]+)rem", stil).group(1))
         self.assertLessEqual(spalt * bas / 8.4, 70)
 
 

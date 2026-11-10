@@ -12,7 +12,7 @@ bevakning/kungsbacka-se/   Övrigt från kungsbacka.se
 ```
 
 Filen heter `ÅÅÅÅ-MM-DD-kort-beskrivning.md` efter datumet på ärendets
-första händelse. Filnamnet är också adressen till ärendets sida,
+första kända händelse när filen skapas. Filnamnet är också adressen till ärendets sida,
 `arende/<filnamn>.html` ([beslut 0006](../beslut/0006-en-sida-per-arende.md)),
 så en fil byter inte namn sedan den publicerats. Webbplatsen byggs ur filerna
 ([beslut 0002](../beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)),
