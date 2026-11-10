@@ -13,7 +13,7 @@ för ett planprogram kring stationen, norr och söder om Kläppavägen. Samråde
 har inte startat enligt protokollen.
 Kommunen har köpt mark kring stationen: Kläppa 1:10 och del av Stockalid
 1:13 2020 och skiften av Kläppa 1:4 2021. Ett planbesked för Kläppa 1:4
-avslogs 2017 men beviljades 2024.
+föreslogs få avslag 2017 men beviljades 2024.
 
 ## Händelser
 
