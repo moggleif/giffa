@@ -13,6 +13,8 @@ Vallby- och Gåsevadholmsvägen. Enligt exploateringsavtalet skulle
 exploatören Derome upplåta minst en tredjedel som hyresrätter och bygga
 cirka 20 seniorbostäder; 2025 sänktes andelen hyresrätter till cirka 23
 procent.
+Förskolan i planområdet är ärendet Äppelgårdens förskola, som
+kommunstyrelsen pausade 2023.
 
 ## Händelser
 
