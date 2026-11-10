@@ -1,0 +1,19 @@
+---
+rubrik: Detaljplan och tomter för verksamheter inom Äskatorp 4:19
+ort: Fjärås
+organ: Byggnadsnämnden
+status: beslutat
+---
+
+Detaljplanen utvidgar verksamhetsområdet längs E6 i Fjärås stationssamhälle,
+norr om Äskatorpsvägen, med cirka 13 000 kvadratmeter byggarea. Uppdraget
+gavs 2016 utifrån ett planprogram från 2009. Arbetsutskottet föreslog
+antagande i november 2019. Kommunen sålde sedan tomter i området, 2021 och
+2022.
+
+## Händelser
+
+- 2022-09-27 · beslut · Kommunstyrelsen godkände ett tilläggsavtal till köpeavtalet för del av Äskatorp 4:19. · [KS protokoll § 212](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-09-27/protokoll.html#sida-20)
+- 2022-01-11 · beslut · Kommunstyrelsens arbetsutskott godkände försäljning av fastigheten Äskatorp 4:9 i Äskatorps verksamhetsområde. · [KSAU protokoll § 12](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-01-11/protokoll.html#sida-19)
+- 2021-08-24 · beslut · Kommunstyrelsen godkände försäljning av del av Äskatorp 4:19 till Seagull-Eye Property AB för 14,8 miljoner kronor. · [KS protokoll § 204](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-08-24/protokoll.html#sida-16)
+- 2019-11-28 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden antar detaljplanen för verksamheter inom Äskatorp 4:19 m.fl. · [Byggnadsnämndens AU protokoll § 580](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-11-28/protokoll.html#sida-14)
