@@ -7,6 +7,7 @@ förra rundan överst på startsidan.
 from html import escape
 
 from webbplats.arende import STEG, Arende, Handelse
+from webbplats.datum import tid
 from webbplats.mall import Sajt
 from webbplats.paverka import markering
 
@@ -18,7 +19,7 @@ def kort(arende: Arende, sajt: Sajt) -> str:
         f"{markor(arende)}<h3>{escape(falt['rubrik'])}</h3>"
         f'<p class="organ">{escape(organ(arende))}</p>'
         + (f"<p>{escape(arende.ingress)}</p>" if arende.ingress else "")
-        + f"<p>Senast: {STEG[senaste.steg]} {senaste.datum}</p>"
+        + f"<p>Senast: {STEG[senaste.steg]} {tid(senaste.datum)}</p>"
         + markering(arende, sajt.byggd.date())
         + f"<details><summary>Läs mer: händelserna och källorna, "
         f"{len(arende.handelser)} st</summary>"
@@ -42,7 +43,7 @@ def organ(arende: Arende) -> str:
 
 def post(handelse: Handelse) -> str:
     return (
-        f"<li><time>{handelse.datum}</time> <strong>{STEG[handelse.steg]}</strong> "
+        f"<li>{tid(handelse.datum)} <strong>{STEG[handelse.steg]}</strong> "
         f"{escape(handelse.text)} "
         f'<a href="{escape(handelse.lank)}">{escape(handelse.kalla)}</a></li>'
     )
@@ -52,7 +53,7 @@ def media(arende: Arende) -> str:
     if not arende.media:
         return ""
     poster = "".join(
-        f'<li><time>{m.datum}</time> <a href="{escape(m.lank)}">{escape(m.rubrik)}</a>'
+        f'<li>{tid(m.datum)} <a href="{escape(m.lank)}">{escape(m.rubrik)}</a>'
         f" – {escape(m.var)}</li>"
         for m in arende.media
     )

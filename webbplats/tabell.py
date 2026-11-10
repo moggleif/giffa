@@ -10,6 +10,7 @@ from datetime import date
 from html import escape
 
 from webbplats.arende import Arende
+from webbplats.datum import tid
 from webbplats.ikoner import ikon
 from webbplats.paverka import kommande
 
@@ -47,7 +48,7 @@ def tycka_till_marke(arende: Arende, idag: date) -> str:
         return ""
     forsta = tillfallen[0]
     preliminart = " (preliminärt)" if forsta.steg == "vantas" else ""
-    return f' <small class="paverka">Tycka till {forsta.datum}{preliminart}</small>'
+    return f' <small class="paverka">Tycka till {tid(forsta.datum)}{preliminart}</small>'
 
 
 def cell(arende: Arende, ar: int, egna: range) -> str:

@@ -7,6 +7,7 @@ tabellen länkar till händelsens källa.
 from html import escape
 
 from webbplats.arende import STEG, Handelse
+from webbplats.datum import klartext
 
 LINJE = 'fill="none" stroke="currentColor" stroke-width="2"'
 FORM = {
@@ -30,7 +31,7 @@ def bild(steg: str) -> str:
 
 
 def ikon(handelse: Handelse) -> str:
-    text = f"{handelse.datum} {STEG[handelse.steg]}: {handelse.text} – {handelse.kalla}"
+    text = f"{klartext(handelse.datum)} {STEG[handelse.steg]}: {handelse.text} – {handelse.kalla}"
     return (
         f'<a class="steg {handelse.steg}" href="{escape(handelse.lank)}" '
         f'title="{escape(text)}" aria-label="{escape(text)}">{bild(handelse.steg)}</a>'
