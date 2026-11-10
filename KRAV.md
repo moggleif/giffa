@@ -115,3 +115,13 @@ tillfällen, en kort förklaring säger vad man kan göra i varje steg, med
 källa, ett väntat beslut märks preliminärt och det som har passerat visas
 inte. Ett annat steg i avsnittet
 stoppar bygget.
+
+## K13 – Veckans kallelser
+
+**Givet** kommunhandlingars kallelser och handlingar till sammanträden
+efter dagen, och samma termer som i K11,
+**när** arbetsflödet `kallelser.yml` körs på måndagen eller för hand,
+**så** öppnas ett issue med etiketten `kallelser` som listar träffarna på
+samma sätt som månadens skanning, med handlingarna hopfällda. Finns inga
+träffar öppnas inget issue, och finns veckans issue redan öppnas inget
+nytt.

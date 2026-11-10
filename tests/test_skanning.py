@@ -5,7 +5,7 @@ from datetime import date
 from pathlib import Path
 
 from skanning.rapport import GRANS, korta
-from skanning.skanna import skanna
+from skanning.skanna import kommande, skanna
 from skanning.termer import monster
 
 FIXTURER = Path(__file__).resolve().parent / "fixtures"
@@ -68,6 +68,19 @@ class Skanning(unittest.TestCase):
         text = korta("<details>\n" + "rad\n" * GRANS)
         self.assertLessEqual(len(text), GRANS)
         self.assertEqual(text.count("</details>"), 1)
+
+
+class Kommande(unittest.TestCase):
+    def test_bara_sammantraden_efter_dagen(self):
+        text = kommande(FIXTURER / "rot", FIXTURER / "kh/data/kungsbacka", BAS, date(2026, 11, 30))
+        self.assertIn("## Kallelser till sammanträden efter 2026-11-30", text)
+        self.assertIn("Sökte i 1 dokument.", text)
+        self.assertIn("2026-12-03 · fg · [kallelse.md]", text)
+        self.assertNotIn("2026-11-20", text)
+
+    def test_inga_traffar(self):
+        text = kommande(FIXTURER / "rot", FIXTURER / "kh/data/kungsbacka", BAS, date(2026, 12, 3))
+        self.assertIn("Inga träffar.", text)
 
 
 class Termer(unittest.TestCase):
