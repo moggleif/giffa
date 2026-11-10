@@ -66,9 +66,9 @@ table.tidslinje tbody tr:hover { background: var(--yta); }
 .kort article:target { border-color: var(--accent); box-shadow: 0 0 0 2px var(--band); }
 .kort h3, .kort h4, .kort p { margin: 0; }
 .kort .organ { color: var(--dampad); font-size: 0.9rem; }
-.kort .paverka { background: var(--band); padding: 0.4rem 0.6rem; border-radius: 4px; }
-.kort .paverka p { font-weight: 600; }
-.kort .paverka ul { margin: 0.3rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
+div.paverka { background: var(--band); padding: 0.4rem 0.6rem; border-radius: 4px; }
+div.paverka > p { font-weight: 600; }
+div.paverka ul { margin: 0.3rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
 table.tidslinje small.paverka { display: inline-block; margin-top: 0.2rem; padding: 0 0.4rem;
                                 border-radius: 999px; background: var(--band);
                                 color: var(--accent); }
@@ -88,3 +88,4 @@ footer { border-top: 1px solid var(--linje); margin-top: 3rem; padding: 1rem 0;
 .sa-gor { display: block; margin-top: 0.3rem; padding-left: 0.6rem;
           border-left: 3px solid var(--accent); }
 ol.tillfallen a.arende { font-weight: 600; }
+ol.handelser { display: grid; gap: 0.5rem; padding-left: 1.2rem; }

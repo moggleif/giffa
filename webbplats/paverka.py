@@ -5,7 +5,6 @@ och beslut i tur och ordning överst på startsidan, och som en markering på
 varje ärendes kort och rad. Det som har passerat visas inte.
 """
 
-from collections.abc import Callable
 from datetime import date
 from html import escape
 
@@ -43,17 +42,17 @@ def markering(arende: Arende, idag: date) -> str:
     return f'<div class="paverka"><p>Tycka till</p><ul>{poster}</ul></div>' if poster else ""
 
 
-def tycka_till_nu(arenden: list[Arende], idag: date, adress: Callable[[Arende], str]) -> str:
+def tycka_till_nu(arenden: list[Arende], idag: date) -> str:
     par = sorted(((t, a) for a in arenden for t in kommande(a, idag)), key=lambda p: p[0].datum)
-    rader = "".join(rad(t, a, adress(a), idag) for t, a in par)
+    rader = "".join(rad(t, a, idag) for t, a in par)
     lista = f'<ol class="tillfallen">{rader}</ol>' if rader else "<p>Inga kända tillfällen.</p>"
     return f'<h2 id="tycka-till">Tycka till nu</h2>{INLEDNING}{lista}{forklaring()}'
 
 
-def rad(t: Handelse, arende: Arende, adress: str, idag: date) -> str:
+def rad(t: Handelse, arende: Arende, idag: date) -> str:
     return (
         f'<li data-ort="{escape("|".join(arende.orter))}">'
-        f'<a class="arende" href="{adress}#{arende.id}">{escape(arende.falt["rubrik"])}</a> '
+        f'<a class="arende" href="{arende.sida}">{escape(arende.falt["rubrik"])}</a> '
         f"<small>{escape(', '.join(arende.orter))}</small><br>{tillfalle(t, idag)}</li>"
     )
 

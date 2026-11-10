@@ -33,9 +33,8 @@ om varje morgon, så att passerade tillfällen att tycka till försvinner
 **så** står de i en tabell med en rad per ärende och en kolumn per år, där
 varje händelse är en ikon som länkar till källan och där stegen skiljs åt
 med form, inte bara färg. Under tabellen har varje ärende ett kort med ort,
-organ, diarienummer, senaste steget och, under *Läs mer*, alla händelser
-med källor och länkarna under *I media och debatt*. Raden i tabellen länkar
-till kortet. Knappar ovanför visar bara ärendena i en vald ort; utan
+organ, diarienummer, senaste steget och en länk *Läs mer* till ärendets
+egen sida (K18). Raden i tabellen länkar också dit. Knappar ovanför visar bara ärendena i en vald ort; utan
 skriptet står alla.
 
 ## K5 – Startsidan: pågår och beslutat
@@ -71,7 +70,7 @@ just de filerna, och länkar till dem för reglerna.
 
 **Givet** en sida på webbplatsen,
 **när** den visas,
-**så** länkar sidfoten till repot och varje ärendekort till ärendets fil, och
+**så** länkar sidfoten till repot och varje ärendes egen sida till ärendets fil, och
 `README.md` länkar till webbplatsen.
 
 ## K10 – Hellre stanna än visa fel
@@ -164,3 +163,13 @@ namn och datum, och årtalen på kortet står som *Pågått 2014–2026*.
 tillfället, och varje tillfälle, där och på ärendets kort, har en rad
 *Så gör du:* för just det steget med en länk till källan. Förklaringen
 *Så kan du påverka, steg för steg* står öppen.
+
+## K18 – En egen sida per ärende
+
+**Givet** ett ärende i `bevakning/`,
+**när** sidan byggs,
+**så** har det en egen sida `arende/<filnamn>.html` med ort, organ,
+diarienummer, status, ingress, tillfällena att tycka till, alla händelser
+med källor, länkarna under *I media och debatt* och en länk till filen i
+repot. Kort, tabellrader, *Tycka till nu* och *Nytt sedan förra rundan*
+länkar dit, och adressen är densamma vilken status ärendet än har.

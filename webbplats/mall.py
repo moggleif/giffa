@@ -1,4 +1,4 @@
-"""Krav: K9 och K14 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K9, K14 och K18 i KRAV.md. Test: tests/test_sidor.py.
 
 Det varje sida har gemensamt: huvudet, menyn, urvalet och sidfoten med
 länken till repot.
@@ -23,31 +23,32 @@ class Sajt:
 
 
 def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
+    rot = "../" * adress.count("/")
     return f"""<!doctype html>
 <html lang="sv">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(rubrik)} – Giffå</title>
-<link rel="stylesheet" href="stil.css">
+<link rel="stylesheet" href="{rot}stil.css">
 </head>
 <body>
 <a class="hoppa" href="#innehall">Hoppa till innehållet</a>
-{meny(adress)}
+{meny(adress, rot)}
 <main id="innehall" tabindex="-1">
 <h1>{escape(rubrik)}</h1>
 {innehall}
 </main>
 {sidfot(sajt)}
-<script src="urval.js"></script>
+<script src="{rot}urval.js"></script>
 </body>
 </html>
 """
 
 
-def meny(aktuell: str) -> str:
+def meny(aktuell: str, rot: str) -> str:
     poster = "".join(
-        f'<li><a href="{adress}"{AKTUELL * (adress == aktuell)}>{namn}</a></li>'
+        f'<li><a href="{rot}{adress}"{AKTUELL * (adress == aktuell)}>{namn}</a></li>'
         for adress, namn in MENY
     )
     return f'<nav aria-label="Webbplatsen"><ul>{poster}</ul></nav>'

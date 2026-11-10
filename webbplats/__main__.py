@@ -1,4 +1,4 @@
-"""Krav: K3–K10 i KRAV.md. Test: tests/test_bygg.py.
+"""Krav: K3–K10 och K18 i KRAV.md. Test: tests/test_bygg.py.
 
 python3 -m webbplats <utkatalog> <repoadress>
 
@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 
 from webbplats import underlag
 from webbplats.arende import Arende, tolka
+from webbplats.arendesida import arendesida
 from webbplats.bevakar import bevakar
 from webbplats.kontroll import kontrollera
 from webbplats.mall import Sajt
@@ -52,6 +53,8 @@ def bygg(rot: Path, ut: Path, repo: str) -> None:
         "historik.html": historik(sajt, arenden),
         "bevakar.html": bevakar(sajt, platser, kallor),
     }
+    sidor |= {a.sida: arendesida(sajt, a) for a in arenden}
+    (ut / "arende").mkdir(exist_ok=True)
     for namn, html in sidor.items():
         (ut / namn).write_text(html, encoding="utf-8")
 

@@ -59,6 +59,10 @@ class Arende:
         return self.fil.rsplit("/", 1)[-1].removesuffix(".md")
 
     @property
+    def sida(self) -> str:
+        return f"arende/{self.id}.html"
+
+    @property
     def orter(self) -> list[str]:
         return [ort.strip() for ort in self.falt["ort"].split(",")]
 

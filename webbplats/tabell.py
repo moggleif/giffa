@@ -37,7 +37,7 @@ def rad(arende: Arende, aren: range, idag: date) -> str:
     celler = "".join(cell(arende, ar, egna) for ar in aren)
     return (
         f'<tr data-ort="{escape("|".join(arende.orter))}"><th scope="row">'
-        f'<a href="#{arende.id}">{escape(arende.falt["rubrik"])}</a> '
+        f'<a href="{arende.sida}">{escape(arende.falt["rubrik"])}</a> '
         f"<small>{escape(', '.join(arende.orter))}</small>{tycka_till_marke(arende, idag)}"
         f"</th>{celler}</tr>"
     )

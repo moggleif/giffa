@@ -28,7 +28,7 @@ def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
         "<p>Vad som beslutas, planeras och byggs i "
         f"{escape(', '.join(sajt.orter))}. Varje händelse länkar till sin källa.</p>"
     )
-    paverka = tycka_till_nu(arenden, sajt.byggd.date(), adress)
+    paverka = tycka_till_nu(arenden, sajt.byggd.date())
     innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda)
     innehall += delar
     return sida(sajt, "index.html", "Giffå", innehall)
@@ -37,7 +37,7 @@ def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
 def nytt(arenden: list[Arende], runda: Runda) -> str:
     fran, till = runda.fran, runda.till
     korten = "".join(
-        nytt_kort(a, nya, adress(a))
+        nytt_kort(a, nya)
         for a in arenden
         if (nya := [h for h in a.handelser if fran <= h.datum <= till])
     )
@@ -47,10 +47,6 @@ def nytt(arenden: list[Arende], runda: Runda) -> str:
         f'<p class="period">Rundans period: {tid(fran)} till {tid(till)}. {escape(runda.anteckning)}</p>'
         f"{innehall}"
     )
-
-
-def adress(arende: Arende) -> str:
-    return "historik.html" if arende.falt["status"] in HISTORIKEN else ""
 
 
 def avsnitt(sajt: Sajt, rubrik: str, arenden: list[Arende]) -> str:

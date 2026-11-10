@@ -26,6 +26,8 @@ class Bygg(unittest.TestCase):
             ".nojekyll",
         ):
             self.assertTrue((self.ut / namn).exists(), namn)
+        arenden = list(ROT.glob("bevakning/*/*.md"))
+        self.assertEqual(len(list(self.ut.glob("arende/*.html"))), len(arenden))
 
     def test_felaktigt_arende_stoppar_med_filens_namn(self):
         rot = self.ut / "repo"
