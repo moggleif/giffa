@@ -1,4 +1,4 @@
-"""K4–K9, K12 och K14: tabellen, korten, startsidan, historiken, sidan om
+"""K4–K9, K12, K14 och K16–K20: tabellen, korten, startsidan, historiken, sidan om
 bevakningen, tillfällena att tycka till och läsbarheten."""
 
 import re
@@ -221,10 +221,11 @@ class StillaArenden(unittest.TestCase):
 
 class Mobilen(unittest.TestCase):
     def test_tidslinjen_doljs_pa_smal_skarm(self):
-        self.assertIn('<div class="tabell tidslinjen">', pagar([arende("pågår", "p")]))
-        stil = (Path(__file__).resolve().parent.parent / "docs/stil.css").read_text()
-        smal = stil.split("@media (max-width: 40rem) {")[1].split("}")[0]
-        self.assertIn(".tidslinjen, details.teckenforklaring { display: none; ", smal)
+        self.assertIn('<table class="tidslinje">', pagar([arende("pågår", "p")]))
+        stil = (Path(__file__).resolve().parent.parent / "docs/stil.css").read_text(encoding="utf-8")
+        smal = stil.split("@media (max-width: 40rem) {")[1].split("\n}")[0]
+        self.assertIn("table.tidslinje { display: none; }", smal)
+        self.assertNotIn("teckenforklaring", smal)
 
 
 class Historiken(unittest.TestCase):

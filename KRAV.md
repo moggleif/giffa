@@ -191,7 +191,8 @@ betyder att inget har hänt. Kortet visar när det senaste steget togs (K16).
 ## K20 – Korten på mobilen
 
 **Givet** en lista med ärenden,
-**när** den visas på en skärm smalare än 40 rem,
-**så** visas korten men inte tidslinjen och dess teckenförklaring; korten
-har samma ärenden och länkar till ärendenas sidor. På en bredare skärm
-visas båda.
+**när** den visas på en skärm högst 640 punkter bred (40 rem à 16
+punkter i mediefrågan),
+**så** visas korten och teckenförklaringen men inte tidslinjen; korten har
+samma ärenden och länkar till ärendenas sidor. På en bredare skärm visas
+tidslinjen också.

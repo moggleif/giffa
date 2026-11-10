@@ -83,7 +83,7 @@ ol.tillfallen time { font-variant-numeric: tabular-nums; }
 footer { border-top: 1px solid var(--linje); margin-top: 3rem; padding: 1rem 0;
          color: var(--dampad); }
 @media (max-width: 40rem) {
-  .tidslinjen, details.teckenforklaring { display: none; }
+  table.tidslinje { display: none; }
 }
 .sa-gor { display: block; margin-top: 0.3rem; padding-left: 0.6rem;
           border-left: 3px solid var(--accent); }
