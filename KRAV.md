@@ -151,7 +151,7 @@ när sidan byggdes på samma sätt.
 
 **Givet** stegen i `bevakning/README.md`,
 **när** sidan byggs,
-**så** har varje steg ett kort namn och en mening om vad det betyder, som
+**så** har varje steg ett kort namn och betydelsen ur tabellen där, som
 står i teckenförklaringen direkt ovanför varje tidslinje. Ikonens text
 börjar med stegets namn och datum, kortet säger *Senaste steget:* med
 namn och datum, och årtalen på kortet står som *Pågått 2014–2026*.

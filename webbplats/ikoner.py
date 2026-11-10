@@ -23,15 +23,15 @@ FORM = {
 }
 
 BETYDER = {
-    "forslag": "Någon har föreslagit något eller fått i uppdrag att utreda det.",
-    "samrad": "Förslaget är ute för synpunkter från dem som berörs.",
-    "granskning": "Det färdiga planförslaget visas. Sista tillfället att lämna synpunkter.",
-    "yttrande": "En nämnd eller myndighet säger vad den tycker om förslaget.",
-    "beslut": "Politikerna har beslutat, till exempel antagit en plan.",
-    "bygge": "Bygget har börjat.",
-    "klart": "Det är färdigt och på plats.",
-    "avbrutet": "Ärendet har stoppats eller upphävts.",
-    "info": "Politikerna har fått information, eller beslutet har överklagats.",
+    "forslag": "förslag, uppdrag eller initiativ",
+    "samrad": "samråd eller remiss: öppet för synpunkter",
+    "granskning": "granskning av ett planförslag",
+    "yttrande": "en nämnd eller myndighet yttrar sig",
+    "beslut": "beslut eller antagande",
+    "bygge": "byggstart eller genomförande",
+    "klart": "klart, på plats",
+    "avbrutet": "avbrutet eller upphävt",
+    "info": "information, avstämning eller överprövning av en högre instans",
 }
 
 
@@ -54,7 +54,7 @@ def ikon(handelse: Handelse) -> str:
 def teckenforklaring() -> str:
     poster = "".join(
         f'<li><span class="steg {steg}">{bild(steg)}</span> '
-        f"<span><strong>{namn.capitalize()}</strong> – {BETYDER[steg]}</span></li>"
+        f"<span><strong>{namn.capitalize()}</strong> – {BETYDER[steg]}.</span></li>"
         for steg, namn in STEG.items()
     )
     return (
