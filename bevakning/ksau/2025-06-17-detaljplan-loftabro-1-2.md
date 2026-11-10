@@ -15,3 +15,4 @@ Kungsbackas för remissvaret.
 
 - 2026-10-20 · yttrande · Kommunstyrelsen antog yttrandet över Varbergs kommuns granskning och sände det till Varbergs kommun. · [KS protokoll § 239](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-10-20/protokoll-kommunstyrelsen-protokoll-2026-10-20-213-249.html#sida-53)
 - 2026-10-13 · forslag · Kommunstyrelsens arbetsutskott föreslog att yttrandet antas. · [KSAU protokoll § 317](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-10-13/protokoll.html#sida-17)
+- 2025-06-17 · yttrande · Kommunstyrelsen antog sitt yttrande över Varbergs kommuns tidigare remiss om detaljplan för del av Löftabro 1:2. · [KS protokoll § 144](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-06-17/protokoll.html#sida-25)
