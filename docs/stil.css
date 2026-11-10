@@ -26,8 +26,10 @@ summary { cursor: pointer; }
                 min-height: 2.5rem; }
 .urval button[aria-pressed="true"] { border-color: var(--accent);
                                      background: var(--band); color: var(--accent); }
-.teckenforklaring { list-style: none; padding: 0; display: flex; flex-wrap: wrap;
-                    gap: 0.25rem 1.5rem; color: var(--dampad); }
+.teckenforklaring { color: var(--dampad); margin-bottom: 1rem; }
+.teckenforklaring ul { list-style: none; padding: 0; display: grid; gap: 0.4rem 1.5rem;
+                       grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
+.teckenforklaring li { display: flex; gap: 0.5rem; align-items: flex-start; }
 .steg { display: inline-block; line-height: 0; padding: 0.1em; margin: 0 1px;
         min-width: 1.8rem; min-height: 1.8rem; box-sizing: border-box;
         text-align: center; vertical-align: middle;

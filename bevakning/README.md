@@ -64,7 +64,8 @@ En eller två meningar om vad ärendet gäller, ur källan.
 vad som hände och källan som länk, åtskilda med ` · `. Länka till handlingens sida på
 [kommunhandlingars webbplats](https://moggleif.github.io/kommunhandlingar/)
 med `#sida-N` när den finns där; i `.md` på GitHub fungerar ankaret inte. Stegen ger ikonen i
-tabellen:
+tabellen, och teckenförklaringen på sidan visar samma betydelser
+(`BETYDER` i `webbplats/ikoner.py`, som ett test håller lika med tabellen):
 
 | Steg         | Betyder                                         |
 | ------------ | ----------------------------------------------- |
@@ -76,7 +77,7 @@ tabellen:
 | `bygge`      | byggstart eller genomförande                     |
 | `klart`      | klart, på plats                                 |
 | `avbrutet`   | avbrutet eller upphävt                          |
-| `info`       | information, avstämning eller överprövning      |
+| `info`       | information, avstämning eller överprövning av en högre instans |
 
 **Tycka till** är valfritt: kommande tillfällen att påverka, i samma
 format som händelserna. Datumet är sista dagen för synpunkter eller

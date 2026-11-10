@@ -9,6 +9,7 @@ from pathlib import Path
 from tests.test_arende import ARENDE
 from webbplats.arende import tolka
 from webbplats.bevakar import bevakar
+from webbplats.ikoner import BETYDER
 from webbplats.mall import Sajt
 from webbplats.sidor import historik, startsida
 from webbplats.underlag import Runda
@@ -56,7 +57,7 @@ class Startsidan(unittest.TestCase):
 
     def test_kortet_har_historik_media_och_lank_till_repot(self):
         html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
-        self.assertIn("Läs mer: händelserna och källorna, 2 st", html)
+        self.assertIn("Läs mer: alla 2 händelser med källor", html)
         self.assertIn('<a href="https://example.org/m">Rubrik</a> – Norra Halland', html)
         self.assertIn('href="https://github.com/agare/giffa/blob/main/bevakning/ks/p.md"', html)
 
@@ -132,6 +133,24 @@ class Lasbarhet(unittest.TestCase):
         self.assertGreaterEqual(min(float(s) for s, e in storlekar if e == "rem") * bas, 15)
         spalt = float(re.search(r"ol\.tillfallen \{ max-width: ([0-9.]+)rem", stil).group(1))
         self.assertLessEqual(spalt * bas / 8.4, 70)
+
+
+class Klarsprak(unittest.TestCase):
+    def test_ikoner_kort_och_teckenforklaring_i_klartext(self):
+        html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
+        self.assertIn("<strong>Samråd</strong> – samråd eller remiss: öppet för synpunkter.", html)
+        self.assertIn("Senaste steget: beslut, <time", html)
+        self.assertIn("<span>Pågått 2025–2026</span>", html)
+        self.assertIn('aria-label="Beslut 2 mars 2026: Nämnden beslutade.', html)
+        self.assertLess(html.index("<h2>Pågår</h2>"), html.index("Vad ikonerna betyder"))
+
+
+    def test_teckenforklaringen_ar_densamma_som_formatets(self):
+        readme = (Path(__file__).resolve().parent.parent / "bevakning/README.md").read_text()
+        efter = readme.split("Stegen ger ikonen")[1]
+        tabellen = next(b for b in efter.split("\n\n") if b.startswith("|"))
+        rader = re.findall(r"^\| `(\w+)` +\| (.+?) +\|$", tabellen, re.M)
+        self.assertEqual(dict(rader), BETYDER)
 
 
 class Historiken(unittest.TestCase):

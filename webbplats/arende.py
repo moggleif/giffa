@@ -11,7 +11,7 @@ from datetime import date
 
 STATUS = ("pågår", "beslutat", "klart", "avbrutet")
 STEG = {
-    "forslag": "förslag eller uppdrag",
+    "forslag": "förslag",
     "samrad": "samråd",
     "granskning": "granskning",
     "yttrande": "yttrande",

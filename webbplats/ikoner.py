@@ -1,4 +1,4 @@
-"""Krav: K4 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4 och K16 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett stegs ikon. Stegen skiljs åt med form, inte bara färg, och varje ikon i
 tabellen länkar till händelsens källa.
@@ -22,6 +22,18 @@ FORM = {
     "info": '<circle cx="8" cy="8" r="3" fill="currentColor"/>',
 }
 
+BETYDER = {
+    "forslag": "förslag, uppdrag eller initiativ",
+    "samrad": "samråd eller remiss: öppet för synpunkter",
+    "granskning": "granskning av ett planförslag",
+    "yttrande": "en nämnd eller myndighet yttrar sig",
+    "beslut": "beslut eller antagande",
+    "bygge": "byggstart eller genomförande",
+    "klart": "klart, på plats",
+    "avbrutet": "avbrutet eller upphävt",
+    "info": "information, avstämning eller överprövning av en högre instans",
+}
+
 
 def bild(steg: str) -> str:
     return (
@@ -31,7 +43,8 @@ def bild(steg: str) -> str:
 
 
 def ikon(handelse: Handelse) -> str:
-    text = f"{klartext(handelse.datum)} {STEG[handelse.steg]}: {handelse.text} – {handelse.kalla}"
+    namn = STEG[handelse.steg].capitalize()
+    text = f"{namn} {klartext(handelse.datum)}: {handelse.text} – {handelse.kalla}"
     return (
         f'<a class="steg {handelse.steg}" href="{escape(handelse.lank)}" '
         f'title="{escape(text)}" aria-label="{escape(text)}">{bild(handelse.steg)}</a>'
@@ -40,7 +53,11 @@ def ikon(handelse: Handelse) -> str:
 
 def teckenforklaring() -> str:
     poster = "".join(
-        f'<li><span class="steg {steg}">{bild(steg)}</span> {betyder}</li>'
-        for steg, betyder in STEG.items()
+        f'<li><span class="steg {steg}">{bild(steg)}</span> '
+        f"<span><strong>{namn.capitalize()}</strong> – {BETYDER[steg]}.</span></li>"
+        for steg, namn in STEG.items()
     )
-    return f'<ul class="teckenforklaring">{poster}</ul>'
+    return (
+        '<details class="teckenforklaring" open><summary>Vad ikonerna betyder</summary>'
+        f"<ul>{poster}</ul></details>"
+    )
