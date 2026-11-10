@@ -5,7 +5,8 @@ description: Fas R1 i Giffå. Använd efter bekräftad fas 0 för att samla in v
 
 # Fas R1 – Samla in
 
-Börja alltid med skillen `skanna-systerrepona`. Gå sedan igenom övriga
+Börja alltid med skillen `skanna-systerrepona` och månadens issue med
+etiketten `runda`. Gå sedan igenom övriga
 källor i `KALLOR.md` för perioden och anteckna varje träff som rör en ort i
 `OMRADE.md` eller en plats i `platser.csv`:
 

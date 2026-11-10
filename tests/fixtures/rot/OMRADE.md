@@ -1,0 +1,6 @@
+# Område
+
+- Åsa
+- Fjärås
+
+## Platser

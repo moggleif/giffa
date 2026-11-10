@@ -15,7 +15,8 @@ description: Fas 7–8 i Giffå. Använd när granskningen är klar, för att pr
    som ändrats, granskningens fynd och hur vart och ett hanterades, och
    `Closes #<nr>` när arbetet kommer från ett issue. För en
    bevakningsrunda: period, källor, nya ärenden, ärenden med nya händelser
-   och det som inte gick att nå.
+   och det som inte gick att nå, och
+   `Closes #<nr>` för månadens issue med etiketten `runda`.
 
 ## Fas 8 – CI och avslut
 
