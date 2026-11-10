@@ -1,7 +1,8 @@
-"""Krav: K5, K6, K7, K8 och K12 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K5, K6, K7 och K12 i KRAV.md. Test: tests/test_sidor.py.
 
-Startsidan med det nya, det som pågår och det som är beslutat, historiken
-med det som är klart eller avbrutet och sidan om vad som bevakas.
+Startsidan med det som går att påverka, det nya och hur många ärenden
+varje lista har, och listorna: det som pågår, det som är beslutat och
+historiken med det som är klart eller avbrutet.
 """
 
 from html import escape
@@ -15,23 +16,38 @@ from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
 
-STARTSIDAN = (("pågår", "Pågår"), ("beslutat", "Beslutat"))
-HISTORIKEN = ("klart", "avbrutet")
+LISTOR = (
+    ("pagar.html", "Pågår", ("pågår",), "Ärenden som inte är avgjorda."),
+    ("beslutat.html", "Beslutat", ("beslutat",), "Ärenden som är avgjorda och att följa."),
+    (
+        "historik.html",
+        "Historik",
+        ("klart", "avbrutet"),
+        "Ärenden som är klara – byggda, på plats – eller avbrutna.",
+    ),
+)
 
 
 def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
-    delar = "".join(
-        avsnitt(sajt, rubrik, [a for a in arenden if a.falt["status"] == status])
-        for status, rubrik in STARTSIDAN
-    )
     inledning = (
         "<p>Vad som beslutas, planeras och byggs i "
         f"{escape(', '.join(sajt.orter))}. Varje händelse länkar till sin källa.</p>"
     )
     paverka = tycka_till_nu(arenden, sajt.byggd.date())
-    innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda)
-    innehall += delar
+    innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda) + oversikt(arenden)
     return sida(sajt, "index.html", "Giffå", innehall)
+
+
+def oversikt(arenden: list[Arende]) -> str:
+    poster = "".join(
+        f'<li><a href="{adress}">{rubrik}</a>: {antal(arenden, statusar)} ärenden</li>'
+        for adress, rubrik, statusar, _ in LISTOR
+    )
+    return f'<h2 id="alla">Alla ärenden</h2><ul class="oversikt">{poster}</ul>'
+
+
+def antal(arenden: list[Arende], statusar: tuple[str, ...]) -> int:
+    return sum(a.falt["status"] in statusar for a in arenden)
 
 
 def nytt(arenden: list[Arende], runda: Runda) -> str:
@@ -49,16 +65,16 @@ def nytt(arenden: list[Arende], runda: Runda) -> str:
     )
 
 
-def avsnitt(sajt: Sajt, rubrik: str, arenden: list[Arende]) -> str:
+def lista(sajt: Sajt, arenden: list[Arende], listan: tuple) -> str:
+    adress, rubrik, statusar, inledning = listan
+    valda = [a for a in arenden if a.falt["status"] in statusar]
+    innehall = f"<p>{inledning}</p>" + urval(sajt) + avsnitt(sajt, valda)
+    return sida(sajt, adress, rubrik, innehall)
+
+
+def avsnitt(sajt: Sajt, arenden: list[Arende]) -> str:
     if not arenden:
-        return f"<h2>{rubrik}</h2><p>Inga ärenden ännu.</p>"
+        return "<p>Inga ärenden ännu.</p>"
     korten = "".join(kort(a, sajt) for a in arenden)
     rader = tabell(arenden, sajt.byggd.date())
-    return f'<h2>{rubrik}</h2>{teckenforklaring()}{rader}<div class="kort">{korten}</div>'
-
-
-def historik(sajt: Sajt, arenden: list[Arende]) -> str:
-    klara = [a for a in arenden if a.falt["status"] in HISTORIKEN]
-    inledning = "<p>Ärenden som är klara – byggda, på plats – eller avbrutna.</p>"
-    innehall = inledning + urval(sajt) + avsnitt(sajt, "Ärendena", klara)
-    return sida(sajt, "historik.html", "Historik", innehall)
+    return f'{teckenforklaring()}{rader}<div class="kort">{korten}</div>'
