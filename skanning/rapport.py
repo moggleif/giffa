@@ -2,7 +2,9 @@
 
 Träffarna som Markdown för månadens issue: en rad per dokument med datum,
 organ, sidorna, en länk till den första på kommunhandlingars webbplats och
-termerna. Ingen text ur handlingarna återges, eftersom den kan innehålla
+termerna. Protokoll och kallelser står först; handlingarna, där en
+lång bilaga kan ge träffar på hundratals sidor, ligger hopfällda sist i
+varje avsnitt. Ingen text ur handlingarna återges, eftersom den kan innehålla
 personnamn. Rapporten kortas så att den ryms i ett issue.
 """
 
@@ -11,6 +13,7 @@ from datetime import date
 from skanning.sok import Traff
 
 GRANS = 60000
+STANG = "\n</details>"
 KORTAD = "\n\nRapporten är kortad. Hela finns som artefakt i körningen.\n"
 
 
@@ -28,15 +31,34 @@ def rapport(traffar: list[Traff], period: tuple[date, date], omfattning: str, ba
 def korta(text: str) -> str:
     if len(text) <= GRANS:
         return text
-    return text[: text.rindex("\n", 0, GRANS - len(KORTAD))] + KORTAD
+    kortad = text[: text.rindex("\n", 0, GRANS - len(KORTAD) - len(STANG))]
+    oppen = kortad.count("<details>") > kortad.count("</details>")
+    return kortad + (STANG if oppen else "") + KORTAD
 
 
 def avsnitt(rubrik: str, traffar: list[Traff], bas: str) -> str:
     if not traffar:
         return f"### {rubrik}\n\nInga träffar.\n\n"
-    dokumenten = dict.fromkeys(t.dokument for t in traffar)
-    rader = [rad([t for t in traffar if t.dokument == d], bas) for d in dokumenten]
-    return f"### {rubrik}\n\n" + "".join(rader) + "\n"
+    dokumenten = list(dict.fromkeys(t.dokument for t in traffar))
+    handlingar = [d for d in dokumenten if ar_handlingar(d)]
+    ovriga = [d for d in dokumenten if not ar_handlingar(d)]
+    forst = rader(ovriga, traffar, bas)
+    return f"### {rubrik}\n\n{forst}{hopfalld(handlingar, traffar, bas)}\n"
+
+
+def ar_handlingar(dokument: str) -> bool:
+    return dokument.rsplit("/", 1)[-1].startswith("handlingar")
+
+
+def hopfalld(dokumenten: list[str], traffar: list[Traff], bas: str) -> str:
+    if not dokumenten:
+        return ""
+    rubrik = f"<summary>Handlingar, {len(dokumenten)} dokument</summary>"
+    return f"\n<details>{rubrik}\n\n{rader(dokumenten, traffar, bas)}\n</details>\n"
+
+
+def rader(dokumenten: list[str], traffar: list[Traff], bas: str) -> str:
+    return "".join(rad([t for t in traffar if t.dokument == d], bas) for d in dokumenten)
 
 
 def rad(sidorna: list[Traff], bas: str) -> str:

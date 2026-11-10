@@ -93,6 +93,8 @@ hand,
 kommunhandlingar med sammanträdesdatum från början av förra rundans period
 – eftersom protokoll publiceras veckor efter sammanträdet – listar datum,
 organ, de sidor som nämner en term, en länk till den första och termerna.
+Protokoll och kallelser står först och handlingarna hopfällda sist i
+varje avsnitt.
 Kommande sammanträden står för sig, ingen text ur handlingarna återges,
 dokument utan text listas som inte sökta och källorna i `KALLOR.md` som
 inte söktes automatiskt skrivs ut. Ett mellanslag i en term matchar också

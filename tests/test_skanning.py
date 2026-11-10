@@ -20,7 +20,7 @@ class Skanning(unittest.TestCase):
     def test_fran_borjan_av_forra_rundan(self):
         text = rapport()
         self.assertIn("## Träffar i kommunhandlingar 2026-11-01 – 2026-11-30", text)
-        self.assertIn("Sökte i 3 dokument med sammanträdesdatum från och med 2026-11-01", text)
+        self.assertIn("Sökte i 4 dokument med sammanträdesdatum från och med 2026-11-01", text)
         self.assertIn("efter 2 orter, 1 platsnamn, 1 diarienummer.", text)
         self.assertNotIn("2026-10-01", text)
 
@@ -46,6 +46,15 @@ class Skanning(unittest.TestCase):
         self.assertIn("2026-12-03 · fg · [kallelse.md]", kommande)
         self.assertIn("sida 4 · Fjärås", kommande)
 
+    def test_handlingarna_hopfallda_efter_protokollen(self):
+        text = rapport()
+        protokoll = text.index("[protokoll.md](https://kh.example/kungsbacka/ks/2026/2026-11-20/")
+        hopfalld = text.index("<details><summary>Handlingar, 1 dokument")
+        handlingar = text.index("[handlingar.md](https://kh.example/kungsbacka/ks/2026/")
+        self.assertLess(protokoll, hopfalld)
+        self.assertLess(hopfalld, handlingar)
+        self.assertLess(handlingar, text.index("</details>"))
+
     def test_ingen_text_ur_handlingarna(self):
         self.assertNotIn("Beslut om", rapport())
 
@@ -54,6 +63,11 @@ class Skanning(unittest.TestCase):
         self.assertLessEqual(len(text), GRANS)
         self.assertTrue(text.endswith("Hela finns som artefakt i körningen.\n"))
         self.assertEqual(korta("kort\n"), "kort\n")
+
+    def test_kortad_rapport_stanger_hopfalld_del(self):
+        text = korta("<details>\n" + "rad\n" * GRANS)
+        self.assertLessEqual(len(text), GRANS)
+        self.assertEqual(text.count("</details>"), 1)
 
 
 class Termer(unittest.TestCase):

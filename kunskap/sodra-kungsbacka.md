@@ -52,8 +52,8 @@ Orterna står i [OMRADE.md](../OMRADE.md), platserna i
   [protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg-au/2026/2026-10-13/protokoll-byggnadsnamndens-arbetsutskott-protokoll-2026-10-13-155-156-158-171.md));
   principavtal för Åsa 3:339 och markanvisning på Åsa 5:246
   ([ks-au 2026-06-02](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks-au/2026/2026-06-02/protokoll.md));
-  planbesked för Ölmanäs 1:17 begärt
-  ([ks-au 2026-09-29](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks-au/2026/2026-09-29/protokoll.md)).
+  planbesked för Ölmanäs 1:17 nekat 2026-10-20
+  ([ks 2026-10-20](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2026/2026-10-20/protokoll-kommunstyrelsen-protokoll-2026-10-20-213-249.md)).
 - **Återvinningscentral (ÅVC)** – en lokaliseringsutredning för en ÅVC i
   södra Kungsbacka pågår; den tillfälliga i Frillesås måste flytta när
   lagret på Frillesås-Rya 3:77 börjar byggas
