@@ -5,10 +5,12 @@ Förlanda och Åsa: kommunstyrelsen, dess arbetsutskott, nämnderna, bygglov,
 detaljplaner och det kommunen publicerar på kungsbacka.se.
 
 **Sidan: <https://moggleif.github.io/giffa/>** – på startsidan när och var
-man kan tycka till innan något beslutas och det nya sedan förra rundan;
-på egna sidor det som pågår (det som rört sig de senaste två åren först), det som är beslutat, en historik över det som
-är klart, vad som bevakas och en sida för varje ärende. Den byggs ur ärendena av `webbplats/` och
-publiceras på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
+man kan tycka till innan något beslutas och det nya sedan förra rundan; på
+egna sidor det som pågår (det som rört sig de senaste två åren först), det
+som är beslutat, en historik över det som är klart, vad som bevakas och en
+sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
+korten. Sidan byggs ur ärendena av `webbplats/` och publiceras på GitHub
+Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Bygg den lokalt med
 
 ```
