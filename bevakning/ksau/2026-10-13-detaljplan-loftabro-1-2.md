@@ -1,14 +1,15 @@
 ---
-rubrik: Varbergs detaljplan för del av Löftabro 1:2
+rubrik: Varbergs kommuns detaljplan för del av Löftabro 1:2
 ort: Frillesås
-organ: Kommunstyrelsen
+organ: Varbergs kommun
 diarienummer: KS-2026-00706
 status: pågår
 ---
 
 Varbergs kommuns förslag till detaljplan för 24 villor längs Löftabrovägen i
 Löftaskog/Stråvalla. Planen ligger i Varbergs kommun men nära kommungränsen och
-Frillesås, och Kungsbacka har yttrat sig över den; därför står den här.
+Frillesås, och Kungsbacka har yttrat sig över den; därför står den här. Diarienumret är
+Kungsbackas för remissvaret.
 
 ## Händelser
 
