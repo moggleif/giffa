@@ -30,6 +30,10 @@ jobs:
         run: |
           python3 -m skanning --kommande "$RUNNER_TEMP/kh/data/kungsbacka" \
             https://moggleif.github.io/kommunhandlingar > "$RUNNER_TEMP/kallelser.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kallelser
+          path: ${{ runner.temp }}/kallelser.md
       - name: Öppna veckans issue
         env:
           GH_TOKEN: ${{ github.token }}

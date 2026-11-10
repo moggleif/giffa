@@ -1,4 +1,4 @@
-"""Krav: K11 i KRAV.md. Test: tests/test_skanning.py.
+"""Krav: K11 och K13 i KRAV.md. Test: tests/test_skanning.py.
 
 Går igenom dokumenten i kommunhandlingars data/<kommun>/<organ>/<år>/<datum>/
 från och med ett datum, sida för sida, och noterar vilka termer varje sida

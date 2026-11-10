@@ -16,7 +16,8 @@ densamma som för månadens skanning; bara urvalet av dokument skiljer.
 
 ## Konsekvenser
 
-- Ett issue i veckan, och bara när något träffar.
+- Ett issue i veckan, och bara när något träffar. En kallelse som
+  publiceras mer än en vecka före mötet kan stå i två veckors issue.
 - Den som läser issuet för in träffar som rör ett bevakat ärende under
   *Tycka till* (`bevakning/README.md`). Det görs av en agent eller en
   människa, precis som rundan.

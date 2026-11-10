@@ -1,6 +1,6 @@
-"""Krav: K11 i KRAV.md. Test: tests/test_skanning.py.
+"""Krav: K11 och K13 i KRAV.md. Test: tests/test_skanning.py.
 
-Träffarna som Markdown för månadens issue: en rad per dokument med datum,
+Träffarna som Markdown för månadens och veckans issue: en rad per dokument med datum,
 organ, sidorna, en länk till den första på kommunhandlingars webbplats och
 termerna. Protokoll och kallelser står först; handlingarna, där en
 lång bilaga kan ge träffar på hundratals sidor, ligger hopfällda sist i

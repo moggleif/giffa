@@ -13,10 +13,10 @@ from pathlib import Path
 from skanning.skanna import kommande, skanna
 
 argument = sys.argv[1:]
-vecka = argument[:1] == ["--kommande"]
-argument = argument[vecka:]
+korning = skanna
+if argument[:1] == ["--kommande"]:
+    korning, argument = kommande, argument[1:]
 if len(argument) not in (2, 3):
     raise SystemExit(__doc__)
 dag = date.fromisoformat(argument[2]) if len(argument) == 3 else datetime.now(timezone.utc).date()
-korning = kommande if vecka else skanna
 print(korning(Path.cwd(), Path(argument[0]), argument[1].rstrip("/"), dag), end="")

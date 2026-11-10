@@ -121,7 +121,9 @@ stoppar bygget.
 **Givet** kommunhandlingars kallelser och handlingar till sammanträden
 efter dagen, och samma termer som i K11,
 **när** arbetsflödet `kallelser.yml` körs på måndagen eller för hand,
-**så** öppnas ett issue med etiketten `kallelser` som listar träffarna på
-samma sätt som månadens skanning, med handlingarna hopfällda. Finns inga
+**så** öppnas ett issue med etiketten `kallelser` som listar datum, organ,
+sidor och termer per dokument som i månadens skanning, med handlingarna
+hopfällda och dokument utan text listade som inte sökta. Hela rapporten
+sparas som artefakt. Finns inga
 träffar öppnas inget issue, och finns veckans issue redan öppnas inget
 nytt.

@@ -28,15 +28,22 @@ def skanna(rot: Path, data: Path, bas: str, till: date) -> str:
     return korta(rapport(funna, (fran, till), text, bas))
 
 
-def kommande(rot: Path, data: Path, bas: str, idag: date) -> str:
-    filer = dokument(data, idag + timedelta(days=1))
-    funna = sok(data, filer, termer(rot))
+def kommande(rot: Path, data: Path, bas: str, dag: date) -> str:
+    filer = dokument(data, dag + timedelta(days=1))
+    tomma = [f for f in filer if not sidor(f.read_text(encoding="utf-8"))]
+    funna = sok(data, [f for f in filer if f not in tomma], termer(rot))
     text = (
-        f"## Kallelser till sammanträden efter {idag}\n\nSökte i {len(filer)} dokument. "
+        f"## Kallelser till sammanträden efter {dag}\n\nSökte i {len(filer)} dokument. "
         "Det som rör ett bevakat ärende förs in under *Tycka till* "
         "(`bevakning/README.md`).\n\n"
     )
+    if tomma:
+        text += f"Utan text, inte sökta: {', '.join(utan_text(data, tomma))}.\n\n"
     return korta(text + avsnitt("Träffar", funna, bas))
+
+
+def utan_text(data: Path, tomma: list[Path]) -> list[str]:
+    return [f.relative_to(data).as_posix() for f in tomma]
 
 
 def sok(data: Path, filer: list[Path], grupper: dict) -> list[Traff]:

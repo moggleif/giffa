@@ -78,6 +78,11 @@ class Kommande(unittest.TestCase):
         self.assertIn("2026-12-03 · fg · [kallelse.md]", text)
         self.assertNotIn("2026-11-20", text)
 
+    def test_dokument_utan_text_listas(self):
+        text = kommande(FIXTURER / "rot", FIXTURER / "kh/data/kungsbacka", BAS, date(2026, 11, 1))
+        self.assertIn("Utan text, inte sökta: vo/2026/2026-11-05/protokoll.md.", text)
+        self.assertIn("<details><summary>Handlingar, 1 dokument", text)
+
     def test_inga_traffar(self):
         text = kommande(FIXTURER / "rot", FIXTURER / "kh/data/kungsbacka", BAS, date(2026, 12, 3))
         self.assertIn("Inga träffar.", text)
