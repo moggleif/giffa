@@ -1,10 +1,11 @@
-"""Krav: K1, K4 och K10 i KRAV.md. Test: tests/test_arende.py.
+"""Krav: K1, K4, K10 och K12 i KRAV.md. Test: tests/test_arende.py.
 
 Läser ett ärende enligt formatet i bevakning/README.md och stoppar med
 felet när något inte följer det.
 """
 
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import date
 
@@ -20,8 +21,10 @@ STEG = {
     "avbrutet": "avbrutet",
     "info": "information",
 }
+TILLFALLEN = ("samrad", "granskning", "yttrande", "beslut", "vantas")
 KRAVS = ("rubrik", "ort", "organ", "status")
-VALFRIA = ("diarienummer", "synpunkter", "synpunkter_senast")
+VALFRIA = ("diarienummer",)
+AVSNITT = ("Händelser", "Tycka till", "I media och debatt")
 LANK = re.compile(r"\[([^\]]+)\]\((https://\S+)\)")
 
 
@@ -48,6 +51,7 @@ class Arende:
     falt: dict[str, str]
     ingress: str
     handelser: list[Handelse]
+    tillfallen: list[Handelse]
     media: list[Mediepost]
 
     @property
@@ -64,13 +68,14 @@ def tolka(fil: str, text: str) -> Arende:
         raise ValueError("front matter saknas")
     _, huvud, kropp = text.split("---\n", 2)
     ingress, avsnitt = dela(kropp)
-    if okanda := set(avsnitt) - {"Händelser", "I media och debatt"}:
+    if okanda := set(avsnitt) - set(AVSNITT):
         raise ValueError(f"okänt avsnitt: {', '.join(sorted(okanda))}")
     return Arende(
         fil,
         falt(huvud),
         ingress,
         [handelse(rad) for rad in avsnitt.get("Händelser", [])],
+        [handelse(rad, TILLFALLEN) for rad in avsnitt.get("Tycka till", [])],
         [mediepost(rad) for rad in avsnitt.get("I media och debatt", [])],
     )
 
@@ -96,9 +101,9 @@ def dela(kropp: str) -> tuple[str, dict[str, list[str]]]:
     return " ".join(delar[0].split()), avsnitt
 
 
-def handelse(rad: str) -> Handelse:
+def handelse(rad: str, stegen: Iterable[str] = STEG) -> Handelse:
     datum, steg, text, kalla = poster(rad, 4)
-    if steg not in STEG:
+    if steg not in stegen:
         raise ValueError(f"okänt steg {steg!r}: {rad}")
     return Handelse(date.fromisoformat(datum), steg, text, *lank(kalla, rad))
 

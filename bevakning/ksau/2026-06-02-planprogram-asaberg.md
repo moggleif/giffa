@@ -8,12 +8,17 @@ status: pågår
 
 Planprogrammet visar hur det cirka 30 hektar stora skogsområdet Åsaberg kan
 få omkring 160 bostäder i småskaliga strukturer, med en ny tillfartsväg från
-Kläppavägen. Kommunstyrelsen gav uppdraget att ta fram programmet 2015. Samrådstiden och var
-synpunkter lämnas står inte i protokollen; det är okänt här.
+Kläppavägen. Kommunstyrelsen gav uppdraget att ta fram programmet 2015. Samrådet pågick
+17 september–18 oktober 2026.
 
 ## Händelser
 
 - 2026-10-21 · yttrande · Nämnden för Teknik antog sitt yttrande över planprogrammet och sände det till kommunstyrelsen. · [Teknik protokoll § 106](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2026/2026-10-21/protokoll.html#sida-3)
 - 2026-10-21 · yttrande · Nämnden för Kultur & Fritid yttrade sig över samrådet och pekade på barnperspektiv, friluftsliv, konst och kulturmiljö. · [Kultur & Fritid protokoll § 123](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2026/2026-10-21/protokoll.html#sida-15)
+- 2026-09-17 · samrad · Samrådet om planprogrammet pågick 17 september–18 oktober 2026. · [Samrådshandlingen i Teknik handlingar](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2026/2026-10-21/handlingar.html#sida-62)
 - 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna och gav kommundirektören i uppdrag att genomföra samråd. · [KS protokoll § 161](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-06-16/protokoll.html#sida-21)
 - 2026-06-02 · forslag · Kommunstyrelsens arbetsutskott föreslog att planprogrammet går ut på samråd. · [KSAU protokoll § 209](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-06-02/protokoll.html#sida-14)
+
+## Tycka till
+
+- 2026-11-12 · yttrande · Nämnden för Miljö & Hälsoskydd föreslås anta sitt yttrande över planprogrammet och sända det till samhällsbyggnadskontoret. · [Miljö & Hälsoskydd kallelse, punkt 6](https://moggleif.github.io/kommunhandlingar/kungsbacka/miljo/2026/2026-11-12/kallelse.html#sida-2)

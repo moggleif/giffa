@@ -13,12 +13,21 @@ Skapa en gren innan något skrivs.
 2. **Skriv** enligt formatet i `bevakning/README.md`. Ett nytt ärende blir
    en fil i källans mapp; en ny händelse läggs överst, med datum och länk,
    och `status` uppdateras när händelsen ändrar den.
-3. **Rundan.** Lägg rundans period sist i `bevakning/rundor.csv`; det är
+3. **Tycka till.** Gå igenom *Kommande sammanträden* i månadens issue och
+   kallelserna som har kommit. Ska ett bevakat ärende upp, eller pågår ett
+   samråd eller en granskning, skriv det under *Tycka till* i ärendet med
+   datum och källa. Har ett arbetsutskott föreslagit ett beslut som inte
+   står i någon kallelse än, skriv det som `vantas` med organets nästa
+   sammanträde ur kommunhandlingars kalender. Se också efter nästa steg för
+   ärendena i kommunhandlingars tabeller för lokalbehov, initiativ och
+   handlingsplaner. Tillfällen som har ägt rum flyttas till *Händelser*
+   (`bevakning/README.md`).
+4. **Rundan.** Lägg rundans period sist i `bevakning/rundor.csv`; det är
    den som visas som *Nytt* på startsidan. Bygg sidan och kör testerna
    enligt `README.md` – ett ärende utanför formatet stoppar bygget.
-4. Återge vad källan säger. Inga slutsatser, inga värderingar. Okänt skrivs
+5. Återge vad källan säger. Inga slutsatser, inga värderingar. Okänt skrivs
    som okänt.
-5. Läs din egen diff mot reglerna i `AGENTS.md` innan fasen är klar.
+6. Läs din egen diff mot reglerna i `AGENTS.md` innan fasen är klar.
 
 Committa, och starta sedan granskningsagenten (`.claude/agents/granskare.md`)
 med grenens namn och perioden. Hittar den något blockerande: rätta och gör

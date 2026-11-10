@@ -13,3 +13,7 @@ beräknas till 2029.
 ## Händelser
 
 - 2026-11-03 · forslag · Kommunstyrelsens arbetsutskott föreslog uppstart av projektet, inhyrning i stället för egen byggnation och finansiering ur lokalplanens löpnummer 514. · [KSAU protokoll § 331](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/protokoll.html#sida-12)
+
+## Tycka till
+
+- 2026-11-24 · vantas · Kommunstyrelsen väntas besluta om uppstarten av projektet; arbetsutskottet har föreslagit beslutet, och datumet är kommunstyrelsens nästa sammanträde. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)

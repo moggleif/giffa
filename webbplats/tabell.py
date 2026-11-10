@@ -1,20 +1,23 @@
-"""Krav: K4 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4 och K12 i KRAV.md. Test: tests/test_sidor.py.
 
 Tidslinjen som på kommunhandlingars sidor om initiativ och lokalbehov: en
 rad per ärende, en kolumn per år och årets händelser som ikoner på ett band
-från första till sista året.
+från första till sista året. Ett ärende med ett kommande tillfälle att
+tycka till får en markering med datumet.
 """
 
+from datetime import date
 from html import escape
 
 from webbplats.arende import Arende
 from webbplats.ikoner import ikon
+from webbplats.paverka import kommande
 
 
-def tabell(arenden: list[Arende]) -> str:
+def tabell(arenden: list[Arende], idag: date) -> str:
     aren = arsspann(arenden)
     huvud = "".join(f'<th scope="col">{ar}</th>' for ar in aren)
-    rader = "".join(rad(a, aren) for a in arenden)
+    rader = "".join(rad(a, aren, idag) for a in arenden)
     return (
         '<div class="tabell"><table class="tidslinje">'
         f'<colgroup><col class="rubrik"></colgroup>'
@@ -28,14 +31,23 @@ def arsspann(arenden: list[Arende]) -> range:
     return range(min(aren), max(aren) + 1)
 
 
-def rad(arende: Arende, aren: range) -> str:
+def rad(arende: Arende, aren: range, idag: date) -> str:
     egna = range(arende.handelser[-1].datum.year, arende.handelser[0].datum.year + 1)
     celler = "".join(cell(arende, ar, egna) for ar in aren)
     return (
         f'<tr data-ort="{escape("|".join(arende.orter))}"><th scope="row">'
         f'<a href="#{arende.id}">{escape(arende.falt["rubrik"])}</a> '
-        f"<small>{escape(', '.join(arende.orter))}</small></th>{celler}</tr>"
+        f"<small>{escape(', '.join(arende.orter))}</small>{tycka_till_marke(arende, idag)}"
+        f"</th>{celler}</tr>"
     )
+
+
+def tycka_till_marke(arende: Arende, idag: date) -> str:
+    if not (tillfallen := kommande(arende, idag)):
+        return ""
+    forsta = tillfallen[0]
+    preliminart = " (preliminärt)" if forsta.steg == "vantas" else ""
+    return f' <small class="paverka">Tycka till {forsta.datum}{preliminart}</small>'
 
 
 def cell(arende: Arende, ar: int, egna: range) -> str:

@@ -25,8 +25,6 @@ ort: Åsa
 organ: Kommunstyrelsen
 diarienummer: KS-2003-00165
 status: pågår
-synpunkter: https://www.kungsbacka.se/...
-synpunkter_senast: 2026-12-01
 ---
 
 En eller två meningar om vad ärendet gäller, ur källan.
@@ -35,6 +33,10 @@ En eller två meningar om vad ärendet gäller, ur källan.
 
 - 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna. · [KS protokoll § 161](https://github.com/...#sida-21)
 - 2026-06-02 · forslag · KSAU föreslog samråd. · [KSAU protokoll § 209](https://github.com/...#sida-14)
+
+## Tycka till
+
+- 2026-12-01 · samrad · Samrådet om planprogrammet pågår. · [Samrådet på kungsbacka.se](https://www.kungsbacka.se/...)
 
 ## I media och debatt
 
@@ -50,8 +52,6 @@ En eller två meningar om vad ärendet gäller, ur källan.
 | `organ`             | Organet som driver ärendet                                     |
 | `diarienummer`      | När det finns                                                  |
 | `status`            | `pågår`, `beslutat`, `klart` eller `avbrutet` (se nedan)        |
-| `synpunkter`        | Var synpunkter lämnas, när ärendet är öppet för det (valfri)    |
-| `synpunkter_senast` | Sista dagen för synpunkter, `ÅÅÅÅ-MM-DD` (valfri)               |
 
 **Status** styr var ärendet står på sidan:
 
@@ -78,7 +78,26 @@ tabellen:
 | `avbrutet`   | avbrutet eller upphävt                          |
 | `info`       | information, avstämning eller överprövning      |
 
-Andra avsnitt än *Händelser* och *I media och debatt* stoppar bygget.
+**Tycka till** är valfritt: kommande tillfällen att påverka, i samma
+format som händelserna. Datumet är sista dagen för synpunkter eller
+sammanträdets dag. Steget är ett av:
+
+| Steg         | Betyder                                                        |
+| ------------ | -------------------------------------------------------------- |
+| `samrad`     | samråd; datumet är sista dagen för synpunkter                   |
+| `granskning` | granskning; datumet är sista dagen för synpunkter               |
+| `yttrande`   | en nämnd ska yttra sig; källan är kallelsen                     |
+| `beslut`     | ärendet står i kallelsen till sammanträdet                      |
+| `vantas`     | ett arbetsutskott har föreslagit beslutet men kallelsen har inte kommit; datumet är organets nästa sammanträde i kommunhandlingars [kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv), som är källan, och sidan märker det preliminärt |
+
+Det gäller alla sorters ärenden, också lokalbehov, handlingsplaner och
+initiativ. Startsidan visar dem under *Tycka till nu* och döljer dem som
+har passerat (K12). När tillfället har ägt rum flyttar rundan raden till
+*Händelser*, med protokollet som källa; ett `vantas` som inte kom upp
+flyttas till nästa sammanträde.
+
+Andra avsnitt än *Händelser*, *Tycka till* och *I media och debatt*
+stoppar bygget.
 
 **I media och debatt** är valfritt: tidningsartiklar och diskussioner, en
 per rad med datum, rubriken som länk och var den stod. Kungsbacka-Posten och
