@@ -1,0 +1,52 @@
+# Veckans kallelser (K13, beslut 0005): söker igenom kallelser och handlingar
+# till kommande sammanträden efter orterna, platserna och de öppna ärendenas
+# diarienummer, och öppnar ett issue när något träffar, så att tillfällen att
+# tycka till hinner föras in före mötet. Issuet hoppas över om veckans finns.
+name: Kallelser
+
+on:
+  schedule:
+    - cron: "47 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  kallelser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hämta årets och nästa års handlingar ur kommunhandlingar
+        run: |
+          ar=$(date +%Y)
+          git clone --depth 1 --filter=blob:none --no-checkout \
+            https://github.com/moggleif/kommunhandlingar.git "$RUNNER_TEMP/kh"
+          git -C "$RUNNER_TEMP/kh" sparse-checkout set --no-cone \
+            "data/kungsbacka/*/$ar/" "data/kungsbacka/*/$((ar + 1))/"
+          git -C "$RUNNER_TEMP/kh" checkout
+      - name: Sök
+        run: |
+          python3 -m skanning --kommande "$RUNNER_TEMP/kh/data/kungsbacka" \
+            https://moggleif.github.io/kommunhandlingar > "$RUNNER_TEMP/kallelser.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kallelser
+          path: ${{ runner.temp }}/kallelser.md
+      - name: Öppna veckans issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -qxF "Inga träffar." "$RUNNER_TEMP/kallelser.md"; then
+            echo "Inga träffar i kommande sammanträden."
+            exit 0
+          fi
+          titel="Kallelser till kommande sammanträden, vecka $(date +%G-W%V)"
+          gh label create kallelser --force --description "Veckans kallelser: tillfällen att tycka till"
+          if gh issue list --label kallelser --state all --search "in:title \"$titel\"" \
+            --json title --jq '.[].title' | grep -qxF "$titel"; then
+            echo "Issuet finns redan: $titel"
+            exit 0
+          fi
+          gh issue create --label kallelser --body-file "$RUNNER_TEMP/kallelser.md" --title "$titel"

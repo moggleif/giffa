@@ -60,6 +60,7 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Rundornas perioder (vad som är nytt)            | `bevakning/rundor.csv`    |
 | Hur sidan byggs ur ärendena                     | `webbplats/`, beslut 0002 |
 | Hur månadens skanning görs                      | `skanning/`, beslut 0003  |
+| Hur veckans kallelser söks                      | `skanning/`, beslut 0005  |
 | Ett ärendes fakta och källor                    | ärendets fil i `bevakning/` |
 
 Skriv aldrig om ett annat dokuments fakta – länka till dem. Ett faktum som

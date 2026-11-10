@@ -48,3 +48,11 @@ Sökningen går också att köra lokalt:
 ```
 python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar
 ```
+
+## Veckans kallelser
+
+Varje måndag söker `kallelser.yml` igenom kallelserna och handlingarna till
+kommande sammanträden på samma sätt och öppnar ett issue med etiketten
+`kallelser` när något träffar ([beslut 0005](beslut/0005-veckans-kallelser.md)).
+Det som rör ett bevakat ärende förs in under *Tycka till*, så att det syns
+på sidan före mötet. Lokalt: `python3 -m skanning --kommande …`.
