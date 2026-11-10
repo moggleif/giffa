@@ -113,6 +113,7 @@ class Startsidan(unittest.TestCase):
             html,
         )
         self.assertIn("<h2>Pågår</h2><p>Inga ärenden ännu.</p>", html)
+        self.assertIn('Sidan byggdes <time datetime="2026-11-10">10 november 2026</time>', html)
 
 
 class Lasbarhet(unittest.TestCase):

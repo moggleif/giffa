@@ -8,6 +8,8 @@ from dataclasses import dataclass
 from datetime import datetime
 from html import escape
 
+from webbplats.datum import tid
+
 MENY = (("index.html", "Start"), ("historik.html", "Historik"), ("bevakar.html", "Vad vi bevakar"))
 
 AKTUELL = ' aria-current="page"'
@@ -63,5 +65,5 @@ def sidfot(sajt: Sajt) -> str:
     repo = escape(sajt.repo)
     return (
         f'<footer><p>Källkod, ärenden och källor: <a href="{repo}">{repo}</a>. '
-        f"Sidan byggdes {sajt.byggd:%Y-%m-%d %H:%M} UTC.</p></footer>"
+        f"Sidan byggdes {tid(sajt.byggd.date())} klockan {sajt.byggd:%H.%M}.</p></footer>"
     )

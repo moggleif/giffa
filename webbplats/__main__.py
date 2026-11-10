@@ -8,8 +8,9 @@ sidorna och det som ligger i docs/ till utkatalogen.
 
 import shutil
 import sys
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from webbplats import underlag
 from webbplats.arende import Arende, tolka
@@ -39,7 +40,8 @@ def las(rot: Path, namn: str) -> str:
 
 
 def bygg(rot: Path, ut: Path, repo: str) -> None:
-    sajt = Sajt(repo, datetime.now(timezone.utc), underlag.orter(las(rot, "OMRADE.md")))
+    byggd = datetime.now(ZoneInfo("Europe/Stockholm"))
+    sajt = Sajt(repo, byggd, underlag.orter(las(rot, "OMRADE.md")))
     arenden = las_arenden(rot, sajt.orter)
     runda = underlag.senaste_runda(las(rot, "bevakning/rundor.csv"))
     platser = underlag.platser(las(rot, "platser.csv"))
