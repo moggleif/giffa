@@ -6,7 +6,7 @@ html { font-size: 112.5%; }
 body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 0 auto;
        padding: 0 1rem; line-height: 1.5; color: #1a1a1a; background: #fff; }
 [hidden] { display: none !important; }
-main > p, main > ul, main > details, ol.tillfallen { max-width: 42rem; }
+main > p, main > ul, main > details, ol.tillfallen { max-width: 32rem; }
 :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; box-shadow: 0 0 0 6px #fff; }
 small { font-size: 0.85rem; }
 .hoppa { position: absolute; left: -999rem; }

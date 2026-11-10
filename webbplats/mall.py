@@ -32,7 +32,7 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 <body>
 <a class="hoppa" href="#innehall">Hoppa till innehållet</a>
 {meny(adress)}
-<main id="innehall">
+<main id="innehall" tabindex="-1">
 <h1>{escape(rubrik)}</h1>
 {innehall}
 </main>

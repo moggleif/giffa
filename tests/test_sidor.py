@@ -1,4 +1,5 @@
-"""K4–K9: tabellen, korten, startsidan, historiken och sidan om bevakningen."""
+"""K4–K9, K12 och K14: tabellen, korten, startsidan, historiken, sidan om
+bevakningen, tillfällena att tycka till och läsbarheten."""
 
 import re
 import unittest
@@ -118,13 +119,17 @@ class Lasbarhet(unittest.TestCase):
         for html in (startsida(SAJT, [], RUNDA), historik(SAJT, [])):
             efter_body = html.split("<body>\n", 1)[1]
             self.assertTrue(efter_body.startswith('<a class="hoppa" href="#innehall">'))
-            self.assertIn('<main id="innehall">', html)
+            self.assertIn('<main id="innehall" tabindex="-1">', html)
 
-    def test_ingen_text_under_15_punkter(self):
+    def test_text_minst_15_punkter_och_spalt_hogst_70_tecken(self):
         stil = (Path(__file__).resolve().parent.parent / "docs/stil.css").read_text()
-        self.assertIn("html { font-size: 112.5%; }", stil)
-        storlekar = [float(s) for s in re.findall(r"font-size: ([0-9.]+)rem", stil)]
-        self.assertGreaterEqual(min(storlekar), 0.85)
+        bas = 16 * float(re.search(r"html \{ font-size: ([0-9.]+)%", stil).group(1)) / 100
+        self.assertEqual(bas, 18)
+        storlekar = re.findall(r"font-size: ([0-9.]+)(\w+|%)", stil)
+        self.assertEqual({enhet for _, enhet in storlekar}, {"%", "rem"})
+        self.assertGreaterEqual(min(float(s) for s, e in storlekar if e == "rem") * bas, 15)
+        spalt = float(re.search(r"ol\.tillfallen \{ max-width: ([0-9.]+)rem", stil).group(1))
+        self.assertLessEqual(spalt * bas / 8.4, 70)
 
 
 class Historiken(unittest.TestCase):
