@@ -64,6 +64,8 @@ def tolka(fil: str, text: str) -> Arende:
         raise ValueError("front matter saknas")
     _, huvud, kropp = text.split("---\n", 2)
     ingress, avsnitt = dela(kropp)
+    if okanda := set(avsnitt) - {"Händelser", "I media och debatt"}:
+        raise ValueError(f"okänt avsnitt: {', '.join(sorted(okanda))}")
     return Arende(
         fil,
         falt(huvud),

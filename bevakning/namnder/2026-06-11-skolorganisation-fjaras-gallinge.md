@@ -12,5 +12,6 @@ Gällingeskolan och Fjärås Bräckaskolan blir F–6-skolor och Smedingeskolan 
 
 ## Händelser
 
-- 2026-10-14 · beslut · Nämnden beslutade att förändra skolorganisationen från läsåret 2028–2029. · [FG protokoll § 101](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/fg/2026/2026-10-14/protokoll.md#sida-11)
-- 2026-06-11 · forslag · Nämnden gav förvaltningen i uppdrag att utreda skolorganiseringen i Fjärås- och Gällingeområdet. · [FG protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/fg/2026/2026-06-11/protokoll.md#sida-7)
+- 2026-10-14 · beslut · Nämnden beslutade att förändra skolorganisationen från läsåret 2028–2029. · [FG protokoll § 101](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-10-14/protokoll.html#sida-11)
+- 2026-10-01 · forslag · Nämndens arbetsutskott föreslog att skolorganisationen förändras. · [FG-AU protokoll § 97](https://moggleif.github.io/kommunhandlingar/fg-au/2026/2026-10-01/protokoll.html#sida-10)
+- 2026-06-11 · forslag · Nämnden gav förvaltningen i uppdrag att utreda skolorganiseringen i Fjärås- och Gällingeområdet. · [FG protokoll § 67](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-06-11/protokoll.html#sida-7)

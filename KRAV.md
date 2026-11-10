@@ -33,7 +33,8 @@ varje händelse är en ikon som länkar till källan och där stegen skiljs åt
 med form, inte bara färg. Under tabellen har varje ärende ett kort med ort,
 organ, diarienummer, senaste steget och, under *Läs mer*, alla händelser
 med källor och länkarna under *I media och debatt*. Raden i tabellen länkar
-till kortet.
+till kortet. Knappar ovanför visar bara ärendena i en vald ort; utan
+skriptet står alla.
 
 ## K5 – Startsidan: pågår och beslutat
 
@@ -48,8 +49,8 @@ lämnas.
 **Givet** att den sista raden i `bevakning/rundor.csv` anger förra rundans
 period,
 **när** sidan byggs,
-**så** visar startsidan överst ett kort för varje ärende med en händelse i
-perioden. Kortet visar de nya händelserna med källor bakom en hopfälld
+**så** visar startsidan överst perioden, radens anteckning och ett kort
+för varje ärende med en händelse i perioden. Kortet visar de nya händelserna med källor bakom en hopfälld
 del och länkar till ärendets kort. Har inget ärende en ny händelse står
 det, med perioden.
 
@@ -70,13 +71,13 @@ just de filerna, och länkar till dem för reglerna.
 
 **Givet** en sida på webbplatsen,
 **när** den visas,
-**så** länkar sidfoten till repot och till ärendets fil där den finns, och
+**så** länkar sidfoten till repot och varje ärendekort till ärendets fil, och
 `README.md` länkar till webbplatsen.
 
 ## K10 – Hellre stanna än visa fel
 
 **Givet** ett ärende som inte följer formatet i `bevakning/README.md` –
-okänd status, ort, steg eller nyckel, ett datum som inte går att läsa,
+okänd status, ort, steg, nyckel eller okänt avsnitt, ett datum som inte går att läsa,
 en källa utan `https`-länk eller händelser som inte står nyast först –
 **när** sidan byggs,
 **så** avbryts bygget med filens namn och felet, och inget publiceras.

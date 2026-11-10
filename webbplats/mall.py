@@ -10,6 +10,8 @@ from html import escape
 
 MENY = (("index.html", "Start"), ("historik.html", "Historik"), ("bevakar.html", "Vad vi bevakar"))
 
+AKTUELL = ' aria-current="page"'
+
 
 @dataclass(frozen=True)
 class Sajt:
@@ -42,7 +44,7 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 
 def meny(aktuell: str) -> str:
     poster = "".join(
-        f'<li><a href="{adress}"{' aria-current="page"' * (adress == aktuell)}>{namn}</a></li>'
+        f'<li><a href="{adress}"{AKTUELL * (adress == aktuell)}>{namn}</a></li>'
         for adress, namn in MENY
     )
     return f'<nav aria-label="Webbplatsen"><ul>{poster}</ul></nav>'

@@ -6,6 +6,7 @@ bevakning/rundor.csv.
 """
 
 import csv
+from dataclasses import dataclass
 from datetime import date
 from io import StringIO
 
@@ -24,6 +25,17 @@ def kallor(text: str) -> list[list[str]]:
     return [[cell.strip() for cell in rad.strip("|").split("|")] for rad in rader]
 
 
-def senaste_runda(text: str) -> tuple[date, date]:
-    sista = list(csv.DictReader(StringIO(text)))[-1]
-    return date.fromisoformat(sista["fran"]), date.fromisoformat(sista["till"])
+@dataclass(frozen=True)
+class Runda:
+    fran: date
+    till: date
+    anteckning: str
+
+
+def senaste_runda(text: str) -> Runda:
+    rundor = list(csv.DictReader(StringIO(text)))
+    if not rundor:
+        raise ValueError("bevakning/rundor.csv har ingen runda")
+    sista = rundor[-1]
+    fran, till = date.fromisoformat(sista["fran"]), date.fromisoformat(sista["till"])
+    return Runda(fran, till, sista["anteckning"])

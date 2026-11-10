@@ -55,6 +55,7 @@ class Tolka(unittest.TestCase):
             andrat("2026-03-02 ·", "2026-13-02 ·"),
             andrat(" · Norra Halland", ""),
             ARENDE.removeprefix("---\n"),
+            andrat("## I media och debatt", "## I media"),
         ]
         for text in fel:
             with self.subTest(text=text), self.assertRaises(ValueError):
@@ -69,6 +70,7 @@ class Kontrollera(unittest.TestCase):
             andrat("- 2026-03-02", "- 2024-03-02"),
             andrat("status: pågår", "status: pågår\nsynpunkter_senast: snart"),
             ARENDE.split("## Händelser")[0],
+            andrat("status: pågår", "status: pågår\nsynpunkter: http://x.se"),
         ]
         for text in fel:
             with self.subTest(text=text), self.assertRaises(ValueError):

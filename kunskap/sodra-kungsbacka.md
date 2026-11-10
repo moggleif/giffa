@@ -85,7 +85,9 @@ Orterna står i [OMRADE.md](../OMRADE.md), platserna i
   ([protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg/2026/2026-02-19/protokoll.md)).
 - **Naturum Fjärås Bräcka** – kommunstyrelsen avbröt byggprojektet
   2026-05-26, med nedlagda kostnader på cirka 1,4 miljoner kronor
-  ([ks 2026-05-26](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2026/2026-05-26/protokoll.md#sida-25)).
+  ([ks 2026-05-26](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2026/2026-05-26/protokoll.md)).
+  Behovet finns kvar i nämnden för Kultur & Fritids lokalbehovsplan
+  2028–2032 ([kultur 2026-10-21](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/kultur/2026/2026-10-21/protokoll.md)).
 - **Gällinge – Gamla Gällingevägen** – föreslaget verksamhetsområde för
   dricksvatten och spillvatten
   ([teknik 2025-03-19](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/teknik/2025/2025-03-19/handlingar.md)).

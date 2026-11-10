@@ -8,13 +8,14 @@ from webbplats.arende import tolka
 from webbplats.bevakar import bevakar
 from webbplats.mall import Sajt
 from webbplats.sidor import historik, startsida
+from webbplats.underlag import Runda
 
 SAJT = Sajt(
     "https://github.com/agare/giffa",
     datetime(2026, 11, 10, 6, 0, tzinfo=timezone.utc),
     ["Åsa", "Fjärås"],
 )
-RUNDA = (date(2026, 3, 1), date(2026, 3, 31))
+RUNDA = Runda(date(2026, 3, 1), date(2026, 3, 31), "Startärenden.")
 
 
 def arende(status: str, namn: str = "a") -> object:
@@ -50,9 +51,16 @@ class Startsidan(unittest.TestCase):
         self.assertIn("1 ny händelse", nytt)
         self.assertIn('href="historik.html#k"', nytt)
         self.assertNotIn("Ett förslag.", nytt)
+        self.assertIn("2026-03-01 till 2026-03-31. Startärenden.", nytt)
+
+    def test_urval_per_ort_ur_omrade(self):
+        html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
+        self.assertIn('<button type="button" data-urval="Fjärås">Fjärås</button>', html)
+        self.assertIn('<tr data-ort="Åsa|Fjärås">', html)
+        self.assertIn('<article id="p" data-ort="Åsa|Fjärås">', html)
 
     def test_inget_nytt_sags(self):
-        html = startsida(SAJT, [arende("pågår")], (date(2027, 1, 1), date(2027, 1, 31)))
+        html = startsida(SAJT, [arende("pågår")], Runda(date(2027, 1, 1), date(2027, 1, 31), ""))
         self.assertIn("Inga nya händelser.", html)
 
     def test_synpunkter_visas(self):

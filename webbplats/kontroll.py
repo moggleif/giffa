@@ -1,7 +1,8 @@
 """Krav: K10 i KRAV.md. Test: tests/test_arende.py.
 
 Det i ett ärende som bara går att pröva mot repots andra filer: orterna i
-OMRADE.md, statusen, datumen och händelsernas ordning.
+OMRADE.md, statusen, datumen, länken för synpunkter och händelsernas
+ordning.
 """
 
 from datetime import date
@@ -21,3 +22,5 @@ def kontrollera(arende: Arende, orter: list[str]) -> None:
         raise ValueError("händelserna står inte nyast först")
     if senast := arende.falt.get("synpunkter_senast"):
         date.fromisoformat(senast)
+    if not arende.falt.get("synpunkter", "https://").startswith("https://"):
+        raise ValueError("synpunkter är ingen https-länk")

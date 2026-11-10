@@ -61,8 +61,9 @@ En eller två meningar om vad ärendet gäller, ur källan.
 - `avbrutet` – avbrutet eller upphävt utan nytt arbete; historiken.
 
 **Händelserna** står nyast först, en per rad: datum, steg, en mening om
-vad som hände och källan som länk, åtskilda med ` · `. Länka till handlingen
-i kommunhandlingar med `#sida-N` när den finns där. Stegen ger ikonen i
+vad som hände och källan som länk, åtskilda med ` · `. Länka till handlingens sida på
+[kommunhandlingars webbplats](https://moggleif.github.io/kommunhandlingar/)
+med `#sida-N` när den finns där; i `.md` på GitHub fungerar ankaret inte. Stegen ger ikonen i
 tabellen:
 
 | Steg         | Betyder                                         |
@@ -77,6 +78,8 @@ tabellen:
 | `avbrutet`   | avbrutet eller upphävt                          |
 | `info`       | information, avstämning eller överprövning      |
 
+Andra avsnitt än *Händelser* och *I media och debatt* stoppar bygget.
+
 **I media och debatt** är valfritt: tidningsartiklar och diskussioner, en
 per rad med datum, rubriken som länk och var den stod. Kungsbacka-Posten och
 sociala medier tas bara med när en människa länkat dem i ett issue
@@ -85,5 +88,6 @@ sociala medier tas bara med när en människa länkat dem i ett issue
 ## Rundorna
 
 [`rundor.csv`](rundor.csv) har en rad per bevakningsrunda med periodens
-första och sista dag (`fran`, `till`). Händelserna inom den sista radens
+första och sista dag (`fran`, `till`) och en `anteckning` som visas med
+perioden, till exempel när perioden inte är fullständigt genomsökt. Händelserna inom den sista radens
 period visas som *Nytt* på startsidan.
