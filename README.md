@@ -37,7 +37,8 @@ Ett ärende att följa läggs upp som ett issue med mallen *Bevaka ett ärende*.
 ## Månadens runda
 
 Den första i varje månad söker `skanning.yml` igenom kommunhandlingar efter
-orterna, platserna och de öppna ärendena sedan förra rundan och öppnar ett
+orterna, platserna och de öppna ärendena från början av förra rundans
+period och öppnar ett
 issue med etiketten `runda` ([beslut 0003](beslut/0003-manadens-skanning-i-actions.md)).
 Rundan – att föra in träffarna som ärenden – görs sedan av en agent enligt
 faserna i `AGENTS.md`, till exempel genom att be den "köra rundan".

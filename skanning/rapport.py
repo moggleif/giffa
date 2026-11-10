@@ -2,32 +2,33 @@
 
 Träffarna som Markdown för månadens issue: en rad per dokument med datum,
 organ, sidorna, en länk till den första på kommunhandlingars webbplats och
-termerna. Ingen text ur
-handlingarna återges, eftersom den kan innehålla personnamn.
+termerna. Ingen text ur handlingarna återges, eftersom den kan innehålla
+personnamn. Rapporten kortas så att den ryms i ett issue.
 """
 
 from datetime import date
 
 from skanning.sok import Traff
 
-EJ_SOKT = (
-    "Inte sökt automatiskt: kungsbacka.se, karta.kungsbacka.se, Norra Halland, "
-    "Kungsbacka-Posten och tabellerna i kommunhandlingar. Det görs i rundan "
-    "(`.claude/skills/runda-1-insamla/SKILL.md`)."
-)
+GRANS = 60000
+KORTAD = "\n\nRapporten är kortad. Hela finns som artefakt i körningen.\n"
 
 
-def rapport(traffar: list[Traff], period: tuple[date, date], sokt: str, bas: str) -> str:
+def rapport(traffar: list[Traff], period: tuple[date, date], omfattning: str, bas: str) -> str:
     fran, till = period
     i_perioden = [t for t in traffar if t.datum <= till]
     kommande = [t for t in traffar if t.datum > till]
     return (
-        f"## Träffar i kommunhandlingar {fran} – {till}\n\n{sokt}\n\n"
+        f"## Träffar i kommunhandlingar {fran} – {till}\n\n{omfattning}\n\n"
         + avsnitt("I perioden", i_perioden, bas)
         + avsnitt(f"Kommande sammanträden, efter {till}", kommande, bas)
-        + EJ_SOKT
-        + "\n"
     )
+
+
+def korta(text: str) -> str:
+    if len(text) <= GRANS:
+        return text
+    return text[: text.rindex("\n", 0, GRANS - len(KORTAD))] + KORTAD
 
 
 def avsnitt(rubrik: str, traffar: list[Traff], bas: str) -> str:

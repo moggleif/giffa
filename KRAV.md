@@ -90,7 +90,12 @@ de ärenden som inte är klara eller avbrutna och förra rundan i
 **när** arbetsflödet `skanning.yml` körs den första i månaden eller för
 hand,
 **så** öppnas ett issue med etiketten `runda` som för varje dokument i
-kommunhandlingar från dagen efter förra rundan listar datum, organ, de
-sidor som nämner en term, en länk till den första och termerna – med
-kommande sammanträden för sig, utan text ur handlingarna, och med de
-källor som inte söktes automatiskt utskrivna.
+kommunhandlingar med sammanträdesdatum från början av förra rundans period
+– eftersom protokoll publiceras veckor efter sammanträdet – listar datum,
+organ, de sidor som nämner en term, en länk till den första och termerna.
+Kommande sammanträden står för sig, ingen text ur handlingarna återges,
+dokument utan text listas som inte sökta och källorna i `KALLOR.md` som
+inte söktes automatiskt skrivs ut. Ett mellanslag i en term matchar också
+radbrott, och ett diarienummer räknas också med mellanslag efter
+prefixet. Blir rapporten för lång för ett issue kortas den, och hela finns
+som artefakt. Finns dagens issue redan öppnas inget nytt.

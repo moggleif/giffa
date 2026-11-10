@@ -1,6 +1,7 @@
 # Månadens skanning (K11, beslut 0003): söker igenom kommunhandlingar efter
-# orterna, platserna och de öppna ärendenas diarienummer sedan förra rundan
-# och öppnar ett issue med träffarna, som rundan sedan utgår från.
+# orterna, platserna och de öppna ärendenas diarienummer från början av förra
+# rundans period och öppnar ett issue med träffarna, som rundan utgår från.
+# Hela rapporten sparas som artefakt; issuet hoppas över om dagens redan finns.
 name: Skanning
 
 on:
@@ -29,10 +30,19 @@ jobs:
         run: |
           python3 -m skanning "$RUNNER_TEMP/kh/data/kungsbacka" \
             https://moggleif.github.io/kommunhandlingar > "$RUNNER_TEMP/traffar.md"
-      - name: Öppna månadens issue
+      - uses: actions/upload-artifact@v4
+        with:
+          name: traffar
+          path: ${{ runner.temp }}/traffar.md
+      - name: Öppna dagens issue
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          titel="Underlag för bevakningsrunda: träffar till och med $(date +%F)"
           gh label create runda --force --description "Underlag för månadens bevakningsrunda"
-          gh issue create --label runda --body-file "$RUNNER_TEMP/traffar.md" \
-            --title "Bevakningsrunda $(date +%Y-%m): träffar i kommunhandlingar"
+          if gh issue list --label runda --state all --search "in:title \"$titel\"" \
+            --json title --jq '.[].title' | grep -qxF "$titel"; then
+            echo "Issuet finns redan: $titel"
+            exit 0
+          fi
+          gh issue create --label runda --body-file "$RUNNER_TEMP/traffar.md" --title "$titel"

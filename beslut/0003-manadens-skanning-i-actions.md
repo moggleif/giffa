@@ -11,8 +11,11 @@ har sidor som ändras och regler för automatisk hämtning (`KALLOR.md`).
 ## Beslut
 
 - Paketet `skanning/` söker med bara standardbiblioteket igenom
-  kommunhandlingars dokument från dagen efter förra rundan, sida för sida,
-  efter orterna, platserna och de öppna ärendenas diarienummer.
+  kommunhandlingars dokument med sammanträdesdatum från början av förra
+  rundans period, sida för sida, efter orterna, platserna och de öppna
+  ärendenas diarienummer. Perioden överlappar förra rundan eftersom ett
+  protokoll ofta publiceras veckor efter sammanträdet; rundan sorterar bort
+  det som redan är infört.
 - `skanning.yml` kör det den första i varje månad och öppnar ett issue med
   etiketten `runda`. Ingen API-nyckel behövs.
 - Issuet återger ingen text ur handlingarna, bara datum, organ, sidor och
@@ -23,6 +26,9 @@ har sidor som ändras och regler för automatisk hämtning (`KALLOR.md`).
 ## Konsekvenser
 
 Varje månad finns ett underlag utan att någon behöver starta något. En
-runda som inte blir av gör att nästa issue täcker två månader, eftersom
-perioden räknas från förra rundan. Bara årets och fjolårets handlingar
-hämtas. Kungsbacka.se, kartan och tidningarna söks inte automatiskt.
+runda som inte blir av gör att nästa issue täcker längre tid, eftersom
+perioden räknas från förra rundan; blir rapporten för lång kortas issuet
+och hela finns som artefakt. Bara årets och fjolårets handlingar hämtas.
+Kungsbacka.se, kartan och tidningarna söks inte automatiskt. GitHub
+stänger av schemalagda körningar efter 60 dagar utan aktivitet i repot;
+de startas igen under Actions.

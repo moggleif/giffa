@@ -11,8 +11,9 @@ Bara analys: inga filändringar, ingen gren, inga commits.
    som rör området.
 2. **En bevakningsrunda:** fastställ period (från och till), källor ur
    `KALLOR.md` och orter ur `OMRADE.md`. Utgå från dagen efter förra
-   rundan, den sista raden i `bevakning/rundor.csv`. Läs de öppna ärendena i `bevakning/`, de öppna issues med etiketten `bevakning` och
-   bakgrunden i `kunskap/`.
+   rundan, den sista raden i `bevakning/rundor.csv`. Läs de öppna
+   ärendena i `bevakning/`, månadens issue med etiketten `runda`, de öppna
+   issues med etiketten `bevakning` och bakgrunden i `kunskap/`.
 3. Hitta oklarheter, risker och dolda antaganden. Ifrågasätt dåliga idéer
    och föreslå bättre när det finns.
 4. Är arbetet för stort för en sammanhängande pull request: dela upp det

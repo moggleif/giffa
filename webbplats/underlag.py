@@ -1,4 +1,4 @@
-"""Krav: K6 och K8 i KRAV.md. Test: tests/test_underlag.py.
+"""Krav: K6, K8 och K11 i KRAV.md. Test: tests/test_underlag.py.
 
 Läser det sidan bygger på utöver ärendena: orterna ur OMRADE.md, platserna
 ur platser.csv, källorna ur KALLOR.md och förra rundans period ur
