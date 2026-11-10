@@ -1,4 +1,4 @@
-"""Krav: K12 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K12 och K17 i KRAV.md. Test: tests/test_sidor.py.
 
 När man kan tycka till: ärendenas kommande samråd, granskningar, yttranden
 och beslut i tur och ordning överst på startsidan, och som en markering på
@@ -34,6 +34,7 @@ def tillfalle(t: Handelse, idag: date) -> str:
         f"<strong>{TILLFALLE[t.steg]} {med_veckodag(t.datum)}, {kvar(t.datum, idag)}</strong> "
         f"{escape(t.text)} "
         f'<a href="{escape(t.lank)}">{escape(t.kalla)}</a>'
+        f'<span class="sa-gor"><strong>Så gör du:</strong> {SA_GOR[t.steg]}</span>'
     )
 
 
@@ -51,8 +52,9 @@ def tycka_till_nu(arenden: list[Arende], idag: date, adress: Callable[[Arende], 
 
 def rad(t: Handelse, arende: Arende, adress: str, idag: date) -> str:
     return (
-        f'<li data-ort="{escape("|".join(arende.orter))}">{tillfalle(t, idag)} · '
-        f'<a href="{adress}#{arende.id}">{escape(arende.falt["rubrik"])}</a></li>'
+        f'<li data-ort="{escape("|".join(arende.orter))}">'
+        f'<a class="arende" href="{adress}#{arende.id}">{escape(arende.falt["rubrik"])}</a> '
+        f"<small>{escape(', '.join(arende.orter))}</small><br>{tillfalle(t, idag)}</li>"
     )
 
 
@@ -87,4 +89,19 @@ STEGEN = (
 
 def forklaring() -> str:
     rubrik = "<summary>Så kan du påverka, steg för steg</summary>"
-    return f"<details>{rubrik}<ul>{STEGEN}</ul></details>"
+    return f"<details open>{rubrik}<ul>{STEGEN}</ul></details>"
+
+
+MOTET = (
+    "Skriv eller ring till ledamöterna eller partierna i organet före sammanträdet; "
+    f'förslaget står i kallelsen. <a href="{KALENDER}">Sammanträdena</a>'
+)
+SA_GOR = {
+    "samrad": "Lämna skriftliga synpunkter till kommunen före sista dagen; hur står i "
+    f'samrådshandlingen. <a href="{PBL}">PBL 5 kap. 11 §</a>',
+    "granskning": "Lämna skriftliga synpunkter senast sista dagen. Den som inte gör det kan "
+    f'förlora rätten att överklaga. <a href="{PBL}">PBL 5 kap. 18–19 §§</a>',
+    "yttrande": MOTET,
+    "beslut": MOTET,
+    "vantas": "Datumet är organets nästa sammanträde, innan kallelsen har kommit. " + MOTET,
+}

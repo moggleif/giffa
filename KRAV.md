@@ -155,3 +155,12 @@ när sidan byggdes på samma sätt.
 står i teckenförklaringen direkt ovanför varje tidslinje. Ikonens text
 börjar med stegets namn och datum, kortet säger *Senaste steget:* med
 namn och datum, och årtalen på kortet står som *Pågått 2014–2026*.
+
+## K17 – Så gör du
+
+**Givet** ett kommande tillfälle att tycka till enligt K12,
+**när** sidan byggs,
+**så** står under *Tycka till nu* först ärendet och orten, sedan
+tillfället, och varje tillfälle, där och på ärendets kort, har en rad
+*Så gör du:* för just det steget med en länk till källan. Förklaringen
+*Så kan du påverka, steg för steg* står öppen.

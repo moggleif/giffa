@@ -83,7 +83,7 @@ class Startsidan(unittest.TestCase):
         html = startsida(SAJT, [paverkbart("s"), arende("pågår", "p")], RUNDA)
         nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
         self.assertLess(nu.index("Beslut <time datetime=\"2026-11-10\">tisdag 10 november 2026</time>, i dag"), nu.index("synpunkter senast"))
-        self.assertIn('<a href="#s">Ny förskola</a>', nu)
+        self.assertIn('<a class="arende" href="#s">Ny förskola</a>', nu)
         self.assertNotIn("2026-11-09", html)
         self.assertIn("1 december 2026</time>, om 21 dagar", nu)
         self.assertIn("Så kan du påverka, steg för steg", nu)
@@ -151,6 +151,16 @@ class Klarsprak(unittest.TestCase):
         tabellen = next(b for b in efter.split("\n\n") if b.startswith("|"))
         rader = re.findall(r"^\| `(\w+)` +\| (.+?) +\|$", tabellen, re.M)
         self.assertEqual(dict(rader), BETYDER)
+
+
+class SaGorDu(unittest.TestCase):
+    def test_varje_tillfalle_sager_vad_man_gor(self):
+        html = startsida(SAJT, [paverkbart("s")], RUNDA)
+        nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
+        self.assertEqual(nu.count("Så gör du:"), 3)
+        self.assertIn("förlora rätten att överklaga. <a", nu)
+        self.assertIn("<details open><summary>Så kan du påverka", nu)
+        self.assertEqual(html.count("Så gör du:"), 6)
 
 
 class Historiken(unittest.TestCase):

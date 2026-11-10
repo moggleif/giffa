@@ -85,3 +85,6 @@ footer { border-top: 1px solid var(--linje); margin-top: 3rem; padding: 1rem 0;
 @media (max-width: 40rem) {
   table.tidslinje col.rubrik { width: 9rem; }
 }
+.sa-gor { display: block; margin-top: 0.3rem; padding-left: 0.6rem;
+          border-left: 3px solid var(--accent); }
+ol.tillfallen a.arende { font-weight: 600; }
