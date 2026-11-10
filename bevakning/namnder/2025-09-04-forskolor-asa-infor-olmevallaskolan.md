@@ -15,4 +15,4 @@ lokaler på Åsa Gårdsskolan, där Åsa Gårds förskola planeras öppna i augu
 ## Händelser
 
 - 2025-09-17 · beslut · Nämnden för Förskola & Grundskola beslutade att flytta förskoleverksamheten enligt utredningen. · [Förskola & Grundskola protokoll § 88](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2025/2025-09-17/protokoll.html#sida-11)
-- 2025-09-04 · forslag · Arbetsutskottet för Förskola & Grundskola föreslog att nämnden för Förskola & Grundskola beslutar att: • Det lilla lokets verksamhet flyttas till Stockalids förskola vid årsskiftet 2025/2026. · [Förskola & Grundskola AU protokoll § 80](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2025/2025-09-04/protokoll.html#sida-5)
+- 2025-09-04 · forslag · Arbetsutskottet för Förskola & Grundskola föreslog att förskoleverksamheten i Åsa flyttas enligt utredningen. · [Förskola & Grundskola AU protokoll § 80](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2025/2025-09-04/protokoll.html#sida-5)

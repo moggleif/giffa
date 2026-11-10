@@ -7,11 +7,11 @@ status: pågår
 ---
 
 Må Vägförening och boende längs Gåsevadholmsvägen begärde sänkt hastighet
-från 60 till 40 kilometer i timmen. Arbetsutskottet sade nej 2023 men ja
-2026, trots att Trafikverket som väghållare och förvaltningen avstyrkte;
-Polisen stödde förslaget. Trafikverket överklagade, och arbetsutskottet
-skickade en konsekvensutredning till Transportstyrelsen. Utgången står inte
-i protokollen.
+från 60 till 40 kilometer i timmen. Arbetsutskottet sade nej 2023 och ja
+2026. Trafikverket som väghållare och förvaltningen avstyrkte, Polisen
+stödde förslaget. Trafikverket överklagade, och arbetsutskottet skickade en
+konsekvensutredning till Transportstyrelsen. Utgången står inte i
+protokollen.
 
 ## Händelser
 

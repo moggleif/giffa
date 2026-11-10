@@ -9,7 +9,7 @@ status: pågår
 En detaljplan öster om Åsa station för friliggande villor och radhus. Ett
 uppdrag om planprogram för Kläppa 1:12 gavs redan 2014 efter en förfrågan
 från 2008; 2023 slogs planarbetet ihop med Stockalid 1:9. Samrådet godkändes
-i februari 2025; granskning har inte syns i protokollen.
+i februari 2025; granskning har inte synts i protokollen.
 
 ## Händelser
 

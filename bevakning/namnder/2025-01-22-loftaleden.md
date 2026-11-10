@@ -3,12 +3,13 @@ rubrik: Löftaleden
 ort: Frillesås, Förlanda
 organ: Nämnden för Kultur & Fritid
 diarienummer: KFT-2025-00010
-status: klart
+status: beslutat
 ---
 
-Föreningen Löftaleden Ideell Förening slutförde projektet Löftaleden med
-stöd från Lokalt ledd utveckling Halland och ansökte om lån från kommunen
-för sista fasen.
+Föreningen Löftaleden Ideell Förening ansökte om lån från kommunen för att
+kunna slutföra projektet Löftaleden under januari–april 2025, eftersom en
+del av stödet från Lokalt ledd utveckling Halland betalas först när
+projektet är slutgodkänt. Om leden blev klar står inte i protokollen.
 
 ## Händelser
 

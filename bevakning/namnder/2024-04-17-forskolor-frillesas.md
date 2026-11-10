@@ -7,9 +7,10 @@ status: klart
 ---
 
 Förskoleverksamheten på Lärkbackens förskola flyttade till Klockaregårdens
-förskola vid terminsslutet sommaren 2024 på grund av för få barn.
-Klockaregårdens förskola blev dyrare att bygga när byggmaterialet steg i
-pris.
+förskola i Frillesås vid terminsslutet sommaren 2024 på grund av för få
+barn. Klockaregårdens förskola blev dyrare att bygga när byggmaterialet steg
+i pris. Om Klockaregården är den förskola som detaljplanen vid Bostället gav
+plats för står inte uttryckligen i protokollen.
 
 ## Händelser
 

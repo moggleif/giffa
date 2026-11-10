@@ -6,8 +6,8 @@ diarienummer: SE-2024-00415
 status: klart
 ---
 
-Toalettbyggnaden längs Stora Badviksvägen vid Vita Sand var undermålig och
-ersattes med en ny.
+Toalettbyggnaden längs Stora Badviksvägen vid Vita Sand bedömdes vara
+undermålig och ersattes med en ny.
 
 ## Händelser
 

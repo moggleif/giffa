@@ -2,12 +2,13 @@
 rubrik: Försäljning av verksamhetstomter i Duvehed
 ort: Fjärås
 organ: Kommunstyrelsen
-status: klart
+status: pågår
 ---
 
-Kommunen säljer tomter i Duveheds verksamhetsområde till företag som flyttar
-dit, bland andra ett bygg- och anläggningsföretag och ett företag inom
-kontorsmaskiner.
+Kommunen säljer tomterna i Duveheds verksamhetsområde löpande till företag
+som etablerar sig där. Enligt kommunstyrelsen i december 2025 var ungefär
+halva området sålt. Varje försäljning har ett eget beslut; de samlas här som
+ett ärende om områdets utbyggnad.
 
 ## Händelser
 
