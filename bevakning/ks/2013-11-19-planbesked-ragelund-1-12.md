@@ -2,6 +2,7 @@
 rubrik: Planbesked för bostäder inom Rågelund 1:12
 ort: Frillesås
 organ: Kommunstyrelsen
+diarienummer: KS13-00224/21
 status: avbrutet
 ---
 
@@ -11,4 +12,4 @@ En förfrågan 2013 om att planlägga för ett 50-tal bostäder inom Rågelund
 
 ## Händelser
 
-- 2013-11-19 · beslut · Kommunstyrelsen avslog förfrågan om planläggning för bostäder inom Rågelund 1:12. · [KS protokoll § 250](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2013/2013-11-19/protokoll.html#sida-14)
+- 2013-11-19 · avbrutet · Kommunstyrelsen avslog förfrågan om planläggning för bostäder inom Rågelund 1:12. · [KS protokoll § 250](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2013/2013-11-19/protokoll.html#sida-14)

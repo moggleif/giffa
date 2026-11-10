@@ -11,6 +11,8 @@ justerar gata och natur och digitaliserar planen. Planprogrammet för
 verksamhetsområdet godkändes 2013. Planprogrammet gällde hela
 verksamhetsområdet; den ursprungliga detaljplanen, som fick laga kraft 2016,
 syns inte i protokollen här.
+År 2014 köpte kommunen del av Duvehed 2:1, och planprogrammet utökades
+söderut med den marken.
 
 ## Händelser
 

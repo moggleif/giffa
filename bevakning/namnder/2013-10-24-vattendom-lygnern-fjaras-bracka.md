@@ -13,6 +13,9 @@ vattenskyddsområdet till hela Lygnerns avrinningsområde avslogs 2023 med
 hänvisning till tillståndsprocessen. Hösten 2023 pågick samråd om det ökade
 uttaget, och i november 2025 väntade kommunen fortfarande på besked i
 vattendomen.
+Redan 2013 gav nämnden uppdrag att söka utökat tillstånd för vattentäkten
+i Fjärås Bräcka. Om det hänger ihop med ansökan 2021 framgår inte av
+källorna, så kopplingen är osäker.
 
 ## Händelser
 

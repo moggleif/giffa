@@ -2,14 +2,14 @@
 rubrik: Gruppbostad med daglig verksamhet, BoDa, i Gällinge
 ort: Gällinge
 organ: Kommunstyrelsen
-diarienummer: KS/2014:495
+diarienummer: KS13-00179/20, KS/2014:495
 status: beslutat
 ---
 
 En kombinerad gruppbostad och daglig verksamhet, BoDa, placerades 2014 vid
 Gällingevägen i Gällinge, sedan nämnden för Funktionsstöd förordat platsen.
-Investeringen utökades 2015 från 28 till 37 miljoner kronor. Om och när
-boendet stod klart framgår inte av protokollen i poolen.
+Investeringen utökades 2015 från 28 till 37 miljoner kronor. När boendet
+stod klart framgår inte av protokollen i poolen.
 
 ## Händelser
 

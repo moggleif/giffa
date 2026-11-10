@@ -1,86 +1,90 @@
 # Lärdomar ur historiken 2013–2026
 
-Vad ärendena i `bevakning/` visar om hur lång tid saker tar i södra
-Kungsbacka och när det har gått att tycka till innan beslut. Varje uppgift
-kommer från ett ärende, och ärendet länkar till protokollet. Det här är en
-sammanställning att orientera sig med. Nya fakta förs in i ärendena, inte
-här.
+Mönster i ärendena i `bevakning/`: hur lång tid planer tar och i vilka steg
+det har funnits ett tillfälle att tycka till innan beslut. Uppgifterna om
+varje ärende står i ärendet, som länkar till protokollen; här står bara
+mönstren och exemplen som visar dem. Säger ett ärende något annat än den här
+texten gäller ärendet.
 
-Sammanställd 2026-11-10 ur ärendena med historik tillbaka till 2013, efter
-de fyra historik-PR:arna. Poolen i kommunhandlingar är tunnare före 2021,
+Sammanställd 2026-11-10. Poolen i kommunhandlingar är tunnare före 2021,
 och några års protokoll saknas helt, bland annat byggnadsnämndens från 2018
-och 2023. En lucka i tabellerna betyder att steget inte syns i poolen, inte
+och 2023. Att ett steg inte nämns betyder att det inte syns i poolen, inte
 att det inte hände.
 
-## Detaljplaner tar år, och samrådet är tidigt
+## Detaljplaner tar flera år
 
-| Plan | Första steget | Samråd | Granskning | Antagande |
-| ---- | ------------- | ------ | ---------- | --------- |
-| [Rya verksamhetsområde, Frillesås-Rya 3:77](../bevakning/detaljplaner/2016-02-23-verksamheter-frillesas-rya-3-77.md) | positiv förfrågan 2016 | 3 nov – 1 dec 2020, 21 skrivelser | 20 jul – 27 aug 2021, 17 skrivelser | KF okt 2022; upphävd av MMD jan 2024; ny granskning dec 2025 – jan 2026 |
-| [Åsa 4:144](../bevakning/detaljplaner/2019-03-01-bostader-och-gang-och-cykelvag-asa-4-144.md) | uppdrag 2016 | – | 27 nov 2018 – 2 jan 2019, 14 skrivelser | KF mars 2021; upphävd av MMD 2022 |
-| [Må 3:13](../bevakning/detaljplaner/2018-11-07-bostader-och-forskola-ma-3-13.md) | planprogram 2015 | – | 8 jan – 5 feb 2019, 21 skrivelser | 2019 |
-| [Sintorp 4:26, Vallersvik](../bevakning/detaljplaner/2019-03-01-bostader-sintorp-4-26-vallersvik.md) | program 2014, uppdrag 2015 | 2019 | 13 aug – 10 sep 2019, 16 skrivelser | förslag nov 2019 |
-| [Frillesås-Rya 1:254](../bevakning/detaljplaner/2017-02-09-verksamheter-frillesas-rya-1-254.md) | uppdrag feb 2017 | – | 18 sep – 13 okt 2018, 7 skrivelser | planen gäller från jan 2019 |
-| [Frillesås-Rya 1:216, ändringen](../bevakning/detaljplaner/2019-06-05-andring-handel-frillesas-rya-1-216.md) | ansökan nov 2020 | – | 24 aug – 7 sep 2021 | okt 2021 |
-| [Frillesås-Rya 1:75](../bevakning/detaljplaner/2023-04-25-andring-bostader-frillesas-rya-1-75.md) | uppdrag nov 2018 | – | 10–27 okt 2023, 6 skrivelser | förslag dec 2023 |
-| [Stockalid 1:4 och 1:39](../bevakning/ksau/2014-03-18-bostader-och-forskola-stockalid.md) | planbesked 2014 | – | – | jan 2022, överklagad |
-| [Ölmevallaskolan](../bevakning/namnder/2021-08-24-ny-skola-olmevallaskolan.md) | plats utpekad 2021 | – | 19 aug – 12 sep 2025, 16 skrivelser | dec 2025 |
-| [Må 3:15](../bevakning/detaljplaner/2013-11-19-bostader-ma-3-15.md) | lokalisering 2013, samråd beslutat 2016 | 3–24 mars 2026, 16 yttranden | på delegation 2026 | – |
-| [Huvudmannaskap Ö54](../bevakning/detaljplaner/2026-09-17-huvudmannaskap-asa-o54.md) | – | – | 29 nov – 20 dec 2022, 6 skrivelser; 27 mars – 19 april 2026, 8 | – |
+Mellan första steget och antagandet har det gått flera år för de större
+planerna i ärendena:
 
-- **Från första steget till antagande går det oftast två till åtta år**
-  för en större plan. En liten ändring kan gå på under ett år
-  (Frillesås-Rya 1:216).
-- **Samrådet och granskningen är korta, oftast tre till fem veckor.** Två
-  av dem låg över sommaren: Rya 3:77 20 juli – 27 augusti 2021 och
-  Frillesås-Rya 1:216 5 juli – 16 augusti 2019.
-- **Det kommer oftast 6–21 skrivelser** per samråd eller granskning.
-- **Ett beslut kan upphävas efteråt.** Mark- och miljödomstolen upphävde
-  Åsa 4:144 (kulturmiljön) och Rya 3:77 efter överklaganden. Båda planerna
-  togs upp igen.
+- [Rya verksamhetsområde, Frillesås-Rya 3:77](../bevakning/detaljplaner/2016-02-23-verksamheter-frillesas-rya-3-77.md):
+  positiv förfrågan 2016, antagen av fullmäktige 2022.
+- [Åsa 4:144](../bevakning/detaljplaner/2019-03-01-bostader-och-gang-och-cykelvag-asa-4-144.md):
+  uppdrag 2016, antagen av fullmäktige 2021.
+- [Må 3:13](../bevakning/detaljplaner/2018-11-07-bostader-och-forskola-ma-3-13.md):
+  planprogram 2015, antagen 2019.
+- [Stockalid 1:4 och 1:39](../bevakning/ksau/2014-03-18-bostader-och-forskola-stockalid.md):
+  planbesked 2014, antagen 2022.
+- [Ölmevallaskolan](../bevakning/namnder/2021-08-24-ny-skola-olmevallaskolan.md):
+  plats utpekad 2021, antagen 2025.
 
-## När det gick att tycka till
+En liten ändring kan gå på under ett år:
+[ändringen inom Frillesås-Rya 1:216](../bevakning/detaljplaner/2019-06-05-andring-handel-frillesas-rya-1-216.md)
+söktes i november 2020 och antogs i oktober 2021.
 
-- **Samråd och granskning är de formella tillfällena.** I en detaljplan
-  kan vem som helst lämna synpunkter under de veckorna. Efter granskningen
-  återstår antagandet hos byggnadsnämnden eller kommunfullmäktige,
-  i ärendena mellan tre månader och drygt ett år senare.
-- **Granskningen beslutas ibland på delegation.** Då syns den inte som
-  ett eget beslut i nämndens protokoll, utan bara som en information i
-  efterhand (Må 3:15 2026) eller som ett yttrande från en annan nämnd.
-  Nämnden för Service, Teknik och Kultur & Fritid yttrar sig i samråden,
-  så deras protokoll är ofta det första tecknet på att ett samråd pågår.
-- **Planbeskedet är det tidigaste steget och sker utan samråd.**
-  Kommunstyrelsen eller byggnadsnämnden säger ja eller nej till att börja
-  planlägga. I mars 2014 prövade kommunstyrelsen på en gång flera
-  förfrågningar i Åsa som legat sedan 2007–2010, mot den nya
+Mellan granskningens slut och antagandet har det gått från några veckor
+(Frillesås-Rya 1:216, 2021) till drygt två år (Åsa 4:144).
+
+## Samråd och granskning är korta
+
+Samråd och granskning är de tillfällen i en detaljplan då synpunkter tas
+emot och redovisas i en samrådsredogörelse eller ett granskningsutlåtande.
+I ärendena varar de från två till sex veckor, och det kom oftast 6–21
+skrivelser. Några har legat över sommaren, till exempel granskningen av
+Rya 3:77 i juli–augusti 2021 och av Frillesås-Rya 1:216 i juli–augusti 2019.
+
+Granskningen beslutas ibland på delegation. Då syns den inte som ett eget
+beslut i nämndens protokoll, utan som en information i efterhand, till
+exempel för [Må 3:15](../bevakning/detaljplaner/2013-11-19-bostader-ma-3-15.md)
+2026, eller genom yttranden från andra nämnder, till exempel nämnden för
+Service och Kultur & Fritid om Rya 3:77 och Må 3:15.
+
+## Planbesked, förslag och beslut
+
+- **Planbeskedet är det första beslutet.** Kommunstyrelsen eller
+  byggnadsnämnden säger ja eller nej till att börja planlägga. I mars 2014
+  prövade kommunstyrelsen flera förfrågningar i Åsa mot den
   [fördjupade översiktsplanen](../bevakning/ks/2013-08-22-fordjupad-oversiktsplan-asa.md),
-  och sade nej till fem av dem.
-- **Arbetsutskottet föreslår, nämnden beslutar ett par veckor senare.** När
-  ett förslag står i arbetsutskottets protokoll finns det oftast en kort
-  tid kvar att höra av sig till ledamöterna innan nämnden eller
-  styrelsen beslutar. Ärendenas `Tycka till`-avsnitt visar det datumet
-  när kalendern har det.
+  några inkomna redan 2007–2010. Fem fick nej, och
+  [Ölmanäs 31:1](../bevakning/ks/2014-03-18-planbesked-olmanas-31-1.md)
+  fick uppdrag om en planstudie.
+- **Arbetsutskottet föreslår, nämnden eller styrelsen beslutar.** Mellan
+  förslaget och beslutet finns en tid då förslaget är offentligt. Ärendenas
+  avsnitt `Tycka till` visar datumet för nästa beslut när kalendern i
+  kommunhandlingar har det.
 
-## Det som ändrade sig över tid
+## Det som ändrades över tid
 
-- **Ett nej är inte alltid slutet.** Planbeskedet för
-  [Kläppa 1:4](../bevakning/ks/2015-02-03-planprogram-asa-station.md)
-  föreslogs få nej 2017 och fick ja 2024.
-  [Åsa 5:161](../bevakning/ks/2024-04-23-bostader-asa-5-161-och-5-101.md)
-  fick nej till flerbostadshus 2024 och en ny ansökan om radhus samma år.
-  Boende längs
-  [Gåsevadholmsvägen](../bevakning/namnder/2023-08-28-hastighet-gasevadholmsvagen.md)
-  fick nej till sänkt hastighet 2023 och ja 2026.
-- **Kritik har lett till omtag.** Dagvattenlösningen för
+- **Ett nej följdes ibland av en ny prövning.**
+  - Planbeskedet för Kläppa 1:4 föreslogs få nej 2017 och fick ja 2024
+    ([planprogrammet för Åsa station](../bevakning/ks/2017-02-22-planprogram-asa-station.md)).
+  - [Åsa 5:161](../bevakning/ks/2024-04-23-bostader-asa-5-161-och-5-101.md)
+    fick nej till flerbostadshus 2024, och samma år kom en ny ansökan om
+    radhus.
+  - Boende längs
+    [Gåsevadholmsvägen](../bevakning/namnder/2023-08-28-hastighet-gasevadholmsvagen.md)
+    fick nej till sänkt hastighet 2023. År 2026 sade arbetsutskottet ja, men
+    Trafikverket överklagade och utgången står inte i protokollen.
+- **Planer har upphävts efter överklagande.** Mark- och miljödomstolen
+  upphävde Åsa 4:144 2022 och Rya 3:77 2024. Rya 3:77 togs upp igen med
+  förnyat samråd och förnyad granskning. För Åsa 4:144 skulle planen
+  justeras inför en ny politisk behandling, men något senare steg syns
+  inte.
+- **Ett beslut har gjorts om efter kritik.** Dagvattenlösningen för
   [centrala Åsa till Vita Sand](../bevakning/namnder/2021-09-15-dagvatten-asa-vita-sand.md)
   skulle börja byggas 2023. Efter kritik från Åsa togs ett omtag med
   dialogmöten och nya beräkningar, och nämnden valde ett utlopp 2024.
-  Arbetsutskottet ville ha
-  [sänkta byggnadshöjder](../bevakning/detaljplaner/2016-02-23-verksamheter-frillesas-rya-3-77.md)
-  närmast bostäderna i Rya 2021 innan granskningen.
 - **Skolor och förskolor planeras om.**
   [Äppelgårdens förskola](../bevakning/namnder/2022-05-18-appelgardens-forskola.md)
-  pausades 2023 när barnantalet inte väntades öka som tidigare, och
-  skolorganisationen i Fjärås och Gällinge ändrades 2026
-  ([skolorganisationen](../bevakning/namnder/2026-06-11-skolorganisation-fjaras-gallinge.md)).
+  pausades 2023 när barnantalet inte väntades öka som tidigare.
+  [Skolorganisationen i Fjärås och Gällinge](../bevakning/namnder/2026-06-11-skolorganisation-fjaras-gallinge.md)
+  beslutades 2026 och gäller från läsåret 2028–2029.

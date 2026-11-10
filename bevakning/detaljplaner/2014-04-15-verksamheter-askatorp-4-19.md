@@ -12,6 +12,8 @@ gavs 2016 utifrån ett planprogram från 2009. Arbetsutskottet föreslog
 antagande i november 2019, och planen FJP32 för Äskatorp togs 2021 med i
 kommunens VA-verksamhetsområde. Kommunen sålde sedan tomter i området, 2021
 och 2022.
+Redan 2014 överlät kommunen mark och gårdsbyggnader inom Äskatorp 4:19;
+kopplingen till detaljplanen från 2016 är osäker.
 
 ## Händelser
 
