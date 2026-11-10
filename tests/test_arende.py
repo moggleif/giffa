@@ -59,6 +59,7 @@ class Tolka(unittest.TestCase):
             andrat(" · Norra Halland", ""),
             ARENDE.removeprefix("---\n"),
             andrat("## I media och debatt", "## I media"),
+            andrat("## I media", f"## Tycka till\n\n{FEL_STEG}\n\n## I media"),
         ]
         for text in fel:
             with self.subTest(text=text), self.assertRaises(ValueError):
@@ -71,7 +72,6 @@ class Kontrollera(unittest.TestCase):
             andrat("status: pågår", "status: oklart"),
             andrat("ort: Åsa, Fjärås", "ort: Åsa, Onsala"),
             andrat("- 2026-03-02", "- 2024-03-02"),
-            andrat("## I media", f"## Tycka till\n\n{FEL_STEG}\n\n## I media"),
             ARENDE.split("## Händelser")[0],
         ]
         for text in fel:

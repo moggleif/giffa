@@ -17,4 +17,4 @@ träda in i exploateringsavtalet. Kommunstyrelsen har inte beslutat än.
 
 ## Tycka till
 
-- 2026-11-24 · beslut · Kommunstyrelsen väntas besluta om partsbytet, på sitt nästa sammanträde enligt kommunhandlingars kalender. Kallelsen har inte kommit, så det är inte säkert att ärendet tas upp då. · [KSAU protokoll § 329](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/protokoll.html#sida-10)
+- 2026-11-24 · vantas · Kommunstyrelsen väntas besluta om partsbytet; arbetsutskottet har föreslagit beslutet, och datumet är kommunstyrelsens nästa sammanträde. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)

@@ -105,12 +105,13 @@ som artefakt. Finns dagens issue redan öppnas inget nytt.
 ## K12 – Tycka till i rätt tid
 
 **Givet** ärenden med avsnittet *Tycka till*, där varje rad är ett
-kommande samråd, en granskning, ett yttrande eller ett beslut med datum
-och källa,
+kommande samråd, en granskning, ett yttrande, ett beslut eller ett väntat
+beslut med datum och källa,
 **när** sidan byggs,
 **så** listar startsidan under *Tycka till nu*, före det nya, alla
 tillfällen från och med byggdagen med det närmaste först och en länk till
 ärendet. Ärendets kort och rad i tabellen markerar dess kommande
 tillfällen, en kort förklaring säger vad man kan göra i varje steg, med
-källa, och det som har passerat visas inte. Ett annat steg i avsnittet
+källa, ett väntat beslut märks preliminärt och det som har passerat visas
+inte. Ett annat steg i avsnittet
 stoppar bygget.

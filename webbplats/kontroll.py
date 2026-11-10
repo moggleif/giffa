@@ -1,11 +1,10 @@
-"""Krav: K10 och K12 i KRAV.md. Test: tests/test_arende.py.
+"""Krav: K10 i KRAV.md. Test: tests/test_arende.py.
 
 Det i ett ärende som bara går att pröva mot repots andra filer: orterna i
-OMRADE.md, statusen, händelsernas ordning och stegen för att tycka till.
+OMRADE.md, statusen och händelsernas ordning.
 """
 
 from webbplats.arende import STATUS, Arende
-from webbplats.paverka import TILLFALLE
 
 
 def kontrollera(arende: Arende, orter: list[str]) -> None:
@@ -18,5 +17,3 @@ def kontrollera(arende: Arende, orter: list[str]) -> None:
     datumen = [h.datum for h in arende.handelser]
     if datumen != sorted(datumen, reverse=True):
         raise ValueError("händelserna står inte nyast först")
-    if fel := [t.steg for t in arende.tillfallen if t.steg not in TILLFALLE]:
-        raise ValueError(f"steget går inte att tycka till om: {fel[0]}")

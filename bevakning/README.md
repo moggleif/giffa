@@ -80,15 +80,21 @@ tabellen:
 
 **Tycka till** är valfritt: kommande tillfällen att påverka, i samma
 format som händelserna. Datumet är sista dagen för synpunkter eller
-sammanträdets dag, och steget är `samrad`, `granskning`, `yttrande` eller
-`beslut`. Källan är kallelsen, underrättelsen eller kommunens sida om
-samrådet. Ett kommande beslut tas med när kallelsen eller en annan handling
-säger att ärendet ska upp; sammanträdenas datum finns i kommunhandlingars
-[kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv).
+sammanträdets dag. Steget är ett av:
+
+| Steg         | Betyder                                                        |
+| ------------ | -------------------------------------------------------------- |
+| `samrad`     | samråd; datumet är sista dagen för synpunkter                   |
+| `granskning` | granskning; datumet är sista dagen för synpunkter               |
+| `yttrande`   | en nämnd ska yttra sig; källan är kallelsen                     |
+| `beslut`     | ärendet står i kallelsen till sammanträdet                      |
+| `vantas`     | ett arbetsutskott har föreslagit beslutet men kallelsen har inte kommit; datumet är organets nästa sammanträde i kommunhandlingars [kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv), som är källan, och sidan märker det preliminärt |
+
 Det gäller alla sorters ärenden, också lokalbehov, handlingsplaner och
 initiativ. Startsidan visar dem under *Tycka till nu* och döljer dem som
-har passerat (K12). Raderna står kvar; när tillfället har ägt rum blir det
-en händelse.
+har passerat (K12). När tillfället har ägt rum flyttar rundan raden till
+*Händelser*, med protokollet som källa; ett `vantas` som inte kom upp
+flyttas till nästa sammanträde.
 
 Andra avsnitt än *Händelser*, *Tycka till* och *I media och debatt*
 stoppar bygget.

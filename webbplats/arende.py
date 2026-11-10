@@ -5,6 +5,7 @@ felet när något inte följer det.
 """
 
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import date
 
@@ -20,6 +21,7 @@ STEG = {
     "avbrutet": "avbrutet",
     "info": "information",
 }
+TILLFALLEN = ("samrad", "granskning", "yttrande", "beslut", "vantas")
 KRAVS = ("rubrik", "ort", "organ", "status")
 VALFRIA = ("diarienummer",)
 AVSNITT = ("Händelser", "Tycka till", "I media och debatt")
@@ -73,7 +75,7 @@ def tolka(fil: str, text: str) -> Arende:
         falt(huvud),
         ingress,
         [handelse(rad) for rad in avsnitt.get("Händelser", [])],
-        [handelse(rad) for rad in avsnitt.get("Tycka till", [])],
+        [handelse(rad, TILLFALLEN) for rad in avsnitt.get("Tycka till", [])],
         [mediepost(rad) for rad in avsnitt.get("I media och debatt", [])],
     )
 
@@ -99,9 +101,9 @@ def dela(kropp: str) -> tuple[str, dict[str, list[str]]]:
     return " ".join(delar[0].split()), avsnitt
 
 
-def handelse(rad: str) -> Handelse:
+def handelse(rad: str, stegen: Iterable[str] = STEG) -> Handelse:
     datum, steg, text, kalla = poster(rad, 4)
-    if steg not in STEG:
+    if steg not in stegen:
         raise ValueError(f"okänt steg {steg!r}: {rad}")
     return Handelse(date.fromisoformat(datum), steg, text, *lank(kalla, rad))
 

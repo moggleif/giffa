@@ -27,6 +27,7 @@ def paverkbart(namn: str) -> object:
         "## Tycka till\n\n"
         "- 2026-12-01 · granskning · Granskningen. · [Underrättelse](https://example.org/g)\n"
         "- 2026-11-10 · beslut · Nämnden beslutar. · [Kallelse](https://example.org/k)\n"
+        "- 2026-11-24 · vantas · KS väntas besluta. · [Kalendern](https://example.org/c)\n"
         "- 2026-11-09 · beslut · Passerat. · [Kallelse](https://example.org/p)\n\n"
     )
     text = ARENDE.replace("## I media och debatt", tillfallen + "## I media och debatt")
@@ -88,6 +89,13 @@ class Startsidan(unittest.TestCase):
         kortet = html[html.index('<article id="s"') :]
         self.assertIn('<div class="paverka"><p>Tycka till</p>', kortet)
         self.assertIn("Granskning – synpunkter senast <time>2026-12-01", kortet)
+        self.assertIn("Beslut väntas, preliminärt <time>2026-11-24", kortet)
+
+    def test_vantat_beslut_markeras_preliminart_i_tabellen(self):
+        rader = "## Tycka till\n\n- 2026-11-24 · vantas · X. · [K](https://example.org/c)\n\n"
+        text = ARENDE.replace("## I media", rader + "## I media")
+        html = startsida(SAJT, [tolka("bevakning/ks/v.md", text)], RUNDA)
+        self.assertIn("Tycka till 2026-11-24 (preliminärt)</small>", html)
 
     def test_inga_tillfallen_sags(self):
         html = startsida(SAJT, [arende("pågår")], RUNDA)

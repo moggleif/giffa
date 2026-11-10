@@ -16,6 +16,7 @@ TILLFALLE = {
     "granskning": "Granskning – synpunkter senast",
     "yttrande": "Yttrande",
     "beslut": "Beslut",
+    "vantas": "Beslut väntas, preliminärt",
 }
 INLEDNING = (
     "<p>Det som går att påverka i de bevakade ärendena, med det som ligger "
@@ -64,15 +65,18 @@ LOKALPLAN = (
 )
 STEGEN = (
     "<li><strong>Inför ett beslut</strong> i en nämnd, ett arbetsutskott, kommunstyrelsen "
-    "eller fullmäktige: kallelsen med handlingarna publiceras före sammanträdet. Kontakta "
-    "ledamöterna eller partierna innan dess. Det gäller också lokalbehov, handlingsplaner och "
-    f'initiativ. <a href="{KALENDER}">Sammanträdena i kommunhandlingars kalender</a></li>'
+    "eller fullmäktige, också om lokalbehov, handlingsplaner och initiativ: förslaget står i "
+    "arbetsutskottets protokoll och i kallelsen till sammanträdet. Före sammanträdet går "
+    "ledamöterna och partierna att nå med synpunkter. Ett datum märkt preliminärt är "
+    "organets nästa sammanträde, innan kallelsen har kommit. "
+    f'<a href="{KALENDER}">Kommunhandlingars kalender</a></li>'
     "<li><strong>Lokalbehov</strong>: nämndernas behov sammanställs i kommunens lokalplan, "
     f'som är en del av flerårsbudgeten. <a href="{LOKALPLAN}">FG protokoll § 102</a></li>'
     "<li><strong>Samråd</strong> om ett planprogram eller en detaljplan: kommunen samråder "
     "bland andra med sakägare, boende som berörs och enskilda med väsentligt intresse. "
     f'<a href="{PBL}">Plan- och bygglagen 5 kap. 11 §</a></li>'
-    "<li><strong>Granskning</strong> av ett planförslag, minst två veckor: den som inte "
+    "<li><strong>Granskning</strong> av ett planförslag, minst två veckor och vid utökat "
+    "förfarande tre: den som inte "
     "senast under granskningstiden har lämnat skriftliga synpunkter kan förlora rätten att "
     f'överklaga beslutet att anta planen. <a href="{PBL}">'
     "Plan- och bygglagen 5 kap. 18–19 §§</a></li>"

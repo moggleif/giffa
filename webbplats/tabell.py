@@ -37,15 +37,17 @@ def rad(arende: Arende, aren: range, idag: date) -> str:
     return (
         f'<tr data-ort="{escape("|".join(arende.orter))}"><th scope="row">'
         f'<a href="#{arende.id}">{escape(arende.falt["rubrik"])}</a> '
-        f"<small>{escape(', '.join(arende.orter))}</small>{markering(arende, idag)}"
+        f"<small>{escape(', '.join(arende.orter))}</small>{tycka_till_marke(arende, idag)}"
         f"</th>{celler}</tr>"
     )
 
 
-def markering(arende: Arende, idag: date) -> str:
+def tycka_till_marke(arende: Arende, idag: date) -> str:
     if not (tillfallen := kommande(arende, idag)):
         return ""
-    return f' <small class="paverka">Tycka till {tillfallen[0].datum}</small>'
+    forsta = tillfallen[0]
+    preliminart = " (preliminärt)" if forsta.steg == "vantas" else ""
+    return f' <small class="paverka">Tycka till {forsta.datum}{preliminart}</small>'
 
 
 def cell(arende: Arende, ar: int, egna: range) -> str:
