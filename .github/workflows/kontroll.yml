@@ -1,0 +1,21 @@
+# Testerna och ett bygge av sidan på varje PR och ändring på main
+# (K10, beslut 0002). Ett ärende som inte följer formatet stoppar här.
+name: Kontroll
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  kontroll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testerna
+        run: python3 -m unittest discover -s tests -t .
+      - name: Bygg sidan
+        run: python3 -m webbplats _site "${{ github.server_url }}/${{ github.repository }}"

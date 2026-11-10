@@ -11,21 +11,83 @@ bevakning/detaljplaner/    Detaljplaner
 bevakning/kungsbacka-se/   Övrigt från kungsbacka.se
 ```
 
-Filen heter `ÅÅÅÅ-MM-DD-kort-beskrivning.md` efter dagen ärendet först
-syntes, och börjar med:
+Filen heter `ÅÅÅÅ-MM-DD-kort-beskrivning.md` efter datumet på ärendets
+första händelse. Webbplatsen byggs ur filerna
+([beslut 0002](../beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)),
+och bygget stoppar när en fil inte följer formatet nedan.
+
+## Formatet
 
 ```markdown
 ---
-rubrik: Ny förskola i Frillesås
-ort: Frillesås
-organ: Förskole- och grundskolenämnden
-diarienummer: FGN 2026/0123
-forst_sedd: 2026-11-09
+rubrik: Planprogram för Åsaberg
+ort: Åsa
+organ: Kommunstyrelsen
+diarienummer: KS-2003-00165
 status: pågår
-kallor:
-  - https://www.kungsbacka.se/...
+synpunkter: https://www.kungsbacka.se/...
+synpunkter_senast: 2026-12-01
 ---
+
+En eller två meningar om vad ärendet gäller, ur källan.
+
+## Händelser
+
+- 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna. · [KS protokoll § 161](https://github.com/...#sida-21)
+- 2026-06-02 · forslag · KSAU föreslog samråd. · [KSAU protokoll § 209](https://github.com/...#sida-14)
+
+## I media och debatt
+
+- 2026-06-20 · [Rubriken som den står](https://www.norrahalland.se/...) · Norra Halland
 ```
 
-Under front matter följer händelserna i ärendet, nyast först, var och en med
-datum och länk till källan.
+**Front matter**, en nyckel per rad:
+
+| Nyckel              | Innehåll                                                      |
+| ------------------- | ------------------------------------------------------------- |
+| `rubrik`            | Ärendet som det heter i handlingarna                           |
+| `ort`               | En eller flera orter ur `OMRADE.md`, åtskilda med komma         |
+| `organ`             | Organet som driver ärendet                                     |
+| `diarienummer`      | När det finns                                                  |
+| `status`            | `pågår`, `beslutat`, `klart` eller `avbrutet` (se nedan)        |
+| `synpunkter`        | Var synpunkter lämnas, när ärendet är öppet för det (valfri)    |
+| `synpunkter_senast` | Sista dagen för synpunkter, `ÅÅÅÅ-MM-DD` (valfri)               |
+
+**Status** styr var ärendet står på sidan:
+
+- `pågår` – inte avgjort; startsidan under *Pågår*.
+- `beslutat` – avgjort och att följa; startsidan under *Beslutat*.
+- `klart` – genomfört, byggt, på plats; historiken.
+- `avbrutet` – avbrutet eller upphävt utan nytt arbete; historiken.
+
+**Händelserna** står nyast först, en per rad: datum, steg, en mening om
+vad som hände och källan som länk, åtskilda med ` · `. Länka till handlingens sida på
+[kommunhandlingars webbplats](https://moggleif.github.io/kommunhandlingar/)
+med `#sida-N` när den finns där; i `.md` på GitHub fungerar ankaret inte. Stegen ger ikonen i
+tabellen:
+
+| Steg         | Betyder                                         |
+| ------------ | ----------------------------------------------- |
+| `forslag`    | förslag, uppdrag eller initiativ                |
+| `samrad`     | samråd eller remiss: öppet för synpunkter       |
+| `granskning` | granskning av ett planförslag                   |
+| `yttrande`   | en nämnd eller myndighet yttrar sig             |
+| `beslut`     | beslut eller antagande                          |
+| `bygge`      | byggstart eller genomförande                     |
+| `klart`      | klart, på plats                                 |
+| `avbrutet`   | avbrutet eller upphävt                          |
+| `info`       | information, avstämning eller överprövning      |
+
+Andra avsnitt än *Händelser* och *I media och debatt* stoppar bygget.
+
+**I media och debatt** är valfritt: tidningsartiklar och diskussioner, en
+per rad med datum, rubriken som länk och var den stod. Kungsbacka-Posten och
+sociala medier tas bara med när en människa länkat dem i ett issue
+([KALLOR.md](../KALLOR.md)).
+
+## Rundorna
+
+[`rundor.csv`](rundor.csv) har en rad per bevakningsrunda med periodens
+första och sista dag (`fran`, `till`) och en `anteckning` som visas med
+perioden, till exempel när perioden inte är fullständigt genomsökt. Händelserna inom den sista radens
+period visas som *Nytt* på startsidan.
