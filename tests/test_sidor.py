@@ -11,6 +11,7 @@ from webbplats.arende import tolka
 from webbplats.bevakar import bevakar
 from webbplats.ikoner import BETYDER
 from webbplats.mall import Sajt
+from webbplats.paverka import SA_GOR
 from webbplats.sidor import historik, startsida
 from webbplats.underlag import Runda
 
@@ -83,7 +84,7 @@ class Startsidan(unittest.TestCase):
         html = startsida(SAJT, [paverkbart("s"), arende("pågår", "p")], RUNDA)
         nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
         self.assertLess(nu.index("Beslut <time datetime=\"2026-11-10\">tisdag 10 november 2026</time>, i dag"), nu.index("synpunkter senast"))
-        self.assertIn('<a href="#s">Ny förskola</a>', nu)
+        self.assertIn('<a class="arende" href="#s">Ny förskola</a>', nu)
         self.assertNotIn("2026-11-09", html)
         self.assertIn("1 december 2026</time>, om 21 dagar", nu)
         self.assertIn("Så kan du påverka, steg för steg", nu)
@@ -151,6 +152,25 @@ class Klarsprak(unittest.TestCase):
         tabellen = next(b for b in efter.split("\n\n") if b.startswith("|"))
         rader = re.findall(r"^\| `(\w+)` +\| (.+?) +\|$", tabellen, re.M)
         self.assertEqual(dict(rader), BETYDER)
+
+
+class SaGorDu(unittest.TestCase):
+    def test_varje_tillfalle_sager_vad_man_gor(self):
+        html = startsida(SAJT, [paverkbart("s")], RUNDA)
+        nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
+        rader = nu.split("<li data-ort=")[1:]
+        self.assertEqual(len(rader), 3)
+        for rad in rader:
+            self.assertRegex(rad, r'^"[^"]+"><a class="arende" [^>]+>Ny förskola</a> <small>Åsa')
+        self.assertIn("Så gör du:</strong> Före sammanträdet går ledamöterna", rader[0])
+        self.assertIn("står i arbetsutskottets protokoll", rader[1])
+        self.assertIn("Lämna skriftliga synpunkter senast sista dagen", rader[2])
+        self.assertIn("<details open><summary>Så kan du påverka", nu)
+        self.assertEqual(html.count("Så gör du:"), 6)
+
+    def test_ett_steg_en_rad(self):
+        self.assertEqual(len(set(SA_GOR.values())), len(SA_GOR) - 1)
+        self.assertEqual(SA_GOR["yttrande"], SA_GOR["beslut"])
 
 
 class Historiken(unittest.TestCase):
