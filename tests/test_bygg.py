@@ -28,6 +28,9 @@ class Bygg(unittest.TestCase):
             ".nojekyll",
         ):
             self.assertTrue((self.ut / namn).exists(), namn)
+        skript = (self.ut / "urval.js").read_text(encoding="utf-8")
+        for del_ in ("URLSearchParams", "pushState", "popstate", "nav a"):
+            self.assertIn(del_, skript)
         arenden = list(ROT.glob("bevakning/*/*.md"))
         self.assertEqual(len(list(self.ut.glob("arende/*.html"))), len(arenden))
 
