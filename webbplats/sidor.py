@@ -40,14 +40,15 @@ def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
 
 def oversikt(arenden: list[Arende]) -> str:
     poster = "".join(
-        f'<li><a href="{adress}">{rubrik}</a>: {antal(arenden, statusar)} ärenden</li>'
+        f'<li><a href="{adress}">{rubrik}</a>: {antal(arenden, statusar)}</li>'
         for adress, rubrik, statusar, _ in LISTOR
     )
-    return f'<h2 id="alla">Alla ärenden</h2><ul class="oversikt">{poster}</ul>'
+    return f'<h2>Alla ärenden</h2><ul class="oversikt">{poster}</ul>'
 
 
-def antal(arenden: list[Arende], statusar: tuple[str, ...]) -> int:
-    return sum(a.falt["status"] in statusar for a in arenden)
+def antal(arenden: list[Arende], statusar: tuple[str, ...]) -> str:
+    n = sum(a.falt["status"] in statusar for a in arenden)
+    return "1 ärende" if n == 1 else f"{n} ärenden"
 
 
 def nytt(arenden: list[Arende], runda: Runda) -> str:

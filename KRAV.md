@@ -53,14 +53,14 @@ period,
 **när** sidan byggs,
 **så** visar startsidan överst perioden, radens anteckning och ett kort
 för varje ärende med en händelse i perioden. Kortet visar de nya händelserna med källor bakom en hopfälld
-del och länkar till ärendets kort. Har inget ärende en ny händelse står
+del och länkar till ärendets sida (K18). Har inget ärende en ny händelse står
 det, med perioden.
 
 ## K7 – Historik
 
 **Givet** ärenden med `status` `klart` eller `avbrutet`,
 **när** sidan byggs,
-**så** står de på historiksidan och inte på startsidan.
+**så** står de på historiksidan och inte på *Pågår* eller *Beslutat*.
 
 ## K8 – Vad som bevakas
 

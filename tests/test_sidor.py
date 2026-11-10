@@ -52,8 +52,8 @@ class Startsidan(unittest.TestCase):
     def test_raknar_listorna_och_visar_inga_kort(self):
         alla = [arende("pågår", "p"), arende("beslutat", "b"), arende("klart", "k")]
         html = startsida(SAJT, alla, RUNDA)
-        self.assertIn('<li><a href="pagar.html">Pågår</a>: 1 ärenden</li>', html)
-        self.assertIn('<li><a href="historik.html">Historik</a>: 1 ärenden</li>', html)
+        self.assertIn('<li><a href="pagar.html">Pågår</a>: 1 ärende</li>', html)
+        self.assertIn('<li><a href="historik.html">Historik</a>: 1 ärende</li>', html)
         self.assertNotIn("<article id=", html)
         self.assertNotIn("tidslinje", html)
         self.assertIn('<a href="beslutat.html">Beslutat</a></li>', html)

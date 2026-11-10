@@ -57,8 +57,8 @@ En eller två meningar om vad ärendet gäller, ur källan.
 
 **Status** styr var ärendet står på sidan:
 
-- `pågår` – inte avgjort; startsidan under *Pågår*.
-- `beslutat` – avgjort och att följa; startsidan under *Beslutat*.
+- `pågår` – inte avgjort; sidan *Pågår*.
+- `beslutat` – avgjort och att följa; sidan *Beslutat*.
 - `klart` – genomfört, byggt, på plats; historiken.
 - `avbrutet` – avbrutet eller upphävt utan nytt arbete; historiken.
 

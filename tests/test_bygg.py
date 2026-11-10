@@ -19,6 +19,8 @@ class Bygg(unittest.TestCase):
         bygg(ROT, self.ut, "https://github.com/agare/giffa")
         for namn in (
             "index.html",
+            "pagar.html",
+            "beslutat.html",
             "historik.html",
             "bevakar.html",
             "stil.css",
