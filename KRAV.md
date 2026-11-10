@@ -136,3 +136,12 @@ nytt.
 första länken hoppar förbi menyn till innehållet, allt som går att välja
 får en tydlig fokusram, knappar och stegikoner har träffytor på minst 32
 punkter och löptexten står i en spalt på högst cirka 70 tecken.
+
+## K15 – Datum som man säger dem
+
+**Givet** ett datum på sidan,
+**när** sidan byggs,
+**så** står det som man säger det, till exempel *24 november 2026*, med
+ISO-datumet i `datetime`. Ett tillfälle att tycka till visar också
+veckodagen och hur många dagar det är kvar räknat från byggdagen, till
+exempel *tisdag 24 november 2026, om 14 dagar*.

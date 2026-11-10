@@ -66,7 +66,7 @@ class Startsidan(unittest.TestCase):
         self.assertIn("1 ny händelse", nytt)
         self.assertIn('href="historik.html#k"', nytt)
         self.assertNotIn("Ett förslag.", nytt)
-        self.assertIn("2026-03-01 till 2026-03-31. Startärenden.", nytt)
+        self.assertIn("1 mars 2026</time> till <time datetime=\"2026-03-31\">31 mars 2026</time>. Startärenden.", nytt)
 
     def test_urval_per_ort_ur_omrade(self):
         html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
@@ -81,24 +81,25 @@ class Startsidan(unittest.TestCase):
     def test_tycka_till_nu_i_tur_och_ordning(self):
         html = startsida(SAJT, [paverkbart("s"), arende("pågår", "p")], RUNDA)
         nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
-        self.assertLess(nu.index("Beslut <time>2026-11-10"), nu.index("synpunkter senast"))
+        self.assertLess(nu.index("Beslut <time datetime=\"2026-11-10\">tisdag 10 november 2026</time>, i dag"), nu.index("synpunkter senast"))
         self.assertIn('<a href="#s">Ny förskola</a>', nu)
         self.assertNotIn("2026-11-09", html)
+        self.assertIn("1 december 2026</time>, om 21 dagar", nu)
         self.assertIn("Så kan du påverka, steg för steg", nu)
 
     def test_markering_pa_kort_och_rad(self):
         html = startsida(SAJT, [paverkbart("s")], RUNDA)
-        self.assertIn('<small class="paverka">Tycka till 2026-11-10</small>', html)
+        self.assertIn('<small class="paverka">Tycka till <time datetime="2026-11-10">10 november 2026</time></small>', html)
         kortet = html[html.index('<article id="s"') :]
         self.assertIn('<div class="paverka"><p>Tycka till</p>', kortet)
-        self.assertIn("Granskning – synpunkter senast <time>2026-12-01", kortet)
-        self.assertIn("Beslut väntas, preliminärt <time>2026-11-24", kortet)
+        self.assertIn("Granskning – synpunkter senast <time datetime=\"2026-12-01\">tisdag 1 december 2026", kortet)
+        self.assertIn("Beslut väntas, preliminärt <time datetime=\"2026-11-24\">tisdag 24 november 2026", kortet)
 
     def test_vantat_beslut_markeras_preliminart_i_tabellen(self):
         rader = "## Tycka till\n\n- 2026-11-24 · vantas · X. · [K](https://example.org/c)\n\n"
         text = ARENDE.replace("## I media", rader + "## I media")
         html = startsida(SAJT, [tolka("bevakning/ks/v.md", text)], RUNDA)
-        self.assertIn("Tycka till 2026-11-24 (preliminärt)</small>", html)
+        self.assertIn("24 november 2026</time> (preliminärt)</small>", html)
 
     def test_inga_tillfallen_sags(self):
         html = startsida(SAJT, [arende("pågår")], RUNDA)

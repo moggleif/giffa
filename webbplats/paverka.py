@@ -10,6 +10,7 @@ from datetime import date
 from html import escape
 
 from webbplats.arende import Arende, Handelse
+from webbplats.datum import kvar, med_veckodag
 
 TILLFALLE = {
     "samrad": "Samråd – synpunkter senast",
@@ -28,28 +29,29 @@ def kommande(arende: Arende, idag: date) -> list[Handelse]:
     return sorted((t for t in arende.tillfallen if t.datum >= idag), key=lambda t: t.datum)
 
 
-def tillfalle(t: Handelse) -> str:
+def tillfalle(t: Handelse, idag: date) -> str:
     return (
-        f"<strong>{TILLFALLE[t.steg]} <time>{t.datum}</time></strong> {escape(t.text)} "
+        f"<strong>{TILLFALLE[t.steg]} {med_veckodag(t.datum)}, {kvar(t.datum, idag)}</strong> "
+        f"{escape(t.text)} "
         f'<a href="{escape(t.lank)}">{escape(t.kalla)}</a>'
     )
 
 
 def markering(arende: Arende, idag: date) -> str:
-    poster = "".join(f"<li>{tillfalle(t)}</li>" for t in kommande(arende, idag))
+    poster = "".join(f"<li>{tillfalle(t, idag)}</li>" for t in kommande(arende, idag))
     return f'<div class="paverka"><p>Tycka till</p><ul>{poster}</ul></div>' if poster else ""
 
 
 def tycka_till_nu(arenden: list[Arende], idag: date, adress: Callable[[Arende], str]) -> str:
     par = sorted(((t, a) for a in arenden for t in kommande(a, idag)), key=lambda p: p[0].datum)
-    rader = "".join(rad(t, a, adress(a)) for t, a in par)
+    rader = "".join(rad(t, a, adress(a), idag) for t, a in par)
     lista = f'<ol class="tillfallen">{rader}</ol>' if rader else "<p>Inga kända tillfällen.</p>"
     return f'<h2 id="tycka-till">Tycka till nu</h2>{INLEDNING}{lista}{forklaring()}'
 
 
-def rad(t: Handelse, arende: Arende, adress: str) -> str:
+def rad(t: Handelse, arende: Arende, adress: str, idag: date) -> str:
     return (
-        f'<li data-ort="{escape("|".join(arende.orter))}">{tillfalle(t)} · '
+        f'<li data-ort="{escape("|".join(arende.orter))}">{tillfalle(t, idag)} · '
         f'<a href="{adress}#{arende.id}">{escape(arende.falt["rubrik"])}</a></li>'
     )
 

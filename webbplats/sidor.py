@@ -7,6 +7,7 @@ med det som är klart eller avbrutet och sidan om vad som bevakas.
 from html import escape
 
 from webbplats.arende import Arende
+from webbplats.datum import tid
 from webbplats.ikoner import teckenforklaring
 from webbplats.kort import kort, nytt_kort
 from webbplats.mall import Sajt, sida, urval
@@ -43,7 +44,7 @@ def nytt(arenden: list[Arende], runda: Runda) -> str:
     innehall = f'<div class="kort">{korten}</div>' if korten else "<p>Inga nya händelser.</p>"
     return (
         f'<h2 id="nytt">Nytt sedan förra rundan</h2>'
-        f'<p class="period">Rundans period: {fran} till {till}. {escape(runda.anteckning)}</p>'
+        f'<p class="period">Rundans period: {tid(fran)} till {tid(till)}. {escape(runda.anteckning)}</p>'
         f"{innehall}"
     )
 
