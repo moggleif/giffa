@@ -196,3 +196,12 @@ punkter i mediefrågan),
 **så** visas korten och teckenförklaringen men inte tidslinjen; korten har
 samma ärenden och länkar till ärendenas sidor. På en bredare skärm visas
 tidslinjen också.
+
+## K21 – Ortsvalet följer med
+
+**Givet** att en ort har valts med knapparna på en lista eller startsidan,
+**när** sidan visas med skriptet,
+**så** står orten i adressen (`?ort=Åsa`), bakåtknappen återställer
+förra valet och en länk med orten visar samma urval. Sidans länkar till
+andra sidor på webbplatsen tar med orten, också från sidor utan knappar,
+så att valet följer med tills läsaren väljer om. Utan skriptet står allt.

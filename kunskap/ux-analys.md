@@ -99,5 +99,6 @@ det viktigaste först och förklara fackord där de står.
 | 9 | Ortsvalet följer med mellan sidorna och syns i adressen | Ortsvalet glöms | [#24](https://github.com/moggleif/giffa/issues/24) |
 
 Det som inte tas med nu: en sökruta (webbläsarens egen sökning räcker när
-varje sida är kortare), utskriftsformat och mörkt läge. De prövas igen när
-sidan har använts en tid.
+varje sida är kortare), utskriftsformat, mörkt läge och vilka ledamöterna i
+ett organ är och hur man når dem, som vi inte hämtar i dag.
+De prövas igen när sidan har använts en tid.
