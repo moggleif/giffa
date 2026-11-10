@@ -19,10 +19,10 @@ def kort(arende: Arende, sajt: Sajt) -> str:
         f"{markor(arende)}<h3>{escape(falt['rubrik'])}</h3>"
         f'<p class="organ">{escape(organ(arende))}</p>'
         + (f"<p>{escape(arende.ingress)}</p>" if arende.ingress else "")
-        + f"<p>Senast: {STEG[senaste.steg]} {tid(senaste.datum)}</p>"
+        + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
         + markering(arende, sajt.byggd.date())
-        + f"<details><summary>Läs mer: händelserna och källorna, "
-        f"{len(arende.handelser)} st</summary>"
+        + f"<details><summary>Läs mer: alla {len(arende.handelser)} händelser med källor"
+        "</summary>"
         f"<ol>{''.join(post(h) for h in arende.handelser)}</ol>{media(arende)}"
         f'<p><a href="{escape(sajt.repo)}/blob/main/{escape(arende.fil)}">Ärendet i repot</a>'
         "</p></details></article>"
@@ -31,7 +31,7 @@ def kort(arende: Arende, sajt: Sajt) -> str:
 
 def markor(arende: Arende) -> str:
     forsta, sista = arende.handelser[-1].datum.year, arende.handelser[0].datum.year
-    aren = str(forsta) if forsta == sista else f"{forsta}–{sista}"
+    aren = str(forsta) if forsta == sista else f"Pågått {forsta}–{sista}"
     orter = "".join(f"<span>{escape(o)}</span>" for o in arende.orter)
     return f'<p class="markor"><span>{aren}</span>{orter}</p>'
 

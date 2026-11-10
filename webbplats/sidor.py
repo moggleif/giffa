@@ -30,7 +30,7 @@ def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
     )
     paverka = tycka_till_nu(arenden, sajt.byggd.date(), adress)
     innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda)
-    innehall += teckenforklaring() + delar
+    innehall += delar
     return sida(sajt, "index.html", "Giffå", innehall)
 
 
@@ -58,11 +58,11 @@ def avsnitt(sajt: Sajt, rubrik: str, arenden: list[Arende]) -> str:
         return f"<h2>{rubrik}</h2><p>Inga ärenden ännu.</p>"
     korten = "".join(kort(a, sajt) for a in arenden)
     rader = tabell(arenden, sajt.byggd.date())
-    return f'<h2>{rubrik}</h2>{rader}<div class="kort">{korten}</div>'
+    return f'<h2>{rubrik}</h2>{teckenforklaring()}{rader}<div class="kort">{korten}</div>'
 
 
 def historik(sajt: Sajt, arenden: list[Arende]) -> str:
     klara = [a for a in arenden if a.falt["status"] in HISTORIKEN]
     inledning = "<p>Ärenden som är klara – byggda, på plats – eller avbrutna.</p>"
-    innehall = inledning + urval(sajt) + teckenforklaring() + avsnitt(sajt, "Ärendena", klara)
+    innehall = inledning + urval(sajt) + avsnitt(sajt, "Ärendena", klara)
     return sida(sajt, "historik.html", "Historik", innehall)

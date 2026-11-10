@@ -146,3 +146,12 @@ ISO-datumet i `datetime`. Ett tillfälle att tycka till visar också
 veckodagen och hur många dagar det är kvar räknat från byggdagen i svensk
 tid, till exempel *tisdag 24 november 2026, om 14 dagar*. Sidfoten säger
 när sidan byggdes på samma sätt.
+
+## K16 – Stegen i klarspråk
+
+**Givet** stegen i `bevakning/README.md`,
+**när** sidan byggs,
+**så** har varje steg ett kort namn och en mening om vad det betyder, som
+står i teckenförklaringen direkt ovanför varje tidslinje. Ikonens text
+börjar med stegets namn och datum, kortet säger *Senaste steget:* med
+namn och datum, och årtalen på kortet står som *Pågått 2014–2026*.

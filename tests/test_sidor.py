@@ -56,7 +56,7 @@ class Startsidan(unittest.TestCase):
 
     def test_kortet_har_historik_media_och_lank_till_repot(self):
         html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
-        self.assertIn("Läs mer: händelserna och källorna, 2 st", html)
+        self.assertIn("Läs mer: alla 2 händelser med källor", html)
         self.assertIn('<a href="https://example.org/m">Rubrik</a> – Norra Halland', html)
         self.assertIn('href="https://github.com/agare/giffa/blob/main/bevakning/ks/p.md"', html)
 
@@ -132,6 +132,16 @@ class Lasbarhet(unittest.TestCase):
         self.assertGreaterEqual(min(float(s) for s, e in storlekar if e == "rem") * bas, 15)
         spalt = float(re.search(r"ol\.tillfallen \{ max-width: ([0-9.]+)rem", stil).group(1))
         self.assertLessEqual(spalt * bas / 8.4, 70)
+
+
+class Klarsprak(unittest.TestCase):
+    def test_ikoner_kort_och_teckenforklaring_i_klartext(self):
+        html = startsida(SAJT, [arende("pågår", "p")], RUNDA)
+        self.assertIn("<strong>Samråd</strong> – Förslaget är ute för synpunkter från dem som berörs", html)
+        self.assertIn("Senaste steget: beslut, <time", html)
+        self.assertIn("<span>Pågått 2025–2026</span>", html)
+        self.assertIn('aria-label="Beslut 2 mars 2026: Nämnden beslutade.', html)
+        self.assertLess(html.index("<h2>Pågår</h2>"), html.index("Vad ikonerna betyder"))
 
 
 class Historiken(unittest.TestCase):
