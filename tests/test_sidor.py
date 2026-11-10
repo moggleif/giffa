@@ -203,13 +203,19 @@ class Arendesidan(unittest.TestCase):
         self.assertIn('href="https://github.com/agare/giffa/blob/main/bevakning/ks/s.md"', html)
 
 
+def stillat(senast: str) -> str:
+    return ARENDE.replace("2026-03-02", senast).replace("2025-01-05 ·", "2024-01-05 ·")
+
+
 class StillaArenden(unittest.TestCase):
     def test_pagar_skiljer_rorliga_fran_stilla(self):
-        gammalt = tolka("bevakning/ks/g.md", ARENDE.replace("2026-03-02", "2024-11-09"))
-        html = pagar([arende("pågår", "p"), gammalt])
+        gammalt = tolka("bevakning/ks/g.md", stillat("2024-11-09"))
+        pa_gransen = tolka("bevakning/ks/n.md", stillat("2024-11-10"))
+        html = pagar([arende("pågår", "p"), gammalt, pa_gransen])
         stilla = html.index('<h2 id="stilla">Ingen händelse sedan <time datetime="2024-11-10">')
         self.assertLess(html.index('id="p"'), stilla)
         self.assertLess(stilla, html.index('id="g"'))
+        self.assertLess(html.index('id="n"'), stilla)
         self.assertEqual(html.count("Vad ikonerna betyder"), 1)
 
 

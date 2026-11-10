@@ -185,4 +185,5 @@ länkar dit, och adressen är densamma vilken status ärendet än har.
 **så** står först de som har en händelse de senaste två åren (730 dagar)
 räknat från byggdagen, och sedan, under en egen rubrik med datumet, de som
 inte har det, med en mening om att det som inte syns i källorna inte
-betyder att inget har hänt. Ärendefilernas status ändras inte.
+betyder att inget har hänt. Kortet visar när det senaste steget togs (K16).
+Ärendefilernas status ändras inte.
