@@ -22,4 +22,61 @@ uppdateras när händelsen ändrar den.
 
 **Givet** en ändring som sammanfogats till `main`,
 **när** arbetsflödet `pages.yml` har kört,
-**så** visar GitHub Pages innehållet i `docs/` från den ändringen.
+**så** visar GitHub Pages sidan byggd ur den ändringen.
+
+## K4 – Ärendena som tabell och kort
+
+**Givet** ärenden i `bevakning/`,
+**när** sidan byggs,
+**så** står de i en tabell med en rad per ärende och en kolumn per år, där
+varje händelse är en ikon som länkar till källan och där stegen skiljs åt
+med form, inte bara färg. Under tabellen har varje ärende ett kort med ort,
+organ, diarienummer, senaste steget och, under *Läs mer*, alla händelser
+med källor och länkarna under *I media och debatt*. Raden i tabellen länkar
+till kortet.
+
+## K5 – Startsidan: pågår och beslutat
+
+**Givet** ärenden med `status` `pågår` eller `beslutat`,
+**när** sidan byggs,
+**så** visar startsidan dem under *Pågår* respektive *Beslutat*. Ett
+pågående ärende med `synpunkter` visar var och senast när synpunkter kan
+lämnas.
+
+## K6 – Nytt sedan förra rundan
+
+**Givet** att den sista raden i `bevakning/rundor.csv` anger förra rundans
+period,
+**när** sidan byggs,
+**så** visar startsidan överst ett kort för varje ärende med en händelse i
+perioden. Kortet visar de nya händelserna med källor bakom en hopfälld
+del och länkar till ärendets kort. Har inget ärende en ny händelse står
+det, med perioden.
+
+## K7 – Historik
+
+**Givet** ärenden med `status` `klart` eller `avbrutet`,
+**när** sidan byggs,
+**så** står de på historiksidan och inte på startsidan.
+
+## K8 – Vad som bevakas
+
+**Givet** `OMRADE.md`, `platser.csv` och `KALLOR.md`,
+**när** sidan byggs,
+**så** visar sidan *Vad vi bevakar* orterna, platserna och källorna ur
+just de filerna, och länkar till dem för reglerna.
+
+## K9 – Länkar mellan sidan och repot
+
+**Givet** en sida på webbplatsen,
+**när** den visas,
+**så** länkar sidfoten till repot och till ärendets fil där den finns, och
+`README.md` länkar till webbplatsen.
+
+## K10 – Hellre stanna än visa fel
+
+**Givet** ett ärende som inte följer formatet i `bevakning/README.md` –
+okänd status, ort, steg eller nyckel, ett datum som inte går att läsa,
+en källa utan `https`-länk eller händelser som inte står nyast först –
+**när** sidan byggs,
+**så** avbryts bygget med filens namn och felet, och inget publiceras.

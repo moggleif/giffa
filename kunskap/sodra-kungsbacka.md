@@ -67,7 +67,9 @@ Orterna står i [OMRADE.md](../OMRADE.md), platserna i
   redovisad i KSAU 2026-09-01
   ([protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks-au/2026/2026-09-01/protokoll.md)).
 - **Rågelund 1:127** – detaljplan för bostäder antagen 2026-01-22
-  ([protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg/2026/2026-01-22/protokoll-byggnadsnamndens-protokoll-2026-01-22-1-11-13-19.md)).
+  ([protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg/2026/2026-01-22/protokoll-byggnadsnamndens-protokoll-2026-01-22-1-11-13-19.md)). Länsstyrelsen har
+  beslutat att överpröva antagandet
+  ([ks 2026-02-17](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2026/2026-02-17/protokoll.md#sida-8)).
 - **Frillesås-Rya 2:35** – detaljplan för bostäder, information i
   bygg-au 2026-04-28 ([protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg-au/2026/2026-04-28/protokoll.md)).
 
@@ -81,9 +83,9 @@ Orterna står i [OMRADE.md](../OMRADE.md), platserna i
   Gällinge förskola ([fg 2025-05-14](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/fg/2025/2025-05-14/handlingar.md)).
 - **Må 3:15** – detaljplan för bostäder, samråd 2026-02-19
   ([protokoll](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg/2026/2026-02-19/protokoll.md)).
-- **Naturum Fjärås Bräcka** – KSAU föreslog att byggprojektet avbryts,
-  med nedlagda kostnader på cirka 1,4 miljoner kronor
-  ([ks-au 2026-05-12](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks-au/2026/2026-05-12/protokoll.md)).
+- **Naturum Fjärås Bräcka** – kommunstyrelsen avbröt byggprojektet
+  2026-05-26, med nedlagda kostnader på cirka 1,4 miljoner kronor
+  ([ks 2026-05-26](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2026/2026-05-26/protokoll.md#sida-25)).
 - **Gällinge – Gamla Gällingevägen** – föreslaget verksamhetsområde för
   dricksvatten och spillvatten
   ([teknik 2025-03-19](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/teknik/2025/2025-03-19/handlingar.md)).

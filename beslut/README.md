@@ -8,3 +8,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | Nr | Beslut |
 | -- | ------ |
 | [0001](0001-vagledning-fran-kommunhandlingar-och-politik.md) | Vägledning och faser återanvänds från kommunhandlingar och politik |
+| [0002](0002-sidan-byggs-ur-arendena-i-pages-flodet.md) | Sidan byggs ur ärendena i Pages-flödet |

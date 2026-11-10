@@ -1,0 +1,68 @@
+/* Krav: K4–K9 i KRAV.md. Stilen följer kommunhandlingars sidor om
+   initiativ och lokalbehov: tidslinjen, korten och urvalet. */
+:root { --accent: #1d5d73; --band: #e3eef2; --yta: #f5f6f8;
+        --linje: #d9dde5; --dampad: #5b6475; }
+body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 0 auto;
+       padding: 0 1rem; line-height: 1.5; color: #1a1a1a; background: #fff; }
+[hidden] { display: none !important; }
+nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1.5rem; }
+nav a[aria-current] { font-weight: bold; text-decoration: none; }
+.tabell { overflow-x: auto; }
+table { border-collapse: collapse; margin-bottom: 1.5rem; }
+th, td { border: 1px solid var(--linje); padding: 0.25rem 0.6rem;
+         vertical-align: top; text-align: left; }
+td.tal { text-align: right; font-variant-numeric: tabular-nums; }
+summary { cursor: pointer; }
+.period { color: var(--dampad); }
+.urval { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.5rem 0 0.5rem; }
+.urval button { font: inherit; border: 1px solid var(--linje); background: #fff;
+                border-radius: 999px; padding: 0.2rem 0.9rem; cursor: pointer; }
+.urval button[aria-pressed="true"] { border-color: var(--accent);
+                                     background: var(--band); color: var(--accent); }
+.teckenforklaring { list-style: none; padding: 0; display: flex; flex-wrap: wrap;
+                    gap: 0.25rem 1.5rem; color: var(--dampad); }
+.steg { display: inline-block; line-height: 0; padding: 0.1em; margin: 0 1px;
+        color: var(--accent); border: 1px solid transparent; border-radius: 0.3em;
+        position: relative; }
+a.steg:hover, a.steg:focus { border-color: currentColor; }
+.steg.samrad, .steg.granskning, .steg.yttrande { color: #8a5a00; }
+.steg.beslut, .steg.bygge, .steg.klart { color: #1a6b2a; }
+.steg.avbrutet { color: #b00020; }
+.steg.info { color: #555; }
+table.tidslinje { border-collapse: separate; border-spacing: 0; table-layout: fixed;
+                  width: 100%; min-width: 36rem; }
+table.tidslinje th, table.tidslinje td { border: none; padding: 0.15rem 0; }
+table.tidslinje thead th { font-weight: normal; color: var(--dampad);
+                           border-bottom: 1px solid var(--linje); }
+table.tidslinje col.rubrik { width: 18rem; }
+table.tidslinje th[scope="row"] { font-weight: normal; padding-right: 1rem;
+                                  font-size: 0.9rem; line-height: 1.3; }
+table.tidslinje th[scope="row"] a { color: inherit; }
+table.tidslinje th[scope="row"] small { color: var(--dampad); }
+table.tidslinje td { text-align: center; vertical-align: middle; position: relative; }
+table.tidslinje td.band::before { content: ""; position: absolute; left: 0; right: 0;
+                                  top: 50%; height: 1.7rem; margin-top: -0.85rem;
+                                  background: var(--band); }
+table.tidslinje td.start::before { left: 8%; border-radius: 999px 0 0 999px; }
+table.tidslinje td.slut::before { right: 8%; border-radius: 0 999px 999px 0; }
+table.tidslinje td.start.slut::before { border-radius: 999px; }
+table.tidslinje tbody tr:hover { background: var(--yta); }
+.kort { display: grid; gap: 1rem; margin-bottom: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
+.kort article { border: 1px solid var(--linje); border-radius: 8px; padding: 1rem;
+                display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
+.kort article:target { border-color: var(--accent); box-shadow: 0 0 0 2px var(--band); }
+.kort h3, .kort h4, .kort p { margin: 0; }
+.kort .organ { color: var(--dampad); font-size: 0.9rem; }
+.kort .paverka { background: var(--band); padding: 0.4rem 0.6rem; border-radius: 4px; }
+.kort details ol, .kort details ul { padding-left: 1.2rem; display: grid; gap: 0.5rem;
+                                     font-size: 0.9rem; }
+.kort time { font-variant-numeric: tabular-nums; color: var(--dampad); }
+.markor { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.markor span { font-size: 0.75rem; padding: 0.05rem 0.5rem; border-radius: 999px;
+               background: var(--band); color: var(--accent); }
+footer { border-top: 1px solid var(--linje); margin-top: 3rem; padding: 1rem 0;
+         color: var(--dampad); }
+@media (max-width: 40rem) {
+  table.tidslinje col.rubrik { width: 9rem; }
+}
