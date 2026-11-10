@@ -219,6 +219,14 @@ class StillaArenden(unittest.TestCase):
         self.assertEqual(html.count("Vad ikonerna betyder"), 1)
 
 
+class Mobilen(unittest.TestCase):
+    def test_tidslinjen_doljs_pa_smal_skarm(self):
+        self.assertIn('<div class="tabell tidslinjen">', pagar([arende("pågår", "p")]))
+        stil = (Path(__file__).resolve().parent.parent / "docs/stil.css").read_text()
+        smal = stil.split("@media (max-width: 40rem) {")[1].split("}")[0]
+        self.assertIn(".tidslinjen, details.teckenforklaring { display: none; ", smal)
+
+
 class Historiken(unittest.TestCase):
     def test_bara_klart_och_avbrutet(self):
         html = historik([arende("klart", "k"), arende("avbrutet", "x"), arende("pågår", "p")])

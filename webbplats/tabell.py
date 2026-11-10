@@ -1,4 +1,4 @@
-"""Krav: K4 och K12 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K12 och K20 i KRAV.md. Test: tests/test_sidor.py.
 
 Tidslinjen som på kommunhandlingars sidor om initiativ och lokalbehov: en
 rad per ärende, en kolumn per år och årets händelser som ikoner på ett band
@@ -20,7 +20,7 @@ def tabell(arenden: list[Arende], idag: date) -> str:
     huvud = "".join(f'<th scope="col">{ar}</th>' for ar in aren)
     rader = "".join(rad(a, aren, idag) for a in arenden)
     return (
-        '<div class="tabell"><table class="tidslinje">'
+        '<div class="tabell tidslinjen"><table class="tidslinje">'
         f'<colgroup><col class="rubrik"></colgroup>'
         f'<thead><tr><th scope="col">Ärende</th>{huvud}</tr></thead>'
         f"<tbody>{rader}</tbody></table></div>"
