@@ -84,17 +84,17 @@ det viktigaste först och förklara fackord där de står.
 
 Åtgärderna i den ordning de genomförs, en pull request i taget:
 
-| # | Åtgärd | Löser |
-| - | ------ | ----- |
-| 1 | Större text, tydlig fokusmarkering, länk förbi menyn och större träffytor | Läsbarhet, tillgänglighet |
-| 2 | Datum i klartext med veckodag, och dagar kvar till ett tillfälle | Datum för maskiner |
-| 3 | Stegen och korten i klarspråk, med förklaringen vid ikonerna | Ord för handläggare |
-| 4 | Varje tillfälle att tycka till säger vad man gör och vem man vänder sig till, synligt | Påverkan gömd |
-| 5 | Varje ärende får en egen sida med en adress som inte ändras | Brutna länkar |
-| 6 | Startsidan visar bara det som går att påverka och det nya; *Pågår* och *Beslutat* får egna sidor | Allt på en sida |
-| 7 | *Pågår* skiljer ärenden som rört sig de senaste två åren från dem som stått still | Historiken fyllde Pågår |
-| 8 | På mobilen visas korten i stället för tidslinjen | Tidslinjen på mobil |
-| 9 | Ortsvalet följer med mellan sidorna och syns i adressen | Ortsvalet glöms |
+| # | Åtgärd | Löser | Issue |
+| - | ------ | ----- | ----- |
+| 1 | Större text, tydlig fokusmarkering, länk förbi menyn och större träffytor | Läsbarhet, tillgänglighet | [#16](https://github.com/moggleif/giffa/issues/16) |
+| 2 | Datum i klartext med veckodag, och dagar kvar till ett tillfälle | Datum för maskiner | [#17](https://github.com/moggleif/giffa/issues/17) |
+| 3 | Stegen och korten i klarspråk, med förklaringen vid ikonerna | Ord för handläggare | [#18](https://github.com/moggleif/giffa/issues/18) |
+| 4 | Varje tillfälle att tycka till säger vad man gör och vem man vänder sig till, synligt | Påverkan gömd | [#19](https://github.com/moggleif/giffa/issues/19) |
+| 5 | Varje ärende får en egen sida med en adress som inte ändras | Brutna länkar | [#20](https://github.com/moggleif/giffa/issues/20) |
+| 6 | Startsidan visar bara det som går att påverka och det nya; *Pågår* och *Beslutat* får egna sidor | Allt på en sida | [#21](https://github.com/moggleif/giffa/issues/21) |
+| 7 | *Pågår* skiljer ärenden som rört sig de senaste två åren från dem som stått still | Historiken fyllde Pågår | [#22](https://github.com/moggleif/giffa/issues/22) |
+| 8 | På mobilen visas korten i stället för tidslinjen | Tidslinjen på mobil | [#23](https://github.com/moggleif/giffa/issues/23) |
+| 9 | Ortsvalet följer med mellan sidorna och syns i adressen | Ortsvalet glöms | [#24](https://github.com/moggleif/giffa/issues/24) |
 
 Det som inte tas med nu: en sökruta (webbläsarens egen sökning räcker när
 varje sida är kortare), utskriftsformat och mörkt läge. De prövas igen när
