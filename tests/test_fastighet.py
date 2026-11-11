@@ -30,8 +30,19 @@ class Kartlankar(unittest.TestCase):
         self.assertIn("q=%C3%85sa+5%3A89\">5:89</a>", text)
         self.assertIn("q=B%C3%A4cken+1%3A34\">1:34</a>", text)
 
-    def test_trakt_som_kan_ha_tva_ord_lankas_inte(self):
-        for text in ("Ölmevalla Berg 1:2", "Nedre Ögärdet 2:13", "Fastigheten Rya 4:17"):
+    def test_trakt_med_tva_ord(self):
+        text = med_kartlankar("planläggning för fastigheten Ölmevalla Hallen 1:17")
+        self.assertIn("q=%C3%96lmevalla+Hallen+1%3A17\">Ölmevalla Hallen 1:17</a>", text)
+
+    def test_ord_som_inleder_meningen_hor_inte_till_trakten(self):
+        for text in ("På Särö 1:493 bedrivs golf.", "Ja. Fastigheten Rya 4:17 överläts."):
+            lankat = med_kartlankar(text)
+            self.assertNotIn(">På ", lankat)
+            self.assertNotIn(">Fastigheten ", lankat)
+            self.assertEqual(lankat.count("<a "), 1)
+
+    def test_bolagsnamn_lankas_inte(self):
+        for text in ("med Castellum Varla 3:34 AB.", "till Fjärås Äskatorp 4:19B AB."):
             self.assertEqual(med_kartlankar(text), text)
 
     def test_inte_klockslag_eller_ord_med_liten_bokstav(self):
