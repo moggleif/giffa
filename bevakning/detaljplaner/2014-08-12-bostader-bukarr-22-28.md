@@ -6,7 +6,7 @@ diarienummer: 2014-P029
 status: pågår
 ---
 
-Detaljplanen skulle ge Bukärr 22:28, 22:29, 22:30 och del av 22:1 samma
+Detaljplanen, som källan anger ligger "i Släp" (socknen), skulle ge Bukärr 22:28, 22:29, 22:30 och del av 22:1 samma
 byggrätter som övriga fastigheter i detaljplan S94, och göra den del av
 Wallbergs backe som ligger på kvartersmark till lokalgata samt en
 bergsknalle till naturmark, båda med enskilt huvudmannaskap. Efter

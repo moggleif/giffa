@@ -2,15 +2,15 @@
 rubrik: Detaljplan för seniorbostäder inom Skörvalla 1:116
 ort: Särö
 organ: Byggnadsnämnden
-diarienummer: KS-2020-00171, BN-2023-00211
+diarienummer: 2019-00667, KS-2020-00171, BN-2023-00211
 status: beslutat
 ---
 
 Fastigheten ligger väster om Särö centrum längs Bukärrsvägen, intill gamla
 Säröbanan. Planen ger plats för drygt 50 lägenheter i två våningar för en
 äldre målgrupp, med gemensamma ytor och ett allmänt parkområde vid
-Skörvallabäcken. Kommunstyrelsen lämnade planbesked i januari 2020; det
-protokollet finns inte i poolen. Under granskningen 24 februari – 24 mars
+Skörvallabäcken. Ägaren begärde 2019 planbesked för 44 lägenheter, och
+kommunstyrelsen sade ja i januari 2020. Under granskningen 24 februari – 24 mars
 2026 kom 25 skrivelser, främst om strandskydd, insyn, buller, byggnadernas
 placering och höjd samt trafik. Byggnadsnämnden antog planen i oktober 2026.
 Om den överklagats står inte i protokollen än.
@@ -26,3 +26,4 @@ Om den överklagats står inte i protokollen än.
 - 2024-05-23 · forslag · Byggnadsnämndens arbetsutskott gav samhällsbyggnadskontoret i uppdrag att upprätta detaljplanen. · [Byggnadsnämndens AU protokoll § 137](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2024/2024-05-23/protokoll-byggnadsnamndens-arbetsutskott-protokoll-2024-05-23-137-163-164.html#sida-3)
 - 2024-04-23 · beslut · Kommunstyrelsen godkände projektbeställningen. · [KS protokoll § 107](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-04-23/protokoll.html#sida-26)
 - 2024-04-09 · forslag · Kommunstyrelsens arbetsutskott föreslog att projektbeställningen godkänns. · [KSAU protokoll § 117](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-04-09/protokoll.html#sida-19)
+- 2020-01-21 · beslut · Kommunstyrelsen lämnade positivt planbesked för Skörvalla 1:116, där ägaren ansökt om 44 lägenheter i flerbostadshus, och överlämnade planarbetet till byggnadsnämnden. Protokollet ligger som bilaga i KSAU-handlingarna 2024-04-09. · [KS protokoll § 4](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-04-09/handlingar.html#sida-232)

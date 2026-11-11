@@ -9,9 +9,11 @@ status: klart
 Detaljplanen för Sandlyckan längs Gamla Särövägen i Kullavik skulle ge
 drygt 100 bostäder i småhus och flerbostadshus, ett äldreboende med cirka
 60 lägenheter och ett gruppboende. Planprogrammet var på samråd i december
-2012 – januari 2013. Byggnadsnämnden överlämnade planen till
-kommunfullmäktige för antagande 2015; fullmäktiges beslut finns inte i
-poolen. Äldreboendet öppnade hösten 2018 med 60 platser.
+2012 – januari 2013. Enligt kallelsen i mars 2015 skulle byggnadsnämnden överlämna planen till
+kommunfullmäktige för antagande; varken nämndens protokoll eller
+fullmäktiges beslut finns i poolen. Äldreboendet öppnade hösten 2018 med 60
+platser. Att bostäderna och gruppboendet byggts syns inte i källorna i
+poolen; statusen klart gäller äldreboendet.
 
 ## Händelser
 

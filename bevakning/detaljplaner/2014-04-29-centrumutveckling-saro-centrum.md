@@ -2,11 +2,11 @@
 rubrik: Detaljplaner för centrumutveckling i Särö centrum
 ort: Särö
 organ: Byggnadsnämnden
-diarienummer: 2009-P060
+diarienummer: 2009-P060, KS/2016:578, BN 2019-00029
 status: beslutat
 ---
 
-Särö centrum längs väg 158 och Västra Särövägen skulle rustas upp med nya
+Särö centrum (i källan "i Släp", efter socknen) längs väg 158 och Västra Särövägen skulle rustas upp med nya
 handels- och verksamhetslokaler, ett nytt bostadskvarter och ett nytt läge
 för knutpunkten för kollektivtrafik, enligt planprogrammet som
 kommunstyrelsen godkände 2011. Planområdet delades i två delar.

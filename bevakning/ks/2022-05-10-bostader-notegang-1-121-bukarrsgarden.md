@@ -12,13 +12,14 @@ Bostads AB, som äger fastigheten, ville bygga om och till för
 bostadslägenheter. Samrådsförslaget gav byggrätt för 60 bostäder.
 Byggnadsnämnden antog planen i mars 2024 och sänkte då den högsta
 nockhöjden i den nordvästra delen från 17 till 13 meter efter synpunkter i
-samråd och granskning. Kommunen hyr sedan 2025 lokalerna vidare som
-tillfälligt boende. När ombyggnaden till bostäder sker står inte i
+samråd och granskning. Kommunen fortsätter att hyra Bukärrsgården av
+Eksta, och lokalerna ska även framöver användas som tillfälligt boende;
+ett nytt hyreskontrakt på 13 månader gäller från 1 mars 2025. När ombyggnaden till bostäder sker står inte i
 protokollen.
 
 ## Händelser
 
-- 2025-01-16 · info · Nämnden för Service gav delegation att teckna nytt hyreskontrakt för Bukärrsgården, som även framöver ska användas som tillfälligt boende, med 13 månaders hyrestid från 1 mars 2025. · [Service protokoll § 2](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2025/2025-01-16/protokoll.html#sida-6)
+- 2025-01-16 · info · Nämnden för Service gav delegation att teckna nytt hyreskontrakt för Bukärrsgården, där kommunen fortsätter att hyra lokalerna som även framöver ska användas som tillfälligt boende, med 13 månaders hyrestid från 1 mars 2025. · [Service protokoll § 2](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2025/2025-01-16/protokoll.html#sida-6)
 - 2024-03-21 · beslut · Byggnadsnämnden antog detaljplanen, med sänkt nockhöjd från 17,0 till 13,0 meter i den nordvästra delen. · [Byggnadsnämnden protokoll § 75](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2024/2024-03-21/protokoll.html#sida-16)
 - 2024-03-21 · yttrande · Nämnden för Service noterade granskningsutskicket och hänvisade till sitt tidigare yttrande. · [Service protokoll § 29](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2024/2024-03-21/protokoll.html#sida-10)
 - 2024-03-19 · beslut · Kommunstyrelsen godkände exploateringsavtal med Eksta Bostads AB. · [KS protokoll § 79](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-03-19/protokoll.html#sida-21)

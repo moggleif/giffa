@@ -2,7 +2,7 @@
 rubrik: Planbesked för bostäder inom del av Vallda 3:3
 ort: Vallda
 organ: Kommunstyrelsen
-diarienummer: 2022-00568
+diarienummer: 2015-P041, 2022-00568
 status: avbrutet
 ---
 
@@ -16,4 +16,5 @@ verksamheter norr om Sandövägen.
 ## Händelser
 
 - 2022-10-25 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte avser att planlägga för bostäder inom del av Vallda 3:3, skifte 4. · [KS protokoll § 237](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-10-25/protokoll.html#sida-15)
-- 2016-10-20 · forslag · Byggnadsnämnden skulle enligt arbetsutskottets förslag avslå ansökan om planbesked för Vallda 3:3; kommunstyrelsen meddelade i december 2016 att kommunen inte avsåg att planlägga området för bostäder. · [Byggnadsnämnden kallelse ärende 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2016/2016-10-20/kallelse.html#sida-2)
+- 2016-12-13 · avbrutet · Kommunstyrelsen meddelade att kommunen inte avsåg att planlägga området för bostäder, eftersom fastigheten då låg utanför utvecklingsområdet för Vallda i översiktsplanen ÖP06. · [KS protokoll 2022-10-25 § 237, som återger beslutet](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-10-25/protokoll.html#sida-15)
+- 2016-10-20 · forslag · Byggnadsnämnden skulle enligt arbetsutskottets förslag avslå ansökan om planbesked för Vallda 3:3 (2015-P041). · [Byggnadsnämnden kallelse ärende 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2016/2016-10-20/kallelse.html#sida-2)

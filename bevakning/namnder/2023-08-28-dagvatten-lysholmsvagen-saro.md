@@ -17,7 +17,8 @@ senast 2029, och byggstarten för cirka 17 fastigheter är planerad till 2029.
 
 ## Händelser
 
-- 2026-01-21 · beslut · Nämnden för Teknik antog tidplan för VA-omvandling 2026–2030 med dagvattenåtgärder vid Lysholmsvägen, planerad byggstart 2029, med anledning av länsstyrelsens föreläggande. · [Teknik protokoll § 4](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2026/2026-01-21/protokoll-namnden-for-teknik-protokoll-2026-01-21.html#sida-10)
+- 2026-01-21 · beslut · Nämnden för Teknik antog tidplan för VA-omvandling 2026–2030, där dagvattenåtgärderna vid Lysholmsvägen har planerad byggstart 2029 för cirka 17 fastigheter. · [Teknik handlingar, tidplan bilaga 1](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2026/2026-01-21/handlingar.html#sida-76)
+- 2026-01-21 · info · Enligt tidplanen ingår Lysholmsvägen med anledning av ett föreläggande från länsstyrelsen om att dagvattenanslutningarna ska vara utbyggda senast 2029. · [Teknik handlingar, tidplan](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2026/2026-01-21/handlingar.html#sida-74)
 - 2025-08-26 · info · Kommunstyrelsen fick som meddelande länsstyrelsens beslut 14 augusti 2025 om verksamhetsområde för vattentjänster för Lysholmsvägen. · [KS protokoll § 168](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-08-26/protokoll.html#sida-27)
 - 2025-08-26 · yttrande · Kommunstyrelsen fick redovisat ordförandens svar på länsstyrelsens begäran om komplettering i tillsynsärendet. · [KS protokoll § 167](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-08-26/protokoll.html#sida-26)
 - 2024-05-28 · yttrande · Kommunstyrelsen fick redovisat ordförandens yttrande i länsstyrelsens tillsynsärende om dagvatten i Lysholmsvägen. · [KS protokoll § 151](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-05-28/protokoll.html#sida-35)
