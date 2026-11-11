@@ -22,9 +22,7 @@ summary { cursor: pointer; }
 .period { color: var(--dampad); }
 .urval { margin: 1.5rem 0 0.5rem; }
 .urval [role="group"] { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.urval .orter { display: grid; gap: 0.6rem; margin-top: 0.75rem; }
-.orter [role="group"] { padding-left: 1rem; border-left: 3px solid var(--band); }
-.gruppnamn { flex: 0 0 10rem; align-self: center; color: var(--dampad); font-size: 0.9rem; }
+.urval .orter { margin-top: 0.6rem; padding-left: 1rem; border-left: 3px solid var(--band); }
 .urval button { font: inherit; border: 1px solid var(--linje); background: #fff;
                 border-radius: 999px; padding: 0.2rem 0.9rem; cursor: pointer;
                 min-height: 2.5rem; }
@@ -88,7 +86,6 @@ footer { border-top: 1px solid var(--linje); margin-top: 3rem; padding: 1rem 0;
          color: var(--dampad); }
 @media (max-width: 40rem) {
   table.tidslinje { display: none; }
-  .gruppnamn { flex-basis: 100%; }
 }
 .sa-gor { display: block; margin-top: 0.3rem; padding-left: 0.6rem;
           border-left: 3px solid var(--accent); }

@@ -20,6 +20,7 @@ MENY = (
 )
 
 AKTUELL = ' aria-current="page"'
+SVENSKA_SIST = str.maketrans("åäö", "{|}")
 
 
 @dataclass(frozen=True)
@@ -67,21 +68,24 @@ def meny(aktuell: str, rot: str) -> str:
 
 def urval(sajt: Sajt) -> str:
     foreningar = "".join(knapp("forening", namn) for namn in sajt.foreningar)
-    orter = "".join(ortgrupp(namn, lista) for namn, lista in sajt.foreningar.items())
+    orter = sorted(
+        ((ort, namn) for namn, lista in sajt.foreningar.items() for ort in lista),
+        key=lambda par: bokstavsordning(par[0]),
+    )
+    ortknappar = "".join(
+        f'<button type="button" data-urval-ort="{escape(ort)}" data-urval-i="{escape(namn)}">'
+        f"{escape(ort)}</button>"
+        for ort, namn in orter
+    )
     return (
         '<div class="urval" hidden><div role="group" aria-label="Visa förening">'
         f'<button type="button" data-alla>Alla</button>{foreningar}</div>'
-        f'<div class="orter">{orter}</div></div>'
+        f'<div role="group" aria-label="Visa ort" class="orter">{ortknappar}</div></div>'
     )
 
 
-def ortgrupp(namn: str, orter: list[str]) -> str:
-    return (
-        f'<div role="group" aria-label="Visa ort i {escape(namn)}" data-urval-grupp="{escape(namn)}">'
-        f'<span class="gruppnamn" aria-hidden="true">{escape(namn)}</span>'
-        + "".join(knapp("ort", ort) for ort in orter)
-        + "</div>"
-    )
+def bokstavsordning(namn: str) -> str:
+    return namn.lower().translate(SVENSKA_SIST)
 
 
 def knapp(slag: str, namn: str) -> str:

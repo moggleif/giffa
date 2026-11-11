@@ -86,6 +86,12 @@ class Startsidan(unittest.TestCase):
         self.assertNotIn("Ett förslag.", nytt)
         self.assertIn("1 mars 2026</time> till <time datetime=\"2026-03-31\">31 mars 2026</time>. Startärenden.", nytt)
 
+    def test_orterna_i_svensk_bokstavsordning_utan_uppdelning(self):
+        html = pagar([arende("pågår", "p")])
+        orter = re.findall(r'data-urval-ort="([^"]+)"', html)
+        self.assertEqual(orter, ["Fjärås", "Särö", "Åsa"])
+        self.assertEqual(html.count('aria-label="Visa ort"'), 1)
+
     def test_urval_per_forening_och_ort_ur_omrade(self):
         html = pagar([arende("pågår", "p")])
         self.assertIn('<button type="button" data-alla>Alla</button>', html)
@@ -93,10 +99,9 @@ class Startsidan(unittest.TestCase):
             '<button type="button" data-urval-forening="Förening Särö">Förening Särö</button>', html
         )
         self.assertIn(
-            'data-urval-grupp="Förening Åsa"><span class="gruppnamn" aria-hidden="true">Förening Åsa</span>',
+            '<button type="button" data-urval-ort="Fjärås" data-urval-i="Förening Åsa">Fjärås</button>',
             html,
         )
-        self.assertIn('<button type="button" data-urval-ort="Fjärås">Fjärås</button>', html)
         self.assertIn('<div class="urvalslista"><div class="tabell">', html)
         self.assertIn('<p class="inget-val" hidden>', html)
         self.assertIn('<tr data-ort="Åsa|Fjärås">', html)

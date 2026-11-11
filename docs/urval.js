@@ -1,6 +1,6 @@
 // Krav: K4, K21 och K22 i KRAV.md. Test: tests/test_urval.js, och tests/test_bygg.py (att skriptet följer med).
 // Valet är en förening, en ort eller båda; inget val visar allt. Föreningen
-// begränsar vilka ortknappar som syns, orten vilka ärenden. Utan skriptet står allt.
+// begränsar vilka ortknappar som syns (data-urval-i), orten vilka ärenden. Utan skriptet står allt.
 (function () {
   var SIDA = /^[\w./-]+\.html$/;
   var INGET = { forening: null, ort: null };
@@ -28,25 +28,25 @@
     return { forening: p.get("forening"), ort: p.get("ort") };
   }
 
-  function orterI(grupp) {
-    return alla("[data-urval-ort]", grupp).map(function (k) { return k.getAttribute("data-urval-ort"); });
+  function iForeningen(knapp, forening) {
+    return forening === null || knapp.getAttribute("data-urval-i") === forening;
   }
 
-  function gruppen(grupper, forening) {
-    return grupper.filter(function (g) { return g.getAttribute("data-urval-grupp") === forening; })[0];
+  function orterI(ortknappar, forening) {
+    return ortknappar.filter(function (k) { return iForeningen(k, forening); })
+      .map(function (k) { return k.getAttribute("data-urval-ort"); });
   }
 
-  function giltigt(grupper, val) {
-    var grupp = gruppen(grupper, val.forening);
-    var ortGrupper = grupp ? [grupp] : grupper;
-    var ortFinns = ortGrupper.some(function (g) { return orterI(g).indexOf(val.ort) >= 0; });
-    return { forening: grupp ? val.forening : null, ort: ortFinns ? val.ort : null };
+  function giltigt(ortknappar, val) {
+    var finns = ortknappar.some(function (k) { return k.getAttribute("data-urval-i") === val.forening; });
+    var forening = finns ? val.forening : null;
+    var ort = orterI(ortknappar, forening).indexOf(val.ort) >= 0 ? val.ort : null;
+    return { forening: forening, ort: ort };
   }
 
-  function synliga(grupper, val) {
+  function synliga(ortknappar, val) {
     if (val.ort) return [val.ort];
-    var grupp = gruppen(grupper, val.forening);
-    return grupp ? orterI(grupp) : null;
+    return val.forening ? orterI(ortknappar, val.forening) : null;
   }
 
   function tryckt(knapp, val) {
@@ -72,12 +72,10 @@
     });
   }
 
-  function visa(urval, grupper, val) {
+  function visa(urval, ortknappar, val) {
     alla("button", urval).forEach(function (k) { k.setAttribute("aria-pressed", tryckt(k, val)); });
-    grupper.forEach(function (g) {
-      g.hidden = val.forening !== null && g.getAttribute("data-urval-grupp") !== val.forening;
-    });
-    visaSaker(synliga(grupper, val));
+    ortknappar.forEach(function (k) { k.hidden = !iForeningen(k, val.forening); });
+    visaSaker(synliga(ortknappar, val));
     visaTomt();
     lankar(val);
   }
@@ -93,23 +91,23 @@
   }
 
   function koppla(urval) {
-    var grupper = alla("[data-urval-grupp]", urval);
-    var vald = giltigt(grupper, adressen());
+    var ortknappar = alla("[data-urval-ort]", urval);
+    var vald = giltigt(ortknappar, adressen());
     alla("button", urval).forEach(function (knapp) {
       knapp.addEventListener("click", function () {
-        var val = giltigt(grupper, valet(knapp, vald));
+        var val = giltigt(ortknappar, valet(knapp, vald));
         if (fraga(val) === fraga(vald)) return;
         vald = val;
         history.pushState(null, "", fraga(val) || location.pathname);
-        visa(urval, grupper, val);
+        visa(urval, ortknappar, val);
       });
     });
     window.addEventListener("popstate", function () {
-      vald = giltigt(grupper, adressen());
-      visa(urval, grupper, vald);
+      vald = giltigt(ortknappar, adressen());
+      visa(urval, ortknappar, vald);
     });
     urval.hidden = false;
-    visa(urval, grupper, vald);
+    visa(urval, ortknappar, vald);
   }
 
   var urval = document.querySelector(".urval");

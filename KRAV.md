@@ -215,8 +215,8 @@ så att valet följer med tills läsaren väljer om. Utan skriptet står allt.
 under en enda förening,
 **när** en lista eller startsidan visas,
 **så** syns alla ärenden tills läsaren väljer. Knapparna visar *Alla* och
-föreningarna i filens ordning, och under dem alla orter grupperade per
-förening, så att en ort går att välja direkt. En vald förening visar
+föreningarna i filens ordning, och under dem alla orter i en rad i
+bokstavsordning, så att en ort går att välja direkt. En vald förening visar
 ärendena i dess orter och bara dess ortknappar; en vald ort visar bara den
 ortens ärenden, och väljs en förening efteråt står orten kvar om den hör
 dit. En tryckt knapp som trycks igen släpper sitt val, *Alla* släpper
