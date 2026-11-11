@@ -245,5 +245,7 @@ eller tillfällen att tycka till,
 **när** sidan byggs,
 **så** är namnet en länk till kartans sökning på det, som för
 fastigheterna i K23. En gata länkas utan husnummer. Platser av typen
-förening, hemtjänst, detaljplan, planprogram och planbesked länkas inte,
-eftersom de inte är en plats att söka fram.
+förening, hemtjänst, detaljplan, planprogram, planbesked, område och
+vatten länkas inte, eftersom de inte är en plats som säkert går att söka
+fram. Ett förled som *Gamla* i *Gamla Särövägen* hör till gatan. Länkarna
+till kartan öppnas i en ny flik, också i rubrikerna.

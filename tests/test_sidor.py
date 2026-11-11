@@ -222,6 +222,17 @@ def stillat(senast: str) -> str:
     return ARENDE.replace("2026-03-02", senast).replace("2025-01-05 ·", "2024-01-05 ·")
 
 
+class KartlankarIRubriken(unittest.TestCase):
+    def test_rubriken_pa_sidan_och_kortet_lankar_till_kartan(self):
+        text = ARENDE.replace("rubrik: Ny förskola", "rubrik: Ny förskola på Åsa 5:246")
+        arende = tolka("bevakning/ks/f.md", text)
+        lank = '>Åsa 5:246</a>'
+        self.assertIn("<h1>Ny förskola på <a ", arendesida(SAJT, arende))
+        self.assertIn(lank, arendesida(SAJT, arende))
+        self.assertIn("<h3>Ny förskola på <a ", pagar([arende]))
+        self.assertIn('target="_blank" rel="noopener"', pagar([arende]))
+
+
 class StillaArenden(unittest.TestCase):
     def test_pagar_skiljer_rorliga_fran_stilla(self):
         gammalt = tolka("bevakning/ks/g.md", stillat("2024-11-09"))

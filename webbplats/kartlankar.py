@@ -2,19 +2,22 @@
 
 Gör det i en text som går att söka fram i kommunens karta till länkar:
 fastighetsbeteckningar, platserna i platser.csv, gatunamn och detaljplaner
-med plannummer. Allt annat escapas.
+med plannummer. Ett förled som Gamla eller Västra hör till gatan; följs
+namnet av ett ord med versal är det ett annat namn, som en förening, och
+länkas inte. Allt annat escapas.
 """
 
 import re
 from dataclasses import dataclass
-from html import escape
+from html import escape, unescape
 
 from webbplats.fastighet import FASTIGHET, fastighet
 from webbplats.karta import lank
 
 PLAN = r"[A-ZÅÄÖ]{1,4}\d{1,4}"
 PLANER = rf"(?P<planord>\b(?:[Dd]etaljplan(?:en|erna)?|[Pp]lan(?:en|erna)?)) (?P<planer>{PLAN}(?:(?:, | och ){PLAN})*)\b"
-GATA = r"(?<![\w-])(?P<gata>[A-ZÅÄÖ][a-zåäö]+(?:vägen|gatan|leden|gränd|stigen|allén))\b"
+FORLED = r"(?:(?:Gamla|Nya|Norra|Södra|Västra|Östra|Övre|Nedre|Stora|Lilla) )?"
+GATA = rf"(?<!\w)(?P<gata>{FORLED}[A-ZÅÄÖ][a-zåäö]+(?:vägen|gatan|leden|gränd|stigen|allén))\b(?! [A-ZÅÄÖ])"
 
 
 @dataclass(frozen=True)
@@ -33,7 +36,7 @@ class Kartlankar:
 
 def ersatt(traff: re.Match[str]) -> str:
     if plats := traff.group("plats"):
-        return lank(plats, plats)
+        return lank(unescape(plats), plats)
     if gata := traff.group("gata"):
         return lank(gata, gata)
     if planer := traff.group("planer"):
@@ -42,8 +45,8 @@ def ersatt(traff: re.Match[str]) -> str:
     return fastighet(traff)
 
 
-INTE_PA_KARTAN = ("förening", "hemtjänst", "detaljplan", "planprogram", "planbesked")
+INTE_PA_KARTAN = ("förening", "hemtjänst", "detaljplan", "planprogram", "planbesked", "område", "vatten")
 
 
 def ur_platser(platser: list[dict[str, str]]) -> Kartlankar:
-    return Kartlankar(tuple(p["namn"] for p in platser if p["typ"] not in INTE_PA_KARTAN))
+    return Kartlankar(tuple(p["namn"] for p in platser if p["typ"].split(",")[0].strip() not in INTE_PA_KARTAN))

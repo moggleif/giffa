@@ -9,11 +9,11 @@ med_kartlankar = KARTA.lanka
 
 OLMANAS = (
     '<a href="https://karta.kungsbacka.se/publik/#m=publik&amp;q='
-    '%C3%96lman%C3%A4s+1%3A17">Ölmanäs 1:17</a>'
+    '%C3%96lman%C3%A4s+1%3A17" target="_blank" rel="noopener">Ölmanäs 1:17</a>'
 )
 
 
-class Kartlankar(unittest.TestCase):
+class Fastigheter(unittest.TestCase):
     def test_adressen_ur_kartan(self):
         self.assertEqual(
             med_kartlankar("Planbesked för Ölmanäs 1:17 i Åsa."),
@@ -30,12 +30,12 @@ class Kartlankar(unittest.TestCase):
     def test_upprakning_och_intervall_far_trakten_fran_den_forsta(self):
         text = med_kartlankar("Åsa 5:153 och 5:89, Bäcken 1:31–1:34")
         self.assertEqual(text.count("<a "), 4)
-        self.assertIn("q=%C3%85sa+5%3A89\">5:89</a>", text)
-        self.assertIn("q=B%C3%A4cken+1%3A34\">1:34</a>", text)
+        self.assertIn("q=%C3%85sa+5%3A89\" target=\"_blank\" rel=\"noopener\">5:89</a>", text)
+        self.assertIn("q=B%C3%A4cken+1%3A34\" target=\"_blank\" rel=\"noopener\">1:34</a>", text)
 
     def test_trakt_med_tva_ord(self):
         text = med_kartlankar("planläggning för fastigheten Ölmevalla Hallen 1:17")
-        self.assertIn("q=%C3%96lmevalla+Hallen+1%3A17\">Ölmevalla Hallen 1:17</a>", text)
+        self.assertIn("q=%C3%96lmevalla+Hallen+1%3A17\" target=\"_blank\" rel=\"noopener\">Ölmevalla Hallen 1:17</a>", text)
 
     def test_ord_som_inleder_meningen_hor_inte_till_trakten(self):
         for text in ("På Särö 1:493 bedrivs golf.", "Ja. Fastigheten Rya 4:17 överläts."):
@@ -57,7 +57,7 @@ class Kartlankar(unittest.TestCase):
 
 
 def lank(sok: str, text: str) -> str:
-    return f'<a href="https://karta.kungsbacka.se/publik/#m=publik&amp;q={sok}">{text}</a>'
+    return f'<a href="https://karta.kungsbacka.se/publik/#m=publik&amp;q={sok}" target="_blank" rel="noopener">{text}</a>'
 
 
 class Platser(unittest.TestCase):
@@ -74,7 +74,11 @@ class Platser(unittest.TestCase):
         self.assertNotIn("<a", med_kartlankar("Åsaskolans elever"))
 
     def test_foreningar_och_planer_lankas_inte(self):
-        rader = [{"namn": "Åsa IF", "typ": "förening"}, {"namn": "Åsaskolan", "typ": "grundskola"}]
+        rader = [
+            {"namn": "Åsa IF", "typ": "förening"},
+            {"namn": "Utholmen", "typ": "område"},
+            {"namn": "Åsaskolan", "typ": "grundskola, fristående"},
+        ]
         self.assertEqual(ur_platser(rader).platser, ("Åsaskolan",))
 
 
@@ -84,6 +88,16 @@ class Gator(unittest.TestCase):
             med_kartlankar("vid Pölagårdsvägen 11"),
             f"vid {lank('P%C3%B6lag%C3%A5rdsv%C3%A4gen', 'Pölagårdsvägen')} 11",
         )
+
+    def test_forled_hor_till_gatan(self):
+        self.assertIn(">Gamla Särövägen</a>", med_kartlankar("hastigheten på Gamla Särövägen"))
+
+    def test_gator_med_bindestreck_emellan(self):
+        self.assertEqual(med_kartlankar("Rågelundsvägen-Lurendalsvägen").count("<a "), 2)
+
+    def test_foreningsnamn_lankas_inte(self):
+        text = "Föreningen Löftaleden Ideell Förening"
+        self.assertEqual(med_kartlankar(text), text)
 
     def test_leden_och_gatan(self):
         text = med_kartlankar("Säröleden och Kungsgatan")

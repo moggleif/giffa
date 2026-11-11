@@ -50,7 +50,7 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 <a class="hoppa" href="#innehall">Hoppa till innehållet</a>
 {meny(adress, rot)}
 <main id="innehall" tabindex="-1">
-<h1>{escape(rubrik)}</h1>
+<h1>{sajt.karta.lanka(rubrik)}</h1>
 {innehall}
 </main>
 {sidfot(sajt)}

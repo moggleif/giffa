@@ -18,7 +18,7 @@ def kort(arende: Arende, sajt: Sajt) -> str:
     falt, senaste = arende.falt, arende.handelser[0]
     return (
         f'<article id="{arende.id}" data-ort="{escape("|".join(arende.orter))}">'
-        f"{markor(arende)}<h3>{escape(falt['rubrik'])}</h3>"
+        f"{markor(arende)}<h3>{sajt.karta.lanka(falt['rubrik'])}</h3>"
         f'<p class="organ">{escape(organ(arende))}</p>'
         + (f"<p>{sajt.karta.lanka(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
@@ -62,7 +62,7 @@ def media(arende: Arende) -> str:
 def nytt_kort(arende: Arende, nya: list[Handelse], karta: Kartlankar) -> str:
     return (
         f'<article data-ort="{escape("|".join(arende.orter))}">{markor(arende)}'
-        f"<h3>{escape(arende.falt['rubrik'])}</h3>"
+        f"<h3>{karta.lanka(arende.falt['rubrik'])}</h3>"
         f"<details><summary>{len(nya)} ny{'a' * (len(nya) > 1)} "
         f"händelse{'r' * (len(nya) > 1)}</summary>"
         f"<ol>{''.join(post(h, karta) for h in nya)}</ol></details>"
