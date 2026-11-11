@@ -1,10 +1,10 @@
-"""K1, K4 och K10: ett ärende läses enligt formatet eller stoppar bygget."""
+"""K1, K4, K10 och K22: ett ärende och OMRADE.md läses enligt formatet eller stoppar bygget."""
 
 import unittest
 from datetime import date
 
 from webbplats.arende import tolka
-from webbplats.kontroll import kontrollera
+from webbplats.kontroll import kontrollera, kontrollera_omrade
 
 ORTER = ["Åsa", "Fjärås"]
 ARENDE = """---
@@ -77,6 +77,17 @@ class Kontrollera(unittest.TestCase):
         for text in fel:
             with self.subTest(text=text), self.assertRaises(ValueError):
                 kontrollera(tolka("x.md", text), ORTER)
+
+    def test_ort_under_tva_foreningar_eller_forening_utan_orter_stoppar(self):
+        for foreningar in (
+            {"Förening A": ["Åsa"], "Förening B": ["Åsa", "Särö"]},
+            {"Förening A": ["Åsa"], "Förening B": []},
+        ):
+            with self.subTest(foreningar=foreningar), self.assertRaises(ValueError):
+                kontrollera_omrade(foreningar)
+
+    def test_varje_ort_under_en_forening_gar_igenom(self):
+        kontrollera_omrade({"Förening A": ["Åsa"], "Förening B": ["Särö"]})
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
-"""Krav: K10 i KRAV.md. Test: tests/test_arende.py.
+"""Krav: K10 och K22 i KRAV.md. Test: tests/test_arende.py.
 
 Det i ett ärende som bara går att pröva mot repots andra filer: orterna i
-OMRADE.md, statusen och händelsernas ordning.
+OMRADE.md, statusen och händelsernas ordning. Och att varje ort i OMRADE.md
+hör till en enda förening.
 """
 
 from webbplats.arende import STATUS, Arende
@@ -17,3 +18,11 @@ def kontrollera(arende: Arende, orter: list[str]) -> None:
     datumen = [h.datum for h in arende.handelser]
     if datumen != sorted(datumen, reverse=True):
         raise ValueError("händelserna står inte nyast först")
+
+
+def kontrollera_omrade(foreningar: dict[str, list[str]]) -> None:
+    orter = [ort for lista in foreningar.values() for ort in lista]
+    if dubbletter := sorted({o for o in orter if orter.count(o) > 1}):
+        raise ValueError(f"orten står under flera föreningar: {', '.join(dubbletter)}")
+    if tomma := [namn for namn, lista in foreningar.items() if not lista]:
+        raise ValueError(f"föreningen har inga orter: {', '.join(tomma)}")

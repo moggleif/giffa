@@ -1,6 +1,7 @@
-"""Krav: K6, K8 och K11 i KRAV.md. Test: tests/test_underlag.py.
+"""Krav: K6, K8, K11 och K22 i KRAV.md. Test: tests/test_underlag.py.
 
-Läser det sidan bygger på utöver ärendena: orterna ur OMRADE.md, platserna
+Läser det sidan bygger på utöver ärendena: föreningarna och deras orter ur
+OMRADE.md, platserna
 ur platser.csv, källorna ur KALLOR.md och förra rundans period ur
 bevakning/rundor.csv.
 """
@@ -11,9 +12,17 @@ from datetime import date
 from io import StringIO
 
 
+def foreningar(omrade: str) -> dict[str, list[str]]:
+    fore_platser = omrade.split("\n## Platser", 1)[0]
+    avsnitt = [del_.splitlines() for del_ in fore_platser.split("\n## ")[1:]]
+    return {
+        rader[0].strip(): [rad[2:].strip() for rad in rader if rad.startswith("- ")]
+        for rader in avsnitt
+    }
+
+
 def orter(omrade: str) -> list[str]:
-    fore_platser = omrade.split("\n## ", 1)[0]
-    return [rad[2:].strip() for rad in fore_platser.splitlines() if rad.startswith("- ")]
+    return [ort for lista in foreningar(omrade).values() for ort in lista]
 
 
 def platser(text: str) -> list[dict[str, str]]:

@@ -1,4 +1,4 @@
-"""Krav: K8 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K8 och K22 i KRAV.md. Test: tests/test_sidor.py.
 
 Sidan om vad som bevakas, byggd ur OMRADE.md, platser.csv och KALLOR.md så
 att uppgifterna bara står på ett ställe.
@@ -19,13 +19,17 @@ RUNDAN = (
 def bevakar(sajt: Sajt, platser: list[dict[str, str]], kallor: list[list[str]]) -> str:
     innehall = (
         RUNDAN
-        + "<h2>Orterna</h2><ul>"
-        + "".join(f"<li>{escape(o)}</li>" for o in sajt.orter)
-        + f"</ul><p>Vad som räknas till området står i {fil(sajt, 'OMRADE.md')}.</p>"
+        + "<h2>Föreningarna och orterna</h2>"
+        + "".join(forening(namn, orter) for namn, orter in sajt.foreningar.items())
+        + f"<p>Vad som räknas till varje förening står i {fil(sajt, 'OMRADE.md')}.</p>"
         + kalltabell(sajt, kallor)
         + platstabell(sajt, platser)
     )
     return sida(sajt, "bevakar.html", "Vad vi bevakar", innehall)
+
+
+def forening(namn: str, orter: list[str]) -> str:
+    return f"<h3>{escape(namn)}</h3><p>{escape(', '.join(orter))}</p>"
 
 
 def fil(sajt: Sajt, namn: str) -> str:

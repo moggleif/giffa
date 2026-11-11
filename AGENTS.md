@@ -1,6 +1,7 @@
 # AGENTS.md – Giffå
 
-Bevakning av vad som beslutas, planeras och byggs i södra Kungsbacka:
+Bevakning av vad som beslutas, planeras och byggs i Kungsbacka kommun,
+förening för förening (Åsa, Kungsbacka, Onsala och Särö):
 kommunstyrelsen, dess arbetsutskott, nämnderna, bygglov, detaljplaner och
 kungsbacka.se. Ärendena ligger som text i `bevakning/`; `webbplats/`
 bygger sidan ur dem och GitHub Pages publicerar den.
@@ -52,7 +53,7 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Vad repot är och hur det är ordnat              | `README.md`               |
 | Vad bevakningen ska göra (beteenden, G/W/T)     | `KRAV.md`                 |
 | Varför den är byggd så (beslut)                 | `beslut/` (MADR)          |
-| Vilka orter och områden som bevakas             | `OMRADE.md`               |
+| Föreningarna och deras orter                    | `OMRADE.md`               |
 | Skolor, boenden, idrott, föreningar, planer     | `platser.csv`             |
 | Varifrån uppgifterna hämtas och hur             | `KALLOR.md`               |
 | Bakgrund om orterna, vad som pågår och läsarna  | `kunskap/`                |
