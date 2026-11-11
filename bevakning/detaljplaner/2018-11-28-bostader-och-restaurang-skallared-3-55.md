@@ -1,0 +1,41 @@
+---
+rubrik: Detaljplan för bostäder, verksamheter och restaurang inom Skällared 3:55 m.fl. i Gottskär
+ort: Gottskär
+organ: Byggnadsnämnden
+diarienummer: PL/2018:35, BN-2018-00035, KS-2025-00306, KS-2025-00320
+status: pågår
+---
+
+Detaljplanen medger cirka 70 bostäder, lokaler för verksamheter och en
+restaurangbyggnad vid hamnen i Gottskär, med gator, torg, bryggstråk och
+gång- och cykelstråk. Samråd hölls 25 augusti – 2 oktober 2020 med 23
+skrivelser, och planen var ute på granskning tre gånger. Efter
+Länsstyrelsens bedömning att planen riskerade att påverka Natura
+2000-området Onsalafjorden flyttades restaurangen in på hamnplan.
+Kommunfullmäktige antog planen i december 2025. Beslutet har överklagats
+till mark- och miljödomstolen, och utgången står inte i protokollen.
+
+## Händelser
+
+- 2026-08-25 · info · Kommunstyrelsen godkände yttrande till mark- och miljödomstolen i målet om överklagandet av antagandet, särskilt om trafiksituationen och parkering. · [KS protokoll § 185](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-08-25/protokoll.html#sida-15)
+- 2026-08-18 · info · Kommunstyrelsens arbetsutskott föreslog yttrande till mark- och miljödomstolen. · [KSAU protokoll § 247](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-08-18/protokoll.html#sida-5)
+- 2025-12-11 · beslut · Kommunfullmäktige antog detaljplanen. · [KF protokoll § 245](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2025/2025-12-11/protokoll.html#sida-27)
+- 2025-11-25 · forslag · Kommunstyrelsen föreslog kommunfullmäktige att anta detaljplanen. · [KS protokoll § 249](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-11-25/protokoll.html#sida-55)
+- 2025-11-04 · beslut · Kommunfullmäktige godkände exploateringsavtal och överenskommelse om fastighetsreglering för genomförandet av planen. · [KF protokoll § 222](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2025/2025-11-04/protokoll.html#sida-16)
+- 2025-11-04 · forslag · Kommunstyrelsens arbetsutskott föreslog att detaljplanen antas. · [KSAU protokoll § 309](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-11-04/protokoll.html#sida-13)
+- 2025-10-21 · forslag · Kommunstyrelsen föreslog kommunfullmäktige att godkänna exploateringsavtalet. · [KS protokoll § 217](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-10-21/protokoll.html#sida-34)
+- 2025-09-30 · forslag · Kommunstyrelsens arbetsutskott behandlade exploateringsavtalet för genomförandet. · [KSAU protokoll § 272](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-09-30/protokoll.html#sida-11)
+- 2025-09-18 · beslut · Byggnadsnämnden godkände granskningsutlåtandet och antagandehandlingarna och överlämnade planen till kommunfullmäktige för antagande. · [Byggnadsnämnden protokoll § 151](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-09-18/protokoll.html#sida-14)
+- 2025-08-27 · forslag · Byggnadsnämndens arbetsutskott föreslog att planen godkänns och överlämnas för antagande. · [Byggnadsnämndens AU protokoll § 182](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2025/2025-08-27/protokoll.html#sida-7)
+- 2025-06-18 · yttrande · Nämnden för Service behandlade den tredje granskningen. · [Service protokoll § 54](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2025/2025-06-18/protokoll.html#sida-8)
+- 2025-06-11 · yttrande · Nämnden för Kultur & Fritid behandlade den tredje granskningen, med sista svarsdag 17 juni 2025. · [Kultur & Fritid protokoll § 66](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2025/2025-06-11/protokoll.html#sida-5)
+- 2025-04-29 · info · Kommunstyrelsens arbetsutskott informerades om att restaurangbyggnaden föreslås flyttas in på hamnplan efter Länsstyrelsens synpunkter om Natura 2000 i Onsalafjorden; 22–24 parkeringsplatser på hamnplan försvinner. · [KSAU protokoll § 133](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-04-29/protokoll.html#sida-8)
+- 2025-04-24 · forslag · Byggnadsnämnden återremitterade planen för omarbetning så att den inte innebär risk för påverkan på Natura 2000-området Onsalafjorden, och för ny granskning. · [Byggnadsnämnden protokoll § 81](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-04-24/protokoll.html#sida-16)
+- 2025-04-01 · forslag · Byggnadsnämndens arbetsutskott behandlade godkännande av planen. · [Byggnadsnämndens AU protokoll § 82](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2025/2025-04-01/protokoll.html#sida-13)
+- 2025-03-27 · yttrande · Nämnden för Service lämnade ingen erinran på den andra granskningen. · [Service protokoll § 24](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2025/2025-03-27/protokoll.html#sida-5)
+- 2025-02-20 · info · Byggnadsnämnden informerades om kompletteringar efter granskningen och att planområdet utökats för en strandpromenad. · [Byggnadsnämnden protokoll § 29](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-02-20/protokoll-byggnadsnamndens-protokoll-2025-02-20-24-31-35-49.html#sida-10)
+- 2024-12-11 · yttrande · Nämnden för Service återrapporterade sitt yttrande över den första granskningen. · [Service protokoll § 101](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2024/2024-12-11/protokoll.html#sida-8)
+- 2024-08-22 · granskning · Byggnadsnämnden godkände samrådsredogörelsen och beslutade om granskning; den första granskningen pågick 24 september – 29 oktober 2024 och gav 19 skrivelser. · [Byggnadsnämnden protokoll § 177](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2024/2024-08-22/protokoll.html#sida-13)
+- 2024-07-04 · forslag · Byggnadsnämndens arbetsutskott föreslog granskning. · [Byggnadsnämndens AU protokoll § 204](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2024/2024-07-04/protokoll-byggnadsnamndens-arbetsutskott-protokoll-2024-07-04-201-222-224.html#sida-8)
+- 2023-01-17 · info · Kommunstyrelsens arbetsutskott informerades om att planen väntade på mark- och miljödomstolens avgörande om tillstånd för bryggor, kaj och vågbrytare. · [KSAU protokoll § 12](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2023/2023-01-17/protokoll.html#sida-21)
+- 2018-11-28 · forslag · Byggnadsnämndens arbetsutskott gav samhällsbyggnadskontoret i uppdrag att upprätta detaljplan, efter kommunstyrelsens planprogram från 23 oktober 2018. · [Byggnadsnämndens AU protokoll § 465](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-11-28/protokoll.html#sida-13)
