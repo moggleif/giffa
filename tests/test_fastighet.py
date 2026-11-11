@@ -1,13 +1,13 @@
 """K23: fastighetsbeteckningar blir länkar till kartan."""
 
 import unittest
-from urllib.parse import quote
+from urllib.parse import quote_plus
 
 from webbplats.fastighet import KARTA, med_kartlankar
 
 
 def lank(beteckning: str) -> str:
-    adress = KARTA.format(quote(beteckning))
+    adress = KARTA.format(quote_plus(beteckning))
     return f'<a class="fastighet" href="{adress}">{beteckning}</a>'
 
 

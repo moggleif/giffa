@@ -7,9 +7,9 @@ aldrig; bara adressen byggs.
 
 import re
 from html import escape
-from urllib.parse import quote
+from urllib.parse import quote_plus
 
-KARTA = "https://karta.kungsbacka.se/publik/?fastighet={}"
+KARTA = "https://karta.kungsbacka.se/publik/#m=publik&q={}"
 TRAKT = r"[A-ZÅÄÖ][a-zåäöé]+(?:-[A-ZÅÄÖ][a-zåäöé]+)*"
 FASTIGHET = re.compile(rf"(?<![\w-]){TRAKT} \d+:\d+(?![\d:])")
 
@@ -20,5 +20,5 @@ def med_kartlankar(text: str) -> str:
 
 def kartlank(traff: re.Match[str]) -> str:
     beteckning = traff.group()
-    adress = KARTA.format(quote(beteckning))
+    adress = KARTA.format(quote_plus(beteckning))
     return f'<a class="fastighet" href="{adress}">{beteckning}</a>'
