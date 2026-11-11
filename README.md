@@ -20,6 +20,7 @@ Bygg den lokalt med
 ```
 python3 -m webbplats _site https://github.com/moggleif/giffa
 python3 -m unittest discover -s tests -t .
+node --test tests/*.js
 ```
 
 ## Struktur
