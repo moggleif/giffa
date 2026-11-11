@@ -120,8 +120,7 @@ def handelse(rad: str, stegen: Iterable[str] = STEG) -> Handelse:
     datum, steg, text, kalla, *resten = poster(rad, 4, 5)
     if steg not in stegen:
         raise ValueError(f"okänt steg {steg!r}: {rad}")
-    datum = date.fromisoformat(datum)
-    return Handelse(datum, steg, text, *lank(kalla, rad), handlingar(resten, rad))
+    return Handelse(date.fromisoformat(datum), steg, text, *lank(kalla, rad), handlingar(resten, rad))
 
 
 def handlingar(resten: list[str], rad: str) -> tuple[tuple[str, str], ...]:
@@ -140,9 +139,9 @@ def mediepost(rad: str) -> Mediepost:
     return Mediepost(date.fromisoformat(datum), *lank(rubrik, rad), var)
 
 
-def poster(rad: str, minst: int, hogst: int = 0) -> list[str]:
+def poster(rad: str, minst: int, hogst: int | None = None) -> list[str]:
     delar = rad.removeprefix("- ").split(" · ")
-    if not rad.startswith("- ") or not minst <= len(delar) <= max(minst, hogst):
+    if not rad.startswith("- ") or not minst <= len(delar) <= (hogst or minst):
         raise ValueError(f"raden följer inte formatet: {rad}")
     return delar
 

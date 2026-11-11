@@ -13,7 +13,7 @@ som är beslutat, en historik över det som är klart, vad som bevakas och en
 sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
 korten. Fastighetsbeteckningar, platser, gator och detaljplaner i ett ärende
 länkar till kommunens karta. Ärendets sida har länkar direkt till handlingarna
-under varje steg och, för förslag med innehåll, förslaget i korthet.
+under de steg där underlaget finns och, för förslag med innehåll, förslaget i korthet.
 Utan val syns allt; den som vill väljer en ort direkt, eller först en
 förening för att bara se dess orter, och valet står i adressen och följer
 med mellan sidorna. Sidan byggs ur ärendena av `webbplats/` och publiceras

@@ -17,7 +17,7 @@ poolen.
 
 - Samrådsförslaget från 2016 gav plats för cirka tio småhus på åkermark i norra Frillesås, intill ett nybyggt bostadsområde av samma exploatör. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-19)
 - Strandskyddet skulle upphävas på kvartersmarken, och området närmast bäcken skulle bli naturmark. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-21)
-- Enstaka träd i allén längs Rödklintsvägen skulle tas ner för infarterna. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-20)
+- Enstaka träd i allén längs Rödklintsvägen skulle tas ner för infarterna. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-21)
 
 ## Händelser
 

@@ -174,9 +174,9 @@ tillfället, och varje tillfälle, där och på ärendets kort, har en rad
 **när** sidan byggs,
 **så** har det en egen sida `arende/<filnamn>.html` med ort, organ,
 diarienummer, status, ingress, tillfällena att tycka till, alla händelser
-med källor och handlingar (K25), länkarna under *I media och debatt* och
-en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och *Nytt sedan förra rundan*
-länkar dit, och adressen är densamma vilken status ärendet än har.
+med källor och handlingar (K25), länkarna under *I media och debatt*
+och en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och
+*Nytt sedan förra rundan* länkar dit, och adressen är densamma vilken status ärendet än har.
 
 ## K19 – Det som rör sig först
 
@@ -255,7 +255,8 @@ till kartan öppnas i en ny flik, också i rubrikerna.
 **Givet** ett steg i ett ärende vars underlag finns bland handlingarna,
 som tjänsteskrivelse, planbeskrivning, karta eller utredning,
 **när** ärendets sida byggs,
-**så** står länkar direkt till handlingarna under steget, så att man inte
+**så** står länkar direkt till handlingarna under steget, på ärendets
+sida som under *Tycka till nu* och *Nytt sedan förra rundan*, så att man inte
 behöver leta i protokollet eller kallelsen. En länk går till sidan i
 kommunhandlingars text, eller till kommunens PDF på rätt sida när handlingen
 är en karta eller bild som inte blir text. Har ärendet ett förslag med

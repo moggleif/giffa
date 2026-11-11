@@ -1,4 +1,4 @@
-"""Krav: K18, K23, K24 och K25 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K18, K23, K24 och K25 i KRAV.md. Test: tests/test_sidor.py och tests/test_handlingar.py.
 
 Ett ärendes egen sida med en adress som inte ändras när status ändras:
 allt om ärendet, med alla händelser och källor utfällda.
