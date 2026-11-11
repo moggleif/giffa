@@ -15,5 +15,5 @@ Nortorp 1:34.
 
 ## Händelser
 
-- 2023-10-24 · info · Kommunstyrelsen angav i planbeskedet för grannfastigheterna i Nortorp att kommunen 2018 lämnat besked att inte planlägga inom Nortorp 1:34. · [KS protokoll § 226](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-10-24/protokoll.html#sida-13)
+- 2023-10-24 · info · Kommunstyrelsen angav i planbeskedet för grannfastigheterna i Nortorp att kommunen 2018 lämnat besked att inte planlägga inom Nortorp 1:34. · [KS protokoll § 226](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-10-24/protokoll.html#sida-13) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-10-24/handlingar.html#sida-69)
 - 2018-08-15 · forslag · Byggnadsnämndens arbetsutskott föreslog negativt planbesked för Nortorp 1:34. · [Byggnadsnämndens AU protokoll § 283](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-08-15/protokoll.html#sida-16)

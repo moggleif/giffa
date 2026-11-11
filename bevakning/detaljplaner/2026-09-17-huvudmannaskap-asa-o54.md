@@ -13,4 +13,4 @@ med 8. Åsa samfällighetsförening hade kvarstående erinringar.
 
 ## Händelser
 
-- 2026-09-17 · beslut · Byggnadsnämnden godkände granskningsutlåtandet och antog ändringen av huvudmannaskapet. · [Byggnadsnämnden protokoll § 138](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/protokoll-byggnadsnamndens-protokoll-2026-09-17-125-144.html#sida-28)
+- 2026-09-17 · beslut · Byggnadsnämnden godkände granskningsutlåtandet och antog ändringen av huvudmannaskapet. · [Byggnadsnämnden protokoll § 138](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/protokoll-byggnadsnamndens-protokoll-2026-09-17-125-144.html#sida-28) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-169), [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-172), [Granskningsutlåtandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-199), [Samrådsredogörelsen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-206)

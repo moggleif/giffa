@@ -13,6 +13,12 @@ nya busshållplatsen mellan Göteborgsvägen och Rödklintsvägen byggs; nämnde
 beslut finns inte i poolen. Något senare steg finns inte i protokollen i
 poolen.
 
+## Förslaget i korthet
+
+- Samrådsförslaget från 2016 gav plats för cirka tio småhus på åkermark i norra Frillesås, intill ett nybyggt bostadsområde av samma exploatör. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-19)
+- Strandskyddet skulle upphävas på kvartersmarken, och området närmast bäcken skulle bli naturmark. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-21)
+- Enstaka träd i allén längs Rödklintsvägen skulle tas ner för infarterna. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-21)
+
 ## Händelser
 
-- 2016-03-09 · forslag · Arbetsutskottet för Vård & Omsorg föreslog ett samrådsyttrande: bostäderna bör vara tillgängliga oavsett ålder och funktionsförmåga, och busshållplatsen bör byggas. · [Vård & Omsorg protokoll § 25](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/protokoll.html#sida-8)
+- 2016-03-09 · forslag · Arbetsutskottet för Vård & Omsorg föreslog ett samrådsyttrande: bostäderna bör vara tillgängliga oavsett ålder och funktionsförmåga, och busshållplatsen bör byggas. · [Vård & Omsorg protokoll § 25](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/protokoll.html#sida-8) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-15), [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-17)

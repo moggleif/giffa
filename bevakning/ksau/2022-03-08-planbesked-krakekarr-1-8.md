@@ -15,5 +15,5 @@ gick inte att hämta till poolen, så beslutet är okänt.
 
 ## Händelser
 
-- 2022-03-22 · forslag · Planbeskedet stod på kallelsen till kommunstyrelsen med förslag om negativt besked; protokollet för paragraferna 52–81 finns inte i poolen. · [KS kallelse, punkt 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-03-22/kallelse.html#sida-2)
-- 2022-03-08 · forslag · Kommunstyrelsens arbetsutskott föreslog att kommunstyrelsen lämnar besked att kommunen inte avser att pröva åtgärden genom planläggning. · [KSAU protokoll § 98](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-03-08/protokoll.html#sida-20)
+- 2022-03-22 · forslag · Planbeskedet stod på kallelsen till kommunstyrelsen med förslag om negativt besked; protokollet för paragraferna 52–81 finns inte i poolen. · [KS kallelse, punkt 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-03-22/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-03-22/handlingar.html#sida-234)
+- 2022-03-08 · forslag · Kommunstyrelsens arbetsutskott föreslog att kommunstyrelsen lämnar besked att kommunen inte avser att pröva åtgärden genom planläggning. · [KSAU protokoll § 98](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-03-08/protokoll.html#sida-20) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-03-08/handlingar.html#sida-410)

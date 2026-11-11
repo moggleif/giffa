@@ -13,4 +13,4 @@ arbetsutskott avslog ansökan i februari 2025.
 
 ## Händelser
 
-- 2025-02-03 · avbrutet · Tekniks arbetsutskott avslog ansökan om 30 kilometer i timmen på del av Gamla Särövägen. · [Teknik AU protokoll § 1](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2025/2025-02-03/protokoll.html#sida-3)
+- 2025-02-03 · avbrutet · Tekniks arbetsutskott avslog ansökan om 30 kilometer i timmen på del av Gamla Särövägen. · [Teknik AU protokoll § 1](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2025/2025-02-03/protokoll.html#sida-3) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2025/2025-02-03/handlingar.html#sida-1), [Yttrandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2025/2025-02-03/handlingar.html#sida-4)

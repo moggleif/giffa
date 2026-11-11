@@ -13,5 +13,5 @@ flera exploateringsprojekt redan är godkända i området.
 
 ## Händelser
 
-- 2025-09-23 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte inleder detaljplanläggning för bostäder inom Spårhaga 1:3 m.fl. · [KS protokoll § 179](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-09-23/protokoll.html#sida-14)
-- 2025-09-02 · forslag · Kommunstyrelsens arbetsutskott föreslog nej. · [KSAU protokoll § 237](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-09-02/protokoll.html#sida-22)
+- 2025-09-23 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte inleder detaljplanläggning för bostäder inom Spårhaga 1:3 m.fl. · [KS protokoll § 179](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-09-23/protokoll.html#sida-14) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-09-23/handlingar.html#sida-140)
+- 2025-09-02 · forslag · Kommunstyrelsens arbetsutskott föreslog nej. · [KSAU protokoll § 237](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-09-02/protokoll.html#sida-22) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-09-02/handlingar.html#sida-336)

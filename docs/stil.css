@@ -92,3 +92,5 @@ footer { border-top: 1px solid var(--linje); margin-top: 3rem; padding: 1rem 0;
 ol.tillfallen a.arende { font-weight: 600; }
 ol.handelser { display: grid; gap: 0.5rem; padding-left: 1.2rem; }
 ul.oversikt { font-size: 1.1rem; display: grid; gap: 0.4rem; }
+.handlingar { display: block; margin-top: 0.3rem; }
+ul.forslaget { display: grid; gap: 0.4rem; }

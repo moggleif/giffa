@@ -16,5 +16,5 @@ protokollet; det beslutet finns inte i poolen.
 
 ## Händelser
 
-- 2021-01-19 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte avser att pröva bostäder på Rösan 4:20 och 4:22 genom planläggning. Ett yrkande om bifall till ansökan föll. · [KS protokoll § 14](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-01-19/protokoll.html#sida-57)
-- 2021-01-05 · forslag · Kommunstyrelsens arbetsutskott föreslog negativt planbesked. · [KSAU protokoll § 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2021/2021-01-05/protokoll.html#sida-14)
+- 2021-01-19 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte avser att pröva bostäder på Rösan 4:20 och 4:22 genom planläggning. Ett yrkande om bifall till ansökan föll. · [KS protokoll § 14](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-01-19/protokoll.html#sida-57) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-01-19/handlingar.html#sida-138)
+- 2021-01-05 · forslag · Kommunstyrelsens arbetsutskott föreslog negativt planbesked. · [KSAU protokoll § 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2021/2021-01-05/protokoll.html#sida-14) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2021/2021-01-05/handlingar.html#sida-357)

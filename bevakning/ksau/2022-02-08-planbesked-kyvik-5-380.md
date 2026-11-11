@@ -15,5 +15,5 @@ i poolen.
 
 ## Händelser
 
-- 2022-02-22 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva flerbostadshus och verksamhetslokaler genom en detaljplan för Kyvik 5:380, och gav kommundirektören i uppdrag att ta fram en projektbeställning. · [KS protokoll § 36](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-02-22/protokoll.html#sida-15)
-- 2022-02-08 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked för Kyvik 5:380. · [KSAU protokoll § 61](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-02-08/protokoll.html#sida-16)
+- 2022-02-22 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva flerbostadshus och verksamhetslokaler genom en detaljplan för Kyvik 5:380, och gav kommundirektören i uppdrag att ta fram en projektbeställning. · [KS protokoll § 36](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-02-22/protokoll.html#sida-15) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-02-22/handlingar.html#sida-69)
+- 2022-02-08 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked för Kyvik 5:380. · [KSAU protokoll § 61](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-02-08/protokoll.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-02-08/handlingar.html#sida-114)

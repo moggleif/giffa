@@ -14,5 +14,5 @@ att det allmänna intresset att bevara platsen som allmän väger tyngre.
 
 ## Händelser
 
-- 2024-04-23 · avbrutet · Kommunstyrelsen lämnade negativt planbesked på den nya begäran för Nortorp 1:22. · [KS protokoll § 103](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-04-23/protokoll.html#sida-19)
-- 2023-10-24 · avbrutet · Kommunstyrelsen lämnade negativt planbesked för Nortorp 1:8, 1:9, 1:20, 1:21 och 1:22. · [KS protokoll § 226](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-10-24/protokoll.html#sida-13)
+- 2024-04-23 · avbrutet · Kommunstyrelsen lämnade negativt planbesked på den nya begäran för Nortorp 1:22. · [KS protokoll § 103](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-04-23/protokoll.html#sida-19) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-04-23/handlingar.html#sida-55), [Orienteringskartan (PDF)](https://kungsbacka.se/download/18.2f18dd4b18ecb609445e85a/1713354656739/Kommunstyrelsen%20handlingar%202024-04-23.pdf#page=56)
+- 2023-10-24 · avbrutet · Kommunstyrelsen lämnade negativt planbesked för Nortorp 1:8, 1:9, 1:20, 1:21 och 1:22. · [KS protokoll § 226](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-10-24/protokoll.html#sida-13) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-10-24/handlingar.html#sida-69)

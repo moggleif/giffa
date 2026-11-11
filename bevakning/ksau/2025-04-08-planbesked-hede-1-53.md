@@ -15,5 +15,5 @@ Något senare steg syns inte i poolen.
 
 ## Händelser
 
-- 2025-04-22 · beslut · Kommunstyrelsen gav positivt planbesked för att pröva skola inom Hede 1:53 och uppdrog åt kommundirektören att ta fram en projektbeställning. · [KS protokoll § 79](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-04-22/protokoll.html#sida-19)
-- 2025-04-08 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 121](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-04-08/protokoll.html#sida-16)
+- 2025-04-22 · beslut · Kommunstyrelsen gav positivt planbesked för att pröva skola inom Hede 1:53 och uppdrog åt kommundirektören att ta fram en projektbeställning. · [KS protokoll § 79](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-04-22/protokoll.html#sida-19) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-04-22/handlingar.html#sida-644)
+- 2025-04-08 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 121](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-04-08/protokoll.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-04-08/handlingar.html#sida-333)

@@ -13,5 +13,5 @@ fungerar som rekreationsområde. Arbetsutskottet föreslog nej, och sökanden
 
 ## Händelser
 
-- 2023-06-20 · avbrutet · Ärendet utgick från kommunstyrelsens sammanträde sedan sökanden 11 juni 2023 återtagit begäran om planbesked. · [KS protokoll § 151](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-06-20/protokoll.html#sida-25)
+- 2023-06-20 · avbrutet · Ärendet utgick från kommunstyrelsens sammanträde sedan sökanden 11 juni 2023 återtagit begäran om planbesked. · [KS protokoll § 151](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-06-20/protokoll.html#sida-25) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-06-20/handlingar.html#sida-187), [Orienteringskartan](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2023/2023-06-20/handlingar.html#sida-208)
 - 2023-06-07 · forslag · Kommunstyrelsens arbetsutskott föreslog negativt planbesked. · [KSAU protokoll § 178](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2023/2023-06-07/protokoll.html#sida-31)

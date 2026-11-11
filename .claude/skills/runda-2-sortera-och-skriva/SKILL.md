@@ -12,7 +12,9 @@ Skapa en gren innan något skrivs.
    där. Annars blir den ett nytt ärende.
 2. **Skriv** enligt formatet i `bevakning/README.md`. Ett nytt ärende blir
    en fil i källans mapp; en ny händelse läggs överst, med datum och länk,
-   och `status` uppdateras när händelsen ändrar den.
+   och `status` uppdateras när händelsen ändrar den. Länka handlingarna
+   som steget bygger på efter `Handlingar: `, och skriv *Förslaget i
+   korthet* när ett planförslag eller program kommer ut (K25).
 3. **Tycka till.** Gå igenom *Kommande sammanträden* i månadens issue och
    kallelserna som har kommit. Ska ett bevakat ärende upp, eller pågår ett
    samråd eller en granskning, skriv det under *Tycka till* i ärendet med

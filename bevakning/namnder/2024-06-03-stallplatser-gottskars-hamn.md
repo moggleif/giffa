@@ -12,4 +12,4 @@ runt och en gräns på 48 timmar.
 
 ## Händelser
 
-- 2024-06-03 · beslut · Tekniks arbetsutskott beslutade lokal trafikföreskrift om parkering på Gottskärsvägen, med avgift på två ställplatser för husbilar i hamnen och en gräns på 48 timmar. · [Teknik AU protokoll § 19](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2024/2024-06-03/protokoll.html#sida-5)
+- 2024-06-03 · beslut · Tekniks arbetsutskott beslutade lokal trafikföreskrift om parkering på Gottskärsvägen, med avgift på två ställplatser för husbilar i hamnen och en gräns på 48 timmar. · [Teknik AU protokoll § 19](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2024/2024-06-03/protokoll.html#sida-5) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2024/2024-06-03/handlingar.html#sida-3)

@@ -13,4 +13,4 @@ protokollen i poolen.
 
 ## Händelser
 
-- 2022-12-13 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva en detaljplan för verksamheter inom Äskatorp 7:68 och del av Duvehed 2:9. · [KS protokoll § 287](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-12-13/protokoll.html#sida-15)
+- 2022-12-13 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva en detaljplan för verksamheter inom Äskatorp 7:68 och del av Duvehed 2:9. · [KS protokoll § 287](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-12-13/protokoll.html#sida-15) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-12-13/handlingar.html#sida-85)

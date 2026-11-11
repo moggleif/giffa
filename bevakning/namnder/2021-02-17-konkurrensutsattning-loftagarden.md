@@ -13,5 +13,5 @@ början av 2021.
 
 ## Händelser
 
-- 2021-03-18 · avbrutet · Nämnden för Service upphävde sitt beslut om att konkurrensutsätta lokalvård, måltider och vaktmästeri på Löftagården. · [Service protokoll § 31](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2021/2021-03-18/protokoll.html#sida-14)
-- 2021-02-17 · avbrutet · Nämnden för Vård & Omsorg upphävde beslutet från december 2020 om att konkurrensutsätta Löftagårdens vård- och omsorgsboende. · [Vård & Omsorg protokoll § 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2021/2021-02-17/protokoll.html#sida-14)
+- 2021-03-18 · avbrutet · Nämnden för Service upphävde sitt beslut om att konkurrensutsätta lokalvård, måltider och vaktmästeri på Löftagården. · [Service protokoll § 31](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2021/2021-03-18/protokoll.html#sida-14) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2021/2021-03-18/handlingar.html#sida-55)
+- 2021-02-17 · avbrutet · Nämnden för Vård & Omsorg upphävde beslutet från december 2020 om att konkurrensutsätta Löftagårdens vård- och omsorgsboende. · [Vård & Omsorg protokoll § 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2021/2021-02-17/protokoll.html#sida-14) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2021/2021-02-17/handlingar.html#sida-167)

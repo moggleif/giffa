@@ -14,5 +14,5 @@ plats för står inte uttryckligen i protokollen.
 
 ## Händelser
 
-- 2025-04-24 · beslut · Nämnden för Service godkände en kostnadsökning på 6,4 miljoner kronor för projektet Klockaregårdens förskola. · [Service protokoll § 37](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2025/2025-04-24/protokoll.html#sida-6)
-- 2024-04-17 · beslut · Nämnden för Förskola & Grundskola beslutade att Lärkbackens förskola flyttar till Klockaregårdens förskola vid terminsslutet 2024. · [Förskola & Grundskola protokoll § 38](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2024/2024-04-17/protokoll.html#sida-13)
+- 2025-04-24 · beslut · Nämnden för Service godkände en kostnadsökning på 6,4 miljoner kronor för projektet Klockaregårdens förskola. · [Service protokoll § 37](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2025/2025-04-24/protokoll.html#sida-6) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2025/2025-04-24/handlingar.html#sida-7)
+- 2024-04-17 · beslut · Nämnden för Förskola & Grundskola beslutade att Lärkbackens förskola flyttar till Klockaregårdens förskola vid terminsslutet 2024. · [Förskola & Grundskola protokoll § 38](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2024/2024-04-17/protokoll.html#sida-13) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2024/2024-04-17/handlingar.html#sida-51)

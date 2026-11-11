@@ -16,4 +16,4 @@ finns inte i protokollen i poolen.
 ## Händelser
 
 - 2024-11-26 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva bostäder genom en detaljplan för del av Alafors 4:12 skifte 23 i Anneberg och gav kommundirektören i uppdrag att ta fram en projektbeställning. · [KS protokoll § 259](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-11-26/protokoll.html#sida-28)
-- 2024-11-12 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 327](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-11-12/protokoll.html#sida-21)
+- 2024-11-12 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 327](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-11-12/protokoll.html#sida-21) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-11-12/handlingar.html#sida-340)

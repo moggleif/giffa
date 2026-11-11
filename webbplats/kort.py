@@ -9,6 +9,7 @@ from html import escape
 
 from webbplats.arende import STEG, Arende, Handelse
 from webbplats.datum import tid
+from webbplats.handlingar import handlingar
 from webbplats.kartlankar import Kartlankar
 from webbplats.mall import Sajt
 from webbplats.paverka import markering
@@ -44,7 +45,8 @@ def post(handelse: Handelse, karta: Kartlankar) -> str:
     return (
         f"<li>{tid(handelse.datum)} <strong>{STEG[handelse.steg]}</strong> "
         f"{karta.lanka(handelse.text)} "
-        f'<a href="{escape(handelse.lank)}">{escape(handelse.kalla)}</a></li>'
+        f'<a href="{escape(handelse.lank)}">{escape(handelse.kalla)}</a>'
+        f"{handlingar(handelse)}</li>"
     )
 
 

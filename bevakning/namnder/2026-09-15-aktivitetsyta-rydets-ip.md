@@ -14,4 +14,4 @@ arrendet syns inte i protokollen.
 
 ## Händelser
 
-- 2026-09-15 · yttrande · Nämnden för Service godkände återrapporteringen av sitt yttrande över Kultur & Fritids remiss med kompletterande ritningar; i yttrandet ställer sig nämnden positiv till byggnationen. · [Service protokoll § 77](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2026/2026-09-15/protokoll.html#sida-11)
+- 2026-09-15 · yttrande · Nämnden för Service godkände återrapporteringen av sitt yttrande över Kultur & Fritids remiss med kompletterande ritningar; i yttrandet ställer sig nämnden positiv till byggnationen. · [Service protokoll § 77](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2026/2026-09-15/protokoll.html#sida-11) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2026/2026-09-15/handlingar.html#sida-828), [Yttrandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2026/2026-09-15/handlingar.html#sida-829)

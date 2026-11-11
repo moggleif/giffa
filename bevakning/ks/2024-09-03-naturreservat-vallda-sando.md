@@ -15,5 +15,5 @@ länsstyrelsen har beslutat står inte i protokollen i poolen.
 
 ## Händelser
 
-- 2024-09-24 · yttrande · Kommunstyrelsen antog sitt yttrande över länsstyrelsens förslag. · [KS protokoll § 211](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-09-24/protokoll.html#sida-19)
-- 2024-09-03 · forslag · Kommunstyrelsens arbetsutskott föreslog yttrandet. · [KSAU protokoll § 230](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-09-03/protokoll.html#sida-4)
+- 2024-09-24 · yttrande · Kommunstyrelsen antog sitt yttrande över länsstyrelsens förslag. · [KS protokoll § 211](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-09-24/protokoll.html#sida-19) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-09-24/handlingar.html#sida-242), [Yttrandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2024/2024-09-24/handlingar.html#sida-246)
+- 2024-09-03 · forslag · Kommunstyrelsens arbetsutskott föreslog yttrandet. · [KSAU protokoll § 230](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-09-03/protokoll.html#sida-4) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-09-03/handlingar.html#sida-4), [Yttrandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2024/2024-09-03/handlingar.html#sida-7)

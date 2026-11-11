@@ -16,4 +16,4 @@ Tölö 8:x till Tölö.
 
 ## Händelser
 
-- 2026-11-10 · forslag · Planbeskedet stod på kallelsen till kommunstyrelsens arbetsutskott, med förslag om att kommunen inleder en detaljplanläggning för bostäder och tar fram en projektbeställning. · [KSAU kallelse, punkt 12](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-10/kallelse.html#sida-2)
+- 2026-11-10 · forslag · Planbeskedet stod på kallelsen till kommunstyrelsens arbetsutskott, med förslag om att kommunen inleder en detaljplanläggning för bostäder och tar fram en projektbeställning. · [KSAU kallelse, punkt 12](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-10/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-10/handlingar.html#sida-300)

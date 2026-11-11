@@ -14,5 +14,5 @@ naturmiljö som är viktig för vardagsnära friluftsliv.
 
 ## Händelser
 
-- 2025-03-18 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte avser att pröva åtgärden genom planläggning. · [KS protokoll § 58](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-03-18/protokoll.html#sida-14)
-- 2025-02-25 · forslag · Kommunstyrelsens arbetsutskott föreslog negativt planbesked. · [KSAU protokoll § 60](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-02-25/protokoll.html#sida-14)
+- 2025-03-18 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte avser att pröva åtgärden genom planläggning. · [KS protokoll § 58](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-03-18/protokoll.html#sida-14) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-03-18/handlingar.html#sida-188)
+- 2025-02-25 · forslag · Kommunstyrelsens arbetsutskott föreslog negativt planbesked. · [KSAU protokoll § 60](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-02-25/protokoll.html#sida-14) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2025/2025-02-25/handlingar.html#sida-93)
