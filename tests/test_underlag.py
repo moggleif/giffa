@@ -1,4 +1,4 @@
-"""K6 och K8: orterna, platserna, källorna och förra rundan ur repots filer."""
+"""K6, K8 och K22: föreningarna, orterna, platserna, källorna och förra rundan ur repots filer."""
 
 import unittest
 from datetime import date
@@ -7,9 +7,15 @@ from webbplats import underlag
 
 
 class Underlag(unittest.TestCase):
-    def test_orterna_ur_listan_fore_platserna(self):
-        omrade = "# Område\n\n- Åsa\n- Fjärås\n\nText.\n\n## Platser\n\n- Inte en ort\n"
-        self.assertEqual(underlag.orter(omrade), ["Åsa", "Fjärås"])
+    def test_foreningarna_och_orterna_fore_platserna(self):
+        omrade = (
+            "# Område\n\nText.\n\n## Förening A\n\n- Åsa\n- Fjärås\n\n"
+            "## Förening B\n\n- Särö\n\nText.\n\n## Platser\n\n- Inte en ort\n"
+        )
+        self.assertEqual(
+            underlag.foreningar(omrade), {"Förening A": ["Åsa", "Fjärås"], "Förening B": ["Särö"]}
+        )
+        self.assertEqual(underlag.orter(omrade), ["Åsa", "Fjärås", "Särö"])
 
     def test_kallorna_ur_tabellen(self):
         kallor = "| Källa | Vad | Adress |\n| -- | -- | -- |\n| A | ger | https://a |\n\nText.\n"

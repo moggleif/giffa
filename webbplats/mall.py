@@ -1,4 +1,4 @@
-"""Krav: K9, K14 och K18 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K9, K14, K18 och K22 i KRAV.md. Test: tests/test_sidor.py.
 
 Det varje sida har gemensamt: huvudet, menyn, urvalet och sidfoten med
 länken till repot.
@@ -9,6 +9,7 @@ from datetime import datetime
 from html import escape
 
 from webbplats.datum import tid
+from webbplats.underlag import alla_orter
 
 MENY = (
     ("index.html", "Start"),
@@ -25,7 +26,11 @@ AKTUELL = ' aria-current="page"'
 class Sajt:
     repo: str
     byggd: datetime
-    orter: list[str]
+    foreningar: dict[str, list[str]]
+
+    @property
+    def orter(self) -> list[str]:
+        return alla_orter(self.foreningar)
 
 
 def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
@@ -61,11 +66,28 @@ def meny(aktuell: str, rot: str) -> str:
 
 
 def urval(sajt: Sajt) -> str:
-    knappar = "".join(
-        f'<button type="button" data-urval="{escape(ort)}">{escape(ort)}</button>'
-        for ort in ["Alla", *sajt.orter]
+    foreningar = "".join(knapp("forening", namn) for namn in sajt.foreningar)
+    orter = "".join(
+        f'<div role="group" aria-label="Visa ort i {escape(namn)}" data-urval-grupp="{escape(namn)}" hidden>'
+        + "".join(knapp("ort", ort) for ort in lista)
+        + "</div>"
+        for namn, lista in sajt.foreningar.items()
     )
-    return f'<div class="urval" role="group" aria-label="Visa ort" hidden>{knappar}</div>'
+    return (
+        '<div class="urval" hidden><div role="group" aria-label="Visa förening">'
+        f'<button type="button" data-alla>Alla</button>{foreningar}</div>{orter}</div>'
+    )
+
+
+def knapp(slag: str, namn: str) -> str:
+    return f'<button type="button" data-urval-{slag}="{escape(namn)}">{escape(namn)}</button>'
+
+
+def urvalslista(innehall: str) -> str:
+    return (
+        f'<div class="urvalslista">{innehall}'
+        '<p class="inget-val" hidden>Inget här för det valet.</p></div>'
+    )
 
 
 def sidfot(sajt: Sajt) -> str:

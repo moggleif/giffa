@@ -34,8 +34,8 @@ om varje morgon, så att passerade tillfällen att tycka till försvinner
 varje händelse är en ikon som länkar till källan och där stegen skiljs åt
 med form, inte bara färg. Under tabellen har varje ärende ett kort med ort,
 organ, diarienummer, senaste steget och en länk *Läs mer* till ärendets
-egen sida (K18). Raden i tabellen länkar också dit. Knappar ovanför visar bara ärendena i en vald ort; utan
-skriptet står alla.
+egen sida (K18). Raden i tabellen länkar också dit. Knappar ovanför väljer
+förening och ort enligt K22; utan skriptet står alla.
 
 ## K5 – Kort startsida, listor på egna sidor
 
@@ -66,8 +66,8 @@ det, med perioden.
 
 **Givet** `OMRADE.md`, `platser.csv` och `KALLOR.md`,
 **när** sidan byggs,
-**så** visar sidan *Vad vi bevakar* orterna, platserna och källorna ur
-just de filerna, och länkar till dem för reglerna.
+**så** visar sidan *Vad vi bevakar* föreningarna med sina orter, platserna
+och källorna ur just de filerna, och länkar till dem för reglerna.
 
 ## K9 – Länkar mellan sidan och repot
 
@@ -197,11 +197,24 @@ punkter i mediefrågan),
 samma ärenden och länkar till ärendenas sidor. På en bredare skärm visas
 tidslinjen också.
 
-## K21 – Ortsvalet följer med
+## K21 – Valet följer med
 
-**Givet** att en ort har valts med knapparna på en lista eller startsidan,
+**Givet** att en förening eller en ort har valts med knapparna på en lista
+eller startsidan,
 **när** sidan visas med skriptet,
-**så** står orten i adressen (`?ort=Åsa`), bakåtknappen återställer
-förra valet och en länk med orten visar samma urval. Sidans länkar till
-andra sidor på webbplatsen tar med orten, också från sidor utan knappar,
+**så** står valet i adressen (`?forening=Förening Åsa` eller `?ort=Åsa`),
+bakåtknappen återställer förra valet och en länk med valet visar samma
+urval. Sidans länkar till andra sidor på webbplatsen tar med valet, också
+från sidor utan knappar,
 så att valet följer med tills läsaren väljer om. Utan skriptet står allt.
+
+## K22 – Fyra föreningar, allt utan val
+
+**Givet** föreningarna och deras orter i `OMRADE.md`, där varje ort står
+under en enda förening,
+**när** en lista eller startsidan visas,
+**så** syns alla ärenden tills läsaren väljer. Knapparna visar *Alla* och
+föreningarna i filens ordning; en vald förening visar ärendena i dess
+orter och knappar för orterna, och en vald ort visar bara den ortens
+ärenden. Blir en lista tom för valet står det så. En ort under två
+föreningar, eller en förening utan orter, stoppar bygget.

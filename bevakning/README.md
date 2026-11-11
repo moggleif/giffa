@@ -50,7 +50,7 @@ En eller två meningar om vad ärendet gäller, ur källan.
 | Nyckel              | Innehåll                                                      |
 | ------------------- | ------------------------------------------------------------- |
 | `rubrik`            | Ärendet som det heter i handlingarna                           |
-| `ort`               | En eller flera orter ur `OMRADE.md`, åtskilda med komma         |
+| `ort`               | En eller flera orter ur `OMRADE.md`, åtskilda med komma; föreningen följer av orten |
 | `organ`             | Organet som driver ärendet                                     |
 | `diarienummer`      | När det finns                                                  |
 | `status`            | `pågår`, `beslutat`, `klart` eller `avbrutet` (se nedan)        |

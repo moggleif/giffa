@@ -1,6 +1,6 @@
 ---
 name: Bevaka ett ärende
-about: Ett ärende i södra Kungsbacka som ska följas
+about: Ett ärende i Kungsbacka som ska följas
 title: "<ort>: <kort beskrivning>"
 labels: bevakning
 ---

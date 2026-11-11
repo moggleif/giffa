@@ -1,4 +1,4 @@
-"""K3 och K10: bygget av hela repot ger sidorna, och ett felaktigt ärende stoppar."""
+"""K3, K10 och K22: bygget av hela repot ger sidorna, och ett felaktigt ärende stoppar."""
 
 import shutil
 import tempfile
@@ -44,6 +44,17 @@ class Bygg(unittest.TestCase):
         with self.assertRaises(SystemExit) as fel:
             bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
         self.assertIn(fil.name, str(fel.exception))
+
+    def test_ort_under_tva_foreningar_stoppar_med_omrade(self):
+        rot = self.ut / "repo"
+        shutil.copytree(ROT, rot, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        omrade = rot / "OMRADE.md"
+        omrade.write_text(
+            omrade.read_text(encoding="utf-8").replace("- Släp", "- Släp\n- Åsa"), encoding="utf-8"
+        )
+        with self.assertRaises(SystemExit) as fel:
+            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
+        self.assertIn("OMRADE.md: orten står under flera föreningar: Åsa", str(fel.exception))
 
     def test_samma_filnamn_i_tva_kataloger_stoppar(self):
         rot = self.ut / "repo"

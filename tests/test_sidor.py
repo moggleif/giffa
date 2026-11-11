@@ -19,7 +19,7 @@ from webbplats.underlag import Runda
 SAJT = Sajt(
     "https://github.com/agare/giffa",
     datetime(2026, 11, 10, 6, 0, tzinfo=timezone.utc),
-    ["Åsa", "Fjärås"],
+    {"Förening Åsa": ["Åsa", "Fjärås"], "Förening Särö": ["Särö"]},
 )
 RUNDA = Runda(date(2026, 3, 1), date(2026, 3, 31), "Startärenden.")
 
@@ -86,9 +86,16 @@ class Startsidan(unittest.TestCase):
         self.assertNotIn("Ett förslag.", nytt)
         self.assertIn("1 mars 2026</time> till <time datetime=\"2026-03-31\">31 mars 2026</time>. Startärenden.", nytt)
 
-    def test_urval_per_ort_ur_omrade(self):
+    def test_urval_per_forening_och_ort_ur_omrade(self):
         html = pagar([arende("pågår", "p")])
-        self.assertIn('<button type="button" data-urval="Fjärås">Fjärås</button>', html)
+        self.assertIn('<button type="button" data-alla>Alla</button>', html)
+        self.assertIn(
+            '<button type="button" data-urval-forening="Förening Särö">Förening Särö</button>', html
+        )
+        self.assertIn('data-urval-grupp="Förening Åsa" hidden>', html)
+        self.assertIn('<button type="button" data-urval-ort="Fjärås">Fjärås</button>', html)
+        self.assertIn('<div class="urvalslista"><div class="tabell">', html)
+        self.assertIn('<p class="inget-val" hidden>', html)
         self.assertIn('<tr data-ort="Åsa|Fjärås">', html)
         self.assertIn('<article id="p" data-ort="Åsa|Fjärås">', html)
 
@@ -247,7 +254,8 @@ class Bevakar(unittest.TestCase):
             "exempel": "https://e/x",
         }
         html = bevakar(SAJT, [plats], [["Kommunen", "nyheter", "https://k.se"]])
-        self.assertIn("<li>Fjärås</li>", html)
+        self.assertIn("<h3>Förening Åsa</h3><p>Åsa, Fjärås</p>", html)
+        self.assertIn("<h3>Förening Särö</h3><p>Särö</p>", html)
         self.assertIn('<a href="https://e/x">Åsaskolan</a>', html)
         self.assertIn('<a href="https://k.se">https://k.se</a>', html)
         self.assertIn("https://github.com/agare/giffa/blob/main/KALLOR.md", html)

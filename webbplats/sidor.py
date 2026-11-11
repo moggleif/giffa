@@ -1,4 +1,4 @@
-"""Krav: K5, K6, K7, K12 och K19 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K5, K6, K7, K12, K19 och K22 i KRAV.md. Test: tests/test_sidor.py.
 
 Startsidan med det som går att påverka, det nya och hur många ärenden
 varje lista har, och listorna: det som pågår, det som är beslutat och
@@ -12,7 +12,7 @@ from webbplats.arende import Arende
 from webbplats.datum import tid
 from webbplats.ikoner import teckenforklaring
 from webbplats.kort import kort, nytt_kort
-from webbplats.mall import Sajt, sida, urval
+from webbplats.mall import Sajt, sida, urval, urvalslista
 from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
@@ -32,8 +32,9 @@ LISTOR = (
 
 def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
     inledning = (
-        "<p>Vad som beslutas, planeras och byggs i "
-        f"{escape(', '.join(sajt.orter))}. Varje händelse länkar till sin källa.</p>"
+        "<p>Vad som beslutas, planeras och byggs i orterna hos de fyra föreningarna. "
+        "Utan val syns allt; välj en förening, och sedan en ort, för att bara se den. "
+        "Varje händelse länkar till sin källa.</p>"
     )
     paverka = tycka_till_nu(arenden, sajt.byggd.date())
     innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda) + oversikt(arenden)
@@ -60,7 +61,7 @@ def nytt(arenden: list[Arende], runda: Runda) -> str:
         for a in arenden
         if (nya := [h for h in a.handelser if fran <= h.datum <= till])
     )
-    innehall = f'<div class="kort">{korten}</div>' if korten else "<p>Inga nya händelser.</p>"
+    innehall = urvalslista(f'<div class="kort">{korten}</div>') if korten else "<p>Inga nya händelser.</p>"
     return (
         f'<h2 id="nytt">Nytt sedan förra rundan</h2>'
         f'<p class="period">Rundans period: {tid(fran)} till {tid(till)}. {escape(runda.anteckning)}</p>'
@@ -94,4 +95,4 @@ def avsnitt(sajt: Sajt, arenden: list[Arende]) -> str:
         return "<p>Inga ärenden ännu.</p>"
     korten = "".join(kort(a, sajt) for a in arenden)
     rader = tabell(arenden, sajt.byggd.date())
-    return f'{rader}<div class="kort">{korten}</div>'
+    return urvalslista(f'{rader}<div class="kort">{korten}</div>')

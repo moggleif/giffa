@@ -1,15 +1,18 @@
-# Giffå – bevakning av södra Kungsbacka
+# Giffå – bevakning av Kungsbacka, förening för förening
 
-Vad som beslutas, planeras och byggs i Gällinge, Idala, Fjärås, Frillesås,
-Förlanda och Åsa: kommunstyrelsen, dess arbetsutskott, nämnderna, bygglov,
-detaljplaner och det kommunen publicerar på kungsbacka.se.
+Vad som beslutas, planeras och byggs i Kungsbacka kommun, uppdelat på fyra
+föreningars områden – Förening Åsa, Förening Kungsbacka, Förening Onsala
+och Förening Särö (se [OMRADE.md](OMRADE.md)): kommunstyrelsen, dess
+arbetsutskott, nämnderna, bygglov, detaljplaner och det kommunen publicerar
+på kungsbacka.se.
 
 **Sidan: <https://moggleif.github.io/giffa/>** – på startsidan när och var
 man kan tycka till innan något beslutas och det nya sedan förra rundan; på
 egna sidor det som pågår (det som rört sig de senaste två åren först), det
 som är beslutat, en historik över det som är klart, vad som bevakas och en
 sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
-korten. Ortsvalet står i adressen och följer med mellan sidorna. Sidan byggs ur
+korten. Utan val syns allt; den som vill väljer en förening och sedan en ort,
+och valet står i adressen och följer med mellan sidorna. Sidan byggs ur
 ärendena av `webbplats/` och publiceras på GitHub Pages
 ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Bygg den lokalt med
@@ -31,8 +34,8 @@ docs/        Sidans stil och skript, som kopieras med i bygget.
 skanning/    Söker igenom kommunhandlingar inför månadens runda.
 tests/       Testerna för bygget och skanningen.
 KALLOR.md    Varifrån uppgifterna hämtas.
-kunskap/     Bakgrund om södra Kungsbacka och om sidans läsare, med källor.
-OMRADE.md    Vilka orter och områden som räknas till bevakningen.
+kunskap/     Bakgrund om orterna och om sidans läsare, med källor.
+OMRADE.md    Föreningarna och vilka orter som hör till var och en.
 platser.csv  Skolor, boenden, idrott, föreningar och planer i orterna.
 ```
 

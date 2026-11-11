@@ -1,6 +1,6 @@
 ---
 name: skanna-systerrepona
-description: Använd i fas R1 av varje bevakningsrunda och innan ett nytt ärende skrivs i bevakning/, för att söka igenom kommunhandlingar och politik efter allt som rör orterna och platserna i södra Kungsbacka.
+description: Använd i fas R1 av varje bevakningsrunda och innan ett nytt ärende skrivs i bevakning/, för att söka igenom kommunhandlingar och politik efter allt som rör orterna och platserna i OMRADE.md och platser.csv.
 ---
 
 # Skanna systerrepona
