@@ -15,7 +15,8 @@ avstånd mellan anropen. Vad det betyder för varje källa, kontrollerat
 
 - **Kungsbackas karta** spärrar automatisk hämtning i sin `robots.txt`.
   Agenten hämtar inte därifrån; en människa kan öppna kartan och länka en
-  vy i ett ärende.
+  vy i ett ärende. Sidan bygger länkar till kartan för
+  fastighetsbeteckningarna (`webbplats/fastighet.py`) men hämtar ingenting.
 - **Kungsbacka-Posten** spärrar AI-agenter, bland dem `ClaudeBot` och
   `anthropic-ai`, för hela webbplatsen i sin `robots.txt`. Agenten hämtar
   aldrig därifrån. En artikel som en människa länkar i ett issue får stå
