@@ -218,3 +218,12 @@ föreningarna i filens ordning; en vald förening visar ärendena i dess
 orter och knappar för orterna, och en vald ort visar bara den ortens
 ärenden. Blir en lista tom för valet står det så. En ort under två
 föreningar, eller en förening utan orter, stoppar bygget.
+
+## K23 – Fastigheten på kartan
+
+**Givet** en fastighetsbeteckning som *Ölmanäs 1:17* eller
+*Frillesås-Rya 3:77* i ett ärendes ingress, händelser eller tillfällen
+att tycka till,
+**när** sidan byggs,
+**så** är beteckningen en länk till Kungsbackas karta som visar just den
+fastigheten. Kartan hämtas inte; bara länken byggs.

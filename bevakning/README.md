@@ -55,6 +55,11 @@ En eller två meningar om vad ärendet gäller, ur källan.
 | `diarienummer`      | När det finns                                                  |
 | `status`            | `pågår`, `beslutat`, `klart` eller `avbrutet` (se nedan)        |
 
+**Fastighetsbeteckningar** skrivs som i källan, trakt och nummer:
+*Ölmanäs 1:17*, *Frillesås-Rya 3:77*. I ingressen, händelserna och
+tillfällena att tycka till gör sidan dem till länkar till kommunens karta
+(K23).
+
 **Status** styr var ärendet står på sidan:
 
 - `pågår` – inte avgjort; sidan *Pågår*, där det utan händelse på två år

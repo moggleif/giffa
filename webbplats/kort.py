@@ -1,4 +1,4 @@
-"""Krav: K4, K5, K6, K9, K12 och K18 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9, K12, K18 och K23 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett kort per ärende under tabellen, korten för det som är nytt sedan
 förra rundan överst på startsidan, och delarna som ärendets egen sida
@@ -9,6 +9,7 @@ from html import escape
 
 from webbplats.arende import STEG, Arende, Handelse
 from webbplats.datum import tid
+from webbplats.fastighet import med_kartlankar
 from webbplats.mall import Sajt
 from webbplats.paverka import markering
 
@@ -19,7 +20,7 @@ def kort(arende: Arende, sajt: Sajt) -> str:
         f'<article id="{arende.id}" data-ort="{escape("|".join(arende.orter))}">'
         f"{markor(arende)}<h3>{escape(falt['rubrik'])}</h3>"
         f'<p class="organ">{escape(organ(arende))}</p>'
-        + (f"<p>{escape(arende.ingress)}</p>" if arende.ingress else "")
+        + (f"<p>{med_kartlankar(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
         + markering(arende, sajt.byggd.date())
         + f'<p><a href="{arende.sida}">Läs mer: alla {len(arende.handelser)} '
@@ -42,7 +43,7 @@ def organ(arende: Arende) -> str:
 def post(handelse: Handelse) -> str:
     return (
         f"<li>{tid(handelse.datum)} <strong>{STEG[handelse.steg]}</strong> "
-        f"{escape(handelse.text)} "
+        f"{med_kartlankar(handelse.text)} "
         f'<a href="{escape(handelse.lank)}">{escape(handelse.kalla)}</a></li>'
     )
 

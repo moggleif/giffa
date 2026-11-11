@@ -1,4 +1,4 @@
-"""Krav: K12 och K17 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K12, K17 och K23 i KRAV.md. Test: tests/test_sidor.py.
 
 När man kan tycka till: ärendenas kommande samråd, granskningar, yttranden
 och beslut i tur och ordning överst på startsidan, och som en markering på
@@ -10,6 +10,7 @@ from html import escape
 
 from webbplats.arende import Arende, Handelse
 from webbplats.datum import kvar, med_veckodag
+from webbplats.fastighet import med_kartlankar
 from webbplats.mall import urvalslista
 
 TILLFALLE = {
@@ -32,7 +33,7 @@ def kommande(arende: Arende, idag: date) -> list[Handelse]:
 def tillfalle(t: Handelse, idag: date) -> str:
     return (
         f"<strong>{TILLFALLE[t.steg]} {med_veckodag(t.datum)}, {kvar(t.datum, idag)}</strong> "
-        f"{escape(t.text)} "
+        f"{med_kartlankar(t.text)} "
         f'<a href="{escape(t.lank)}">{escape(t.kalla)}</a>'
         f'<span class="sa-gor"><strong>Så gör du:</strong> {SA_GOR[t.steg]}</span>'
     )
