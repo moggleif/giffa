@@ -1,4 +1,4 @@
-// Krav: K4, K21 och K22 i KRAV.md. Test: tests/test_bygg.py (att skriptet följer med).
+// Krav: K4, K21 och K22 i KRAV.md. Test: tests/test_urval.js, och tests/test_bygg.py (att skriptet följer med).
 // Valet är ingenting (allt syns), en förening eller en ort. Utan skriptet står allt.
 (function () {
   var SIDA = /^[\w./-]+\.html$/;
