@@ -19,7 +19,7 @@ De prioriterade utvecklingsorterna är Kungsbacka, Anneberg och Åsa; Kullavik,
 Särö och Vallda är utvecklingsorter men inte prioriterade
 ([ks 2025-06-17](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2025/2025-06-17/handlingar.md#sida-117)).
 
-- **Särö** är utvecklingsort. Särö har också en äldre fördjupad översiktsplan från 1999, som handlingar fortfarande hänvisar till
+- **Särö** är utvecklingsort. Den fördjupade översiktsplanen för Särö slutade gälla när översiktsplanen vann laga kraft 2022
   ([bygg 2026-10-22](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg/2026/2026-10-22/handlingar.md#sida-290)).
   Ett utredningsområde för en utvidgad utvecklingsort Särö nämns i [planbeskedet för Bukärr 1:5](../bevakning/ks/2023-09-12-planbesked-bukarr-1-5.md).
 - **Kullavik** är utvecklingsort, men området ändrades mot ÖP06; delar söder om centrum räknas nu som kustbygd med restriktiv hållning till nya
@@ -29,7 +29,7 @@ Särö och Vallda är utvecklingsorter men inte prioriterade
   Lerkil räknas som kustbygd ([köpet av Vallda 26:2](../bevakning/ks/2026-10-20-markkop-vallda-26-2-lerkil.md)).
 - **Malevik är inte utvecklingsort.** I samrådet ville några att Malevik skulle få växa; kommunen svarade att Malevik saknar en centrumpunkt med
   kommunal och kommersiell service ([ks 2021-10-19](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2021/2021-10-19/handlingar.md#sida-78)).
-- **Släp** har inga egna ärenden i `bevakning/`; handlingarna skriver oftast Kullavik eller Särö om området (se nedan).
+- **Släp** har inga ärenden med `ort: Släp` i `bevakning/`; handlingarna skriver oftast Kullavik eller Särö om området (se nedan).
 
 ## Planer och bostäder
 
@@ -63,7 +63,7 @@ Särö och Vallda är utvecklingsorter men inte prioriterade
 
 - [Kyviksängs förskola](../bevakning/namnder/2025-04-28-kyviksangs-forskola.md) i Kullavik är pausad sedan januari 2026.
 - Skolinspektionen har granskat Särö skola 6–9; nämnden fick en redovisning av åtgärderna i augusti 2026
-  ([fg 2026-08-19](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/fg/2026/2026-08-19/protokoll.md)).
+  ([fg 2026-08-19](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/fg/2026/2026-08-19/protokoll.md#sida-5)).
 - Äldre: [Furulidskolan i Vallda](../bevakning/ks/2013-10-08-ny-furulidsskola-vallda.md).
 - Kullaviksskolan och Maleviksskolan har inga egna ärenden; i poolen syns de mest i nämndens statistik.
 

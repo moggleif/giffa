@@ -25,7 +25,7 @@ Sammanställd 2026-11-11 ur
 - **Inlag** är en stadsdel i södra staden
   ([ks-au 2025-06-03](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks-au/2025/2025-06-03/handlingar.md#sida-197))
   med idrottsområdet där Kungsbacka Arena byggs.
-- **Anneberg–Älvsåker** är en utvecklingsort; för kommundelen väntas en befolkningsökning på 8,7 procent 2025–2035, mot 4,2 procent för hela
+- **Anneberg–Älvsåker** är en utvecklingsort; för Älvsåker väntas en befolkningsökning på 8,7 procent 2025–2035, mot 4,2 procent för hela
   kommunen ([kultur 2026-10-21](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/kultur/2026/2026-10-21/handlingar.md#sida-76)).
 - **Lerberg**: en fastighet där räknas till Annebergs utvecklingsområde
   ([bygg-au 2023-03-02](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/bygg-au/2023/2023-03-02/protokoll.md#sida-23)).

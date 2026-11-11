@@ -27,7 +27,7 @@ Sammanställd 2026-11-11 ur
   ([ks 2025-11-25](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2025/2025-11-25/handlingar.md#sida-697))
   och är ett av åtta kustcentra längs kusten i översiktsplanen
   ([ks 2025-11-25](https://github.com/moggleif/kommunhandlingar/blob/main/data/kungsbacka/ks/2025/2025-11-25/handlingar.md#sida-715)).
-- Onsalahalvön får en ny väg: [Ny Onsalaväg och nuvarande väg 940](../bevakning/ksau/2024-09-03-ny-onsalavag-vag-940.md)
+- Trafikverket bygger en ny väg på Onsalahalvön: [Ny Onsalaväg och nuvarande väg 940](../bevakning/ksau/2024-09-03-ny-onsalavag-vag-940.md)
   följs i ett eget ärende.
 
 ## Planer och bostäder
