@@ -202,7 +202,8 @@ tidslinjen också.
 **Givet** att en förening eller en ort har valts med knapparna på en lista
 eller startsidan,
 **när** sidan visas med skriptet,
-**så** står valet i adressen (`?forening=Förening Åsa` eller `?ort=Åsa`),
+**så** står valet i adressen (`?forening=Förening Åsa`, `?ort=Åsa` eller
+båda),
 bakåtknappen återställer förra valet och en länk med valet visar samma
 urval. Sidans länkar till andra sidor på webbplatsen tar med valet, också
 från sidor utan knappar,
@@ -214,9 +215,12 @@ så att valet följer med tills läsaren väljer om. Utan skriptet står allt.
 under en enda förening,
 **när** en lista eller startsidan visas,
 **så** syns alla ärenden tills läsaren väljer. Knapparna visar *Alla* och
-föreningarna i filens ordning; en vald förening visar ärendena i dess
-orter och knappar för orterna, och en vald ort visar bara den ortens
-ärenden. Blir en lista tom för valet står det så. En ort under två
+föreningarna i filens ordning, och under dem alla orter i en rad i
+bokstavsordning, så att en ort går att välja direkt. En vald förening visar
+ärendena i dess orter och bara dess ortknappar; en vald ort visar bara den
+ortens ärenden, och väljs en förening efteråt står orten kvar om den hör
+dit. En tryckt knapp som trycks igen släpper sitt val, *Alla* släpper
+båda. Blir en lista tom för valet står det så. En ort under två
 föreningar, eller en förening utan orter, stoppar bygget.
 
 ## K23 – Fastigheten på kartan

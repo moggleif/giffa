@@ -22,8 +22,7 @@ summary { cursor: pointer; }
 .period { color: var(--dampad); }
 .urval { margin: 1.5rem 0 0.5rem; }
 .urval [role="group"] { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.urval [role="group"] + [role="group"] { margin-top: 0.5rem; padding-left: 1rem;
-                                         border-left: 3px solid var(--band); }
+.urval .orter { margin-top: 0.6rem; padding-left: 1rem; border-left: 3px solid var(--band); }
 .urval button { font: inherit; border: 1px solid var(--linje); background: #fff;
                 border-radius: 999px; padding: 0.2rem 0.9rem; cursor: pointer;
                 min-height: 2.5rem; }

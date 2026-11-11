@@ -14,3 +14,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0005](0005-veckans-kallelser.md) | Veckans kallelser i Actions |
 | [0006](0006-en-sida-per-arende.md) | En egen sida per ärende, med filnamnet som adress |
 | [0007](0007-fyra-foreningar-pa-en-sida.md) | Hela kommunen på en sida, uppdelad på fyra föreningar |
+| [0008](0008-ort-utan-forening.md) | Orten går att välja utan att först välja förening |
