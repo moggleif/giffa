@@ -13,6 +13,12 @@ och prövar en annan placering på fastigheten. Byggnadsnämnden antog ändringe
 i december 2025, men beslutet har överklagats och utgången står inte i
 protokollen. Kommunstyrelsens diarienummer är KS-2025-00143.
 
+## Förslaget i korthet
+
+- Fastigheten ska även i fortsättningen användas för allmänt ändamål, till exempel skola eller vård och omsorg. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-12-11/handlingar.html#sida-42)
+- Gränsen för byggnadshöjd ersätts av en gräns för nockhöjd med en minsta takvinkel. Det ger en högre byggnadshöjd än i dag men en lägre nockhöjd. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-12-11/handlingar.html#sida-43)
+- Ytorna som inte får bebyggas ändras, så att huset kan placeras på ett annat ställe på fastigheten. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-12-11/handlingar.html#sida-39)
+
 ## Händelser
 
 - 2026-09-17 · info · Byggnadsnämnden antog ett yttrande till Mark- och miljööverdomstolen i målet om överklagandet av antagandet. · [Byggnadsnämnden protokoll § 134](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/protokoll-byggnadsnamndens-protokoll-2026-09-17-125-144.html#sida-22) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-72), [Yttrandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-73)

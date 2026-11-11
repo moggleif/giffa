@@ -26,4 +26,4 @@ Genomförandetiden beräknas till cirka sju år från hösten 2027.
 
 ## Tycka till
 
-- 2026-11-11 · beslut · Nämnden för Förskola & Grundskola ska besluta om bland annat att Iseråsskolan avvecklas när Fjordskolans och Presseskolans om- och tillbyggnader är klara. · [Kallelse Förskola & Grundskola 2026-11-11](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-11-11/kallelse.html#sida-2)
+- 2026-11-11 · beslut · Nämnden för Förskola & Grundskola ska besluta om bland annat att Iseråsskolan avvecklas när Fjordskolans och Presseskolans om- och tillbyggnader är klara. · [Kallelse Förskola & Grundskola 2026-11-11](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-11-11/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-16), [Utredningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-18)

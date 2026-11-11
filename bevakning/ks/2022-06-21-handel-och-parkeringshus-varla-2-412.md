@@ -15,6 +15,13 @@ separat ändring av detaljplanerna TP 63 och TP 45c inom samma fastighet är ett
 eget ärende. Principavtalet har diarienummer KS-2024-00842.
 Källan skriver norra Kungsbacka stad; Hede Fashion Outlet räknas till Hede.
 
+## Förslaget i korthet
+
+- Cirka 5 000 kvadratmeter nya handelslokaler längs Kungsparksvägen, upp till 13 meter höga, på dagens parkeringsplats. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-359)
+- Ett parkeringshus för cirka 1 500 fordon på cirka 7 000 kvadratmeter, upp till 23,5 meter högt. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-359)
+- En ny in- och utfart från Arendalsvägen, och en av utfarterna mot Kungsparksvägen tas bort. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-359)
+- Busshållplatsen på Arendalsvägen flyttas till Kungsparksvägen, och gång- och cykelvägen längs Kungsparksvägen breddas till 3,5 meter. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-359)
+
 ## Händelser
 
 - 2026-10-22 · samrad · Byggnadsnämnden godkände samrådshandlingarna och gav uppdrag att genomföra samråd. · [Byggnadsnämnden protokoll § 156](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/protokoll-byggnadsnamndens-protokoll-2026-10-22-145-153-155-156-158-162.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-354), [Planbeskrivningen (PDF)](https://kungsbacka.se/download/18.19326c8b1a1302ccbfb7b783/1792140041347/Byggnadsn%C3%A4mndens%20handlingar%202026-10-22.pdf#page=358)

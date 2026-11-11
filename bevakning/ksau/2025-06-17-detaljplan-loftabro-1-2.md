@@ -11,6 +11,11 @@ Löftaskog/Stråvalla. Planen ligger i Varbergs kommun men nära kommungränsen 
 Frillesås, och Kungsbacka har yttrat sig över den; därför står den här. Diarienumret är
 Kungsbackas för remissvaret.
 
+## Förslaget i korthet
+
+- Varbergs kommuns förslag: 25 villor på cirka 3 hektar längs Löftabrovägen i Löftabro, strax söder om Frillesås. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-06-17/handlingar.html#sida-314)
+- Planen är bara delvis förenlig med Varbergs översiktsplan, och därför används utökat förfarande. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-06-17/handlingar.html#sida-314)
+
 ## Händelser
 
 - 2026-10-20 · yttrande · Kommunstyrelsen antog yttrandet över Varbergs kommuns granskning och sände det till Varbergs kommun. · [KS protokoll § 239](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-10-20/protokoll-kommunstyrelsen-protokoll-2026-10-20-213-249.html#sida-53) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-10-20/handlingar.html#sida-368), [Yttrandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-10-20/handlingar.html#sida-369)

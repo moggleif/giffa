@@ -31,9 +31,13 @@ status: pågår
 
 En eller två meningar om vad ärendet gäller, ur källan.
 
+## Förslaget i korthet
+
+- Omkring 160 bostäder i småhus. · [Planprogrammet s. 2](https://moggleif.github.io/kommunhandlingar/...#sida-20)
+
 ## Händelser
 
-- 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna. · [KS protokoll § 161](https://github.com/...#sida-21)
+- 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna. · [KS protokoll § 161](https://github.com/...#sida-21) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/...#sida-124), [Programkartan (PDF)](https://kungsbacka.se/download/...pdf#page=171)
 - 2026-06-02 · forslag · KSAU föreslog samråd. · [KSAU protokoll § 209](https://github.com/...#sida-14)
 
 ## Tycka till
@@ -107,8 +111,21 @@ har passerat (K12). När tillfället har ägt rum flyttar rundan raden till
 *Händelser*, med protokollet som källa; ett `vantas` som inte kom upp
 flyttas till nästa sammanträde.
 
-Andra avsnitt än *Händelser*, *Tycka till* och *I media och debatt*
-stoppar bygget.
+**Handlingar** är valfritt sist på en rad under *Händelser* eller *Tycka
+till*: underlaget som steget bygger på, efter `Handlingar: ` som länkar
+åtskilda med `, ` (K25). Länka till handlingens sida på kommunhandlingars
+webbplats, och till kommunens PDF med `#page=N` och `(PDF)` i namnet när
+sidan är en karta eller bild som inte blev text. Sidan visar dem direkt
+under steget.
+
+**Förslaget i korthet** är valfritt och står före *Händelser*: några
+punkter om vad förslaget innebär, ur planprogrammet, planbeskrivningen
+eller tjänsteskrivelsen, en per rad med källan som länk efter ` · `. Det
+skrivs när ärendet har ett förslag med innehåll; ingressen räcker när den
+redan säger vad det gäller.
+
+Andra avsnitt än *Förslaget i korthet*, *Händelser*, *Tycka till* och
+*I media och debatt* stoppar bygget.
 
 **I media och debatt** är valfritt: tidningsartiklar och diskussioner, en
 per rad med datum, rubriken som länk och var den stod. Kungsbacka-Posten och

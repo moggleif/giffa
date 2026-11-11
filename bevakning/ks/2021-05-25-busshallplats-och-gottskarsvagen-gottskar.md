@@ -18,6 +18,10 @@ var på granskning 29 maj – 25 juni 2026 med 9 skrivelser och antogs i
 september 2026. Något beslut om hållplatsen och vändslingan syns inte i
 protokollen.
 
+## Förslaget i korthet
+
+- Detaljplanen för del av Gottskärsvägen gör kommunen till huvudman för vägen i stället för en enskild väghållare, så att kommunen får rådighet över den. · [Planbeskrivningen för Gottskärsvägen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-219)
+
 ## Händelser
 
 - 2026-09-17 · beslut · Byggnadsnämnden antog detaljplan för del av Gottskärsvägen inom Skällared s:5 m.fl.; huvudmannaskapet för vägen blir kommunalt. · [Byggnadsnämnden protokoll § 139](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/protokoll-byggnadsnamndens-protokoll-2026-09-17-125-144.html#sida-30) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-217), [Planbeskrivningen (PDF)](https://kungsbacka.se/download/18.2da4b3f51a0864b91543b215/1789112180156/Byggnadsn%C3%A4mndens%20handlingar%202026-09-17.pdf#page=219), [Granskningsutlåtandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-245), [Samrådsredogörelsen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-09-17/handlingar.html#sida-250)

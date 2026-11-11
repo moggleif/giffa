@@ -14,6 +14,13 @@ lägenheter och ytterligare lägenheter söder om Särögården, som får vara
 kvar. Samrådet pågick 3 februari – 10 mars 2026 och det kom in cirka 23
 yttranden. En granskning förbereds; datum för den står inte i protokollen.
 
+## Förslaget i korthet
+
+- Ett boende med särskild service med cirka 12 lägenheter och fler bostäder på fastighetens västra del. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-01-22/handlingar.html#sida-152)
+- Bygdegården Särögården får stå kvar med verksamheterna som finns där i dag. De nya husen bör ha träfasad och sadeltak som Särögården. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-01-22/handlingar.html#sida-152)
+- Parkeringar som försvinner kan ersättas närmare Särögården och i skogskanten väster om infarten. Större träd ska sparas där det går. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-01-22/handlingar.html#sida-152)
+- Dagvattnet renas och fördröjs i parkytor. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-01-22/handlingar.html#sida-152)
+
 ## Händelser
 
 - 2026-09-24 · info · Byggnadsnämndens arbetsutskott informerades om arbetet och den kommande granskningen. · [Byggnadsnämndens AU protokoll § 148](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-09-24/protokoll-byggnadsnamndens-arbetsutskott-protokoll-2026-09-24-143-146-148-154.html#sida-7)

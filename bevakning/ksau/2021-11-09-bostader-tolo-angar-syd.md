@@ -14,6 +14,13 @@ skyfall, hushöjder längs Hällingsjövägen, trafik och buller. Kommunstyrelse
 godkänna exploateringsavtalet (KS-2022-00532) innan planen antas.
 Källan anger platsen som Kungsbacka stad; enligt ortprincipen hör den till Tölö.
 
+## Förslaget i korthet
+
+- Cirka 410 bostäder i flerbostadshus och småhus, med plats för bostäder med särskild service och eventuellt trygghetsboende, ett litet torg och minst 100 kvadratmeter centrumlokaler. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-11-20/handlingar.html#sida-29)
+- En grönkil med park genom området för rekreation, dagvatten och biologisk mångfald. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-11-20/handlingar.html#sida-29)
+- En ny cirkulationsplats på Hällingsjövägen, en ny gång- och cykelväg på vägens södra sida och en ny infart till förskolorna norr om vägen. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-11-20/handlingar.html#sida-29)
+- Exploatören bygger bostäder, centrum och parkering; kommunen bygger vägar, gator och park. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-11-20/handlingar.html#sida-29)
+
 ## Händelser
 
 - 2026-08-11 · info · Kommunstyrelsens arbetsutskott stämde av exploateringsavtalet för Tölö ängar syd. · [KSAU protokoll § 242](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-08-11/protokoll.html#sida-16)

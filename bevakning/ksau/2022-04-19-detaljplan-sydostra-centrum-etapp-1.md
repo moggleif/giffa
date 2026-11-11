@@ -14,6 +14,12 @@ december 2025, men länsstyrelsen överprövade och upphävde den 2026. I oktobe
 2026 beslutade byggnadsnämnden om en ny granskning; när den hålls står inte i
 protokollet. Kommunstyrelsens diarienummer är KS-2020-00386.
 
+## Förslaget i korthet
+
+- Cirka 870 bostäder, lokaler, kontor och parkeringshus i 4–7 våningar, med ett hus i 14 våningar, där det i dag är verksamhetsområde. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-497)
+- Den befintliga parken i norr blir mindre när Lantmannagatan dras om, och en ny park kommer till längs ett nytt diagonalt stråk. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-497)
+- Varbergsvägen breddas och får ett nytt hållplatsläge. Gående, cyklister och kollektivtrafik ska prioriteras. · [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-497)
+
 ## Händelser
 
 - 2026-10-22 · granskning · Byggnadsnämnden godkände granskningshandling 2 och uppdrog åt samhällsbyggnadskontoret att genomföra en ny granskning; protokollet anger att länsstyrelsen upphävde planen 2026-09-09. · [Byggnadsnämnden protokoll § 157](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/protokoll.html#sida-3) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-402), [Planbeskrivningen (PDF)](https://kungsbacka.se/download/18.19326c8b1a1302ccbfb7b783/1792140041347/Byggnadsn%C3%A4mndens%20handlingar%202026-10-22.pdf#page=493), [Granskningsutlåtandet](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-573), [Plankartan](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-10-22/handlingar.html#sida-594)
