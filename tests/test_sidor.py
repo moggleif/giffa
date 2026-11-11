@@ -1,4 +1,4 @@
-"""K4–K9, K12, K14 och K16–K20: tabellen, korten, startsidan, historiken, sidan om
+"""K4–K9, K12, K14, K16–K20 och K25: tabellen, korten, startsidan, historiken, sidan om
 bevakningen, tillfällena att tycka till och läsbarheten."""
 
 import re
@@ -6,7 +6,7 @@ import unittest
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from tests.test_arende import ARENDE
+from tests.test_arende import ARENDE, FORSLAGET, HANDLINGAR
 from webbplats.arende import tolka
 from webbplats.arendesida import arendesida
 from webbplats.bevakar import bevakar
@@ -216,6 +216,23 @@ class Arendesidan(unittest.TestCase):
         self.assertIn("Ett förslag. <a", html)
         self.assertIn('<a href="https://example.org/m">Rubrik</a> – Norra Halland', html)
         self.assertIn('href="https://github.com/agare/giffa/blob/main/bevakning/ks/s.md"', html)
+
+
+class HandlingarnaPaSidan(unittest.TestCase):
+    def test_handlingarna_intill_steget_och_forslaget_overst(self):
+        text = ARENDE.replace("(https://example.org/a)", "(https://example.org/a)" + HANDLINGAR)
+        text = text.replace("## Händelser", FORSLAGET + "## Händelser")
+        html = arendesida(SAJT, tolka("bevakning/ks/h.md", text))
+        steget = html.split("Ett förslag. ")[1].split("</li>")[0]
+        self.assertIn('<strong>Handlingarna:</strong> <a href="https://example.org/b#sida-5">', steget)
+        self.assertIn('<a href="https://example.org/k.pdf#page=9">Karta</a>', steget)
+        self.assertLess(html.index("Förslaget i korthet"), html.index("<h2>Händelser"))
+        self.assertIn('Omkring 40 bostäder. <a href="https://example.org/p">', html)
+
+    def test_utan_handlingar_ingen_rad(self):
+        html = arendesida(SAJT, arende("pågår"))
+        self.assertNotIn("Handlingarna:", html)
+        self.assertNotIn("Förslaget i korthet", html)
 
 
 def stillat(senast: str) -> str:

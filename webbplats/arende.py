@@ -1,4 +1,4 @@
-"""Krav: K1, K4, K10 och K12 i KRAV.md. Test: tests/test_arende.py.
+"""Krav: K1, K4, K10, K12 och K25 i KRAV.md. Test: tests/test_arende.py.
 
 Läser ett ärende enligt formatet i bevakning/README.md och stoppar med
 felet när något inte följer det.
@@ -24,14 +24,23 @@ STEG = {
 TILLFALLEN = ("samrad", "granskning", "yttrande", "beslut", "vantas")
 KRAVS = ("rubrik", "ort", "organ", "status")
 VALFRIA = ("diarienummer",)
-AVSNITT = ("Händelser", "Tycka till", "I media och debatt")
+AVSNITT = ("Förslaget i korthet", "Händelser", "Tycka till", "I media och debatt")
 LANK = re.compile(r"\[([^\]]+)\]\((https://\S+)\)")
+HANDLINGAR = re.compile(rf"Handlingar: {LANK.pattern}(?:, {LANK.pattern})*")
 
 
 @dataclass(frozen=True)
 class Handelse:
     datum: date
     steg: str
+    text: str
+    kalla: str
+    lank: str
+    handlingar: tuple[tuple[str, str], ...] = ()
+
+
+@dataclass(frozen=True)
+class Punkt:
     text: str
     kalla: str
     lank: str
@@ -53,6 +62,7 @@ class Arende:
     handelser: list[Handelse]
     tillfallen: list[Handelse]
     media: list[Mediepost]
+    forslaget: list[Punkt]
 
     @property
     def id(self) -> str:
@@ -81,6 +91,7 @@ def tolka(fil: str, text: str) -> Arende:
         [handelse(rad) for rad in avsnitt.get("Händelser", [])],
         [handelse(rad, TILLFALLEN) for rad in avsnitt.get("Tycka till", [])],
         [mediepost(rad) for rad in avsnitt.get("I media och debatt", [])],
+        [punkt(rad) for rad in avsnitt.get("Förslaget i korthet", [])],
     )
 
 
@@ -106,10 +117,22 @@ def dela(kropp: str) -> tuple[str, dict[str, list[str]]]:
 
 
 def handelse(rad: str, stegen: Iterable[str] = STEG) -> Handelse:
-    datum, steg, text, kalla = poster(rad, 4)
+    datum, steg, text, kalla, *resten = poster(rad, 4, 5)
     if steg not in stegen:
         raise ValueError(f"okänt steg {steg!r}: {rad}")
-    return Handelse(date.fromisoformat(datum), steg, text, *lank(kalla, rad))
+    datum = date.fromisoformat(datum)
+    return Handelse(datum, steg, text, *lank(kalla, rad), handlingar(resten, rad))
+
+
+def handlingar(resten: list[str], rad: str) -> tuple[tuple[str, str], ...]:
+    if resten and not HANDLINGAR.fullmatch(resten[0]):
+        raise ValueError(f"handlingarna är inte https-länkar efter 'Handlingar: ': {rad}")
+    return tuple(LANK.findall(resten[0])) if resten else ()
+
+
+def punkt(rad: str) -> Punkt:
+    text, kalla = poster(rad, 2)
+    return Punkt(text, *lank(kalla, rad))
 
 
 def mediepost(rad: str) -> Mediepost:
@@ -117,9 +140,9 @@ def mediepost(rad: str) -> Mediepost:
     return Mediepost(date.fromisoformat(datum), *lank(rubrik, rad), var)
 
 
-def poster(rad: str, antal: int) -> list[str]:
+def poster(rad: str, minst: int, hogst: int = 0) -> list[str]:
     delar = rad.removeprefix("- ").split(" · ")
-    if not rad.startswith("- ") or len(delar) != antal:
+    if not rad.startswith("- ") or not minst <= len(delar) <= max(minst, hogst):
         raise ValueError(f"raden följer inte formatet: {rad}")
     return delar
 

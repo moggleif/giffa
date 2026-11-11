@@ -1,4 +1,4 @@
-"""Krav: K12, K17, K23 och K24 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K12, K17, K23, K24 och K25 i KRAV.md. Test: tests/test_sidor.py.
 
 När man kan tycka till: ärendenas kommande samråd, granskningar, yttranden
 och beslut i tur och ordning överst på startsidan, och som en markering på
@@ -10,6 +10,7 @@ from html import escape
 
 from webbplats.arende import Arende, Handelse
 from webbplats.datum import kvar, med_veckodag
+from webbplats.handlingar import handlingar
 from webbplats.mall import Sajt, urvalslista
 
 TILLFALLE = {
@@ -34,7 +35,7 @@ def tillfalle(t: Handelse, sajt: Sajt) -> str:
     return (
         f"<strong>{TILLFALLE[t.steg]} {med_veckodag(t.datum)}, {kvar(t.datum, idag)}</strong> "
         f"{sajt.karta.lanka(t.text)} "
-        f'<a href="{escape(t.lank)}">{escape(t.kalla)}</a>'
+        f'<a href="{escape(t.lank)}">{escape(t.kalla)}</a>{handlingar(t)}'
         f'<span class="sa-gor"><strong>Så gör du:</strong> {SA_GOR[t.steg]}</span>'
     )
 

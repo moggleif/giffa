@@ -1,4 +1,4 @@
-"""K1, K4, K10 och K22: ett ärende och OMRADE.md läses enligt formatet eller stoppar bygget."""
+"""K1, K4, K10, K22 och K25: ett ärende och OMRADE.md läses enligt formatet eller stoppar bygget."""
 
 import unittest
 from datetime import date
@@ -64,6 +64,34 @@ class Tolka(unittest.TestCase):
         for text in fel:
             with self.subTest(text=text), self.assertRaises(ValueError):
                 tolka("x.md", text)
+
+
+HANDLINGAR = (
+    " · Handlingar: [Tjänsteskrivelse, förslag](https://example.org/b#sida-5), "
+    "[Karta](https://example.org/k.pdf#page=9)"
+)
+FORSLAGET = "## Förslaget i korthet\n\n- Omkring 40 bostäder. · [Planprogrammet s. 2](https://example.org/p)\n\n"
+
+
+class Handlingarna(unittest.TestCase):
+    def test_handlingarna_efter_kallan_och_forslaget_i_korthet(self):
+        text = andrat("(https://example.org/b#sida-2)", "(https://example.org/b#sida-2)" + HANDLINGAR)
+        arende = tolka("x.md", text.replace("## Händelser", FORSLAGET + "## Händelser"))
+        self.assertEqual(
+            arende.handelser[0].handlingar,
+            (
+                ("Tjänsteskrivelse, förslag", "https://example.org/b#sida-5"),
+                ("Karta", "https://example.org/k.pdf#page=9"),
+            ),
+        )
+        self.assertEqual(arende.handelser[1].handlingar, ())
+        punkt = arende.forslaget[0]
+        self.assertEqual((punkt.text, punkt.kalla), ("Omkring 40 bostäder.", "Planprogrammet s. 2"))
+
+    def test_handlingar_som_inte_ar_lankar_stoppar(self):
+        for svans in (" · [K](https://example.org/k)", " · Handlingar: Karta", " · Handlingar: [K](http://x.org)"):
+            with self.subTest(svans=svans), self.assertRaises(ValueError):
+                tolka("x.md", andrat("(https://example.org/a)", "(https://example.org/a)" + svans))
 
 
 class Kontrollera(unittest.TestCase):
