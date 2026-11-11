@@ -36,8 +36,8 @@ def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
         "Utan val syns allt; välj en ort, eller en förening för att bara se dess orter. "
         "Varje händelse länkar till sin källa.</p>"
     )
-    paverka = tycka_till_nu(arenden, sajt.byggd.date())
-    innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda) + oversikt(arenden)
+    paverka = tycka_till_nu(arenden, sajt)
+    innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda, sajt) + oversikt(arenden)
     return sida(sajt, "index.html", "Giffå", innehall)
 
 
@@ -54,10 +54,10 @@ def antal(arenden: list[Arende], statusar: tuple[str, ...]) -> str:
     return "1 ärende" if n == 1 else f"{n} ärenden"
 
 
-def nytt(arenden: list[Arende], runda: Runda) -> str:
+def nytt(arenden: list[Arende], runda: Runda, sajt: Sajt) -> str:
     fran, till = runda.fran, runda.till
     korten = "".join(
-        nytt_kort(a, nya)
+        nytt_kort(a, nya, sajt.karta)
         for a in arenden
         if (nya := [h for h in a.handelser if fran <= h.datum <= till])
     )

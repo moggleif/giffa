@@ -1,4 +1,4 @@
-"""Krav: K4, K5, K6, K9, K12, K18 och K23 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9, K12, K18, K23 och K24 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett kort per ärende under tabellen, korten för det som är nytt sedan
 förra rundan överst på startsidan, och delarna som ärendets egen sida
@@ -9,7 +9,7 @@ from html import escape
 
 from webbplats.arende import STEG, Arende, Handelse
 from webbplats.datum import tid
-from webbplats.fastighet import med_kartlankar
+from webbplats.kartlankar import Kartlankar
 from webbplats.mall import Sajt
 from webbplats.paverka import markering
 
@@ -20,9 +20,9 @@ def kort(arende: Arende, sajt: Sajt) -> str:
         f'<article id="{arende.id}" data-ort="{escape("|".join(arende.orter))}">'
         f"{markor(arende)}<h3>{escape(falt['rubrik'])}</h3>"
         f'<p class="organ">{escape(organ(arende))}</p>'
-        + (f"<p>{med_kartlankar(arende.ingress)}</p>" if arende.ingress else "")
+        + (f"<p>{sajt.karta.lanka(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
-        + markering(arende, sajt.byggd.date())
+        + markering(arende, sajt)
         + f'<p><a href="{arende.sida}">Läs mer: alla {len(arende.handelser)} '
         "händelser med källor</a></p></article>"
     )
@@ -40,10 +40,10 @@ def organ(arende: Arende) -> str:
     return arende.falt["organ"] + (f" · {diarienummer}" if diarienummer else "")
 
 
-def post(handelse: Handelse) -> str:
+def post(handelse: Handelse, karta: Kartlankar) -> str:
     return (
         f"<li>{tid(handelse.datum)} <strong>{STEG[handelse.steg]}</strong> "
-        f"{med_kartlankar(handelse.text)} "
+        f"{karta.lanka(handelse.text)} "
         f'<a href="{escape(handelse.lank)}">{escape(handelse.kalla)}</a></li>'
     )
 
@@ -59,12 +59,12 @@ def media(arende: Arende) -> str:
     return f"<h2>I media och debatt</h2><ul>{poster}</ul>"
 
 
-def nytt_kort(arende: Arende, nya: list[Handelse]) -> str:
+def nytt_kort(arende: Arende, nya: list[Handelse], karta: Kartlankar) -> str:
     return (
         f'<article data-ort="{escape("|".join(arende.orter))}">{markor(arende)}'
         f"<h3>{escape(arende.falt['rubrik'])}</h3>"
         f"<details><summary>{len(nya)} ny{'a' * (len(nya) > 1)} "
         f"händelse{'r' * (len(nya) > 1)}</summary>"
-        f"<ol>{''.join(post(h) for h in nya)}</ol></details>"
+        f"<ol>{''.join(post(h, karta) for h in nya)}</ol></details>"
         f'<p><a href="{arende.sida}">Hela ärendet</a></p></article>'
     )

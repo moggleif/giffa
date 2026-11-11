@@ -1,8 +1,11 @@
-"""K23: fastighetsbeteckningar blir länkar till kartan."""
+"""K23 och K24: fastighetsbeteckningar, platser, gator och detaljplaner blir länkar till kartan."""
 
 import unittest
 
-from webbplats.fastighet import med_kartlankar
+from webbplats.kartlankar import Kartlankar, ur_platser
+
+KARTA = Kartlankar(("Åsaskolan", "Åsa idrottsplats"))
+med_kartlankar = KARTA.lanka
 
 OLMANAS = (
     '<a href="https://karta.kungsbacka.se/publik/#m=publik&amp;q='
@@ -51,3 +54,52 @@ class Kartlankar(unittest.TestCase):
 
     def test_resten_av_texten_escapas(self):
         self.assertEqual(med_kartlankar("A & <b>"), "A &amp; &lt;b&gt;")
+
+
+def lank(sok: str, text: str) -> str:
+    return f'<a href="https://karta.kungsbacka.se/publik/#m=publik&amp;q={sok}">{text}</a>'
+
+
+class Platser(unittest.TestCase):
+    def test_plats_ur_platser(self):
+        self.assertEqual(
+            med_kartlankar("Ny idrottshall vid Åsaskolan."),
+            f"Ny idrottshall vid {lank('%C3%85saskolan', 'Åsaskolan')}.",
+        )
+
+    def test_langsta_namnet_vinner(self):
+        self.assertIn(">Åsa idrottsplats</a>", med_kartlankar("på Åsa idrottsplats"))
+
+    def test_inte_inuti_ett_annat_ord(self):
+        self.assertNotIn("<a", med_kartlankar("Åsaskolans elever"))
+
+    def test_foreningar_och_planer_lankas_inte(self):
+        rader = [{"namn": "Åsa IF", "typ": "förening"}, {"namn": "Åsaskolan", "typ": "grundskola"}]
+        self.assertEqual(ur_platser(rader).platser, ("Åsaskolan",))
+
+
+class Gator(unittest.TestCase):
+    def test_gatunamn_utan_husnummer(self):
+        self.assertEqual(
+            med_kartlankar("vid Pölagårdsvägen 11"),
+            f"vid {lank('P%C3%B6lag%C3%A5rdsv%C3%A4gen', 'Pölagårdsvägen')} 11",
+        )
+
+    def test_leden_och_gatan(self):
+        text = med_kartlankar("Säröleden och Kungsgatan")
+        self.assertEqual(text.count("<a "), 2)
+
+
+class Detaljplaner(unittest.TestCase):
+    def test_plannummer_efter_detaljplan(self):
+        self.assertEqual(
+            med_kartlankar("i detaljplan S88 från 1981"),
+            f"i detaljplan {lank('S88', 'S88')} från 1981",
+        )
+
+    def test_flera_plannummer(self):
+        text = med_kartlankar("ersätter planerna T13 och T15")
+        self.assertEqual(text.count("<a "), 2)
+
+    def test_plannummer_utan_ordet_plan_lankas_inte(self):
+        self.assertNotIn("<a", med_kartlankar("väg E6 och K35"))

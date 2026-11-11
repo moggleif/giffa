@@ -16,6 +16,7 @@ from webbplats import underlag
 from webbplats.arende import Arende, tolka
 from webbplats.arendesida import arendesida
 from webbplats.bevakar import bevakar
+from webbplats.kartlankar import ur_platser
 from webbplats.kontroll import kontrollera, kontrollera_omrade
 from webbplats.mall import Sajt
 from webbplats.sidor import LISTOR, lista, startsida
@@ -53,10 +54,10 @@ def las(rot: Path, namn: str) -> str:
 
 def bygg(rot: Path, ut: Path, repo: str) -> None:
     byggd = datetime.now(ZoneInfo("Europe/Stockholm"))
-    sajt = Sajt(repo, byggd, las_foreningar(rot))
+    platser = underlag.platser(las(rot, "platser.csv"))
+    sajt = Sajt(repo, byggd, las_foreningar(rot), ur_platser(platser))
     arenden = las_arenden(rot, sajt.orter)
     runda = underlag.senaste_runda(las(rot, "bevakning/rundor.csv"))
-    platser = underlag.platser(las(rot, "platser.csv"))
     kallor = underlag.kallor(las(rot, "KALLOR.md"))
     shutil.copytree(rot / "docs", ut, dirs_exist_ok=True)
     sidor = {
