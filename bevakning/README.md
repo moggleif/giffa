@@ -57,8 +57,8 @@ En eller två meningar om vad ärendet gäller, ur källan.
 
 **Fastighetsbeteckningar** skrivs som i källan, trakt och nummer:
 *Ölmanäs 1:17*, *Frillesås-Rya 3:77*. I ingressen, händelserna och
-tillfällena att tycka till gör sidan dem till länkar till kommunens karta
-(K23).
+tillfällena att tycka till gör sidan dem till länkar till kommunens karta,
+med de undantag som står i K23.
 
 **Status** styr var ärendet står på sidan:
 

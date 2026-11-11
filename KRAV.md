@@ -226,4 +226,7 @@ föreningar, eller en förening utan orter, stoppar bygget.
 att tycka till,
 **när** sidan byggs,
 **så** är beteckningen en länk till Kungsbackas karta som visar just den
-fastigheten. Kartan hämtas inte; bara länken byggs.
+fastigheten. Kartan hämtas inte; bara länken byggs. Står ett ord med
+versal närmast framför, som i *Ölmevalla Berg 1:2*, kan trakten ha två
+ord, och då länkas beteckningen inte hellre än fel. I en uppräkning som
+*Åsa 5:153 och 5:89* länkas bara den första, som har trakten utskriven.

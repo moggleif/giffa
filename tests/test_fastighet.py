@@ -1,29 +1,32 @@
 """K23: fastighetsbeteckningar blir länkar till kartan."""
 
 import unittest
-from urllib.parse import quote_plus
 
-from webbplats.fastighet import KARTA, med_kartlankar
+from webbplats.fastighet import med_kartlankar
 
-
-def lank(beteckning: str) -> str:
-    adress = KARTA.format(quote_plus(beteckning))
-    return f'<a class="fastighet" href="{adress}">{beteckning}</a>'
+OLMANAS = (
+    '<a href="https://karta.kungsbacka.se/publik/#m=publik&amp;q='
+    '%C3%96lman%C3%A4s+1%3A17">Ölmanäs 1:17</a>'
+)
 
 
 class Kartlankar(unittest.TestCase):
-    def test_en_beteckning_blir_en_lank(self):
+    def test_adressen_ur_kartan(self):
         self.assertEqual(
             med_kartlankar("Planbesked för Ölmanäs 1:17 i Åsa."),
-            f"Planbesked för {lank('Ölmanäs 1:17')} i Åsa.",
+            f"Planbesked för {OLMANAS} i Åsa.",
         )
 
     def test_trakt_med_bindestreck(self):
-        self.assertIn(lank("Frillesås-Rya 3:77"), med_kartlankar("inom Frillesås-Rya 3:77"))
+        self.assertIn(">Frillesås-Rya 3:77</a>", med_kartlankar("inom Frillesås-Rya 3:77"))
 
     def test_flera_beteckningar(self):
         text = med_kartlankar("Varla 2:198 och Tölö 5:39")
-        self.assertEqual(text, f"{lank('Varla 2:198')} och {lank('Tölö 5:39')}")
+        self.assertEqual(text.count("<a "), 2)
+
+    def test_trakt_som_kan_ha_tva_ord_lankas_inte(self):
+        for text in ("Ölmevalla Berg 1:2", "Nedre Ögärdet 2:13", "Fastigheten Rya 4:17"):
+            self.assertEqual(med_kartlankar(text), text)
 
     def test_inte_klockslag_eller_ord_med_liten_bokstav(self):
         for text in ("kl. 10:30", "och 1:105", "Sida 3", "Åsa 5:246:1"):
