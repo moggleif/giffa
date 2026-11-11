@@ -12,14 +12,15 @@ const VALJARE = /^(\w+)?(?:\.([\w-]+))?(?:\[([\w-]+)\])?$/;
 
 // En nod med just det urval.js använder: attribut, hidden, barn och klick.
 class Nod {
-  constructor(tagg, attribut = {}, barn = [], hidden = false) {
-    Object.assign(this, { tagg, attribut, barn, hidden, lyssnare: [] });
+  constructor(tagg, attribut = {}, barn = []) {
+    Object.assign(this, { tagg, attribut, barn, hidden: false, lyssnare: {} });
   }
   getAttribute(namn) { return namn in this.attribut ? this.attribut[namn] : null; }
   hasAttribute(namn) { return namn in this.attribut; }
   setAttribute(namn, varde) { this.attribut[namn] = String(varde); }
-  addEventListener(_typ, fn) { this.lyssnare.push(fn); }
-  click() { this.lyssnare.forEach((fn) => fn()); }
+  addEventListener(typ, fn) { (this.lyssnare[typ] = this.lyssnare[typ] || []).push(fn); }
+  skicka(typ) { (this.lyssnare[typ] || []).forEach((fn) => fn()); }
+  click() { this.skicka("click"); }
   passar(valjare) {
     const [, tagg, klass, attribut] = VALJARE.exec(valjare);
     const klasser = (this.getAttribute("class") || "").split(" ");
@@ -32,23 +33,27 @@ class Nod {
   querySelector(valjare) { return this.querySelectorAll(valjare)[0] || null; }
 }
 
+const dold = (nod) => Object.assign(nod, { hidden: true });
 const knapp = (attribut) => new Nod("button", attribut);
-const grupp = (forening, orter) => new Nod("div", { "data-urval-grupp": forening },
-  orter.map((ort) => knapp({ "data-urval-ort": ort })), true);
-const sak = (orter) => new Nod("li", { "data-ort": orter });
-const lista = (saker) => new Nod("div", { class: "urvalslista" }, [
-  new Nod("table", { class: "tabell" }), ...saker, new Nod("p", { class: "inget-val" }, [], true),
+const grupp = (forening, orter) => dold(new Nod("div", { "data-urval-grupp": forening },
+  orter.map((ort) => knapp({ "data-urval-ort": ort }))));
+// Som på sidan: tidslinjens rader i .tabell och samma ärenden som kort.
+const lista = (orter) => new Nod("div", { class: "urvalslista" }, [
+  new Nod("div", { class: "tabell" }, [new Nod("table", {}, orter.map((o) => new Nod("tr", { "data-ort": o })))]),
+  new Nod("div", { class: "kort" }, orter.map((o) => new Nod("article", { "data-ort": o }))),
+  dold(new Nod("p", { class: "inget-val" })),
 ]);
 
 // Förening A har orterna x och y, förening B orten z. Den andra listan har bara y.
 function sida(sok) {
   const dokument = new Nod("html", {}, [
-    new Nod("div", { class: "urval" }, [
-      knapp({ "data-alla": "" }), knapp({ "data-urval-forening": "A" }),
-      knapp({ "data-urval-forening": "B" }), grupp("A", ["x", "y"]), grupp("B", ["z"]),
-    ], true),
-    lista([sak("x"), sak("z"), sak("y|z")]),
-    lista([sak("y")]),
+    dold(new Nod("div", { class: "urval" }, [
+      new Nod("div", { role: "group" }, [knapp({ "data-alla": "" }),
+        knapp({ "data-urval-forening": "A" }), knapp({ "data-urval-forening": "B" })]),
+      grupp("A", ["x", "y"]), grupp("B", ["z"]),
+    ])),
+    lista(["x", "z", "y|z"]),
+    lista(["y"]),
     new Nod("a", { href: "pagar.html" }),
   ]);
   const fonster = new Nod("window");
@@ -58,7 +63,7 @@ function sida(sok) {
   return { dokument, fonster, plats };
 }
 
-const synligaOrter = (d) => d.querySelectorAll("li").filter((s) => !s.hidden).map((s) => s.getAttribute("data-ort"));
+const synligaOrter = (d) => d.querySelectorAll("article").filter((s) => !s.hidden).map((s) => s.getAttribute("data-ort"));
 const tryckta = (d) => d.querySelectorAll("button").filter((k) => k.getAttribute("aria-pressed") === "true")
   .map((k) => k.getAttribute("data-urval-forening") || k.getAttribute("data-urval-ort") || "Alla");
 const oppenGrupp = (d) => d.querySelectorAll("[data-urval-grupp]").filter((g) => !g.hidden)
@@ -124,7 +129,7 @@ test("ett klick ändrar adressen och länkarna, Alla tar bort valet", () => {
 test("bakåt i webbläsaren läser valet ur adressen igen", () => {
   const { dokument, fonster, plats } = sida("?ort=x");
   plats.search = "?forening=B";
-  fonster.click();
+  fonster.skicka("popstate");
   assert.deepStrictEqual(tryckta(dokument), ["B"]);
   assert.deepStrictEqual(synligaOrter(dokument), ["z", "y|z"]);
 });
