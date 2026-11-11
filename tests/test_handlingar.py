@@ -4,9 +4,9 @@ import unittest
 
 from tests.test_arende import ARENDE, FORSLAGET, HANDLINGAR
 from tests.test_sidor import RUNDA, SAJT, arende
-from webbplats.sidor import startsida
 from webbplats.arende import tolka
 from webbplats.arendesida import arendesida
+from webbplats.sidor import startsida
 
 
 class HandlingarnaPaSidan(unittest.TestCase):
