@@ -228,5 +228,6 @@ att tycka till,
 **så** är beteckningen en länk till Kungsbackas karta som visar just den
 fastigheten. Kartan hämtas inte; bara länken byggs. Står ett ord med
 versal närmast framför, som i *Ölmevalla Berg 1:2*, kan trakten ha två
-ord, och då länkas beteckningen inte hellre än fel. I en uppräkning som
-*Åsa 5:153 och 5:89* länkas bara den första, som har trakten utskriven.
+ord, och då länkas beteckningen inte hellre än fel. I en uppräkning eller
+ett intervall som *Åsa 5:153 och 5:89* eller *Bäcken 1:31–1:34* får varje
+nummer en egen länk med trakten från den första beteckningen.

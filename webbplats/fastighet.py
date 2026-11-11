@@ -13,16 +13,23 @@ from urllib.parse import quote_plus
 
 KARTA = "https://karta.kungsbacka.se/publik/#m=publik&q={}"
 ORD = r"[A-ZÅÄÖ][a-zåäöé]+(?:-[A-ZÅÄÖ][a-zåäöé]+)*"
-FASTIGHET = re.compile(rf"(?<![\w-])({ORD} )?({ORD} \d+:\d+)(?![\d:])")
+NUMMER = r"\d+:\d+(?![\d:])"
+FOLJD = rf"(?:(?:, | och | samt | eller |–| – |-){NUMMER})*"
+FASTIGHET = re.compile(rf"(?<![\w-])({ORD} )?({ORD}) ({NUMMER})({FOLJD})")
 
 
 def med_kartlankar(text: str) -> str:
-    return FASTIGHET.sub(kartlank, escape(text))
+    return FASTIGHET.sub(kartlankar, escape(text))
 
 
-def kartlank(traff: re.Match[str]) -> str:
-    framfor, beteckning = traff.groups()
+def kartlankar(traff: re.Match[str]) -> str:
+    framfor, trakt, forsta, foljd = traff.groups()
     if framfor:
         return traff.group()
-    adress = escape(KARTA.format(quote_plus(beteckning)))
-    return f'<a href="{adress}">{beteckning}</a>'
+    resten = re.sub(NUMMER, lambda n: lank(trakt, n.group(), n.group()), foljd)
+    return lank(trakt, forsta, f"{trakt} {forsta}") + resten
+
+
+def lank(trakt: str, nummer: str, text: str) -> str:
+    adress = escape(KARTA.format(quote_plus(f"{trakt} {nummer}")))
+    return f'<a href="{adress}">{text}</a>'

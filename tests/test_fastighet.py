@@ -24,6 +24,12 @@ class Kartlankar(unittest.TestCase):
         text = med_kartlankar("Varla 2:198 och Tölö 5:39")
         self.assertEqual(text.count("<a "), 2)
 
+    def test_upprakning_och_intervall_far_trakten_fran_den_forsta(self):
+        text = med_kartlankar("Åsa 5:153 och 5:89, Bäcken 1:31–1:34")
+        self.assertEqual(text.count("<a "), 4)
+        self.assertIn("q=%C3%85sa+5%3A89\">5:89</a>", text)
+        self.assertIn("q=B%C3%A4cken+1%3A34\">1:34</a>", text)
+
     def test_trakt_som_kan_ha_tva_ord_lankas_inte(self):
         for text in ("Ölmevalla Berg 1:2", "Nedre Ögärdet 2:13", "Fastigheten Rya 4:17"):
             self.assertEqual(med_kartlankar(text), text)
