@@ -13,5 +13,5 @@ markanvändningen i ett strategiskt läge med bussförbindelser.
 
 ## Händelser
 
-- 2026-11-03 · beslut · Kommunstyrelsens arbetsutskott godkände köpekontrakt för Spårhaga 1:69 för 5 500 000 kronor. · [KSAU protokoll § 333](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/protokoll.html#sida-15)
+- 2026-11-03 · beslut · Kommunstyrelsens arbetsutskott godkände köpekontrakt för Spårhaga 1:69 för 5 500 000 kronor. · [KSAU protokoll § 333](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/protokoll.html#sida-15) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/handlingar.html#sida-162)
 - 2026-11-03 · info · Enligt samhällsbyggnadskontorets tjänsteskrivelse ligger Spårhaga 1:69 inom utvecklingsorten Kullavik i översiktsplanen och gränsar till kommunens fastighet Spårhaga 1:5. · [KSAU handlingar, tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2026/2026-11-03/handlingar.html#sida-163)

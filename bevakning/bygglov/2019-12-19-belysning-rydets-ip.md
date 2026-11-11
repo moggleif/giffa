@@ -17,7 +17,7 @@ inte i protokollen.
 
 ## Händelser
 
-- 2024-09-25 · info · Nämnden för Kultur & Fritid redovisade ytterligare försening av belysningen på Rydets IP i delårsrapporten. · [Kultur & Fritid protokoll § 89](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2024/2024-09-25/protokoll.html#sida-6)
+- 2024-09-25 · info · Nämnden för Kultur & Fritid redovisade ytterligare försening av belysningen på Rydets IP i delårsrapporten. · [Kultur & Fritid protokoll § 89](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2024/2024-09-25/protokoll.html#sida-6) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2024/2024-09-25/handlingar.html#sida-10)
 - 2024-08-29 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för lysanordningar/belysningsmaster. · [Byggnadsnämndens AU protokoll § 243](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2024/2024-08-29/protokoll.html#sida-29)
 - 2024-02-01 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för belysningsmaster. · [Byggnadsnämndens AU protokoll § 21](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2024/2024-02-01/protokoll.html#sida-47)
 - 2023-01-25 · beslut · Nämnden för Kultur & Fritid återkallade sitt överklagande av Länsstyrelsens beslut och gav förvaltningschefen i uppdrag att söka nytt bygglov. · [Kultur & Fritid protokoll § 2](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2023/2023-01-25/protokoll.html#sida-5)

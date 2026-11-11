@@ -12,4 +12,4 @@ sade ja i april 2025; planuppdrag syns inte i protokollen än.
 
 ## Händelser
 
-- 2025-04-22 · beslut · Kommunstyrelsen lämnade positivt planbesked för samlingslokal och internatbostäder vid Löftadalens folkhögskola. · [KS protokoll § 80](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-04-22/protokoll.html#sida-21)
+- 2025-04-22 · beslut · Kommunstyrelsen lämnade positivt planbesked för samlingslokal och internatbostäder vid Löftadalens folkhögskola. · [KS protokoll § 80](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-04-22/protokoll.html#sida-21) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-04-22/handlingar.html#sida-662)

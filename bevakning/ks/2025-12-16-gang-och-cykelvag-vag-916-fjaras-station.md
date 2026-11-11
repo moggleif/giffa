@@ -14,4 +14,4 @@ samverkansavtal med Trafikverket.
 
 ## Händelser
 
-- 2025-12-16 · beslut · Kommunstyrelsen godkände ett bevaknings- och samverkansavtal med Trafikverket om gång- och cykelväg längs väg 916. · [KS protokoll § 270](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-12-16/protokoll.html#sida-30)
+- 2025-12-16 · beslut · Kommunstyrelsen godkände ett bevaknings- och samverkansavtal med Trafikverket om gång- och cykelväg längs väg 916. · [KS protokoll § 270](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-12-16/protokoll.html#sida-30) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2025/2025-12-16/handlingar.html#sida-395)

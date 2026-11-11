@@ -15,5 +15,5 @@ steg finns inte i protokollen i poolen.
 
 ## Händelser
 
-- 2022-01-25 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva åtgärden genom en detaljplan inom Store Lyckor 1 och 2 och gav kommundirektören i uppdrag att ta fram en projektbeställning. · [KS protokoll § 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-01-25/protokoll.html#sida-15)
-- 2022-01-11 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 20](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-01-11/protokoll.html#sida-31)
+- 2022-01-25 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva åtgärden genom en detaljplan inom Store Lyckor 1 och 2 och gav kommundirektören i uppdrag att ta fram en projektbeställning. · [KS protokoll § 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-01-25/protokoll.html#sida-15) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-01-25/handlingar.html#sida-72)
+- 2022-01-11 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 20](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-01-11/protokoll.html#sida-31) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-01-11/handlingar.html#sida-2085)

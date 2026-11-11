@@ -15,5 +15,5 @@ närliggande förskolor.
 
 ## Händelser
 
-- 2023-12-13 · beslut · Nämnden för Förskola & Grundskola godkände stängning av förskoleverksamheten på Signeshus förskola från den 7 juli 2024. · [Förskola & Grundskola protokoll § 148](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2023/2023-12-13/protokoll.html#sida-18)
+- 2023-12-13 · beslut · Nämnden för Förskola & Grundskola godkände stängning av förskoleverksamheten på Signeshus förskola från den 7 juli 2024. · [Förskola & Grundskola protokoll § 148](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2023/2023-12-13/protokoll.html#sida-18) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2023/2023-12-13/handlingar.html#sida-86)
 - 2023-11-29 · forslag · Arbetsutskottet för Förskola & Grundskola föreslog att förskolan stängs. · [Förskola & Grundskola AU protokoll § 124](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2023/2023-11-29/protokoll.html#sida-17)

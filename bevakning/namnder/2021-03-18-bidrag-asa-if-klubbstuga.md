@@ -14,4 +14,4 @@ samlokalisering i kommunens lokaler.
 
 ## Händelser
 
-- 2021-03-18 · beslut · Nämnden för Kultur & Fritid beviljade 60 000 kronor till dränering av klubbstugan som en sista insats för att upprätthålla stugans funktion medan en samlokalisering med kommunen tas fram. · [Kultur & Fritid protokoll § 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2021/2021-03-18/protokoll.html#sida-9)
+- 2021-03-18 · beslut · Nämnden för Kultur & Fritid beviljade 60 000 kronor till dränering av klubbstugan som en sista insats för att upprätthålla stugans funktion medan en samlokalisering med kommunen tas fram. · [Kultur & Fritid protokoll § 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2021/2021-03-18/protokoll.html#sida-9) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2021/2021-03-18/handlingar.html#sida-50)

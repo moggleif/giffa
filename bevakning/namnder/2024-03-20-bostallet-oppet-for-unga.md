@@ -11,4 +11,4 @@ på allaktivitetshuset Bostället fredags- och lördagskvällar.
 
 ## Händelser
 
-- 2024-03-20 · beslut · Nämnden för Kultur & Fritid ansåg att initiativet ligger i linje med förvaltningens uppdrag. · [Kultur & Fritid protokoll § 40](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2024/2024-03-20/protokoll.html#sida-21)
+- 2024-03-20 · beslut · Nämnden för Kultur & Fritid ansåg att initiativet ligger i linje med förvaltningens uppdrag. · [Kultur & Fritid protokoll § 40](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2024/2024-03-20/protokoll.html#sida-21) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2024/2024-03-20/handlingar.html#sida-1096)

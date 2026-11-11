@@ -14,5 +14,5 @@ arbetet med en ny fördjupad översiktsplan.
 
 ## Händelser
 
-- 2021-06-22 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte avser att pröva den begärda åtgärden genom planläggning. · [KS protokoll § 176](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-06-22/protokoll.html#sida-16)
+- 2021-06-22 · avbrutet · Kommunstyrelsen lämnade besked att kommunen inte avser att pröva den begärda åtgärden genom planläggning. · [KS protokoll § 176](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-06-22/protokoll.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-06-22/handlingar.html#sida-61)
 - 2021-06-01 · forslag · Kommunstyrelsens arbetsutskott föreslog negativt planbesked. · [KSAU protokoll § 216](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2021/2021-06-01/protokoll.html#sida-7)

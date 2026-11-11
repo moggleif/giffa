@@ -14,6 +14,6 @@ finansieras. Om berget spärrades av framgår inte av protokollen i poolen. Näm
 
 ## Händelser
 
-- 2022-08-24 · info · Nämnden för Förskola & Grundskola tog del av informationen om hur behov av anpassningar av skolgården hanteras. · [Förskola & Grundskola protokoll § 107](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2022/2022-08-24/protokoll.html#sida-11)
+- 2022-08-24 · info · Nämnden för Förskola & Grundskola tog del av informationen om hur behov av anpassningar av skolgården hanteras. · [Förskola & Grundskola protokoll § 107](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2022/2022-08-24/protokoll.html#sida-11) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2022/2022-08-24/handlingar.html#sida-51)
 - 2022-08-10 · forslag · Arbetsutskottet föreslog att nämnden antecknar informationen om rutinen för verksamhetsanpassningar. · [Förskola & Grundskola AU protokoll § 97](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2022/2022-08-10/protokoll.html#sida-10)
 - 2022-06-16 · forslag · Ett initiativärende (S) om utemiljön på Älvsåkersskolan lämnades till arbetsutskottet för beredning. · [Förskola & Grundskola protokoll § 98](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2022/2022-06-16/protokoll.html#sida-14)

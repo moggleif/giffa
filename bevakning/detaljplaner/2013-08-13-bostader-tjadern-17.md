@@ -15,7 +15,7 @@ godkände exploateringsavtalet i februari 2015.
 ## Händelser
 
 - 2015-02-03 · beslut · Kommunfullmäktige antog detaljplanen för kvarteret Tjädern 17. · [KF protokoll § 8](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2015/2015-02-03/protokoll.html#sida-15)
-- 2015-02-03 · beslut · Kommunfullmäktige godkände exploateringsavtalet med fastighetsägarna om utbyggnad av bostäder inom Tjädern 17 (KS/2014:384). · [KF protokoll § 7](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2015/2015-02-03/protokoll.html#sida-14)
+- 2015-02-03 · beslut · Kommunfullmäktige godkände exploateringsavtalet med fastighetsägarna om utbyggnad av bostäder inom Tjädern 17 (KS/2014:384). · [KF protokoll § 7](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2015/2015-02-03/protokoll.html#sida-14) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2015/2015-02-03/handlingar.html#sida-18)
 - 2015-01-20 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige antar detaljplanen. · [KS protokoll § 15](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2015/2015-01-20/protokoll.html#sida-23)
 - 2014-09-16 · forslag · Byggnadsnämndens arbetsutskott godkände utställningsutlåtandet och föreslog att nämnden överlämnar planen till kommunfullmäktige för antagande. · [Byggnadsnämndens AU protokoll § 336](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2014/2014-09-16/protokoll.html#sida-55)
 - 2014-05-13 · forslag · Byggnadsnämndens arbetsutskott godkände samrådsredogörelsen och föreslog att nämnden godkänner det reviderade planförslaget för granskning. · [Byggnadsnämndens AU protokoll § 194](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2014/2014-05-13/protokoll.html#sida-50)

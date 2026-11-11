@@ -15,4 +15,4 @@ poolen.
 
 ## Händelser
 
-- 2016-03-09 · forslag · Arbetsutskottet för Vård & Omsorg föreslog ett samrådsyttrande: bostäderna bör vara tillgängliga oavsett ålder och funktionsförmåga, och busshållplatsen bör byggas. · [Vård & Omsorg protokoll § 25](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/protokoll.html#sida-8)
+- 2016-03-09 · forslag · Arbetsutskottet för Vård & Omsorg föreslog ett samrådsyttrande: bostäderna bör vara tillgängliga oavsett ålder och funktionsförmåga, och busshållplatsen bör byggas. · [Vård & Omsorg protokoll § 25](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/protokoll.html#sida-8) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-15), [Planbeskrivningen](https://moggleif.github.io/kommunhandlingar/kungsbacka/vo/2016/2016-03-09/handlingar.html#sida-17)

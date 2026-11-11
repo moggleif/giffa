@@ -14,6 +14,6 @@ dit, och en paviljong vid Klinnekärr och förskolan Skogshyddan sägas upp. År
 
 ## Händelser
 
-- 2023-06-15 · info · Nämnden för Förskola & Grundskola beslutade att förskolorna Lilla Loket och Stora Loket vid Åsa Gård får drivas som intraprenad från 1 juli 2023. · [Förskola & Grundskola protokoll § 84](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2023/2023-06-15/protokoll.html#sida-10)
+- 2023-06-15 · info · Nämnden för Förskola & Grundskola beslutade att förskolorna Lilla Loket och Stora Loket vid Åsa Gård får drivas som intraprenad från 1 juli 2023. · [Förskola & Grundskola protokoll § 84](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2023/2023-06-15/protokoll.html#sida-10) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2023/2023-06-15/handlingar.html#sida-144)
 - 2020-02-19 · beslut · Nämnden för Förskola & Grundskola beslutade att säga upp en paviljong på Klinnekärrs förskola och förskolan Skogshyddan när verksamheten flyttar till paviljongerna vid Åsa Gårdsskola. · [Förskola & Grundskola protokoll § 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2020/2020-02-19/protokoll.html#sida-8)
 - 2019-12-04 · forslag · Arbetsutskottet för Förskola & Grundskola föreslog namnet Stora loket för paviljongerna vid Åsa Gårdsskola. · [Förskola & Grundskola AU protokoll § 150](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2019/2019-12-04/protokoll.html#sida-16)

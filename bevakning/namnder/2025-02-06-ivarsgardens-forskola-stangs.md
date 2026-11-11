@@ -13,5 +13,5 @@ närliggande förskola. Att stängningen är genomförd framgår inte av källor
 
 ## Händelser
 
-- 2025-02-20 · beslut · Nämnden för Förskola & Grundskola beslutade att stänga Ivarsgårdens förskola den 4 juli 2025. · [FG protokoll § 15](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2025/2025-02-20/protokoll.html#sida-6)
-- 2025-02-06 · forslag · Nämndens arbetsutskott föreslog att Ivarsgårdens förskola stängs den 4 juli 2025 på grund av bristande barnunderlag. · [FG-AU protokoll § 19](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2025/2025-02-06/protokoll.html#sida-11)
+- 2025-02-20 · beslut · Nämnden för Förskola & Grundskola beslutade att stänga Ivarsgårdens förskola den 4 juli 2025. · [FG protokoll § 15](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2025/2025-02-20/protokoll.html#sida-6) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2025/2025-02-20/handlingar.html#sida-12)
+- 2025-02-06 · forslag · Nämndens arbetsutskott föreslog att Ivarsgårdens förskola stängs den 4 juli 2025 på grund av bristande barnunderlag. · [FG-AU protokoll § 19](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2025/2025-02-06/protokoll.html#sida-11) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2025/2025-02-06/handlingar.html#sida-122)

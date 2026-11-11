@@ -11,4 +11,4 @@ närområdet.
 
 ## Händelser
 
-- 2025-08-25 · beslut · Tekniks arbetsutskott beslutade lokala trafikföreskrifter för Klaraplan: 24 timmar på större delen av parkeringen och tre dygn i en rad med cirka 9 platser. · [Teknik AU protokoll § 35](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2025/2025-08-25/protokoll.html#sida-6)
+- 2025-08-25 · beslut · Tekniks arbetsutskott beslutade lokala trafikföreskrifter för Klaraplan: 24 timmar på större delen av parkeringen och tre dygn i en rad med cirka 9 platser. · [Teknik AU protokoll § 35](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2025/2025-08-25/protokoll.html#sida-6) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2025/2025-08-25/handlingar.html#sida-11)
