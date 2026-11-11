@@ -59,6 +59,8 @@ En eller två meningar om vad ärendet gäller, ur källan.
 *Ölmanäs 1:17*, *Frillesås-Rya 3:77*. I ingressen, händelserna och
 tillfällena att tycka till gör sidan dem till länkar till kommunens karta,
 med de undantag som står i K23.
+Platserna i `platser.csv`, gatunamn och plannummer efter *detaljplan*
+eller *plan* blir länkar på samma sätt (K24); skriv dem som i källan.
 
 **Status** styr var ärendet står på sidan:
 

@@ -1,4 +1,4 @@
-"""Krav: K12, K17 och K23 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K12, K17, K23 och K24 i KRAV.md. Test: tests/test_sidor.py.
 
 När man kan tycka till: ärendenas kommande samråd, granskningar, yttranden
 och beslut i tur och ordning överst på startsidan, och som en markering på
@@ -10,8 +10,7 @@ from html import escape
 
 from webbplats.arende import Arende, Handelse
 from webbplats.datum import kvar, med_veckodag
-from webbplats.fastighet import med_kartlankar
-from webbplats.mall import urvalslista
+from webbplats.mall import Sajt, urvalslista
 
 TILLFALLE = {
     "samrad": "Samråd – synpunkter senast",
@@ -30,32 +29,34 @@ def kommande(arende: Arende, idag: date) -> list[Handelse]:
     return sorted((t for t in arende.tillfallen if t.datum >= idag), key=lambda t: t.datum)
 
 
-def tillfalle(t: Handelse, idag: date) -> str:
+def tillfalle(t: Handelse, sajt: Sajt) -> str:
+    idag = sajt.byggd.date()
     return (
         f"<strong>{TILLFALLE[t.steg]} {med_veckodag(t.datum)}, {kvar(t.datum, idag)}</strong> "
-        f"{med_kartlankar(t.text)} "
+        f"{sajt.karta.lanka(t.text)} "
         f'<a href="{escape(t.lank)}">{escape(t.kalla)}</a>'
         f'<span class="sa-gor"><strong>Så gör du:</strong> {SA_GOR[t.steg]}</span>'
     )
 
 
-def markering(arende: Arende, idag: date) -> str:
-    poster = "".join(f"<li>{tillfalle(t, idag)}</li>" for t in kommande(arende, idag))
+def markering(arende: Arende, sajt: Sajt) -> str:
+    poster = "".join(f"<li>{tillfalle(t, sajt)}</li>" for t in kommande(arende, sajt.byggd.date()))
     return f'<div class="paverka"><p>Tycka till</p><ul>{poster}</ul></div>' if poster else ""
 
 
-def tycka_till_nu(arenden: list[Arende], idag: date) -> str:
+def tycka_till_nu(arenden: list[Arende], sajt: Sajt) -> str:
+    idag = sajt.byggd.date()
     par = sorted(((t, a) for a in arenden for t in kommande(a, idag)), key=lambda p: p[0].datum)
-    rader = "".join(rad(t, a, idag) for t, a in par)
+    rader = "".join(rad(t, a, sajt) for t, a in par)
     lista = urvalslista(f'<ol class="tillfallen">{rader}</ol>') if rader else "<p>Inga kända tillfällen.</p>"
     return f'<h2 id="tycka-till">Tycka till nu</h2>{INLEDNING}{lista}{forklaring()}'
 
 
-def rad(t: Handelse, arende: Arende, idag: date) -> str:
+def rad(t: Handelse, arende: Arende, sajt: Sajt) -> str:
     return (
         f'<li data-ort="{escape("|".join(arende.orter))}">'
         f'<a class="arende" href="{arende.sida}">{escape(arende.falt["rubrik"])}</a> '
-        f"<small>{escape(', '.join(arende.orter))}</small><br>{tillfalle(t, idag)}</li>"
+        f"<small>{escape(', '.join(arende.orter))}</small><br>{tillfalle(t, sajt)}</li>"
     )
 
 

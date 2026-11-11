@@ -236,3 +236,16 @@ närmast framför hör till trakten, som i *Ölmevalla Hallen 1:17* och
 Ett bolagsnamn som *Castellum Varla 3:34 AB* länkas inte. I en uppräkning eller
 ett intervall som *Åsa 5:153 och 5:89* eller *Bäcken 1:31–1:34* får varje
 nummer en egen länk med trakten från den första beteckningen.
+
+## K24 – Platser, gator och detaljplaner på kartan
+
+**Givet** en plats ur `platser.csv`, ett gatunamn eller ett plannummer
+efter ordet *detaljplan* eller *plan* i ett ärendes ingress, händelser
+eller tillfällen att tycka till,
+**när** sidan byggs,
+**så** är namnet en länk till kartans sökning på det, som för
+fastigheterna i K23. En gata länkas utan husnummer. Platser av typen
+förening, hemtjänst, detaljplan, planprogram, planbesked, område och
+vatten länkas inte, eftersom de inte är en plats som säkert går att söka
+fram. Ett förled som *Gamla* i *Gamla Särövägen* hör till gatan. Länkarna
+till kartan öppnas i en ny flik, också i rubrikerna.

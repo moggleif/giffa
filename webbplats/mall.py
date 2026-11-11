@@ -4,11 +4,12 @@ Det varje sida har gemensamt: huvudet, menyn, urvalet och sidfoten med
 länken till repot.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from html import escape
 
 from webbplats.datum import tid
+from webbplats.kartlankar import Kartlankar
 from webbplats.underlag import alla_orter
 
 MENY = (
@@ -28,6 +29,7 @@ class Sajt:
     repo: str
     byggd: datetime
     foreningar: dict[str, list[str]]
+    karta: Kartlankar = field(default_factory=Kartlankar)
 
     @property
     def orter(self) -> list[str]:
@@ -48,7 +50,7 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 <a class="hoppa" href="#innehall">Hoppa till innehållet</a>
 {meny(adress, rot)}
 <main id="innehall" tabindex="-1">
-<h1>{escape(rubrik)}</h1>
+<h1>{sajt.karta.lanka(rubrik)}</h1>
 {innehall}
 </main>
 {sidfot(sajt)}
