@@ -82,7 +82,6 @@
     lankar(val);
   }
 
-  // En tryckt knapp som trycks igen släpper sitt val; det andra valet står kvar.
   function valet(knapp, vald) {
     if (knapp.hasAttribute("data-alla")) return INGET;
     var forening = knapp.getAttribute("data-urval-forening");
