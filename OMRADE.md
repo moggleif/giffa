@@ -4,7 +4,8 @@ Bevakningen gäller hela Kungsbacka kommun, uppdelad på fyra föreningars
 områden. Indelningen följer Moderaternas fyra lokalföreningar i kommunen
 som de beskrivs på [kungsbackamoderaterna.se](https://www.kungsbackamoderaterna.se/engagera-dig/),
 kompletterad av projektägaren med de orter som föreningarnas sidor inte
-nämner (Förlanda, Tölö, Älvsåker, Inlag, Lerberg och Släp). Föreningarna
+nämner (Förlanda, Tölö, Älvsåker, Inlag, Lerberg, Malevik och Släp).
+Namnen "Förening Åsa" och så vidare och "Kungsbacka stad" är repots egna. Föreningarna
 står i den ordning sidan visar dem; varje ort hör till en förening.
 
 ## Förening Åsa

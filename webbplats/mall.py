@@ -9,6 +9,7 @@ from datetime import datetime
 from html import escape
 
 from webbplats.datum import tid
+from webbplats.underlag import alla_orter
 
 MENY = (
     ("index.html", "Start"),
@@ -19,7 +20,6 @@ MENY = (
 )
 
 AKTUELL = ' aria-current="page"'
-INGET_VAL = '<p class="inget-val" hidden>Inget här för det valet.</p>'
 
 
 @dataclass(frozen=True)
@@ -30,7 +30,7 @@ class Sajt:
 
     @property
     def orter(self) -> list[str]:
-        return [ort for lista in self.foreningar.values() for ort in lista]
+        return alla_orter(self.foreningar)
 
 
 def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
@@ -81,6 +81,13 @@ def urval(sajt: Sajt) -> str:
 
 def knapp(slag: str, namn: str) -> str:
     return f'<button type="button" data-urval-{slag}="{escape(namn)}">{escape(namn)}</button>'
+
+
+def urvalslista(innehall: str) -> str:
+    return (
+        f'<div class="urvalslista">{innehall}'
+        '<p class="inget-val" hidden>Inget här för det valet.</p></div>'
+    )
 
 
 def sidfot(sajt: Sajt) -> str:

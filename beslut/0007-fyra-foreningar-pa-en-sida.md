@@ -28,8 +28,12 @@ sidor inte nämner.
 ## Konsekvenser
 
 - Adressen och namnet Giffå behålls; länkar med `?ort=` fungerar som förut.
-- Rundan söker i hela kommunen. Platser och historik för de nya orterna
-  läggs till i egna PR:ar, en förening i taget.
+- Rundan, månadens skanning och veckans kallelser söker i hela kommunen,
+  eftersom söktermerna är alla orter i `OMRADE.md`. "Kungsbacka stad"
+  står sällan i handlingarna; innerstaden fångas genom platserna i
+  `platser.csv`. Korta ortnamn som Hede eller Släp kan ge fler falska
+  träffar, som sorteras bort i rundan. Platser och historik för de nya
+  orterna läggs till i egna PR:ar, en förening i taget.
 - Ett ärende som gäller hela kommunen tas fortfarande bara med när det
   får särskild betydelse för en ort, med skälet i ärendet.
 - En ny förening eller en ort som flyttar är en ändring i `OMRADE.md`, inte

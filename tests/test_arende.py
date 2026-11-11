@@ -82,6 +82,7 @@ class Kontrollera(unittest.TestCase):
         for foreningar in (
             {"Förening A": ["Åsa"], "Förening B": ["Åsa", "Särö"]},
             {"Förening A": ["Åsa"], "Förening B": []},
+            {},
         ):
             with self.subTest(foreningar=foreningar), self.assertRaises(ValueError):
                 kontrollera_omrade(foreningar)

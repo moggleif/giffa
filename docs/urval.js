@@ -42,26 +42,34 @@
     return grupp ? orterI(grupp) : null;
   }
 
-  function visa(urval, grupper, val) {
-    alla("button", urval).forEach(function (k) {
-      var namn = k.getAttribute("data-urval-forening");
-      var pa = k.hasAttribute("data-alla") ? !val.forening
-        : namn !== null ? namn === val.forening : k.getAttribute("data-urval-ort") === val.ort;
-      k.setAttribute("aria-pressed", pa);
-    });
-    grupper.forEach(function (g) { g.hidden = g.getAttribute("data-urval-grupp") !== val.forening; });
-    var orter = synliga(grupper, val);
+  function tryckt(knapp, val) {
+    if (knapp.hasAttribute("data-alla")) return !val.forening;
+    var forening = knapp.getAttribute("data-urval-forening");
+    if (forening !== null) return forening === val.forening;
+    return knapp.getAttribute("data-urval-ort") === val.ort;
+  }
+
+  function visaSaker(orter) {
     alla("[data-ort]").forEach(function (sak) {
       sak.hidden = orter !== null && !sak.getAttribute("data-ort").split("|").some(function (o) {
         return orter.indexOf(o) >= 0;
       });
     });
-    alla(".inget-val").forEach(function (p) {
-      var lista = p.previousElementSibling;
-      var tabell = lista.previousElementSibling;
-      p.hidden = alla("[data-ort]", lista).some(function (s) { return !s.hidden; });
-      if (tabell && tabell.className === "tabell") tabell.hidden = !p.hidden;
+  }
+
+  function visaTomt() {
+    alla(".urvalslista").forEach(function (lista) {
+      var tomt = !alla("[data-ort]", lista).some(function (sak) { return !sak.hidden; });
+      lista.querySelector(".inget-val").hidden = !tomt;
+      alla(".tabell", lista).forEach(function (t) { t.hidden = tomt; });
     });
+  }
+
+  function visa(urval, grupper, val) {
+    alla("button", urval).forEach(function (k) { k.setAttribute("aria-pressed", tryckt(k, val)); });
+    grupper.forEach(function (g) { g.hidden = g.getAttribute("data-urval-grupp") !== val.forening; });
+    visaSaker(synliga(grupper, val));
+    visaTomt();
     lankar(val);
   }
 

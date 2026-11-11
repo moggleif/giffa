@@ -94,6 +94,7 @@ class Startsidan(unittest.TestCase):
         )
         self.assertIn('data-urval-grupp="Förening Åsa" hidden>', html)
         self.assertIn('<button type="button" data-urval-ort="Fjärås">Fjärås</button>', html)
+        self.assertIn('<div class="urvalslista"><div class="tabell">', html)
         self.assertIn('<p class="inget-val" hidden>', html)
         self.assertIn('<tr data-ort="Åsa|Fjärås">', html)
         self.assertIn('<article id="p" data-ort="Åsa|Fjärås">', html)

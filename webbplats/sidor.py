@@ -12,7 +12,7 @@ from webbplats.arende import Arende
 from webbplats.datum import tid
 from webbplats.ikoner import teckenforklaring
 from webbplats.kort import kort, nytt_kort
-from webbplats.mall import INGET_VAL, Sajt, sida, urval
+from webbplats.mall import Sajt, sida, urval, urvalslista
 from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
@@ -32,9 +32,9 @@ LISTOR = (
 
 def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
     inledning = (
-        "<p>Vad som beslutas, planeras och byggs i orterna hos "
-        f"{escape(', '.join(sajt.foreningar))}. Välj en förening eller en ort för att "
-        "bara se den; utan val syns allt. Varje händelse länkar till sin källa.</p>"
+        "<p>Vad som beslutas, planeras och byggs i orterna hos de fyra föreningarna. "
+        "Utan val syns allt; välj en förening, och sedan en ort, för att bara se den. "
+        "Varje händelse länkar till sin källa.</p>"
     )
     paverka = tycka_till_nu(arenden, sajt.byggd.date())
     innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda) + oversikt(arenden)
@@ -61,7 +61,7 @@ def nytt(arenden: list[Arende], runda: Runda) -> str:
         for a in arenden
         if (nya := [h for h in a.handelser if fran <= h.datum <= till])
     )
-    innehall = f'<div class="kort">{korten}</div>{INGET_VAL}' if korten else "<p>Inga nya händelser.</p>"
+    innehall = urvalslista(f'<div class="kort">{korten}</div>') if korten else "<p>Inga nya händelser.</p>"
     return (
         f'<h2 id="nytt">Nytt sedan förra rundan</h2>'
         f'<p class="period">Rundans period: {tid(fran)} till {tid(till)}. {escape(runda.anteckning)}</p>'
@@ -95,4 +95,4 @@ def avsnitt(sajt: Sajt, arenden: list[Arende]) -> str:
         return "<p>Inga ärenden ännu.</p>"
     korten = "".join(kort(a, sajt) for a in arenden)
     rader = tabell(arenden, sajt.byggd.date())
-    return f'{rader}<div class="kort">{korten}</div>{INGET_VAL}'
+    return urvalslista(f'{rader}<div class="kort">{korten}</div>')

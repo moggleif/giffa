@@ -2,8 +2,9 @@
 
 Vad som beslutas, planeras och byggs i Kungsbacka kommun, uppdelat på fyra
 föreningars områden – Förening Åsa, Förening Kungsbacka, Förening Onsala
-och Förening Särö (se [OMRADE.md](OMRADE.md)): kommunstyrelsen, dess arbetsutskott, nämnderna, bygglov,
-detaljplaner och det kommunen publicerar på kungsbacka.se.
+och Förening Särö (se [OMRADE.md](OMRADE.md)): kommunstyrelsen, dess
+arbetsutskott, nämnderna, bygglov, detaljplaner och det kommunen publicerar
+på kungsbacka.se.
 
 **Sidan: <https://moggleif.github.io/giffa/>** – på startsidan när och var
 man kan tycka till innan något beslutas och det nya sedan förra rundan; på

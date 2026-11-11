@@ -22,7 +22,11 @@ def foreningar(omrade: str) -> dict[str, list[str]]:
 
 
 def orter(omrade: str) -> list[str]:
-    return [ort for lista in foreningar(omrade).values() for ort in lista]
+    return alla_orter(foreningar(omrade))
+
+
+def alla_orter(foreningar: dict[str, list[str]]) -> list[str]:
+    return [ort for lista in foreningar.values() for ort in lista]
 
 
 def platser(text: str) -> list[dict[str, str]]:

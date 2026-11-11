@@ -38,18 +38,22 @@ def las_arende(rot: Path, fil: Path, orter: list[str]) -> Arende:
     return arende
 
 
+def las_foreningar(rot: Path) -> dict[str, list[str]]:
+    foreningar = underlag.foreningar(las(rot, "OMRADE.md"))
+    try:
+        kontrollera_omrade(foreningar)
+    except ValueError as fel:
+        raise SystemExit(f"OMRADE.md: {fel}") from fel
+    return foreningar
+
+
 def las(rot: Path, namn: str) -> str:
     return (rot / namn).read_text(encoding="utf-8")
 
 
 def bygg(rot: Path, ut: Path, repo: str) -> None:
     byggd = datetime.now(ZoneInfo("Europe/Stockholm"))
-    foreningar = underlag.foreningar(las(rot, "OMRADE.md"))
-    try:
-        kontrollera_omrade(foreningar)
-    except ValueError as fel:
-        raise SystemExit(f"OMRADE.md: {fel}") from fel
-    sajt = Sajt(repo, byggd, foreningar)
+    sajt = Sajt(repo, byggd, las_foreningar(rot))
     arenden = las_arenden(rot, sajt.orter)
     runda = underlag.senaste_runda(las(rot, "bevakning/rundor.csv"))
     platser = underlag.platser(las(rot, "platser.csv"))

@@ -34,8 +34,8 @@ om varje morgon, så att passerade tillfällen att tycka till försvinner
 varje händelse är en ikon som länkar till källan och där stegen skiljs åt
 med form, inte bara färg. Under tabellen har varje ärende ett kort med ort,
 organ, diarienummer, senaste steget och en länk *Läs mer* till ärendets
-egen sida (K18). Raden i tabellen länkar också dit. Knappar ovanför visar bara ärendena i en vald ort; utan
-skriptet står alla.
+egen sida (K18). Raden i tabellen länkar också dit. Knappar ovanför väljer
+förening och ort enligt K22; utan skriptet står alla.
 
 ## K5 – Kort startsida, listor på egna sidor
 
@@ -67,8 +67,7 @@ det, med perioden.
 **Givet** `OMRADE.md`, `platser.csv` och `KALLOR.md`,
 **när** sidan byggs,
 **så** visar sidan *Vad vi bevakar* föreningarna med sina orter, platserna
-och källorna ur
-just de filerna, och länkar till dem för reglerna.
+och källorna ur just de filerna, och länkar till dem för reglerna.
 
 ## K9 – Länkar mellan sidan och repot
 

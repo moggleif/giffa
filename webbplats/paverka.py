@@ -10,7 +10,7 @@ from html import escape
 
 from webbplats.arende import Arende, Handelse
 from webbplats.datum import kvar, med_veckodag
-from webbplats.mall import INGET_VAL
+from webbplats.mall import urvalslista
 
 TILLFALLE = {
     "samrad": "Samråd – synpunkter senast",
@@ -46,7 +46,7 @@ def markering(arende: Arende, idag: date) -> str:
 def tycka_till_nu(arenden: list[Arende], idag: date) -> str:
     par = sorted(((t, a) for a in arenden for t in kommande(a, idag)), key=lambda p: p[0].datum)
     rader = "".join(rad(t, a, idag) for t, a in par)
-    lista = f'<ol class="tillfallen">{rader}</ol>{INGET_VAL}' if rader else "<p>Inga kända tillfällen.</p>"
+    lista = urvalslista(f'<ol class="tillfallen">{rader}</ol>') if rader else "<p>Inga kända tillfällen.</p>"
     return f'<h2 id="tycka-till">Tycka till nu</h2>{INLEDNING}{lista}{forklaring()}'
 
 

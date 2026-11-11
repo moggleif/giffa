@@ -6,6 +6,7 @@ hör till en enda förening.
 """
 
 from webbplats.arende import STATUS, Arende
+from webbplats.underlag import alla_orter
 
 
 def kontrollera(arende: Arende, orter: list[str]) -> None:
@@ -21,7 +22,9 @@ def kontrollera(arende: Arende, orter: list[str]) -> None:
 
 
 def kontrollera_omrade(foreningar: dict[str, list[str]]) -> None:
-    orter = [ort for lista in foreningar.values() for ort in lista]
+    if not foreningar:
+        raise ValueError("inga föreningar")
+    orter = alla_orter(foreningar)
     if dubbletter := sorted({o for o in orter if orter.count(o) > 1}):
         raise ValueError(f"orten står under flera föreningar: {', '.join(dubbletter)}")
     if tomma := [namn for namn, lista in foreningar.items() if not lista]:
