@@ -13,8 +13,8 @@ som är beslutat, en historik över det som är klart, vad som bevakas och en
 sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
 korten. Utan val syns allt; den som vill väljer en ort direkt, eller först
 en förening för att bara se dess orter, och valet står i adressen och
-följer med mellan sidorna. Sidan byggs ur ärendena av `webbplats/` och publiceras på GitHub Pages
-([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
+följer med mellan sidorna. Sidan byggs ur ärendena av `webbplats/` och
+publiceras på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Bygg den lokalt med
 
 ```
