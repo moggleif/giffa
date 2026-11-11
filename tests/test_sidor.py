@@ -92,7 +92,10 @@ class Startsidan(unittest.TestCase):
         self.assertIn(
             '<button type="button" data-urval-forening="Förening Särö">Förening Särö</button>', html
         )
-        self.assertIn('data-urval-grupp="Förening Åsa" hidden>', html)
+        self.assertIn(
+            'data-urval-grupp="Förening Åsa"><span class="gruppnamn" aria-hidden="true">Förening Åsa</span>',
+            html,
+        )
         self.assertIn('<button type="button" data-urval-ort="Fjärås">Fjärås</button>', html)
         self.assertIn('<div class="urvalslista"><div class="tabell">', html)
         self.assertIn('<p class="inget-val" hidden>', html)

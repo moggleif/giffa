@@ -38,3 +38,6 @@ sidor inte nämner.
   får särskild betydelse för en ort, med skälet i ärendet.
 - En ny förening eller en ort som flyttar är en ändring i `OMRADE.md`, inte
   i koden.
+- Senare ändrat: en ort går att välja direkt, utan att först välja
+  förening. Ortknapparna står grupperade per förening, och en vald
+  förening visar bara sina orter (K22).

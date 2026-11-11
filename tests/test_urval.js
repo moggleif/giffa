@@ -35,8 +35,8 @@ class Nod {
 
 const dold = (nod) => Object.assign(nod, { hidden: true });
 const knapp = (attribut) => new Nod("button", attribut);
-const grupp = (forening, orter) => dold(new Nod("div", { "data-urval-grupp": forening },
-  orter.map((ort) => knapp({ "data-urval-ort": ort }))));
+const grupp = (forening, orter) => new Nod("div", { "data-urval-grupp": forening },
+  orter.map((ort) => knapp({ "data-urval-ort": ort })));
 // Som på sidan: tidslinjens rader i .tabell och samma ärenden som kort.
 const lista = (orter) => new Nod("div", { class: "urvalslista" }, [
   new Nod("div", { class: "tabell" }, [new Nod("table", {}, orter.map((o) => new Nod("tr", { "data-ort": o })))]),
@@ -70,12 +70,12 @@ const oppenGrupp = (d) => d.querySelectorAll("[data-urval-grupp]").filter((g) =>
   .map((g) => g.getAttribute("data-urval-grupp"));
 const knappFor = (d, attribut, varde) => d.querySelectorAll("button").find((k) => k.getAttribute(attribut) === varde);
 
-test("utan val syns allt och Alla är tryckt", () => {
+test("utan val syns allt, Alla är tryckt och alla orters knappar syns", () => {
   const { dokument } = sida("");
   assert.strictEqual(dokument.querySelector(".urval").hidden, false);
   assert.deepStrictEqual(synligaOrter(dokument), ["x", "z", "y|z", "y"]);
   assert.deepStrictEqual(tryckta(dokument), ["Alla"]);
-  assert.deepStrictEqual(oppenGrupp(dokument), []);
+  assert.deepStrictEqual(oppenGrupp(dokument), ["A", "B"]);
 });
 
 test("en förening visar ärendena i sina orter och sina ortknappar", () => {
@@ -85,17 +85,25 @@ test("en förening visar ärendena i sina orter och sina ortknappar", () => {
   assert.deepStrictEqual(oppenGrupp(dokument), ["A"]);
 });
 
-test("en ort visar bara sina ärenden, också när de har flera orter", () => {
+test("en ort utan förening visar bara sina ärenden och alla orters knappar", () => {
   const { dokument } = sida("?ort=z");
   assert.deepStrictEqual(synligaOrter(dokument), ["z", "y|z"]);
-  assert.deepStrictEqual(tryckta(dokument), ["B", "z"]);
+  assert.deepStrictEqual(tryckta(dokument), ["z"]);
+  assert.deepStrictEqual(oppenGrupp(dokument), ["A", "B"]);
 });
 
-test("en ort i en annan förening än ?forening= väljer ortens förening", () => {
-  const { dokument } = sida("?forening=B&ort=x");
-  assert.deepStrictEqual(synligaOrter(dokument), ["x"]);
-  assert.deepStrictEqual(tryckta(dokument), ["A", "x"]);
+test("en ort i föreningen visar ortens ärenden och bara föreningens knappar", () => {
+  const { dokument } = sida("?forening=A&ort=y");
+  assert.deepStrictEqual(synligaOrter(dokument), ["y|z", "y"]);
+  assert.deepStrictEqual(tryckta(dokument), ["A", "y"]);
   assert.deepStrictEqual(oppenGrupp(dokument), ["A"]);
+});
+
+test("en ort utanför ?forening= släpps och föreningen står kvar", () => {
+  const { dokument } = sida("?forening=B&ort=x");
+  assert.deepStrictEqual(synligaOrter(dokument), ["z", "y|z"]);
+  assert.deepStrictEqual(tryckta(dokument), ["B"]);
+  assert.deepStrictEqual(oppenGrupp(dokument), ["B"]);
 });
 
 test("en okänd förening eller ?ort=Alla visar allt", () => {
@@ -132,4 +140,27 @@ test("bakåt i webbläsaren läser valet ur adressen igen", () => {
   fonster.skicka("popstate");
   assert.deepStrictEqual(tryckta(dokument), ["B"]);
   assert.deepStrictEqual(synligaOrter(dokument), ["z", "y|z"]);
+});
+
+test("en ort går att välja direkt, och föreningen därefter behåller den", () => {
+  const { dokument, plats } = sida("");
+  knappFor(dokument, "data-urval-ort", "y").click();
+  assert.strictEqual(plats.search, "?ort=y");
+  assert.deepStrictEqual(synligaOrter(dokument), ["y|z", "y"]);
+  knappFor(dokument, "data-urval-forening", "A").click();
+  assert.strictEqual(plats.search, "?forening=A&ort=y");
+  assert.strictEqual(dokument.querySelector("a").getAttribute("href"), "pagar.html?forening=A&ort=y");
+  knappFor(dokument, "data-urval-forening", "B").click();
+  assert.strictEqual(plats.search, "?forening=B");
+});
+
+test("en tryckt knapp som trycks igen släpper bara sitt val", () => {
+  const { dokument, plats } = sida("?forening=A&ort=x");
+  knappFor(dokument, "data-urval-ort", "x").click();
+  assert.strictEqual(plats.search, "?forening=A");
+  assert.deepStrictEqual(tryckta(dokument), ["A"]);
+  knappFor(dokument, "data-urval-ort", "x").click();
+  knappFor(dokument, "data-urval-forening", "A").click();
+  assert.strictEqual(plats.search, "?ort=x");
+  assert.deepStrictEqual(oppenGrupp(dokument), ["A", "B"]);
 });

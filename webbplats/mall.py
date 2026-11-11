@@ -67,15 +67,20 @@ def meny(aktuell: str, rot: str) -> str:
 
 def urval(sajt: Sajt) -> str:
     foreningar = "".join(knapp("forening", namn) for namn in sajt.foreningar)
-    orter = "".join(
-        f'<div role="group" aria-label="Visa ort i {escape(namn)}" data-urval-grupp="{escape(namn)}" hidden>'
-        + "".join(knapp("ort", ort) for ort in lista)
-        + "</div>"
-        for namn, lista in sajt.foreningar.items()
-    )
+    orter = "".join(ortgrupp(namn, lista) for namn, lista in sajt.foreningar.items())
     return (
         '<div class="urval" hidden><div role="group" aria-label="Visa förening">'
-        f'<button type="button" data-alla>Alla</button>{foreningar}</div>{orter}</div>'
+        f'<button type="button" data-alla>Alla</button>{foreningar}</div>'
+        f'<div class="orter">{orter}</div></div>'
+    )
+
+
+def ortgrupp(namn: str, orter: list[str]) -> str:
+    return (
+        f'<div role="group" aria-label="Visa ort i {escape(namn)}" data-urval-grupp="{escape(namn)}">'
+        f'<span class="gruppnamn" aria-hidden="true">{escape(namn)}</span>'
+        + "".join(knapp("ort", ort) for ort in orter)
+        + "</div>"
     )
 
 

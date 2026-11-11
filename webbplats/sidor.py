@@ -33,7 +33,7 @@ LISTOR = (
 def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
     inledning = (
         "<p>Vad som beslutas, planeras och byggs i orterna hos de fyra föreningarna. "
-        "Utan val syns allt; välj en förening, och sedan en ort, för att bara se den. "
+        "Utan val syns allt; välj en ort, eller en förening för att bara se dess orter. "
         "Varje händelse länkar till sin källa.</p>"
     )
     paverka = tycka_till_nu(arenden, sajt.byggd.date())

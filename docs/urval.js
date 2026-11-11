@@ -1,5 +1,6 @@
 // Krav: K4, K21 och K22 i KRAV.md. Test: tests/test_urval.js, och tests/test_bygg.py (att skriptet följer med).
-// Valet är ingenting (allt syns), en förening eller en ort. Utan skriptet står allt.
+// Valet är en förening, en ort eller båda; inget val visar allt. Föreningen
+// begränsar vilka ortknappar som syns, orten vilka ärenden. Utan skriptet står allt.
 (function () {
   var SIDA = /^[\w./-]+\.html$/;
   var INGET = { forening: null, ort: null };
@@ -9,8 +10,10 @@
   }
 
   function fraga(val) {
-    if (val.ort) return "?ort=" + encodeURIComponent(val.ort);
-    return val.forening ? "?forening=" + encodeURIComponent(val.forening) : "";
+    var delar = [];
+    if (val.forening) delar.push("forening=" + encodeURIComponent(val.forening));
+    if (val.ort) delar.push("ort=" + encodeURIComponent(val.ort));
+    return delar.length ? "?" + delar.join("&") : "";
   }
 
   function lankar(val) {
@@ -29,21 +32,25 @@
     return alla("[data-urval-ort]", grupp).map(function (k) { return k.getAttribute("data-urval-ort"); });
   }
 
+  function gruppen(grupper, forening) {
+    return grupper.filter(function (g) { return g.getAttribute("data-urval-grupp") === forening; })[0];
+  }
+
   function giltigt(grupper, val) {
-    var medOrt = grupper.filter(function (g) { return orterI(g).indexOf(val.ort) >= 0; })[0];
-    if (medOrt) return { forening: medOrt.getAttribute("data-urval-grupp"), ort: val.ort };
-    var finns = grupper.some(function (g) { return g.getAttribute("data-urval-grupp") === val.forening; });
-    return finns ? { forening: val.forening, ort: null } : INGET;
+    var grupp = gruppen(grupper, val.forening);
+    var ortGrupper = grupp ? [grupp] : grupper;
+    var ortFinns = ortGrupper.some(function (g) { return orterI(g).indexOf(val.ort) >= 0; });
+    return { forening: grupp ? val.forening : null, ort: ortFinns ? val.ort : null };
   }
 
   function synliga(grupper, val) {
     if (val.ort) return [val.ort];
-    var grupp = grupper.filter(function (g) { return g.getAttribute("data-urval-grupp") === val.forening; })[0];
+    var grupp = gruppen(grupper, val.forening);
     return grupp ? orterI(grupp) : null;
   }
 
   function tryckt(knapp, val) {
-    if (knapp.hasAttribute("data-alla")) return !val.forening;
+    if (knapp.hasAttribute("data-alla")) return !val.forening && !val.ort;
     var forening = knapp.getAttribute("data-urval-forening");
     if (forening !== null) return forening === val.forening;
     return knapp.getAttribute("data-urval-ort") === val.ort;
@@ -67,17 +74,23 @@
 
   function visa(urval, grupper, val) {
     alla("button", urval).forEach(function (k) { k.setAttribute("aria-pressed", tryckt(k, val)); });
-    grupper.forEach(function (g) { g.hidden = g.getAttribute("data-urval-grupp") !== val.forening; });
+    grupper.forEach(function (g) {
+      g.hidden = val.forening !== null && g.getAttribute("data-urval-grupp") !== val.forening;
+    });
     visaSaker(synliga(grupper, val));
     visaTomt();
     lankar(val);
   }
 
-  function valet(knapp) {
-    if (knapp.hasAttribute("data-urval-forening")) {
-      return { forening: knapp.getAttribute("data-urval-forening"), ort: null };
+  // En tryckt knapp som trycks igen släpper sitt val; det andra valet står kvar.
+  function valet(knapp, vald) {
+    if (knapp.hasAttribute("data-alla")) return INGET;
+    var forening = knapp.getAttribute("data-urval-forening");
+    if (forening !== null) {
+      return { forening: forening === vald.forening ? null : forening, ort: vald.ort };
     }
-    return { forening: null, ort: knapp.getAttribute("data-urval-ort") };
+    var ort = knapp.getAttribute("data-urval-ort");
+    return { forening: vald.forening, ort: ort === vald.ort ? null : ort };
   }
 
   function koppla(urval) {
@@ -85,7 +98,7 @@
     var vald = giltigt(grupper, adressen());
     alla("button", urval).forEach(function (knapp) {
       knapp.addEventListener("click", function () {
-        var val = knapp.hasAttribute("data-alla") ? INGET : giltigt(grupper, valet(knapp));
+        var val = giltigt(grupper, valet(knapp, vald));
         if (fraga(val) === fraga(vald)) return;
         vald = val;
         history.pushState(null, "", fraga(val) || location.pathname);
