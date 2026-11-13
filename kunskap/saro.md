@@ -57,7 +57,8 @@ Särö och Vallda är utvecklingsorter men inte prioriterade
 - **Vallda:** [Vallda trädgårdsstad](../bevakning/ks/2024-02-27-vallda-tradgardsstad-vallda-20-3.md),
   [Vallda-Backa 1:6](../bevakning/ks/2024-09-10-bostader-vallda-backa-1-6.md), [verksamheter på Vallda 23:2](../bevakning/ks/2022-12-13-verksamheter-vallda-23-2.md),
   [Vallda 4:78](../bevakning/ks/2022-04-26-bostader-vallda-4-78.md), planbesked [Vallda 5:11](../bevakning/ks/2024-10-08-planbesked-vallda-5-11.md) och
-  [Bröndome 1:3](../bevakning/ks/2026-06-02-planbesked-brondome-1-3.md) pågår. Vallda 17:17 ingår i samma småplaner som Malevik 1:41 (länken ovan).
+  [Bröndome 1:3](../bevakning/ks/2026-06-02-planbesked-brondome-1-3.md) pågår. Vallda 17:17 ingår i samma småplaner som Malevik 1:41 (länken ovan) och
+  [antogs 2026](../bevakning/detaljplaner/2020-12-18-bostader-vallda-17-17-bjorkbacken.md).
 
 ## Skolor och förskolor
 

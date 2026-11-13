@@ -15,10 +15,10 @@ höjd. Antagandet är planerat till byggnadsnämnden i december 2026.
 
 ## Förslaget i korthet
 
-- Cirka 70 bostäder: småhus och lägenheter i flerbostadshus i högst två våningar, lägst i nordöstra delen mot de befintliga villorna. · [Planbeskrivningen s. 2](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-11-17/handlingar.html#sida-138)
+- Cirka 70 bostäder: småhus och lägenheter i flerbostadshus i högst två våningar, lägst i nordöstra delen mot de befintliga villorna. · [Planbeskrivningen s. 2](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-11-17/handlingar.html#sida-138), [s. 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-11-17/handlingar.html#sida-145)
 - En tredjedel av bostäderna ska upplåtas som hyresrätter, resten som bostadsrätter eller äganderätter. · [Tjänsteskrivelse om exploateringsavtalet](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-10-20/handlingar.html#sida-135)
 - En ny infart från Västra Särövägen ersätter två befintliga utfarter, och området kopplas till gång- och cykelvägen längs Nötegången mot skolan och Särö centrum. · [Planbeskrivningen s. 9 och 11](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-11-17/handlingar.html#sida-145)
-- I norr blir en gräsbevuxen sänka dagvattendamm, och genom området går ett dagvattenstråk med promenadslinga, lekplats och grillplats. Kommunen sköter dagvattensystemet; gator och övrig park sköts av fastighetsägarna. · [Planbeskrivningen s. 11](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-11-17/handlingar.html#sida-147)
+- I norr blir en gräsbevuxen sänka dagvattendamm, och genom området går ett dagvattenstråk med promenadslinga, lekplats och grillplats. Kommunen är huvudman för dagvattensystemet; för gator och övrig park gäller enskilt huvudmannaskap. · [Planbeskrivningen s. 11](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-11-17/handlingar.html#sida-147)
 - Kommunen bedömer att planen inte ger betydande miljöpåverkan. · [Planbeskrivningen s. 2](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2026/2026-11-17/handlingar.html#sida-138)
 
 ## Händelser
