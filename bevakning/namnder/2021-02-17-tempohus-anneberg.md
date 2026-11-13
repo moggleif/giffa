@@ -15,6 +15,6 @@ skolchefens svar om hur elever tas emot när de flyttar till en annan skola. Nä
 
 ## Händelser
 
-- 2021-03-17 · info · Nämnden för Förskola & Grundskola tog del av skolchefens redogörelse för arbetet när elever flyttar till en annan skola efter att tvåårskontrakten upphör. · [Förskola & Grundskola protokoll § 41](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2021/2021-03-17/protokoll.html#sida-17)
+- 2021-03-17 · info · Nämnden för Förskola & Grundskola tog del av skolchefens redogörelse för arbetet när elever flyttar till en annan skola efter att tvåårskontrakten upphör. · [Förskola & Grundskola protokoll § 41](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2021/2021-03-17/protokoll.html#sida-17) · Handlingar: [Handlingarna i ärendet](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2021/2021-03-17/handlingar.html#sida-87)
 - 2021-03-03 · forslag · Arbetsutskottet för Förskola & Grundskola föreslog att nämnden antecknar skolchefens svar. · [Förskola & Grundskola AU protokoll § 43](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2021/2021-03-03/protokoll.html#sida-15)
 - 2021-02-17 · forslag · Ett initiativärende (L) om Tempohus Anneberg lämnades till arbetsutskottet för beredning. · [Förskola & Grundskola protokoll § 28](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2021/2021-02-17/protokoll.html#sida-20)

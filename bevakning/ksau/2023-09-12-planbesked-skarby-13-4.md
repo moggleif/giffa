@@ -16,4 +16,4 @@ okänt.
 
 ## Händelser
 
-- 2023-09-12 · forslag · Kommunstyrelsens arbetsutskott föreslog att kommunen inte prövar bostäder och service genom planläggning inom del av Skårby 13:4 i Anneberg. · [KSAU protokoll § 237](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2023/2023-09-12/protokoll.html#sida-25)
+- 2023-09-12 · forslag · Kommunstyrelsens arbetsutskott föreslog att kommunen inte prövar bostäder och service genom planläggning inom del av Skårby 13:4 i Anneberg. · [KSAU protokoll § 237](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2023/2023-09-12/protokoll.html#sida-25) · Handlingar: [Handlingar till sammanträdet, punkt 13 (PDF)](https://web.archive.org/web/20241212013706id_/https://kungsbacka.se/download/18.6f3c0c5618a261856362020d/1694000277910/Kommunstyrelsens%20arbetsutskott%20handlingar%202023-09-12.pdf)

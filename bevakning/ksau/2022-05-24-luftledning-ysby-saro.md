@@ -16,4 +16,4 @@ protokollen i poolen.
 
 ## Händelser
 
-- 2022-05-24 · yttrande · Kommunstyrelsens arbetsutskott antog, med stöd av delegering, kommunens yttrande till Energimarknadsinspektionen utan ytterligare synpunkter på ansökan. · [KSAU protokoll § 202](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-05-24/protokoll.html#sida-12)
+- 2022-05-24 · yttrande · Kommunstyrelsens arbetsutskott antog, med stöd av delegering, kommunens yttrande till Energimarknadsinspektionen utan ytterligare synpunkter på ansökan. · [KSAU protokoll § 202](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2022/2022-05-24/protokoll.html#sida-12) · Handlingar: [Handlingar till sammanträdet, punkt 6 (PDF)](https://web.archive.org/web/20220702235630id_/https://kungsbacka.se/download/18.72c977df18094afe5b03386c/1653036647214/Kommunstyrelsens%20arbetsutskott%20handlingar%202022-05-24.pdf)

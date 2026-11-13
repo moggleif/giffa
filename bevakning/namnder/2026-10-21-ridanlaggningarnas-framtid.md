@@ -27,7 +27,7 @@ inte i handlingarna, så den anläggningen har ingen ort här. Något beslut om 
 
 ## Händelser
 
-- 2026-10-21 · info · Nämnden för Kultur & Fritid informerades om utredningen om ridanläggningarna. · [Kultur & Fritid protokoll § 117](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2026/2026-10-21/protokoll.html#sida-7)
+- 2026-10-21 · info · Nämnden för Kultur & Fritid informerades om utredningen om ridanläggningarna. · [Kultur & Fritid protokoll § 117](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2026/2026-10-21/protokoll.html#sida-7) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2026/2026-10-21/handlingar.html#sida-11)
 
 ## Tycka till
 

@@ -11,4 +11,4 @@ Slutredovisad 2020.
 
 ## Händelser
 
-- 2020-04-15 · klart · Nämnden för Teknik fick slutredovisningen av den nya dricksvattenledningen mellan Fjärås och Klev. · [Teknik protokoll § 38](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2020/2020-04-15/protokoll.html#sida-14)
+- 2020-04-15 · klart · Nämnden för Teknik fick slutredovisningen av den nya dricksvattenledningen mellan Fjärås och Klev. · [Teknik protokoll § 38](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2020/2020-04-15/protokoll.html#sida-14) · Handlingar: [Handlingar till sammanträdet, punkt 9 (PDF)](https://web.archive.org/web/20210506044034id_/https://www.kungsbacka.se/globalassets/kommun-och-politik/dokument/moten-handlingar-och-protokoll/teknik/handlingar/2020/handlingar-for-mote-namnden-for-teknik-den-2020-04-15.pdf)
