@@ -12,7 +12,7 @@ exteriör och den parkliknande trädgården. Huvudbyggnaden är klassad B i
 Riksantikvarieämbetets bebyggelseregister. Begäran om planbesked gällde
 12–18 lägenheter i de befintliga byggnaderna. Kommunstyrelsen sade ja 2025 och
 godkände en projektbeställning 2026. Byggnadsnämndens beslut om
-planuppdraget väntas 2026-11-19.
+planuppdraget står på kallelsen till sammanträdet 2026-11-19.
 
 ## Händelser
 
@@ -24,4 +24,4 @@ planuppdraget väntas 2026-11-19.
 
 ## Tycka till
 
-- 2026-11-19 · vantas · Byggnadsnämnden väntas besluta om uppdraget att upprätta detaljplanen; arbetsutskottet har föreslagit beslutet, och datumet är byggnadsnämndens nästa sammanträde. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
+- 2026-11-19 · beslut · Byggnadsnämnden ska besluta om uppdraget att upprätta detaljplan för bostäder inom Lyngås 3:3 i Onsala och att genomföra samråd; arbetsutskottet har föreslagit det. · [Byggnadsnämnden kallelse, punkt 9](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-11-19/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-11-19/handlingar.html#sida-83), [Projektbeställning](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-11-19/handlingar.html#sida-85)
