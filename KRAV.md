@@ -358,33 +358,35 @@ först: partiernas tecken (K30), ärendet, orten, datumet och källan. Listan
 säger bara att ett organ har informerats och inget om när ett beslut
 kommer. Finns inget står det.
 
-## K33 – Processtegen
+## K33 – Processtegen för planerna
 
-**Givet** ett pågående ärende,
+**Givet** en pågående plan – en detaljplan, också en ändring eller ett
+upphävande av en, eller ett planprogram, efter hur rubriken börjar –
 **när** dess kort och egna sida byggs,
-**så** visar *Var ärendet står* stegen för ärendets slag i ordning – för
-en detaljplan, också en ändring eller ett upphävande av en, *Uppdrag,
-Samråd, Granskning, Antagande*, för ett planprogram *Uppdrag, Samråd,
-Godkännande*, för andra ärenden *Beredning, Beslut* – med spårets tecken
-(K30) och för varje steg om det är gjort, är där ärendet står nu eller
-kommer. Slaget avgörs av hur rubriken börjar.
-
-Ett steg känns igen på händelsens eller tillfällets steg, och där steget
-delas med annat på orden i texten: ett uppdrag på *uppdrag*,
-*projektbeställning* eller *återuppta*, ett antagande på ett beslut som
-säger att planen antas eller antogs, ett godkännande på *godkänn…
-planprogram*. Ett exploateringsavtal eller principavtal är därför inte
-ett antagande. Steget nu är steget med den senaste händelsen, så att en
-plan som börjat om står på sitt nya steg. Har en information sagt att
-antagandet eller planen upphävts räknas bara det som hänt efter den, om
-något av det är ett steg; annars visas planen fram till upphävandet.
-Upphävandet står med datum och källa under stegen, och noten säger vilket
-det är.
+**så** visar *Var planen står* stegen i ordning – för en detaljplan
+*Uppdrag, Samråd, Granskning, Antagande*, för ett planprogram *Uppdrag,
+Samråd, Godkännande* – med spårets tecken (K30) och för varje steg om det
+är gjort, är där planen står nu eller kommer. Bara det händelserna säger
+räknas: ett samråd och en granskning på sitt steg, ett antagande på ett
+beslut som säger att planen *antog* eller *antagit*, ett godkännande på
+ett beslut som säger *godkände planprogrammet*. Ett kommande tillfälle
+räknas till antagandet när det säger att planen ska *antas*, och till
+uppdraget när det gäller *uppdraget att upprätta*. Steget nu är steget
+med den senaste händelsen, så att en plan som börjat om står på sitt nya
+steg.
 
 Ett gjort steg och steget nu har datumet för den senaste händelsen i
 steget, eller *inget datum i källorna*; steget nu och ett kommande steg
 har datumet för sitt kommande tillfälle när det finns, och ett kommande
-steg utan tillfälle står som *datum inte känt än*. För planerna står att
-stegen följer plan- och bygglagens standardförfarande och att ett
-begränsat förfarande inte har någon granskning, med länk till lagen.
-Avgjorda ärenden har ingen stege.
+steg utan tillfälle står som *datum inte känt än*. Säger ingen händelse
+vilket steg planen står på visas stegen utan läge, med de datum som
+finns för kommande tillfällen, och texten *Var planen står går inte att
+läsa ut ur händelserna*.
+
+Säger en information att antagandet eller planen upphävts räknas bara det
+som hänt efter det första upphävandet, om något av det är ett steg;
+annars visas planen fram till upphävandet. Upphävandet står med datum och
+källa under stegen, och texten säger vilket av de två som visas. Under
+stegen står också att de följer plan- och bygglagens standardförfarande
+och att ett begränsat förfarande inte har någon granskning, med länk till
+lagen. Avgjorda planer och andra ärenden har ingen stege.

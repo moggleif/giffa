@@ -17,15 +17,16 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
   Spåret följer av steget i ärendets fil, så ingen ny uppgift behövs i
   formatet (`webbplats/spar.py`). Varje spår har ett tecken och en färg som
   används överallt; uppmärksammat får en tredje färg.
-- **Processtegen läses ur det som redan finns** – händelsernas steg och
-  text, statusen och tillfällena att tycka till – i stället för ett nytt
-  fält för förfarandet i front matter. Slaget avgörs av hur rubriken börjar.
-  Ett uppdrag och ett antagande känns igen på orden i händelsen eller
-  tillfället, eftersom planerna också har andra beslut, som
-  exploateringsavtal och principavtal. Steget nu är det med den senaste
-  händelsen, och en information om att antagandet upphävts nollställer
-  stegen. Stegen för de tre slagen står som konstanter i
-  `webbplats/stege.py`; en datafil motiveras när ett fjärde slag behövs.
+- **Processtegen bara för planerna, och bara det händelserna säger.**
+  Detaljplaner och planprogram har en process i plan- och bygglagen;
+  andra ärenden har ingen, och en stege för dem skulle gissa. Stegen läses
+  ur det som redan finns – händelsernas steg och ord, och tillfällena att
+  tycka till – i stället för ett nytt fält i front matter. Två
+  granskningsvarv visade att breda ordmönster (*anta*, *uppdrag*) fångar
+  exploateringsavtal och andra beslut, så mönstren är snäva och ett läge
+  som inte går att läsa ut står som okänt. Reglerna står i K33. Stegen
+  står som konstanter i `webbplats/stege.py`; en datafil motiveras när
+  ett tredje slag behövs.
 - **Hellre märka än gissa.** Kommande steg utan tillfälle står som *datum
   inte känt än*, och planernas stege säger att den följer
   standardförfarandet och att ett begränsat förfarande saknar granskning,
@@ -39,12 +40,13 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
 
 ## Konsekvenser
 
-- En plan vars antagande skrivits utan att säga att planen antas eller
-  antogs visas som om antagandet kommer. `bevakning/README.md` säger hur antagandet ska
-  skrivas.
+- En plan vars antagande skrivits utan *antog* eller *antagit* visas som om
+  antagandet kommer, och en plan där samråd eller granskning bara nämns i
+  ett förslag visas med okänt läge. `bevakning/README.md` säger hur
+  antagandet ska skrivas.
 - En plan med begränsat förfarande visar granskningen som kommande tills
   den antas; noten under stegen säger varför.
 - Kalendern visar inte när kallelsen publicerades, eftersom det datumet
   inte finns i ärendena; tiden för partierna räknas fram till
   sammanträdet.
-- Korten blir högre, så *Pågår* blir längre på mobilen.
+- Planernas kort blir högre, så *Pågår* blir längre på mobilen.

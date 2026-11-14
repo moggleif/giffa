@@ -93,16 +93,13 @@ tabellen, och teckenförklaringen på sidan visar samma betydelser
 | `avbrutet`   | avbrutet eller upphävt                          |
 | `info`       | information, avstämning eller överprövning av en högre instans |
 
-Stegen och texten ger också processtegen på kortet och ärendets sida
-(K33): ett samråd och en granskning räknas på sitt steg, ett uppdrag när
-texten säger *uppdrag*, *projektbeställning* eller *återuppta*, ett
-antagande när ett `beslut` säger att planen *antas* eller *antogs*, och
-ett planprogram när det säger att planprogrammet *godkänns*. Skriv därför
-de besluten med de orden, och andra beslut i en plan, som
-exploateringsavtal, utan dem. En `info` om att antagandet *upphävts*
-nollställer stegen. Samråd och granskning hör till spåret *för
-alla*, de andra stegen till *partierna* (K30); en `info` det senaste
-året utan förslag eller tillfälle efter står under *På väg upp* (K32).
+Stegen och texten ger också processtegen på planernas kort och sidor:
+hur ett antagande, ett uppdrag och ett upphävande känns igen står i K33 i
+[KRAV.md](../KRAV.md). Skriv därför ett antagande som *antog
+detaljplanen* och andra beslut i en plan, som exploateringsavtal, utan
+det ordet. Samråd och granskning hör till spåret *för alla*, de andra
+stegen till *partierna* (K30); en `info` det senaste året utan förslag
+eller tillfälle efter står under *På väg upp* (K32).
 
 **Tycka till** är valfritt: kommande tillfällen att påverka, i samma
 format som händelserna. Datumet är sista dagen för synpunkter eller
