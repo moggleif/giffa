@@ -149,7 +149,7 @@ namn och ärende:
 | `kalla`  | Var namnet kommer ifrån: en länk `[Rubrik](https://…)` till en artikel eller handling, eller en text som *projektägaren* eller *ärendets rubrik* |
 
 Ett namn kan stå på flera rader, en per ärende, och ett ärende kan ha
-flera namn. Namnen står i filens ordning under *Uppmärksammat* på
+flera namn. Namnen står i filens ordning under *Ärenden med mer uppmärksamhet* på
 startsidan och först i listorna *Pågår*, *Beslutat* och *Historik* (K29);
 flytta ett namns rader för att flytta namnet och dess ärenden. Namnet visas också, som en färgad
 etikett, på
