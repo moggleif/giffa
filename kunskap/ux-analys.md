@@ -1,5 +1,8 @@
 # UX-analys: sidan för politiker och äldre läsare
 
+Den här analysen är genomförd. En ny analys av sidan som den såg ut
+2026-11-14 står i [ux-analys-2026-11-14.md](ux-analys-2026-11-14.md).
+
 Varför sidan på <https://moggleif.github.io/giffa/> inte blev så bra som
 den borde, och vad som görs åt det. Analysen gjordes 2026-11-10 på sidan
 byggd ur `main` efter historiken (PR #15, commit `eb92bdb`), med 108
