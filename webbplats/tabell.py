@@ -1,4 +1,4 @@
-"""Krav: K4, K12 och K27 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K12, K27 och K29 i KRAV.md. Test: tests/test_sidor.py.
 
 Tidslinjen som på kommunhandlingars sidor om initiativ och lokalbehov: en
 rad per ärende, en kolumn per år och årets händelser som ikoner på ett band
@@ -12,6 +12,7 @@ from html import escape
 from webbplats.arende import Arende
 from webbplats.datum import tid
 from webbplats.ikoner import ikon
+from webbplats.kort import etiketter
 from webbplats.paverka import kommande
 
 
@@ -61,5 +62,4 @@ def cell(arende: Arende, ar: int, egna: range) -> str:
 
 
 def namn_liten(arende: Arende) -> str:
-    namn = ", ".join(arende.kallas)
-    return f' <small class="kallas">Uppmärksammat som {escape(namn)}</small>' if namn else ""
+    return f' <small class="kallas">{etiketter(arende)}</small>' if arende.kallas else ""

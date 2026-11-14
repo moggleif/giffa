@@ -68,9 +68,36 @@ class Sidorna(unittest.TestCase):
 
     def test_namnen_star_i_kortet_tidslinjen_och_pa_arendets_sida(self):
         html = lista(SAJT, self.arenden, LISTOR[0])
-        self.assertIn('<p class="kallas">Uppmärksammat som Lagret, Stråket</p>', html)
-        self.assertIn('<small class="kallas">Uppmärksammat som Lagret, Stråket</small>', html)
-        self.assertIn('<p class="kallas">Uppmärksammat som Stråket</p>', arendesida(SAJT, self.arenden[0]))
+        lagret, straket = '<span class="etikett">Lagret</span>', '<span class="etikett">Stråket</span>'
+        self.assertIn(f'<p class="kallas">Uppmärksammat som {lagret} {straket}</p>', html)
+        self.assertIn(f'<small class="kallas">{lagret} {straket}</small>', html)
+        self.assertIn(f'<p class="kallas">Uppmärksammat som {straket}</p>', arendesida(SAJT, self.arenden[0]))
+
+
+class Overst(unittest.TestCase):
+    """K29: de uppmärksammade står först i listorna, i listans ordning."""
+
+    def setUp(self):
+        self.namnen = las(LISTAN, {"a", "b"})
+        self.arenden = [arende("beslutat", i) for i in ("a", "c", "b")]
+
+    def test_uppmarksammade_forst_i_listans_ordning_och_resten_under(self):
+        html = lista(SAJT, self.arenden, LISTOR[1], self.namnen)
+        b, a, c = (html.index(f'<article id="{i}"') for i in "bac")
+        self.assertLess(html.index('<h2 id="uppmarksammat">'), b)
+        self.assertLess(b, a)
+        self.assertLess(a, html.index('<h2 id="ovriga">Övriga ärenden</h2>'))
+        self.assertLess(html.index('<h2 id="ovriga">'), c)
+
+    def test_pagar_behaller_sina_rubriker_under(self):
+        pagar = [arende("pågår", i) for i in ("a", "c")]
+        html = lista(SAJT, pagar, LISTOR[0], self.namnen)
+        self.assertLess(html.index('<article id="a"'), html.index('<h2 id="rorliga">'))
+        self.assertNotIn('id="ovriga"', html)
+
+    def test_utan_uppmarksammade_i_listan_ingen_rubrik(self):
+        html = lista(SAJT, [arende("beslutat", "c")], LISTOR[1], self.namnen)
+        self.assertNotIn("Uppmärksammat", html)
 
 
 if __name__ == "__main__":

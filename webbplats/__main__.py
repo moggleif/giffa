@@ -80,7 +80,7 @@ def bygg(rot: Path, ut: Path, repo: str) -> None:
         "sok.html": soksida(sajt, arenden),
         "bevakar.html": bevakar(sajt, platser, kallor),
     }
-    sidor |= {listan[0]: lista(sajt, arenden, listan) for listan in LISTOR}
+    sidor |= {listan[0]: lista(sajt, arenden, listan, namnen) for listan in LISTOR}
     sidor |= {a.sida: arendesida(sajt, a) for a in arenden}
     (ut / "arende").mkdir(exist_ok=True)
     for namn, html in sidor.items():

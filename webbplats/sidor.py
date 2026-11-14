@@ -1,4 +1,4 @@
-"""Krav: K5, K6, K7, K12, K19, K22 och K27 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K5, K6, K7, K12, K19, K22, K27 och K29 i KRAV.md. Test: tests/test_sidor.py.
 
 Startsidan med det som går att påverka, det uppmärksammade, det nya och hur många ärenden
 varje lista har, och listorna: det som pågår, det som är beslutat och
@@ -17,7 +17,7 @@ from webbplats.mall import Sajt, sida, urval, urvalslista
 from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
-from webbplats.uppmarksammat import Namn, ruta
+from webbplats.uppmarksammat import Namn, ordning, ruta
 
 STILLA = timedelta(days=2 * 365)
 LISTOR = (
@@ -74,12 +74,26 @@ def nytt(arenden: list[Arende], runda: Runda, sajt: Sajt) -> str:
     )
 
 
-def lista(sajt: Sajt, arenden: list[Arende], listan: tuple) -> str:
+def lista(sajt: Sajt, arenden: list[Arende], listan: tuple, namnen: Sequence[Namn] = ()) -> str:
     adress, rubrik, statusar, inledning = listan
     valda = [a for a in arenden if a.falt["status"] in statusar]
-    delar = pagar_delar(sajt, valda) if statusar == ("pågår",) else avsnitt(sajt, valda)
-    innehall = f"<p>{inledning}</p>" + urval(sajt) + teckenforklaring() + delar
+    rang = ordning(namnen)
+    lyfta = sorted((a for a in valda if a.id in rang), key=lambda a: rang[a.id])
+    ovriga = [a for a in valda if a.id not in rang]
+    delar = pagar_delar(sajt, ovriga) if statusar == ("pågår",) else avsnitt(sajt, ovriga)
+    innehall = f"<p>{inledning}</p>" + urval(sajt) + teckenforklaring() + forst(sajt, lyfta, delar)
     return sida(sajt, adress, rubrik, innehall)
+
+
+def forst(sajt: Sajt, lyfta: list[Arende], delar: str) -> str:
+    if not lyfta:
+        return delar
+    rubrik = "" if delar.startswith("<h2") else '<h2 id="ovriga">Övriga ärenden</h2>'
+    return (
+        '<h2 id="uppmarksammat">Uppmärksammat</h2>'
+        "<p>Projektägarens urval, i den ordningen; resten följer under.</p>"
+        f"{avsnitt(sajt, lyfta)}{rubrik}{delar}"
+    )
 
 
 def pagar_delar(sajt: Sajt, arenden: list[Arende]) -> str:

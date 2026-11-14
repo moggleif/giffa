@@ -1,8 +1,8 @@
-"""Krav: K27 i KRAV.md. Test: tests/test_uppmarksammat.py.
+"""Krav: K27 och K29 i KRAV.md. Test: tests/test_uppmarksammat.py.
 
 Läser bevakning/uppmarksammade.csv – namnen folk använder på ärendena, i
 den ordning projektägaren skrivit dem – och ger rutan Uppmärksammat på
-startsidan.
+startsidan och ordningen som lyfter dem överst i listorna.
 """
 
 import csv
@@ -57,6 +57,11 @@ def namn_per_arende(namnen: list[Namn]) -> dict[str, tuple[str, ...]]:
         for arende in namn.arenden:
             per_arende[arende] = per_arende.get(arende, ()) + (namn.namn,)
     return per_arende
+
+
+def ordning(namnen: Sequence[Namn]) -> dict[str, int]:
+    ids = [arende for namn in namnen for arende in namn.arenden]
+    return {arende: plats for plats, arende in enumerate(dict.fromkeys(ids))}
 
 
 def ruta(namnen: Sequence[Namn], arenden: list[Arende]) -> str:

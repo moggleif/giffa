@@ -307,3 +307,14 @@ ur `bevakning/uppmarksammade.csv`, i orterna eller i organet, utan hänsyn
 till stora och små bokstäver. Utan ord syns alla ärenden, och utan skript
 syns hela listan så att webbläsarens egen sökning fungerar. Finns ingen
 träff står det.
+
+## K29 – Uppmärksammat först i listorna
+
+**Givet** ärenden i `bevakning/uppmarksammade.csv` (K27),
+**när** listorna *Pågår*, *Beslutat* och *Historik* byggs,
+**så** står de uppmärksammade ärenden som hör till listan först, under
+rubriken *Uppmärksammat* och i den ordning de först står i filen, och
+resten följer under som förut: på *Pågår* med uppdelningen i det som rört
+sig och det som stått still (K19), på de andra under *Övriga ärenden*.
+Namnen står som färgade etiketter i tidslinjen och på korten. Har listan
+inget uppmärksammat ärende ser den ut som förut.
