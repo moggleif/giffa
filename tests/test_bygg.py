@@ -1,4 +1,4 @@
-"""K3, K10 och K22: bygget av hela repot ger sidorna, och ett felaktigt ärende stoppar."""
+"""K3, K10, K22, K27 och K28: bygget av hela repot ger sidorna, och ett felaktigt ärende stoppar."""
 
 import shutil
 import tempfile
@@ -23,6 +23,8 @@ class Bygg(unittest.TestCase):
             "beslutat.html",
             "historik.html",
             "bevakar.html",
+            "sok.html",
+            "sok.js",
             "stil.css",
             "urval.js",
             ".nojekyll",
@@ -55,6 +57,15 @@ class Bygg(unittest.TestCase):
         with self.assertRaises(SystemExit) as fel:
             bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
         self.assertIn("OMRADE.md: orten står under flera föreningar: Åsa", str(fel.exception))
+
+    def test_okant_arende_i_uppmarksammade_stoppar_med_filens_namn(self):
+        rot = self.ut / "repo"
+        shutil.copytree(ROT, rot, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        with (rot / "bevakning/uppmarksammade.csv").open("a", encoding="utf-8") as fil:
+            fil.write("Påhittat,finns-inte,projektägaren\n")
+        with self.assertRaises(SystemExit) as fel:
+            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
+        self.assertIn("bevakning/uppmarksammade.csv: ärendet finns inte: finns-inte", str(fel.exception))
 
     def test_samma_filnamn_i_tva_kataloger_stoppar(self):
         rot = self.ut / "repo"

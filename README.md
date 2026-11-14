@@ -7,10 +7,11 @@ arbetsutskott, nämnderna, bygglov, detaljplaner och det kommunen publicerar
 på kungsbacka.se.
 
 **Sidan: <https://moggleif.github.io/giffa/>** – på startsidan när och var
-man kan tycka till innan något beslutas och det nya sedan förra rundan; på
+man kan tycka till innan något beslutas, de uppmärksammade ärendena med
+namnen de har i folkmun och det nya sedan förra rundan; på
 egna sidor det som pågår (det som rört sig de senaste två åren först), det
-som är beslutat, en historik över det som är klart, vad som bevakas och en
-sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
+som är beslutat, en historik över det som är klart, en sökning på rubrik,
+namn och ort, vad som bevakas och en sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
 korten. Fastighetsbeteckningar, platser, gator och detaljplaner i ett ärende
 länkar till kommunens karta. Ärendets sida har länkar direkt till handlingarna
 under de steg där underlaget finns och, för förslag med innehåll, förslaget i korthet.

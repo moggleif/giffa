@@ -1,10 +1,11 @@
-"""Krav: K5, K6, K7, K12, K19 och K22 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K5, K6, K7, K12, K19, K22 och K27 i KRAV.md. Test: tests/test_sidor.py.
 
-Startsidan med det som går att påverka, det nya och hur många ärenden
+Startsidan med det som går att påverka, det uppmärksammade, det nya och hur många ärenden
 varje lista har, och listorna: det som pågår, det som är beslutat och
 historiken med det som är klart eller avbrutet.
 """
 
+from collections.abc import Sequence
 from datetime import timedelta
 from html import escape
 
@@ -16,6 +17,7 @@ from webbplats.mall import Sajt, sida, urval, urvalslista
 from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
+from webbplats.uppmarksammat import Namn, ruta
 
 STILLA = timedelta(days=2 * 365)
 LISTOR = (
@@ -30,14 +32,17 @@ LISTOR = (
 )
 
 
-def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
+def startsida(
+    sajt: Sajt, arenden: list[Arende], runda: Runda, namnen: Sequence[Namn] = ()
+) -> str:
     inledning = (
         "<p>Vad som beslutas, planeras och byggs i orterna hos de fyra föreningarna. "
         "Utan val syns allt; välj en ort, eller en förening för att bara se dess orter. "
         "Varje händelse länkar till sin källa.</p>"
     )
     paverka = tycka_till_nu(arenden, sajt)
-    innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda, sajt) + oversikt(arenden)
+    lyfta = ruta(namnen, arenden)
+    innehall = inledning + urval(sajt) + paverka + lyfta + nytt(arenden, runda, sajt) + oversikt(arenden)
     return sida(sajt, "index.html", "Giffå", innehall)
 
 

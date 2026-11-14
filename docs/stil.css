@@ -94,3 +94,13 @@ ol.handelser { display: grid; gap: 0.5rem; padding-left: 1.2rem; }
 ul.oversikt { font-size: 1.1rem; display: grid; gap: 0.4rem; }
 .handlingar { display: block; margin-top: 0.3rem; }
 ul.forslaget { display: grid; gap: 0.4rem; }
+.kallas { margin: 0; font-style: italic; color: var(--accent); }
+table.tidslinje th[scope="row"] small.kallas { display: block; color: var(--accent); }
+ul.uppmarksammat { display: grid; gap: 0.8rem; padding-left: 1.2rem; }
+ul.uppmarksammat > li > strong { font-size: 1.1rem; }
+ul.uppmarksammat ul { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+ul.uppmarksammat small, ul.sokning small { color: var(--dampad); }
+p.sok input { font: inherit; padding: 0.4rem 0.6rem; width: min(100%, 24rem);
+              border: 1px solid var(--linje); border-radius: 4px; }
+ul.sokning { display: grid; gap: 0.5rem; padding-left: 1.2rem; }
+ul.sokning .kallas { display: block; }

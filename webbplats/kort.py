@@ -1,4 +1,4 @@
-"""Krav: K4, K5, K6, K9, K12, K18, K23 och K24 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9, K12, K18, K23, K24 och K27 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett kort per ärende under tabellen, korten för det som är nytt sedan
 förra rundan överst på startsidan, och delarna som ärendets egen sida
@@ -19,7 +19,7 @@ def kort(arende: Arende, sajt: Sajt) -> str:
     falt, senaste = arende.falt, arende.handelser[0]
     return (
         f'<article id="{arende.id}" data-ort="{escape("|".join(arende.orter))}">'
-        f"{markor(arende)}<h3>{sajt.karta.lanka(falt['rubrik'])}</h3>"
+        f"{markor(arende)}<h3>{sajt.karta.lanka(falt['rubrik'])}</h3>{namn_rad(arende)}"
         f'<p class="organ">{escape(organ(arende))}</p>'
         + (f"<p>{sajt.karta.lanka(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
@@ -34,6 +34,12 @@ def markor(arende: Arende) -> str:
     aren = str(forsta) if forsta == sista else f"Pågått {forsta}–{sista}"
     orter = "".join(f"<span>{escape(o)}</span>" for o in arende.orter)
     return f'<p class="markor"><span>{aren}</span>{orter}</p>'
+
+
+def namn_rad(arende: Arende) -> str:
+    if not arende.kallas:
+        return ""
+    return f'<p class="kallas">Uppmärksammat som {escape(", ".join(arende.kallas))}</p>'
 
 
 def organ(arende: Arende) -> str:

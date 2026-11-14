@@ -135,6 +135,26 @@ per rad med datum, rubriken som länk och var den stod. Kungsbacka-Posten och
 sociala medier tas bara med när en människa länkat dem i ett issue
 ([KALLOR.md](../KALLOR.md)).
 
+## Uppmärksammade ärenden
+
+[`uppmarksammade.csv`](uppmarksammade.csv) är projektägarens lista över
+ärenden som många följer och namnen de har i folkmun
+([beslut 0010](../beslut/0010-uppmarksammade-och-sok.md), K27). En rad per
+namn och ärende:
+
+| Kolumn   | Innehåll                                                       |
+| -------- | -------------------------------------------------------------- |
+| `namn`   | Namnet folk använder, som *Restaurangstråket i Åsa*, eller ett ämne, som *Dagvatten och översvämningar* |
+| `arende` | Ärendets filnamn utan `.md`                                     |
+| `kalla`  | Var namnet kommer ifrån: en länk `[Rubrik](https://…)` till en artikel eller handling, eller en text som *projektägaren* eller *ärendets rubrik* |
+
+Ett namn kan stå på flera rader, en per ärende, och ett ärende kan ha
+flera namn. Namnen står i filens ordning under *Uppmärksammat* på
+startsidan; flytta en rad för att flytta namnet. Namnet visas också, som
+*Uppmärksammat som …*, på
+ärendets kort, egen sida och i tidslinjen, och går att söka på under
+*Sök*. Ett ärende som inte finns stoppar bygget.
+
 ## Rundorna
 
 [`rundor.csv`](rundor.csv) har en rad per bevakningsrunda med periodens
