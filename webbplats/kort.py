@@ -19,7 +19,7 @@ def kort(arende: Arende, sajt: Sajt) -> str:
     falt, senaste = arende.falt, arende.handelser[0]
     return (
         f'<article id="{arende.id}" data-ort="{escape("|".join(arende.orter))}">'
-        f"{markor(arende)}<h3>{sajt.karta.lanka(falt['rubrik'])}</h3>{kallas(arende)}"
+        f"{markor(arende)}<h3>{sajt.karta.lanka(falt['rubrik'])}</h3>{namn_rad(arende)}"
         f'<p class="organ">{escape(organ(arende))}</p>'
         + (f"<p>{sajt.karta.lanka(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
@@ -36,10 +36,10 @@ def markor(arende: Arende) -> str:
     return f'<p class="markor"><span>{aren}</span>{orter}</p>'
 
 
-def kallas(arende: Arende) -> str:
+def namn_rad(arende: Arende) -> str:
     if not arende.kallas:
         return ""
-    return f'<p class="kallas">Kallas {", ".join(escape(n) for n in arende.kallas)}</p>'
+    return f'<p class="kallas">Uppmärksammat som {escape(", ".join(arende.kallas))}</p>'
 
 
 def organ(arende: Arende) -> str:

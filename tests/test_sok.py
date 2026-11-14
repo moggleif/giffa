@@ -14,7 +14,7 @@ class Soksidan(unittest.TestCase):
         self.assertIn('data-sok="ny förskola stråket i åsa åsa fjärås nämnden"', html)
         self.assertIn('data-sok="ny förskola åsa fjärås nämnden"', html)
         self.assertIn('<a href="arende/b.html">Ny förskola</a>', html)
-        self.assertIn('<p class="kallas">Kallas Stråket i Åsa</p>', html)
+        self.assertIn('<p class="kallas">Uppmärksammat som Stråket i Åsa</p>', html)
 
     def test_rutan_ar_dold_tills_skriptet_visar_den(self):
         html = soksida(SAJT, [arende("pågår")])

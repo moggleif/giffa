@@ -7,7 +7,7 @@ from dataclasses import replace
 from tests.test_sidor import RUNDA, SAJT, arende
 from webbplats.arendesida import arendesida
 from webbplats.sidor import LISTOR, lista, startsida
-from webbplats.uppmarksammat import Namn, kallas, las
+from webbplats.uppmarksammat import Namn, las, namn_per_arende
 
 LANKEN = "[Artikeln](https://example.org/a)"
 LISTAN = (
@@ -26,7 +26,7 @@ class Las(unittest.TestCase):
         )
 
     def test_varje_arende_far_sina_namn(self):
-        self.assertEqual(kallas(las(LISTAN, {"a", "b"})), {"b": ("Lagret", "Stråket"), "a": ("Stråket",)})
+        self.assertEqual(namn_per_arende(las(LISTAN, {"a", "b"})), {"b": ("Lagret", "Stråket"), "a": ("Stråket",)})
 
     def test_okant_arende_stoppar(self):
         with self.assertRaisesRegex(ValueError, "ärendet finns inte: b"):
@@ -40,6 +40,10 @@ class Las(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "ingen https-länk"):
             las("namn,arende,kalla\nLagret,a,[Art](http://example.org)\n", {"a"})
 
+    def test_samma_namn_och_arende_tva_ganger_stoppar(self):
+        with self.assertRaisesRegex(ValueError, "två gånger: Lagret, a"):
+            las("namn,arende,kalla\nLagret,a,x\n Lagret ,a,y\n", {"a"})
+
     def test_fel_kolumner_stoppar(self):
         with self.assertRaisesRegex(ValueError, "kolumnerna"):
             las("namn,fil\nLagret,a\n", {"a"})
@@ -48,7 +52,7 @@ class Las(unittest.TestCase):
 class Sidorna(unittest.TestCase):
     def setUp(self):
         self.namnen = las(LISTAN, {"a", "b"})
-        per = kallas(self.namnen)
+        per = namn_per_arende(self.namnen)
         self.arenden = [replace(arende("pågår", i), kallas=per[i]) for i in ("a", "b")]
 
     def test_startsidan_har_rutan_i_listans_ordning_med_kallan(self):
@@ -57,16 +61,16 @@ class Sidorna(unittest.TestCase):
         self.assertLess(html.index("<strong>Lagret</strong>"), html.index("<strong>Stråket</strong>"))
         self.assertIn('Namnet: <a href="https://example.org/a">Artikeln</a>', html)
         self.assertIn('<li data-ort="Fjärås|Åsa"><strong>Stråket</strong>', html)
-        self.assertIn('<a href="arende/b.html">Ny förskola</a>', html)
+        self.assertIn('<li data-ort="Åsa|Fjärås"><a href="arende/b.html">Ny förskola</a>', html)
 
     def test_utan_namn_ingen_ruta(self):
         self.assertNotIn("Uppmärksammat", startsida(SAJT, self.arenden, RUNDA))
 
     def test_namnen_star_i_kortet_tidslinjen_och_pa_arendets_sida(self):
         html = lista(SAJT, self.arenden, LISTOR[0])
-        self.assertIn('<p class="kallas">Kallas Lagret, Stråket</p>', html)
-        self.assertIn('<small class="kallas">Kallas Lagret, Stråket</small>', html)
-        self.assertIn('<p class="kallas">Kallas Stråket</p>', arendesida(SAJT, self.arenden[0]))
+        self.assertIn('<p class="kallas">Uppmärksammat som Lagret, Stråket</p>', html)
+        self.assertIn('<small class="kallas">Uppmärksammat som Lagret, Stråket</small>', html)
+        self.assertIn('<p class="kallas">Uppmärksammat som Stråket</p>', arendesida(SAJT, self.arenden[0]))
 
 
 if __name__ == "__main__":

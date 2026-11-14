@@ -284,16 +284,19 @@ länkas bara till en tjänsteskrivelse. Hittas inget ändras inget och ingen PR
 
 ## K27 – Uppmärksammat, med namnen folk använder
 
-**Givet** att projektägaren skrivit ett namn och ett eller flera ärenden i
-`bevakning/uppmarksammade.csv`, med en källa till namnet,
+**Givet** att projektägaren skrivit ett namn – det ärendet kallas i
+folkmun, eller ett gemensamt ämne som *Dagvatten och översvämningar* – och
+ett eller flera ärenden i `bevakning/uppmarksammade.csv`, med en källa till
+namnet,
 **när** sidan byggs,
 **så** står namnen under *Uppmärksammat* på startsidan, i den ordning de
 står i filen, med sina ärenden under och källan till namnet intill. Namnet
-står också under rubriken på ärendets kort och egna sida och i
-tidslinjen, så att den som känner ärendet under ett annat namn känner igen
-det. Ortsvalet gäller rutan som allt annat. Ett ärende som inte finns,
-en tom rad eller en källa som är en länk men inte en https-länk stoppar
-bygget.
+står också som *Uppmärksammat som …* under rubriken på ärendets kort och
+egna sida och i tidslinjen, så att den som känner ärendet under ett annat
+namn känner igen det. Ortsvalet gäller rutan som allt annat, för namnen
+och för varje ärende under dem. Ett ärende som inte finns, ett tomt fält,
+samma namn och ärende två gånger eller en källa som är en länk men inte en
+https-länk stoppar bygget.
 
 ## K28 – Sök på rubrik och namn
 

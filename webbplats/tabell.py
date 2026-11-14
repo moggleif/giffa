@@ -38,7 +38,7 @@ def rad(arende: Arende, aren: range, idag: date) -> str:
     return (
         f'<tr data-ort="{escape("|".join(arende.orter))}"><th scope="row">'
         f'<a href="{arende.sida}">{escape(arende.falt["rubrik"])}</a> '
-        f"<small>{escape(', '.join(arende.orter))}</small>{kallas(arende)}"
+        f"<small>{escape(', '.join(arende.orter))}</small>{namn_liten(arende)}"
         f"{tycka_till_marke(arende, idag)}"
         f"</th>{celler}</tr>"
     )
@@ -60,6 +60,6 @@ def cell(arende: Arende, ar: int, egna: range) -> str:
     return f'<td class="{klass}">{"".join(ikon(h) for h in arets)}</td>'
 
 
-def kallas(arende: Arende) -> str:
+def namn_liten(arende: Arende) -> str:
     namn = ", ".join(arende.kallas)
-    return f' <small class="kallas">Kallas {escape(namn)}</small>' if namn else ""
+    return f' <small class="kallas">Uppmärksammat som {escape(namn)}</small>' if namn else ""

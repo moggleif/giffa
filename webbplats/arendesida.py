@@ -8,14 +8,14 @@ from html import escape
 
 from webbplats.arende import Arende
 from webbplats.handlingar import forslaget
-from webbplats.kort import kallas, markor, media, organ, post
+from webbplats.kort import markor, media, namn_rad, organ, post
 from webbplats.mall import Sajt, sida
 from webbplats.paverka import markering
 
 
 def arendesida(sajt: Sajt, arende: Arende) -> str:
     innehall = (
-        f'{markor(arende)}{kallas(arende)}<p class="organ">{escape(organ(arende))} · status: {arende.falt["status"]}</p>'
+        f'{markor(arende)}{namn_rad(arende)}<p class="organ">{escape(organ(arende))} · status: {arende.falt["status"]}</p>'
         + (f"<p>{sajt.karta.lanka(arende.ingress)}</p>" if arende.ingress else "")
         + forslaget(arende, sajt.karta)
         + markering(arende, sajt)

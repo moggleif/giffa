@@ -7,7 +7,7 @@ rutan som docs/sok.js filtrerar med. Utan skript står hela listan.
 from html import escape
 
 from webbplats.arende import Arende
-from webbplats.kort import kallas
+from webbplats.kort import namn_rad
 from webbplats.mall import Sajt, sida
 
 
@@ -29,5 +29,5 @@ def post(arende: Arende) -> str:
     sokbart = " ".join((falt["rubrik"], *arende.kallas, *arende.orter, falt["organ"])).lower()
     return (
         f'<li data-sok="{escape(sokbart)}"><a href="{arende.sida}">{escape(falt["rubrik"])}</a> '
-        f"<small>{escape(', '.join(arende.orter))} · {falt['status']}</small>{kallas(arende)}</li>"
+        f"<small>{escape(', '.join(arende.orter))} · {falt['status']}</small>{namn_rad(arende)}</li>"
     )

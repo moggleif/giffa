@@ -5,6 +5,7 @@ varje lista har, och listorna: det som pågår, det som är beslutat och
 historiken med det som är klart eller avbrutet.
 """
 
+from collections.abc import Sequence
 from datetime import timedelta
 from html import escape
 
@@ -31,14 +32,16 @@ LISTOR = (
 )
 
 
-def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda, namnen: list[Namn] = ()) -> str:
+def startsida(
+    sajt: Sajt, arenden: list[Arende], runda: Runda, namnen: Sequence[Namn] = ()
+) -> str:
     inledning = (
         "<p>Vad som beslutas, planeras och byggs i orterna hos de fyra föreningarna. "
         "Utan val syns allt; välj en ort, eller en förening för att bara se dess orter. "
         "Varje händelse länkar till sin källa.</p>"
     )
     paverka = tycka_till_nu(arenden, sajt)
-    lyfta = ruta(list(namnen), arenden)
+    lyfta = ruta(namnen, arenden)
     innehall = inledning + urval(sajt) + paverka + lyfta + nytt(arenden, runda, sajt) + oversikt(arenden)
     return sida(sajt, "index.html", "Giffå", innehall)
 

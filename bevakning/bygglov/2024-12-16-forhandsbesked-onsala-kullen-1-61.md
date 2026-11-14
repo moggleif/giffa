@@ -8,10 +8,11 @@ status: beslutat
 
 Byggnadsnämnden gav positivt förhandsbesked för ett enbostadshus med garage
 utanför detaljplan, med villkoret att en dagvattenutredning ska visa hur
-dagvattnet tas om hand och fördröjs på tomten inför bygglovet. Grannar
-beskrev översvämningar på sina tomter sedan träd tagits ned och bäcken lagts
-i rör som de ansåg vara för klena, bland annat vid bygget av 13 hus på
-Lyngås 3:264. Förvaltningen konstaterade att det finns en problembild kring
+dagvattnet tas om hand och fördröjs på tomten inför bygglovet. En granne
+beskrev översvämningar på sin tomt sedan träd tagits ned och bäcken lagts i
+rör som grannen ansåg vara för klena, bland annat vid bygget av 13 hus på
+Lyngås 3:264. Andra grannar var oroliga för dagvattnet, ett öppet dike och
+vattensjuk mark. Förvaltningen konstaterade att det finns en problembild kring
 dagvattnet och att avrinningsdiket inte verkar skötas. Kommunen har inget
 verksamhetsområde för dagvatten där, så ansvaret ligger på
 fastighetsägarna.

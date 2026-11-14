@@ -22,7 +22,7 @@ from webbplats.kontroll import kontrollera, kontrollera_omrade
 from webbplats.mall import Sajt
 from webbplats.sidor import LISTOR, lista, startsida
 from webbplats.sok import soksida
-from webbplats.uppmarksammat import Namn, kallas
+from webbplats.uppmarksammat import Namn, namn_per_arende
 from webbplats.uppmarksammat import las as las_namnen
 
 UPPMARKSAMMADE = "bevakning/uppmarksammade.csv"
@@ -59,7 +59,7 @@ def med_namn(rot: Path, arenden: list[Arende]) -> tuple[list[Arende], list[Namn]
         namnen = las_namnen(las(rot, UPPMARKSAMMADE), {a.id for a in arenden})
     except ValueError as fel:
         raise SystemExit(f"{UPPMARKSAMMADE}: {fel}") from fel
-    per_arende = kallas(namnen)
+    per_arende = namn_per_arende(namnen)
     return [replace(a, kallas=per_arende.get(a.id, ())) for a in arenden], namnen
 
 

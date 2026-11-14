@@ -6,6 +6,7 @@ startsidan.
 """
 
 import csv
+from collections.abc import Sequence
 from dataclasses import dataclass
 from html import escape
 from io import StringIO
@@ -28,8 +29,10 @@ def las(text: str, finns: set[str]) -> list[Namn]:
     if lasare.fieldnames != KOLUMNER:
         raise ValueError(f"kolumnerna ska vara {','.join(KOLUMNER)}")
     namnen: dict[str, Namn] = {}
-    for rad in lasare:
+    for rad in ({k: (v or "").strip() for k, v in r.items()} for r in lasare):
         kontrollera(rad, finns)
+        if rad["arende"] in namnen.get(rad["namn"], Namn("", (), ())).arenden:
+            raise ValueError(f"samma namn och ärende två gånger: {rad['namn']}, {rad['arende']}")
         tidigare = namnen.get(rad["namn"], Namn(rad["namn"], (), ()))
         namnen[rad["namn"]] = Namn(
             tidigare.namn,
@@ -40,7 +43,7 @@ def las(text: str, finns: set[str]) -> list[Namn]:
 
 
 def kontrollera(rad: dict[str, str], finns: set[str]) -> None:
-    if tomma := [kolumn for kolumn in KOLUMNER if not (rad[kolumn] or "").strip()]:
+    if tomma := [kolumn for kolumn in KOLUMNER if not rad[kolumn]]:
         raise ValueError(f"tomt fält {', '.join(tomma)} på raden {rad}")
     if rad["arende"] not in finns:
         raise ValueError(f"ärendet finns inte: {rad['arende']}")
@@ -48,7 +51,7 @@ def kontrollera(rad: dict[str, str], finns: set[str]) -> None:
         raise ValueError(f"källan är ingen https-länk: {rad['kalla']}")
 
 
-def kallas(namnen: list[Namn]) -> dict[str, tuple[str, ...]]:
+def namn_per_arende(namnen: list[Namn]) -> dict[str, tuple[str, ...]]:
     per_arende: dict[str, tuple[str, ...]] = {}
     for namn in namnen:
         for arende in namn.arenden:
@@ -56,15 +59,16 @@ def kallas(namnen: list[Namn]) -> dict[str, tuple[str, ...]]:
     return per_arende
 
 
-def ruta(namnen: list[Namn], arenden: list[Arende]) -> str:
+def ruta(namnen: Sequence[Namn], arenden: list[Arende]) -> str:
     if not namnen:
         return ""
     per_id = {a.id: a for a in arenden}
     poster = "".join(post(namn, [per_id[i] for i in namn.arenden]) for namn in namnen)
     return (
         '<h2 id="uppmarksammat">Uppmärksammat</h2>'
-        "<p>Ärenden som många följer, med namnen de har i folkmun. "
-        "Projektägaren väljer dem; vid varje namn står var det kommer ifrån.</p>"
+        "<p>Ärenden som många följer, under namnen de har i folkmun eller ett "
+        "gemensamt ämne. Projektägaren väljer dem; vid varje namn står var det "
+        "kommer ifrån.</p>"
         + urvalslista(f'<ul class="uppmarksammat">{poster}</ul>')
     )
 
@@ -72,7 +76,7 @@ def ruta(namnen: list[Namn], arenden: list[Arende]) -> str:
 def post(namn: Namn, arenden: list[Arende]) -> str:
     orter = sorted({ort for a in arenden for ort in a.orter})
     rader = "".join(
-        f'<li><a href="{a.sida}">{escape(a.falt["rubrik"])}</a> '
+        f'<li data-ort="{escape("|".join(a.orter))}"><a href="{a.sida}">{escape(a.falt["rubrik"])}</a> '
         f"<small>{escape(', '.join(a.orter))} · {a.falt['status']}</small></li>"
         for a in arenden
     )
