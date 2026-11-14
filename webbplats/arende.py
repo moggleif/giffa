@@ -1,4 +1,4 @@
-"""Krav: K1, K4, K10, K12 och K25 i KRAV.md. Test: tests/test_arende.py.
+"""Krav: K1, K4, K10, K12, K25 och K27 i KRAV.md. Test: tests/test_arende.py.
 
 Läser ett ärende enligt formatet i bevakning/README.md och stoppar med
 felet när något inte följer det.
@@ -63,6 +63,7 @@ class Arende:
     tillfallen: list[Handelse]
     media: list[Mediepost]
     forslaget: list[Punkt]
+    kallas: tuple[str, ...] = ()
 
     @property
     def id(self) -> str:

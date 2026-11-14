@@ -1,4 +1,4 @@
-"""Krav: K4 och K12 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K12 och K27 i KRAV.md. Test: tests/test_sidor.py.
 
 Tidslinjen som på kommunhandlingars sidor om initiativ och lokalbehov: en
 rad per ärende, en kolumn per år och årets händelser som ikoner på ett band
@@ -38,7 +38,8 @@ def rad(arende: Arende, aren: range, idag: date) -> str:
     return (
         f'<tr data-ort="{escape("|".join(arende.orter))}"><th scope="row">'
         f'<a href="{arende.sida}">{escape(arende.falt["rubrik"])}</a> '
-        f"<small>{escape(', '.join(arende.orter))}</small>{tycka_till_marke(arende, idag)}"
+        f"<small>{escape(', '.join(arende.orter))}</small>{kallas(arende)}"
+        f"{tycka_till_marke(arende, idag)}"
         f"</th>{celler}</tr>"
     )
 
@@ -57,3 +58,8 @@ def cell(arende: Arende, ar: int, egna: range) -> str:
     klass = "band" + " start" * (ar == egna[0]) + " slut" * (ar == egna[-1])
     arets = [h for h in reversed(arende.handelser) if h.datum.year == ar]
     return f'<td class="{klass}">{"".join(ikon(h) for h in arets)}</td>'
+
+
+def kallas(arende: Arende) -> str:
+    namn = ", ".join(arende.kallas)
+    return f' <small class="kallas">Kallas {escape(namn)}</small>' if namn else ""

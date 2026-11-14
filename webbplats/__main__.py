@@ -1,4 +1,4 @@
-"""Krav: K3–K10 och K18 i KRAV.md. Test: tests/test_bygg.py.
+"""Krav: K3–K10, K18, K27 och K28 i KRAV.md. Test: tests/test_bygg.py.
 
 python3 -m webbplats <utkatalog> <repoadress>
 
@@ -8,6 +8,7 @@ sidorna och det som ligger i docs/ till utkatalogen.
 
 import shutil
 import sys
+from dataclasses import replace
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -20,6 +21,11 @@ from webbplats.kartlankar import ur_platser
 from webbplats.kontroll import kontrollera, kontrollera_omrade
 from webbplats.mall import Sajt
 from webbplats.sidor import LISTOR, lista, startsida
+from webbplats.sok import soksida
+from webbplats.uppmarksammat import Namn, kallas
+from webbplats.uppmarksammat import las as las_namnen
+
+UPPMARKSAMMADE = "bevakning/uppmarksammade.csv"
 
 
 def las_arenden(rot: Path, orter: list[str]) -> list[Arende]:
@@ -48,6 +54,15 @@ def las_foreningar(rot: Path) -> dict[str, list[str]]:
     return foreningar
 
 
+def med_namn(rot: Path, arenden: list[Arende]) -> tuple[list[Arende], list[Namn]]:
+    try:
+        namnen = las_namnen(las(rot, UPPMARKSAMMADE), {a.id for a in arenden})
+    except ValueError as fel:
+        raise SystemExit(f"{UPPMARKSAMMADE}: {fel}") from fel
+    per_arende = kallas(namnen)
+    return [replace(a, kallas=per_arende.get(a.id, ())) for a in arenden], namnen
+
+
 def las(rot: Path, namn: str) -> str:
     return (rot / namn).read_text(encoding="utf-8")
 
@@ -56,12 +71,13 @@ def bygg(rot: Path, ut: Path, repo: str) -> None:
     byggd = datetime.now(ZoneInfo("Europe/Stockholm"))
     platser = underlag.platser(las(rot, "platser.csv"))
     sajt = Sajt(repo, byggd, las_foreningar(rot), ur_platser(platser))
-    arenden = las_arenden(rot, sajt.orter)
+    arenden, namnen = med_namn(rot, las_arenden(rot, sajt.orter))
     runda = underlag.senaste_runda(las(rot, "bevakning/rundor.csv"))
     kallor = underlag.kallor(las(rot, "KALLOR.md"))
     shutil.copytree(rot / "docs", ut, dirs_exist_ok=True)
     sidor = {
-        "index.html": startsida(sajt, arenden, runda),
+        "index.html": startsida(sajt, arenden, runda, namnen),
+        "sok.html": soksida(sajt, arenden),
         "bevakar.html": bevakar(sajt, platser, kallor),
     }
     sidor |= {listan[0]: lista(sajt, arenden, listan) for listan in LISTOR}

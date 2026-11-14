@@ -281,3 +281,26 @@ lämnas som den är. Förteckningar och förslagslistor över många ärenden
 länkas inte, och ett allmänt ärende som information eller anmälan av beslut
 länkas bara till en tjänsteskrivelse. Hittas inget ändras inget och ingen PR
 öppnas.
+
+## K27 – Uppmärksammat, med namnen folk använder
+
+**Givet** att projektägaren skrivit ett namn och ett eller flera ärenden i
+`bevakning/uppmarksammade.csv`, med en källa till namnet,
+**när** sidan byggs,
+**så** står namnen under *Uppmärksammat* på startsidan, i den ordning de
+står i filen, med sina ärenden under och källan till namnet intill. Namnet
+står också under rubriken på ärendets kort och egna sida och i
+tidslinjen, så att den som känner ärendet under ett annat namn känner igen
+det. Ortsvalet gäller rutan som allt annat. Ett ärende som inte finns,
+en tom rad eller en källa som är en länk men inte en https-länk stoppar
+bygget.
+
+## K28 – Sök på rubrik och namn
+
+**Givet** sidan *Sök*,
+**när** man skriver ett eller flera ord i sökrutan,
+**så** syns bara de ärenden där varje ord finns i rubriken, i ett namn
+ur `bevakning/uppmarksammade.csv`, i orterna eller i organet, utan hänsyn
+till stora och små bokstäver. Utan ord syns alla ärenden, och utan skript
+syns hela listan så att webbläsarens egen sökning fungerar. Finns ingen
+träff står det.
