@@ -18,7 +18,7 @@ def informerat(namn: str, datum: str, status: str = "pågår", extra: str = "") 
 
 def pa_vag(arenden: list) -> str:
     html = startsida(SAJT, arenden, RUNDA)
-    return html[html.index('id="pa-vag-upp"') : html.index('id="nytt"')]
+    return html[html.index('id="pa-vag-upp"') : html.index("</main>")]
 
 
 class PaVagUpp(unittest.TestCase):
@@ -27,6 +27,10 @@ class PaVagUpp(unittest.TestCase):
         self.assertLess(html.index("arende/nyare.html"), html.index("arende/aldre.html"))
         self.assertIn('<small>Information <time datetime="2026-10-01">1 oktober 2026</time> · <a href="https://example.org/i" title="Arbetsutskottet informerades.">Protokoll § 9</a>', html)
         self.assertIn('<li data-ort="Åsa|Fjärås"><span class="tecken partiet">', html)
+
+    def test_sist_pa_startsidan(self):
+        html = startsida(SAJT, [informerat("nyare", "2026-10-01")], RUNDA)
+        self.assertLess(html.index("<h2>Alla ärenden</h2>"), html.index('id="pa-vag-upp"'))
 
     def test_inte_aldre_an_ett_ar_avgjort_eller_med_tillfalle(self):
         tillfalle = "## Tycka till\n\n- 2026-12-01 · beslut · X. · [K](https://example.org/k)\n\n"

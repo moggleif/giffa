@@ -353,7 +353,7 @@ dag utan ärenden för det valda urvalet döljs.
 som inte har något kommande tillfälle att tycka till,
 **när** startsidan byggs,
 **så** står de ärenden vars information är högst ett år gammal räknat från
-byggdagen under *På väg upp*, efter *Tycka till nu*, med det nyaste
+byggdagen under *På väg upp*, sist på startsidan, med det nyaste
 först: partiernas tecken (K30), ärendet, orten, datumet och källan. Listan
 säger bara att ett organ har informerats och inget om när ett beslut
 kommer. Finns inget står det.
