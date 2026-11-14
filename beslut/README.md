@@ -17,3 +17,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0008](0008-ort-utan-forening.md) | Orten går att välja utan att först välja förening |
 | [0009](0009-handlingslankar-och-sondagsrunda.md) | Handlingslänkar i Actions och en schemalagd söndagsrunda |
 | [0010](0010-uppmarksammade-och-sok.md) | Uppmärksammade ärenden, namnen folk använder och en sökruta |
+| [0011](0011-tva-spar-och-processtegen.md) | Två spår för att påverka, processtegen och kalendern |

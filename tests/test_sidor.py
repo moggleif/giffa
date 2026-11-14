@@ -114,15 +114,24 @@ class Startsidan(unittest.TestCase):
     def test_tycka_till_nu_i_tur_och_ordning(self):
         html = startsida(SAJT, [paverkbart("s"), arende("pågår", "p")], RUNDA)
         nu = html[html.index('id="tycka-till"') : html.index('id="nytt"')]
-        self.assertLess(nu.index("Beslut <time datetime=\"2026-11-10\">tisdag 10 november 2026</time>, i dag"), nu.index("synpunkter senast"))
+        dagar = re.findall(r'<section class="dag" data-ort="[^"]+"><h3>(<time[^<]+</time> <small>[^<]+)</small>', nu)
+        self.assertEqual(
+            dagar,
+            [
+                '<time datetime="2026-11-10">tisdag 10 november 2026</time> <small>i dag',
+                '<time datetime="2026-11-24">tisdag 24 november 2026</time> <small>om 14 dagar',
+                '<time datetime="2026-12-01">tisdag 1 december 2026</time> <small>om 21 dagar',
+            ],
+        )
         self.assertIn('<a class="arende" href="arende/s.html">Ny förskola</a>', nu)
+        self.assertIn("<strong>Granskning – sista dagen för synpunkter.</strong>", nu)
         self.assertNotIn("2026-11-09", html)
-        self.assertIn("1 december 2026</time>, om 21 dagar", nu)
         self.assertIn("Så kan du påverka, steg för steg", nu)
 
     def test_markering_pa_kort_och_rad(self):
         html = pagar([paverkbart("s")])
-        self.assertIn('<small class="paverka">Tycka till <time datetime="2026-11-10">10 november 2026</time></small>', html)
+        self.assertIn('<small class="paverka partiet"><span class="tecken partiet">', html)
+        self.assertIn('</span>Tycka till <time datetime="2026-11-10">10 november 2026</time></small>', html)
         kortet = html[html.index('<article id="s"') :]
         self.assertIn('<div class="paverka"><p>Tycka till</p>', kortet)
         self.assertIn("Granskning – synpunkter senast <time datetime=\"2026-12-01\">tisdag 1 december 2026", kortet)
@@ -193,10 +202,8 @@ class SaGorDu(unittest.TestCase):
         rader = nu.split("<li data-ort=")[1:]
         self.assertEqual(len(rader), 3)
         for rad in rader:
-            self.assertRegex(rad, r'^"[^"]+"><a class="arende" [^>]+>Ny förskola</a> <small>Åsa')
-        self.assertIn("Så gör du:</strong> Före sammanträdet går ledamöterna", rader[0])
-        self.assertIn("står i arbetsutskottets protokoll", rader[1])
-        self.assertIn("Lämna skriftliga synpunkter senast sista dagen", rader[2])
+            self.assertRegex(rad, r'^"[^"]+"><span class="tecken \w+">.+?</span></span><a class="arende" [^>]+>Ny förskola</a> <small>Åsa')
+        self.assertNotIn("Så gör du:", nu)
         self.assertIn("<details open><summary>Så kan du påverka", nu)
         self.assertEqual(pagar([paverkbart("s")]).count("Så gör du:"), 3)
 

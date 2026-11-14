@@ -1,4 +1,4 @@
-"""Krav: K4, K5, K6, K9, K12, K18, K23, K24, K27 och K29 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9, K12, K18, K23, K24, K27, K29 och K33 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett kort per ärende under tabellen, korten för det som är nytt sedan
 förra rundan överst på startsidan, och delarna som ärendets egen sida
@@ -13,6 +13,7 @@ from webbplats.handlingar import handlingar
 from webbplats.kartlankar import Kartlankar
 from webbplats.mall import Sajt
 from webbplats.paverka import markering
+from webbplats.stege import stege
 
 
 def kort(arende: Arende, sajt: Sajt) -> str:
@@ -21,6 +22,7 @@ def kort(arende: Arende, sajt: Sajt) -> str:
         f'<article id="{arende.id}" data-ort="{escape("|".join(arende.orter))}">'
         f"{markor(arende)}<h3>{sajt.karta.lanka(falt['rubrik'])}</h3>{namn_rad(arende)}"
         f'<p class="organ">{escape(organ(arende))}</p>'
+        + stege(arende, sajt.byggd.date())
         + (f"<p>{sajt.karta.lanka(arende.ingress)}</p>" if arende.ingress else "")
         + f"<p>Senaste steget: {STEG[senaste.steg]}, {tid(senaste.datum)}</p>"
         + markering(arende, sajt)
