@@ -57,14 +57,14 @@ class Sidorna(unittest.TestCase):
 
     def test_startsidan_har_rutan_i_listans_ordning_med_kallan(self):
         html = startsida(SAJT, self.arenden, RUNDA, self.namnen)
-        self.assertIn('<h2 id="uppmarksammat">Uppmärksammat</h2>', html)
+        self.assertIn('<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>', html)
         self.assertLess(html.index("<strong>Lagret</strong>"), html.index("<strong>Stråket</strong>"))
         self.assertIn('Namnet: <a href="https://example.org/a">Artikeln</a>', html)
         self.assertIn('<li data-ort="Fjärås|Åsa"><strong>Stråket</strong>', html)
         self.assertIn('<li data-ort="Åsa|Fjärås"><a href="arende/b.html">Ny förskola</a>', html)
 
     def test_utan_namn_ingen_ruta(self):
-        self.assertNotIn("Uppmärksammat", startsida(SAJT, self.arenden, RUNDA))
+        self.assertNotIn('id="uppmarksammat"', startsida(SAJT, self.arenden, RUNDA))
 
     def test_namnen_star_i_kortet_tidslinjen_och_pa_arendets_sida(self):
         html = lista(SAJT, self.arenden, LISTOR[0])
@@ -96,6 +96,11 @@ class Overst(unittest.TestCase):
         self.assertLess(html.index('<article id="a"'), html.index('<h2 id="rorliga">'))
         self.assertNotIn('id="ovriga"', html)
 
+    def test_ingen_forklarande_text_under_rubriken(self):
+        html = lista(SAJT, self.arenden, LISTOR[1], self.namnen)
+        rubrik = f'<h2 id="uppmarksammat">{"Ärenden med mer uppmärksamhet"}</h2>'
+        self.assertIn(rubrik + '<div class="urvalslista">', html)
+
     def test_bara_uppmarksammade_ger_ingen_tom_ovrigt_rubrik(self):
         html = lista(SAJT, [arende("beslutat", "a")], LISTOR[1], self.namnen)
         self.assertIn('<article id="a"', html)
@@ -104,7 +109,7 @@ class Overst(unittest.TestCase):
 
     def test_utan_uppmarksammade_i_listan_ingen_rubrik(self):
         html = lista(SAJT, [arende("beslutat", "c")], LISTOR[1], self.namnen)
-        self.assertNotIn("Uppmärksammat", html)
+        self.assertNotIn('id="uppmarksammat"', html)
 
 
 if __name__ == "__main__":

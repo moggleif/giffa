@@ -289,7 +289,7 @@ folkmun, eller ett gemensamt ämne som *Dagvatten och översvämningar* – och
 ett eller flera ärenden i `bevakning/uppmarksammade.csv`, med en källa till
 namnet,
 **när** sidan byggs,
-**så** står namnen under *Uppmärksammat* på startsidan, i den ordning de
+**så** står namnen under *Ärenden med mer uppmärksamhet* på startsidan, i den ordning de
 står i filen, med sina ärenden under och källan till namnet intill. Namnet
 står också under rubriken som en färgad etikett: på ärendets kort och egna
 sida efter orden *Uppmärksammat som*, och i tidslinjen med samma ord bara
@@ -314,7 +314,7 @@ träff står det.
 **Givet** ärenden i `bevakning/uppmarksammade.csv` (K27),
 **när** listorna *Pågår*, *Beslutat* och *Historik* byggs,
 **så** står de uppmärksammade ärenden som hör till listan först, under
-rubriken *Uppmärksammat* och i namnens ordning i filen – först namnet
+rubriken *Ärenden med mer uppmärksamhet* och i namnens ordning i filen – först namnet
 som står överst, med dess ärenden i radernas ordning – och
 resten följer under som förut: på *Pågår* med uppdelningen i det som rört
 sig och det som stått still (K19), på de andra under *Övriga ärenden*.
