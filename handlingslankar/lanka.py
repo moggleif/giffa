@@ -9,48 +9,59 @@ import re
 from pathlib import Path
 
 from handlingslankar import matcha
-from handlingslankar.sidor import paragraf, sidor
+from handlingslankar.sidor import Paragraf, paragraf, som_ordbok
 
 HANDELSE = re.compile(r"^- (\d{4}-\d\d-\d\d) · ")
-PROTOKOLL = r"/([^/]+/\d{{4}}/(\d{{4}}-\d\d-\d\d))/(protokoll[^)#]*)\.html#sida-(\d+)"
+PROTOKOLL = r"/([^/]+/\d{4}/(\d{4}-\d\d-\d\d))/(protokoll[^)#]*)\.html#sida-(\d+)"
 KVALITET = re.compile(r"^kvalitet: (\S+)", re.M)
 KALLA = re.compile(r"^kalla_url: (\S+)", re.M)
 
 
 class Pool:
     def __init__(self, data: Path, bas: str):
-        self.data, self.cache = data, {}
+        self.data, self.lasta = data, {}
         self.bas = f"{bas}/{data.name}"
-        self.protokoll = re.compile(re.escape(self.bas) + PROTOKOLL.format())
+        self.protokoll = re.compile(re.escape(self.bas) + PROTOKOLL)
 
     def text(self, del_: str) -> str | None:
-        if del_ not in self.cache:
+        if del_ not in self.lasta:
             fil = self.data / f"{del_}.md"
-            self.cache[del_] = fil.read_text(encoding="utf-8") if fil.exists() else None
-        return self.cache[del_]
+            self.lasta[del_] = fil.read_text(encoding="utf-8") if fil.exists() else None
+        return self.lasta[del_]
+
+
+def protokollet(pool: Pool, rad: str) -> re.Match | None:
+    handelse, traff = HANDELSE.match(rad), pool.protokoll.search(rad)
+    if handelse and traff and " · Handlingar: " not in rad and traff[2] == handelse[1]:
+        return traff
+    return None
 
 
 def lank(pool: Pool, rad: str) -> str | None:
-    handelse, traff = HANDELSE.match(rad), pool.protokoll.search(rad)
-    if not handelse or not traff or " · Handlingar: " in rad or traff[2] != handelse[1]:
+    traff = protokollet(pool, rad)
+    if not traff:
         return None
-    protokoll, handlingar = pool.text(f"{traff[1]}/{traff[3]}"), pool.text(f"{traff[1]}/handlingar")
-    if not protokoll or not handlingar:
+    mote, protokoll = traff[1], pool.text(f"{traff[1]}/{traff[3]}")
+    handlingar = pool.text(f"{mote}/handlingar")
+    funnen = protokoll and handlingar and paragraf(som_ordbok(protokoll), int(traff[4]))
+    if not funnen:
         return None
-    funnen = paragraf(sidor(protokoll), int(traff[4]))
-    return funnen and (sida(pool, traff[1], handlingar, funnen) or pdf(pool, traff[1], handlingar, funnen))
+    return sida(pool, mote, funnen) or pdf(pool, mote, funnen)
 
 
-def sida(pool: Pool, mote: str, handlingar: str, funnen) -> str | None:
-    traff = matcha.handling(sidor(handlingar), funnen)
+def sida(pool: Pool, mote: str, funnen: Paragraf) -> str | None:
+    traff = matcha.handling(som_ordbok(pool.text(f"{mote}/handlingar")), funnen)
     return traff and f"[{traff[1]}]({pool.bas}/{mote}/handlingar.html#sida-{traff[0]})"
 
 
-def pdf(pool: Pool, mote: str, handlingar: str, funnen) -> str | None:
-    kvalitet, kalla, kallelse = KVALITET.search(handlingar), KALLA.search(handlingar), pool.text(f"{mote}/kallelse")
-    if not kvalitet or kvalitet[1] != "ej-hamtad" or not kalla or not kallelse:
+def pdf(pool: Pool, mote: str, funnen: Paragraf) -> str | None:
+    handlingar, kallelse = pool.text(f"{mote}/handlingar"), pool.text(f"{mote}/kallelse")
+    kvalitet, kalla = KVALITET.search(handlingar), KALLA.search(handlingar)
+    if not kallelse or not kalla or not kvalitet or kvalitet[1] != "ej-hamtad":
         return None
     nummer = matcha.punkt(kallelse, funnen)
+    # Sidan i PDF:en är okänd när handlingarna inte gick att hämta; punkten
+    # i kallelsen visar var ärendet står.
     return nummer and f"[Handlingar till sammanträdet, punkt {nummer} (PDF)]({kalla[1]})"
 
 

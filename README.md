@@ -74,6 +74,7 @@ Varje söndag lägger `handlingar.yml` tjänsteskrivelsen ur samma
 sammanträdes handlingar intill protokollet på de händelser som bara länkar
 ett protokoll, och öppnar en PR (K26). Senare samma morgon gör en schemalagd
 Claude-runda en bevakningsrunda ovanpå den: nya händelser, tillfällen att
-tycka till och nya ärenden, i en PR som projektägaren godkänner
+tycka till och nya ärenden, i en PR som projektägaren godkänner. Rundan är
+en schemalagd uppgift i Claude, inte en fil i repot
 ([beslut 0009](beslut/0009-handlingslankar-och-sondagsrunda.md)). Lokalt:
 `python3 -m handlingslankar <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar`.

@@ -1,7 +1,8 @@
 # Söndagens handlingslänkar (K26, beslut 0009): lägger tjänsteskrivelsen ur
 # samma sammanträdes handlingar intill protokollet på de händelser som bara
 # länkar ett protokoll, och öppnar en PR. Testerna och bygget körs här,
-# eftersom en PR som öppnas av arbetsflödet inte startar Kontroll.
+# eftersom en PR som öppnas av arbetsflödet inte startar Kontroll. Grenen
+# automatik/handlingslankar ägs av arbetsflödet och skrivs om varje gång.
 name: Handlingar
 
 on:
@@ -12,6 +13,10 @@ on:
 permissions:
   contents: write
   pull-requests: write
+
+concurrency:
+  group: handlingar
+  cancel-in-progress: false
 
 jobs:
   lanka:
@@ -47,8 +52,10 @@ jobs:
           git switch -c "$gren"
           git commit -qam "Handlingarna intill protokollen, $(date +%F)"
           git push --force origin "$gren"
-          if [ -z "$(gh pr list --head "$gren" --state open --json number --jq '.[].number')" ]; then
-            gh pr create --head "$gren" --base main \
-              --title "Handlingarna intill protokollen, $(date +%F)" \
-              --body-file "$RUNNER_TEMP/lankar.txt"
+          titel="Handlingarna intill protokollen, $(date +%F)"
+          nummer=$(gh pr list --head "$gren" --state open --json number --jq '.[].number')
+          if [ -n "$nummer" ]; then
+            gh pr edit "$nummer" --title "$titel" --body-file "$RUNNER_TEMP/lankar.txt"
+          else
+            gh pr create --head "$gren" --base main --title "$titel" --body-file "$RUNNER_TEMP/lankar.txt"
           fi

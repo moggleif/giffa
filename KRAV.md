@@ -269,11 +269,15 @@ länk till sidan den bygger på.
 **Givet** händelser i `bevakning/` som bara länkar ett protokoll, och
 kommunhandlingars handlingar och kallelser till samma sammanträde,
 **när** arbetsflödet `handlingar.yml` körs på söndagen eller för hand,
-**så** läggs tjänsteskrivelsen intill protokollet, hittad på paragrafens
-diarienummer eller rubrik, och arbetsflödet öppnar en PR. Gick handlingarna
-inte att hämta länkas sammanträdets PDF med punkten i kallelsen. Protokollet
-står kvar. En händelse som redan har handlingar, eller vars datum inte är
-sammanträdets, lämnas som den är. Sidor som listar många ärenden länkas
-inte, och ett allmänt ärende som information eller anmälan av beslut länkas
-bara till en tjänsteskrivelse. Hittas inget ändras inget och ingen PR
+**så** läggs ärendets handling intill protokollet och arbetsflödet öppnar
+en PR. En sida hör till ärendet när paragrafens diarienummer står i sidans
+huvud, eller, när huvudet saknar diarienummer, ärendets hela rubrik.
+Tjänsteskrivelsen – en sida med rubriken TJÄNSTESKRIVELSE överst – länkas
+som *Tjänsteskrivelse*; finns ingen länkas ärendets första sida som
+*Handlingarna i ärendet*. Gick handlingarna inte att hämta länkas
+sammanträdets PDF med punkten i kallelsen. Protokollet står kvar. En
+händelse som redan har handlingar, eller vars datum inte är sammanträdets,
+lämnas som den är. Förteckningar och förslagslistor över många ärenden
+länkas inte, och ett allmänt ärende som information eller anmälan av beslut
+länkas bara till en tjänsteskrivelse. Hittas inget ändras inget och ingen PR
 öppnas.

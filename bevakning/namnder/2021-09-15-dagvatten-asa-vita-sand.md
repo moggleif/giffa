@@ -14,7 +14,7 @@ utloppet.
 
 ## Händelser
 
-- 2024-09-25 · beslut · Nämnden för Teknik valde alternativ 1 för dagvattenutloppet vid Vita Sand, efter dialogmöten med Åsas invånare och verksamhetsutövare. · [Teknik protokoll § 93](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2024/2024-09-25/protokoll.html#sida-6) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2024/2024-09-25/handlingar.html#sida-79)
+- 2024-09-25 · beslut · Nämnden för Teknik valde alternativ 1 för dagvattenutloppet vid Vita Sand, efter dialogmöten med Åsas invånare och verksamhetsutövare. · [Teknik protokoll § 93](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2024/2024-09-25/protokoll.html#sida-6)
 - 2024-01-17 · info · Nämnden för Teknik fick en återrapportering om initiativet om dagvattnet vid Vita Sand. · [Teknik protokoll § 6](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2024/2024-01-17/protokoll.html#sida-9)
-- 2023-06-21 · forslag · Nämnden för Teknik biföll ett initiativ från Liberalerna, Moderaterna, Centerpartiet och Kristdemokraterna om ett omtag med fler förslag och konsekvensanalyser. · [Teknik protokoll § 74](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2023/2023-06-21/protokoll.html#sida-6) · Handlingar: [Handlingarna i ärendet](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2023/2023-06-21/handlingar.html#sida-8)
+- 2023-06-21 · forslag · Nämnden för Teknik biföll ett initiativ från Liberalerna, Moderaterna, Centerpartiet och Kristdemokraterna om ett omtag med fler förslag och konsekvensanalyser. · [Teknik protokoll § 74](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2023/2023-06-21/protokoll.html#sida-6)
 - 2021-09-15 · info · Nämnden för Teknik informerades: Åsa samhälle - status kring skyfall och dagvatten. · [Teknik protokoll § 90](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2021/2021-09-15/protokoll.html#sida-9)

@@ -1,15 +1,20 @@
 """Krav: K26 i KRAV.md. Test: tests/test_handlingslankar.py.
 
-Läser ett dokument i kommunhandlingar som sidor och hittar paragrafen,
-diarienumret och rubriken på en sida i ett protokoll.
+Hittar paragrafen, diarienumret och rubriken på en sida i ett protokoll,
+och läser huvudet överst på en sida i handlingarna.
 """
 
 import re
 from typing import NamedTuple
 
-SIDA = re.compile(r"^<!-- sida (\d+) -->$", re.M)
+from skanning.sok import sidor
+
 RUBRIK = re.compile(r"§\s*(\d+)\s+(?:Dnr\s*)?((?:[A-ZÅÄÖ]{1,5}[ -]?)?\d{4}[-/]\d{4,6})")
 SLUT = re.compile(r"\b(?:Beslut|Förslag till beslut|Sammanfattning)\b")
+DIARIENUMMER = re.compile(r"\b(?:[A-ZÅÄÖ]{1,5}[ -]?)?20\d\d[-–]\d{3,6}\b")
+# Huvudet på en tjänsteskrivelse – rubrik, datum, diarienummer och ärendets
+# rubrik – ryms i de första raderna med text på sidan.
+HUVUDETS_RADER = 12
 
 
 class Paragraf(NamedTuple):
@@ -18,13 +23,10 @@ class Paragraf(NamedTuple):
     rubrik: str
 
 
-def sidor(text: str) -> dict[int, str]:
-    delar = SIDA.split(text)
-    return {int(nr): innehall for nr, innehall in zip(delar[1::2], delar[2::2])}
-
-
-def kod(text: str) -> str:
-    return re.sub(r"[^0-9A-ZÅÄÖ]", "", text.upper())
+def siffror(diarienummer: str) -> str:
+    """År och löpnummer utan inledande nollor: KS 2023-492 och KS-2023-00492 är samma."""
+    ar, lopnummer = re.findall(r"\d+", diarienummer)[-2:]
+    return f"{ar}-{int(lopnummer)}"
 
 
 def paragraf(protokoll: dict[int, str], sida: int) -> Paragraf | None:
@@ -39,3 +41,11 @@ def paragraf(protokoll: dict[int, str], sida: int) -> Paragraf | None:
 def rubrik(text: str) -> str:
     rader = " ".join(rad.strip() for rad in text.strip().splitlines()[:3])
     return SLUT.split(rader)[0].strip()
+
+
+def huvud(text: str) -> str:
+    return "\n".join([rad for rad in text.splitlines() if rad.strip()][:HUVUDETS_RADER])
+
+
+def som_ordbok(text: str) -> dict[int, str]:
+    return dict(sidor(text))

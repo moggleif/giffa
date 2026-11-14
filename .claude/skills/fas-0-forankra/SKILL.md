@@ -7,6 +7,10 @@ description: Fas 0 i Giffå. Använd innan en bevakningsrunda eller en ändring 
 
 Bara analys: inga filändringar, ingen gren, inga commits.
 
+Den schemalagda söndagsrundan väntar inte på bekräftelse: projektägarens
+beställning är dess fas 0 (beslut 0009). Gör steg 1–4 och skriv tolkningen
+i PR-texten i stället.
+
 1. Förstå uppdraget. Läs berört issue, `KRAV.md` och de beslut i `beslut/`
    som rör området.
 2. **En bevakningsrunda:** fastställ period (från och till), källor ur
