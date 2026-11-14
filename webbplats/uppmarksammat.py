@@ -70,10 +70,7 @@ def ruta(namnen: Sequence[Namn], arenden: list[Arende]) -> str:
     per_id = {a.id: a for a in arenden}
     poster = "".join(post(namn, [per_id[i] for i in namn.arenden]) for namn in namnen)
     return (
-        '<h2 id="uppmarksammat">Uppmärksammat</h2>'
-        "<p>Ärenden som många följer, under namnen de har i folkmun eller ett "
-        "gemensamt ämne. Projektägaren väljer dem; vid varje namn står var det "
-        "kommer ifrån.</p>"
+        '<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>'
         + urvalslista(f'<ul class="uppmarksammat">{poster}</ul>')
     )
 

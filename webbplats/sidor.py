@@ -88,11 +88,7 @@ def lista(sajt: Sajt, arenden: list[Arende], listan: tuple, namnen: Sequence[Nam
 def uppmarksammat(sajt: Sajt, lyfta: list[Arende]) -> str:
     if not lyfta:
         return ""
-    return (
-        '<h2 id="uppmarksammat">Uppmärksammat</h2>'
-        "<p>De ärenden projektägaren valt att lyfta, i listans ordning; resten följer under.</p>"
-        + avsnitt(sajt, lyfta)
-    )
+    return '<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>' + avsnitt(sajt, lyfta)
 
 
 def resten(sajt: Sajt, ovriga: list[Arende], pagar: bool, efter_lyfta: bool) -> str:
