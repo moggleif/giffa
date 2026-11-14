@@ -62,6 +62,7 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Hur sidan byggs ur ärendena                     | `webbplats/`, beslut 0002 |
 | Hur månadens skanning görs                      | `skanning/`, beslut 0003  |
 | Hur veckans kallelser söks                      | `skanning/`, beslut 0005  |
+| Hur handlingarna läggs intill protokollen       | `handlingslankar/`, beslut 0009 |
 | Ett ärendes fakta och källor                    | ärendets fil i `bevakning/` |
 
 Skriv aldrig om ett annat dokuments fakta – länka till dem. Ett faktum som
@@ -125,6 +126,8 @@ på en gång.
 
 - **Kontrollpunkter:** i fas 0 presenteras tolkningen av uppdraget och i
   fas 7 det färdiga arbetet; båda väntar på en människas bekräftelse.
+  Den schemalagda söndagsrundan räknar projektägarens beställning som
+  fas 0 ([beslut 0009](beslut/0009-handlingslankar-och-sondagsrunda.md)).
   Mellan dem körs faserna utan avstämningar.
 - **Fas 6 görs av någon annan än den som skrev ändringen** – i praktiken
   granskningsagenten, som börjar utan sammanhang. Ett **blockerande** fynd

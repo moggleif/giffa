@@ -36,7 +36,8 @@ KRAV.md      Vad bevakningen ska göra.
 webbplats/   Bygger sidan ur bevakning/, OMRADE.md, platser.csv och KALLOR.md.
 docs/        Sidans stil och skript, som kopieras med i bygget.
 skanning/    Söker igenom kommunhandlingar inför månadens runda.
-tests/       Testerna för bygget och skanningen.
+handlingslankar/ Lägger handlingarna intill protokollen i ärendena.
+tests/       Testerna för bygget, skanningen och handlingslänkarna.
 KALLOR.md    Varifrån uppgifterna hämtas.
 kunskap/     Bakgrund om orterna och om sidans läsare, med källor.
 OMRADE.md    Föreningarna och vilka orter som hör till var och en.
@@ -66,3 +67,15 @@ kommande sammanträden på samma sätt och öppnar ett issue med etiketten
 `kallelser` när något träffar ([beslut 0005](beslut/0005-veckans-kallelser.md)).
 Det som rör ett bevakat ärende förs in under *Tycka till*, så att det syns
 på sidan före mötet. Lokalt: `python3 -m skanning --kommande …`.
+
+## Söndagens handlingar och runda
+
+Varje söndag lägger `handlingar.yml` ärendets handling ur samma
+sammanträdes handlingar – tjänsteskrivelsen, ärendets sida eller
+sammanträdets PDF – intill protokollet på de händelser som bara länkar
+ett protokoll, och öppnar en PR (K26). Senare samma morgon gör en schemalagd
+Claude-runda en bevakningsrunda ovanpå den: nya händelser, tillfällen att
+tycka till och nya ärenden, i en PR som projektägaren godkänner. Rundan är
+en schemalagd uppgift i Claude, inte en fil i repot
+([beslut 0009](beslut/0009-handlingslankar-och-sondagsrunda.md)). Lokalt:
+`python3 -m handlingslankar <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar`.
