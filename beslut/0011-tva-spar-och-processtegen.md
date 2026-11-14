@@ -21,14 +21,16 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
   Detaljplaner och planprogram har en process i plan- och bygglagen;
   andra ärenden har ingen, och en stege för dem skulle gissa. Stegen läses
   ur det som redan finns – händelsernas steg och ord, och tillfällena att
-  tycka till – i stället för ett nytt fält i front matter. Två
+  tycka till – i stället för ett nytt fält i front matter. Tre
   granskningsvarv visade att breda ordmönster (*anta*, *uppdrag*) fångar
   exploateringsavtal och andra beslut, så mönstren är snäva och ett läge
   som inte går att läsa ut står som okänt. Reglerna står i K33. Stegen
   står som konstanter i `webbplats/stege.py`; en datafil motiveras när
   ett tredje slag behövs.
-- **Hellre märka än gissa.** Kommande steg utan tillfälle står som *datum
-  inte känt än*, och planernas stege säger att den följer
+- **Hellre märka än gissa.** Ett tidigare steg utan egen händelse står
+  som *ingen händelse i källorna* och ett kommande steg utan tillfälle som
+  *inget i källorna än*, så att stegen inte påstår något källan inte
+  säger, och planernas stege säger att den följer
   standardförfarandet och att ett begränsat förfarande saknar granskning,
   med länk till lagen. *På väg upp* säger bara att ett organ har
   informerats.
@@ -44,8 +46,9 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
   antagandet kommer, och en plan där samråd eller granskning bara nämns i
   ett förslag visas med okänt läge. `bevakning/README.md` säger hur
   antagandet ska skrivas.
-- En plan med begränsat förfarande visar granskningen som kommande tills
-  den antas; noten under stegen säger varför.
+- En plan med begränsat förfarande visar granskningen som *inget i
+  källorna än*, eller efter antagandet som *ingen händelse i källorna*;
+  noten under stegen säger varför.
 - Kalendern visar inte när kallelsen publicerades, eftersom det datumet
   inte finns i ärendena; tiden för partierna räknas fram till
   sammanträdet.

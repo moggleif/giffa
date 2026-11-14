@@ -129,7 +129,7 @@ ul.pa-vag-upp small { color: var(--dampad); }
 .stege li.nu.alla { border-color: var(--alla); }
 .stege li.nu.partiet { border-color: var(--partiet); }
 .stege li.kommande { border-style: dashed; }
-.stege li.okand { border-style: dotted; }
+.stege li.okand, .stege li.tidigare { border-style: dotted; }
 .stege .forfarande { font-size: 0.85rem; color: var(--dampad); margin: 0.3rem 0 0; }
 .kort .stege .forfarande { display: none; }
 .kort .stege li { padding: 0 0.4rem; border-width: 1px; font-size: 0.9rem; }

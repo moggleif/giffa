@@ -41,7 +41,7 @@ class Processtegen(unittest.TestCase):
         self.assertEqual(
             steg(stege(byggt("Detaljplan för bostäder"), IDAG)),
             [
-                ("gjord", "partiet", "Uppdrag", "gjort, inget datum i källorna"),
+                ("gjord", "partiet", "Uppdrag", 'gjort, <time datetime="2025-01-16">16 januari 2025</time>'),
                 ("gjord", "alla", "Samråd", 'gjort, <time datetime="2026-02-19">19 februari 2026</time>'),
                 ("nu", "alla", "Granskning", 'nu, <time datetime="2026-05-26">26 maj 2026</time>'),
                 ("kommande", "partiet", "Antagande", 'kommer, <time datetime="2026-11-17">17 november 2026</time>'),
@@ -69,7 +69,16 @@ class Processtegen(unittest.TestCase):
 
     def test_ett_annat_tillfalle_ar_inte_antagandet(self):
         html = stege(byggt("Detaljplan för P", HANDELSER.replace("föreslås anta detaljplanen", "ska besluta om principavtalet")), IDAG)
-        self.assertIn("<strong>Antagande</strong> <small>kommer, datum inte känt än</small>", html)
+        self.assertIn("<strong>Antagande</strong> <small>inget i källorna än</small>", html)
+        foreslag = HANDELSER.replace("Nämnden föreslås anta", "Utskottet föreslås föreslå att nämnden antar")
+        html = stege(byggt("Detaljplan för P", foreslag), IDAG)
+        self.assertIn("<strong>Antagande</strong> <small>inget i källorna än</small>", html)
+
+    def test_ett_steg_utan_egen_handelse_sags_inte_vara_gjort(self):
+        utan = HANDELSER.replace("- 2026-02-19 · samrad · Samråd. · [P](https://example.org/s)\n", "")
+        html = stege(byggt("Detaljplan för T", utan), IDAG)
+        self.assertIn('<li class="tidigare alla">', html)
+        self.assertIn("<strong>Samråd</strong> <small>ingen händelse i källorna</small>", html)
 
     def test_okant_lage_star_som_okant(self):
         bara = "## Händelser\n\n- 2023-10-26 · forslag · Nämnden ger uppdrag att genomföra granskning. · [P](https://example.org/p)\n\n"

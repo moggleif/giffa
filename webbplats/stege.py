@@ -5,8 +5,10 @@ igenom enligt plan- och bygglagen, vilka som är gjorda, var planen står nu
 och vad som kommer, med spåret för varje steg (K30). Bara det som
 händelserna säger räknas: samråd och granskning på sitt steg, antagandet
 och godkännandet på ett beslut som säger att planen antogs eller
-godkändes. Kommer inget steg fram står läget som okänt i stället för
-gissat. Andra ärenden har ingen fastslagen process och ingen stege.
+godkändes, uppdraget på ett förslag eller beslut om uppdrag att upprätta
+planen. Ett steg före steget nu utan egen händelse sägs inte vara gjort,
+och ett kommande steg utan tillfälle sägs inte komma. Kommer inget steg
+fram står läget som okänt i stället för gissat. Andra ärenden har ingen fastslagen process och ingen stege.
 """
 
 import re
@@ -28,10 +30,12 @@ class Steg(NamedTuple):
 
 
 FATTAT = "beslut|vantas"
-UPPDRAG = Steg("Uppdrag", "partiet", ("", ""), (FATTAT, r"uppdraget att upprätta"))
+UPPDRAG = Steg(
+    "Uppdrag", "partiet", ("forslag|beslut", r"uppdrag att upprätta|bad \w+ upprätta"), (FATTAT, r"uppdraget att upprätta")
+)
 SAMRAD = Steg("Samråd", "alla", ("samrad", ""), ("samrad", ""))
 ANTAGANDE = Steg(
-    "Antagande", "partiet", ("beslut", r"\b(antog|antagit)\b"), (FATTAT, r"\banta[rs]? (detalj)?planen")
+    "Antagande", "partiet", ("beslut", r"\b(antog|antagit)\b"), (FATTAT, r"^(?!.*föreslå att).*\banta[rs]? (detalj)?planen")
 )
 GODKANNANDE = Steg(
     "Godkännande", "partiet", ("beslut", r"godkände planprogrammet"), (FATTAT, r"godkänn\w* planprogrammet")
@@ -43,7 +47,6 @@ SLAG = (
     (r"planprogram", PLANPROGRAM),
 )
 UPPHAVT = re.compile(r"upphäv\w* (antagandet|detaljplanen|planen|\w+ beslut att anta)")
-ORD = {"gjord": "gjort", "nu": "nu", "kommande": "kommer", "okand": ""}
 OKAND = '<p class="forfarande">Var planen står går inte att läsa ut ur händelserna.</p>'
 FORFARANDE = (
     '<p class="forfarande">Stegen följer plan- och bygglagens standardförfarande; vid '
@@ -60,9 +63,8 @@ def stege(arende: Arende, idag: date) -> str:
     handelser = efter if borjat_om else arende.handelser
     nu = steget_nu(handelser, stegen)
     tillfallen = kommande(arende, idag)
-    poster = "".join(
-        post(s, lage(i, nu), nar(s, lage(i, nu), handelser, tillfallen)) for i, s in enumerate(stegen)
-    )
+    lagen = [lage(i, nu, s, handelser) for i, s in enumerate(stegen)]
+    poster = "".join(post(s, l, nar(s, l, handelser, tillfallen)) for s, l in zip(stegen, lagen, strict=True))
     noten = (OKAND if nu is None else "") + upphavd(upphavt, borjat_om) + FORFARANDE
     return f'<div class="stege"><p>Var planen står</p><ol>{poster}</ol>{noten}</div>'
 
@@ -89,28 +91,25 @@ def steget_nu(handelser: list[Handelse], stegen: tuple[Steg, ...]) -> int | None
     return max(senaste)[1] if senaste else None
 
 
-def lage(index: int, nu: int | None) -> str:
+def lage(index: int, nu: int | None, steget: Steg, handelser: list[Handelse]) -> str:
     if nu is None:
         return "okand"
     if index < nu:
-        return "gjord"
+        return "gjord" if any(passar(steget.handelse, h) for h in handelser) else "tidigare"
     return "nu" if index == nu else "kommande"
 
 
 def nar(steget: Steg, lage_: str, handelser: list[Handelse], tillfallen: list[Handelse]) -> str:
     kommer = [t.datum for t in tillfallen if passar(steget.tillfalle, t)]
     if kommer and lage_ != "gjord":
-        return ("kommer, " if lage_ == "okand" else "") + tid(kommer[0])
-    if lage_ == "okand":
-        return ""
-    if lage_ == "kommande":
-        return "datum inte känt än"
-    gjort = [h.datum for h in handelser if passar(steget.handelse, h)]
-    return tid(max(gjort)) if gjort else "inget datum i källorna"
+        return f"{'nu' if lage_ == 'nu' else 'kommer'}, {tid(kommer[0])}"
+    if lage_ in ("gjord", "nu"):
+        senast = max(h.datum for h in handelser if passar(steget.handelse, h))
+        return f"{'gjort' if lage_ == 'gjord' else 'nu'}, {tid(senast)}"
+    return {"tidigare": "ingen händelse i källorna", "kommande": "inget i källorna än"}.get(lage_, "")
 
 
-def post(steget: Steg, lage_: str, datum: str) -> str:
-    text = ", ".join(d for d in (ORD[lage_], datum) if d)
+def post(steget: Steg, lage_: str, text: str) -> str:
     return (
         f'<li class="{lage_} {steget.spar}">{tecken(steget.spar)}<strong>{escape(steget.namn)}</strong> '
         f"<small>{text}</small></li>"
