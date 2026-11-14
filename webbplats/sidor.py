@@ -1,7 +1,7 @@
 """Krav: K5, K6, K7, K12, K19, K22, K27, K29 och K32 i KRAV.md. Test: tests/test_sidor.py.
 
-Startsidan med det som går att påverka, det som är på väg upp, det uppmärksammade, det nya och hur många ärenden
-varje lista har, och listorna: det som pågår, det som är beslutat och
+Startsidan med det som går att påverka, det uppmärksammade, det nya och hur många ärenden
+varje lista har, sist det som är på väg upp, och listorna: det som pågår, det som är beslutat och
 historiken med det som är klart eller avbrutet.
 """
 
@@ -41,9 +41,9 @@ def startsida(
         "Utan val syns allt; välj en ort, eller en förening för att bara se dess orter. "
         "Varje händelse länkar till sin källa.</p>"
     )
-    paverka = tycka_till_nu(arenden, sajt) + pa_vag_upp(arenden, sajt)
+    paverka = tycka_till_nu(arenden, sajt)
     lyfta = ruta(namnen, arenden)
-    innehall = inledning + urval(sajt) + paverka + lyfta + nytt(arenden, runda, sajt) + oversikt(arenden)
+    innehall = inledning + urval(sajt) + paverka + lyfta + nytt(arenden, runda, sajt) + oversikt(arenden) + pa_vag_upp(arenden, sajt)
     return sida(sajt, "index.html", "Giffå", innehall)
 
 
