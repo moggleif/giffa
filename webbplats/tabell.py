@@ -62,4 +62,6 @@ def cell(arende: Arende, ar: int, egna: range) -> str:
 
 
 def namn_liten(arende: Arende) -> str:
-    return f' <small class="kallas">{etiketter(arende)}</small>' if arende.kallas else ""
+    if not arende.kallas:
+        return ""
+    return f' <small class="kallas"><span class="dold">Uppmärksammat som </span>{etiketter(arende)}</small>'

@@ -1,4 +1,4 @@
-/* Krav: K4–K9, K14, K20 och K22 i KRAV.md. Stilen följer kommunhandlingars sidor om
+/* Krav: K4–K9, K14, K20, K22, K27 och K29 i KRAV.md. Stilen följer kommunhandlingars sidor om
    initiativ och lokalbehov: tidslinjen, korten och urvalet. */
 :root { --accent: #1d5d73; --band: #e3eef2; --yta: #f5f6f8;
         --linje: #d9dde5; --dampad: #5b6475; --lyft: #7a4100; }
@@ -9,7 +9,7 @@ body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 0 auto;
 main > p, main > ul, main > details, ol.tillfallen, ol.handelser { max-width: 32rem; }
 :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; box-shadow: 0 0 0 6px #fff; }
 small { font-size: 0.85rem; }
-.hoppa { position: absolute; left: -999rem; }
+.hoppa, .dold { position: absolute; left: -999rem; }
 .hoppa:focus { position: static; display: inline-block; margin-top: 0.5rem; }
 nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1.5rem; }
 nav a[aria-current] { font-weight: bold; text-decoration: none; }

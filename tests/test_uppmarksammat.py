@@ -70,7 +70,8 @@ class Sidorna(unittest.TestCase):
         html = lista(SAJT, self.arenden, LISTOR[0])
         lagret, straket = '<span class="etikett">Lagret</span>', '<span class="etikett">Stråket</span>'
         self.assertIn(f'<p class="kallas">Uppmärksammat som {lagret} {straket}</p>', html)
-        self.assertIn(f'<small class="kallas">{lagret} {straket}</small>', html)
+        dold = '<span class="dold">Uppmärksammat som </span>'
+        self.assertIn(f'<small class="kallas">{dold}{lagret} {straket}</small>', html)
         self.assertIn(f'<p class="kallas">Uppmärksammat som {straket}</p>', arendesida(SAJT, self.arenden[0]))
 
 
@@ -94,6 +95,12 @@ class Overst(unittest.TestCase):
         html = lista(SAJT, pagar, LISTOR[0], self.namnen)
         self.assertLess(html.index('<article id="a"'), html.index('<h2 id="rorliga">'))
         self.assertNotIn('id="ovriga"', html)
+
+    def test_bara_uppmarksammade_ger_ingen_tom_ovrigt_rubrik(self):
+        html = lista(SAJT, [arende("beslutat", "a")], LISTOR[1], self.namnen)
+        self.assertIn('<article id="a"', html)
+        self.assertNotIn('id="ovriga"', html)
+        self.assertNotIn("Inga ärenden ännu.", html)
 
     def test_utan_uppmarksammade_i_listan_ingen_rubrik(self):
         html = lista(SAJT, [arende("beslutat", "c")], LISTOR[1], self.namnen)

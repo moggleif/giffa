@@ -18,7 +18,8 @@ på listsidorna räcker den inte längre.
   `kalla`. Ett namn kan stå på flera ärenden, och ett ärende kan ha flera
   namn. Namnet är det ärendet kallas i folkmun eller ett gemensamt ämne,
   som *Dagvatten och översvämningar*; sidan skriver därför *Uppmärksammat
-  som …* och inte *kallas*. Ordningen i filen är ordningen på startsidan.
+  som …* och inte *kallas*. Ordningen i filen är ordningen på startsidan, och sedan K29 också
+  först i listorna.
   Källan är en länk till en artikel eller handling, texten *ärendets
   rubrik* när namnet står i rubriken, eller *projektägaren* när namnet
   kommer från projektägaren själv.

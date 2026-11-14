@@ -80,20 +80,27 @@ def lista(sajt: Sajt, arenden: list[Arende], listan: tuple, namnen: Sequence[Nam
     rang = ordning(namnen)
     lyfta = sorted((a for a in valda if a.id in rang), key=lambda a: rang[a.id])
     ovriga = [a for a in valda if a.id not in rang]
-    delar = pagar_delar(sajt, ovriga) if statusar == ("pågår",) else avsnitt(sajt, ovriga)
-    innehall = f"<p>{inledning}</p>" + urval(sajt) + teckenforklaring() + forst(sajt, lyfta, delar)
+    delar = uppmarksammat(sajt, lyfta) + resten(sajt, ovriga, statusar == ("pågår",), bool(lyfta))
+    innehall = f"<p>{inledning}</p>" + urval(sajt) + teckenforklaring() + delar
     return sida(sajt, adress, rubrik, innehall)
 
 
-def forst(sajt: Sajt, lyfta: list[Arende], delar: str) -> str:
+def uppmarksammat(sajt: Sajt, lyfta: list[Arende]) -> str:
     if not lyfta:
-        return delar
-    rubrik = "" if delar.startswith("<h2") else '<h2 id="ovriga">Övriga ärenden</h2>'
+        return ""
     return (
         '<h2 id="uppmarksammat">Uppmärksammat</h2>'
-        "<p>Projektägarens urval, i den ordningen; resten följer under.</p>"
-        f"{avsnitt(sajt, lyfta)}{rubrik}{delar}"
+        "<p>De ärenden projektägaren valt att lyfta, i listans ordning; resten följer under.</p>"
+        + avsnitt(sajt, lyfta)
     )
+
+
+def resten(sajt: Sajt, ovriga: list[Arende], pagar: bool, efter_lyfta: bool) -> str:
+    if pagar:
+        return pagar_delar(sajt, ovriga)
+    if not efter_lyfta:
+        return avsnitt(sajt, ovriga)
+    return f'<h2 id="ovriga">Övriga ärenden</h2>{avsnitt(sajt, ovriga)}' if ovriga else ""
 
 
 def pagar_delar(sajt: Sajt, arenden: list[Arende]) -> str:
