@@ -58,9 +58,10 @@ def markering(arende: Arende, sajt: Sajt) -> str:
 
 def tycka_till_nu(arenden: list[Arende], sajt: Sajt) -> str:
     idag = sajt.byggd.date()
+    alla = sorted(((t, a) for a in arenden for t in kommande(a, idag)), key=lambda p: p[0].datum)
     dagar: dict[date, list[tuple[Handelse, Arende]]] = {}
-    for t, a in sorted(((t, a) for a in arenden for t in kommande(a, idag)), key=lambda p: p[0].datum):
-        dagar.setdefault(t.datum, []).append((t, a))
+    for par in alla:
+        dagar.setdefault(par[0].datum, []).append(par)
     kalender = "".join(dag(datum, par, sajt) for datum, par in dagar.items())
     lista = urvalslista(f'<div class="kalender">{kalender}</div>') if kalender else "<p>Inga kända tillfällen.</p>"
     return f'<h2 id="tycka-till">Tycka till nu</h2>{INLEDNING}{lista}{forklaring()}'
