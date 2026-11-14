@@ -41,7 +41,7 @@ def startsida(
         "Utan val syns allt; välj en ort, eller en förening för att bara se dess orter. "
         "Varje händelse länkar till sin källa.</p>"
     )
-    paverka = tycka_till_nu(arenden, sajt) + pa_vag_upp(arenden, sajt)
+    paverka = tycka_till_nu(arenden, sajt)
     lyfta = ruta(namnen, arenden)
     innehall = inledning + urval(sajt) + paverka + lyfta + nytt(arenden, runda, sajt) + oversikt(arenden) + pa_vag_upp(arenden, sajt)
     return sida(sajt, "index.html", "Giffå", innehall)
