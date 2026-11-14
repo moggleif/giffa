@@ -1,4 +1,4 @@
-"""Krav: K4, K5, K6, K9, K12, K18, K23, K24 och K27 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9, K12, K18, K23, K24, K27 och K29 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett kort per ärende under tabellen, korten för det som är nytt sedan
 förra rundan överst på startsidan, och delarna som ärendets egen sida
@@ -37,9 +37,11 @@ def markor(arende: Arende) -> str:
 
 
 def namn_rad(arende: Arende) -> str:
-    if not arende.kallas:
-        return ""
-    return f'<p class="kallas">Uppmärksammat som {escape(", ".join(arende.kallas))}</p>'
+    return f'<p class="kallas">Uppmärksammat som {etiketter(arende)}</p>' if arende.kallas else ""
+
+
+def etiketter(arende: Arende) -> str:
+    return " ".join(f'<span class="etikett">{escape(n)}</span>' for n in arende.kallas)
 
 
 def organ(arende: Arende) -> str:

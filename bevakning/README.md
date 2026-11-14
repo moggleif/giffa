@@ -150,8 +150,9 @@ namn och ärende:
 
 Ett namn kan stå på flera rader, en per ärende, och ett ärende kan ha
 flera namn. Namnen står i filens ordning under *Uppmärksammat* på
-startsidan; flytta en rad för att flytta namnet. Namnet visas också, som
-*Uppmärksammat som …*, på
+startsidan och först i listorna *Pågår*, *Beslutat* och *Historik* (K29);
+flytta ett namns rader för att flytta namnet och dess ärenden. Namnet visas också, som en färgad
+etikett, på
 ärendets kort, egen sida och i tidslinjen, och går att söka på under
 *Sök*. Ett ärende som inte finns stoppar bygget.
 

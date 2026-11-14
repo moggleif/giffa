@@ -182,7 +182,7 @@ och en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och
 
 **Givet** ärenden med `status` `pågår`,
 **när** sidan *Pågår* byggs,
-**så** står först de som har en händelse de senaste två åren (730 dagar)
+**så** står, efter de uppmärksammade (K29), först de som har en händelse de senaste två åren (730 dagar)
 räknat från byggdagen, och sedan, under en egen rubrik med datumet, de som
 inte har det, med en mening om att det som inte syns i källorna inte
 betyder att inget har hänt. Kortet visar när det senaste steget togs (K16).
@@ -291,8 +291,9 @@ namnet,
 **när** sidan byggs,
 **så** står namnen under *Uppmärksammat* på startsidan, i den ordning de
 står i filen, med sina ärenden under och källan till namnet intill. Namnet
-står också som *Uppmärksammat som …* under rubriken på ärendets kort och
-egna sida och i tidslinjen, så att den som känner ärendet under ett annat
+står också under rubriken som en färgad etikett: på ärendets kort och egna
+sida efter orden *Uppmärksammat som*, och i tidslinjen med samma ord bara
+för skärmläsare, så att den som känner ärendet under ett annat
 namn känner igen det. Ortsvalet gäller rutan som allt annat, för namnen
 och för varje ärende under dem. Ett ärende som inte finns, ett tomt fält,
 samma namn och ärende två gånger eller en källa som är en länk men inte en
@@ -307,3 +308,15 @@ ur `bevakning/uppmarksammade.csv`, i orterna eller i organet, utan hänsyn
 till stora och små bokstäver. Utan ord syns alla ärenden, och utan skript
 syns hela listan så att webbläsarens egen sökning fungerar. Finns ingen
 träff står det.
+
+## K29 – Uppmärksammat först i listorna
+
+**Givet** ärenden i `bevakning/uppmarksammade.csv` (K27),
+**när** listorna *Pågår*, *Beslutat* och *Historik* byggs,
+**så** står de uppmärksammade ärenden som hör till listan först, under
+rubriken *Uppmärksammat* och i namnens ordning i filen – först namnet
+som står överst, med dess ärenden i radernas ordning – och
+resten följer under som förut: på *Pågår* med uppdelningen i det som rört
+sig och det som stått still (K19), på de andra under *Övriga ärenden*.
+Namnen står som färgade etiketter i tidslinjen och på korten. Har listan
+inget uppmärksammat ärende ser den ut som förut.
