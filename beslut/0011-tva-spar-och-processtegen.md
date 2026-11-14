@@ -20,10 +20,12 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
 - **Processtegen läses ur det som redan finns** – händelsernas steg och
   text, statusen och tillfällena att tycka till – i stället för ett nytt
   fält för förfarandet i front matter. Slaget avgörs av hur rubriken börjar.
-  Ett antagande räknas bara när ett beslut säger *antog* eller *antagit*,
-  eftersom planerna också har andra beslut, som exploateringsavtal. Stegen
-  för de tre slagen står som konstanter i `webbplats/stege.py`; en datafil
-  motiveras när ett fjärde slag behövs.
+  Ett uppdrag och ett antagande känns igen på orden i händelsen eller
+  tillfället, eftersom planerna också har andra beslut, som
+  exploateringsavtal och principavtal. Steget nu är det med den senaste
+  händelsen, och en information om att antagandet upphävts nollställer
+  stegen. Stegen för de tre slagen står som konstanter i
+  `webbplats/stege.py`; en datafil motiveras när ett fjärde slag behövs.
 - **Hellre märka än gissa.** Kommande steg utan tillfälle står som *datum
   inte känt än*, och planernas stege säger att den följer
   standardförfarandet och att ett begränsat förfarande saknar granskning,
@@ -37,8 +39,8 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
 
 ## Konsekvenser
 
-- En plan vars antagande skrivits utan orden *antog* eller *antagit* visas
-  som om antagandet kommer. `bevakning/README.md` säger hur antagandet ska
+- En plan vars antagande skrivits utan att säga att planen antas eller
+  antogs visas som om antagandet kommer. `bevakning/README.md` säger hur antagandet ska
   skrivas.
 - En plan med begränsat förfarande visar granskningen som kommande tills
   den antas; noten under stegen säger varför.

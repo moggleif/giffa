@@ -330,8 +330,11 @@ granskning) eller *diskutera i partiet* (allt annat: information, förslag,
 yttrande och beslut, där partierna kan ta upp ärendet före
 sammanträdet). Varje spår har ett eget tecken – en pratbubbla för alla,
 två personer för partierna – och en egen färg, och samma tecken och färg
-står överallt: i tidslinjen, på korten, under *Tycka till nu*, under
-*På väg upp* och i processtegen. Tecknet har spårets namn som text för
+står vid varje tillfälle och steg: i tidslinjens markering, på korten,
+under *Tycka till nu*, under *På väg upp* och i processtegen. Tidslinjens
+ikoner för samråd och granskning har allas färg och för förslag, yttrande
+och information partiernas; beslut, byggs och klart är gröna och
+avbrutet rött, eftersom de säger hur det gick. Tecknet har spårets namn som text för
 skärmläsare. Etiketterna för uppmärksammade ärenden har en tredje färg.
 
 ## K31 – Tycka till nu som en kalender
@@ -360,19 +363,28 @@ kommer. Finns inget står det.
 **Givet** ett pågående ärende,
 **när** dess kort och egna sida byggs,
 **så** visar *Var ärendet står* stegen för ärendets slag i ordning – för
-en detaljplan *Uppdrag, Samråd, Granskning, Antagande*, för ett
-planprogram *Uppdrag, Samråd, Godkännande*, för andra ärenden
-*Information, Förslag, Beslut* – med spårets tecken (K30) och för varje
-steg om det är gjort, är där ärendet står nu eller kommer. Ett gjort
-steg och steget nu har datumet för den senaste händelsen i steget, steget
-nu och ett kommande steg datumet för sitt kommande tillfälle när det
-finns, och ett kommande steg utan tillfälle står som *datum inte känt
-än*. Slaget avgörs av hur rubriken börjar (*Detaljplan*, *Planprogram*).
-Ett samråd eller en granskning räknas när händelsen har det steget; ett
-antagande eller godkännande bara när ett beslut säger att planen antogs
-(*antog*, *antagit*) eller att planprogrammet godkändes. För planerna
-står att stegen följer plan- och bygglagens standardförfarande och att
-ett begränsat förfarande inte har någon granskning, med länk till lagen.
-Steget nu är det med den senaste händelsen, så att en plan som börjat om
-efter ett upphävt antagande står på sitt nya steg. Avgjorda ärenden har
-ingen stege.
+en detaljplan, också en ändring eller ett upphävande av en, *Uppdrag,
+Samråd, Granskning, Antagande*, för ett planprogram *Uppdrag, Samråd,
+Godkännande*, för andra ärenden *Beredning, Beslut* – med spårets tecken
+(K30) och för varje steg om det är gjort, är där ärendet står nu eller
+kommer. Slaget avgörs av hur rubriken börjar.
+
+Ett steg känns igen på händelsens eller tillfällets steg, och där steget
+delas med annat på orden i texten: ett uppdrag på *uppdrag*,
+*projektbeställning* eller *återuppta*, ett antagande på ett beslut som
+säger att planen antas eller antogs, ett godkännande på *godkänn…
+planprogram*. Ett exploateringsavtal eller principavtal är därför inte
+ett antagande. Steget nu är steget med den senaste händelsen, så att en
+plan som börjat om står på sitt nya steg. Har en information sagt att
+antagandet eller planen upphävts räknas bara det som hänt efter den, om
+något av det är ett steg; annars visas planen fram till upphävandet.
+Upphävandet står med datum och källa under stegen, och noten säger vilket
+det är.
+
+Ett gjort steg och steget nu har datumet för den senaste händelsen i
+steget, eller *inget datum i källorna*; steget nu och ett kommande steg
+har datumet för sitt kommande tillfälle när det finns, och ett kommande
+steg utan tillfälle står som *datum inte känt än*. För planerna står att
+stegen följer plan- och bygglagens standardförfarande och att ett
+begränsat förfarande inte har någon granskning, med länk till lagen.
+Avgjorda ärenden har ingen stege.

@@ -60,8 +60,8 @@ def tycka_till_nu(arenden: list[Arende], sajt: Sajt) -> str:
     idag = sajt.byggd.date()
     alla = sorted(((t, a) for a in arenden for t in kommande(a, idag)), key=lambda p: p[0].datum)
     dagar: dict[date, list[tuple[Handelse, Arende]]] = {}
-    for par in alla:
-        dagar.setdefault(par[0].datum, []).append(par)
+    for tillfalle_och_arende in alla:
+        dagar.setdefault(tillfalle_och_arende[0].datum, []).append(tillfalle_och_arende)
     kalender = "".join(dag(datum, par, sajt) for datum, par in dagar.items())
     lista = urvalslista(f'<div class="kalender">{kalender}</div>') if kalender else "<p>Inga kända tillfällen.</p>"
     return f'<h2 id="tycka-till">Tycka till nu</h2>{INLEDNING}{lista}{forklaring()}'
