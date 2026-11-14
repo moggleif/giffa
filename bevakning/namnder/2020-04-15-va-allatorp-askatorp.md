@@ -12,4 +12,4 @@ Lösthagen. Slutredovisad 2020.
 
 ## Händelser
 
-- 2020-04-15 · klart · Nämnden för Teknik fick slutredovisningen av VA-utbyggnaden Allatorp–Äskatorp, som ökat kapaciteten för Gällinge. · [Teknik protokoll § 41](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2020/2020-04-15/protokoll.html#sida-17)
+- 2020-04-15 · klart · Nämnden för Teknik fick slutredovisningen av VA-utbyggnaden Allatorp–Äskatorp, som ökat kapaciteten för Gällinge. · [Teknik protokoll § 41](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2020/2020-04-15/protokoll.html#sida-17) · Handlingar: [Handlingar till sammanträdet, punkt 12 (PDF)](https://web.archive.org/web/20210506044034id_/https://www.kungsbacka.se/globalassets/kommun-och-politik/dokument/moten-handlingar-och-protokoll/teknik/handlingar/2020/handlingar-for-mote-namnden-for-teknik-den-2020-04-15.pdf)

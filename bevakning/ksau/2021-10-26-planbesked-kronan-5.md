@@ -16,4 +16,4 @@ protokollen i poolen.
 ## Händelser
 
 - 2021-11-23 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva åtgärden genom en detaljplan för Kronan 5 och gav kommundirektören i uppdrag att ta fram en projektbeställning. · [KS protokoll § 294](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-11-23/protokoll.html#sida-12) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2021/2021-11-23/handlingar.html#sida-27)
-- 2021-10-26 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 373](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2021/2021-10-26/protokoll.html#sida-7)
+- 2021-10-26 · forslag · Kommunstyrelsens arbetsutskott föreslog positivt planbesked. · [KSAU protokoll § 373](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2021/2021-10-26/protokoll.html#sida-7) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks-au/2021/2021-10-26/handlingar.html#sida-32)

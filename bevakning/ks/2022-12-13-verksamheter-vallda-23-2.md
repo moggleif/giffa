@@ -22,4 +22,4 @@ uppdrag om detaljplan och samråd.
 
 ## Tycka till
 
-- 2026-11-19 · vantas · Uppdraget om detaljplan och samråd väntas upp i byggnadsnämnden. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
+- 2026-11-19 · beslut · Byggnadsnämnden ska besluta om uppdraget att upprätta detaljplan för verksamheter inom Vallda 23:2 och att genomföra samråd; arbetsutskottet har föreslagit det. · [Byggnadsnämnden kallelse, punkt 10](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-11-19/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-11-19/handlingar.html#sida-90), [Projektbeställning](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2026/2026-11-19/handlingar.html#sida-92)

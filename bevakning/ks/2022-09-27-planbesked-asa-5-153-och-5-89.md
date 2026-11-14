@@ -13,4 +13,4 @@ planarbetet. Något senare steg finns inte i protokollen i poolen.
 
 ## Händelser
 
-- 2022-09-27 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva bostäder och centrumändamål genom en detaljplan inom Åsa 5:153 och 5:89. · [KS protokoll § 210](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-09-27/protokoll.html#sida-17)
+- 2022-09-27 · beslut · Kommunstyrelsen lämnade besked att kommunen avser att pröva bostäder och centrumändamål genom en detaljplan inom Åsa 5:153 och 5:89. · [KS protokoll § 210](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2022/2022-09-27/protokoll.html#sida-17) · Handlingar: [Handlingar till sammanträdet, punkt 10 (PDF)](https://web.archive.org/web/20240917183554id_/https://kungsbacka.se/download/18.a777de9182e93debbe550ea/1663823296335/Kommunstyrelsen%20handlingar%202022-09-27.pdf)
