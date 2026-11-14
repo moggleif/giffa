@@ -93,6 +93,15 @@ tabellen, och teckenförklaringen på sidan visar samma betydelser
 | `avbrutet`   | avbrutet eller upphävt                          |
 | `info`       | information, avstämning eller överprövning av en högre instans |
 
+Stegen och texten ger också processtegen på kortet och ärendets sida
+(K33): ett samråd och en granskning räknas på sitt steg, och ett
+antagande när ett `beslut` säger att planen *antogs* (`antog`,
+`antagit`), ett planprogram när det säger *godkände planprogrammet*.
+Skriv därför antagandet med de orden, och andra beslut i en plan, som
+exploateringsavtal, utan dem. Samråd och granskning hör till spåret *för
+alla*, de andra stegen till *partierna* (K30); en `info` det senaste
+året utan förslag eller tillfälle efter står under *På väg upp* (K32).
+
 **Tycka till** är valfritt: kommande tillfällen att påverka, i samma
 format som händelserna. Datumet är sista dagen för synpunkter eller
 sammanträdets dag. Steget är ett av:

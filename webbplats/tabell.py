@@ -1,4 +1,4 @@
-"""Krav: K4, K12, K27 och K29 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K12, K27, K29 och K30 i KRAV.md. Test: tests/test_sidor.py.
 
 Tidslinjen som på kommunhandlingars sidor om initiativ och lokalbehov: en
 rad per ärende, en kolumn per år och årets händelser som ikoner på ett band
@@ -14,6 +14,7 @@ from webbplats.datum import tid
 from webbplats.ikoner import ikon
 from webbplats.kort import etiketter
 from webbplats.paverka import kommande
+from webbplats.spar import spar, tecken
 
 
 def tabell(arenden: list[Arende], idag: date) -> str:
@@ -50,7 +51,7 @@ def tycka_till_marke(arende: Arende, idag: date) -> str:
         return ""
     forsta = tillfallen[0]
     preliminart = " (preliminärt)" if forsta.steg == "vantas" else ""
-    return f' <small class="paverka">Tycka till {tid(forsta.datum)}{preliminart}</small>'
+    return f' <small class="paverka {spar(forsta.steg)}">{tecken(spar(forsta.steg))}Tycka till {tid(forsta.datum)}{preliminart}</small>'
 
 
 def cell(arende: Arende, ar: int, egna: range) -> str:

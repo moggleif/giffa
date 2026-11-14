@@ -163,10 +163,10 @@ namn och datum, och årtalen på kortet står som *Pågått 2014–2026*.
 
 **Givet** ett kommande tillfälle att tycka till enligt K12,
 **när** sidan byggs,
-**så** står under *Tycka till nu* först ärendet och orten, sedan
-tillfället, och varje tillfälle, där och på ärendets kort, har en rad
-*Så gör du:* för just det steget med en länk till källan. Förklaringen
-*Så kan du påverka, steg för steg* står öppen.
+**så** har varje tillfälle på ärendets kort och sida en rad *Så gör du:*
+för just det steget med en länk till källan. Under *Tycka till nu* (K31)
+står förklaringen *Så kan du påverka, steg för steg* öppen en gång under
+listan i stället för vid varje tillfälle.
 
 ## K18 – En egen sida per ärende
 
@@ -320,3 +320,59 @@ resten följer under som förut: på *Pågår* med uppdelningen i det som rört
 sig och det som stått still (K19), på de andra under *Övriga ärenden*.
 Namnen står som färgade etiketter i tidslinjen och på korten. Har listan
 inget uppmärksammat ärende ser den ut som förut.
+
+## K30 – Två spår, ett tecken och en färg var
+
+**Givet** ett steg eller ett tillfälle att tycka till,
+**när** sidan byggs,
+**så** hör det till ett av två spår: *tycka till för alla* (samråd och
+granskning) eller *diskutera i partiet* (allt annat: information, förslag,
+yttrande och beslut, där partierna kan ta upp ärendet före
+sammanträdet). Varje spår har ett eget tecken – en pratbubbla för alla,
+två personer för partierna – och en egen färg, och samma tecken och färg
+står överallt: i tidslinjen, på korten, under *Tycka till nu*, under
+*På väg upp* och i processtegen. Tecknet har spårets namn som text för
+skärmläsare. Etiketterna för uppmärksammade ärenden har en tredje färg.
+
+## K31 – Tycka till nu som en kalender
+
+**Givet** de kommande tillfällena att tycka till (K12),
+**när** startsidan byggs,
+**så** står de under *Tycka till nu* dag för dag, med dagen som rubrik med
+veckodag och hur många dagar det är kvar, och under varje dag en rad per
+ärende med spårets tecken (K30), ärendet, orten, vad som ska hända,
+källan och handlingarna (K25). Inledningen förklarar de två tecknen. En
+dag utan ärenden för det valda urvalet döljs.
+
+## K32 – På väg upp
+
+**Givet** pågående ärenden vars senaste händelse är en *information* och
+som inte har något kommande tillfälle att tycka till,
+**när** startsidan byggs,
+**så** står de ärenden vars information är högst ett år gammal räknat från
+byggdagen under *På väg upp*, efter *Tycka till nu*, med det nyaste
+först: partiernas tecken (K30), ärendet, orten, datumet och källan. Listan
+säger bara att ett organ har informerats och inget om när ett beslut
+kommer. Finns inget står det.
+
+## K33 – Processtegen
+
+**Givet** ett pågående ärende,
+**när** dess kort och egna sida byggs,
+**så** visar *Var ärendet står* stegen för ärendets slag i ordning – för
+en detaljplan *Uppdrag, Samråd, Granskning, Antagande*, för ett
+planprogram *Uppdrag, Samråd, Godkännande*, för andra ärenden
+*Information, Förslag, Beslut* – med spårets tecken (K30) och för varje
+steg om det är gjort, är där ärendet står nu eller kommer. Ett gjort
+steg och steget nu har datumet för den senaste händelsen i steget, steget
+nu och ett kommande steg datumet för sitt kommande tillfälle när det
+finns, och ett kommande steg utan tillfälle står som *datum inte känt
+än*. Slaget avgörs av hur rubriken börjar (*Detaljplan*, *Planprogram*).
+Ett samråd eller en granskning räknas när händelsen har det steget; ett
+antagande eller godkännande bara när ett beslut säger att planen antogs
+(*antog*, *antagit*) eller att planprogrammet godkändes. För planerna
+står att stegen följer plan- och bygglagens standardförfarande och att
+ett begränsat förfarande inte har någon granskning, med länk till lagen.
+Steget nu är det med den senaste händelsen, så att en plan som börjat om
+efter ett upphävt antagande står på sitt nya steg. Avgjorda ärenden har
+ingen stege.
