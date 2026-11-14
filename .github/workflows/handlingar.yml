@@ -1,0 +1,54 @@
+# Söndagens handlingslänkar (K26, beslut 0009): lägger tjänsteskrivelsen ur
+# samma sammanträdes handlingar intill protokollet på de händelser som bara
+# länkar ett protokoll, och öppnar en PR. Testerna och bygget körs här,
+# eftersom en PR som öppnas av arbetsflödet inte startar Kontroll.
+name: Handlingar
+
+on:
+  schedule:
+    - cron: "17 3 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  lanka:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hämta kommunhandlingars data
+        run: |
+          git clone --depth 1 --filter=blob:none --no-checkout \
+            https://github.com/moggleif/kommunhandlingar.git "$RUNNER_TEMP/kh"
+          git -C "$RUNNER_TEMP/kh" sparse-checkout set --no-cone "data/kungsbacka/" "!*.tabeller/"
+          git -C "$RUNNER_TEMP/kh" checkout
+      - name: Lägg handlingarna intill protokollen
+        run: |
+          python3 -m handlingslankar "$RUNNER_TEMP/kh/data/kungsbacka" \
+            https://moggleif.github.io/kommunhandlingar | tee "$RUNNER_TEMP/lankar.txt"
+      - name: Testerna och bygget
+        run: |
+          python3 -m unittest discover -s tests -t .
+          node --test tests/*.js
+          python3 -m webbplats "$RUNNER_TEMP/site" "${{ github.server_url }}/${{ github.repository }}"
+      - name: Öppna PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "Inga nya handlingar att länka."
+            exit 0
+          fi
+          gren=automatik/handlingslankar
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$gren"
+          git commit -qam "Handlingarna intill protokollen, $(date +%F)"
+          git push --force origin "$gren"
+          if [ -z "$(gh pr list --head "$gren" --state open --json number --jq '.[].number')" ]; then
+            gh pr create --head "$gren" --base main \
+              --title "Handlingarna intill protokollen, $(date +%F)" \
+              --body-file "$RUNNER_TEMP/lankar.txt"
+          fi
