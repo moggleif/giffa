@@ -70,8 +70,9 @@ på sidan före mötet. Lokalt: `python3 -m skanning --kommande …`.
 
 ## Söndagens handlingar och runda
 
-Varje söndag lägger `handlingar.yml` tjänsteskrivelsen ur samma
-sammanträdes handlingar intill protokollet på de händelser som bara länkar
+Varje söndag lägger `handlingar.yml` ärendets handling ur samma
+sammanträdes handlingar – tjänsteskrivelsen, ärendets sida eller
+sammanträdets PDF – intill protokollet på de händelser som bara länkar
 ett protokoll, och öppnar en PR (K26). Senare samma morgon gör en schemalagd
 Claude-runda en bevakningsrunda ovanpå den: nya händelser, tillfällen att
 tycka till och nya ärenden, i en PR som projektägaren godkänner. Rundan är

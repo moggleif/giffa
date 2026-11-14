@@ -77,6 +77,11 @@ class Handlingen(unittest.TestCase):
         allman = Paragraf("3", "KS-2026-00123", "Anmälan av delegeringsbeslut")
         self.assertIsNone(handling(sidorna(UTDRAG), allman))
 
+    def test_arsspann_i_huvudet_ar_inget_diarienummer(self):
+        rapport = "TJÄNSTESKRIVELSE\nDiarienummer\n«Diarienr»\nIntraprenadrapport för utbildningsår 2024–2025\n"
+        arende = Paragraf("9", "FG-2025-00853", "Intraprenadrapport för utbildningsår 2024–2025")
+        self.assertEqual(handling(sidorna(rapport), arende), (1, "Tjänsteskrivelse"))
+
     def test_punkt_ur_kallelsen(self):
         self.assertEqual(punkt("| 12. | Ärende | KS 2026-00123 | x |", ARENDE), "12")
         self.assertIsNone(punkt("| 12. | Ärende | 2026-00999 | x |", ARENDE))
@@ -100,6 +105,13 @@ class Lankningen(unittest.TestCase):
         ej = "---\nkvalitet: ej-hamtad\nkalla_url: https://kommun.example/h.pdf\n---\n"
         text, _ = lanka_fil(pool(ej), RAD)
         self.assertTrue(text.endswith("[Handlingar till sammanträdet, punkt 5 (PDF)](https://kommun.example/h.pdf)"))
+
+    def test_allmant_arende_far_ingen_pdf(self):
+        ej = "---\nkvalitet: ej-hamtad\nkalla_url: https://kommun.example/h.pdf\n---\n"
+        allman = PROTOKOLL.replace("Godkännande av projektbeställning för Exempel 1:2", "Information från ledamöter")
+        test = pool(ej)
+        (test.data / "ks/2026/2026-05-05/protokoll.md").write_text(allman, encoding="utf-8")
+        self.assertEqual(lanka_fil(test, RAD), (RAD, 0))
 
 
 if __name__ == "__main__":

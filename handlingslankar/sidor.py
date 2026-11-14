@@ -11,7 +11,9 @@ from skanning.sok import sidor
 
 RUBRIK = re.compile(r"§\s*(\d+)\s+(?:Dnr\s*)?((?:[A-ZÅÄÖ]{1,5}[ -]?)?\d{4}[-/]\d{4,6})")
 SLUT = re.compile(r"\b(?:Beslut|Förslag till beslut|Sammanfattning)\b")
-DIARIENUMMER = re.compile(r"\b(?:[A-ZÅÄÖ]{1,5}[ -]?)?20\d\d[-–]\d{3,6}\b")
+# Löpnumret får inte vara ett årtal, så att ett årsspann som 2024–2025 inte
+# läses som ett diarienummer.
+DIARIENUMMER = re.compile(r"\b(?:[A-ZÅÄÖ]{1,5}[ -]?)?20\d\d[-–](?!(?:19|20)\d\d\b)\d{3,6}\b")
 # Huvudet på en tjänsteskrivelse – rubrik, datum, diarienummer och ärendets
 # rubrik – ryms i de första raderna med text på sidan.
 HUVUDETS_RADER = 12

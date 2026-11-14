@@ -119,7 +119,7 @@ sidan är en karta eller bild som inte blev text. Gick sammanträdets
 handlingar inte att hämta länkas hela PDF:en utan `#page`, med punkten i
 kallelsen i namnet: `Handlingar till sammanträdet, punkt N (PDF)`. Sidan
 visar dem direkt under steget. Varje söndag lägger `handlingar.yml` till
-tjänsteskrivelsen på händelser som bara länkar ett protokoll (K26).
+ärendets handling på händelser som bara länkar ett protokoll (K26).
 
 **Förslaget i korthet** är valfritt och står före *Händelser*: några
 punkter om vad förslaget innebär, ur planprogrammet, planbeskrivningen

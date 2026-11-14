@@ -12,7 +12,8 @@ rundan skrivs av en agent när någon ber om det.
 Två delar, båda på söndagen:
 
 - **`handlingar.yml`** kör `python3 -m handlingslankar`, som lägger
-  tjänsteskrivelsen ur samma sammanträdes handlingar intill protokollet
+  ärendets handling ur samma sammanträdes handlingar intill protokollet:
+  tjänsteskrivelsen, annars ärendets första sida eller sammanträdets PDF
   (K26). Det är mekaniskt och går att pröva med tester, så det görs av ett
   skript. Arbetsflödet kör testerna och bygget själv, eftersom en PR som
   öppnas av arbetsflödet inte startar Kontroll, och lägger ändringen på
@@ -34,8 +35,10 @@ kvar: ingen av dem mergar, och projektägaren godkänner PR:en.
 - Repot måste tillåta att Actions skapar pull requests (inställningen
   *Allow GitHub Actions to create and approve pull requests*).
 - Mergas Claude-rundans PR följer handlingslänkarna med. Vid squash-merge
-  blir handlingslänkarnas PR kvar öppen och stängs för hand, eller töms vid
-  nästa söndags körning.
+  blir handlingslänkarnas PR kvar öppen och stängs för hand.
+- Arbetsflödets PR har ingen egen fas 6: skriptet granskades när det kom
+  till, och PR:en är bara dess utskrift. Projektägaren läser den före merge.
+  Finns söndagsrundan granskas länkarna i dess fas 6.
 - Grenen `automatik/handlingslankar` ägs av arbetsflödet och skrivs om varje
   söndag; ändringar görs i en annan gren.
 - En PR som öppnas av arbetsflödet startar inte Kontroll. Är Kontroll ett

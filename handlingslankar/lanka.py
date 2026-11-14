@@ -56,13 +56,14 @@ def sida(pool: Pool, mote: str, funnen: Paragraf) -> str | None:
 
 def pdf(pool: Pool, mote: str, funnen: Paragraf) -> str | None:
     handlingar, kallelse = pool.text(f"{mote}/handlingar"), pool.text(f"{mote}/kallelse")
-    kvalitet, kalla = KVALITET.search(handlingar), KALLA.search(handlingar)
-    if not kallelse or not kalla or not kvalitet or kvalitet[1] != "ej-hamtad":
+    kvalitet = KVALITET.search(handlingar)
+    if not kallelse or kvalitet[1] != "ej-hamtad" or matcha.allman(funnen):
         return None
     nummer = matcha.punkt(kallelse, funnen)
+    kalla = KALLA.search(handlingar)
     # Sidan i PDF:en är okänd när handlingarna inte gick att hämta; punkten
     # i kallelsen visar var ärendet står.
-    return nummer and f"[Handlingar till sammanträdet, punkt {nummer} (PDF)]({kalla[1]})"
+    return nummer and kalla and f"[Handlingar till sammanträdet, punkt {nummer} (PDF)]({kalla[1]})"
 
 
 def lanka_fil(pool: Pool, text: str) -> tuple[str, int]:
