@@ -17,7 +17,7 @@ jobs:
   skanna:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Hämta årets och fjolårets handlingar ur kommunhandlingar
         run: |
           ar=$(date +%Y)
