@@ -31,7 +31,7 @@ class KommandeMotet(unittest.TestCase):
         self.assertEqual([p.punkt.nummer for p in motet.punkter], [1, 2, 3, 4, 5])
         forsta = motet.punkter[0]
         self.assertEqual(forsta.punkt.rubrik, "Utbyggnad av Åsaskolan")
-        self.assertEqual(forsta.numren, ("KS-2026-1", "BN-2025-7"))
+        self.assertEqual(forsta.numren, ("KS-2026-00001", "BN-2025-7"))
         self.assertEqual(forsta.handling, range(2, 4))
         self.assertEqual(forsta.sammanfattning, ("Skolan ska byggas ut för fler elever.",))
 
@@ -59,8 +59,8 @@ class KommandeMotet(unittest.TestCase):
     def test_arendena_med_punktens_nummer_utan_forled_och_ur_handlingen(self):
         forsta = kommande(POOL, date(2026, 11, 1)).punkter[0]
         arenden = [
-            arende("ks", "KS-2026-1"),
-            arende("utan", "2026-1"),
+            arende("ks", "KS-2026-00001"),
+            arende("utan", "2026-00001"),
             arende("bn", "BN-2026-1"),
             arende("bygglov", "BN 2025-7"),
             arende("annat", "2025-7"),
@@ -83,7 +83,7 @@ class Sokorden(unittest.TestCase):
 
 class Sidan(unittest.TestCase):
     def html(self, dag: date) -> str:
-        arenden = [arende("skolan", "KS-2026-1"), arende("bygglovet", "BN 2025-7")]
+        arenden = [arende("skolan", "KS-2026-00001"), arende("bygglovet", "BN 2025-7")]
         return ks_motet(SAJT, kommande(POOL, dag), arenden, PLATSER)
 
     def test_alla_punkter_i_kallelsens_ordning_med_det_som_saknas_sagt(self):

@@ -8,7 +8,7 @@ Försättsblad
 
 <!-- sida 2 -->
 
-Dnr KS-2026-1
+Dnr KS-2026-00001
 Sammanfattning av ärendet
 Skolan ska byggas ut för fler elever.
 
