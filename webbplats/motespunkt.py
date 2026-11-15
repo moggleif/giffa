@@ -27,7 +27,7 @@ def punktkort(sajt: Sajt, motet: Motet, k: Kopplad) -> str:
     return (
         f'<article id="punkt-{punkt.nummer}">{markor(k)}'
         f"<h3>{sajt.karta.lanka(rubriken(k.punkten))}</h3>"
-        f'<p class="organ">Dnr {escape(k.punkten.numren[0])}</p>'
+        + diarienumret(k.punkten)
         + i_handlingen(k)
         + forslag(sajt, punkt.forslag)
         + sammanfattning(k.punkten)
@@ -35,6 +35,11 @@ def punktkort(sajt: Sajt, motet: Motet, k: Kopplad) -> str:
         + i_giffa(sajt, k)
         + "</article>"
     )
+
+
+def diarienumret(punkten: Punkten) -> str:
+    nummer = punkten.numren[0]
+    return f'<p class="organ">{f"Dnr {escape(nummer)}" if nummer else "Dnr saknas i kallelsen"}</p>'
 
 
 def markor(k: Kopplad) -> str:
@@ -49,7 +54,7 @@ def i_handlingen(k: Kopplad) -> str:
 
 
 def namnet(t: Traff) -> str:
-    return t.ort if t.namn == t.ort else f"{t.namn}, {t.ort}"
+    return t.ort if t.namn == t.ort else f"{t.namn} ({t.ort})"
 
 
 def forslag(sajt: Sajt, stycken: tuple[str, ...] | None) -> str:
@@ -87,18 +92,23 @@ def kallrad(motet: Motet, punkten: Punkten) -> str:
 
 
 def i_giffa(sajt: Sajt, k: Kopplad) -> str:
-    egna = "".join(foljs(sajt, a) for a in k.egna)
-    namnda = "".join(
-        f'<p>Handlingen nämner ett nummer i <a href="{a.sida}">{escape(a.falt["rubrik"])}</a></p>'
-        for a in k.namnda
+    egna = "".join(foljs(sajt, a, "Följs i Giffå") for a in k.egna)
+    osakra = "".join(
+        foljs(sajt, a, "Följs kanske i Giffå, samma nummer utan förled") for a in k.osakra
     )
-    return egna + namnda
+    namnda = "".join(f"<p>Handlingen nämner ett nummer i {lank(a)}</p>" for a in k.namnda)
+    return egna + osakra + namnda
 
 
-def foljs(sajt: Sajt, arende: Arende) -> str:
+def foljs(sajt: Sajt, arende: Arende, inledning: str) -> str:
     poster = "".join(post(h, sajt.karta) for h in arende.handelser)
+    antal = len(arende.handelser)
     return (
-        f'<p>Följs i Giffå: <a href="{arende.sida}">{escape(arende.falt["rubrik"])}</a></p>'
-        f"<details><summary>Historik i Giffå, {len(arende.handelser)} händelser</summary>"
-        f"<ol>{poster}</ol></details>"
+        f"<p>{inledning}: {lank(arende)}</p>"
+        f"<details><summary>Historik i Giffå, {antal} {'händelse' if antal == 1 else 'händelser'}"
+        f"</summary><ol>{poster}</ol></details>"
     )
+
+
+def lank(arende: Arende) -> str:
+    return f'<a href="{arende.sida}">{escape(arende.falt["rubrik"])}</a>'

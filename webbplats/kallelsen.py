@@ -1,10 +1,10 @@
 """Krav: K34 i KRAV.md, beslut 0012. Test: tests/test_ksmotet.py.
 
 Kommunstyrelsens kommande sammanträde ur en utcheckning av kommunhandlingar:
-det första datumet från byggdagen i kalendern eller bland sammanträdenas
-kataloger, och kallelsens dagordning med handlingens sidor och
-sammanfattningen. Dagordningen och handlingen tolkas med datapoolens egen
-kod (K54 där), så att samma sak inte räknas fram två gånger.
+det första datumet från byggdagen i kalendern, och kallelsens dagordning
+med handlingens sidor och sammanfattningen. Dagordningen och handlingen
+tolkas med datapoolens egen kod (K54 där), så att samma sak inte räknas
+fram två gånger.
 """
 
 import csv
@@ -45,6 +45,7 @@ class Motet:
     katalog: str
     # `None` när kallelsen inte finns i poolen än.
     punkter: list[Punkten] | None
+    handlingar: bool
 
 
 def kommande(pool: Path, dag: date) -> Motet | None:
@@ -54,16 +55,14 @@ def kommande(pool: Path, dag: date) -> Motet | None:
     katalog = f"{ORGAN}/{datum.year}/{datum}"
     mapp = pool / "data" / KOMMUN / katalog
     kallelse = mapp / "kallelse.md"
-    return Motet(datum, katalog, punkterna(mapp) if kallelse.exists() else None)
+    punkter = punkterna(mapp) if kallelse.exists() else None
+    return Motet(datum, katalog, punkter, (mapp / "handlingar.md").exists())
 
 
 def datumen(pool: Path) -> set[date]:
     with (pool / "kalender" / f"{KOMMUN}.csv").open(encoding="utf-8") as fil:
         rader = [r for r in csv.DictReader(fil) if r["organ"] == ORGAN]
-    mappar = (pool / "data" / KOMMUN / ORGAN).glob("*/*-*-*")
-    return {date.fromisoformat(r["datum"]) for r in rader} | {
-        date.fromisoformat(m.name) for m in mappar
-    }
+    return {date.fromisoformat(r["datum"]) for r in rader}
 
 
 def punkterna(mapp: Path) -> list[Punkten]:
@@ -77,7 +76,7 @@ def punkterna(mapp: Path) -> list[Punkten]:
 def punkten(punkt: Punkt, handlingar: dict[int, str], omfang: range | None) -> Punkten:
     sidorna = [handlingar[s] for s in omfang or ()]
     i_handlingen = [n for s in sidorna for n in diarienummer(s)]
-    fullt = next((n for n in i_handlingen if ar_punktens(n, punkt)), punkt.diarienummer)
+    fullt = next((n for n in i_handlingen if ar_punktens(n, punkt)), med_forled(punkt))
     return Punkten(
         punkt,
         tuple(dict.fromkeys([fullt, *i_handlingen])),
@@ -86,6 +85,12 @@ def punkten(punkt: Punkt, handlingar: dict[int, str], omfang: range | None) -> P
         "\n".join([punkt.rubrik, *(punkt.forslag or ())]),
         "\n".join(sidorna),
     )
+
+
+# Kallelsen skriver kommunstyrelsens nummer utan förled.
+def med_forled(punkt: Punkt) -> str:
+    nummer = punkt.diarienummer
+    return f"{ORGAN.upper()}-{nummer}" if nummer[:1].isdigit() else nummer
 
 
 def text(fil: Path) -> str:

@@ -1,4 +1,4 @@
-"""Krav: K3–K10, K18, K27 och K28 i KRAV.md. Test: tests/test_bygg.py.
+"""Krav: K3–K10, K18, K27, K28 och K34 i KRAV.md. Test: tests/test_bygg.py.
 
 python3 -m webbplats <utkatalog> <repoadress> <kommunhandlingar>
 

@@ -36,9 +36,12 @@ svåra, och den ska inte finnas i två versioner som glider isär.
 ## Konsekvenser
 
 - Bygget, testerna och arbetsflödena `pages.yml`, `kontroll.yml` och
-  `handlingar.yml` behöver en utcheckning av kommunhandlingar. Ändras
-  `dagordning` eller `punktsidor` där så att Giffå inte längre fungerar,
-  stoppar bygget i stället för att visa fel. Sidan som redan är
-  publicerad står kvar tills nästa bygge lyckas.
+  `handlingar.yml` behöver en utcheckning av kommunhandlingar, och de kör
+  dess kod från `main` utan fäst version. Ändras gränssnittet i
+  `dagordning` eller `punktsidor` stoppar bygget, också en PR i Giffå, och
+  den publicerade sidan står kvar tills nästa bygge lyckas. Ändras bara
+  tolkningen byggs sidan med den nya tolkningen, som datapoolens egen sida.
+- Versionen av `markdown-it-py` står i arbetsflödena och README och hålls
+  för hand i takt med kommunhandlingars `pyproject.toml`.
 - Beslutet ur protokollet visas inte än. Det kan läggas på samma punkt
   när sidan också ska visa ett sammanträde som varit.

@@ -11,3 +11,4 @@ typ: kallelse
 | 3. | Planbesked i Fjärås | 2026-00020 | Förslag till beslut i kommunstyrelsen<br>Kommunstyrelsen lämnar positivt besked. |
 
 4\. Punkt som blev löptext 2026-00099 och mer
+| 5. | Övrigt |  |  |

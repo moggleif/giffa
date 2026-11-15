@@ -3,9 +3,10 @@
 Vad en punkt på dagordningen rör: orterna i OMRADE.md och platserna i
 platser.csv som punktens rubrik, förslag eller handling nämner, med det
 som bara står i handlingen märkt, och de ärenden i bevakning/ som har ett
-av punktens diarienummer. Ett nummer
-utan förled, som kallelsen skriver det, är samma som ett med förled när
-siffrorna är desamma; två nummer med förled måste vara lika.
+av punktens diarienummer. Ett ärende med punktens eget nummer följs i
+Giffå; har ärendet numret utan förled märks kopplingen som osäker, eftersom
+nämnderna har egna serier med samma siffror. Ett annat nummer i handlingen
+kopplas bara när det har förled och står likadant i ärendet.
 """
 
 import re
@@ -34,6 +35,8 @@ class Kopplad:
     punkten: Punkten
     traffar: list[Traff]
     egna: list[Arende]
+    # Ärenden med punktens nummer utan förled: troligen samma, men inte säkert.
+    osakra: list[Arende]
     namnda: list[Arende]
 
 
@@ -56,22 +59,15 @@ def traff(punkten: Punkten, ort: str, namn: str) -> Traff | None:
     return Traff(ort, namn, True) if sok(punkten.handlingen) else None
 
 
-def foljda(punkten: Punkten, arenden: list[Arende]) -> tuple[list[Arende], list[Arende]]:
-    egna = [a for a in arenden if har(a, punkten.numren[:1])]
-    namnda = [a for a in arenden if a not in egna and har(a, punkten.numren[1:])]
-    return egna, namnda
-
-
-def har(arende: Arende, numren: tuple[str, ...]) -> bool:
-    return any(samma(n, m) for n in numren for m in numren_i(arende))
+def foljda(punkten: Punkten, arenden: list[Arende]) -> tuple[list[Arende], ...]:
+    eget, andra = punkten.numren[0], [n for n in punkten.numren[1:] if FORLED.match(n)]
+    egna = [a for a in arenden if eget in numren_i(a)]
+    utan = FORLED.sub("", eget)
+    osakra = [a for a in arenden if a not in egna and utan in numren_i(a)]
+    namnda = [a for a in arenden if a not in egna + osakra and any(n in numren_i(a) for n in andra)]
+    return egna, osakra, namnda
 
 
 def numren_i(arende: Arende) -> list[str]:
     falt = arende.falt.get("diarienummer", "")
     return [normaliserat(n.strip()) for n in falt.split(",") if n.strip()]
-
-
-def samma(a: str, b: str) -> bool:
-    if FORLED.match(a) and FORLED.match(b):
-        return a == b
-    return FORLED.sub("", a) == FORLED.sub("", b)

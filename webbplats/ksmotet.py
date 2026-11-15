@@ -3,7 +3,7 @@
 Sidan om kommunstyrelsens kommande sammanträde: länkarna till kallelsen,
 handlingarna och datapoolens sida, en översikt med en rad per punkt och en
 kolumn per förening, och sedan dagordningen i kallelsens ordning, en punkt
-i taget (`punktkort.py`). Det som saknas sägs.
+i taget (`motespunkt.py`). Det som saknas sägs.
 """
 
 from html import escape
@@ -12,8 +12,8 @@ from webbplats.arende import Arende
 from webbplats.datum import klartext
 from webbplats.kallelsen import Motet
 from webbplats.mall import Sajt, sida
+from webbplats.motespunkt import POOL, punktkort, rubriken
 from webbplats.punktkoppling import Kopplad, koppla
-from webbplats.punktkort import POOL, punktkort, rubriken
 
 SIDA = "ks-motet.html"
 
@@ -24,7 +24,7 @@ def ks_motet(sajt: Sajt, motet: Motet | None, arenden: list[Arende], platser: li
         return sida(sajt, SIDA, "Kommunstyrelsens nästa sammanträde", text)
     rubrik = f"Kommunstyrelsen {klartext(motet.datum)}"
     if motet.punkter is None:
-        return sida(sajt, SIDA, rubrik, "<p>Kallelsen är inte publicerad än.</p>")
+        return sida(sajt, SIDA, rubrik, "<p>Kallelsen finns inte i datapoolen än.</p>")
     kopplade = [koppla(p, sajt.orter, platser, arenden) for p in motet.punkter]
     return sida(sajt, SIDA, rubrik, kallorna(motet) + innehall(sajt, motet, kopplade))
 
@@ -33,8 +33,8 @@ def kallorna(motet: Motet) -> str:
     bas = f"{POOL}/{motet.katalog}"
     return (
         f'<p><a href="{bas}/kallelse.html">Kallelsen</a> · '
-        f'<a href="{bas}/handlingar.html">Handlingarna</a> · '
-        f'<a href="{bas}.html">Punkt för punkt i datapoolen</a></p>'
+        + (f'<a href="{bas}/handlingar.html">Handlingarna</a> · ' if motet.handlingar else "")
+        + f'<a href="{bas}.html">Punkt för punkt i datapoolen</a></p>'
     )
 
 
@@ -43,7 +43,7 @@ def innehall(sajt: Sajt, motet: Motet, kopplade: list[Kopplad]) -> str:
         return "<p>Dagordningen gick inte att läsa ur kallelsen.</p>"
     return (
         oversikt(sajt.foreningar, kopplade)
-        + f"<h2>Dagordningen, {len(kopplade)} punkter</h2>"
+        + f"<h2>Dagordningen, {len(kopplade)} {'punkt' if len(kopplade) == 1 else 'punkter'}</h2>"
         + '<div class="kort punkter">'
         + "".join(punktkort(sajt, motet, k) for k in kopplade)
         + "</div>"
