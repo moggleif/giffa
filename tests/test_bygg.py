@@ -1,4 +1,4 @@
-"""K3, K10, K22, K27 och K28: bygget av hela repot ger sidorna, och ett felaktigt ärende stoppar."""
+"""K3, K10, K22, K27, K28 och K34: bygget av hela repot ger sidorna, och ett fel stoppar."""
 
 import shutil
 import tempfile
@@ -8,6 +8,7 @@ from pathlib import Path
 from webbplats.__main__ import bygg
 
 ROT = Path(__file__).resolve().parent.parent
+POOL = ROT / "tests" / "fixtures" / "pool"
 
 
 class Bygg(unittest.TestCase):
@@ -16,7 +17,7 @@ class Bygg(unittest.TestCase):
         self.addCleanup(shutil.rmtree, self.ut)
 
     def test_repots_arenden_ger_sidorna_och_det_statiska(self):
-        bygg(ROT, self.ut, "https://github.com/agare/giffa")
+        bygg(ROT, self.ut, "https://github.com/agare/giffa", POOL)
         for namn in (
             "index.html",
             "pagar.html",
@@ -24,6 +25,7 @@ class Bygg(unittest.TestCase):
             "historik.html",
             "bevakar.html",
             "sok.html",
+            "ks-motet.html",
             "sok.js",
             "stil.css",
             "urval.js",
@@ -44,7 +46,7 @@ class Bygg(unittest.TestCase):
             fil.read_text(encoding="utf-8").replace("status: ", "status: x"), encoding="utf-8"
         )
         with self.assertRaises(SystemExit) as fel:
-            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
+            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa", POOL)
         self.assertIn(fil.name, str(fel.exception))
 
     def test_ort_under_tva_foreningar_stoppar_med_omrade(self):
@@ -55,7 +57,7 @@ class Bygg(unittest.TestCase):
             omrade.read_text(encoding="utf-8").replace("- Släp", "- Släp\n- Åsa"), encoding="utf-8"
         )
         with self.assertRaises(SystemExit) as fel:
-            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
+            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa", POOL)
         self.assertIn("OMRADE.md: orten står under flera föreningar: Åsa", str(fel.exception))
 
     def test_okant_arende_i_uppmarksammade_stoppar_med_filens_namn(self):
@@ -64,7 +66,7 @@ class Bygg(unittest.TestCase):
         with (rot / "bevakning/uppmarksammade.csv").open("a", encoding="utf-8") as fil:
             fil.write("Påhittat,finns-inte,projektägaren\n")
         with self.assertRaises(SystemExit) as fel:
-            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
+            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa", POOL)
         self.assertIn("bevakning/uppmarksammade.csv: ärendet finns inte: finns-inte", str(fel.exception))
 
     def test_samma_filnamn_i_tva_kataloger_stoppar(self):
@@ -73,7 +75,7 @@ class Bygg(unittest.TestCase):
         fil = next(rot.glob("bevakning/ks/*.md"))
         shutil.copy(fil, rot / "bevakning/namnder" / fil.name)
         with self.assertRaises(SystemExit) as fel:
-            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa")
+            bygg(rot, self.ut / "sajt", "https://github.com/agare/giffa", POOL)
         self.assertIn(fil.name.removesuffix(".md"), str(fel.exception))
 
 

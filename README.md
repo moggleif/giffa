@@ -14,7 +14,10 @@ namnen de har i folkmun, som också står först i varje lista, det nya
 sedan förra rundan och sist det som är på väg upp, där ett organ har
 informerats men inget förslag finns än; på
 egna sidor det som pågår (det som rört sig de senaste två åren först), det
-som är beslutat, en historik över det som är klart, en sökning på rubrik,
+som är beslutat, en historik över det som är klart, kommunstyrelsens
+kommande sammanträde punkt för punkt inför partiernas gruppmöte, med
+orterna och föreningarna varje punkt rör och ärendena i Giffå med samma
+diarienummer, en sökning på rubrik,
 namn och ort, vad som bevakas och en sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
 korten. Fastighetsbeteckningar, platser, gator och detaljplaner i ett ärende
 länkar till kommunens karta. Varje pågående plan visar på kortet och sin sida var den står i plan- och
@@ -24,10 +27,15 @@ Utan val syns allt; den som vill väljer en ort direkt, eller först en
 förening för att bara se dess orter, och valet står i adressen och följer
 med mellan sidorna. Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
-Bygg den lokalt med
+Sidan om kommunstyrelsens möte läses ur en utcheckning av
+[kommunhandlingar](https://github.com/moggleif/kommunhandlingar) med dess
+egen kod ([beslut 0012](beslut/0012-ks-motet-ur-datapoolens-kod.md)).
+Bygg sidan lokalt, med kommunhandlingar utcheckat bredvid, med
 
 ```
-python3 -m webbplats _site https://github.com/moggleif/giffa
+pip install markdown-it-py==4.2.0
+export PYTHONPATH=../kommunhandlingar/src
+python3 -m webbplats _site https://github.com/moggleif/giffa ../kommunhandlingar
 python3 -m unittest discover -s tests -t .
 node --test tests/*.js
 ```

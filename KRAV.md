@@ -394,3 +394,33 @@ källa under stegen, och texten säger vilket av de två som visas. Under
 stegen står också att de följer plan- och bygglagens standardförfarande
 och att ett begränsat förfarande inte har någon granskning, med länk till
 lagen. Avgjorda planer och andra ärenden har ingen stege.
+
+## K34 – Kommunstyrelsens kommande sammanträde punkt för punkt
+
+**Givet** kommunstyrelsens sammanträden i kommunhandlingars kalender och
+kataloger,
+**när** sidan byggs,
+**så** visar sidan *KS-mötet* det första sammanträdet från och med
+byggdagen. Finns kallelsen i kommunhandlingar står först länkar till
+kallelsen, handlingarna och datapoolens sida för sammanträdet, sedan en
+översikt med en rad per punkt och en kolumn per förening, och sist
+dagordningen i kallelsens ordning med varje punkt som ett kort. Alla
+punkter visas och ingen sorteras bort.
+
+Kortet har punktens nummer, de orter i `OMRADE.md` och platser i
+`platser.csv` som rubriken eller förslaget nämner, de som bara handlingen
+nämner för sig och märkta så, rubriken och förslaget till beslut som de
+står i kallelsen med fastigheter och platser länkade till kartan (K23),
+diarienumret, sammanfattningen ur tjänsteskrivelsen, en länk till
+handlingens sidor och en till historiken i alla organ på datapoolens sida.
+Har ett ärende i `bevakning/` punktens diarienummer står det som *Följs i
+Giffå* med länk och ärendets händelser; har det ett annat nummer som står
+i handlingen står det att handlingen nämner det. I översikten är en
+förening markerad ● när en av dess orter eller platser står i kallelsen
+och ○ när den bara står i handlingen.
+
+Det som saknas sägs: en rubrik eller ett förslag som inte gick att läsa,
+en punkt utan förslag, utan egen handling eller utan sammanfattning, en
+kallelse som inte är publicerad än och ett sammanträde som inte finns i
+kalendern. Dagordningen, handlingens sidor och sammanfattningen tolkas
+med kommunhandlingars kod (K54 där), inte med en egen.

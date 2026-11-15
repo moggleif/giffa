@@ -1,5 +1,6 @@
 # Testerna och ett bygge av sidan på varje PR och ändring på main
 # (K10, beslut 0002). Ett ärende som inte följer formatet stoppar här.
+# KS-mötet byggs med kommunhandlingars kod (K34, beslut 0012).
 name: Kontroll
 
 on:
@@ -15,9 +16,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Hämta kommunhandlingars kod, kalender och kommunstyrelsens handlingar
+        run: |
+          ar=$(date +%Y)
+          git clone --depth 1 --filter=blob:none --no-checkout \
+            https://github.com/moggleif/kommunhandlingar.git "$RUNNER_TEMP/kh"
+          git -C "$RUNNER_TEMP/kh" sparse-checkout set --no-cone "src/" "kalender/" \
+            "data/kungsbacka/ks/$ar/" "data/kungsbacka/ks/$((ar + 1))/" "!*.tabeller/"
+          git -C "$RUNNER_TEMP/kh" checkout
+          echo "PYTHONPATH=$RUNNER_TEMP/kh/src" >> "$GITHUB_ENV"
+          pip install markdown-it-py==4.2.0
       - name: Testerna
         run: python3 -m unittest discover -s tests -t .
       - name: Urvalets test
         run: node --test tests/*.js
       - name: Bygg sidan
-        run: python3 -m webbplats _site "${{ github.server_url }}/${{ github.repository }}"
+        run: python3 -m webbplats _site "${{ github.server_url }}/${{ github.repository }}" "$RUNNER_TEMP/kh"
