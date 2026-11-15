@@ -12,6 +12,7 @@ from webbplats.ksmotet import ks_motet
 from webbplats.punktkoppling import foljda, traffar
 
 POOL = Path(__file__).resolve().parent / "fixtures" / "pool"
+TOM = Path(__file__).resolve().parent / "fixtures" / "tom_pool"
 PLATSER = [{"namn": "Åsaskolan", "ort": "Åsa"}]
 
 
@@ -35,11 +36,18 @@ class KommandeMotet(unittest.TestCase):
     def test_motesdagen_raknas_som_kommande(self):
         self.assertEqual(kommande(POOL, date(2026, 10, 20)).datum, date(2026, 10, 20))
 
-    def test_utan_kallelse_inga_punkter_och_utan_mote_inget(self):
+    def test_foregaende_i_vantan_pa_nasta_kallelse(self):
         motet = kommande(POOL, date(2026, 12, 2))
-        self.assertEqual(motet.datum, date(2026, 12, 15))
+        self.assertEqual((motet.datum, motet.foregaende), (date(2026, 12, 1), True))
+        self.assertEqual(motet.nasta, date(2026, 12, 15))
+        self.assertIsNone(kommande(POOL, date(2026, 12, 16)).nasta)
+        self.assertFalse(kommande(POOL, date(2026, 11, 1)).foregaende)
+
+    def test_utan_tidigare_kallelse_nasta_utan_punkter_och_utan_mote_inget(self):
+        motet = kommande(POOL, date(2026, 10, 1))
+        self.assertEqual(motet.datum, date(2026, 10, 20))
         self.assertIsNone(motet.punkter)
-        self.assertIsNone(kommande(POOL, date(2026, 12, 16)))
+        self.assertIsNone(kommande(TOM, date(2026, 10, 1)))
 
     def test_orten_i_kallelsen_och_den_som_bara_star_i_handlingen(self):
         forsta = kommande(POOL, date(2026, 11, 1)).punkter[0]
@@ -109,9 +117,22 @@ class Sidan(unittest.TestCase):
         self.assertNotIn("Handlingarna</a>", html)
         self.assertIn("Handlingarna</a>", self.html(date(2026, 11, 1)))
 
+    def test_foregaende_markt_overst(self):
+        html = self.html(date(2026, 12, 2))
+        self.assertIn("<h1>Kommunstyrelsen 1 december 2026</h1>", html)
+        self.assertIn(
+            '<div class="paverka"><p>Det här är föregående sammanträde.</p>'
+            "<p>Kallelsen till nästa, 15 december 2026, finns inte i datapoolen än.</p></div>",
+            html,
+        )
+        utan_nasta = self.html(date(2026, 12, 16))
+        self.assertIn("Nästa sammanträde finns inte i kalendern än.", utan_nasta)
+        self.assertNotIn("föregående", self.html(date(2026, 11, 1)))
+
     def test_utan_kallelse_och_utan_mote(self):
-        self.assertIn("Kallelsen finns inte i datapoolen än.", self.html(date(2026, 12, 2)))
-        self.assertIn("Inget kommande sammanträde", self.html(date(2026, 12, 16)))
+        self.assertIn("Kallelsen finns inte i datapoolen än.", self.html(date(2026, 10, 1)))
+        html = ks_motet(SAJT, kommande(TOM, date(2026, 10, 1)), [], PLATSER)
+        self.assertIn("Inget kommande sammanträde", html)
 
 
 if __name__ == "__main__":

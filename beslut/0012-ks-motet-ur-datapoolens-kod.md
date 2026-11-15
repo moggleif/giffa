@@ -30,8 +30,9 @@ svåra, och den ska inte finnas i två versioner som glider isär.
   Det som bara står i handlingen märks för sig, eftersom en lång handling
   som en delårsrapport nämner många orter utan att handla om dem.
 - **Sidan visar nästa sammanträde och byggs om varje morgon** med resten
-  av sidan (beslut 0002), så att den byter till nästa möte dagen efter
-  sammanträdet och fylls när kallelsen kommit in i datapoolen.
+  av sidan (beslut 0002). Tills nästa kallelse kommit in i datapoolen
+  visar den det föregående sammanträdet, märkt som föregående, så att
+  sidan aldrig står tom mellan mötena (projektägaren 2026-11-15).
 
 ## Konsekvenser
 

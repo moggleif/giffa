@@ -400,7 +400,10 @@ lagen. Avgjorda planer och andra ärenden har ingen stege.
 **Givet** kommunstyrelsens sammanträden i kommunhandlingars kalender,
 **när** sidan byggs,
 **så** visar sidan *KS-mötet* det första sammanträdet i kalendern från och
-med byggdagen. Finns kallelsen i kommunhandlingar står först länkar till
+med byggdagen. Finns dess kallelse inte i kommunhandlingar än visas i
+stället det senaste sammanträdet före byggdagen som har en kallelse,
+överst märkt som föregående sammanträde med datumet för nästa, tills
+nästa kallelse kommit. Finns kallelsen i kommunhandlingar står först länkar till
 kallelsen, handlingarna och datapoolens sida för sammanträdet, sedan en
 översikt med en rad per punkt och en kolumn per förening, och sist
 dagordningen i kallelsens ordning med varje punkt som ett kort. Alla
@@ -423,6 +426,7 @@ och ○ när den bara står i handlingen.
 Det som saknas sägs: en rubrik eller ett förslag som inte gick att läsa,
 en punkt utan förslag, utan diarienummer, utan egen handling eller utan
 sammanfattning, en dagordning som inte gick att läsa, en kallelse som inte
-finns i datapoolen än och ett sammanträde som inte finns i kalendern.
+finns i datapoolen än när inget tidigare sammanträde har någon, ett nästa
+sammanträde som inte finns i kalendern och att inget sammanträde finns.
 Länken till handlingarna står bara när de finns i datapoolen. Dagordningen, handlingens sidor och sammanfattningen tolkas
 med kommunhandlingars kod (K54 där), inte med en egen.

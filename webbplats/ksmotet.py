@@ -26,7 +26,17 @@ def ks_motet(sajt: Sajt, motet: Motet | None, arenden: list[Arende], platser: li
     if motet.punkter is None:
         return sida(sajt, SIDA, rubrik, "<p>Kallelsen finns inte i datapoolen än.</p>")
     kopplade = [koppla(p, sajt.orter, platser, arenden) for p in motet.punkter]
-    return sida(sajt, SIDA, rubrik, kallorna(motet) + innehall(sajt, motet, kopplade))
+    inledning = foregaende(motet) + kallorna(motet)
+    return sida(sajt, SIDA, rubrik, inledning + innehall(sajt, motet, kopplade))
+
+
+def foregaende(motet: Motet) -> str:
+    if not motet.foregaende:
+        return ""
+    nasta = "Nästa sammanträde finns inte i kalendern än."
+    if motet.nasta:
+        nasta = f"Kallelsen till nästa, {klartext(motet.nasta)}, finns inte i datapoolen än."
+    return f'<div class="paverka"><p>Det här är föregående sammanträde.</p><p>{nasta}</p></div>'
 
 
 def kallorna(motet: Motet) -> str:
