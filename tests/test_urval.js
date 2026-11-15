@@ -58,6 +58,7 @@ function sida(sok) {
     lista(["y"]),
     new Nod("a", { href: "pagar.html" }),
     new Nod("a", { href: "ks-motet.html", "data-utan-urval": "" }),
+    new Nod("a", { href: "index.html#tycka-till" }),
   ]);
   const fonster = new Nod("window");
   const plats = { search: sok, pathname: "/giffa/index.html" };
@@ -178,4 +179,12 @@ test("knappen som fäller ut urvalet säger vad som är valt, orten före fören
   assert.strictEqual(namn(), "y");
   knappFor(dokument, "data-alla", "").click();
   assert.strictEqual(namn(), "Alla");
+});
+
+test("valet står före avsnittet i en länk med #", () => {
+  const { dokument } = sida("?ort=x");
+  const lank = dokument.querySelectorAll("a").find((a) => a.getAttribute("href").startsWith("index.html"));
+  assert.strictEqual(lank.getAttribute("href"), "index.html?ort=x#tycka-till");
+  knappFor(dokument, "data-alla", "").click();
+  assert.strictEqual(lank.getAttribute("href"), "index.html#tycka-till");
 });

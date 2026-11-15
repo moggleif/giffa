@@ -18,11 +18,13 @@
     return delar.length ? "?" + delar.join("&") : "";
   }
 
+  // Frågan står före ett eventuellt #avsnitt, som i menyns index.html#tycka-till.
   function lankar(val) {
     alla("a[href]").forEach(function (lank) {
-      var sida = lank.getAttribute("href").split("?")[0];
+      var delar = lank.getAttribute("href").split("#");
+      var sida = delar[0].split("?")[0];
       if (!SIDA.test(sida) || lank.hasAttribute("data-utan-urval")) return;
-      lank.setAttribute("href", sida + fraga(val));
+      lank.setAttribute("href", sida + fraga(val) + (delar.length > 1 ? "#" + delar[1] : ""));
     });
   }
 

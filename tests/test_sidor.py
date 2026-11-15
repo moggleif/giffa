@@ -287,10 +287,6 @@ class Bevakar(unittest.TestCase):
         self.assertIn("https://github.com/agare/giffa/blob/main/KALLOR.md", html)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class GemensammaMenyn(unittest.TestCase):
     def test_sajtens_meny_i_den_gemensamma_formen(self):
         html = startsida(SAJT, [], RUNDA)
@@ -320,3 +316,7 @@ class GemensammaMenyn(unittest.TestCase):
             '<div class="urval">',
             html,
         )
+
+
+if __name__ == "__main__":
+    unittest.main()

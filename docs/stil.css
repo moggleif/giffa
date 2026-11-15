@@ -3,7 +3,7 @@
 :root { --accent: #1d5d73; --band: #e3eef2; --yta: #f5f6f8;
         --linje: #d9dde5; --dampad: #5b6475; --lyft: #8e2459;
         --alla: #8a5a00; --partiet: #2f4fa0; --sajtaccent: #1d5d73;
-        --sajtkant: 0; }
+        --sajtbredd: 72rem; --sajtkant: 0; }
 html { font-size: 112.5%; }
 body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 0 auto;
        padding: 0 1rem; line-height: 1.5; color: #1a1a1a; background: #fff; }
@@ -24,7 +24,7 @@ summary { cursor: pointer; }
 .ortval > summary { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 2.5rem;
                     padding: 0 1rem; border: 1px solid var(--accent); border-radius: 999px;
                     color: var(--accent); }
-.ortval > summary::after { content: "▾"; margin-left: 0.4rem; }
+.ortval > summary::after { content: "▾" / ""; margin-left: 0.4rem; }
 .ortval[open] > summary { background: var(--band); }
 .urval { margin-top: 0.75rem; }
 .urval [role="group"] { display: flex; flex-wrap: wrap; gap: 0.4rem; }

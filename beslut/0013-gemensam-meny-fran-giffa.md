@@ -27,13 +27,17 @@ möjligheter, och att varje sajts meny ska följa samma form.
   den femte kommer.
 - **Sajtens meny är vanlig HTML i en fast form** som varje sajt bygger
   själv: `<nav class="sajtmeny">` med `<a class="sajtnamn">` och en `<ul>`
-  med högst sex poster. En post är en länk eller `<details>` med
-  `<summary>` och en `<ul>`, eller `<div class="grupper">` med grupper av
-  `<p class="grupp">` och `<ul>`. Den visade sidan har `aria-current`.
-  Ingen fjärde nivå.
+  med högst sex poster. En post är en länk eller en `<details>` med
+  `<summary>` och undermenyn: en `<ul>` med länkar, eller
+  `<div class="grupper">` där varje grupp är en `<div>` med
+  `<p class="grupp">` och en `<ul>`. Den visade sidan har `aria-current`.
+  Ingen fjärde nivå. Varje sida som laddar skriptet har en `.sajtmeny`.
 - **Skriptet lägger till det som kräver skript:** sajtraden före
-  `.sajtmeny`, knappen *Meny* på smal skärm och att bara en undermeny är
-  öppen. Utan skript står sajtens meny kvar som en lista.
+  `.sajtmeny`, knappen *Meny* på smal skärm, att bara en undermeny är
+  öppen och att Escape, ett klick utanför eller fokus som lämnar menyn
+  stänger den. Utan skript står sajtens meny kvar som en lista.
+- **Sajtraden står i minst 15 punkter med träffytor på minst 32**, som K14
+  kräver, oavsett sajtens egen textstorlek.
 - **Varje sajt sätter sin accentfärg och yta** med `--sajtaccent` och
   `--sajtyta`, och sajtradens bredd med `--sajtbredd` och `--sajtkant`.
 - **Sökningen över alla sajter och ett gemensamt ortval** ingår inte nu;

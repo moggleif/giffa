@@ -42,24 +42,41 @@
     });
     meny.classList.add("har-knapp");
     meny.insertBefore(knapp, meny.querySelector("ul"));
+    return knapp;
   }
 
   function stang(undermenyer, utom) {
     undermenyer.forEach(function (d) { if (d !== utom) d.open = false; });
   }
 
-  function undermenyer(meny) {
+  // Escape stänger den öppna undermenyn, annars den utfällda menyn, och lämnar fokus
+  // på knappen som öppnade den.
+  function escape(lista, knapp) {
+    var oppen = lista.filter(function (d) { return d.open; })[0];
+    if (oppen) {
+      oppen.open = false;
+      oppen.querySelector("summary").focus();
+    } else if (knapp.getAttribute("aria-expanded") === "true") {
+      knapp.click();
+      knapp.focus();
+    }
+  }
+
+  function undermenyer(meny, knapp) {
     var lista = alla("details", meny);
     lista.forEach(function (d) {
       if (d.querySelector("[aria-current]")) d.classList.add("aktuell");
       d.addEventListener("toggle", function () { if (d.open) stang(lista, d); });
     });
-    document.addEventListener("keydown", function (h) { if (h.key === "Escape") stang(lista, null); });
+    document.addEventListener("keydown", function (h) { if (h.key === "Escape") escape(lista, knapp); });
     document.addEventListener("click", function (h) { if (!meny.contains(h.target)) stang(lista, null); });
+    meny.addEventListener("focusout", function (h) {
+      if (!h.relatedTarget || !meny.contains(h.relatedTarget)) stang(lista, null);
+    });
   }
 
+  // Varje sida som laddar skriptet har en .sajtmeny (K35).
   var meny = document.querySelector(".sajtmeny");
   meny.parentNode.insertBefore(sajtrad(location.pathname), meny);
-  menyknapp(meny);
-  undermenyer(meny);
+  undermenyer(meny, menyknapp(meny));
 })();

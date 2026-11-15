@@ -25,6 +25,8 @@ class El {
   getAttribute(namn) { return namn in this.attribut ? this.attribut[namn] : null; }
   appendChild(b) { b.parentNode = this; this.barn.push(b); return b; }
   insertBefore(b, fore) { b.parentNode = this; this.barn.splice(this.barn.indexOf(fore), 0, b); return b; }
+  click() { this.skicka("click"); }
+  focus() { this.attribut.fokus = ""; }
   addEventListener(typ, fn) { (this.lyssnare[typ] = this.lyssnare[typ] || []).push(fn); }
   skicka(typ, handelse = {}) { (this.lyssnare[typ] || []).forEach((fn) => fn(handelse)); }
   efterkommande() { return this.barn.flatMap((b) => [b, ...b.efterkommande()]); }
@@ -41,11 +43,8 @@ class El {
 const lank = (attribut = {}) => new El("li", {}, [new El("a", attribut)]);
 const undermeny = (lankar) => new El("li", {}, [new El("details", {}, [new El("summary"), new El("ul", {}, lankar)])]);
 
-function sida(sokvag) {
-  const meny = new El("nav", { class: "sajtmeny" }, [
-    new El("a", { class: "sajtnamn" }),
-    new El("ul", {}, [lank(), undermeny([lank({ "aria-current": "page" }), lank()]), undermeny([lank()])]),
-  ]);
+function sida(sokvag, poster = [lank(), undermeny([lank({ "aria-current": "page" }), lank()]), undermeny([lank()])]) {
+  const meny = new El("nav", { class: "sajtmeny" }, [new El("a", { class: "sajtnamn" }), new El("ul", {}, poster)]);
   const hoppa = new El("a", { class: "hoppa" });
   const kropp = new El("body", {}, [hoppa, meny, new El("main")]);
   const document = Object.assign(kropp, { createElement: (tagg) => new El(tagg) });
@@ -108,4 +107,24 @@ test("bara en undermeny öppen åt gången, och Escape eller ett klick utanför 
   assert.strictEqual(andra.open, true);
   kropp.skicka("keydown", { key: "Escape" });
   assert.strictEqual(andra.open, false);
+  assert.ok("fokus" in andra.querySelector("summary").attribut);
+  forsta.open = true;
+  meny.skicka("focusout", { relatedTarget: kropp.querySelector("main") });
+  assert.strictEqual(forsta.open, false);
+});
+
+test("Escape fäller ihop den utfällda menyn när ingen undermeny är öppen", () => {
+  const { kropp, meny } = sida("/giffa/");
+  const knapp = meny.querySelector("button");
+  knapp.click();
+  kropp.skicka("keydown", { key: "Escape" });
+  assert.ok(!meny.classList.contains("oppen"));
+  assert.ok("fokus" in knapp.attribut);
+});
+
+test("en sajt utan undermenyer får sajtraden och knappen", () => {
+  const { kropp, meny } = sida("/kommunhandlingar/kungsbacka.html", [lank(), lank()]);
+  assert.strictEqual(kropp.barn[1].querySelector("[aria-current]").textContent, "Kungsbacka kommun");
+  assert.strictEqual(meny.querySelector("button").textContent, "Meny");
+  kropp.skicka("keydown", { key: "Escape" });
 });

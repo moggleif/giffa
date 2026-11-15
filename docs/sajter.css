@@ -2,15 +2,15 @@
    som sajter.js lägger överst och sajtens meny (.sajtmeny). Storlekarna står i em, så att
    menyn följer sajtens egen textstorlek. En sajt sätter --sajtaccent, --sajtyta och,
    för sajtradens kanter, --sajtbredd och --sajtkant. */
-.sajtrad { font-size: 0.85em; background: rgba(128, 128, 128, 0.1);
+.sajtrad { font-size: max(0.85em, 15px); background: rgba(128, 128, 128, 0.1);
            border-bottom: 1px solid rgba(128, 128, 128, 0.3); }
 .sajtrad ul { list-style: none; margin: 0 auto; padding: 0 var(--sajtkant, 1rem);
               max-width: var(--sajtbredd, 72rem); box-sizing: border-box;
               display: flex; flex-wrap: wrap; gap: 0 1.25em; }
-.sajtrad a { display: inline-flex; align-items: center; min-height: 2.25em;
+.sajtrad a { display: inline-flex; align-items: center; min-height: max(2.25em, 32px);
              color: inherit; opacity: 0.85; }
 .sajtrad a[aria-current] { opacity: 1; font-weight: 600; text-decoration: none; }
-.sajtrad a[aria-current]::before { content: "◆"; margin-right: 0.35em;
+.sajtrad a[aria-current]::before { content: "◆" / ""; margin-right: 0.35em;
                                    color: var(--sajtaccent, #1d5d73); }
 
 .sajtmeny { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.75em;
@@ -19,6 +19,7 @@
 .sajtnamn { font-weight: 700; font-size: 1.15em; color: inherit; text-decoration: none;
             padding: 0.3em 0; }
 .sajtmeny ul { list-style: none; margin: 0; padding: 0; }
+.sajtmeny li, .sajtmeny details, .sajtmeny summary { margin: 0; padding: 0; border: 0; background: none; }
 .sajtmeny > ul { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.25em; }
 .sajtmeny > ul > li { position: relative; }
 .sajtmeny > ul > li > a, .sajtmeny summary {
@@ -26,7 +27,7 @@
   color: var(--sajtaccent, #1d5d73); text-decoration: none; font-weight: 500; }
 .sajtmeny summary { list-style: none; }
 .sajtmeny summary::-webkit-details-marker { display: none; }
-.sajtmeny summary::after { content: "▾"; margin-left: 0.3em; font-size: 0.8em; }
+.sajtmeny summary::after { content: "▾" / ""; margin-left: 0.3em; font-size: 0.8em; }
 .sajtmeny a:hover, .sajtmeny summary:hover { text-decoration: underline; }
 .sajtmeny a[aria-current], .sajtmeny .aktuell > summary { color: inherit; font-weight: 700; }
 .sajtmeny details > ul, .sajtmeny .grupper {
@@ -37,8 +38,9 @@
 .sajtmeny > ul > li:last-child .grupper { left: auto; right: 0; }
 .sajtmeny details a { display: block; padding: 0.35em 0; color: inherit; }
 .sajtmeny .grupper { display: flex; gap: 1.5em; }
+.sajtmeny details a, .sajtmeny .grupp { white-space: nowrap; }
 .sajtmeny .grupp { margin: 0.3em 0 0.1em; font-weight: 600; font-size: 0.9em;
-                   color: var(--sajtaccent, #1d5d73); white-space: nowrap; }
+                   color: var(--sajtaccent, #1d5d73); }
 .menyknapp { display: none; }
 
 @media (max-width: 40rem) {
@@ -53,6 +55,7 @@
     position: static; min-width: 0; padding: 0 0 0.5em 1em; border: none; box-shadow: none;
     background: none; }
   .sajtmeny .grupper { flex-direction: column; gap: 0.3em; }
+  .sajtmeny details a { white-space: normal; }
 }
 
 @media print {

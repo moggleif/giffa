@@ -28,8 +28,8 @@ Utan val syns allt; den som vill väljer en ort direkt, eller först en
 förening för att bara se dess orter, bakom knappen *Ort:*, och valet står
 i adressen och följer med mellan sidorna. Överst står en sajtrad till
 projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kommunhandlingar/)
-och [Kungsbacka i siffror](https://moggleif.github.io/politik/), som har
-samma meny: Giffå ritar den med `docs/sajter.js` och `docs/sajter.css`
+och [Kungsbacka i siffror](https://moggleif.github.io/politik/), som
+laddar samma meny från Giffå: Giffå ritar den med `docs/sajter.js` och `docs/sajter.css`
 ([beslut 0013](beslut/0013-gemensam-meny-fran-giffa.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Sidan om kommunstyrelsens möte läses ur en utcheckning av
