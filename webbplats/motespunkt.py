@@ -81,7 +81,7 @@ def sammanfattning(punkten: Punkten) -> str:
 
 def kallrad(motet: Motet, punkten: Punkten) -> str:
     bas, omfang = f"{POOL}/{motet.katalog}", punkten.handling
-    historik = f'<a href="{bas}.html#punkt-{punkten.punkt.nummer}">Historik i alla organ</a>'
+    historik = f'<a href="{bas}.html#punkt-{punkten.punkt.nummer}">Fullständig historik</a>'
     if not omfang:
         return f"<p>Ingen egen handling hittad för punkten · {historik}</p>"
     sidorna = (

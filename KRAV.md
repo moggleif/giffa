@@ -416,7 +416,8 @@ förslaget nämner) och, efter *i handlingen*, de orter som bara handlingen
 nämner. Sedan kommer rubriken och förslaget till beslut som de står i
 kallelsen, med fastigheter och platser länkade till kartan (K23),
 diarienumret, sammanfattningen ur tjänsteskrivelsen, en länk till
-handlingens sidor och en till historiken i alla organ på datapoolens sida.
+handlingens sidor och en, *Fullständig historik*, till punkten på
+datapoolens sida med varje paragraf i alla organ med samma diarienummer.
 Har ett ärende i `bevakning/` punktens diarienummer står det som *Följs i
 Giffå* med länk och ärendets händelser. Har ärendet numret utan förled
 märks kopplingen som osäker, eftersom nämnderna har egna serier med samma
