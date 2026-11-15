@@ -14,7 +14,7 @@ jobs:
   kontroll:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Testerna
         run: python3 -m unittest discover -s tests -t .
       - name: Urvalets test
