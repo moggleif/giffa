@@ -1,6 +1,7 @@
 # Bygger sidan ur ärendena och publicerar den på GitHub Pages vid varje
 # ändring på main och varje morgon, så att passerade tillfällen att tycka
-# till försvinner (K3, K12, beslut 0002 och 0004).
+# till försvinner och KS-mötet visar nästa sammanträde (K3, K12, K34,
+# beslut 0002, 0004 och 0012).
 name: Pages
 
 on:
@@ -28,8 +29,21 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/configure-pages@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Hämta kommunhandlingars kod, kalender och kommunstyrelsens handlingar
+        run: |
+          ar=$(date +%Y)
+          git clone --depth 1 --filter=blob:none --no-checkout \
+            https://github.com/moggleif/kommunhandlingar.git "$RUNNER_TEMP/kh"
+          git -C "$RUNNER_TEMP/kh" sparse-checkout set --no-cone "src/" "kalender/" \
+            "data/kungsbacka/ks/$ar/" "data/kungsbacka/ks/$((ar + 1))/" "!*.tabeller/"
+          git -C "$RUNNER_TEMP/kh" checkout
+          echo "PYTHONPATH=$RUNNER_TEMP/kh/src" >> "$GITHUB_ENV"
+          pip install markdown-it-py==4.2.0
       - name: Bygg sidan
-        run: python3 -m webbplats _site "${{ github.server_url }}/${{ github.repository }}"
+        run: python3 -m webbplats _site "${{ github.server_url }}/${{ github.repository }}" "$RUNNER_TEMP/kh"
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

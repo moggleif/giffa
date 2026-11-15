@@ -1,4 +1,4 @@
-/* Krav: K4–K9, K14, K20, K22, K27, K29–K33 i KRAV.md. Stilen följer kommunhandlingars sidor om
+/* Krav: K4–K9, K14, K20, K22, K27, K29–K34 i KRAV.md. Stilen följer kommunhandlingars sidor om
    initiativ och lokalbehov: tidslinjen, korten och urvalet. */
 :root { --accent: #1d5d73; --band: #e3eef2; --yta: #f5f6f8;
         --linje: #d9dde5; --dampad: #5b6475; --lyft: #8e2459;
@@ -134,3 +134,14 @@ ul.pa-vag-upp small { color: var(--dampad); }
 .kort .stege .forfarande { display: none; }
 .kort .stege li { padding: 0 0.4rem; border-width: 1px; font-size: 0.9rem; }
 .kort .stege li small { display: inline; }
+div.varning { background: #fff1c2; border: 2px solid var(--alla); border-left-width: 8px;
+              border-radius: 6px; padding: 0.6rem 0.9rem; max-width: 40rem; margin-bottom: 1rem; }
+div.varning p { margin: 0.2rem 0; }
+div.varning strong { font-size: 1.15rem; }
+.kort.punkter { grid-template-columns: 1fr; max-width: 34rem; }
+.punkter .markor span.svag { background: none; color: var(--dampad);
+                            border: 1px dashed var(--linje); }
+.punkter .markor span.nummer { font-weight: 600; }
+.punkter .markor span.sokord { background: var(--yta); color: #1a1a1a; }
+.punkter .markor small { align-self: center; color: var(--dampad); margin-left: 0.3rem; }
+.punkter blockquote { margin: 0; padding-left: 0.6rem; border-left: 3px solid var(--accent); }

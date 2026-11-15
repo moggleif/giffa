@@ -1,4 +1,4 @@
-"""Krav: K9, K14, K18, K22 och K28 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K9, K14, K18, K22, K28 och K34 i KRAV.md. Test: tests/test_sidor.py.
 
 Det varje sida har gemensamt: huvudet, menyn, urvalet och sidfoten med
 länken till repot.
@@ -17,6 +17,7 @@ MENY = (
     ("pagar.html", "Pågår"),
     ("beslutat.html", "Beslutat"),
     ("historik.html", "Historik"),
+    ("ks-motet.html", "KS-mötet"),
     ("sok.html", "Sök"),
     ("bevakar.html", "Vad vi bevakar"),
 )

@@ -18,3 +18,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0009](0009-handlingslankar-och-sondagsrunda.md) | Handlingslänkar i Actions och en schemalagd söndagsrunda |
 | [0010](0010-uppmarksammade-och-sok.md) | Uppmärksammade ärenden, namnen folk använder och en sökruta |
 | [0011](0011-tva-spar-och-processtegen.md) | Två spår för att påverka, processtegen och kalendern |
+| [0012](0012-ks-motet-ur-datapoolens-kod.md) | KS-mötet byggs med datapoolens kod |

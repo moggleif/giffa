@@ -1,9 +1,11 @@
-"""Krav: K3–K10, K18, K27 och K28 i KRAV.md. Test: tests/test_bygg.py.
+"""Krav: K3–K10, K18, K27, K28 och K34 i KRAV.md. Test: tests/test_bygg.py.
 
-python3 -m webbplats <utkatalog> <repoadress>
+python3 -m webbplats <utkatalog> <repoadress> <kommunhandlingar>
 
 Läser ärendena och underlaget i repots rot, kontrollerar dem och skriver
-sidorna och det som ligger i docs/ till utkatalogen.
+sidorna och det som ligger i docs/ till utkatalogen. Sidan om
+kommunstyrelsens kommande sammanträde (K34) läses ur en utcheckning av
+kommunhandlingar, vars `src/` ska finnas i `PYTHONPATH`.
 """
 
 import shutil
@@ -17,8 +19,11 @@ from webbplats import underlag
 from webbplats.arende import Arende, tolka
 from webbplats.arendesida import arendesida
 from webbplats.bevakar import bevakar
+from webbplats.kallelsen import kommande
 from webbplats.kartlankar import ur_platser
 from webbplats.kontroll import kontrollera, kontrollera_omrade
+from webbplats.ksmotet import SIDA as KS_MOTET
+from webbplats.ksmotet import ks_motet
 from webbplats.mall import Sajt
 from webbplats.sidor import LISTOR, lista, startsida
 from webbplats.sok import soksida
@@ -67,7 +72,7 @@ def las(rot: Path, namn: str) -> str:
     return (rot / namn).read_text(encoding="utf-8")
 
 
-def bygg(rot: Path, ut: Path, repo: str) -> None:
+def bygg(rot: Path, ut: Path, repo: str, pool: Path) -> None:
     byggd = datetime.now(ZoneInfo("Europe/Stockholm"))
     platser = underlag.platser(las(rot, "platser.csv"))
     sajt = Sajt(repo, byggd, las_foreningar(rot), ur_platser(platser))
@@ -79,6 +84,7 @@ def bygg(rot: Path, ut: Path, repo: str) -> None:
         "index.html": startsida(sajt, arenden, runda, namnen),
         "sok.html": soksida(sajt, arenden),
         "bevakar.html": bevakar(sajt, platser, kallor),
+        KS_MOTET: ks_motet(sajt, kommande(pool, byggd.date()), arenden, platser),
     }
     sidor |= {listan[0]: lista(sajt, arenden, listan, namnen) for listan in LISTOR}
     sidor |= {a.sida: arendesida(sajt, a) for a in arenden}
@@ -88,4 +94,4 @@ def bygg(rot: Path, ut: Path, repo: str) -> None:
 
 
 if __name__ == "__main__":
-    bygg(Path.cwd(), Path(sys.argv[1]), sys.argv[2].rstrip("/"))
+    bygg(Path.cwd(), Path(sys.argv[1]), sys.argv[2].rstrip("/"), Path(sys.argv[3]))

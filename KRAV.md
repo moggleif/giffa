@@ -394,3 +394,40 @@ källa under stegen, och texten säger vilket av de två som visas. Under
 stegen står också att de följer plan- och bygglagens standardförfarande
 och att ett begränsat förfarande inte har någon granskning, med länk till
 lagen. Avgjorda planer och andra ärenden har ingen stege.
+
+## K34 – Kommunstyrelsens kommande sammanträde punkt för punkt
+
+**Givet** kommunstyrelsens sammanträden i kommunhandlingars kalender,
+**när** sidan byggs,
+**så** visar sidan *KS-mötet* det första sammanträdet i kalendern från och
+med byggdagen. Finns dess kallelse inte i kommunhandlingar än visas i
+stället det senaste sammanträdet före byggdagen som har en kallelse, med
+en varningsruta överst som säger att det är föregående sammanträde, inte
+nästa, och datumet för nästa. Under rubriken står länkar till kallelsen,
+handlingarna och datapoolens sida för sammanträdet och sedan dagordningen
+i kallelsens ordning med varje punkt som ett kort. Alla punkter visas och
+ingen sorteras bort.
+
+Kortet har överst punktens nummer och märken: de orter i `OMRADE.md` som
+rubriken eller förslaget nämner, själva eller genom en plats i
+`platser.csv`, högst fyra sökord (högst två ord ur rubriken från en fast
+lista, som *Planbesked* eller *Taxa*, och platserna som rubriken eller
+förslaget nämner) och, efter *i handlingen*, de orter som bara handlingen
+nämner. Sedan kommer rubriken och förslaget till beslut som de står i
+kallelsen, med fastigheter och platser länkade till kartan (K23),
+diarienumret, sammanfattningen ur tjänsteskrivelsen, en länk till
+handlingens sidor och en till historiken i alla organ på datapoolens sida.
+Har ett ärende i `bevakning/` punktens diarienummer står det som *Följs i
+Giffå* med länk och ärendets händelser. Har ärendet numret utan förled
+märks kopplingen som osäker, eftersom nämnderna har egna serier med samma
+siffror. Har ett ärende ett annat nummer med förled som står i handlingen
+står det att handlingen nämner det.
+
+Det som saknas sägs: en rubrik eller ett förslag som inte gick att läsa,
+en punkt utan förslag, utan diarienummer, utan egen handling eller utan
+sammanfattning, en dagordning som inte gick att läsa, en kallelse som inte
+finns i datapoolen än när inget tidigare sammanträde har någon, ett nästa
+sammanträde som inte finns i kalendern och att inget sammanträde finns.
+Länken till handlingarna står bara när de finns i datapoolen.
+Dagordningen, handlingens sidor och sammanfattningen tolkas med
+kommunhandlingars kod (K54 där), inte med en egen.
