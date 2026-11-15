@@ -217,7 +217,7 @@ class Arendesidan(unittest.TestCase):
         html = arendesida(SAJT, paverkbart("s"))
         self.assertIn("<title>Ny förskola – Giffå</title>", html)
         self.assertIn('href="../stil.css"', html)
-        self.assertIn('<a href="../index.html">Start</a>', html)
+        self.assertIn('<a class="sajtnamn" href="../index.html">Giffå</a>', html)
         self.assertIn("status: pågår", html)
         self.assertIn("Så gör du:", html)
         self.assertIn("Ett förslag. <a", html)
@@ -289,3 +289,34 @@ class Bevakar(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GemensammaMenyn(unittest.TestCase):
+    def test_sajtens_meny_i_den_gemensamma_formen(self):
+        html = startsida(SAJT, [], RUNDA)
+        self.assertIn('<link rel="stylesheet" href="sajter.css">', html)
+        self.assertIn('<script src="sajter.js" defer></script>', html)
+        self.assertIn(
+            '<nav class="sajtmeny" aria-label="Webbplatsen">'
+            '<a class="sajtnamn" href="index.html" aria-current="page">Giffå</a><ul>',
+            html,
+        )
+        meny = re.sub(r"</summary><ul>.*?</ul>", "</summary>", html.split("</nav>")[0])
+        poster = re.findall(r"<li><(?:a [^>]*|details><summary)>([^<]+)<", meny)
+        self.assertEqual(poster, ["Tycka till", "Pågår", "Beslutat", "KS-mötet", "Sök", "Om"])
+
+    def test_beslutat_och_historiken_i_en_undermeny_med_sidan_markerad(self):
+        html = historik([])
+        self.assertIn(
+            '<details><summary>Beslutat</summary><ul><li><a href="beslutat.html">Beslutat</a></li>'
+            '<li><a href="historik.html" aria-current="page">Historik</a></li></ul></details>',
+            html,
+        )
+
+    def test_urvalet_bakom_en_knapp_som_bara_syns_med_skriptet(self):
+        html = startsida(SAJT, [], RUNDA)
+        self.assertIn(
+            '<details class="ortval" hidden><summary>Ort: <span class="ortval-namn">Alla</span></summary>'
+            '<div class="urval">',
+            html,
+        )

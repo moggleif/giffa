@@ -1,7 +1,8 @@
-"""Krav: K9, K14, K18, K22, K28 och K34 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K9, K14, K18, K22, K28, K34 och K35 i KRAV.md. Test: tests/test_sidor.py.
 
 Det varje sida har gemensamt: huvudet, menyn, urvalet och sidfoten med
-länken till repot.
+länken till repot. Menyn följer den gemensamma menyns form (beslut 0013):
+en post är en länk, eller en rubrik med länkarna i sin undermeny.
 """
 
 from dataclasses import dataclass, field
@@ -13,13 +14,12 @@ from webbplats.kartlankar import Kartlankar
 from webbplats.underlag import alla_orter
 
 MENY = (
-    ("index.html", "Start"),
+    ("index.html#tycka-till", "Tycka till"),
     ("pagar.html", "Pågår"),
-    ("beslutat.html", "Beslutat"),
-    ("historik.html", "Historik"),
+    ("Beslutat", (("beslutat.html", "Beslutat"), ("historik.html", "Historik"))),
     ("ks-motet.html", "KS-mötet"),
     ("sok.html", "Sök"),
-    ("bevakar.html", "Vad vi bevakar"),
+    ("bevakar.html", "Om"),
 )
 
 AKTUELL = ' aria-current="page"'
@@ -48,7 +48,9 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(rubrik)} – Giffå</title>
+<link rel="stylesheet" href="{rot}sajter.css">
 <link rel="stylesheet" href="{rot}stil.css">
+<script src="{rot}sajter.js" defer></script>
 </head>
 <body>
 <a class="hoppa" href="#innehall">Hoppa till innehållet</a>
@@ -65,12 +67,23 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 
 
 def meny(aktuell: str, rot: str) -> str:
-    poster = "".join(
-        f'<li><a href="{rot}{adress}"{AKTUELL * (adress == aktuell)}'
-        f"{' data-utan-urval' * (adress in UTAN_URVAL)}>{namn}</a></li>"
-        for adress, namn in MENY
+    poster = "".join(menypost(forsta, andra, aktuell, rot) for forsta, andra in MENY)
+    namn = f'<a class="sajtnamn" href="{rot}index.html"{AKTUELL * (aktuell == "index.html")}>Giffå</a>'
+    return f'<nav class="sajtmeny" aria-label="Webbplatsen">{namn}<ul>{poster}</ul></nav>'
+
+
+def menypost(forsta: str, andra: str | tuple, aktuell: str, rot: str) -> str:
+    if isinstance(andra, str):
+        return f"<li>{lank(forsta, andra, aktuell, rot)}</li>"
+    lankar = "".join(f"<li>{lank(adress, namn, aktuell, rot)}</li>" for adress, namn in andra)
+    return f"<li><details><summary>{forsta}</summary><ul>{lankar}</ul></details></li>"
+
+
+def lank(adress: str, namn: str, aktuell: str, rot: str) -> str:
+    return (
+        f'<a href="{rot}{adress}"{AKTUELL * (adress == aktuell)}'
+        f"{' data-utan-urval' * (adress in UTAN_URVAL)}>{namn}</a>"
     )
-    return f'<nav aria-label="Webbplatsen"><ul>{poster}</ul></nav>'
 
 
 def urval(sajt: Sajt) -> str:
@@ -85,9 +98,10 @@ def urval(sajt: Sajt) -> str:
         for ort, namn in orter
     )
     return (
-        '<div class="urval" hidden><div role="group" aria-label="Visa förening">'
+        '<details class="ortval" hidden><summary>Ort: <span class="ortval-namn">Alla</span></summary>'
+        '<div class="urval"><div role="group" aria-label="Visa förening">'
         f'<button type="button" data-alla>Alla</button>{foreningar}</div>'
-        f'<div role="group" aria-label="Visa ort" class="orter">{ortknappar}</div></div>'
+        f'<div role="group" aria-label="Visa ort" class="orter">{ortknappar}</div></div></details>'
     )
 
 

@@ -61,6 +61,7 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Rundornas perioder (vad som är nytt)            | `bevakning/rundor.csv`    |
 | Uppmärksammade ärenden och namnen i folkmun     | `bevakning/uppmarksammade.csv`, beslut 0010 |
 | Hur sidan byggs ur ärendena                     | `webbplats/`, beslut 0002 |
+| Den gemensamma menyn för projektets sajter      | `docs/sajter.js`, beslut 0013 |
 | Hur månadens skanning görs                      | `skanning/`, beslut 0003  |
 | Hur veckans kallelser söks                      | `skanning/`, beslut 0005  |
 | Hur handlingarna läggs intill protokollen       | `handlingslankar/`, beslut 0009 |

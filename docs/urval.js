@@ -1,6 +1,7 @@
-// Krav: K4, K21, K22 och K34 i KRAV.md. Test: tests/test_urval.js, och tests/test_bygg.py (att skriptet följer med).
+// Krav: K4, K21, K22, K34 och K35 i KRAV.md. Test: tests/test_urval.js, och tests/test_bygg.py (att skriptet följer med).
 // Valet är en förening, en ort eller båda; inget val visar allt. Föreningen
-// begränsar vilka ortknappar som syns (data-urval-i), orten vilka ärenden. Utan skriptet står allt.
+// begränsar vilka ortknappar som syns (data-urval-i), orten vilka ärenden. Valet står på
+// knappen som fäller ut urvalet (.ortval). Utan skriptet står allt och urvalet syns inte.
 // En länk med data-utan-urval går till en sida utan urval och får inget val med sig (K34).
 (function () {
   var SIDA = /^[\w./-]+\.html$/;
@@ -75,6 +76,7 @@
   }
 
   function visa(urval, ortknappar, val) {
+    document.querySelector(".ortval-namn").textContent = val.ort || val.forening || "Alla";
     alla("button", urval).forEach(function (k) { k.setAttribute("aria-pressed", tryckt(k, val)); });
     ortknappar.forEach(function (k) { k.hidden = !iForeningen(k, val.forening); });
     visaSaker(synliga(ortknappar, val));
@@ -108,7 +110,7 @@
       vald = giltigt(ortknappar, adressen());
       visa(urval, ortknappar, vald);
     });
-    urval.hidden = false;
+    document.querySelector(".ortval").hidden = false;
     visa(urval, ortknappar, vald);
   }
 
