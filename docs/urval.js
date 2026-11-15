@@ -1,6 +1,7 @@
-// Krav: K4, K21 och K22 i KRAV.md. Test: tests/test_urval.js, och tests/test_bygg.py (att skriptet följer med).
+// Krav: K4, K21, K22 och K34 i KRAV.md. Test: tests/test_urval.js, och tests/test_bygg.py (att skriptet följer med).
 // Valet är en förening, en ort eller båda; inget val visar allt. Föreningen
 // begränsar vilka ortknappar som syns (data-urval-i), orten vilka ärenden. Utan skriptet står allt.
+// En länk med data-utan-urval går till en sida utan urval och får inget val med sig (K34).
 (function () {
   var SIDA = /^[\w./-]+\.html$/;
   var INGET = { forening: null, ort: null };
@@ -19,7 +20,8 @@
   function lankar(val) {
     alla("a[href]").forEach(function (lank) {
       var sida = lank.getAttribute("href").split("?")[0];
-      if (SIDA.test(sida)) lank.setAttribute("href", sida + fraga(val));
+      if (!SIDA.test(sida) || lank.hasAttribute("data-utan-urval")) return;
+      lank.setAttribute("href", sida + fraga(val));
     });
   }
 

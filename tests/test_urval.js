@@ -54,6 +54,7 @@ function sida(sok) {
     lista(["x", "z", "y|z"]),
     lista(["y"]),
     new Nod("a", { href: "pagar.html" }),
+    new Nod("a", { href: "ks-motet.html", "data-utan-urval": "" }),
   ]);
   const fonster = new Nod("window");
   const plats = { search: sok, pathname: "/giffa/index.html" };
@@ -126,6 +127,7 @@ test("ett klick ändrar adressen och länkarna, Alla tar bort valet", () => {
   knappFor(dokument, "data-urval-forening", "B").click();
   assert.strictEqual(plats.search, "?forening=B");
   assert.strictEqual(dokument.querySelector("a").getAttribute("href"), "pagar.html?forening=B");
+  assert.strictEqual(dokument.querySelectorAll("a")[1].getAttribute("href"), "ks-motet.html");
   assert.deepStrictEqual(synligaOrter(dokument), ["z", "y|z"]);
   knappFor(dokument, "data-alla", "").click();
   assert.strictEqual(plats.search, "");

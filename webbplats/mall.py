@@ -23,6 +23,8 @@ MENY = (
 )
 
 AKTUELL = ' aria-current="page"'
+# Sidor utan urval: valet följer inte med i länken dit (K34).
+UTAN_URVAL = ("ks-motet.html",)
 SVENSKA_SIST = str.maketrans("åäö", "{|}")
 
 
@@ -64,7 +66,8 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 
 def meny(aktuell: str, rot: str) -> str:
     poster = "".join(
-        f'<li><a href="{rot}{adress}"{AKTUELL * (adress == aktuell)}>{namn}</a></li>'
+        f'<li><a href="{rot}{adress}"{AKTUELL * (adress == aktuell)}'
+        f"{' data-utan-urval' * (adress in UTAN_URVAL)}>{namn}</a></li>"
         for adress, namn in MENY
     )
     return f'<nav aria-label="Webbplatsen"><ul>{poster}</ul></nav>'
