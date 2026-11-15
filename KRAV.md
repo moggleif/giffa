@@ -433,3 +433,24 @@ sammanträde som inte finns i kalendern och att inget sammanträde finns.
 Länken till handlingarna står bara när de finns i datapoolen.
 Dagordningen, handlingens sidor och sammanfattningen tolkas med
 kommunhandlingars kod (K54 där), inte med en egen.
+
+## K35 – En gemensam meny för projektets sajter
+
+**Givet** projektets sajter, Giffå, Kungsbacka kommun
+([kommunhandlingar](https://github.com/moggleif/kommunhandlingar)) och
+Kungsbacka i siffror ([politik](https://github.com/moggleif/politik)),
+som alla laddar `sajter.css` och `sajter.js` från Giffå,
+**när** en sida på någon av dem visas,
+**så** står överst en sajtrad med de tre sajterna där den visade är
+markerad, och under den sajtens egen meny i samma form på alla sajter:
+sajtens namn som länk till dess start och högst sex poster, där en post är
+en länk eller en rubrik som fäller ut en undermeny, eventuellt med grupper.
+Bara en undermeny är öppen åt gången, och Escape eller ett klick utanför
+stänger den. Undermenyn med den visade sidan är markerad, liksom sidan. På
+en skärm högst 640 punkter bred står menyn bakom en knapp *Meny*. Utan
+skriptet står sajtens meny som en lista och ingen sajtrad.
+
+Giffås meny är *Tycka till*, *Pågår*, *Beslutat* (med *Beslutat* och
+*Historik*), *KS-mötet*, *Sök* och *Om*. Valet av förening och ort (K22)
+står bakom en knapp *Ort:* med det valda, eller *Alla*, som fäller ut
+knapparna; knappen syns bara med skriptet.

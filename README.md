@@ -25,8 +25,12 @@ länkar till kommunens karta. Varje pågående plan visar på kortet och sin sid
 bygglagens process och vilka steg som kommer. Ärendets sida har länkar direkt till handlingarna
 under de steg där underlaget finns och, för förslag med innehåll, förslaget i korthet.
 Utan val syns allt; den som vill väljer en ort direkt, eller först en
-förening för att bara se dess orter, och valet står i adressen och följer
-med mellan sidorna. Sidan byggs ur ärendena av `webbplats/` och publiceras
+förening för att bara se dess orter, bakom knappen *Ort:*, och valet står
+i adressen och följer med mellan sidorna. Överst står en sajtrad till
+projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kommunhandlingar/)
+och [Kungsbacka i siffror](https://moggleif.github.io/politik/), som
+laddar samma meny från Giffå: Giffå ritar den med `docs/sajter.js` och `docs/sajter.css`
+([beslut 0013](beslut/0013-gemensam-meny-fran-giffa.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Sidan om kommunstyrelsens möte läses ur en utcheckning av
 [kommunhandlingar](https://github.com/moggleif/kommunhandlingar) med dess

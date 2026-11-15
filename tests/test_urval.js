@@ -1,4 +1,4 @@
-// Krav: K21 och K22 i KRAV.md, issue #35. Kör docs/urval.js mot en liten
+// Krav: K21, K22 och K35 i KRAV.md, issue #35. Kör docs/urval.js mot en liten
 // påhittad sida med standardbibliotekets testlöpare: node --test tests/*.js
 "use strict";
 const test = require("node:test");
@@ -46,15 +46,19 @@ const lista = (orter) => new Nod("div", { class: "urvalslista" }, [
 // Förening A har orterna x och y, förening B orten z. Den andra listan har bara y.
 function sida(sok) {
   const dokument = new Nod("html", {}, [
-    dold(new Nod("div", { class: "urval" }, [
-      new Nod("div", { role: "group" }, [knapp({ "data-alla": "" }),
-        knapp({ "data-urval-forening": "A" }), knapp({ "data-urval-forening": "B" })]),
-      new Nod("div", { role: "group" }, [ortknapp("x", "A"), ortknapp("y", "A"), ortknapp("z", "B")]),
+    dold(new Nod("details", { class: "ortval" }, [
+      new Nod("summary", {}, [new Nod("span", { class: "ortval-namn" })]),
+      new Nod("div", { class: "urval" }, [
+        new Nod("div", { role: "group" }, [knapp({ "data-alla": "" }),
+          knapp({ "data-urval-forening": "A" }), knapp({ "data-urval-forening": "B" })]),
+        new Nod("div", { role: "group" }, [ortknapp("x", "A"), ortknapp("y", "A"), ortknapp("z", "B")]),
+      ]),
     ])),
     lista(["x", "z", "y|z"]),
     lista(["y"]),
     new Nod("a", { href: "pagar.html" }),
     new Nod("a", { href: "ks-motet.html", "data-utan-urval": "" }),
+    new Nod("a", { href: "index.html#tycka-till" }),
   ]);
   const fonster = new Nod("window");
   const plats = { search: sok, pathname: "/giffa/index.html" };
@@ -72,7 +76,8 @@ const knappFor = (d, attribut, varde) => d.querySelectorAll("button").find((k) =
 
 test("utan val syns allt, Alla är tryckt och alla orters knappar syns", () => {
   const { dokument } = sida("");
-  assert.strictEqual(dokument.querySelector(".urval").hidden, false);
+  assert.strictEqual(dokument.querySelector(".ortval").hidden, false);
+  assert.strictEqual(dokument.querySelector(".ortval-namn").textContent, "Alla");
   assert.deepStrictEqual(synligaOrter(dokument), ["x", "z", "y|z", "y"]);
   assert.deepStrictEqual(tryckta(dokument), ["Alla"]);
   assert.deepStrictEqual(ortknapparna(dokument), ["x", "y", "z"]);
@@ -164,4 +169,22 @@ test("en tryckt knapp som trycks igen släpper bara sitt val", () => {
   knappFor(dokument, "data-urval-forening", "A").click();
   assert.strictEqual(plats.search, "?ort=x");
   assert.deepStrictEqual(ortknapparna(dokument), ["x", "y", "z"]);
+});
+
+test("knappen som fäller ut urvalet säger vad som är valt, orten före föreningen", () => {
+  const { dokument } = sida("?forening=A");
+  const namn = () => dokument.querySelector(".ortval-namn").textContent;
+  assert.strictEqual(namn(), "A");
+  knappFor(dokument, "data-urval-ort", "y").click();
+  assert.strictEqual(namn(), "y");
+  knappFor(dokument, "data-alla", "").click();
+  assert.strictEqual(namn(), "Alla");
+});
+
+test("valet står före avsnittet i en länk med #", () => {
+  const { dokument } = sida("?ort=x");
+  const lank = dokument.querySelectorAll("a").find((a) => a.getAttribute("href").startsWith("index.html"));
+  assert.strictEqual(lank.getAttribute("href"), "index.html?ort=x#tycka-till");
+  knappFor(dokument, "data-alla", "").click();
+  assert.strictEqual(lank.getAttribute("href"), "index.html#tycka-till");
 });

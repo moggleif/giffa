@@ -26,6 +26,8 @@ class Bygg(unittest.TestCase):
             "bevakar.html",
             "sok.html",
             "ks-motet.html",
+            "sajter.css",
+            "sajter.js",
             "sok.js",
             "stil.css",
             "urval.js",
