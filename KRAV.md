@@ -406,7 +406,8 @@ en varningsruta överst som säger att det är föregående sammanträde, inte
 nästa, och datumet för nästa. Under rubriken står länkar till kallelsen,
 handlingarna och datapoolens sida för sammanträdet och sedan dagordningen
 i kallelsens ordning med varje punkt som ett kort. Alla punkter visas och
-ingen sorteras bort.
+ingen sorteras bort. Sidan har inget val av förening eller ort, och ett
+val på de andra sidorna följer inte med i länken dit.
 
 Kortet har överst punktens nummer och märken: de orter i `OMRADE.md` som
 rubriken eller förslaget nämner, själva eller genom en plats i
