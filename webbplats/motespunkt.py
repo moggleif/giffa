@@ -12,7 +12,7 @@ from webbplats.arende import Arende
 from webbplats.kallelsen import Motet, Punkten
 from webbplats.kort import post
 from webbplats.mall import Sajt
-from webbplats.punktkoppling import Kopplad, Traff
+from webbplats.punktkoppling import Kopplad
 
 POOL = "https://moggleif.github.io/kommunhandlingar/kungsbacka"
 FORSLAG = "Förslag till beslut"
@@ -28,7 +28,6 @@ def punktkort(sajt: Sajt, motet: Motet, k: Kopplad) -> str:
         f'<article id="punkt-{punkt.nummer}">{markor(k)}'
         f"<h3>{sajt.karta.lanka(rubriken(k.punkten))}</h3>"
         + diarienumret(k.punkten)
-        + i_handlingen(k)
         + forslag(sajt, punkt.forslag)
         + sammanfattning(k.punkten)
         + kallrad(motet, k.punkten)
@@ -42,19 +41,20 @@ def diarienumret(punkten: Punkten) -> str:
     return f'<p class="organ">{f"Dnr {escape(nummer)}" if nummer else "Dnr saknas i kallelsen"}</p>'
 
 
+# Orterna punkten berör: de som rubriken eller förslaget nämner, själva
+# eller genom en plats, sedan sökorden och för sig de orter som bara
+# handlingen nämner.
 def markor(k: Kopplad) -> str:
-    namn = dict.fromkeys(namnet(t) for t in k.traffar if not t.i_handlingen)
-    orter = "".join(f"<span>{escape(n)}</span>" for n in namn)
-    return f'<p class="markor"><span>Punkt {k.punkten.punkt.nummer}</span>{orter}</p>'
-
-
-def i_handlingen(k: Kopplad) -> str:
-    namn = list(dict.fromkeys(namnet(t) for t in k.traffar if t.i_handlingen))
-    return f'<p class="organ">I handlingen: {escape(", ".join(namn))}</p>' if namn else ""
-
-
-def namnet(t: Traff) -> str:
-    return t.ort if t.namn == t.ort else f"{t.namn} ({t.ort})"
+    i_kallelsen = list(dict.fromkeys(t.ort for t in k.traffar if not t.i_handlingen))
+    bara = [o for o in dict.fromkeys(t.ort for t in k.traffar) if o not in i_kallelsen]
+    orter = "".join(f"<span>{escape(o)}</span>" for o in i_kallelsen)
+    orter += "".join(f'<span class="sokord">{escape(o)}</span>' for o in k.sokord)
+    if bara:
+        orter += "<small>i handlingen:</small>" + "".join(
+            f'<span class="svag">{escape(o)}</span>' for o in bara
+        )
+    nummer = f'<span class="nummer">Punkt {k.punkten.punkt.nummer}</span>'
+    return f'<p class="markor">{nummer}{orter}</p>'
 
 
 def forslag(sajt: Sajt, stycken: tuple[str, ...] | None) -> str:

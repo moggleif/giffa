@@ -1,12 +1,13 @@
 """Krav: K34 i KRAV.md, beslut 0012. Test: tests/test_ksmotet.py.
 
-Vad en punkt på dagordningen rör: orterna i OMRADE.md och platserna i
-platser.csv som punktens rubrik, förslag eller handling nämner, med det
+Vad en punkt på dagordningen rör: orterna i OMRADE.md som punktens rubrik,
+förslag eller handling nämner, själva eller genom en plats i platser.csv, med det
 som bara står i handlingen märkt, och de ärenden i bevakning/ som har ett
 av punktens diarienummer. Ett ärende med punktens eget nummer följs i
 Giffå; har ärendet numret utan förled märks kopplingen som osäker, eftersom
 nämnderna har egna serier med samma siffror. Ett annat nummer i handlingen
-kopplas bara när det har förled och står likadant i ärendet.
+kopplas bara när det har förled och står likadant i ärendet. Sökorden
+kommer ur `sokord.py`.
 """
 
 import re
@@ -17,6 +18,7 @@ from kommunhandlingar.diarienummer import normaliserat
 from skanning.termer import monster
 from webbplats.arende import Arende
 from webbplats.kallelsen import Punkten
+from webbplats.sokord import sokord
 
 FORLED = re.compile(r"^[A-ZÅÄÖ]+-(?=\d)")
 
@@ -24,8 +26,6 @@ FORLED = re.compile(r"^[A-ZÅÄÖ]+-(?=\d)")
 @dataclass(frozen=True)
 class Traff:
     ort: str
-    # Orten själv eller platsen som nämns.
-    namn: str
     # Nämns bara i handlingen, inte i kallelsens rubrik eller förslag.
     i_handlingen: bool
 
@@ -38,12 +38,14 @@ class Kopplad:
     # Ärenden med punktens nummer utan förled: troligen samma, men inte säkert.
     osakra: list[Arende]
     namnda: list[Arende]
+    sokord: list[str]
 
 
 def koppla(
     punkten: Punkten, orter: list[str], platser: list[dict[str, str]], arenden: list[Arende]
 ) -> Kopplad:
-    return Kopplad(punkten, traffar(punkten, orter, platser), *foljda(punkten, arenden))
+    funna = traffar(punkten, orter, platser)
+    return Kopplad(punkten, funna, *foljda(punkten, arenden), sokord(punkten, platser))
 
 
 def traffar(punkten: Punkten, orter: list[str], platser: list[dict[str, str]]) -> list[Traff]:
@@ -55,8 +57,8 @@ def traffar(punkten: Punkten, orter: list[str], platser: list[dict[str, str]]) -
 def traff(punkten: Punkten, ort: str, namn: str) -> Traff | None:
     sok = monster(namn).search
     if sok(punkten.kallelsen):
-        return Traff(ort, namn, False)
-    return Traff(ort, namn, True) if sok(punkten.handlingen) else None
+        return Traff(ort, False)
+    return Traff(ort, True) if sok(punkten.handlingen) else None
 
 
 def foljda(punkten: Punkten, arenden: list[Arende]) -> tuple[list[Arende], ...]:

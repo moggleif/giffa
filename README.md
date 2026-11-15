@@ -17,7 +17,7 @@ egna sidor det som pågår (det som rört sig de senaste två åren först), det
 som är beslutat, en historik över det som är klart, kommunstyrelsens
 kommande sammanträde punkt för punkt inför partiernas gruppmöte (det
 föregående, märkt så, tills nästa kallelse finns), med
-orterna och föreningarna varje punkt rör och ärendena i Giffå med samma
+orterna varje punkt rör och ärendena i Giffå med samma
 diarienummer, en sökning på rubrik,
 namn och ort, vad som bevakas och en sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
 korten. Fastighetsbeteckningar, platser, gator och detaljplaner i ett ärende

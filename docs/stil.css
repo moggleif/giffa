@@ -134,21 +134,14 @@ ul.pa-vag-upp small { color: var(--dampad); }
 .kort .stege .forfarande { display: none; }
 .kort .stege li { padding: 0 0.4rem; border-width: 1px; font-size: 0.9rem; }
 .kort .stege li small { display: inline; }
+div.varning { background: #fff1c2; border: 2px solid var(--alla); border-left-width: 8px;
+              border-radius: 6px; padding: 0.6rem 0.9rem; max-width: 40rem; margin-bottom: 1rem; }
+div.varning p { margin: 0.2rem 0; }
+div.varning strong { font-size: 1.15rem; }
 .kort.punkter { grid-template-columns: 1fr; max-width: 34rem; }
+.punkter .markor span.svag { background: none; color: var(--dampad);
+                            border: 1px dashed var(--linje); }
+.punkter .markor span.nummer { font-weight: 600; }
+.punkter .markor span.sokord { background: var(--yta); color: #1a1a1a; }
+.punkter .markor small { align-self: center; color: var(--dampad); margin-left: 0.3rem; }
 .punkter blockquote { margin: 0; padding-left: 0.6rem; border-left: 3px solid var(--accent); }
-table.matris { border-collapse: collapse; max-width: 46rem; margin-bottom: 2rem; }
-table.matris caption { text-align: left; color: var(--dampad); padding-bottom: 0.4rem; }
-table.matris th, table.matris td { border-bottom: 1px solid var(--linje); padding: 0.3rem 0.4rem;
-                                   text-align: left; vertical-align: top; }
-table.matris th[scope="row"] { font-weight: normal; }
-table.matris td { color: var(--accent); font-size: 1.1rem; white-space: nowrap; }
-table.matris td small { color: var(--dampad); font-size: 0.85rem; white-space: normal; }
-@media (max-width: 40rem) {
-  table.matris, table.matris caption, table.matris tbody, table.matris tr,
-  table.matris th { display: block; }
-  table.matris thead, table.matris td:empty, table.matris td small { display: none; }
-  table.matris tr { border-bottom: 1px solid var(--linje); padding: 0.3rem 0; }
-  table.matris th, table.matris td { border: 0; padding: 0 0.6rem 0 0; }
-  table.matris td { display: inline-block; font-size: 0.95rem; }
-  table.matris td::after { content: " " attr(data-forening); color: #1a1a1a; }
-}

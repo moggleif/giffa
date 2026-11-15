@@ -1,6 +1,7 @@
 """K34: sidan om kommunstyrelsens kommande sammanträde, punkt för punkt."""
 
 import unittest
+from dataclasses import replace
 from datetime import date
 from pathlib import Path
 
@@ -10,6 +11,7 @@ from webbplats.arende import tolka
 from webbplats.kallelsen import kommande
 from webbplats.ksmotet import ks_motet
 from webbplats.punktkoppling import foljda, traffar
+from webbplats.sokord import sokord
 
 POOL = Path(__file__).resolve().parent / "fixtures" / "pool"
 TOM = Path(__file__).resolve().parent / "fixtures" / "tom_pool"
@@ -51,8 +53,8 @@ class KommandeMotet(unittest.TestCase):
 
     def test_orten_i_kallelsen_och_den_som_bara_star_i_handlingen(self):
         forsta = kommande(POOL, date(2026, 11, 1)).punkter[0]
-        funna = {(t.namn, t.i_handlingen) for t in traffar(forsta, SAJT.orter, PLATSER)}
-        self.assertEqual(funna, {("Åsaskolan", False), ("Fjärås", True)})
+        funna = {(t.ort, t.i_handlingen) for t in traffar(forsta, SAJT.orter, PLATSER)}
+        self.assertEqual(funna, {("Åsa", False), ("Fjärås", True)})
 
     def test_arendena_med_punktens_nummer_utan_forled_och_ur_handlingen(self):
         forsta = kommande(POOL, date(2026, 11, 1)).punkter[0]
@@ -67,6 +69,16 @@ class KommandeMotet(unittest.TestCase):
         self.assertEqual([a.id for a in egna], ["ks"])
         self.assertEqual([a.id for a in osakra], ["utan"])
         self.assertEqual([a.id for a in namnda], ["bygglov"])
+
+
+class Sokorden(unittest.TestCase):
+    def test_ord_ur_rubriken_och_platser_i_kallelsen_hogst_fyra(self):
+        punkter = kommande(POOL, date(2026, 11, 1)).punkter
+        self.assertEqual(sokord(punkter[2], PLATSER), ["Planbesked"])
+        platser = [{"namn": n, "ort": "Åsa"} for n in ("Ekan", "Boken", "Lönnen")]
+        punkt = replace(punkter[0].punkt, rubrik="Taxa, remiss och planbesked")
+        forsta = replace(punkter[0], punkt=punkt, kallelsen="Ekan, Boken och Lönnen")
+        self.assertEqual(sokord(forsta, platser), ["Planbesked", "Remiss", "Ekan", "Boken"])
 
 
 class Sidan(unittest.TestCase):
@@ -95,14 +107,18 @@ class Sidan(unittest.TestCase):
         self.assertIn(f'<a href="{bas}/handlingar.html#sida-2">Handlingen, sidorna 2–3</a>', html)
         self.assertIn(f'<a href="{bas}.html#punkt-1">Historik i alla organ</a>', html)
 
-    def test_foreningarna_i_oversikten_och_orterna_pa_punkten(self):
+    def test_orterna_pa_punkten_utan_oversikt_per_forening(self):
         html = self.html(date(2026, 11, 1))
-        rad = html.split('<a href="#punkt-1">1</a>')[1].split("</tr>")[0]
-        self.assertIn('<td data-forening="Åsa" title="Åsa, Fjärås">●', rad)
-        self.assertTrue(rad.endswith("<td></td>"))
+        self.assertNotIn("<table", html)
         kortet = html.split('<article id="punkt-1">')[1].split("</article>")[0]
-        self.assertIn("<span>Åsaskolan (Åsa)</span>", kortet)
-        self.assertIn("I handlingen: Fjärås", kortet)
+        self.assertIn(
+            '<p class="markor"><span class="nummer">Punkt 1</span><span>Åsa</span>'
+            '<span class="sokord">Åsaskolan</span>'
+            '<small>i handlingen:</small><span class="svag">Fjärås</span></p>',
+            kortet,
+        )
+        tredje = html.split('<article id="punkt-3">')[1]
+        self.assertIn('<span>Fjärås</span><span class="sokord">Planbesked</span>', tredje)
 
     def test_arendet_med_punktens_nummer_och_det_som_handlingen_namner(self):
         kortet = self.html(date(2026, 11, 1)).split('<article id="punkt-1">')[1]
@@ -121,7 +137,8 @@ class Sidan(unittest.TestCase):
         html = self.html(date(2026, 12, 2))
         self.assertIn("<h1>Kommunstyrelsen 1 december 2026</h1>", html)
         self.assertIn(
-            '<div class="paverka"><p>Det här är föregående sammanträde.</p>'
+            '<div class="varning" role="note"><p><strong>Det här är föregående sammanträde, '
+            "inte nästa.</strong></p>"
             "<p>Kallelsen till nästa, 15 december 2026, finns inte i datapoolen än.</p></div>",
             html,
         )
