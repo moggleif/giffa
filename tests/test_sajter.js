@@ -58,13 +58,14 @@ test("sajtraden står mellan hopplänken och menyn, med den här sajten markerad
   assert.deepStrictEqual([kropp.barn[0], kropp.barn[2]], [hoppa, meny]);
   assert.strictEqual(rad.getAttribute("aria-label"), "Sajterna");
   const lankar = rad.querySelectorAll("a");
-  assert.deepStrictEqual(lankar.map((a) => a.textContent), ["Giffå", "Kungsbacka kommun", "Kungsbacka i siffror"]);
+  assert.deepStrictEqual(lankar.map((a) => a.textContent), ["Giffå", "Kungsbacka kommun", "Kungsbacka i siffror", "Region Halland"]);
   assert.deepStrictEqual(lankar.map((a) => a.getAttribute("href")), [
     "https://moggleif.github.io/giffa/",
-    "https://moggleif.github.io/kommunhandlingar/",
+    "https://moggleif.github.io/kungsbackakommun/",
     "https://moggleif.github.io/politik/",
+    "https://moggleif.github.io/regionhalland/",
   ]);
-  assert.deepStrictEqual(lankar.map((a) => a.getAttribute("aria-current")), ["true", null, null]);
+  assert.deepStrictEqual(lankar.map((a) => a.getAttribute("aria-current")), ["true", null, null, null]);
 });
 
 test("på en annan sajt är den markerad i stället", () => {
@@ -123,7 +124,7 @@ test("Escape fäller ihop den utfällda menyn när ingen undermeny är öppen", 
 });
 
 test("en sajt utan undermenyer får sajtraden och knappen", () => {
-  const { kropp, meny } = sida("/kommunhandlingar/kungsbacka.html", [lank(), lank()]);
+  const { kropp, meny } = sida("/kungsbackakommun/kungsbacka.html", [lank(), lank()]);
   assert.strictEqual(kropp.barn[1].querySelector("[aria-current]").textContent, "Kungsbacka kommun");
   assert.strictEqual(meny.querySelector("button").textContent, "Meny");
   kropp.skicka("keydown", { key: "Escape" });

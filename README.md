@@ -27,8 +27,9 @@ under de steg där underlaget finns och, för förslag med innehåll, förslaget
 Utan val syns allt; den som vill väljer en ort direkt, eller först en
 förening för att bara se dess orter, bakom knappen *Ort:*, och valet står
 i adressen och följer med mellan sidorna. Överst står en sajtrad till
-projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kommunhandlingar/)
-och [Kungsbacka i siffror](https://moggleif.github.io/politik/), som
+projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kungsbackakommun/),
+[Kungsbacka i siffror](https://moggleif.github.io/politik/) och
+[Region Halland](https://moggleif.github.io/regionhalland/), som
 laddar samma meny från Giffå: Giffå ritar den med `docs/sajter.js` och `docs/sajter.css`
 ([beslut 0013](beslut/0013-gemensam-meny-fran-giffa.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).

@@ -437,14 +437,17 @@ kommunhandlingars kod (K54 där), inte med en egen.
 ## K35 – En gemensam meny för projektets sajter
 
 **Givet** projektets sajter, Giffå, Kungsbacka kommun
-([kommunhandlingar](https://github.com/moggleif/kommunhandlingar)) och
-Kungsbacka i siffror ([politik](https://github.com/moggleif/politik)),
+([kungsbackakommun](https://github.com/moggleif/kungsbackakommun)),
+Kungsbacka i siffror ([politik](https://github.com/moggleif/politik)) och
+Region Halland ([regionhalland](https://github.com/moggleif/regionhalland)),
 som alla laddar `sajter.css` och `sajter.js` från Giffå,
 **när** en sida på någon av dem visas,
-**så** står överst en sajtrad med de tre sajterna där den visade är
+**så** står överst en sajtrad med de fyra sajterna där den visade är
 markerad, och under den sajtens egen meny i samma form på alla sajter:
 sajtens namn som länk till dess start och högst sex poster, där en post är
 en länk eller en rubrik som fäller ut en undermeny, eventuellt med grupper.
+En undermeny med grupper står under hela menyn och bryter grupperna till
+en ny rad, så att ingen del hamnar utanför skärmen.
 Bara en undermeny är öppen åt gången, och Escape eller ett klick utanför
 stänger den. Undermenyn med den visade sidan är markerad, liksom sidan. På
 en skärm högst 640 punkter bred står menyn bakom en knapp *Meny*. Utan
