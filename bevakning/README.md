@@ -160,7 +160,8 @@ namn och ärende:
 | `kalla`  | Var namnet kommer ifrån: en länk `[Rubrik](https://…)` till en artikel eller handling, eller en text som *projektägaren* eller *ärendets rubrik* |
 
 Ett namn kan stå på flera rader, en per ärende, och ett ärende kan ha
-flera namn. Namnet visas som en färgad etikett, i filens ordning, på
+flera namn. Namnet visas som en färgad etikett, i filens ordning och
+länkad till källan när den är en länk, på
 ärendets kort, egen sida och i tidslinjen, och går att söka på under
 *Sök*. Ett ärende som inte finns stoppar bygget.
 

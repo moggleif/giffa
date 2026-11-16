@@ -41,5 +41,7 @@ på listsidorna räcker den inte längre.
 
 Projektägaren tog bort avsnittet *Ärenden med mer uppmärksamhet* från
 startsidan och från listorna (K29): det stod i vägen och gav text utan
-värde. Namnen finns kvar som etiketter och i sökningen, och artiklarna
-som gav namnen står under ärendet i *I media och debatt*.
+värde. Namnen finns kvar som etiketter och i sökningen, och varje
+etikett länkar till källan till namnet, eftersom källan inte längre
+står i avsnittet. Tidningsartiklarna som gav namnen står också under
+ärendet i *I media och debatt*.

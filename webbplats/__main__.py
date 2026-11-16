@@ -28,7 +28,6 @@ from webbplats.mall import Sajt
 from webbplats.sidor import LISTOR, lista, startsida
 from webbplats.sok import soksida
 from webbplats.uppmarksammat import las as las_namnen
-from webbplats.uppmarksammat import namn_per_arende
 
 UPPMARKSAMMADE = "bevakning/uppmarksammade.csv"
 
@@ -61,10 +60,9 @@ def las_foreningar(rot: Path) -> dict[str, list[str]]:
 
 def med_namn(rot: Path, arenden: list[Arende]) -> list[Arende]:
     try:
-        namnen = las_namnen(las(rot, UPPMARKSAMMADE), {a.id for a in arenden})
+        per_arende = las_namnen(las(rot, UPPMARKSAMMADE), {a.id for a in arenden})
     except ValueError as fel:
         raise SystemExit(f"{UPPMARKSAMMADE}: {fel}") from fel
-    per_arende = namn_per_arende(namnen)
     return [replace(a, kallas=per_arende.get(a.id, ())) for a in arenden]
 
 

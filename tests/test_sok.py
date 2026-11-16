@@ -4,17 +4,18 @@ import unittest
 from dataclasses import replace
 
 from tests.test_sidor import SAJT, arende
+from webbplats.arende import Namn
 from webbplats.sok import soksida
 
 
 class Soksidan(unittest.TestCase):
     def test_alla_arenden_med_rubrik_namn_orter_och_organ_i_sma_bokstaver(self):
-        arenden = [replace(arende("pågår", "a"), kallas=("Stråket i Åsa",)), arende("klart", "b")]
+        arenden = [replace(arende("pågår", "a"), kallas=(Namn("Stråket i Åsa", "projektägaren"),)), arende("klart", "b")]
         html = soksida(SAJT, arenden)
         self.assertIn('data-sok="ny förskola stråket i åsa åsa fjärås nämnden"', html)
         self.assertIn('data-sok="ny förskola åsa fjärås nämnden"', html)
         self.assertIn('<a href="arende/b.html">Ny förskola</a>', html)
-        self.assertIn('<p class="kallas">Uppmärksammat som <span class="etikett">Stråket i Åsa</span></p>', html)
+        self.assertIn('<p class="kallas">Uppmärksammat som <span class="etikett" title="Namnet: projektägaren">Stråket i Åsa</span></p>', html)
 
     def test_rutan_ar_dold_tills_skriptet_visar_den(self):
         html = soksida(SAJT, [arende("pågår")])

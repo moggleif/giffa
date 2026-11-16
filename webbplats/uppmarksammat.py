@@ -1,41 +1,30 @@
 """Krav: K27 i KRAV.md. Test: tests/test_uppmarksammat.py.
 
 Läser bevakning/uppmarksammade.csv – namnen folk använder på ärendena, i
-den ordning projektägaren skrivit dem – och ger varje ärende sina namn.
+den ordning projektägaren skrivit dem – och ger varje ärende sina namn
+med källan till varje namn.
 """
 
 import csv
-from dataclasses import dataclass
 from io import StringIO
 
-from webbplats.arende import LANK
+from webbplats.arende import LANK, Namn
 
 KOLUMNER = ["namn", "arende", "kalla"]
 
 
-@dataclass(frozen=True)
-class Namn:
-    namn: str
-    arenden: tuple[str, ...]
-    kallor: tuple[str, ...]
-
-
-def las(text: str, finns: set[str]) -> list[Namn]:
+def las(text: str, finns: set[str]) -> dict[str, tuple[Namn, ...]]:
     lasare = csv.DictReader(StringIO(text))
     if lasare.fieldnames != KOLUMNER:
         raise ValueError(f"kolumnerna ska vara {','.join(KOLUMNER)}")
-    namnen: dict[str, Namn] = {}
+    per_arende: dict[str, tuple[Namn, ...]] = {}
     for rad in ({k: (v or "").strip() for k, v in r.items()} for r in lasare):
         kontrollera(rad, finns)
-        if rad["arende"] in namnen.get(rad["namn"], Namn("", (), ())).arenden:
+        tidigare = per_arende.get(rad["arende"], ())
+        if rad["namn"] in (n.namn for n in tidigare):
             raise ValueError(f"samma namn och ärende två gånger: {rad['namn']}, {rad['arende']}")
-        tidigare = namnen.get(rad["namn"], Namn(rad["namn"], (), ()))
-        namnen[rad["namn"]] = Namn(
-            tidigare.namn,
-            tidigare.arenden + (rad["arende"],),
-            tidigare.kallor + (rad["kalla"],) * (rad["kalla"] not in tidigare.kallor),
-        )
-    return list(namnen.values())
+        per_arende[rad["arende"]] = tidigare + (Namn(rad["namn"], rad["kalla"]),)
+    return per_arende
 
 
 def kontrollera(rad: dict[str, str], finns: set[str]) -> None:
@@ -45,11 +34,3 @@ def kontrollera(rad: dict[str, str], finns: set[str]) -> None:
         raise ValueError(f"ärendet finns inte: {rad['arende']}")
     if rad["kalla"].startswith("[") and not LANK.fullmatch(rad["kalla"]):
         raise ValueError(f"källan är ingen https-länk: {rad['kalla']}")
-
-
-def namn_per_arende(namnen: list[Namn]) -> dict[str, tuple[str, ...]]:
-    per_arende: dict[str, tuple[str, ...]] = {}
-    for namn in namnen:
-        for arende in namn.arenden:
-            per_arende[arende] = per_arende.get(arende, ()) + (namn.namn,)
-    return per_arende

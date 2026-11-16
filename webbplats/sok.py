@@ -26,7 +26,7 @@ def soksida(sajt: Sajt, arenden: list[Arende]) -> str:
 
 def post(arende: Arende) -> str:
     falt = arende.falt
-    sokbart = " ".join((falt["rubrik"], *arende.kallas, *arende.orter, falt["organ"])).lower()
+    sokbart = " ".join((falt["rubrik"], *(n.namn for n in arende.kallas), *arende.orter, falt["organ"])).lower()
     return (
         f'<li data-sok="{escape(sokbart)}"><a href="{arende.sida}">{escape(falt["rubrik"])}</a> '
         f"<small>{escape(', '.join(arende.orter))} · {falt['status']}</small>{namn_rad(arende)}</li>"

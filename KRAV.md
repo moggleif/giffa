@@ -174,10 +174,11 @@ under rubriken och hopfälld, i stället för vid varje tillfälle.
 **när** sidan byggs,
 **så** har det en egen sida `arende/<filnamn>.html` med ort, organ,
 diarienummer, status, ingress, tillfällena att tycka till, alla händelser
-med källor och handlingar (K25), länkarna under *I media och debatt* –
-varje artikel med en tidningsikon och tidningens namn först, så att den
-syns som press och inte som en handling – och en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och
-*Nytt sedan förra rundan* länkar dit, och adressen är densamma vilken status ärendet än har.
+med källor och handlingar (K25), länkarna under *I media och debatt*
+– varje post med en tidningsikon och källans namn först, så att den
+syns som press och inte som en handling – och en länk till filen i
+repot. Kort, tabellrader, *Tycka till nu* och *Nytt sedan förra rundan*
+länkar dit, och adressen är densamma vilken status ärendet än har.
 
 ## K19 – Det som rör sig först
 
@@ -293,8 +294,9 @@ namnet,
 **så** står namnet under rubriken som en färgad etikett: på ärendets kort och egna
 sida efter orden *Uppmärksammat som*, och i tidslinjen med samma ord bara
 för skärmläsare, så att den som känner ärendet under ett annat
-namn känner igen det. Startsidan och listorna har inget eget avsnitt för
-de uppmärksammade ärendena. Ett ärende som inte finns, ett tomt fält,
+namn känner igen det. Etiketten länkar till källan till namnet när den
+är en länk, och källan står annars i etikettens titel. Startsidan och
+listorna har inget eget avsnitt för de uppmärksammade ärendena. Ett ärende som inte finns, ett tomt fält,
 samma namn och ärende två gånger eller en källa som är en länk men inte en
 https-länk stoppar bygget.
 
