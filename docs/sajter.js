@@ -1,6 +1,6 @@
-// Krav: K35 och K36 i KRAV.md, beslut 0013–0015. Test: tests/test_sajter.js.
+// Krav: K35, K36 och K38 i KRAV.md, beslut 0013–0015 och 0017. Test: tests/test_sajter.js.
 // Projektets sajter laddar det här skriptet och sajter.css från Giffå. Skriptet lägger
-// sajtraden före sajtens egen meny (.sajtmeny), med knappen för mörkt tema och knappen
+// varningen om AI och sajtraden före sajtens egen meny (.sajtmeny), med knappen för mörkt tema och knappen
 // Meny, så att sajtens namn bara står där. Det låter bara en undermeny vara öppen åt
 // gången. Utan skriptet står menyn som en lista med sajtens namn först.
 (function () {
@@ -11,6 +11,7 @@
     ["/politik/", "Kungsbacka i siffror"],
     ["/regionhalland/", "Region Halland"]
   ];
+  var VARNING = "Skapad med AI utifrån offentliga handlingar. Fel kan förekomma, så kontrollera mot källan.";
 
   function alla(valjare, rot) {
     return Array.prototype.slice.call(rot.querySelectorAll(valjare));
@@ -21,6 +22,12 @@
     Object.keys(attribut).forEach(function (namn) { e.setAttribute(namn, attribut[namn]); });
     if (text) e.textContent = text;
     return e;
+  }
+
+  function varning() {
+    var ruta = element("div", { "class": "ai-varning", role: "note" });
+    ruta.appendChild(element("p", {}, VARNING));
+    return ruta;
   }
 
   function sajtlista(sajter, sokvag) {
@@ -133,6 +140,7 @@
   var meny = document.querySelector(".sajtmeny");
   var rad = sajtrad(location.pathname);
   meny.parentNode.insertBefore(rad, meny);
+  meny.parentNode.insertBefore(varning(), rad);
   baraDenna(rad, meny, location.pathname);
   temaknapp(rad);
   undermenyer(meny, menyknapp(meny, rad));

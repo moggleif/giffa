@@ -36,7 +36,9 @@ i sajtraden, och ingen sidas rubrik upprepar det; på mobilen är sajtraden en
 rad med sajten, knappen för mörkt tema och knappen *Meny*, och de andra sajterna står sist i menyn
 ([beslut 0014](beslut/0014-sajtens-namn-en-gang.md)). Knappen med månen i sajtraden
 byter till mörkt tema på alla sajterna, och `docs/tema.js` sätter det valda temat innan
-sidan ritas ([beslut 0015](beslut/0015-morkt-tema-i-sajtraden.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
+sidan ritas ([beslut 0015](beslut/0015-morkt-tema-i-sajtraden.md)). Ovanför sajtraden
+står på alla sajterna en varning om att sidorna är skapade med AI och kan innehålla fel
+([beslut 0017](beslut/0017-varning-om-ai-overst.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Sidan om kommunstyrelsens möte läses ur en utcheckning av
 [kommunhandlingar](https://github.com/moggleif/kommunhandlingar) med dess
