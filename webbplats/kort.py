@@ -7,7 +7,7 @@ förra rundan överst på startsidan, och delarna som ärendets egen sida
 
 from html import escape
 
-from webbplats.arende import STEG, Arende, Handelse
+from webbplats.arende import STEG, Arende, Handelse, Mediepost
 from webbplats.datum import tid
 from webbplats.handlingar import handlingar
 from webbplats.kartlankar import Kartlankar
@@ -69,12 +69,15 @@ def post(handelse: Handelse, karta: Kartlankar) -> str:
 def media(arende: Arende) -> str:
     if not arende.media:
         return ""
-    poster = "".join(
+    poster = "".join(mediepost(m) for m in arende.media)
+    return f"<h2>I media och debatt</h2><ul>{poster}</ul>"
+
+
+def mediepost(m: Mediepost) -> str:
+    return (
         f'<li><span class="media">{TIDNING}<strong>{escape(m.var)}</strong></span> '
         f'{tid(m.datum)} <a href="{escape(m.lank)}">{escape(m.rubrik)}</a></li>'
-        for m in arende.media
     )
-    return f"<h2>I media och debatt</h2><ul>{poster}</ul>"
 
 
 def nytt_kort(arende: Arende, nya: list[Handelse], karta: Kartlankar) -> str:

@@ -291,9 +291,10 @@ ett eller flera ärenden i `bevakning/uppmarksammade.csv`, med en källa till
 namnet,
 **när** sidan byggs,
 **så** står namnen under *Ärenden med mer uppmärksamhet* på startsidan, i den ordning de
-står i filen, med sina ärenden under. Källan till namnet står i filen,
-inte på sidan; en tidningsartikel som gav namnet står under ärendet i
-*I media och debatt*. Namnet
+står i filen, med sina ärenden under och deras artiklar ur *I media och
+debatt* med tidningsikon. Källan till namnet står i filen, inte på
+sidan; en tidningsartikel som gav namnet står under ärendet i *I media
+och debatt*. Namnet
 står också under rubriken som en färgad etikett: på ärendets kort och egna
 sida efter orden *Uppmärksammat som*, och i tidslinjen med samma ord bara
 för skärmläsare, så att den som känner ärendet under ett annat

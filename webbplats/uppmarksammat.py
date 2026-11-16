@@ -2,7 +2,8 @@
 
 Läser bevakning/uppmarksammade.csv – namnen folk använder på ärendena, i
 den ordning projektägaren skrivit dem – och ger rutan Uppmärksammat på
-startsidan och ordningen som lyfter dem överst i listorna.
+startsidan, med ärendenas tidningsartiklar, och ordningen som lyfter dem
+överst i listorna.
 """
 
 import csv
@@ -12,6 +13,7 @@ from html import escape
 from io import StringIO
 
 from webbplats.arende import LANK, Arende
+from webbplats.kort import mediepost
 from webbplats.mall import urvalslista
 
 KOLUMNER = ["namn", "arende", "kalla"]
@@ -79,6 +81,11 @@ def post(namn: Namn, arenden: list[Arende]) -> str:
     )
     return (
         f'<li data-ort="{escape("|".join(orter))}"><strong>{escape(namn.namn)}</strong>'
-        f"<ul>{rader}</ul></li>"
+        f"<ul>{rader}</ul>{artiklar(arenden)}</li>"
     )
 
+
+
+def artiklar(arenden: list[Arende]) -> str:
+    poster = "".join(mediepost(m) for m in dict.fromkeys(m for a in arenden for m in a.media))
+    return f'<ul class="artiklar">{poster}</ul>' if poster else ""
