@@ -31,7 +31,10 @@ projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kungsbac
 [Kungsbacka i siffror](https://moggleif.github.io/politik/) och
 [Region Halland](https://moggleif.github.io/regionhalland/), som
 laddar samma meny från Giffå: Giffå ritar den med `docs/sajter.js` och `docs/sajter.css`
-([beslut 0013](beslut/0013-gemensam-meny-fran-giffa.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
+([beslut 0013](beslut/0013-gemensam-meny-fran-giffa.md)). Sajtens namn står bara
+i sajtraden, och ingen sidas rubrik upprepar det; på mobilen är sajtraden en
+rad med sajten och knappen *Meny*, och de andra sajterna står sist i menyn
+([beslut 0014](beslut/0014-sajtens-namn-en-gang.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Sidan om kommunstyrelsens möte läses ur en utcheckning av
 [kommunhandlingar](https://github.com/moggleif/kommunhandlingar) med dess

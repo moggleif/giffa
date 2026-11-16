@@ -446,12 +446,19 @@ som alla laddar `sajter.css` och `sajter.js` från Giffå,
 markerad, och under den sajtens egen meny i samma form på alla sajter:
 sajtens namn som länk till dess start och högst sex poster, där en post är
 en länk eller en rubrik som fäller ut en undermeny, eventuellt med grupper.
+Med skriptet står sajtens namn bara i sajtraden: menyn visar då bara
+posterna, och ingen sidas rubrik (`h1`) är sajtens namn – startsidans
+rubrik säger vad sajten visar.
 En undermeny med grupper står under hela menyn och bryter grupperna till
 en ny rad när de inte får plats bredvid varandra.
 Bara en undermeny är öppen åt gången, och Escape eller ett klick utanför
 stänger den. Undermenyn med den visade sidan är markerad, liksom sidan. På
-en skärm högst 640 punkter bred står menyn bakom en knapp *Meny*. Utan
-skriptet står sajtens meny som en lista och ingen sajtrad.
+en skärm högst 640 punkter bred är sajtraden en enda rad: den visade sajten
+och knappen *Meny*, som fäller ut menyn med de andra sajterna sist under
+*Projektets andra sajter*. Utan skriptet står sajtens meny som en lista
+med sajtens namn först och ingen sajtrad.
+
+Giffås startsida har rubriken *Vad händer där du bor?*.
 
 Giffås meny är *Tycka till*, *Pågår*, *Beslutat* (med *Beslutat* och
 *Historik*), *KS-mötet*, *Sök* och *Om*. Valet av förening och ort (K22)

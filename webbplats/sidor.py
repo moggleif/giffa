@@ -44,7 +44,7 @@ def startsida(
     paverka = tycka_till_nu(arenden, sajt)
     lyfta = ruta(namnen, arenden)
     innehall = inledning + urval(sajt) + paverka + lyfta + nytt(arenden, runda, sajt) + oversikt(arenden) + pa_vag_upp(arenden, sajt)
-    return sida(sajt, "index.html", "Giffå", innehall)
+    return sida(sajt, "index.html", "Vad händer där du bor?", innehall)
 
 
 def oversikt(arenden: list[Arende]) -> str:
