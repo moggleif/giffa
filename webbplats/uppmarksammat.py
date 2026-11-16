@@ -21,7 +21,6 @@ KOLUMNER = ["namn", "arende", "kalla"]
 class Namn:
     namn: str
     arenden: tuple[str, ...]
-    kallor: tuple[str, ...]
 
 
 def las(text: str, finns: set[str]) -> list[Namn]:
@@ -31,14 +30,10 @@ def las(text: str, finns: set[str]) -> list[Namn]:
     namnen: dict[str, Namn] = {}
     for rad in ({k: (v or "").strip() for k, v in r.items()} for r in lasare):
         kontrollera(rad, finns)
-        if rad["arende"] in namnen.get(rad["namn"], Namn("", (), ())).arenden:
+        tidigare = namnen.get(rad["namn"], Namn(rad["namn"], ()))
+        if rad["arende"] in tidigare.arenden:
             raise ValueError(f"samma namn och ärende två gånger: {rad['namn']}, {rad['arende']}")
-        tidigare = namnen.get(rad["namn"], Namn(rad["namn"], (), ()))
-        namnen[rad["namn"]] = Namn(
-            tidigare.namn,
-            tidigare.arenden + (rad["arende"],),
-            tidigare.kallor + (rad["kalla"],) * (rad["kalla"] not in tidigare.kallor),
-        )
+        namnen[rad["namn"]] = Namn(tidigare.namn, tidigare.arenden + (rad["arende"],))
     return list(namnen.values())
 
 
@@ -83,12 +78,7 @@ def post(namn: Namn, arenden: list[Arende]) -> str:
         for a in arenden
     )
     return (
-        f'<li data-ort="{escape("|".join(orter))}"><strong>{escape(namn.namn)}</strong> '
-        f'<small>Namnet: {", ".join(kalla(k) for k in namn.kallor)}</small><ul>{rader}</ul></li>'
+        f'<li data-ort="{escape("|".join(orter))}"><strong>{escape(namn.namn)}</strong>'
+        f"<ul>{rader}</ul></li>"
     )
 
-
-def kalla(text: str) -> str:
-    if traff := LANK.fullmatch(text):
-        return f'<a href="{escape(traff.group(2))}">{escape(traff.group(1))}</a>'
-    return escape(text)

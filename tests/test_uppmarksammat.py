@@ -19,10 +19,10 @@ LISTAN = (
 
 
 class Las(unittest.TestCase):
-    def test_namnen_i_filens_ordning_med_sina_arenden_och_kallor(self):
+    def test_namnen_i_filens_ordning_med_sina_arenden(self):
         self.assertEqual(
             las(LISTAN, {"a", "b"}),
-            [Namn("Lagret", ("b",), (LANKEN,)), Namn("Stråket", ("a", "b"), ("projektägaren",))],
+            [Namn("Lagret", ("b",)), Namn("Stråket", ("a", "b"))],
         )
 
     def test_varje_arende_far_sina_namn(self):
@@ -55,11 +55,11 @@ class Sidorna(unittest.TestCase):
         per = namn_per_arende(self.namnen)
         self.arenden = [replace(arende("pågår", i), kallas=per[i]) for i in ("a", "b")]
 
-    def test_startsidan_har_rutan_i_listans_ordning_med_kallan(self):
+    def test_startsidan_har_rutan_i_listans_ordning_utan_kallan(self):
         html = startsida(SAJT, self.arenden, RUNDA, self.namnen)
         self.assertIn('<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>', html)
         self.assertLess(html.index("<strong>Lagret</strong>"), html.index("<strong>Stråket</strong>"))
-        self.assertIn('Namnet: <a href="https://example.org/a">Artikeln</a>', html)
+        self.assertNotIn("Namnet:", html)
         self.assertIn('<li data-ort="Fjärås|Åsa"><strong>Stråket</strong>', html)
         self.assertIn('<li data-ort="Åsa|Fjärås"><a href="arende/b.html">Ny förskola</a>', html)
 

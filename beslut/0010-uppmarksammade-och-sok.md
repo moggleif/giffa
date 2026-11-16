@@ -37,3 +37,10 @@ på listsidorna räcker den inte längre.
 - Ett ärende som byter fil byter inte namn (beslut 0006), så listan
   behöver inte följa med statusbyten.
 - Rundan föreslår nya namn men skriver dem bara när en källa ger dem.
+
+## Ändring 2026-11-16
+
+Projektägaren tog bort raden *Namnet: …* med källan under varje namn i
+avsnittet *Ärenden med mer uppmärksamhet*: den stod i vägen. Källan står
+kvar i `uppmarksammade.csv`, och en tidningsartikel som gav ett namn står
+under ärendet i *I media och debatt*, märkt med en tidningsikon.

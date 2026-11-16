@@ -175,7 +175,8 @@ under rubriken och hopfälld, i stället för vid varje tillfälle.
 **så** har det en egen sida `arende/<filnamn>.html` med ort, organ,
 diarienummer, status, ingress, tillfällena att tycka till, alla händelser
 med källor och handlingar (K25), länkarna under *I media och debatt*
-och en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och
+– varje post med en tidningsikon och källans namn först, så att den
+syns som press och inte som en handling – och en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och
 *Nytt sedan förra rundan* länkar dit, och adressen är densamma vilken status ärendet än har.
 
 ## K19 – Det som rör sig först
@@ -290,7 +291,9 @@ ett eller flera ärenden i `bevakning/uppmarksammade.csv`, med en källa till
 namnet,
 **när** sidan byggs,
 **så** står namnen under *Ärenden med mer uppmärksamhet* på startsidan, i den ordning de
-står i filen, med sina ärenden under och källan till namnet intill. Namnet
+står i filen, med sina ärenden under. Källan till namnet står i filen,
+inte på sidan; en tidningsartikel som gav namnet står under ärendet i
+*I media och debatt*. Namnet
 står också under rubriken som en färgad etikett: på ärendets kort och egna
 sida efter orden *Uppmärksammat som*, och i tidslinjen med samma ord bara
 för skärmläsare, så att den som känner ärendet under ett annat

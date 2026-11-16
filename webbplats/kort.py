@@ -15,6 +15,12 @@ from webbplats.mall import Sajt
 from webbplats.paverka import markering
 from webbplats.stege import stege
 
+TIDNING = (
+    '<svg viewBox="0 0 16 16" width="1.2em" height="1.2em" aria-hidden="true">'
+    '<path d="M2 3h10v10H3a1 1 0 0 1-1-1zM12 6h2v6a1 1 0 0 1-2 0M4 5h6M4 8h6M4 11h4" '
+    'fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'
+)
+
 
 def kort(arende: Arende, sajt: Sajt) -> str:
     falt, senaste = arende.falt, arende.handelser[0]
@@ -64,8 +70,8 @@ def media(arende: Arende) -> str:
     if not arende.media:
         return ""
     poster = "".join(
-        f'<li>{tid(m.datum)} <a href="{escape(m.lank)}">{escape(m.rubrik)}</a>'
-        f" – {escape(m.var)}</li>"
+        f'<li><span class="media">{TIDNING}<strong>{escape(m.var)}</strong></span> '
+        f'{tid(m.datum)} <a href="{escape(m.lank)}">{escape(m.rubrik)}</a></li>'
         for m in arende.media
     )
     return f"<h2>I media och debatt</h2><ul>{poster}</ul>"
