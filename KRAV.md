@@ -485,3 +485,19 @@ raden blir aldrig bredare än skärmen: ett namn som inte får plats
 kortas. På en bredare skärm står knappen längst till höger i sajtraden.
 En webbläsare utan `light-dark()` visar ljust tema och ingen knapp. Alla
 Giffås sidor har mörkt tema.
+
+## K37 – Tidningarnas artiklar varje morgon
+
+**Givet** tidningarnas RSS-flöden i `tidningar/floden.csv`,
+**när** arbetsflödet `tidningar.yml` körs på morgonen eller för hand,
+**så** förs artiklarna in i veckans issue med etiketten `tidningar`, en
+per rad i ärendenas format för *I media och debatt* – datum, rubriken som
+länk och tidningen – med de ord som träffade efter. En artikel tas med när
+rubriken eller ingressen nämner en ort ur `OMRADE.md`, en plats ur
+`platser.csv` eller ett namn ur `bevakning/uppmarksammade.csv` som hela
+ord, och något kommunen beslutar om. En artikel som ett ärende eller
+veckans issue redan länkar tas inte med igen. Ett flöde som inte gick att
+läsa, eller som `robots.txt` spärrar, står i issuet med orsaken. Finns
+veckans issue fylls det på med en kommentar; finns inga nya träffar
+händer inget.
+

@@ -15,6 +15,11 @@ källor i `KALLOR.md` för perioden och anteckna varje träff som rör en ort i
   som text med källa.
 - **Detaljplaner och bygglov**: kungsbacka.se och karta.kungsbacka.se.
 - **Övrigt på kungsbacka.se**: nyheter, samråd, granskningar.
+- **Tidningarna**: issuen med etiketten `tidningar` för perioden (K37).
+  Sök också på Norra Halland och SVT Halland efter ärendena med mer
+  uppmärksamhet och de ärenden som rört sig under perioden; ta rubrik,
+  datum och länk ur artikeln, aldrig innehåll bakom ett Premium-lås.
+  Vilka tidningar som inte får hämtas står i `KALLOR.md`.
 
 För varje träff: datum, organ, diarienummer, ort, en mening om vad det
 gäller och länken. Träffar som berör hela kommunen tas med bara om de får

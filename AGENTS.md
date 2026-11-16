@@ -65,6 +65,7 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Hur månadens skanning görs                      | `skanning/`, beslut 0003  |
 | Hur veckans kallelser söks                      | `skanning/`, beslut 0005  |
 | Hur handlingarna läggs intill protokollen       | `handlingslankar/`, beslut 0009 |
+| Hur tidningarnas artiklar hittas                | `tidningar/`, beslut 0016 |
 | Ett ärendes fakta och källor                    | ärendets fil i `bevakning/` |
 
 Skriv aldrig om ett annat dokuments fakta – länka till dem. Ett faktum som

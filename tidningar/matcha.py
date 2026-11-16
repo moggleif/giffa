@@ -1,0 +1,50 @@
+"""Krav: K37 i KRAV.md. Test: tests/test_tidningar.py.
+
+Väljer ut artiklarna som nämner en ort, en plats eller ett uppmärksammat
+namn och samtidigt något kommunen beslutar om, och som varken ett ärende
+eller veckans issue redan länkar. Orden om kommunens beslut gäller alla
+orter och står därför här.
+"""
+
+import csv
+import re
+from io import StringIO
+
+from skanning.termer import monster
+from tidningar.flode import Artikel
+from webbplats import underlag
+
+AMNEN = re.compile(
+    r"(?<!\w)(detaljplan|planprogram|planer|bygg|bostä|bostad|skol|förskol"
+    r"|boende|väg|cykel|station|tåg|dagvatten|översvämn|skyfall|kommun|politik"
+    r"|nämnd|beslut|samråd|överklag|park|idrott|hall|arena|lokal|centrum|tomt)",
+    re.IGNORECASE,
+)
+
+
+def termer(omrade: str, platser: str, uppmarksammade: str) -> list[str]:
+    alla = (
+        underlag.orter(omrade)
+        + [plats["namn"] for plats in underlag.platser(platser)]
+        + [rad["namn"] for rad in csv.DictReader(StringIO(uppmarksammade))]
+    )
+    return list(dict.fromkeys(alla))
+
+
+def traffar(
+    artiklar: list[Artikel], termer: list[str], kanda: str
+) -> list[tuple[Artikel, list[str]]]:
+    return [
+        (artikel, funna)
+        for artikel in artiklar
+        if artikel.lank not in kanda
+        and AMNEN.search(artikel.text)
+        and (funna := [t for t in termer if monster(t).search(artikel.text)])
+    ]
+
+
+def rad(artikel: Artikel, funna: list[str]) -> str:
+    return (
+        f"- {artikel.datum} · [{artikel.rubrik}]({artikel.lank}) · {artikel.tidning}"
+        f" — {', '.join(funna)}"
+    )

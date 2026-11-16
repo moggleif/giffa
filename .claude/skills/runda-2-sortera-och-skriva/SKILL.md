@@ -24,12 +24,17 @@ Skapa en gren innan något skrivs.
    ärendena i kommunhandlingars tabeller för lokalbehov, initiativ och
    handlingsplaner. Tillfällen som har ägt rum flyttas till *Händelser*
    (`bevakning/README.md`).
-4. **Rundan.** Lägg rundans period sist i `bevakning/rundor.csv`; det är
+4. **Tidningarna.** För in varje artikel som hör till ett ärende under
+   *I media och debatt*, i datumordning nyast först. En artikel som
+   handlar om flera ärenden står under vart och ett; en som bara nämner
+   orten i förbigående tas inte med. Stäng veckans issue med etiketten
+   `tidningar` när det är genomgånget.
+5. **Rundan.** Lägg rundans period sist i `bevakning/rundor.csv`; det är
    den som visas som *Nytt* på startsidan. Bygg sidan och kör testerna
    enligt `README.md` – ett ärende utanför formatet stoppar bygget.
-5. Återge vad källan säger. Inga slutsatser, inga värderingar. Okänt skrivs
+6. Återge vad källan säger. Inga slutsatser, inga värderingar. Okänt skrivs
    som okänt.
-6. Läs din egen diff mot reglerna i `AGENTS.md` innan fasen är klar.
+7. Läs din egen diff mot reglerna i `AGENTS.md` innan fasen är klar.
 
 Committa, och starta sedan granskningsagenten (`.claude/agents/granskare.md`)
 med grenens namn och perioden. Hittar den något blockerande: rätta och gör
