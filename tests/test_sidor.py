@@ -148,6 +148,11 @@ class Startsidan(unittest.TestCase):
         self.assertIn("Inga kända tillfällen.", html)
         self.assertNotIn('class="paverka"', html)
 
+    def test_startsidans_rubrik_ar_inte_sajtens_namn(self):
+        html = startsida(SAJT, [], RUNDA)
+        self.assertIn("<title>Vad händer där du bor? – Giffå</title>", html)
+        self.assertIn("<h1>Vad händer där du bor?</h1>", html)
+
     def test_sidfoten_lankar_till_repot(self):
         html = startsida(SAJT, [], RUNDA)
         self.assertIn(

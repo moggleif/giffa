@@ -21,7 +21,10 @@ class El {
     };
     barn.forEach((b) => this.appendChild(b));
   }
-  setAttribute(namn, varde) { this.attribut[namn] = String(varde); }
+  setAttribute(namn, varde) {
+    this.attribut[namn] = String(varde);
+    if (namn === "class") String(varde).split(" ").forEach((k) => this.classList.add(k));
+  }
   getAttribute(namn) { return namn in this.attribut ? this.attribut[namn] : null; }
   appendChild(b) { b.parentNode = this; this.barn.push(b); return b; }
   insertBefore(b, fore) { b.parentNode = this; this.barn.splice(this.barn.indexOf(fore), 0, b); return b; }
@@ -74,9 +77,9 @@ test("på en annan sajt är den markerad i stället", () => {
   assert.deepStrictEqual(markerade, ["Kungsbacka i siffror"]);
 });
 
-test("knappen Meny fäller ut och ihop menyn", () => {
-  const { meny } = sida("/giffa/");
-  const knapp = meny.querySelector("button");
+test("knappen Meny står i sajtraden och fäller ut och ihop menyn", () => {
+  const { kropp, meny } = sida("/giffa/");
+  const knapp = kropp.barn[1].querySelector("button");
   assert.strictEqual(knapp.textContent, "Meny");
   assert.ok(meny.classList.contains("har-knapp"));
   knapp.skicka("click");
@@ -85,6 +88,17 @@ test("knappen Meny fäller ut och ihop menyn", () => {
   knapp.skicka("click");
   assert.strictEqual(knapp.getAttribute("aria-expanded"), "false");
   assert.ok(!meny.classList.contains("oppen"));
+});
+
+test("sajtens rad är märkt, och de andra sajterna står sist i menyn", () => {
+  const { kropp, meny } = sida("/politik/");
+  const denna = kropp.barn[1].querySelectorAll("li").filter((li) => li.classList.contains("denna"));
+  assert.deepStrictEqual(denna.map((li) => li.querySelector("a").textContent), ["Kungsbacka i siffror"]);
+  const sist = meny.querySelector("ul").barn.at(-1);
+  assert.ok(sist.classList.contains("andra-sajter"));
+  assert.strictEqual(sist.querySelector("p").textContent, "Projektets andra sajter");
+  assert.deepStrictEqual(sist.querySelectorAll("a").map((a) => a.textContent), ["Giffå", "Kungsbacka kommun", "Region Halland"]);
+  assert.ok(sist.querySelectorAll("a").every((a) => a.getAttribute("aria-current") === null));
 });
 
 test("undermenyn med den aktuella sidan märks", () => {
@@ -116,7 +130,7 @@ test("bara en undermeny öppen åt gången, och Escape eller ett klick utanför 
 
 test("Escape fäller ihop den utfällda menyn när ingen undermeny är öppen", () => {
   const { kropp, meny } = sida("/giffa/");
-  const knapp = meny.querySelector("button");
+  const knapp = kropp.barn[1].querySelector("button");
   knapp.click();
   kropp.skicka("keydown", { key: "Escape" });
   assert.ok(!meny.classList.contains("oppen"));
@@ -126,6 +140,7 @@ test("Escape fäller ihop den utfällda menyn när ingen undermeny är öppen", 
 test("en sajt utan undermenyer får sajtraden och knappen", () => {
   const { kropp, meny } = sida("/kungsbackakommun/kungsbacka.html", [lank(), lank()]);
   assert.strictEqual(kropp.barn[1].querySelector("[aria-current]").textContent, "Kungsbacka kommun");
-  assert.strictEqual(meny.querySelector("button").textContent, "Meny");
+  assert.ok(meny.classList.contains("har-knapp"));
+  assert.strictEqual(kropp.barn[1].querySelector("button").textContent, "Meny");
   kropp.skicka("keydown", { key: "Escape" });
 });
