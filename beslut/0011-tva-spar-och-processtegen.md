@@ -38,7 +38,7 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
   till ärendets sida, men K25 och projektägarens tidigare önskan är att
   handlingarna står intill varje steg. *Så gör du* står i stället en gång
   under listan på startsidan och kvar vid varje tillfälle på kortet och
-  ärendets sida.
+  ärendets sida. (Sedan #67 står den hopfälld direkt under rubriken, K17.)
 
 ## Konsekvenser
 

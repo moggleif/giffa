@@ -30,7 +30,7 @@ INLEDNING = (
     "närmaste först. Tecknet visar vem som kan påverka: "
     f"{tecken('partiet')}<strong>partierna</strong> före sammanträdet, "
     f"{tecken('alla')}<strong>alla</strong> i samråd och granskning. "
-    "Hur man gör står ovanför listan och på ärendets sida.</p>"
+    "Hur man gör står i rutan under rubriken och på ärendets sida.</p>"
 )
 
 
