@@ -18,7 +18,8 @@ på listsidorna räcker den inte längre.
   `kalla`. Ett namn kan stå på flera ärenden, och ett ärende kan ha flera
   namn. Namnet är det ärendet kallas i folkmun eller ett gemensamt ämne,
   som *Dagvatten och översvämningar*; sidan skriver därför *Uppmärksammat
-  som …* och inte *kallas*. Ordningen i filen är etiketternas ordning.
+  som …* och inte *kallas*. Ordningen i filen är ordningen på startsidan, och sedan K29 också
+  först i listorna.
   Källan är en länk till en artikel eller handling, texten *ärendets
   rubrik* när namnet står i rubriken, eller *projektägaren* när namnet
   kommer från projektägaren själv.
@@ -39,9 +40,7 @@ på listsidorna räcker den inte längre.
 
 ## Ändring 2026-11-16
 
-Projektägaren tog bort avsnittet *Ärenden med mer uppmärksamhet* från
-startsidan och från listorna (K29): det stod i vägen och gav text utan
-värde. Namnen finns kvar som etiketter och i sökningen, och varje
-etikett länkar till källan till namnet, eftersom källan inte längre
-står i avsnittet. Tidningsartiklarna som gav namnen står också under
-ärendet i *I media och debatt*.
+Projektägaren tog bort raden *Namnet: …* med källan under varje namn i
+avsnittet *Ärenden med mer uppmärksamhet*: den stod i vägen. Källan står
+kvar i `uppmarksammade.csv`, och en tidningsartikel som gav ett namn står
+under ärendet i *I media och debatt*, märkt med en tidningsikon.

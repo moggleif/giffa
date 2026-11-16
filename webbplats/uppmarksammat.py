@@ -1,30 +1,40 @@
-"""Krav: K27 i KRAV.md. Test: tests/test_uppmarksammat.py.
+"""Krav: K27 och K29 i KRAV.md. Test: tests/test_uppmarksammat.py.
 
 Läser bevakning/uppmarksammade.csv – namnen folk använder på ärendena, i
-den ordning projektägaren skrivit dem – och ger varje ärende sina namn
-med källan till varje namn.
+den ordning projektägaren skrivit dem – och ger rutan Uppmärksammat på
+startsidan och ordningen som lyfter dem överst i listorna.
 """
 
 import csv
+from collections.abc import Sequence
+from dataclasses import dataclass
+from html import escape
 from io import StringIO
 
-from webbplats.arende import LANK, Namn
+from webbplats.arende import LANK, Arende
+from webbplats.mall import urvalslista
 
 KOLUMNER = ["namn", "arende", "kalla"]
 
 
-def las(text: str, finns: set[str]) -> dict[str, tuple[Namn, ...]]:
+@dataclass(frozen=True)
+class Namn:
+    namn: str
+    arenden: tuple[str, ...]
+
+
+def las(text: str, finns: set[str]) -> list[Namn]:
     lasare = csv.DictReader(StringIO(text))
     if lasare.fieldnames != KOLUMNER:
         raise ValueError(f"kolumnerna ska vara {','.join(KOLUMNER)}")
-    per_arende: dict[str, tuple[Namn, ...]] = {}
+    namnen: dict[str, Namn] = {}
     for rad in ({k: (v or "").strip() for k, v in r.items()} for r in lasare):
         kontrollera(rad, finns)
-        tidigare = per_arende.get(rad["arende"], ())
-        if rad["namn"] in (n.namn for n in tidigare):
+        tidigare = namnen.get(rad["namn"], Namn(rad["namn"], ()))
+        if rad["arende"] in tidigare.arenden:
             raise ValueError(f"samma namn och ärende två gånger: {rad['namn']}, {rad['arende']}")
-        per_arende[rad["arende"]] = tidigare + (Namn(rad["namn"], rad["kalla"]),)
-    return per_arende
+        namnen[rad["namn"]] = Namn(tidigare.namn, tidigare.arenden + (rad["arende"],))
+    return list(namnen.values())
 
 
 def kontrollera(rad: dict[str, str], finns: set[str]) -> None:
@@ -34,3 +44,41 @@ def kontrollera(rad: dict[str, str], finns: set[str]) -> None:
         raise ValueError(f"ärendet finns inte: {rad['arende']}")
     if rad["kalla"].startswith("[") and not LANK.fullmatch(rad["kalla"]):
         raise ValueError(f"källan är ingen https-länk: {rad['kalla']}")
+
+
+def namn_per_arende(namnen: list[Namn]) -> dict[str, tuple[str, ...]]:
+    per_arende: dict[str, tuple[str, ...]] = {}
+    for namn in namnen:
+        for arende in namn.arenden:
+            per_arende[arende] = per_arende.get(arende, ()) + (namn.namn,)
+    return per_arende
+
+
+def ordning(namnen: Sequence[Namn]) -> dict[str, int]:
+    ids = [arende for namn in namnen for arende in namn.arenden]
+    return {arende: plats for plats, arende in enumerate(dict.fromkeys(ids))}
+
+
+def ruta(namnen: Sequence[Namn], arenden: list[Arende]) -> str:
+    if not namnen:
+        return ""
+    per_id = {a.id: a for a in arenden}
+    poster = "".join(post(namn, [per_id[i] for i in namn.arenden]) for namn in namnen)
+    return (
+        '<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>'
+        + urvalslista(f'<ul class="uppmarksammat">{poster}</ul>')
+    )
+
+
+def post(namn: Namn, arenden: list[Arende]) -> str:
+    orter = sorted({ort for a in arenden for ort in a.orter})
+    rader = "".join(
+        f'<li data-ort="{escape("|".join(a.orter))}"><a href="{a.sida}">{escape(a.falt["rubrik"])}</a> '
+        f"<small>{escape(', '.join(a.orter))} · {a.falt['status']}</small></li>"
+        for a in arenden
+    )
+    return (
+        f'<li data-ort="{escape("|".join(orter))}"><strong>{escape(namn.namn)}</strong>'
+        f"<ul>{rader}</ul></li>"
+    )
+

@@ -1,4 +1,4 @@
-"""Krav: K4, K12, K27 och K30 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K12, K27, K29 och K30 i KRAV.md. Test: tests/test_sidor.py.
 
 Tidslinjen som på kommunhandlingars sidor om initiativ och lokalbehov: en
 rad per ärende, en kolumn per år och årets händelser som ikoner på ett band

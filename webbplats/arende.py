@@ -55,12 +55,6 @@ class Mediepost:
 
 
 @dataclass(frozen=True)
-class Namn:
-    namn: str
-    kalla: str
-
-
-@dataclass(frozen=True)
 class Arende:
     fil: str
     falt: dict[str, str]
@@ -69,7 +63,7 @@ class Arende:
     tillfallen: list[Handelse]
     media: list[Mediepost]
     forslaget: list[Punkt]
-    kallas: tuple[Namn, ...] = ()
+    kallas: tuple[str, ...] = ()
 
     @property
     def id(self) -> str:

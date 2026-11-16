@@ -1,4 +1,4 @@
-"""Krav: K4, K5, K6, K9, K12, K18, K23, K24, K27 och K33 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K4, K5, K6, K9, K12, K18, K23, K24, K27, K29 och K33 i KRAV.md. Test: tests/test_sidor.py.
 
 Ett kort per ärende under tabellen, korten för det som är nytt sedan
 förra rundan överst på startsidan, och delarna som ärendets egen sida
@@ -7,7 +7,7 @@ förra rundan överst på startsidan, och delarna som ärendets egen sida
 
 from html import escape
 
-from webbplats.arende import LANK, STEG, Arende, Handelse, Namn
+from webbplats.arende import STEG, Arende, Handelse
 from webbplats.datum import tid
 from webbplats.handlingar import handlingar
 from webbplats.kartlankar import Kartlankar
@@ -49,13 +49,7 @@ def namn_rad(arende: Arende) -> str:
 
 
 def etiketter(arende: Arende) -> str:
-    return " ".join(etikett(n) for n in arende.kallas)
-
-
-def etikett(namn: Namn) -> str:
-    if traff := LANK.fullmatch(namn.kalla):
-        return f'<a class="etikett" href="{escape(traff.group(2))}" title="Namnet: {escape(traff.group(1))}">{escape(namn.namn)}</a>'
-    return f'<span class="etikett" title="Namnet: {escape(namn.kalla)}">{escape(namn.namn)}</span>'
+    return " ".join(f'<span class="etikett">{escape(n)}</span>' for n in arende.kallas)
 
 
 def organ(arende: Arende) -> str:
