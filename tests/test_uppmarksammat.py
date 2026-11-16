@@ -3,8 +3,10 @@ vid fel och syns på startsidan, i korten, på ärendets sida och i tidslinjen."
 
 import unittest
 from dataclasses import replace
+from datetime import date
 
 from tests.test_sidor import RUNDA, SAJT, arende
+from webbplats.arende import Mediepost
 from webbplats.arendesida import arendesida
 from webbplats.sidor import LISTOR, lista, startsida
 from webbplats.uppmarksammat import Namn, las, namn_per_arende
@@ -60,6 +62,14 @@ class Sidorna(unittest.TestCase):
         self.assertIn('<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>', html)
         self.assertLess(html.index("<strong>Lagret</strong>"), html.index("<strong>Stråket</strong>"))
         self.assertNotIn("Namnet:", html)
+
+    def test_rutan_visar_arendenas_artiklar_en_gang_per_namn(self):
+        artikel = Mediepost(date(2026, 3, 3), "Rubrik", "https://example.org/m", "Norra Halland")
+        arenden = [replace(a, media=[artikel]) for a in self.arenden]
+        html = startsida(SAJT, arenden, RUNDA, self.namnen)
+        straket = html.split("<strong>Stråket</strong>")[1].split("<h2")[0]
+        self.assertEqual(straket.count('href="https://example.org/m"'), 1)
+        self.assertIn('<ul class="artiklar"><li><span class="media"><svg', html)
         self.assertIn('<li data-ort="Fjärås|Åsa"><strong>Stråket</strong>', html)
         self.assertIn('<li data-ort="Åsa|Fjärås"><a href="arende/b.html">Ny förskola</a>', html)
 
