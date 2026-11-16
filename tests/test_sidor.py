@@ -209,7 +209,7 @@ class SaGorDu(unittest.TestCase):
         for rad in rader:
             self.assertRegex(rad, r'^"[^"]+"><span class="tecken \w+">.+?</span></span><a class="arende" [^>]+>Ny förskola</a> <small>Åsa')
         self.assertNotIn("Så gör du:", nu)
-        self.assertIn("<details open><summary>Så kan du påverka", nu)
+        self.assertTrue(nu.startswith('id="tycka-till">Tycka till nu</h2><details><summary>Så kan du påverka'))
         self.assertEqual(pagar([paverkbart("s")]).count("Så gör du:"), 3)
 
     def test_ett_steg_en_rad(self):
