@@ -39,7 +39,6 @@ skuggar grannfastigheten.
 
 ## I media och debatt
 
-- 2026-10-27 · [Planer på stor skola i Åsa kritiseras – föräldern Emelie: ”Satsa på utbildningen istället”](https://www.svt.se/nyheter/lokalt/halland/skolplaner-i-asa-kritiseras-foraldern-emelie-ar-det-har-ratt-vag-att-ga) · SVT Halland
 - 2025-03-06 · [Så här ska nya Åsaskolan bli](https://norrahalland.se/skola/saa-har-ska-nya-aasaskolan-bli/46314) · Norra Halland
 - 2023-10-31 · [Därför stoppas skolbygge i Åsa – Kungsbacka kommun ser över alternativa skolplatser](https://www.svt.se/nyheter/lokalt/halland/bygget-av-nya-asa-skolan-abryts--x7xver) · SVT Halland
 - 2023-08-22 · [Ny skola viktigare än åker](https://norrahalland.se/skola/ny-skola-viktigare-an-aaker/36438) · Norra Halland

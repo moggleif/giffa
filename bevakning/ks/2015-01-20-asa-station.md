@@ -15,7 +15,3 @@ Planprogrammet kring stationen är ett eget ärende.
 
 - 2015-02-03 · klart · Kommunfullmäktige noterade slutredovisningen av projektet Åsa station, som invigdes 14 december 2013. · [KF protokoll § 17](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2015/2015-02-03/protokoll.html#sida-38)
 - 2015-01-20 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige noterar slutredovisningen av projektet Åsa station. · [KS protokoll § 22](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2015/2015-01-20/protokoll.html#sida-33)
-
-## I media och debatt
-
-- 2021-04-18 · [Förslag: Öresundståg ska stanna i Åsa på helgerna](https://www.svt.se/nyheter/lokalt/halland/forslag-oresundstag-ska-stanna-i-asa-pa-helgerna) · SVT Halland

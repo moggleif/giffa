@@ -31,10 +31,14 @@ avstånd mellan anropen. Vad det betyder för varje källa, kontrollerat
 - **Sveriges Radio** nekade agentens hämtning, också av `robots.txt`
   (2026-11-16). Agenten hämtar inte därifrån; en artikel som en människa
   länkar får stå med rubrik och datum.
-- **SVT** tillåter alla under `User-agent: *` men spärrar `ClaudeBot` och
-  `anthropic-ai`, och förbjuder att innehållet används för att träna
-  AI-modeller (kontrollerat 2026-11-16). Agenten tar bara rubrik, datum och
-  länk. Flödet för Halland läses varje morgon av `tidningar.yml` (K37,
+- **SVT** tillåter alla under `User-agent: *`, och uttryckligen
+  `Claude-User` och `Claude-SearchBot`, som hämtar på en människas begäran
+  eller för sökning. Spärrade är insamlingsrobotarna `ClaudeBot` och
+  `anthropic-ai`, och innehållet får inte användas för att träna AI-modeller
+  (`Content-Signal: ai-train=no, search=yes, ai-input=yes`, kontrollerat
+  2026-11-16). Det skiljer SVT från tidningarna ovan, som spärrar alla
+  AI-agenter. Vi tar bara rubrik, datum och länk. Flödet för Halland läses
+  varje morgon av `tidningar.yml` med vår egen User-Agent (K37,
   [beslut 0016](beslut/0016-tidningarnas-floden.md)).
 - **Norra Halland** tillåter hämtning utom `/secure/` och `/sec/`. Många
   artiklar är låsta (Premium): ta bara rubrik, datum och länk, och märk en

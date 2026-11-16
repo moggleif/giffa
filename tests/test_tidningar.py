@@ -46,7 +46,9 @@ class Matcha(unittest.TestCase):
         self.assertEqual(traff[0][1], ["Åsa"])
 
     def test_ort_utan_amne_ger_ingen_traff(self):
-        self.assertEqual(traffar([artikel("Bilbrand i Åsa")], list(self.SOKTA), ""), [])
+        rubriker = ["Bilbrand i Åsa i norra Halland", "Kommunen varnar för halka i Åsa"]
+        artiklar = [artikel(r) for r in rubriker]
+        self.assertEqual(traffar(artiklar, list(self.SOKTA), ""), [])
 
     def test_hela_ord(self):
         self.assertEqual(traffar([artikel("Onsalabon bygger")], list(self.SOKTA), ""), [])
@@ -60,11 +62,13 @@ class Rapport(unittest.TestCase):
     def test_rad_i_arendenas_format_med_termerna_efter(self):
         text = rapport([(artikel("Ny skola i Åsa"), ["Åsa"])], {"Tidningen": 2}, [])
         self.assertIn(
-            "- 2026-11-16 · [Ny skola i Åsa](https://t.example/a) · Tidningen — Åsa\n", text
+            "- 2026-11-16 · [Ny skola i Åsa](https://t.example/a) · Tidningen\n"
+            "  - Träffade: Åsa\n", text
         )
         self.assertIn("Lästa flöden: Tidningen (2 artiklar).", text)
 
     def test_inga_traffar_och_floden_som_inte_gick_att_lasa(self):
+        self.assertTrue(rapport([], {"Tidningen": 2}, []).startswith(INGA + "\n"))
         text = rapport([], {}, ["SVT Halland (HTTP Error 503)"])
-        self.assertTrue(text.startswith(INGA + "\n"))
+        self.assertFalse(text.startswith(INGA + "\n"))
         self.assertIn("Gick inte att läsa: SVT Halland (HTTP Error 503).", text)

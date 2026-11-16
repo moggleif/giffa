@@ -4,7 +4,8 @@ python3 -m tidningar [redan.txt]
 
 Körs från repots rot, läser flödena i tidningar/floden.csv och skriver
 artiklarna som inget ärende länkar till stdout. Länkar som står i
-redan.txt, veckans issue, tas inte med igen.
+redan.txt, veckans och förra veckans issue, tas inte med igen. Ett
+flöde som inte går att hämta eller tolka står i rapporten.
 """
 
 import csv
@@ -27,7 +28,7 @@ def floden() -> tuple[list[Artikel], dict[str, int], list[str]]:
     for rad in csv.DictReader(las("tidningar/floden.csv").splitlines()):
         try:
             nya = artiklar(rad["tidning"], hamta(rad["adress"]))
-        except (OSError, ET.ParseError) as orsak:
+        except (OSError, ValueError, ET.ParseError) as orsak:
             fel.append(f"{rad['tidning']} ({orsak})")
             continue
         alla += nya
@@ -35,7 +36,7 @@ def floden() -> tuple[list[Artikel], dict[str, int], list[str]]:
     return alla, lasta, fel
 
 
-def kanda(redan: str) -> str:
+def lankade(redan: str) -> str:
     filer = sorted(Path("bevakning").glob("*/*.md"))
     return redan + "".join(fil.read_text(encoding="utf-8") for fil in filer)
 
@@ -43,4 +44,4 @@ def kanda(redan: str) -> str:
 alla, lasta, fel = floden()
 sokta = termer(las("OMRADE.md"), las("platser.csv"), las("bevakning/uppmarksammade.csv"))
 redan = las(sys.argv[1]) if len(sys.argv) > 1 else ""
-print(rapport(traffar(alla, sokta, kanda(redan)), lasta, fel), end="")
+print(rapport(traffar(alla, sokta, lankade(redan)), lasta, fel), end="")

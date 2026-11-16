@@ -31,5 +31,4 @@ handlingarna skriver Kungsbacka stad.
 ## I media och debatt
 
 - 2022-08-30 · [Skrytbygge eller snålbygge – så tycker politikerna om nya arenahallen i Kungsbacka](https://www.svt.se/nyheter/lokalt/halland/skrytbygge-eller-snalbygge-sa-tycker-politikerna-om-nya-arenahallen-i-kungsbacka) · SVT Halland
-- 2022-01-06 · [Persson överklagar arenan igen](https://norrahalland.se/politik/persson-overklagar-arenan-igen/28166) · Norra Halland
 - 2021-04-14 · [Stor arena i Kungsbacka blir verklighet](https://www.svt.se/nyheter/lokalt/halland/stor-arena-i-kungsbacka-blir-verklighet) · SVT Halland

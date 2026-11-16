@@ -27,4 +27,3 @@ ska ligga. Skyddet planeras preliminärt vara uppfört 2050.
 - 2026-03-04 · [Tummen upp för översvämningsskydd i Kungsbacka – kan kosta flera hundra miljoner](https://www.svt.se/nyheter/lokalt/halland/klartecken-for-skydd-mot-oversvamning-i-kungsbacka-rekorddyrt) · SVT Halland
 - 2020-07-27 · [Havsbarriär utreds som Kungsbackas nya skydd mot översvämningar](https://www.svt.se/nyheter/lokalt/halland/havsbarriar-utreds-som-kungsbackas-nya-skydd-mot-oversvamningar) · SVT Halland
 - 2020-04-18 · [Barriär mot havet kan bli verklighet](https://norrahalland.se/nyheter/barriar-mot-havet-kan-bli-verklighet/20537) · Norra Halland
-- 2015-11-03 · [Kungsbacka i riskzonen](https://www.svt.se/nyheter/lokalt/halland/kungsbacka-i-riskzonen) · SVT Halland

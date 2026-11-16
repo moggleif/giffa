@@ -18,4 +18,3 @@ projektet är slutgodkänt. Om leden blev klar står inte i protokollen.
 ## I media och debatt
 
 - 2025-04-07 · [Enade bygden för cykel- och vandringsled mellan Frillesås och Fjärås – nu är den klar](https://www.svt.se/nyheter/lokalt/halland/enade-bygden-for-cykel-och-vandringsled-nu-ar-den-klar) · SVT Halland
-- 2024-08-23 · [Birgers dröm uppfylld – invånare bygger egen cykelled mellan Frillesås och Fjärås](https://www.svt.se/nyheter/lokalt/halland/birgers-drom-uppfylld-invanare-bygger-egen-cykelled-mellan-frillesas-och-fjaras) · SVT Halland

@@ -3,7 +3,8 @@
 Väljer ut artiklarna som nämner en ort, en plats eller ett uppmärksammat
 namn och samtidigt något kommunen beslutar om, och som varken ett ärende
 eller veckans issue redan länkar. Orden om kommunens beslut gäller alla
-orter och står därför här.
+orter och står därför här; de matchar som början av ett ord, och ord som
+finns i nästan varje artikel, som *Halland* och *kommunen*, är inte med.
 """
 
 import csv
@@ -16,8 +17,9 @@ from webbplats import underlag
 
 AMNEN = re.compile(
     r"(?<!\w)(detaljplan|planprogram|planer|bygg|bostä|bostad|skol|förskol"
-    r"|boende|väg|cykel|station|tåg|dagvatten|översvämn|skyfall|kommun|politik"
-    r"|nämnd|beslut|samråd|överklag|park|idrott|hall|arena|lokal|centrum|tomt)",
+    r"|boende|väg|cykel|station|tåg|dagvatten|översvämn|skyfall|kommunstyrelse"
+    r"|fullmäktige|politik|nämnd|beslut|samråd|överklag|park|idrott|sporthall"
+    r"|idrottshall|arena|lokal|centrum|tomt)",
     re.IGNORECASE,
 )
 
@@ -42,9 +44,3 @@ def traffar(
         and (funna := [t for t in termer if monster(t).search(artikel.text)])
     ]
 
-
-def rad(artikel: Artikel, funna: list[str]) -> str:
-    return (
-        f"- {artikel.datum} · [{artikel.rubrik}]({artikel.lank}) · {artikel.tidning}"
-        f" — {', '.join(funna)}"
-    )

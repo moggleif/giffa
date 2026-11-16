@@ -1,9 +1,10 @@
 # Tidningarnas flöden varje morgon (K37, beslut 0016): läser Norra Hallands
 # och SVT Hallands RSS-flöden, väljer artiklarna som nämner en ort, en plats
 # eller ett uppmärksammat namn och något kommunen beslutar om, och för in de
-# som inget ärende länkar i veckans issue med etiketten tidningar. Flödena
-# visar bara de senaste artiklarna, så de läses varje dag; söndagsrundan
-# sorterar issuet till ärendena.
+# som varken ett ärende eller veckans eller förra veckans issue länkar i
+# veckans issue med etiketten tidningar. Flödena visar bara de senaste
+# artiklarna, så de läses varje dag; söndagsrundan sorterar issuet till
+# ärendena.
 name: Tidningar
 
 on:
@@ -23,21 +24,25 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - name: Hitta veckans issue
+      - name: Hitta veckans och förra veckans issue
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          titel="Tidningsartiklar vecka $(date +%G-W%V)"
           gh label create tidningar --force --description "Tidningsartiklar att föra in i ärendena"
-          nummer=$(gh issue list --label tidningar --state all --search "in:title \"$titel\"" \
-            --json number,title --jq ".[] | select(.title == \"$titel\") | .number")
+          nummer() {
+            gh issue list --label tidningar --state all --search "in:title \"$1\"" \
+              --json number,title --jq ".[] | select(.title == \"$1\") | .number"
+          }
+          titel="Tidningsartiklar vecka $(date +%G-W%V)"
+          denna=$(nummer "$titel")
+          forra=$(nummer "Tidningsartiklar vecka $(date -d '7 days ago' +%G-W%V)")
           touch "$RUNNER_TEMP/redan.txt"
-          if [ -n "$nummer" ]; then
-            gh issue view "$nummer" --json body,comments --jq '.body, .comments[].body' \
-              > "$RUNNER_TEMP/redan.txt"
-          fi
+          for n in $denna $forra; do
+            gh issue view "$n" --json body,comments --jq '.body, .comments[].body' \
+              >> "$RUNNER_TEMP/redan.txt"
+          done
           echo "titel=$titel" >> "$GITHUB_ENV"
-          echo "nummer=$nummer" >> "$GITHUB_ENV"
+          echo "nummer=$denna" >> "$GITHUB_ENV"
       - name: Läs flödena
         run: python3 -m tidningar "$RUNNER_TEMP/redan.txt" | tee "$RUNNER_TEMP/tidningar.md"
       - name: För in i veckans issue
@@ -45,7 +50,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if head -n 1 "$RUNNER_TEMP/tidningar.md" | grep -qxF "Inga nya träffar."; then
-            echo "Inga nya artiklar."
+            echo "Inga nya artiklar och alla flöden lästa."
             exit 0
           fi
           if [ -n "$nummer" ]; then
