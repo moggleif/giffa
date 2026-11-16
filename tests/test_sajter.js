@@ -59,9 +59,10 @@ function sida(sokvag, poster = [lank(), undermeny([lank({ "aria-current": "page"
 
 // Det tema.js och temaknappen behöver av webbläsaren: stöd för light-dark(), läsarens
 // inställning och lagringen.
-function webblasare({ stod = true, morkInstallning = false, sparat = {} } = {}) {
+function webblasare({ stod = true, morkInstallning = false, sparat = {}, sparrad = false } = {}) {
   const CSS = { supports: () => stod };
-  const localStorage = {
+  const sparr = () => { throw new Error("SecurityError"); };
+  const localStorage = sparrad ? { getItem: sparr, setItem: sparr } : {
     getItem: (nyckel) => (nyckel in sparat ? sparat[nyckel] : null),
     setItem: (nyckel, varde) => { sparat[nyckel] = varde; },
   };
@@ -195,6 +196,7 @@ test("ett klick byter tema och sparar valet för alla sajterna", () => {
   knapp.click();
   assert.deepStrictEqual([rot.dataset.tema, knapp.getAttribute("aria-pressed")], ["morkt", "true"]);
   assert.deepStrictEqual(sparat, { "sajter-tema": "morkt" });
+  assert.strictEqual(knapp.getAttribute("title"), "Byt till ljust tema");
   knapp.click();
   assert.deepStrictEqual([rot.dataset.tema, knapp.getAttribute("aria-pressed")], ["ljust", "false"]);
   assert.deepStrictEqual(sparat, { "sajter-tema": "ljust" });
@@ -210,4 +212,12 @@ test("en webbläsare utan light-dark() får ingen temaknapp och inget tema", () 
   const { rot, knapp } = temasida({ stod: false, sparat: { "sajter-tema": "morkt" } });
   assert.strictEqual(knapp, null);
   assert.strictEqual(rot.dataset.tema, undefined);
+});
+
+test("med spärrad lagring följer temat inställningen, och knappen byter ändå på sidan", () => {
+  const { rot, knapp } = temasida({ sparrad: true });
+  assert.strictEqual(rot.dataset.tema, undefined);
+  assert.strictEqual(knapp.getAttribute("title"), "Byt till mörkt tema");
+  knapp.click();
+  assert.deepStrictEqual([rot.dataset.tema, knapp.getAttribute("aria-pressed")], ["morkt", "true"]);
 });

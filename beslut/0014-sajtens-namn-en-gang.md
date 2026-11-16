@@ -33,8 +33,7 @@ sajterna.
 - En besökare på mobilen ser sajten, knappen och sidans rubrik direkt.
 - De andra sajterna är ett klick bort på mobilen i stället för synliga.
   Det är priset för en rad; på datorn syns de som förut.
-- Allt en sajt lägger i sin `.sajtmeny` står på mobilen bakom knappen
-  *Meny*. Knappen för mörkt tema står därför i sajtraden
-  ([beslut 0015](0015-morkt-tema-i-sajtraden.md)).
+- Allt en sajt lägger i sin `.sajtmeny`, som kungsbackakommuns knapp för
+  mörkt tema, står på mobilen bakom knappen *Meny*.
 - politik har en fryst kopia av `sajter.*` i sina tester och behöver
   kopiera in de nya filerna.

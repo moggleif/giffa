@@ -27,11 +27,18 @@ lämplig plats på datorn.
   ritas. Nyckeln är `sajter-tema`, och eftersom sajterna har samma värd
   gäller valet på alla.
 - **`sajter.js`** lägger knappen i sajtraden, före *Meny*. Den har
-  etiketten *Mörkt tema* och `aria-pressed`, och ikonen (måne eller sol)
-  ritas av `sajter.css` som en mask i textens färg, så att den följer
-  sajtens färger. På mobilen står knappen mitt på raden, mitt i utrymmet
-  mellan sajtens namn och *Meny*; med ett kort namn är det mitt på
-  skärmen, med ett långt en bit till höger. På datorn står den längst till höger i sajtraden.
+  etiketten *Mörkt tema* och `aria-pressed`, och rutan vid pekaren säger
+  vad ett klick gör. Ikonen (måne eller sol) ritas av `sajter.css` som en
+  mask i textens färg, så att den följer sajtens färger. På mobilen står
+  knappen mitt på raden, mitt i utrymmet mellan sajtens namn och *Meny*;
+  med ett kort namn är det mitt på skärmen, med ett långt en bit till
+  höger. Raden blir aldrig bredare än skärmen: på de minsta skärmarna
+  krymper namnet och avstånden, och ett namn som ändå inte får plats
+  kortas med en ellips. På datorn står knappen längst till höger i
+  sajtraden.
+- Med spärrad lagring gäller valet bara på sidan. På Kungsbacka i
+  siffror, som laddar om sidan för att rita om diagrammen, byter knappen
+  då inget tema.
 - **`sajter.css`** sätter `color-scheme` efter `data-tema`. Varje sajt
   skriver sina färger med `light-dark()` och `color-scheme: light dark`,
   som kungsbackakommun redan gör (ADR-0074 där). En webbläsare utan
