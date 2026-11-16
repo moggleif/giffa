@@ -29,9 +29,9 @@ lämplig plats på datorn.
 - **`sajter.js`** lägger knappen i sajtraden, före *Meny*. Den har
   etiketten *Mörkt tema* och `aria-pressed`, och ikonen (måne eller sol)
   ritas av `sajter.css` som en mask i textens färg, så att den följer
-  sajtens färger. På mobilen står knappen mitt på raden; sajtraden är där
-  ett rutnät med tre kolumner, där de yttre är lika breda så länge sajtens
-  namn får plats. På datorn står den längst till höger i sajtraden.
+  sajtens färger. På mobilen står knappen mitt på raden, mitt i utrymmet
+  mellan sajtens namn och *Meny*; med ett kort namn är det mitt på
+  skärmen, med ett långt en bit till höger. På datorn står den längst till höger i sajtraden.
 - **`sajter.css`** sätter `color-scheme` efter `data-tema`. Varje sajt
   skriver sina färger med `light-dark()` och `color-scheme: light dark`,
   som kungsbackakommun redan gör (ADR-0074 där). En webbläsare utan

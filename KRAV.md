@@ -476,7 +476,6 @@ temat är mörkt – som byter mellan ljust och mörkt tema och är nedtryckt
 när temat är mörkt. Valet sparas och gäller på alla sajterna, också vid
 nästa besök, från första ritningen. Utan val följer temat läsarens
 inställning. På en skärm högst 640 punkter bred står knappen mitt på
-sajtradens enda rad, mellan sajten och knappen *Meny*, så långt sajtens
-namn lämnar plats; på en bredare skärm står den längst till höger i
+sajtradens enda rad, mitt emellan sajten och knappen *Meny*; på en bredare skärm står den längst till höger i
 sajtraden. En webbläsare utan `light-dark()` visar ljust tema och ingen
 knapp. Alla Giffås sidor har mörkt tema.

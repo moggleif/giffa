@@ -67,9 +67,9 @@
 @media (max-width: 40rem) {
   .sajtrad.kand li:not(.denna) { display: none; }
   .sajtrad .denna a { font-size: 1.15em; min-height: 2.75em; white-space: nowrap; }
-  /* Temaknappen står mitt på raden, så långt sajtens namn lämnar plats. */
-  .sajtrad.kand > div { display: grid; grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr); }
-  .sajtrad.kand .temaknapp { margin: 0; }
+  /* Temaknappen står mitt i utrymmet mellan sajtens namn och knappen Meny. */
+  .sajtrad.kand > div { display: grid; grid-template-columns: max-content 1fr max-content; }
+  .sajtrad.kand .temaknapp { margin: 0; justify-self: center; }
   .sajtrad .temaknapp { width: 2.75em; height: 2.75em; }
   .sajtrad .menyknapp {
     grid-column: 3; justify-self: end;
