@@ -453,8 +453,8 @@ En undermeny med grupper står under hela menyn och bryter grupperna till
 en ny rad när de inte får plats bredvid varandra.
 Bara en undermeny är öppen åt gången, och Escape eller ett klick utanför
 stänger den. Undermenyn med den visade sidan är markerad, liksom sidan. På
-en skärm högst 640 punkter bred är sajtraden en enda rad: den visade sajten
-och knappen *Meny*, som fäller ut menyn med de andra sajterna sist under
+en skärm högst 640 punkter bred är sajtraden en enda rad: den visade sajten,
+knappen för mörkt tema (K36) och knappen *Meny*, som fäller ut menyn med de andra sajterna sist under
 *Projektets andra sajter*. Utan skriptet står sajtens meny som en lista
 med sajtens namn först och ingen sajtrad.
 
@@ -464,3 +464,20 @@ Giffås meny är *Tycka till*, *Pågår*, *Beslutat* (med *Beslutat* och
 *Historik*), *KS-mötet*, *Sök* och *Om*. Valet av förening och ort (K22)
 står bakom en knapp *Ort:* med det valda, eller *Alla*, som fäller ut
 knapparna; knappen syns bara med skriptet.
+
+## K36 – Mörkt tema på alla projektets sajter
+
+**Givet** en sida på någon av projektets sajter (K35), som laddar
+`tema.js` i sitt `<head>` och skriver sina färger med ett ljust och ett
+mörkt värde, **när** sidan visas i en webbläsare som klarar
+`light-dark()`, **så** har sajtraden en knapp med en ikon – en måne, och
+en sol när temat är mörkt – som byter mellan ljust och mörkt tema och är
+nedtryckt när temat är mörkt. Valet sparas och gäller på alla sajterna,
+också vid nästa besök, från första ritningen; i en webbläsare som
+spärrat lagringen gäller det bara på sidan. Utan val följer temat
+läsarens inställning. På en skärm högst 640 punkter bred står knappen
+mitt på sajtradens enda rad, mitt emellan sajten och knappen *Meny*, och
+raden blir aldrig bredare än skärmen: ett namn som inte får plats
+kortas. På en bredare skärm står knappen längst till höger i sajtraden.
+En webbläsare utan `light-dark()` visar ljust tema och ingen knapp. Alla
+Giffås sidor har mörkt tema.

@@ -1,4 +1,5 @@
-// Krav: K35 i KRAV.md, beslut 0013. Kör docs/sajter.js mot en liten påhittad sida:
+// Krav: K35 och K36 i KRAV.md, beslut 0013–0015. Kör docs/sajter.js och docs/tema.js mot
+// en liten påhittad sida:
 // node --test tests/*.js
 "use strict";
 const test = require("node:test");
@@ -8,6 +9,7 @@ const path = require("node:path");
 const vm = require("node:vm");
 
 const SKRIPT = fs.readFileSync(path.join(__dirname, "..", "docs", "sajter.js"), "utf8");
+const TEMA = fs.readFileSync(path.join(__dirname, "..", "docs", "tema.js"), "utf8");
 
 // Ett element med just det sajter.js använder.
 class El {
@@ -50,9 +52,21 @@ function sida(sokvag, poster = [lank(), undermeny([lank({ "aria-current": "page"
   const meny = new El("nav", { class: "sajtmeny" }, [new El("a", { class: "sajtnamn" }), new El("ul", {}, poster)]);
   const hoppa = new El("a", { class: "hoppa" });
   const kropp = new El("body", {}, [hoppa, meny, new El("main")]);
-  const document = Object.assign(kropp, { createElement: (tagg) => new El(tagg) });
-  vm.runInNewContext(SKRIPT, { document, location: { pathname: sokvag } });
+  const document = Object.assign(kropp, { createElement: (tagg) => new El(tagg), documentElement: { dataset: {} } });
+  vm.runInNewContext(SKRIPT, { document, location: { pathname: sokvag }, ...webblasare() });
   return { kropp, meny, hoppa, undermenyer: meny.querySelectorAll("details") };
+}
+
+// Det tema.js och temaknappen behöver av webbläsaren: stöd för light-dark(), läsarens
+// inställning och lagringen.
+function webblasare({ stod = true, morkInstallning = false, sparat = {}, sparrad = false } = {}) {
+  const CSS = { supports: () => stod };
+  const sparr = () => { throw new Error("SecurityError"); };
+  const localStorage = sparrad ? { getItem: sparr, setItem: sparr } : {
+    getItem: (nyckel) => (nyckel in sparat ? sparat[nyckel] : null),
+    setItem: (nyckel, varde) => { sparat[nyckel] = varde; },
+  };
+  return { window: { CSS }, CSS, localStorage, matchMedia: () => ({ matches: morkInstallning }) };
 }
 
 test("sajtraden står mellan hopplänken och menyn, med den här sajten markerad", () => {
@@ -79,7 +93,7 @@ test("på en annan sajt är den markerad i stället", () => {
 
 test("knappen Meny står i sajtraden och fäller ut och ihop menyn", () => {
   const { kropp, meny } = sida("/giffa/");
-  const knapp = kropp.barn[1].querySelector("button");
+  const knapp = kropp.barn[1].querySelector(".menyknapp");
   assert.strictEqual(knapp.textContent, "Meny");
   assert.ok(meny.classList.contains("har-knapp"));
   knapp.skicka("click");
@@ -140,7 +154,7 @@ test("bara en undermeny öppen åt gången, och Escape eller ett klick utanför 
 
 test("Escape fäller ihop den utfällda menyn när ingen undermeny är öppen", () => {
   const { kropp, meny } = sida("/giffa/");
-  const knapp = kropp.barn[1].querySelector("button");
+  const knapp = kropp.barn[1].querySelector(".menyknapp");
   knapp.click();
   kropp.skicka("keydown", { key: "Escape" });
   assert.ok(!meny.classList.contains("oppen"));
@@ -151,6 +165,59 @@ test("en sajt utan undermenyer får sajtraden och knappen", () => {
   const { kropp, meny } = sida("/kungsbackakommun/kungsbacka.html", [lank(), lank()]);
   assert.strictEqual(kropp.barn[1].querySelector("[aria-current]").textContent, "Kungsbacka kommun");
   assert.ok(meny.classList.contains("har-knapp"));
-  assert.strictEqual(kropp.barn[1].querySelector("button").textContent, "Meny");
+  assert.strictEqual(kropp.barn[1].querySelector(".menyknapp").textContent, "Meny");
   kropp.skicka("keydown", { key: "Escape" });
+});
+
+function temasida(installningar) {
+  const meny = new El("nav", { class: "sajtmeny" }, [new El("ul", {}, [lank()])]);
+  const kropp = new El("body", {}, [meny]);
+  const rot = { dataset: {} };
+  const document = Object.assign(kropp, { createElement: (tagg) => new El(tagg), documentElement: rot });
+  const miljo = { document, location: { pathname: "/giffa/" }, ...webblasare(installningar) };
+  vm.runInNewContext(TEMA, miljo);
+  vm.runInNewContext(SKRIPT, miljo);
+  return { kropp, rot, knapp: kropp.querySelector(".temaknapp") };
+}
+
+test("temaknappen står i sajtraden före Meny och följer läsarens inställning", () => {
+  const { kropp, rot, knapp } = temasida({ morkInstallning: true });
+  const knappar = kropp.barn[0].querySelectorAll("button");
+  assert.deepStrictEqual(knappar.map((k) => k.getAttribute("class")), ["temaknapp", "menyknapp"]);
+  assert.strictEqual(knapp.getAttribute("aria-label"), "Mörkt tema");
+  assert.strictEqual(knapp.getAttribute("aria-pressed"), "true");
+  assert.strictEqual(rot.dataset.tema, "");
+});
+
+test("ett klick byter tema och sparar valet för alla sajterna", () => {
+  const sparat = {};
+  const { rot, knapp } = temasida({ sparat });
+  assert.strictEqual(knapp.getAttribute("aria-pressed"), "false");
+  knapp.click();
+  assert.deepStrictEqual([rot.dataset.tema, knapp.getAttribute("aria-pressed")], ["morkt", "true"]);
+  assert.deepStrictEqual(sparat, { "sajter-tema": "morkt" });
+  assert.strictEqual(knapp.getAttribute("title"), "Byt till ljust tema");
+  knapp.click();
+  assert.deepStrictEqual([rot.dataset.tema, knapp.getAttribute("aria-pressed")], ["ljust", "false"]);
+  assert.deepStrictEqual(sparat, { "sajter-tema": "ljust" });
+});
+
+test("ett sparat val gäller före läsarens inställning", () => {
+  const { rot, knapp } = temasida({ morkInstallning: true, sparat: { "sajter-tema": "ljust" } });
+  assert.strictEqual(rot.dataset.tema, "ljust");
+  assert.strictEqual(knapp.getAttribute("aria-pressed"), "false");
+});
+
+test("en webbläsare utan light-dark() får ingen temaknapp och inget tema", () => {
+  const { rot, knapp } = temasida({ stod: false, sparat: { "sajter-tema": "morkt" } });
+  assert.strictEqual(knapp, null);
+  assert.strictEqual(rot.dataset.tema, undefined);
+});
+
+test("med spärrad lagring följer temat inställningen, och knappen byter ändå på sidan", () => {
+  const { rot, knapp } = temasida({ sparrad: true });
+  assert.strictEqual(rot.dataset.tema, undefined);
+  assert.strictEqual(knapp.getAttribute("title"), "Byt till mörkt tema");
+  knapp.click();
+  assert.deepStrictEqual([rot.dataset.tema, knapp.getAttribute("aria-pressed")], ["morkt", "true"]);
 });

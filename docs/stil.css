@@ -1,15 +1,28 @@
-/* Krav: K4–K9, K14, K20, K22, K27, K29–K35 i KRAV.md. Stilen följer kommunhandlingars sidor om
+/* Krav: K4–K9, K14, K20, K22, K27, K29–K36 i KRAV.md. Stilen följer kommunhandlingars sidor om
    initiativ och lokalbehov: tidslinjen, korten och urvalet. */
-:root { --accent: #1d5d73; --band: #e3eef2; --yta: #f5f6f8;
-        --linje: #d9dde5; --dampad: #5b6475; --lyft: #8e2459;
-        --alla: #8a5a00; --partiet: #2f4fa0; --sajtaccent: #1d5d73;
-        --sajtbredd: 72rem; --sajtkant: 0; }
+/* Färgerna har ett ljust och ett mörkt värde (K36, beslut 0015). En webbläsare utan
+   light-dark() får de ljusa. */
+:root { color-scheme: light dark;
+  --text: light-dark(#1a1a1a, #e4e6ea); --bakgrund: light-dark(#fff, #15171b);
+  --accent: light-dark(#1d5d73, #7cc4dc); --band: light-dark(#e3eef2, #1e3942);
+  --yta: light-dark(#f5f6f8, #22262d); --linje: light-dark(#d9dde5, #3a404b);
+  --dampad: light-dark(#5b6475, #a8b0bd); --lyft: light-dark(#8e2459, #f29bc5);
+  --alla: light-dark(#8a5a00, #e6b552); --partiet: light-dark(#2f4fa0, #a3b8f2);
+  --klart: light-dark(#1a6b2a, #72d083); --avbrutet: light-dark(#b00020, #ff8a94);
+  --varning: light-dark(#fff1c2, #3b3014);
+  --sajtaccent: var(--accent); --sajtbredd: 72rem; --sajtkant: 0; }
+@supports not (color: light-dark(black, white)) {
+  :root { color-scheme: light; --text: #1a1a1a; --bakgrund: #fff; --accent: #1d5d73;
+    --band: #e3eef2; --yta: #f5f6f8; --linje: #d9dde5; --dampad: #5b6475; --lyft: #8e2459;
+    --alla: #8a5a00; --partiet: #2f4fa0; --klart: #1a6b2a; --avbrutet: #b00020;
+    --varning: #fff1c2; }
+}
 html { font-size: 112.5%; }
 body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 0 auto;
-       padding: 0 1rem; line-height: 1.5; color: #1a1a1a; background: #fff; }
+       padding: 0 1rem; line-height: 1.5; color: var(--text); background: var(--bakgrund); }
 [hidden] { display: none !important; }
 main > p, main > ul, main > details, ol.tillfallen, ol.handelser { max-width: 32rem; }
-:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; box-shadow: 0 0 0 6px #fff; }
+:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; box-shadow: 0 0 0 6px var(--bakgrund); }
 small { font-size: 0.85rem; }
 .hoppa, .dold { position: absolute; left: -999rem; }
 .hoppa:focus { position: static; display: inline-block; margin-top: 0.5rem; }
@@ -29,7 +42,7 @@ summary { cursor: pointer; }
 .urval { margin-top: 0.75rem; }
 .urval [role="group"] { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .urval .orter { margin-top: 0.6rem; padding-left: 1rem; border-left: 3px solid var(--band); }
-.urval button { font: inherit; border: 1px solid var(--linje); background: #fff;
+.urval button { font: inherit; border: 1px solid var(--linje); background: var(--bakgrund);
                 border-radius: 999px; padding: 0.2rem 0.9rem; cursor: pointer;
                 min-height: 2.5rem; }
 .urval button[aria-pressed="true"] { border-color: var(--accent);
@@ -47,8 +60,8 @@ a.steg { padding-top: 0.2rem; }
 a.steg:hover { border-color: currentColor; }
 .steg.samrad, .steg.granskning { color: var(--alla); }
 .steg.forslag, .steg.yttrande, .steg.info { color: var(--partiet); }
-.steg.beslut, .steg.bygge, .steg.klart { color: #1a6b2a; }
-.steg.avbrutet { color: #b00020; }
+.steg.beslut, .steg.bygge, .steg.klart { color: var(--klart); }
+.steg.avbrutet { color: var(--avbrutet); }
 table.tidslinje { border-collapse: separate; border-spacing: 0; table-layout: fixed;
                   width: 100%; min-width: 36rem; }
 table.tidslinje th, table.tidslinje td { border: none; padding: 0.15rem 0; }
@@ -102,7 +115,7 @@ ul.oversikt { font-size: 1.1rem; display: grid; gap: 0.4rem; }
 ul.forslaget { display: grid; gap: 0.4rem; }
 .kallas { margin: 0; color: var(--lyft); font-weight: 600; }
 .etikett { display: inline-block; padding: 0.05rem 0.5rem; border-radius: 999px;
-           background: var(--lyft); color: #fff; font-weight: 600; font-style: normal; }
+           background: var(--lyft); color: var(--bakgrund); font-weight: 600; font-style: normal; }
 table.tidslinje th[scope="row"] small.kallas { display: block; margin-top: 0.2rem; }
 ul.uppmarksammat { display: grid; gap: 0.8rem; padding-left: 1.2rem; }
 ul.uppmarksammat > li > strong { font-size: 1.1rem; }
@@ -139,7 +152,7 @@ ul.pa-vag-upp small { color: var(--dampad); }
 .kort .stege .forfarande { display: none; }
 .kort .stege li { padding: 0 0.4rem; border-width: 1px; font-size: 0.9rem; }
 .kort .stege li small { display: inline; }
-div.varning { background: #fff1c2; border: 2px solid var(--alla); border-left-width: 8px;
+div.varning { background: var(--varning); border: 2px solid var(--alla); border-left-width: 8px;
               border-radius: 6px; padding: 0.6rem 0.9rem; max-width: 40rem; margin-bottom: 1rem; }
 div.varning p { margin: 0.2rem 0; }
 div.varning strong { font-size: 1.15rem; }
@@ -147,6 +160,6 @@ div.varning strong { font-size: 1.15rem; }
 .punkter .markor span.svag { background: none; color: var(--dampad);
                             border: 1px dashed var(--linje); }
 .punkter .markor span.nummer { font-weight: 600; }
-.punkter .markor span.sokord { background: var(--yta); color: #1a1a1a; }
+.punkter .markor span.sokord { background: var(--yta); color: var(--text); }
 .punkter .markor small { align-self: center; color: var(--dampad); margin-left: 0.3rem; }
 .punkter blockquote { margin: 0; padding-left: 0.6rem; border-left: 3px solid var(--accent); }

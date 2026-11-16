@@ -33,8 +33,10 @@ projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kungsbac
 laddar samma meny från Giffå: Giffå ritar den med `docs/sajter.js` och `docs/sajter.css`
 ([beslut 0013](beslut/0013-gemensam-meny-fran-giffa.md)). Sajtens namn står bara
 i sajtraden, och ingen sidas rubrik upprepar det; på mobilen är sajtraden en
-rad med sajten och knappen *Meny*, och de andra sajterna står sist i menyn
-([beslut 0014](beslut/0014-sajtens-namn-en-gang.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
+rad med sajten, knappen för mörkt tema och knappen *Meny*, och de andra sajterna står sist i menyn
+([beslut 0014](beslut/0014-sajtens-namn-en-gang.md)). Knappen med månen i sajtraden
+byter till mörkt tema på alla sajterna, och `docs/tema.js` sätter det valda temat innan
+sidan ritas ([beslut 0015](beslut/0015-morkt-tema-i-sajtraden.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
 Sidan om kommunstyrelsens möte läses ur en utcheckning av
 [kommunhandlingar](https://github.com/moggleif/kommunhandlingar) med dess

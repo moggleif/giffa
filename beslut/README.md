@@ -21,3 +21,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0012](0012-ks-motet-ur-datapoolens-kod.md) | KS-mötet byggs med datapoolens kod |
 | [0013](0013-gemensam-meny-fran-giffa.md) | En gemensam meny för sajterna, ritad av ett skript från Giffå |
 | [0014](0014-sajtens-namn-en-gang.md) | Sajtens namn står en gång, i sajtraden |
+| [0015](0015-morkt-tema-i-sajtraden.md) | Mörkt tema för alla sajterna, med en ikonknapp i sajtraden |
