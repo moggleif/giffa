@@ -447,7 +447,7 @@ markerad, och under den sajtens egen meny i samma form på alla sajter:
 sajtens namn som länk till dess start och högst sex poster, där en post är
 en länk eller en rubrik som fäller ut en undermeny, eventuellt med grupper.
 En undermeny med grupper står under hela menyn och bryter grupperna till
-en ny rad, så att ingen del hamnar utanför skärmen.
+en ny rad när de inte får plats bredvid varandra.
 Bara en undermeny är öppen åt gången, och Escape eller ett klick utanför
 stänger den. Undermenyn med den visade sidan är markerad, liksom sidan. På
 en skärm högst 640 punkter bred står menyn bakom en knapp *Meny*. Utan
