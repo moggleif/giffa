@@ -48,6 +48,7 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(rubrik)} – Giffå</title>
+<script src="{rot}tema.js"></script>
 <link rel="stylesheet" href="{rot}sajter.css">
 <link rel="stylesheet" href="{rot}stil.css">
 <script src="{rot}sajter.js" defer></script>

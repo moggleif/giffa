@@ -295,7 +295,7 @@ class Bevakar(unittest.TestCase):
 class GemensammaMenyn(unittest.TestCase):
     def test_sajtens_meny_i_den_gemensamma_formen(self):
         html = startsida(SAJT, [], RUNDA)
-        self.assertIn('<link rel="stylesheet" href="sajter.css">', html)
+        self.assertIn('<script src="tema.js"></script>\n<link rel="stylesheet" href="sajter.css">', html)
         self.assertIn('<script src="sajter.js" defer></script>', html)
         self.assertIn(
             '<nav class="sajtmeny" aria-label="Webbplatsen">'

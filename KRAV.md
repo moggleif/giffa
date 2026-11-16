@@ -464,3 +464,19 @@ Giffås meny är *Tycka till*, *Pågår*, *Beslutat* (med *Beslutat* och
 *Historik*), *KS-mötet*, *Sök* och *Om*. Valet av förening och ort (K22)
 står bakom en knapp *Ort:* med det valda, eller *Alla*, som fäller ut
 knapparna; knappen syns bara med skriptet.
+
+## K36 – Mörkt tema på alla projektets sajter
+
+**Givet** en sida på någon av projektets sajter (K35), som laddar
+`tema.js` i sitt `<head>` och skriver sina färger med ett ljust och ett
+mörkt värde,
+**när** sidan visas i en webbläsare som klarar `light-dark()`,
+**så** har sajtraden en knapp med en ikon – en måne, och en sol när
+temat är mörkt – som byter mellan ljust och mörkt tema och är nedtryckt
+när temat är mörkt. Valet sparas och gäller på alla sajterna, också vid
+nästa besök, från första ritningen. Utan val följer temat läsarens
+inställning. På en skärm högst 640 punkter bred står knappen mitt på
+sajtradens enda rad, mellan sajten och knappen *Meny*, så långt sajtens
+namn lämnar plats; på en bredare skärm står den längst till höger i
+sajtraden. En webbläsare utan `light-dark()` visar ljust tema och ingen
+knapp. Alla Giffås sidor har mörkt tema.

@@ -30,6 +30,7 @@ class Bygg(unittest.TestCase):
             "sajter.js",
             "sok.js",
             "stil.css",
+            "tema.js",
             "urval.js",
             ".nojekyll",
         ):
