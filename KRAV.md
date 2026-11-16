@@ -174,15 +174,16 @@ under rubriken och hopfälld, i stället för vid varje tillfälle.
 **när** sidan byggs,
 **så** har det en egen sida `arende/<filnamn>.html` med ort, organ,
 diarienummer, status, ingress, tillfällena att tycka till, alla händelser
-med källor och handlingar (K25), länkarna under *I media och debatt*
-och en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och
+med källor och handlingar (K25), länkarna under *I media och debatt* –
+varje artikel med en tidningsikon och tidningens namn först, så att den
+syns som press och inte som en handling – och en länk till filen i repot. Kort, tabellrader, *Tycka till nu* och
 *Nytt sedan förra rundan* länkar dit, och adressen är densamma vilken status ärendet än har.
 
 ## K19 – Det som rör sig först
 
 **Givet** ärenden med `status` `pågår`,
 **när** sidan *Pågår* byggs,
-**så** står, efter de uppmärksammade (K29), först de som har en händelse de senaste två åren (730 dagar)
+**så** står först de som har en händelse de senaste två åren (730 dagar)
 räknat från byggdagen, och sedan, under en egen rubrik med datumet, de som
 inte har det, med en mening om att det som inte syns i källorna inte
 betyder att inget har hänt. Kortet visar när det senaste steget togs (K16).
@@ -289,13 +290,11 @@ folkmun, eller ett gemensamt ämne som *Dagvatten och översvämningar* – och
 ett eller flera ärenden i `bevakning/uppmarksammade.csv`, med en källa till
 namnet,
 **när** sidan byggs,
-**så** står namnen under *Ärenden med mer uppmärksamhet* på startsidan, i den ordning de
-står i filen, med sina ärenden under och källan till namnet intill. Namnet
-står också under rubriken som en färgad etikett: på ärendets kort och egna
+**så** står namnet under rubriken som en färgad etikett: på ärendets kort och egna
 sida efter orden *Uppmärksammat som*, och i tidslinjen med samma ord bara
 för skärmläsare, så att den som känner ärendet under ett annat
-namn känner igen det. Ortsvalet gäller rutan som allt annat, för namnen
-och för varje ärende under dem. Ett ärende som inte finns, ett tomt fält,
+namn känner igen det. Startsidan och listorna har inget eget avsnitt för
+de uppmärksammade ärendena. Ett ärende som inte finns, ett tomt fält,
 samma namn och ärende två gånger eller en källa som är en länk men inte en
 https-länk stoppar bygget.
 
@@ -311,15 +310,8 @@ träff står det.
 
 ## K29 – Uppmärksammat först i listorna
 
-**Givet** ärenden i `bevakning/uppmarksammade.csv` (K27),
-**när** listorna *Pågår*, *Beslutat* och *Historik* byggs,
-**så** står de uppmärksammade ärenden som hör till listan först, under
-rubriken *Ärenden med mer uppmärksamhet* och i namnens ordning i filen – först namnet
-som står överst, med dess ärenden i radernas ordning – och
-resten följer under som förut: på *Pågår* med uppdelningen i det som rört
-sig och det som stått still (K19), på de andra under *Övriga ärenden*.
-Namnen står som färgade etiketter i tidslinjen och på korten. Har listan
-inget uppmärksammat ärende ser den ut som förut.
+Borttaget 2026-11-16: listorna ordnas som förut, utan avsnittet *Ärenden
+med mer uppmärksamhet* (beslut 0010).
 
 ## K30 – Två spår, ett tecken och en färg var
 

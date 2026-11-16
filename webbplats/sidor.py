@@ -1,11 +1,10 @@
-"""Krav: K5, K6, K7, K12, K19, K22, K27, K29 och K32 i KRAV.md. Test: tests/test_sidor.py.
+"""Krav: K5, K6, K7, K12, K19, K22 och K32 i KRAV.md. Test: tests/test_sidor.py.
 
-Startsidan med det som går att påverka, det uppmärksammade, det nya och hur många ärenden
+Startsidan med det som går att påverka, det nya och hur många ärenden
 varje lista har, sist det som är på väg upp, och listorna: det som pågår, det som är beslutat och
 historiken med det som är klart eller avbrutet.
 """
 
-from collections.abc import Sequence
 from datetime import timedelta
 from html import escape
 
@@ -18,7 +17,6 @@ from webbplats.pa_vag_upp import pa_vag_upp
 from webbplats.paverka import tycka_till_nu
 from webbplats.tabell import tabell
 from webbplats.underlag import Runda
-from webbplats.uppmarksammat import Namn, ordning, ruta
 
 STILLA = timedelta(days=2 * 365)
 LISTOR = (
@@ -33,17 +31,14 @@ LISTOR = (
 )
 
 
-def startsida(
-    sajt: Sajt, arenden: list[Arende], runda: Runda, namnen: Sequence[Namn] = ()
-) -> str:
+def startsida(sajt: Sajt, arenden: list[Arende], runda: Runda) -> str:
     inledning = (
         "<p>Vad som beslutas, planeras och byggs i orterna hos de fyra föreningarna. "
         "Utan val syns allt; välj en ort, eller en förening för att bara se dess orter. "
         "Varje händelse länkar till sin källa.</p>"
     )
     paverka = tycka_till_nu(arenden, sajt)
-    lyfta = ruta(namnen, arenden)
-    innehall = inledning + urval(sajt) + paverka + lyfta + nytt(arenden, runda, sajt) + oversikt(arenden) + pa_vag_upp(arenden, sajt)
+    innehall = inledning + urval(sajt) + paverka + nytt(arenden, runda, sajt) + oversikt(arenden) + pa_vag_upp(arenden, sajt)
     return sida(sajt, "index.html", "Vad händer där du bor?", innehall)
 
 
@@ -75,29 +70,12 @@ def nytt(arenden: list[Arende], runda: Runda, sajt: Sajt) -> str:
     )
 
 
-def lista(sajt: Sajt, arenden: list[Arende], listan: tuple, namnen: Sequence[Namn] = ()) -> str:
+def lista(sajt: Sajt, arenden: list[Arende], listan: tuple) -> str:
     adress, rubrik, statusar, inledning = listan
     valda = [a for a in arenden if a.falt["status"] in statusar]
-    rang = ordning(namnen)
-    lyfta = sorted((a for a in valda if a.id in rang), key=lambda a: rang[a.id])
-    ovriga = [a for a in valda if a.id not in rang]
-    delar = uppmarksammat(sajt, lyfta) + resten(sajt, ovriga, statusar == ("pågår",), bool(lyfta))
+    delar = pagar_delar(sajt, valda) if statusar == ("pågår",) else avsnitt(sajt, valda)
     innehall = f"<p>{inledning}</p>" + urval(sajt) + teckenforklaring() + delar
     return sida(sajt, adress, rubrik, innehall)
-
-
-def uppmarksammat(sajt: Sajt, lyfta: list[Arende]) -> str:
-    if not lyfta:
-        return ""
-    return '<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>' + avsnitt(sajt, lyfta)
-
-
-def resten(sajt: Sajt, ovriga: list[Arende], pagar: bool, efter_lyfta: bool) -> str:
-    if pagar:
-        return pagar_delar(sajt, ovriga)
-    if not efter_lyfta:
-        return avsnitt(sajt, ovriga)
-    return f'<h2 id="ovriga">Övriga ärenden</h2>{avsnitt(sajt, ovriga)}' if ovriga else ""
 
 
 def pagar_delar(sajt: Sajt, arenden: list[Arende]) -> str:

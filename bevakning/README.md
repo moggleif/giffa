@@ -139,7 +139,10 @@ Andra avsnitt än *Förslaget i korthet*, *Händelser*, *Tycka till* och
 *I media och debatt* stoppar bygget.
 
 **I media och debatt** är valfritt: tidningsartiklar och diskussioner, en
-per rad med datum, rubriken som länk och var den stod. Kungsbacka-Posten och
+per rad med datum, rubriken som länk och var den stod. Ärendets sida
+visar varje artikel med en tidningsikon och tidningens namn först. En
+artikel som är källa till ett namn i `uppmarksammade.csv` står också här.
+Kungsbacka-Posten och
 sociala medier tas bara med när en människa länkat dem i ett issue
 ([KALLOR.md](../KALLOR.md)).
 
@@ -157,10 +160,7 @@ namn och ärende:
 | `kalla`  | Var namnet kommer ifrån: en länk `[Rubrik](https://…)` till en artikel eller handling, eller en text som *projektägaren* eller *ärendets rubrik* |
 
 Ett namn kan stå på flera rader, en per ärende, och ett ärende kan ha
-flera namn. Namnen står i filens ordning under *Ärenden med mer uppmärksamhet* på
-startsidan och först i listorna *Pågår*, *Beslutat* och *Historik* (K29);
-flytta ett namns rader för att flytta namnet och dess ärenden. Namnet visas också, som en färgad
-etikett, på
+flera namn. Namnet visas som en färgad etikett, i filens ordning, på
 ärendets kort, egen sida och i tidslinjen, och går att söka på under
 *Sök*. Ett ärende som inte finns stoppar bygget.
 

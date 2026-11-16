@@ -8,9 +8,7 @@ på kungsbacka.se.
 
 **Sidan: <https://moggleif.github.io/giffa/>** – på startsidan när och var
 man kan tycka till innan något beslutas, dag för dag och med två spår –
-partierna före sammanträdet och alla i samråd och granskning – de
-uppmärksammade ärendena med
-namnen de har i folkmun, som också står först i varje lista, det nya
+partierna före sammanträdet och alla i samråd och granskning – det nya
 sedan förra rundan och sist det som är på väg upp, där ett organ har
 informerats men inget förslag finns än; på
 egna sidor det som pågår (det som rört sig de senaste två åren först), det

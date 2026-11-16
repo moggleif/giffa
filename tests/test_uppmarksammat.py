@@ -1,5 +1,6 @@
 """K27: listan över uppmärksammade ärenden och namnen de kallas läses, stoppar
-vid fel och syns på startsidan, i korten, på ärendets sida och i tidslinjen."""
+vid fel och syns i korten, på ärendets sida och i tidslinjen. Startsidan och
+listorna har inget eget avsnitt för dem."""
 
 import unittest
 from dataclasses import replace
@@ -55,16 +56,11 @@ class Sidorna(unittest.TestCase):
         per = namn_per_arende(self.namnen)
         self.arenden = [replace(arende("pågår", i), kallas=per[i]) for i in ("a", "b")]
 
-    def test_startsidan_har_rutan_i_listans_ordning_med_kallan(self):
-        html = startsida(SAJT, self.arenden, RUNDA, self.namnen)
-        self.assertIn('<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>', html)
-        self.assertLess(html.index("<strong>Lagret</strong>"), html.index("<strong>Stråket</strong>"))
-        self.assertIn('Namnet: <a href="https://example.org/a">Artikeln</a>', html)
-        self.assertIn('<li data-ort="Fjärås|Åsa"><strong>Stråket</strong>', html)
-        self.assertIn('<li data-ort="Åsa|Fjärås"><a href="arende/b.html">Ny förskola</a>', html)
-
-    def test_utan_namn_ingen_ruta(self):
-        self.assertNotIn('id="uppmarksammat"', startsida(SAJT, self.arenden, RUNDA))
+    def test_inget_eget_avsnitt_pa_startsidan_eller_i_listorna(self):
+        sidor = [startsida(SAJT, self.arenden, RUNDA)] + [lista(SAJT, self.arenden, l) for l in LISTOR]
+        for html in sidor:
+            self.assertNotIn("Ärenden med mer uppmärksamhet", html)
+            self.assertNotIn('id="ovriga"', html)
 
     def test_namnen_star_i_kortet_tidslinjen_och_pa_arendets_sida(self):
         html = lista(SAJT, self.arenden, LISTOR[0])
@@ -73,43 +69,6 @@ class Sidorna(unittest.TestCase):
         dold = '<span class="dold">Uppmärksammat som </span>'
         self.assertIn(f'<small class="kallas">{dold}{lagret} {straket}</small>', html)
         self.assertIn(f'<p class="kallas">Uppmärksammat som {straket}</p>', arendesida(SAJT, self.arenden[0]))
-
-
-class Overst(unittest.TestCase):
-    """K29: de uppmärksammade står först i listorna, i listans ordning."""
-
-    def setUp(self):
-        self.namnen = las(LISTAN, {"a", "b"})
-        self.arenden = [arende("beslutat", i) for i in ("a", "c", "b")]
-
-    def test_uppmarksammade_forst_i_listans_ordning_och_resten_under(self):
-        html = lista(SAJT, self.arenden, LISTOR[1], self.namnen)
-        b, a, c = (html.index(f'<article id="{i}"') for i in "bac")
-        self.assertLess(html.index('<h2 id="uppmarksammat">'), b)
-        self.assertLess(b, a)
-        self.assertLess(a, html.index('<h2 id="ovriga">Övriga ärenden</h2>'))
-        self.assertLess(html.index('<h2 id="ovriga">'), c)
-
-    def test_pagar_behaller_sina_rubriker_under(self):
-        pagar = [arende("pågår", i) for i in ("a", "c")]
-        html = lista(SAJT, pagar, LISTOR[0], self.namnen)
-        self.assertLess(html.index('<article id="a"'), html.index('<h2 id="rorliga">'))
-        self.assertNotIn('id="ovriga"', html)
-
-    def test_ingen_forklarande_text_under_rubriken(self):
-        html = lista(SAJT, self.arenden, LISTOR[1], self.namnen)
-        rubrik = f'<h2 id="uppmarksammat">{"Ärenden med mer uppmärksamhet"}</h2>'
-        self.assertIn(rubrik + '<div class="urvalslista">', html)
-
-    def test_bara_uppmarksammade_ger_ingen_tom_ovrigt_rubrik(self):
-        html = lista(SAJT, [arende("beslutat", "a")], LISTOR[1], self.namnen)
-        self.assertIn('<article id="a"', html)
-        self.assertNotIn('id="ovriga"', html)
-        self.assertNotIn("Inga ärenden ännu.", html)
-
-    def test_utan_uppmarksammade_i_listan_ingen_rubrik(self):
-        html = lista(SAJT, [arende("beslutat", "c")], LISTOR[1], self.namnen)
-        self.assertNotIn('id="uppmarksammat"', html)
 
 
 if __name__ == "__main__":

@@ -27,8 +27,8 @@ from webbplats.ksmotet import ks_motet
 from webbplats.mall import Sajt
 from webbplats.sidor import LISTOR, lista, startsida
 from webbplats.sok import soksida
-from webbplats.uppmarksammat import Namn, namn_per_arende
 from webbplats.uppmarksammat import las as las_namnen
+from webbplats.uppmarksammat import namn_per_arende
 
 UPPMARKSAMMADE = "bevakning/uppmarksammade.csv"
 
@@ -59,13 +59,13 @@ def las_foreningar(rot: Path) -> dict[str, list[str]]:
     return foreningar
 
 
-def med_namn(rot: Path, arenden: list[Arende]) -> tuple[list[Arende], list[Namn]]:
+def med_namn(rot: Path, arenden: list[Arende]) -> list[Arende]:
     try:
         namnen = las_namnen(las(rot, UPPMARKSAMMADE), {a.id for a in arenden})
     except ValueError as fel:
         raise SystemExit(f"{UPPMARKSAMMADE}: {fel}") from fel
     per_arende = namn_per_arende(namnen)
-    return [replace(a, kallas=per_arende.get(a.id, ())) for a in arenden], namnen
+    return [replace(a, kallas=per_arende.get(a.id, ())) for a in arenden]
 
 
 def las(rot: Path, namn: str) -> str:
@@ -76,17 +76,17 @@ def bygg(rot: Path, ut: Path, repo: str, pool: Path) -> None:
     byggd = datetime.now(ZoneInfo("Europe/Stockholm"))
     platser = underlag.platser(las(rot, "platser.csv"))
     sajt = Sajt(repo, byggd, las_foreningar(rot), ur_platser(platser))
-    arenden, namnen = med_namn(rot, las_arenden(rot, sajt.orter))
+    arenden = med_namn(rot, las_arenden(rot, sajt.orter))
     runda = underlag.senaste_runda(las(rot, "bevakning/rundor.csv"))
     kallor = underlag.kallor(las(rot, "KALLOR.md"))
     shutil.copytree(rot / "docs", ut, dirs_exist_ok=True)
     sidor = {
-        "index.html": startsida(sajt, arenden, runda, namnen),
+        "index.html": startsida(sajt, arenden, runda),
         "sok.html": soksida(sajt, arenden),
         "bevakar.html": bevakar(sajt, platser, kallor),
         KS_MOTET: ks_motet(sajt, kommande(pool, byggd.date()), arenden, platser),
     }
-    sidor |= {listan[0]: lista(sajt, arenden, listan, namnen) for listan in LISTOR}
+    sidor |= {listan[0]: lista(sajt, arenden, listan) for listan in LISTOR}
     sidor |= {a.sida: arendesida(sajt, a) for a in arenden}
     (ut / "arende").mkdir(exist_ok=True)
     for namn, html in sidor.items():

@@ -1,18 +1,14 @@
-"""Krav: K27 och K29 i KRAV.md. Test: tests/test_uppmarksammat.py.
+"""Krav: K27 i KRAV.md. Test: tests/test_uppmarksammat.py.
 
 Läser bevakning/uppmarksammade.csv – namnen folk använder på ärendena, i
-den ordning projektägaren skrivit dem – och ger rutan Uppmärksammat på
-startsidan och ordningen som lyfter dem överst i listorna.
+den ordning projektägaren skrivit dem – och ger varje ärende sina namn.
 """
 
 import csv
-from collections.abc import Sequence
 from dataclasses import dataclass
-from html import escape
 from io import StringIO
 
-from webbplats.arende import LANK, Arende
-from webbplats.mall import urvalslista
+from webbplats.arende import LANK
 
 KOLUMNER = ["namn", "arende", "kalla"]
 
@@ -57,38 +53,3 @@ def namn_per_arende(namnen: list[Namn]) -> dict[str, tuple[str, ...]]:
         for arende in namn.arenden:
             per_arende[arende] = per_arende.get(arende, ()) + (namn.namn,)
     return per_arende
-
-
-def ordning(namnen: Sequence[Namn]) -> dict[str, int]:
-    ids = [arende for namn in namnen for arende in namn.arenden]
-    return {arende: plats for plats, arende in enumerate(dict.fromkeys(ids))}
-
-
-def ruta(namnen: Sequence[Namn], arenden: list[Arende]) -> str:
-    if not namnen:
-        return ""
-    per_id = {a.id: a for a in arenden}
-    poster = "".join(post(namn, [per_id[i] for i in namn.arenden]) for namn in namnen)
-    return (
-        '<h2 id="uppmarksammat">Ärenden med mer uppmärksamhet</h2>'
-        + urvalslista(f'<ul class="uppmarksammat">{poster}</ul>')
-    )
-
-
-def post(namn: Namn, arenden: list[Arende]) -> str:
-    orter = sorted({ort for a in arenden for ort in a.orter})
-    rader = "".join(
-        f'<li data-ort="{escape("|".join(a.orter))}"><a href="{a.sida}">{escape(a.falt["rubrik"])}</a> '
-        f"<small>{escape(', '.join(a.orter))} · {a.falt['status']}</small></li>"
-        for a in arenden
-    )
-    return (
-        f'<li data-ort="{escape("|".join(orter))}"><strong>{escape(namn.namn)}</strong> '
-        f'<small>Namnet: {", ".join(kalla(k) for k in namn.kallor)}</small><ul>{rader}</ul></li>'
-    )
-
-
-def kalla(text: str) -> str:
-    if traff := LANK.fullmatch(text):
-        return f'<a href="{escape(traff.group(2))}">{escape(traff.group(1))}</a>'
-    return escape(text)

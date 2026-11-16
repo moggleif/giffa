@@ -226,7 +226,9 @@ class Arendesidan(unittest.TestCase):
         self.assertIn("status: pågår", html)
         self.assertIn("Så gör du:", html)
         self.assertIn("Ett förslag. <a", html)
-        self.assertIn('<a href="https://example.org/m">Rubrik</a> – Norra Halland', html)
+        tidningen = '<span class="media"><svg'
+        self.assertIn(tidningen, html)
+        self.assertIn('<strong>Norra Halland</strong></span> <time datetime="2026-03-03">3 mars 2026</time> <a href="https://example.org/m">Rubrik</a>', html)
         self.assertIn('href="https://github.com/agare/giffa/blob/main/bevakning/ks/s.md"', html)
 
 

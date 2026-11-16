@@ -18,8 +18,7 @@ på listsidorna räcker den inte längre.
   `kalla`. Ett namn kan stå på flera ärenden, och ett ärende kan ha flera
   namn. Namnet är det ärendet kallas i folkmun eller ett gemensamt ämne,
   som *Dagvatten och översvämningar*; sidan skriver därför *Uppmärksammat
-  som …* och inte *kallas*. Ordningen i filen är ordningen på startsidan, och sedan K29 också
-  först i listorna.
+  som …* och inte *kallas*. Ordningen i filen är etiketternas ordning.
   Källan är en länk till en artikel eller handling, texten *ärendets
   rubrik* när namnet står i rubriken, eller *projektägaren* när namnet
   kommer från projektägaren själv.
@@ -37,3 +36,10 @@ på listsidorna räcker den inte längre.
 - Ett ärende som byter fil byter inte namn (beslut 0006), så listan
   behöver inte följa med statusbyten.
 - Rundan föreslår nya namn men skriver dem bara när en källa ger dem.
+
+## Ändring 2026-11-16
+
+Projektägaren tog bort avsnittet *Ärenden med mer uppmärksamhet* från
+startsidan och från listorna (K29): det stod i vägen och gav text utan
+värde. Namnen finns kvar som etiketter och i sökningen, och artiklarna
+som gav namnen står under ärendet i *I media och debatt*.
