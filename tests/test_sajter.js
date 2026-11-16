@@ -111,12 +111,6 @@ test("på en okänd adress behåller sajten sitt eget namn", () => {
   assert.strictEqual(meny.querySelector(".andra-sajter"), null);
 });
 
-test("knappen pekar ut menyn den fäller ut", () => {
-  const { kropp, meny } = sida("/giffa/");
-  assert.strictEqual(kropp.barn[1].querySelector("button").getAttribute("aria-controls"), meny.id);
-  assert.strictEqual(meny.id, "sajtmeny");
-});
-
 test("undermenyn med den aktuella sidan märks", () => {
   const { undermenyer } = sida("/giffa/");
   assert.deepStrictEqual(undermenyer.map((d) => d.classList.contains("aktuell")), [true, false]);

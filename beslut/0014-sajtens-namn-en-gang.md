@@ -17,8 +17,9 @@ sajterna.
   finns ingen sajtrad, och på en okänd adress, som en förhandsvisning,
   står namnet kvar först i menyn och sajtraden hel.
 - **På smal skärm är sajtraden en rad**: den visade sajten och knappen
-  *Meny*. Knappen flyttas därför in i sajtraden och pekar ut menyn med
-  `aria-controls`. Den utfällda menyn har de andra sajterna sist, under
+  *Meny*. Knappen flyttas därför in i sajtraden, direkt före menyn i
+  dokumentet; den får inget `aria-controls`, eftersom menyn då skulle
+  behöva ett id som sajterna inte har. Den utfällda menyn har de andra sajterna sist, under
   *Projektets andra sajter*, i en egen ruta efter menyns lista så att
   listans sista post är densamma som förut. På bred skärm står
   sajtraden hel, som förut.
