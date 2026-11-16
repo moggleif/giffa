@@ -92,13 +92,29 @@ test("knappen Meny står i sajtraden och fäller ut och ihop menyn", () => {
 
 test("sajtens rad är märkt, och de andra sajterna står sist i menyn", () => {
   const { kropp, meny } = sida("/politik/");
-  const denna = kropp.barn[1].querySelectorAll("li").filter((li) => li.classList.contains("denna"));
+  const rad = kropp.barn[1];
+  assert.ok(rad.classList.contains("kand") && meny.classList.contains("kand"));
+  const denna = rad.querySelectorAll("li").filter((li) => li.classList.contains("denna"));
   assert.deepStrictEqual(denna.map((li) => li.querySelector("a").textContent), ["Kungsbacka i siffror"]);
-  const sist = meny.querySelector("ul").barn.at(-1);
+  const sist = meny.barn.at(-1);
   assert.ok(sist.classList.contains("andra-sajter"));
   assert.strictEqual(sist.querySelector("p").textContent, "Projektets andra sajter");
   assert.deepStrictEqual(sist.querySelectorAll("a").map((a) => a.textContent), ["Giffå", "Kungsbacka kommun", "Region Halland"]);
   assert.ok(sist.querySelectorAll("a").every((a) => a.getAttribute("aria-current") === null));
+  assert.strictEqual(meny.querySelector("ul").barn.length, 3);
+});
+
+test("på en okänd adress behåller sajten sitt eget namn", () => {
+  const { kropp, meny } = sida("/forhandsvisning/");
+  assert.ok(!kropp.barn[1].classList.contains("kand"));
+  assert.ok(!meny.classList.contains("kand"));
+  assert.strictEqual(meny.querySelector(".andra-sajter"), null);
+});
+
+test("knappen pekar ut menyn den fäller ut", () => {
+  const { kropp, meny } = sida("/giffa/");
+  assert.strictEqual(kropp.barn[1].querySelector("button").getAttribute("aria-controls"), meny.id);
+  assert.strictEqual(meny.id, "sajtmeny");
 });
 
 test("undermenyn med den aktuella sidan märks", () => {
