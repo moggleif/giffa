@@ -91,6 +91,7 @@ test("varningen om AI står överst, före sajtraden, på alla sajter", () => {
     const varning = kropp.barn[1];
     assert.ok(varning.classList.contains("ai-varning"));
     assert.strictEqual(varning.getAttribute("role"), "note");
+    assert.strictEqual(varning.querySelector("button"), null);
     assert.strictEqual(varning.querySelector("p").textContent,
       "Skapad med AI utifrån offentliga handlingar. Fel kan förekomma, så kontrollera mot källan.");
   });
