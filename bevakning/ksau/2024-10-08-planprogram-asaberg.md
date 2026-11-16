@@ -31,3 +31,8 @@ Kläppavägen. Kommunstyrelsen gav uppdraget att ta fram programmet 2015. Samrå
 - 2026-04-28 · info · Kommunstyrelsens arbetsutskott informerades om planprogram för Åsaberg. · [KSAU protokoll § 153](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-04-28/protokoll.html#sida-13)
 - 2025-09-30 · info · Kommunstyrelsens arbetsutskott informerades om planprogram för Åsaberg. · [KSAU protokoll § 278](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2025/2025-09-30/protokoll.html#sida-19)
 - 2024-10-08 · info · Kommunstyrelsens arbetsutskott informerades om planprogram för Åsaberg (Åsa 2:6, 2:7, 2:8, 3:10, 3:11, 3:14). · [KSAU protokoll § 285](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2024/2024-10-08/protokoll.html#sida-16)
+
+## I media och debatt
+
+- 2026-10-16 · [160 småhus planeras i populärt skogsområde](https://norrahalland.se/nyheter/160-smaahus-planeras-i-populart-skogsomraade/55930) · Norra Halland
+- 2026-10-16 · [Åsabor sågar planerna på fler hus: ”Gillar det inte alls”](https://norrahalland.se/nyheter/aasabor-saagar-planerna-paa-fler-hus-gillar-det-inte-alls/55931) · Norra Halland

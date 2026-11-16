@@ -27,3 +27,7 @@ källorna, så kopplingen är osäker.
 - 2021-10-20 · beslut · Nämnden för Teknik gav förvaltningen i uppdrag att ansöka hos mark- och miljödomstolen om en ny vattendom för uttag ur Lygnern och Fjärås Bräcka. · [Teknik protokoll § 98](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2021/2021-10-20/protokoll.html#sida-6) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2021/2021-10-20/handlingar.html#sida-9)
 - 2021-09-15 · info · Nämnden för Teknik informerades om behovet av en ny vattendom för uttag ur Lygnern och Fjärås Bräcka. · [Teknik protokoll § 89](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2021/2021-09-15/protokoll.html#sida-8)
 - 2013-10-24 · beslut · Nämnden för Teknik gav förvaltningen i uppdrag att söka utökat tillstånd för vattentäkten i Fjärås Bräcka. · [Teknik protokoll § 113](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2013/2013-10-24/protokoll.html#sida-9)
+
+## I media och debatt
+
+- 2022-08-26 · [Dricksvatten ska säkras för 100 år](https://norrahalland.se/nyheter/dricksvatten-ska-sakras-for-100-aar/31054) · Norra Halland

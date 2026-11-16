@@ -33,3 +33,7 @@ om E6, för storskalig lager- och logistikverksamhet med en högsta nockhöjd p�
 - 2021-07-08 · granskning · Byggnadsnämnden godkände samrådsredogörelsen och granskningshandlingen. Samrådet hade pågått 3 november – 1 december 2020 med 21 skrivelser, främst om buller, farligt gods, trafik, naturvärden och kulturmiljö. · [Byggnadsnämnden protokoll § 204](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2021/2021-07-08/protokoll.html#sida-14)
 - 2021-05-27 · info · Byggnadsnämndens arbetsutskott återremitterade granskningsbeslutet och bad bland annat om ett förslag med sänkta byggnadshöjder närmast bostadshusen. · [Byggnadsnämndens AU protokoll § 211](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2021/2021-05-27/protokoll.html#sida-9)
 - 2016-02-23 · forslag · Kommunstyrelsen ställde sig positiv till en förfrågan om att utveckla del av Frillesås-Rya 4:17, norr om Almedalsvägen, till ett nytt verksamhetsområde. · [KS protokoll § 30](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2016/2016-02-23/protokoll.html#sida-23) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2016/2016-02-23/handlingar.html#sida-244)
+
+## I media och debatt
+
+- 2026-03-23 · [Nytt förslag: Återvinningen flyttas från Frillesås](https://norrahalland.se/nyheter/nytt-forslag-aatervinningen-flyttas-fraan-frillesaas/52431) · Norra Halland

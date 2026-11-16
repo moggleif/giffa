@@ -29,3 +29,8 @@ poolen. Kommunstyrelsens diarienummer är KS-2019-00837.
 - 2021-09-07 · info · Kommunstyrelsens arbetsutskott informerades om arbetet med att planlägga Hedeleden. · [KSAU protokoll § 312](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2021/2021-09-07/protokoll.html#sida-16)
 - 2021-08-25 · info · Byggnadsnämnden bordlade ärendet om samråd för detaljplanen till nästa sammanträde. · [Byggnadsnämnden protokoll § 240](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2021/2021-08-25/protokoll.html#sida-16)
 - 2021-08-12 · forslag · Byggnadsnämndens arbetsutskott föreslog samråd om detaljplanen för Hedeleden och Klippebergen. · [Bygg-AU protokoll § 343](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2021/2021-08-12/protokoll.html#sida-6) · Handlingar: [Planprogrammet för nordöstra Kungsbacka stad](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-projekt/2022/2022-02-23/handlingar-hedeleden-och-klippebergen-planprogram-nordostra-kungsbacka-stad.html)
+
+## I media och debatt
+
+- 2022-07-02 · [Detaljplan för trafikled öppen för synpunkter](https://norrahalland.se/nyheter/detaljplan-for-trafikled-oppen-for-synpunkter/30467) · Norra Halland
+- 2022-06-21 · [Nysatsning - Tölö ängar växer vidare](https://norrahalland.se/nyheter/nysatsning-tolo-angar-vaxer-vidare/30327) · Norra Halland

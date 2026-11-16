@@ -36,3 +36,13 @@ skuggar grannfastigheten.
 ## Tycka till
 
 - 2026-11-19 · beslut · Byggnadsnämnden ska besluta om bygglov för nybyggnad av skola på Åsa 5:246, med villkoret att de förorenade delarna av fastigheten saneras; arbetsutskottet har föreslagit att bygglovet beviljas. · [Byggnadsnämnden kallelse, punkt 13](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2026/2026-11-19/kallelse.html#sida-5)
+
+## I media och debatt
+
+- 2026-10-27 · [Planer på stor skola i Åsa kritiseras – föräldern Emelie: ”Satsa på utbildningen istället”](https://www.svt.se/nyheter/lokalt/halland/skolplaner-i-asa-kritiseras-foraldern-emelie-ar-det-har-ratt-vag-att-ga) · SVT Halland
+- 2025-03-06 · [Så här ska nya Åsaskolan bli](https://norrahalland.se/skola/saa-har-ska-nya-aasaskolan-bli/46314) · Norra Halland
+- 2023-10-31 · [Därför stoppas skolbygge i Åsa – Kungsbacka kommun ser över alternativa skolplatser](https://www.svt.se/nyheter/lokalt/halland/bygget-av-nya-asa-skolan-abryts--x7xver) · SVT Halland
+- 2023-08-22 · [Ny skola viktigare än åker](https://norrahalland.se/skola/ny-skola-viktigare-an-aaker/36438) · Norra Halland
+- 2022-09-06 · [Stora förändringar på gång för skolor i Åsa](https://norrahalland.se/nyheter/stora-forandringar-paa-gaang-for-skolor-i-aasa/31219) · Norra Halland
+- 2022-05-19 · [Nu har nya skolan fått sitt namn](https://norrahalland.se/nyheter/nu-har-nya-skolan-faatt-sitt-namn/29954) · Norra Halland
+- 2022-02-24 · [Här ska nya Åsaskolan ligga](https://norrahalland.se/politik/har-ska-nya-aasaskolan-ligga/28801) · Norra Halland

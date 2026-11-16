@@ -16,3 +16,8 @@ kommunfullmäktige antog 13 juni 2024.
 - 2025-02-18 · avbrutet · Kommunstyrelsen konstaterade att frågan om en framtida station i Frillesås hanterats i planeringsstrategin för översiktsplanen och förklarade uppdraget avslutat. · [KS protokoll § 36](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2025/2025-02-18/protokoll.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2025/2025-02-18/handlingar.html#sida-494)
 - 2025-01-07 · info · Kommunstyrelsens arbetsutskott återremitterade förslaget att avsluta uppdraget för revidering. · [KSAU protokoll § 18](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2025/2025-01-07/protokoll.html#sida-24) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2025/2025-01-07/handlingar.html#sida-101)
 - 2021-11-23 · forslag · Kommunstyrelsen biföll ett initiativ från Liberalerna och gav kommundirektören i uppdrag att ta fram underlag för en avsiktsförklaring om en tågstation i Frillesås. · [KS protokoll § 293](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2021/2021-11-23/protokoll.html#sida-11) · Handlingar: [Handlingarna i ärendet](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2021/2021-11-23/handlingar.html#sida-23)
+
+## I media och debatt
+
+- 2026-08-15 · [Debatt: Frillesås tågstation – ett saftigt valfläsk?](https://norrahalland.se/debatt/debatt-frillesaas-taagstation-ett-saftigt-valflask/54872) · Norra Halland
+- 2026-08-02 · [Debatt: Framtiden stannar inte – varför ska Frillesås göra det?](https://norrahalland.se/debatt/debatt-framtiden-stannar-inte-varfor-ska-frillesaas-gora-det/54695) · Norra Halland

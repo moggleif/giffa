@@ -23,3 +23,10 @@ planen, så kopplingen är osäker.
 - 2024-01-17 · info · Nämnden för Teknik fick en återrapportering om initiativet om dagvattnet vid Vita Sand. · [Teknik protokoll § 6](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2024/2024-01-17/protokoll.html#sida-9)
 - 2023-06-21 · forslag · Nämnden för Teknik biföll ett initiativ från Liberalerna, Moderaterna, Centerpartiet och Kristdemokraterna om ett omtag med fler förslag och konsekvensanalyser. · [Teknik protokoll § 74](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2023/2023-06-21/protokoll.html#sida-6)
 - 2021-09-15 · info · Nämnden för Teknik informerades: Åsa samhälle - status kring skyfall och dagvatten. · [Teknik protokoll § 90](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2021/2021-09-15/protokoll.html#sida-9)
+
+## I media och debatt
+
+- 2024-09-27 · [Nya lösningen för Vita Sand kostar miljoner](https://norrahalland.se/miljo/nya-losningen-for-vita-sand-kostar-miljoner/43735) · Norra Halland
+- 2024-05-31 · [Åsabon drabbad av översvämning – igen](https://www.svt.se/nyheter/lokalt/halland/asabon-drabbad-av-oversvamning-igen) · SVT Halland
+- 2024-05-31 · [Kommunens svar på kritiken: ”Jobbar på så fort vi kan”](https://www.svt.se/nyheter/lokalt/halland/kommunens-svar-pa-kritiken-jobbar-pa-sa-fort-vi-kan) · SVT Halland
+- 2022-08-23 · [Steg mot lösning för dagvatten i Åsa](https://norrahalland.se/nyheter/steg-mot-losning-for-dagvatten-i-aasa/31011) · Norra Halland

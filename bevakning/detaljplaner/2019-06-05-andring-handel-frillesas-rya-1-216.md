@@ -23,3 +23,8 @@ oktober 2021. Om bygget är genomfört framgår inte av protokollen.
 - 2020-11-26 · forslag · Byggnadsnämndens arbetsutskott föreslog positivt planbesked och planuppdrag för en ändring av detaljplanen inom Frillesås-Rya 1:216. · [Byggnadsnämndens AU protokoll § 423](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2020/2020-11-26/protokoll.html#sida-14)
 - 2019-10-10 · forslag · Byggnadsnämndens arbetsutskott föreslog antagande av detaljplanen. Under granskningen 5 juli – 16 augusti 2019 kom nio skrivelser. · [Byggnadsnämndens AU protokoll § 502](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-10-10/protokoll.html#sida-11)
 - 2019-06-05 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden godkänner samrådsredogörelsen och låter genomföra granskning av detaljplanen för centrumändamål inom Frillesås-Rya 1:216 och 1:132. · [Byggnadsnämndens AU protokoll § 300](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-06-05/protokoll.html#sida-10)
+
+## I media och debatt
+
+- 2021-12-06 · [Coop satsar på framtiden](https://norrahalland.se/nyheter/coop-satsar-paa-framtiden/27736) · Norra Halland
+- 2018-11-12 · [Så kan Frillesås centrum byggas ut](https://norrahalland.se/nyheter/saa-kan-frillesaas-centrum-byggas-ut/16520) · Norra Halland

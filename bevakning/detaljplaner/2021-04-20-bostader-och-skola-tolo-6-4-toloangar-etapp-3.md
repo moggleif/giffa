@@ -27,3 +27,7 @@ antog planen i april 2024, och den fick laga kraft 17 oktober 2024.
 - 2022-05-24 · samrad · Samrådet pågick 24 maj–21 juni 2022, och 12 skrivelser kom in. Byggnadsnämnden hade beslutat om samråd 12 maj 2022. · [Samrådsredogörelsen](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-projekt/2024/2024-04-26/handlingar-toloangar-etapp-3-samradsredogorelse-och-lansstyrelsens-yttrande.html)
 - 2021-05-06 · forslag · Byggnadsnämndens arbetsutskott gav samhällsbyggnadskontoret i uppdrag att upprätta förslag till detaljplan. · [Byggnadsnämndens AU protokoll § 174](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2021/2021-05-06/protokoll.html#sida-10)
 - 2021-04-20 · forslag · Kommunstyrelsen godkände projektbeställningen och överlämnade uppdraget att upprätta detaljplanen till byggnadsnämnden. · [KS protokoll § 107](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2021/2021-04-20/protokoll.html#sida-18) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2021/2021-04-20/handlingar.html#sida-42)
+
+## I media och debatt
+
+- 2022-06-21 · [Nysatsning - Tölö ängar växer vidare](https://norrahalland.se/nyheter/nysatsning-tolo-angar-vaxer-vidare/30327) · Norra Halland
