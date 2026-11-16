@@ -30,7 +30,7 @@ INLEDNING = (
     "närmaste först. Tecknet visar vem som kan påverka: "
     f"{tecken('partiet')}<strong>partierna</strong> före sammanträdet, "
     f"{tecken('alla')}<strong>alla</strong> i samråd och granskning. "
-    "Hur man gör står under listan och på ärendets sida.</p>"
+    "Hur man gör står ovanför listan och på ärendets sida.</p>"
 )
 
 
@@ -64,7 +64,7 @@ def tycka_till_nu(arenden: list[Arende], sajt: Sajt) -> str:
         dagar.setdefault(tillfalle_och_arende[0].datum, []).append(tillfalle_och_arende)
     kalender = "".join(dag(datum, par, sajt) for datum, par in dagar.items())
     lista = urvalslista(f'<div class="kalender">{kalender}</div>') if kalender else "<p>Inga kända tillfällen.</p>"
-    return f'<h2 id="tycka-till">Tycka till nu</h2>{INLEDNING}{lista}{forklaring()}'
+    return f'<h2 id="tycka-till">Tycka till nu</h2>{forklaring()}{INLEDNING}{lista}'
 
 
 def dag(datum: date, par: list[tuple[Handelse, Arende]], sajt: Sajt) -> str:
@@ -130,4 +130,4 @@ SA_GOR = {
 
 def forklaring() -> str:
     rubrik = "<summary>Så kan du påverka, steg för steg</summary>"
-    return f"<details open>{rubrik}<ul>{STEGEN}</ul></details>"
+    return f"<details>{rubrik}<ul>{STEGEN}</ul></details>"

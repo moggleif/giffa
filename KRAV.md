@@ -165,8 +165,8 @@ namn och datum, och årtalen på kortet står som *Pågått 2014–2026*.
 **när** sidan byggs,
 **så** har varje tillfälle på ärendets kort och sida en rad *Så gör du:*
 för just det steget med en länk till källan. Under *Tycka till nu* (K31)
-står förklaringen *Så kan du påverka, steg för steg* öppen en gång under
-listan i stället för vid varje tillfälle.
+står förklaringen *Så kan du påverka, steg för steg* en gång, direkt
+under rubriken och hopfälld, i stället för vid varje tillfälle.
 
 ## K18 – En egen sida per ärende
 
