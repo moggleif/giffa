@@ -17,3 +17,7 @@ byggdes om och projektet slutredovisades 2024.
 - 2022-01-19 · beslut · Nämnden för Förskola & Grundskola beslutade efter en fördjupad utredning att hela högstadiet på Åsa Gårdsskola flyttar till Åsaskolan. · [Förskola & Grundskola protokoll § 12](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2022/2022-01-19/protokoll.html#sida-19)
 - 2021-06-17 · beslut · Nämnden för Kultur & Fritid beslutade att bibliotekslokalen i Åsa ska ingå i den samlade lokallösningen för skolorna. · [Kultur & Fritid protokoll § 30](https://moggleif.github.io/kungsbackakommun/kungsbacka/kultur/2021/2021-06-17/protokoll.html#sida-8) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/kultur/2021/2021-06-17/handlingar.html#sida-55)
 - 2021-06-16 · beslut · Nämnden för Förskola & Grundskola beslutade att Åsa Gårdsskolan går från F–9 till F–6. · [Förskola & Grundskola protokoll § 87](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2021/2021-06-16/protokoll.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2021/2021-06-16/handlingar.html#sida-103)
+
+## I media och debatt
+
+- 2022-09-06 · [Stora förändringar på gång för skolor i Åsa](https://norrahalland.se/nyheter/stora-forandringar-paa-gaang-for-skolor-i-aasa/31219) · Norra Halland

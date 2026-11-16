@@ -14,3 +14,7 @@ projektet är slutgodkänt. Om leden blev klar står inte i protokollen.
 ## Händelser
 
 - 2025-01-22 · beslut · Nämnden för Kultur & Fritid beviljade 300 000 kronor i särskilt stöd för att slutföra projektet Löftaleden. · [Kultur & Fritid protokoll § 5](https://moggleif.github.io/kungsbackakommun/kungsbacka/kultur/2025/2025-01-22/protokoll.html#sida-8) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/kultur/2025/2025-01-22/handlingar.html#sida-32)
+
+## I media och debatt
+
+- 2025-04-07 · [Enade bygden för cykel- och vandringsled mellan Frillesås och Fjärås – nu är den klar](https://www.svt.se/nyheter/lokalt/halland/enade-bygden-for-cykel-och-vandringsled-nu-ar-den-klar) · SVT Halland

@@ -21,3 +21,9 @@ ska ligga. Skyddet planeras preliminärt vara uppfört 2050.
 - 2022-05-10 · beslut · Kommunfullmäktige beslutade om inriktningen att anlägga ett yttre översvämningsskydd mellan staden och havet, enligt sammanfattningen i fullmäktiges beslut 2026; protokollet från 2022 gick inte att hämta. · [KF protokoll 2026-03-03 § 31](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2026/2026-03-03/protokoll.html#sida-30)
 - 2022-04-26 · forslag · Kommunstyrelsen föreslog, med klimatstrategin, att Kungsbacka stad ska skyddas med ett yttre översvämningsskydd mot höga havsnivåer. · [KS protokoll § 104](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2022/2022-04-26/protokoll.html#sida-34) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2022/2022-04-26/handlingar.html#sida-651)
 - 2021-12-07 · info · Kommunstyrelsens arbetsutskott fick information om och diskuterade ett inriktningsbeslut för ett yttre översvämningsskydd. · [KSAU protokoll § 427](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2021/2021-12-07/protokoll.html#sida-15)
+
+## I media och debatt
+
+- 2026-03-04 · [Tummen upp för översvämningsskydd i Kungsbacka – kan kosta flera hundra miljoner](https://www.svt.se/nyheter/lokalt/halland/klartecken-for-skydd-mot-oversvamning-i-kungsbacka-rekorddyrt) · SVT Halland
+- 2020-07-27 · [Havsbarriär utreds som Kungsbackas nya skydd mot översvämningar](https://www.svt.se/nyheter/lokalt/halland/havsbarriar-utreds-som-kungsbackas-nya-skydd-mot-oversvamningar) · SVT Halland
+- 2020-04-18 · [Barriär mot havet kan bli verklighet](https://norrahalland.se/nyheter/barriar-mot-havet-kan-bli-verklighet/20537) · Norra Halland

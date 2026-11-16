@@ -27,3 +27,8 @@ Genomförandetiden beräknas till cirka sju år från hösten 2027.
 ## Tycka till
 
 - 2026-11-11 · beslut · Nämnden för Förskola & Grundskola ska besluta om bland annat att Iseråsskolan avvecklas när Fjordskolans och Presseskolans om- och tillbyggnader är klara. · [Kallelse Förskola & Grundskola 2026-11-11](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-16), [Utredningen](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-18)
+
+## I media och debatt
+
+- 2026-10-15 · [Förslag: Lägg ner Iseråsskolan och flera förskolor i Onsala](https://www.svt.se/nyheter/lokalt/halland/forslag-lagg-ner-iserasskolan-och-flera-forskolor-i-onsala) · SVT Halland
+- 2026-10-15 · [Förslaget: Grundskola och förskolor i Onsala läggs ner](https://norrahalland.se/nyheter/forslaget-grundskola-och-forskolor-i-onsala-laggs-ner/55963) · Norra Halland

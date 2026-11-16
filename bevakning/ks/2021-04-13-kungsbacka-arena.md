@@ -27,3 +27,8 @@ handlingarna skriver Kungsbacka stad.
 ## Tycka till
 
 - 2026-11-24 · vantas · Kommunstyrelsen väntas besluta om finansieringen av hyresgästanpassningarna; arbetsutskottet har föreslagit beslutet, och datumet är kommunstyrelsens nästa sammanträde. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
+
+## I media och debatt
+
+- 2022-08-30 · [Skrytbygge eller snålbygge – så tycker politikerna om nya arenahallen i Kungsbacka](https://www.svt.se/nyheter/lokalt/halland/skrytbygge-eller-snalbygge-sa-tycker-politikerna-om-nya-arenahallen-i-kungsbacka) · SVT Halland
+- 2021-04-14 · [Stor arena i Kungsbacka blir verklighet](https://www.svt.se/nyheter/lokalt/halland/stor-arena-i-kungsbacka-blir-verklighet) · SVT Halland

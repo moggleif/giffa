@@ -29,3 +29,8 @@ ett principavtal med exploatören.
 ## Tycka till
 
 - 2026-11-24 · vantas · Principavtalet väntas upp i kommunstyrelsen. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
+
+## I media och debatt
+
+- 2026-08-26 · [Debatt: Ingen konflikt gällande byggnation](https://norrahalland.se/debatt/debatt-ingen-konflikt-gallande-byggnation/55095) · Norra Halland
+- 2026-05-13 · [Ny stadsdel med 200 bostäder planeras vid golfbana](https://norrahalland.se/nyheter/ny-stadsdel-med-200-bostader-planeras-vid-golfbana/53362) · Norra Halland

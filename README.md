@@ -62,7 +62,8 @@ webbplats/   Bygger sidan ur bevakning/, OMRADE.md, platser.csv och KALLOR.md.
 docs/        Sidans stil och skript, som kopieras med i bygget.
 skanning/    Söker igenom kommunhandlingar inför månadens runda.
 handlingslankar/ Lägger handlingarna intill protokollen i ärendena.
-tests/       Testerna för bygget, skanningen och handlingslänkarna.
+tidningar/   Läser tidningarnas flöden efter artiklar om orterna.
+tests/       Testerna för bygget, skanningen, handlingslänkarna och tidningarna.
 KALLOR.md    Varifrån uppgifterna hämtas.
 kunskap/     Bakgrund om orterna och om sidans läsare, med källor.
 OMRADE.md    Föreningarna och vilka orter som hör till var och en.
@@ -92,6 +93,14 @@ kommande sammanträden på samma sätt och öppnar ett issue med etiketten
 `kallelser` när något träffar ([beslut 0005](beslut/0005-veckans-kallelser.md)).
 Det som rör ett bevakat ärende förs in under *Tycka till*, så att det syns
 på sidan före mötet. Lokalt: `python3 -m skanning --kommande …`.
+
+## Tidningarna varje morgon
+
+Varje morgon läser `tidningar.yml` Norra Hallands och SVT Hallands flöden
+och för in artiklarna om orterna, platserna och de uppmärksammade ärendena
+i veckans issue med etiketten `tidningar` (K37,
+[beslut 0016](beslut/0016-tidningarnas-floden.md)). Söndagsrundan för in
+dem under ärendenas *I media och debatt*. Lokalt: `python3 -m tidningar`.
 
 ## Söndagens handlingar och runda
 

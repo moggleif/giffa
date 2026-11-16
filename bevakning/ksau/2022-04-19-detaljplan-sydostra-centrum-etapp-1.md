@@ -35,3 +35,7 @@ planbeskrivningen hålls fjärde kvartalet 2026 med antagande första kvartalet 
 ## Tycka till
 
 - 2026-11-18 · yttrande · Nämnden för Teknik föreslås anta sitt yttrande i granskning 2; förvaltningen har inga synpunkter på ändringarna sedan förra granskningen. · [Teknik kallelse, punkt 5](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2026/2026-11-18/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2026/2026-11-18/handlingar.html#sida-270), [Planbeskrivning, granskningshandling 2](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2026/2026-11-18/handlingar.html#sida-160), [Plankarta (PDF)](https://kungsbacka.se/download/18.dbbdae71a1ce2dff4c1feff/1794580075634/N%C3%A4mnden%20f%C3%B6r%20Teknik%20-%20Handlingar%202026-11-18.pdf#page=159)
+
+## I media och debatt
+
+- 2022-06-04 · [Så ska Kungsbackas nya stadsdel bli](https://norrahalland.se/nyheter/saa-ska-kungsbackas-nya-stadsdel-bli/30133) · Norra Halland

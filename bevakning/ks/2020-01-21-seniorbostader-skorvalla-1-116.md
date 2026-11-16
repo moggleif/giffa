@@ -27,3 +27,8 @@ Om den överklagats står inte i protokollen än.
 - 2024-04-23 · beslut · Kommunstyrelsen godkände projektbeställningen. · [KS protokoll § 107](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2024/2024-04-23/protokoll.html#sida-26) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2024/2024-04-23/handlingar.html#sida-128)
 - 2024-04-09 · forslag · Kommunstyrelsens arbetsutskott föreslog att projektbeställningen godkänns. · [KSAU protokoll § 117](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2024/2024-04-09/protokoll.html#sida-19) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2024/2024-04-09/handlingar.html#sida-226), [Projektbeställningen](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2024/2024-04-09/handlingar.html#sida-227)
 - 2020-01-21 · beslut · Kommunstyrelsen lämnade positivt planbesked för Skörvalla 1:116, där ägaren ansökt om 44 lägenheter i flerbostadshus, och överlämnade planarbetet till byggnadsnämnden. Protokollet ligger som bilaga i KSAU-handlingarna 2024-04-09. · [KS protokoll § 4](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2024/2024-04-09/handlingar.html#sida-232)
+
+## I media och debatt
+
+- 2026-10-31 · [Nya seniorbostäder närmare byggstart – planen godkänd](https://norrahalland.se/nyheter/nya-seniorbostader-narmare-byggstart-planen-godkand/56198) · Norra Halland
+- 2020-12-21 · [Seniorbostäder blir försenade](https://norrahalland.se/nyheter/seniorbostader-blir-forsenade/23227) · Norra Halland

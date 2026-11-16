@@ -18,3 +18,7 @@ sedan uppdrag om en detaljplan för verksamheter inom del av Kläppa 2:2 i
 - 2026-04-21 · beslut · Kommunstyrelsen godkände lokaliseringsutredningen för ny återvinningscentral syd. · [KS protokoll § 90](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-04-21/protokoll.html#sida-19) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-04-21/handlingar.html#sida-105), [Lokaliseringsutredningen](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-04-21/handlingar.html#sida-108)
 - 2026-02-24 · info · Kommunstyrelsens arbetsutskott informerades om lokaliseringsutredning ÅVC Åsa. · [KSAU protokoll § 70](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-02-24/protokoll.html#sida-20)
 - 2019-09-12 · beslut · Byggnadsnämnden beviljade tidsbegränsat bygglov i fem år för återvinningscentralen på Frillesås-Rya 3:77. · [Byggnadsnämnden protokoll § 299](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2019/2019-09-12/protokoll.html#sida-33)
+
+## I media och debatt
+
+- 2026-03-23 · [Nytt förslag: Återvinningen flyttas från Frillesås](https://norrahalland.se/nyheter/nytt-forslag-aatervinningen-flyttas-fraan-frillesaas/52431) · Norra Halland

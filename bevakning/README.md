@@ -141,9 +141,11 @@ Andra avsnitt än *Förslaget i korthet*, *Händelser*, *Tycka till* och
 **I media och debatt** är valfritt: tidningsartiklar och diskussioner, en
 per rad med datum, rubriken som länk och var den stod. Ärendets sida
 visar varje post med en tidningsikon och tidningens namn först. En
-artikel som är källa till ett namn i `uppmarksammade.csv` står också här. Kungsbacka-Posten och
-sociala medier tas bara med när en människa länkat dem i ett issue
-([KALLOR.md](../KALLOR.md)).
+artikel som är källa till ett namn i `uppmarksammade.csv` står också här.
+Veckans issue med etiketten `tidningar` (K37) föreslår artiklar ur Norra
+Hallands och SVT Hallands flöden. Kungsbacka-Posten, de andra tidningarna
+som spärrar agenter, Sveriges Radio och sociala medier tas bara med när en
+människa länkat dem i ett issue ([KALLOR.md](../KALLOR.md)).
 
 ## Uppmärksammade ärenden
 
