@@ -15,4 +15,4 @@ Fullmäktiges beslut finns inte i protokollen i poolen, så utfallet är okänt.
 
 ## Händelser
 
-- 2014-03-18 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige utökar lokalinvesteringsbudgeten 2014 med 10 miljoner kronor och godkände, under den förutsättningen, köpekontraktet för Gubbekulla 1:162. Ett yrkande om avslag föll. · [KS protokoll § 68](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-36)
+- 2014-03-18 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige utökar lokalinvesteringsbudgeten 2014 med 10 miljoner kronor och godkände, under den förutsättningen, köpekontraktet för Gubbekulla 1:162. Ett yrkande om avslag föll. · [KS protokoll § 68](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-36)

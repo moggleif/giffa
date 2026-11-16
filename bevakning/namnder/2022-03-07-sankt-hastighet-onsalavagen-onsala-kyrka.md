@@ -15,4 +15,4 @@ hade yttrat sig.
 
 ## Händelser
 
-- 2022-03-07 · avbrutet · Arbetsutskottet för Teknik avslog ansökan om 40 kilometer i timmen på del av Onsalavägen. · [Teknik AU protokoll § 24](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2022/2022-03-07/protokoll.html#sida-10)
+- 2022-03-07 · avbrutet · Arbetsutskottet för Teknik avslog ansökan om 40 kilometer i timmen på del av Onsalavägen. · [Teknik AU protokoll § 24](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik-au/2022/2022-03-07/protokoll.html#sida-10)

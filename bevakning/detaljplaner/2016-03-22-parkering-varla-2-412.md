@@ -16,5 +16,5 @@ från 2016 och 2018 finns inte i poolen, så om planen antogs syns inte.
 
 ## Händelser
 
-- 2018-03-14 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog att nämnden antar detaljplanen, upprättad i oktober 2017 och reviderad i februari 2018. · [Byggnadsnämndens AU protokoll § 96](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-03-14/protokoll.html#sida-6)
-- 2016-03-22 · forslag · På arbetsutskottets kallelse stod förslaget att byggnadsnämnden ger förvaltningen i uppdrag att upprätta detaljplan för parkeringsplatser; enligt arbetsutskottets protokoll 2018 gav nämnden uppdraget i april 2016. · [Byggnadsnämndens AU kallelse, ärende 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2016/2016-03-22/kallelse.html#sida-2)
+- 2018-03-14 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog att nämnden antar detaljplanen, upprättad i oktober 2017 och reviderad i februari 2018. · [Byggnadsnämndens AU protokoll § 96](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2018/2018-03-14/protokoll.html#sida-6)
+- 2016-03-22 · forslag · På arbetsutskottets kallelse stod förslaget att byggnadsnämnden ger förvaltningen i uppdrag att upprätta detaljplan för parkeringsplatser; enligt arbetsutskottets protokoll 2018 gav nämnden uppdraget i april 2016. · [Byggnadsnämndens AU kallelse, ärende 13](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2016/2016-03-22/kallelse.html#sida-2)

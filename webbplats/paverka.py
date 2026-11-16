@@ -92,7 +92,7 @@ PBL = (
 )
 KALENDER = "https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv"
 LOKALPLAN = (
-    "https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2026/2026-10-14/"
+    "https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-10-14/"
     "protokoll.html#sida-13"
 )
 KALLA_MOTET = f'<a href="{KALENDER}">Kommunhandlingars kalender</a>'

@@ -15,5 +15,5 @@ i protokollen i poolen.
 
 ## Händelser
 
-- 2016-03-10 · beslut · Byggnadsnämnden gav förvaltningen i uppdrag att upprätta ny detaljplan och genomföra samråd för Liden 1:93. · [Byggnadsnämndens protokoll § 60](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2016/2016-03-10/protokoll.html#sida-12)
-- 2016-02-23 · forslag · Byggnadsnämndens arbetsutskott föreslog planuppdrag för Liden 1:93. · [Byggnadsnämndens AU protokoll § 44](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2016/2016-02-23/protokoll.html#sida-11)
+- 2016-03-10 · beslut · Byggnadsnämnden gav förvaltningen i uppdrag att upprätta ny detaljplan och genomföra samråd för Liden 1:93. · [Byggnadsnämndens protokoll § 60](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2016/2016-03-10/protokoll.html#sida-12)
+- 2016-02-23 · forslag · Byggnadsnämndens arbetsutskott föreslog planuppdrag för Liden 1:93. · [Byggnadsnämndens AU protokoll § 44](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2016/2016-02-23/protokoll.html#sida-11)

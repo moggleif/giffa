@@ -15,5 +15,5 @@ protokoll finns inte i poolen, så utfallet är okänt.
 
 ## Händelser
 
-- 2017-04-04 · info · Kommunfullmäktige behandlade svaret på motionen (KF § 55), och beslutet skickades till förvaltningen för Teknik för kännedom. · [Teknik handlingar, diarieförteckning](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2017/2017-05-17/handlingar.html#sida-78)
-- 2017-03-14 · forslag · Kommunstyrelsen föreslog att motionen avslås i sin helhet (KS § 72). · [KF kallelse, ärende 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2017/2017-04-04/kallelse.html#sida-2)
+- 2017-04-04 · info · Kommunfullmäktige behandlade svaret på motionen (KF § 55), och beslutet skickades till förvaltningen för Teknik för kännedom. · [Teknik handlingar, diarieförteckning](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2017/2017-05-17/handlingar.html#sida-78)
+- 2017-03-14 · forslag · Kommunstyrelsen föreslog att motionen avslås i sin helhet (KS § 72). · [KF kallelse, ärende 13](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2017/2017-04-04/kallelse.html#sida-2)

@@ -16,5 +16,5 @@ går inte att visa.
 
 ## Händelser
 
-- 2019-03-01 · forslag · Byggnadsnämndens arbetsutskott godkände ett uppdaterat granskningsutlåtande, sedan det första inte redovisat alla synpunkter, och föreslog nytt antagande. · [Byggnadsnämndens AU protokoll § 80](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-03-01/protokoll.html#sida-11)
-- 2019-01-31 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog att byggnadsnämnden antar detaljplanen. · [Byggnadsnämndens AU protokoll § 32](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-01-31/protokoll.html#sida-17)
+- 2019-03-01 · forslag · Byggnadsnämndens arbetsutskott godkände ett uppdaterat granskningsutlåtande, sedan det första inte redovisat alla synpunkter, och föreslog nytt antagande. · [Byggnadsnämndens AU protokoll § 80](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-03-01/protokoll.html#sida-11)
+- 2019-01-31 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog att byggnadsnämnden antar detaljplanen. · [Byggnadsnämndens AU protokoll § 32](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-01-31/protokoll.html#sida-17)

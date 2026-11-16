@@ -33,11 +33,11 @@ En eller två meningar om vad ärendet gäller, ur källan.
 
 ## Förslaget i korthet
 
-- Omkring 160 bostäder i småhus. · [Planprogrammet s. 2](https://moggleif.github.io/kommunhandlingar/...#sida-20)
+- Omkring 160 bostäder i småhus. · [Planprogrammet s. 2](https://moggleif.github.io/kungsbackakommun/...#sida-20)
 
 ## Händelser
 
-- 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna. · [KS protokoll § 161](https://github.com/...#sida-21) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kommunhandlingar/...#sida-124), [Programkartan (PDF)](https://kungsbacka.se/download/...pdf#page=171)
+- 2026-06-16 · samrad · Kommunstyrelsen godkände samrådshandlingarna. · [KS protokoll § 161](https://github.com/...#sida-21) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/...#sida-124), [Programkartan (PDF)](https://kungsbacka.se/download/...pdf#page=171)
 - 2026-06-02 · forslag · KSAU föreslog samråd. · [KSAU protokoll § 209](https://github.com/...#sida-14)
 
 ## Tycka till
@@ -76,7 +76,7 @@ eller *plan* blir länkar på samma sätt (K24); skriv dem som i källan.
 
 **Händelserna** står nyast först, en per rad: datum, steg, en mening om
 vad som hände och källan som länk, åtskilda med ` · `. Länka till handlingens sida på
-[kommunhandlingars webbplats](https://moggleif.github.io/kommunhandlingar/)
+[kommunhandlingars webbplats](https://moggleif.github.io/kungsbackakommun/)
 med `#sida-N` när den finns där; i `.md` på GitHub fungerar ankaret inte. Stegen ger ikonen i
 tabellen, och teckenförklaringen på sidan visar samma betydelser
 (`BETYDER` i `webbplats/ikoner.py`, som ett test håller lika med tabellen):

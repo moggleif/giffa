@@ -103,7 +103,7 @@ class Sidan(unittest.TestCase):
 
     def test_handlingen_och_historiken_lankar_till_datapoolen(self):
         html = self.html(date(2026, 11, 1))
-        bas = "https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-11-24"
+        bas = "https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24"
         self.assertIn(f'<a href="{bas}/handlingar.html#sida-2">Handlingen, sidorna 2–3</a>', html)
         self.assertIn(f'<a href="{bas}.html#punkt-1">Fullständig historik</a>', html)
 

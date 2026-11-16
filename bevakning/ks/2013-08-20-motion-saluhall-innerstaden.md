@@ -16,4 +16,4 @@ motionen avslås. Kommunfullmäktiges beslut finns inte i poolen, så utfallet
 
 ## Händelser
 
-- 2013-08-20 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige avslår motionen, eftersom det inte åligger kommunen att köpa fastigheter för aktiv fastighetsutveckling, till exempel en saluhall. · [KS protokoll § 188](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2013/2013-08-20/protokoll.html#sida-30)
+- 2013-08-20 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige avslår motionen, eftersom det inte åligger kommunen att köpa fastigheter för aktiv fastighetsutveckling, till exempel en saluhall. · [KS protokoll § 188](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2013/2013-08-20/protokoll.html#sida-30)

@@ -17,7 +17,7 @@ sedan fastighetsägaren meddelat att förfrågan inte längre var aktuell.
 
 ## Händelser
 
-- 2024-02-22 · avbrutet · Byggnadsnämnden avslutade planuppdraget för Tölö 5:39. · [Byggnadsnämnden protokoll § 39](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2024/2024-02-22/protokoll.html#sida-19)
-- 2024-02-01 · forslag · Byggnadsnämndens arbetsutskott föreslog att planuppdraget avslutas. · [Byggnadsnämndens AU protokoll § 11](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2024/2024-02-01/protokoll.html#sida-18)
-- 2016-11-10 · forslag · Byggnadsnämnden gav förvaltningen i uppdrag att upprätta ny detaljplan för Tölö 5:39 och genomföra samråd och granskning. · [Byggnadsnämnden protokoll § 39 (2024)](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2024/2024-02-22/protokoll.html#sida-19)
-- 2016-02-23 · info · Tölö 5:39 fanns med i en förteckning över fastigheter i Ekstas bestånd som kunde kompletteras med hyresbostäder med byggstart 2016–2017 (KS/2015:465). · [KS handlingar](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2016/2016-02-23/handlingar.html#sida-101)
+- 2024-02-22 · avbrutet · Byggnadsnämnden avslutade planuppdraget för Tölö 5:39. · [Byggnadsnämnden protokoll § 39](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2024/2024-02-22/protokoll.html#sida-19)
+- 2024-02-01 · forslag · Byggnadsnämndens arbetsutskott föreslog att planuppdraget avslutas. · [Byggnadsnämndens AU protokoll § 11](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2024/2024-02-01/protokoll.html#sida-18)
+- 2016-11-10 · forslag · Byggnadsnämnden gav förvaltningen i uppdrag att upprätta ny detaljplan för Tölö 5:39 och genomföra samråd och granskning. · [Byggnadsnämnden protokoll § 39 (2024)](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2024/2024-02-22/protokoll.html#sida-19)
+- 2016-02-23 · info · Tölö 5:39 fanns med i en förteckning över fastigheter i Ekstas bestånd som kunde kompletteras med hyresbostäder med byggstart 2016–2017 (KS/2015:465). · [KS handlingar](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2016/2016-02-23/handlingar.html#sida-101)

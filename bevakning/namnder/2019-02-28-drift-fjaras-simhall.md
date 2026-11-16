@@ -15,4 +15,4 @@ okänt.
 
 ## Händelser
 
-- 2019-02-28 · forslag · Nämnden för Kultur & Fritid föreslog att kommunfullmäktige godkänner att del av driften av Kungsbacka badhus och Fjärås simhall konkurrensutsätts. · [Kultur & Fritid protokoll § 13](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2019/2019-02-28/protokoll.html#sida-4)
+- 2019-02-28 · forslag · Nämnden för Kultur & Fritid föreslog att kommunfullmäktige godkänner att del av driften av Kungsbacka badhus och Fjärås simhall konkurrensutsätts. · [Kultur & Fritid protokoll § 13](https://moggleif.github.io/kungsbackakommun/kungsbacka/kultur/2019/2019-02-28/protokoll.html#sida-4)

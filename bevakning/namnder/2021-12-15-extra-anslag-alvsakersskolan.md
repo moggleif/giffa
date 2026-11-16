@@ -14,6 +14,6 @@ Redovisningen har ett eget diarienummer (2022-00905).
 
 ## Händelser
 
-- 2022-09-21 · info · Rektorerna på Älvsåkersskolan redovisade för nämnden hur miljonen använts och hur projektet Uppstart arbetar. · [Förskola & Grundskola protokoll § 128](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2022/2022-09-21/protokoll.html#sida-18)
-- 2022-08-10 · forslag · Arbetsutskottet föreslog att rektorerna bjuds in till nämnden, sedan en ledamot (SD) begärt en redogörelse för hur miljonen använts. · [Förskola & Grundskola AU protokoll § 98](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg-au/2022/2022-08-10/protokoll.html#sida-11)
-- 2021-12-15 · beslut · Nämnden för Förskola & Grundskola beslutade att Älvsåkersskolan tilldelas 1 miljon kronor ur resultatfonden 2022 för projektet Uppstarten. · [Förskola & Grundskola protokoll § 162](https://moggleif.github.io/kommunhandlingar/kungsbacka/fg/2021/2021-12-15/protokoll.html#sida-14)
+- 2022-09-21 · info · Rektorerna på Älvsåkersskolan redovisade för nämnden hur miljonen använts och hur projektet Uppstart arbetar. · [Förskola & Grundskola protokoll § 128](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2022/2022-09-21/protokoll.html#sida-18)
+- 2022-08-10 · forslag · Arbetsutskottet föreslog att rektorerna bjuds in till nämnden, sedan en ledamot (SD) begärt en redogörelse för hur miljonen använts. · [Förskola & Grundskola AU protokoll § 98](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg-au/2022/2022-08-10/protokoll.html#sida-11)
+- 2021-12-15 · beslut · Nämnden för Förskola & Grundskola beslutade att Älvsåkersskolan tilldelas 1 miljon kronor ur resultatfonden 2022 för projektet Uppstarten. · [Förskola & Grundskola protokoll § 162](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2021/2021-12-15/protokoll.html#sida-14)

@@ -29,7 +29,7 @@ jobs:
       - name: Sök
         run: |
           python3 -m skanning "$RUNNER_TEMP/kh/data/kungsbacka" \
-            https://moggleif.github.io/kommunhandlingar > "$RUNNER_TEMP/traffar.md"
+            https://moggleif.github.io/kungsbackakommun > "$RUNNER_TEMP/traffar.md"
       - uses: actions/upload-artifact@v4
         with:
           name: traffar

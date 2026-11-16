@@ -12,4 +12,4 @@ riksintressen för kust och friluftsliv. Byggnadsnämnden sade nej.
 
 ## Händelser
 
-- 2019-09-12 · beslut · Byggnadsnämnden lämnade besked att kommunen inte avser att pröva bostäder genom planläggning inom Stenudden 2:2. · [Byggnadsnämnden protokoll § 292](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2019/2019-09-12/protokoll.html#sida-12)
+- 2019-09-12 · beslut · Byggnadsnämnden lämnade besked att kommunen inte avser att pröva bostäder genom planläggning inom Stenudden 2:2. · [Byggnadsnämnden protokoll § 292](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2019/2019-09-12/protokoll.html#sida-12)

@@ -16,6 +16,6 @@ ett höglager på 30 meter.
 
 ## Händelser
 
-- 2019-06-05 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för tillbyggnad av lager på Frillesås-Rya 1:254. · [Byggnadsnämndens AU protokoll § 322](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-06-05/protokoll.html#sida-92)
-- 2018-11-07 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog antagande. Under granskningen 18 september – 13 oktober 2018 kom sju skrivelser, utan erinran. · [Byggnadsnämndens AU protokoll § 439](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-11-07/protokoll.html#sida-7)
-- 2017-02-09 · forslag · Byggnadsnämnden gav förvaltningen i uppdrag att upprätta detaljplan för Frillesås-Rya 1:254, med byggnadshöjd upp till 30 meter för ett höglager. · [Byggnadsnämnden protokoll § 70](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2017/2017-02-09/protokoll.html#sida-20)
+- 2019-06-05 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för tillbyggnad av lager på Frillesås-Rya 1:254. · [Byggnadsnämndens AU protokoll § 322](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-06-05/protokoll.html#sida-92)
+- 2018-11-07 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog antagande. Under granskningen 18 september – 13 oktober 2018 kom sju skrivelser, utan erinran. · [Byggnadsnämndens AU protokoll § 439](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2018/2018-11-07/protokoll.html#sida-7)
+- 2017-02-09 · forslag · Byggnadsnämnden gav förvaltningen i uppdrag att upprätta detaljplan för Frillesås-Rya 1:254, med byggnadshöjd upp till 30 meter för ett höglager. · [Byggnadsnämnden protokoll § 70](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2017/2017-02-09/protokoll.html#sida-20)

@@ -14,4 +14,4 @@ Kommunstyrelsen avslog förfrågan; en ledamot (KB) yrkade bifall till ansökan.
 
 ## Händelser
 
-- 2014-04-15 · avbrutet · Kommunstyrelsen avslog förfrågan om planläggning för bostäder, med hänvisning till översiktsplanen. · [KS protokoll § 82](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-04-15/protokoll.html#sida-18)
+- 2014-04-15 · avbrutet · Kommunstyrelsen avslog förfrågan om planläggning för bostäder, med hänvisning till översiktsplanen. · [KS protokoll § 82](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2014/2014-04-15/protokoll.html#sida-18)

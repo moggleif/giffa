@@ -77,7 +77,7 @@ faserna i `AGENTS.md`, till exempel genom att be den "köra rundan".
 Sökningen går också att köra lokalt:
 
 ```
-python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar
+python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kungsbackakommun
 ```
 
 ## Veckans kallelser
@@ -98,4 +98,4 @@ Claude-runda en bevakningsrunda ovanpå den: nya händelser, tillfällen att
 tycka till och nya ärenden, i en PR som projektägaren godkänner. Rundan är
 en schemalagd uppgift i Claude, inte en fil i repot
 ([beslut 0009](beslut/0009-handlingslankar-och-sondagsrunda.md)). Lokalt:
-`python3 -m handlingslankar <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar`.
+`python3 -m handlingslankar <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kungsbackakommun`.

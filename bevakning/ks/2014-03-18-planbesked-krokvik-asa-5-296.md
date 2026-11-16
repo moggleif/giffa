@@ -12,4 +12,4 @@ bo där året runt. Kommunstyrelsen sade nej 2014.
 
 ## Händelser
 
-- 2014-03-18 · avbrutet · Kommunstyrelsen avslog förfrågan, inkommen 2013-10-31, om ändrade planbestämmelser som tillåter utökad byggnadsyta inom fastigheterna Åsa 5:296–5:352 och 5:198 i Åsa. · [KS protokoll § 56](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-20)
+- 2014-03-18 · avbrutet · Kommunstyrelsen avslog förfrågan, inkommen 2013-10-31, om ändrade planbestämmelser som tillåter utökad byggnadsyta inom fastigheterna Åsa 5:296–5:352 och 5:198 i Åsa. · [KS protokoll § 56](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-20)

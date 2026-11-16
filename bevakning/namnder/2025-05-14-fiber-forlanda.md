@@ -11,4 +11,4 @@ fiber på landsbygden.
 
 ## Händelser
 
-- 2025-05-14 · klart · Nämnden för Teknik fick slutredovisningen av fiberutbyggnaden i Förlanda. · [Teknik protokoll § 55](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2025/2025-05-14/protokoll-namnden-for-teknik-protokoll-2025-05-14.html#sida-8)
+- 2025-05-14 · klart · Nämnden för Teknik fick slutredovisningen av fiberutbyggnaden i Förlanda. · [Teknik protokoll § 55](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2025/2025-05-14/protokoll-namnden-for-teknik-protokoll-2025-05-14.html#sida-8)

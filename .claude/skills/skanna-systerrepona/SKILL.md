@@ -17,7 +17,7 @@ rundans period
 inget sådant issue för perioden, kör samma sökning lokalt från repots rot:
 
 ```
-python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar
+python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kungsbackakommun
 ```
 
 Läs sedan de sidor som issuet pekar på, och sök det som skriptet inte

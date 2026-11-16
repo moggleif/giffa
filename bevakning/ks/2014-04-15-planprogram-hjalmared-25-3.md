@@ -17,4 +17,4 @@ inte i poolen.
 
 ## Händelser
 
-- 2014-04-15 · forslag · Kommunstyrelsen gav förvaltningen i uppdrag att ta fram förslag till planprogram för ett småhusområde, där en del ska vara tomter för självbyggeri. · [KS protokoll § 83](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-04-15/protokoll.html#sida-19)
+- 2014-04-15 · forslag · Kommunstyrelsen gav förvaltningen i uppdrag att ta fram förslag till planprogram för ett småhusområde, där en del ska vara tomter för självbyggeri. · [KS protokoll § 83](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2014/2014-04-15/protokoll.html#sida-19)

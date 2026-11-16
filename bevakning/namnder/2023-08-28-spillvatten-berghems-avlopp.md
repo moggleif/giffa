@@ -12,4 +12,4 @@ avlopp var inte godkända.
 
 ## Händelser
 
-- 2023-08-28 · beslut · Tekniks arbetsutskott godkände anslutning till kommunalt spillvatten och gav förvaltningschefen i uppdrag att teckna avtal. · [Teknik AU protokoll § 53](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2023/2023-08-28/protokoll.html#sida-9)
+- 2023-08-28 · beslut · Tekniks arbetsutskott godkände anslutning till kommunalt spillvatten och gav förvaltningschefen i uppdrag att teckna avtal. · [Teknik AU protokoll § 53](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik-au/2023/2023-08-28/protokoll.html#sida-9)

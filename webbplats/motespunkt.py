@@ -14,7 +14,7 @@ from webbplats.kort import post
 from webbplats.mall import Sajt
 from webbplats.punktkoppling import Kopplad
 
-POOL = "https://moggleif.github.io/kommunhandlingar/kungsbacka"
+POOL = "https://moggleif.github.io/kungsbackakommun/kungsbacka"
 FORSLAG = "Förslag till beslut"
 
 

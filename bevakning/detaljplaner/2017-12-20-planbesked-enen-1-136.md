@@ -15,5 +15,5 @@ utfallet är okänt.
 
 ## Händelser
 
-- 2019-03-21 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden lämnar besked att kommunen inte avser att pröva åtgärden genom planläggning. · [Byggnadsnämndens AU protokoll § 113](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-03-21/protokoll.html#sida-8)
-- 2017-12-20 · forslag · Planbeskedet stod på arbetsutskottets kallelse med förslag om negativt planbesked; protokollet gick inte att hämta. · [Byggnadsnämndens AU kallelse, punkt 7](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2017/2017-12-20/kallelse.html#sida-2)
+- 2019-03-21 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden lämnar besked att kommunen inte avser att pröva åtgärden genom planläggning. · [Byggnadsnämndens AU protokoll § 113](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-03-21/protokoll.html#sida-8)
+- 2017-12-20 · forslag · Planbeskedet stod på arbetsutskottets kallelse med förslag om negativt planbesked; protokollet gick inte att hämta. · [Byggnadsnämndens AU kallelse, punkt 7](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2017/2017-12-20/kallelse.html#sida-2)

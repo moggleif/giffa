@@ -16,5 +16,5 @@ inte i protokollen i poolen.
 
 ## Händelser
 
-- 2020-11-26 · beslut · Byggnadsnämnden beviljade bygglov för om- och tillbyggnad av verksamhet, det nya besökscentrumet Rymdrum vid Onsala rymdobservatorium på Råö 8:1. · [Byggnadsnämndens protokoll § 328](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2020/2020-11-26/protokoll.html#sida-53)
-- 2018-08-15 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden beviljar strandskyddsdispens för nybyggnad av besökscentrum med tillhörande markarbeten, med villkor om återställning. · [Byggnadsnämndens AU protokoll § 317](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-08-15/protokoll.html#sida-117)
+- 2020-11-26 · beslut · Byggnadsnämnden beviljade bygglov för om- och tillbyggnad av verksamhet, det nya besökscentrumet Rymdrum vid Onsala rymdobservatorium på Råö 8:1. · [Byggnadsnämndens protokoll § 328](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2020/2020-11-26/protokoll.html#sida-53)
+- 2018-08-15 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden beviljar strandskyddsdispens för nybyggnad av besökscentrum med tillhörande markarbeten, med villkor om återställning. · [Byggnadsnämndens AU protokoll § 317](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2018/2018-08-15/protokoll.html#sida-117)

@@ -15,5 +15,5 @@ protokollen i poolen, och inte heller något om att teleskopen byggts.
 
 ## Händelser
 
-- 2014-01-21 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden beviljar strandskyddsdispens för de två radioteleskopen i reviderade lägen. · [Byggnadsnämndens AU protokoll § 16](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2014/2014-01-21/protokoll.html#sida-32)
-- 2014-01-21 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden beviljar bygglov för nytt läge för radioteleskop A. · [Byggnadsnämndens AU protokoll § 15](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2014/2014-01-21/protokoll.html#sida-30)
+- 2014-01-21 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden beviljar strandskyddsdispens för de två radioteleskopen i reviderade lägen. · [Byggnadsnämndens AU protokoll § 16](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2014/2014-01-21/protokoll.html#sida-32)
+- 2014-01-21 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden beviljar bygglov för nytt läge för radioteleskop A. · [Byggnadsnämndens AU protokoll § 15](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2014/2014-01-21/protokoll.html#sida-30)
