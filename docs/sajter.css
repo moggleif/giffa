@@ -40,8 +40,7 @@
    rad när de inte får plats bredvid varandra. */
 .sajtmeny > ul > li:has(> details > .grupper) { position: static; }
 .sajtmeny details a { display: block; padding: 0.35em 0; color: inherit; }
-.sajtmeny .grupper { display: flex; flex-wrap: wrap; gap: 0 1.5em; width: max-content;
-                     max-width: 100%; box-sizing: border-box; }
+.sajtmeny .grupper { display: flex; flex-wrap: wrap; gap: 0 1.5em; }
 .sajtmeny details a, .sajtmeny .grupp { white-space: nowrap; }
 .sajtmeny .grupp { margin: 0.3em 0 0.1em; font-weight: 600; font-size: 0.9em;
                    color: var(--sajtaccent, #1d5d73); }
