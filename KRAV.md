@@ -502,3 +502,13 @@ flöde som inte gick att läsa eller tolka, eller som `robots.txt` spärrar,
 står i issuet med orsaken, också när det inte finns några träffar; saknas
 `robots.txt` är flödet tillåtet. Finns veckans issue fylls det på med en
 kommentar; finns inga nya träffar och lästes alla flöden händer inget.
+
+## K38 – En varning om AI överst på alla projektets sajter
+
+**Givet** en sida på någon av projektets sajter (K35) som laddar
+`sajter.js`, **när** sidan visas, **så** står överst, ovanför sajtraden,
+en smal rad i dämpad färg med en varningstriangel och texten *Skapad med
+AI utifrån offentliga handlingar. Fel kan förekomma, så kontrollera mot
+källan.* Raden går inte att stänga. Den följer temat (K36), och på en
+skärm 320 punkter bred bryts texten så att sidan aldrig blir bredare än
+skärmen. Triangeln läses inte upp; raden är märkt som en notering.
