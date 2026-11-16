@@ -15,5 +15,5 @@ planen byggts syns inte i poolen.
 
 ## Händelser
 
-- 2016-03-17 · info · Nämnden för Kultur & Fritid informerades om att nämnden för Förskola & Grundskola beslutat att genomföra Barbro betalar-förslaget om en konstgräsplan vid Älvsåkersskolan. · [Kultur & Fritid protokoll § 24](https://moggleif.github.io/kommunhandlingar/kungsbacka/kultur/2016/2016-03-17/protokoll.html#sida-10)
-- 2014-12-09 · forslag · Avrapporteringen från höstens rådslag med ungdomar redovisade förslaget om en konstgräsplan vid Älvsåkersskolan och att en sådan planerades. · [KF handlingar, avrapportering från rådslag](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2014/2014-12-09/handlingar.html#sida-48)
+- 2016-03-17 · info · Nämnden för Kultur & Fritid informerades om att nämnden för Förskola & Grundskola beslutat att genomföra Barbro betalar-förslaget om en konstgräsplan vid Älvsåkersskolan. · [Kultur & Fritid protokoll § 24](https://moggleif.github.io/kungsbackakommun/kungsbacka/kultur/2016/2016-03-17/protokoll.html#sida-10)
+- 2014-12-09 · forslag · Avrapporteringen från höstens rådslag med ungdomar redovisade förslaget om en konstgräsplan vid Älvsåkersskolan och att en sådan planerades. · [KF handlingar, avrapportering från rådslag](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2014/2014-12-09/handlingar.html#sida-48)

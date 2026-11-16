@@ -12,4 +12,4 @@ sade nej 2014.
 
 ## Händelser
 
-- 2014-03-18 · avbrutet · Kommunstyrelsen avslog förfrågan, inkommen 2009-11-13, om ändrad planläggning för fastigheten Ölmevalla Berg 1:2 i Åsa. · [KS protokoll § 49](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-13)
+- 2014-03-18 · avbrutet · Kommunstyrelsen avslog förfrågan, inkommen 2009-11-13, om ändrad planläggning för fastigheten Ölmevalla Berg 1:2 i Åsa. · [KS protokoll § 49](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-13)

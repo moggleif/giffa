@@ -16,4 +16,4 @@ protokollen i poolen, så utfallet är okänt.
 
 ## Händelser
 
-- 2017-10-25 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog att byggnadsnämnden antar detaljplanen. Planen var på granskning 5–21 september 2017. · [Byggnadsnämndens AU protokoll § 407](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2017/2017-10-25/protokoll.html#sida-15)
+- 2017-10-25 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet och föreslog att byggnadsnämnden antar detaljplanen. Planen var på granskning 5–21 september 2017. · [Byggnadsnämndens AU protokoll § 407](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2017/2017-10-25/protokoll.html#sida-15)

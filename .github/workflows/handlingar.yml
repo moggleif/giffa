@@ -38,7 +38,7 @@ jobs:
       - name: Lägg handlingarna intill protokollen
         run: |
           python3 -m handlingslankar "$RUNNER_TEMP/kh/data/kungsbacka" \
-            https://moggleif.github.io/kommunhandlingar | tee "$RUNNER_TEMP/lankar.txt"
+            https://moggleif.github.io/kungsbackakommun | tee "$RUNNER_TEMP/lankar.txt"
       - name: Testerna och bygget
         run: |
           python3 -m unittest discover -s tests -t .

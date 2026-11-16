@@ -12,4 +12,4 @@ natur. Kommunstyrelsen prövade den mot fördjupningen av översiktsplanen för
 
 ## Händelser
 
-- 2014-03-18 · avbrutet · Kommunstyrelsen avslog förfrågan, inkommen 2010-11-11, om planläggning för del av fastigheten Ölmevalla Hallen 1:17 och Flamsnäs 1:23 i Åsa. · [KS protokoll § 48](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-12)
+- 2014-03-18 · avbrutet · Kommunstyrelsen avslog förfrågan, inkommen 2010-11-11, om planläggning för del av fastigheten Ölmevalla Hallen 1:17 och Flamsnäs 1:23 i Åsa. · [KS protokoll § 48](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2014/2014-03-18/protokoll.html#sida-12)

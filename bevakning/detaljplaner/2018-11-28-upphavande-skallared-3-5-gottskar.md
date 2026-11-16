@@ -13,4 +13,4 @@ Byggnadsnämndens protokoll från 2018 saknas i poolen, så beslutet är okänt.
 
 ## Händelser
 
-- 2018-11-28 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden upphäver del av detaljplan O78 inom Skällared 3:5. · [Byggnadsnämndens AU protokoll § 461](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-11-28/protokoll.html#sida-7)
+- 2018-11-28 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden upphäver del av detaljplan O78 inom Skällared 3:5. · [Byggnadsnämndens AU protokoll § 461](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2018/2018-11-28/protokoll.html#sida-7)

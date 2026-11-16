@@ -14,4 +14,4 @@ och Trafikverket.
 
 ## Händelser
 
-- 2022-02-07 · avbrutet · Arbetsutskottet för Teknik avslog ansökan om 30 kilometer i timmen på del av Västra Särövägen. · [Teknik AU protokoll § 16](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik-au/2022/2022-02-07/protokoll.html#sida-13)
+- 2022-02-07 · avbrutet · Arbetsutskottet för Teknik avslog ansökan om 30 kilometer i timmen på del av Västra Särövägen. · [Teknik AU protokoll § 16](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik-au/2022/2022-02-07/protokoll.html#sida-13)

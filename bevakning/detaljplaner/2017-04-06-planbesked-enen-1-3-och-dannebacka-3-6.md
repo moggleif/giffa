@@ -14,4 +14,4 @@ Eksta Bostads AB:s begäran 2021 om att få förvärva Enen 1:3 är ett eget är
 
 ## Händelser
 
-- 2017-04-06 · avbrutet · Byggnadsnämnden avslog ansökan om planbesked för Enen 1:3 och Dannebacka 3:6. · [Byggnadsnämndens protokoll § 126](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2017/2017-04-06/protokoll.html#sida-10)
+- 2017-04-06 · avbrutet · Byggnadsnämnden avslog ansökan om planbesked för Enen 1:3 och Dannebacka 3:6. · [Byggnadsnämndens protokoll § 126](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2017/2017-04-06/protokoll.html#sida-10)

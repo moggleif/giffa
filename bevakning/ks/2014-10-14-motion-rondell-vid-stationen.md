@@ -15,6 +15,6 @@ protokoll finns inte i poolen, så utfallet är okänt.
 
 ## Händelser
 
-- 2017-04-04 · info · Kommunfullmäktige behandlade svaret på motionen (KF § 56), och beslutet skickades till förvaltningen för Teknik för kännedom. · [Teknik handlingar, diarieförteckning](https://moggleif.github.io/kommunhandlingar/kungsbacka/teknik/2017/2017-05-17/handlingar.html#sida-78)
-- 2017-03-14 · forslag · Kommunstyrelsen föreslog att motionen avslås i sin helhet (KS § 73). · [KF kallelse, ärende 14](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2017/2017-04-04/kallelse.html#sida-2)
-- 2014-10-14 · forslag · Motionen om rondell vid stationen anmäldes till kommunfullmäktige. · [KF kallelse, ärende 32](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2014/2014-10-14/kallelse.html#sida-3)
+- 2017-04-04 · info · Kommunfullmäktige behandlade svaret på motionen (KF § 56), och beslutet skickades till förvaltningen för Teknik för kännedom. · [Teknik handlingar, diarieförteckning](https://moggleif.github.io/kungsbackakommun/kungsbacka/teknik/2017/2017-05-17/handlingar.html#sida-78)
+- 2017-03-14 · forslag · Kommunstyrelsen föreslog att motionen avslås i sin helhet (KS § 73). · [KF kallelse, ärende 14](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2017/2017-04-04/kallelse.html#sida-2)
+- 2014-10-14 · forslag · Motionen om rondell vid stationen anmäldes till kommunfullmäktige. · [KF kallelse, ärende 32](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2014/2014-10-14/kallelse.html#sida-3)

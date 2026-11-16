@@ -13,7 +13,7 @@
 .sajtrad a[aria-current]::before { content: "◆" / ""; margin-right: 0.35em;
                                    color: var(--sajtaccent, #1d5d73); }
 
-.sajtmeny { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.75em;
+.sajtmeny { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.75em;
             padding: 0.4em 0; margin-bottom: 1em;
             border-bottom: 1px solid rgba(128, 128, 128, 0.3); }
 .sajtnamn { font-weight: 700; font-size: 1.15em; color: inherit; text-decoration: none;
@@ -34,10 +34,13 @@
   position: absolute; z-index: 40; top: 100%; left: 0; min-width: 14em;
   background: var(--sajtyta, Canvas); padding: 0.5em 1em; border-radius: 0.5em;
   border: 1px solid rgba(128, 128, 128, 0.4); box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.12); }
-.sajtmeny > ul > li:last-child details > ul,
-.sajtmeny > ul > li:last-child .grupper { left: auto; right: 0; }
+.sajtmeny > ul > li:last-child details > ul { left: auto; right: 0; }
+/* En undermeny med grupper kan vara bredare än vad som får plats till höger om sin rubrik.
+   Den står därför under hela menyn, från dess vänsterkant, och grupperna bryts till en ny
+   rad när de inte får plats bredvid varandra. */
+.sajtmeny > ul > li:has(> details > .grupper) { position: static; }
 .sajtmeny details a { display: block; padding: 0.35em 0; color: inherit; }
-.sajtmeny .grupper { display: flex; gap: 1.5em; }
+.sajtmeny .grupper { display: flex; flex-wrap: wrap; gap: 0 1.5em; }
 .sajtmeny details a, .sajtmeny .grupp { white-space: nowrap; }
 .sajtmeny .grupp { margin: 0.3em 0 0.1em; font-weight: 600; font-size: 0.9em;
                    color: var(--sajtaccent, #1d5d73); }

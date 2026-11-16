@@ -13,4 +13,4 @@ mindre än budget.
 
 ## Händelser
 
-- 2021-05-20 · klart · Nämnden för Service fick slutredovisningen av Åsa Gårdsskolans idrottshall, ombyggd till fullmåttshall med läktare. · [Service protokoll § 49](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2021/2021-05-20/protokoll.html#sida-7)
+- 2021-05-20 · klart · Nämnden för Service fick slutredovisningen av Åsa Gårdsskolans idrottshall, ombyggd till fullmåttshall med läktare. · [Service protokoll § 49](https://moggleif.github.io/kungsbackakommun/kungsbacka/service/2021/2021-05-20/protokoll.html#sida-7)

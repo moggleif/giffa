@@ -19,5 +19,5 @@ fastighetsägarna.
 
 ## Händelser
 
-- 2025-01-16 · beslut · Byggnadsnämnden gav positivt förhandsbesked, med villkor om en dagvattenutredning inför bygglovet. · [Byggnadsnämnden protokoll § 12](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2025/2025-01-16/protokoll.html#sida-17)
-- 2024-12-16 · forslag · Byggnadsnämndens arbetsutskott föreslog positivt förhandsbesked. · [Byggnadsnämndens AU protokoll § 354](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2024/2024-12-16/protokoll.html#sida-40)
+- 2025-01-16 · beslut · Byggnadsnämnden gav positivt förhandsbesked, med villkor om en dagvattenutredning inför bygglovet. · [Byggnadsnämnden protokoll § 12](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2025/2025-01-16/protokoll.html#sida-17)
+- 2024-12-16 · forslag · Byggnadsnämndens arbetsutskott föreslog positivt förhandsbesked. · [Byggnadsnämndens AU protokoll § 354](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2024/2024-12-16/protokoll.html#sida-40)

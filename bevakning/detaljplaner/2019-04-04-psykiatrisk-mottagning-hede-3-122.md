@@ -18,6 +18,6 @@ antogs syns inte.
 
 ## Händelser
 
-- 2019-11-21 · forslag · Antagandet av detaljplanen stod på byggnadsnämndens kallelse. Protokollet finns inte i poolen. · [Byggnadsnämndens kallelse, ärende 12](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2019/2019-11-21/kallelse.html#sida-3)
-- 2019-11-07 · forslag · Byggnadsnämndens arbetsutskott föreslog att nämnden godkänner granskningsutlåtandet och antar detaljplanen, efter att en skyddsbestämmelse tagits bort. · [Byggnadsnämndens AU protokoll § 554](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-11-07/protokoll.html#sida-12)
-- 2019-04-04 · forslag · Byggnadsnämndens arbetsutskott föreslog positivt planbesked och uppdrag att upprätta detaljplan för en öppen psykiatrisk mottagning i befintliga kontorslokaler. · [Byggnadsnämndens AU protokoll § 152](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-04-04/protokoll.html#sida-8)
+- 2019-11-21 · forslag · Antagandet av detaljplanen stod på byggnadsnämndens kallelse. Protokollet finns inte i poolen. · [Byggnadsnämndens kallelse, ärende 12](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2019/2019-11-21/kallelse.html#sida-3)
+- 2019-11-07 · forslag · Byggnadsnämndens arbetsutskott föreslog att nämnden godkänner granskningsutlåtandet och antar detaljplanen, efter att en skyddsbestämmelse tagits bort. · [Byggnadsnämndens AU protokoll § 554](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-11-07/protokoll.html#sida-12)
+- 2019-04-04 · forslag · Byggnadsnämndens arbetsutskott föreslog positivt planbesked och uppdrag att upprätta detaljplan för en öppen psykiatrisk mottagning i befintliga kontorslokaler. · [Byggnadsnämndens AU protokoll § 152](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-04-04/protokoll.html#sida-8)

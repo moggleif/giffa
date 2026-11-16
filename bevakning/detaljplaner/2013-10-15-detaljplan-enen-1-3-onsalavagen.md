@@ -16,8 +16,8 @@ inte här.
 
 ## Händelser
 
-- 2014-04-08 · info · Kommunfullmäktige fick lagakraftbeviset: planen har inte överklagats och vann laga kraft 10 mars 2014. · [KF protokoll, anmälan av inkomna skrivelser](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2014/2014-04-08/protokoll.html#sida-28)
-- 2014-02-04 · beslut · Kommunfullmäktige antog detaljplanen för Enen 1:3 m.fl. – Onsalavägen. · [KF protokoll § 6](https://moggleif.github.io/kommunhandlingar/kungsbacka/kf/2014/2014-02-04/protokoll.html#sida-12)
-- 2013-12-17 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige antar detaljplanen. · [KS protokoll § 300](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2013/2013-12-17/protokoll.html#sida-31)
-- 2013-11-07 · forslag · Byggnadsnämnden godkände detaljplanen och lämnade den till kommunfullmäktige för antagande. · [Byggnadsnämndens protokoll § 309](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2013/2013-11-07/protokoll.html#sida-31)
-- 2013-10-15 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden godkänner detaljplanen. · [Byggnadsnämndens AU protokoll § 452](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2013/2013-10-15/protokoll.html#sida-20)
+- 2014-04-08 · info · Kommunfullmäktige fick lagakraftbeviset: planen har inte överklagats och vann laga kraft 10 mars 2014. · [KF protokoll, anmälan av inkomna skrivelser](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2014/2014-04-08/protokoll.html#sida-28)
+- 2014-02-04 · beslut · Kommunfullmäktige antog detaljplanen för Enen 1:3 m.fl. – Onsalavägen. · [KF protokoll § 6](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2014/2014-02-04/protokoll.html#sida-12)
+- 2013-12-17 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige antar detaljplanen. · [KS protokoll § 300](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2013/2013-12-17/protokoll.html#sida-31)
+- 2013-11-07 · forslag · Byggnadsnämnden godkände detaljplanen och lämnade den till kommunfullmäktige för antagande. · [Byggnadsnämndens protokoll § 309](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2013/2013-11-07/protokoll.html#sida-31)
+- 2013-10-15 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden godkänner detaljplanen. · [Byggnadsnämndens AU protokoll § 452](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2013/2013-10-15/protokoll.html#sida-20)

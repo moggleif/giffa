@@ -13,4 +13,4 @@ området kustbygd. Kommunen köper skiftet för 8,9 miljoner kronor.
 
 ## Händelser
 
-- 2026-10-20 · beslut · Kommunstyrelsen godkände avtal om att skifte 1 av Vallda 26:2 förs över till kommunens fastighet Vallda 16:9 mot 8 900 000 kronor. · [KS protokoll § 250](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2026/2026-10-20/protokoll.html#sida-3)
+- 2026-10-20 · beslut · Kommunstyrelsen godkände avtal om att skifte 1 av Vallda 26:2 förs över till kommunens fastighet Vallda 16:9 mot 8 900 000 kronor. · [KS protokoll § 250](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-10-20/protokoll.html#sida-3)

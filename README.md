@@ -27,8 +27,9 @@ under de steg där underlaget finns och, för förslag med innehåll, förslaget
 Utan val syns allt; den som vill väljer en ort direkt, eller först en
 förening för att bara se dess orter, bakom knappen *Ort:*, och valet står
 i adressen och följer med mellan sidorna. Överst står en sajtrad till
-projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kommunhandlingar/)
-och [Kungsbacka i siffror](https://moggleif.github.io/politik/), som
+projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kungsbackakommun/),
+[Kungsbacka i siffror](https://moggleif.github.io/politik/) och
+[Region Halland](https://moggleif.github.io/regionhalland/), som
 laddar samma meny från Giffå: Giffå ritar den med `docs/sajter.js` och `docs/sajter.css`
 ([beslut 0013](beslut/0013-gemensam-meny-fran-giffa.md)). Sidan byggs ur ärendena av `webbplats/` och publiceras
 på GitHub Pages ([beslut 0002](beslut/0002-sidan-byggs-ur-arendena-i-pages-flodet.md)).
@@ -76,7 +77,7 @@ faserna i `AGENTS.md`, till exempel genom att be den "köra rundan".
 Sökningen går också att köra lokalt:
 
 ```
-python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar
+python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kungsbackakommun
 ```
 
 ## Veckans kallelser
@@ -97,4 +98,4 @@ Claude-runda en bevakningsrunda ovanpå den: nya händelser, tillfällen att
 tycka till och nya ärenden, i en PR som projektägaren godkänner. Rundan är
 en schemalagd uppgift i Claude, inte en fil i repot
 ([beslut 0009](beslut/0009-handlingslankar-och-sondagsrunda.md)). Lokalt:
-`python3 -m handlingslankar <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kommunhandlingar`.
+`python3 -m handlingslankar <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kungsbackakommun`.

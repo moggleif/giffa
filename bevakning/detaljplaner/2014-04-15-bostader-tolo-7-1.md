@@ -16,5 +16,5 @@ exploateringsavtalet undertecknats.
 
 ## Händelser
 
-- 2014-05-08 · beslut · Byggnadsnämnden antog detaljplanen för Tölö 7:1 m.fl., upprättad i november 2008 och reviderad i september 2009. · [Byggnadsnämnden protokoll § 149](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2014/2014-05-08/protokoll.html#sida-37)
-- 2014-04-15 · forslag · Byggnadsnämndens arbetsutskott föreslog att nämnden antar detaljplanen, sedan kommunstyrelsen i februari 2014 godkänt exploateringsavtalet. · [Byggnadsnämndens AU protokoll § 141](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2014/2014-04-15/protokoll.html#sida-53)
+- 2014-05-08 · beslut · Byggnadsnämnden antog detaljplanen för Tölö 7:1 m.fl., upprättad i november 2008 och reviderad i september 2009. · [Byggnadsnämnden protokoll § 149](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2014/2014-05-08/protokoll.html#sida-37)
+- 2014-04-15 · forslag · Byggnadsnämndens arbetsutskott föreslog att nämnden antar detaljplanen, sedan kommunstyrelsen i februari 2014 godkänt exploateringsavtalet. · [Byggnadsnämndens AU protokoll § 141](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2014/2014-04-15/protokoll.html#sida-53)

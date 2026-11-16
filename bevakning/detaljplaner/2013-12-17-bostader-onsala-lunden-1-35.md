@@ -16,6 +16,6 @@ poolen; arbetsutskottets protokoll från december 2017 gick inte att hämta.
 
 ## Händelser
 
-- 2017-12-20 · forslag · Byggnadsnämndens arbetsutskott skulle föreslå att byggnadsnämnden godkänner utställningshandlingarna och låter genomföra utställning av planen. · [Byggnadsnämndens AU kallelse, punkt 6](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2017/2017-12-20/kallelse.html#sida-2)
-- 2014-01-09 · beslut · Byggnadsnämnden bad kommunstyrelsen om uppdrag att låta planen övergå till normalt planförfarande och att besluta om skyddsavstånd till hästverksamhet. · [Byggnadsnämndens protokoll § 26](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2014/2014-01-09/protokoll.html#sida-36)
-- 2013-12-17 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet efter samrådet 17 september–28 oktober 2013 och föreslog normalt planförfarande. · [Byggnadsnämndens AU protokoll § 529](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2013/2013-12-17/protokoll.html#sida-36)
+- 2017-12-20 · forslag · Byggnadsnämndens arbetsutskott skulle föreslå att byggnadsnämnden godkänner utställningshandlingarna och låter genomföra utställning av planen. · [Byggnadsnämndens AU kallelse, punkt 6](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2017/2017-12-20/kallelse.html#sida-2)
+- 2014-01-09 · beslut · Byggnadsnämnden bad kommunstyrelsen om uppdrag att låta planen övergå till normalt planförfarande och att besluta om skyddsavstånd till hästverksamhet. · [Byggnadsnämndens protokoll § 26](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2014/2014-01-09/protokoll.html#sida-36)
+- 2013-12-17 · forslag · Byggnadsnämndens arbetsutskott godkände granskningsutlåtandet efter samrådet 17 september–28 oktober 2013 och föreslog normalt planförfarande. · [Byggnadsnämndens AU protokoll § 529](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2013/2013-12-17/protokoll.html#sida-36)

@@ -16,6 +16,6 @@ Gällinge-Skår 2:73.
 
 ## Händelser
 
-- 2020-11-26 · forslag · Byggnadsnämndens arbetsutskott föreslog vägnamn inom Gällinge-Skår 2:73. · [Byggnadsnämndens AU protokoll § 419](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2020/2020-11-26/protokoll.html#sida-10)
-- 2019-09-12 · forslag · Byggnadsnämnden godkände granskningsutlåtandet och överlämnade detaljplanen till kommunfullmäktige för antagande. Under granskningen kom åtta yttranden. · [Byggnadsnämnden protokoll § 291](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg/2019/2019-09-12/protokoll.html#sida-10)
-- 2019-08-29 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden godkänner granskningsutlåtandet och överlämnar planen för antagande. · [Byggnadsnämndens AU protokoll § 432](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2019/2019-08-29/protokoll.html#sida-7)
+- 2020-11-26 · forslag · Byggnadsnämndens arbetsutskott föreslog vägnamn inom Gällinge-Skår 2:73. · [Byggnadsnämndens AU protokoll § 419](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2020/2020-11-26/protokoll.html#sida-10)
+- 2019-09-12 · forslag · Byggnadsnämnden godkände granskningsutlåtandet och överlämnade detaljplanen till kommunfullmäktige för antagande. Under granskningen kom åtta yttranden. · [Byggnadsnämnden protokoll § 291](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2019/2019-09-12/protokoll.html#sida-10)
+- 2019-08-29 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden godkänner granskningsutlåtandet och överlämnar planen för antagande. · [Byggnadsnämndens AU protokoll § 432](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2019/2019-08-29/protokoll.html#sida-7)

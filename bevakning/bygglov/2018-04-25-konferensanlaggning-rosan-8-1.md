@@ -15,5 +15,5 @@ protokollen i poolen.
 
 ## Händelser
 
-- 2018-08-29 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för hotell- och konferensbyggnad, återuppbyggnad av anläggningen som förstördes vid brand. · [Byggnadsnämndens AU protokoll § 345](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-08-29/protokoll.html#sida-26)
-- 2018-04-25 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för återuppbyggnad av konferensanläggningen som förstördes vid brand 2017. · [Byggnadsnämndens AU protokoll § 185](https://moggleif.github.io/kommunhandlingar/kungsbacka/bygg-au/2018/2018-04-25/protokoll.html#sida-90)
+- 2018-08-29 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för hotell- och konferensbyggnad, återuppbyggnad av anläggningen som förstördes vid brand. · [Byggnadsnämndens AU protokoll § 345](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2018/2018-08-29/protokoll.html#sida-26)
+- 2018-04-25 · beslut · Byggnadsnämndens arbetsutskott beviljade bygglov för återuppbyggnad av konferensanläggningen som förstördes vid brand 2017. · [Byggnadsnämndens AU protokoll § 185](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2018/2018-04-25/protokoll.html#sida-90)

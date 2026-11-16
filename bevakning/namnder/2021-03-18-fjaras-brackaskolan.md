@@ -12,4 +12,4 @@ projektet i allt väsentligt uppfyllt kraven och kostat mindre än budget.
 
 ## Händelser
 
-- 2021-03-18 · klart · Nämnden för Service fick slutredovisningen av Fjärås Bräckaskolan: kraven var i allt väsentligt uppfyllda och utfallet låg under budget. · [Service protokoll § 25](https://moggleif.github.io/kommunhandlingar/kungsbacka/service/2021/2021-03-18/protokoll.html#sida-7)
+- 2021-03-18 · klart · Nämnden för Service fick slutredovisningen av Fjärås Bräckaskolan: kraven var i allt väsentligt uppfyllda och utfallet låg under budget. · [Service protokoll § 25](https://moggleif.github.io/kungsbackakommun/kungsbacka/service/2021/2021-03-18/protokoll.html#sida-7)

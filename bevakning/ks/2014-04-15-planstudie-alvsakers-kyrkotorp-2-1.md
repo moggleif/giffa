@@ -16,4 +16,4 @@ inte i poolen.
 
 ## Händelser
 
-- 2014-04-15 · forslag · Kommunstyrelsen gav förvaltningen i uppdrag att genom en planstudie utreda förutsättningarna för bostäder inom fastigheterna. · [KS protokoll § 81](https://moggleif.github.io/kommunhandlingar/kungsbacka/ks/2014/2014-04-15/protokoll.html#sida-17)
+- 2014-04-15 · forslag · Kommunstyrelsen gav förvaltningen i uppdrag att genom en planstudie utreda förutsättningarna för bostäder inom fastigheterna. · [KS protokoll § 81](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2014/2014-04-15/protokoll.html#sida-17)
