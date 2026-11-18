@@ -508,7 +508,7 @@ kommentar; finns inga nya träffar och lästes alla flöden händer inget.
 **Givet** en sida på någon av projektets sajter (K35) som laddar
 `sajter.js`, **när** sidan visas, **så** står överst, ovanför sajtraden,
 en smal rad i dämpad färg med en varningstriangel och texten *Skapad med
-AI utifrån offentliga handlingar. Fel kan förekomma, så kontrollera mot
-källan.* Raden går inte att stänga. Den följer temat (K36), och på en
+AI ur offentliga uppgifter från kommunen, regionen och statliga
+myndigheter. Fel kan förekomma, så kontrollera mot källan.* Raden går inte att stänga. Den följer temat (K36), och på en
 skärm 320 punkter bred bryts texten så att sidan aldrig blir bredare än
 skärmen. Triangeln läses inte upp; raden är märkt som en notering.

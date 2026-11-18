@@ -93,7 +93,7 @@ test("varningen om AI står överst, före sajtraden, på alla sajter", () => {
     assert.strictEqual(varning.getAttribute("role"), "note");
     assert.strictEqual(varning.querySelector("button"), null);
     assert.strictEqual(varning.querySelector("p").textContent,
-      "Skapad med AI utifrån offentliga handlingar. Fel kan förekomma, så kontrollera mot källan.");
+      "Skapad med AI ur offentliga uppgifter från kommunen, regionen och statliga myndigheter. Fel kan förekomma, så kontrollera mot källan.");
   });
 });
 
