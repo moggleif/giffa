@@ -7,7 +7,10 @@ Projektägaren bad 2026-11-16 om en varning överst på alla sidor om att
 sidorna är skapade av AI och att fel och tolkningar kan förekomma. Tre
 texter föreslogs; projektägaren valde varningstriangeln ur det kortaste
 förslaget och texten *Skapad med AI utifrån offentliga handlingar. Fel kan
-förekomma, så kontrollera mot källan.*, alltid synlig.
+förekomma, så kontrollera mot källan.*, alltid synlig. 2026-11-18 ändrades
+texten till *Skapad med AI ur offentliga uppgifter från kommunen,
+regionen och statliga myndigheter. …*, eftersom sajterna också bygger på
+statistik och inte bara på handlingar.
 
 ## Beslut
 
@@ -24,6 +27,6 @@ förekomma, så kontrollera mot källan.*, alltid synlig.
 ## Konsekvenser
 
 - Utan skript visas ingen varning, liksom ingen sajtrad.
-- På de smalaste skärmarna tar varningen två till tre rader.
+- På de smalaste skärmarna tar varningen tre till fyra rader.
 - Kungsbacka i siffror (politik) kör sina kontroller mot en fryst kopia av
   `sajter.js` och `sajter.css`. Där syns varningen först när kopian byts ut.

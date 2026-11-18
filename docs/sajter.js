@@ -11,7 +11,8 @@
     ["/politik/", "Kungsbacka i siffror"],
     ["/regionhalland/", "Region Halland"]
   ];
-  var VARNING = "Skapad med AI utifrån offentliga handlingar. Fel kan förekomma, så kontrollera mot källan.";
+  var VARNING = "Skapad med AI ur offentliga uppgifter från kommunen, regionen och statliga " +
+    "myndigheter. Fel kan förekomma, så kontrollera mot källan.";
 
   function alla(valjare, rot) {
     return Array.prototype.slice.call(rot.querySelectorAll(valjare));
