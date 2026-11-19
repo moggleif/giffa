@@ -26,7 +26,7 @@
 .sokresultat mark { background: var(--varning); color: inherit; padding: 0 0.1em; }
 
 @media (max-width: 40rem) {
-  .sajtrad.kand > div:has(.sokknapp) {
+  .sajtrad.kand > div {
     grid-template-columns: minmax(0, max-content) 1fr max-content max-content; }
   .sajtrad.kand .sokknapp { margin: 0; justify-self: end; }
   .sajtrad.kand .sokknapp + .temaknapp { justify-self: start; }

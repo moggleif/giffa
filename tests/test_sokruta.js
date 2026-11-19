@@ -126,13 +126,16 @@ test("ett tecken söker inte, och utan träff står det", async () => {
 test("Escape fäller ihop fältet och lämnar fokus på knappen", () => {
   const { knapp, panel } = sida();
   knapp.skicka("click");
-  panel.skicka("keydown", { key: "Escape" });
+  let stoppad = false;
+  panel.skicka("keydown", { key: "Escape", stopPropagation: () => { stoppad = true; } });
   assert.deepStrictEqual([panel.hidden, knapp.getAttribute("aria-expanded"), El.fokus], [true, "false", knapp]);
+  assert.ok(stoppad, "menyns Escape i sajter.js ska inte också köras");
 });
 
-test("på sidan Sök är fältet utfällt från början", () => {
-  const { panel, falt } = sida({ oppen: true });
-  assert.deepStrictEqual([panel.hidden, El.fokus], [false, falt]);
+test("på sidan Sök är fältet utfällt från början, utan att ta fokus", () => {
+  El.fokus = null;
+  const { panel, knapp } = sida({ oppen: true });
+  assert.deepStrictEqual([panel.hidden, knapp.getAttribute("aria-expanded"), El.fokus], [false, "true", null]);
 });
 
 test("gick indexet inte att ladda står det, och nästa sökning försöker igen", async () => {

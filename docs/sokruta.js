@@ -105,13 +105,9 @@
   }
 
   function vaxla(knapp, panel, oppen) {
-    var falt = panel.querySelector("input");
     knapp.setAttribute("aria-expanded", String(oppen));
     panel.hidden = !oppen;
-    if (oppen) {
-      falt.focus();
-      sok(panel, falt);
-    }
+    if (oppen) sok(panel, panel.querySelector("input"));
   }
 
   var sajtrad = document.querySelector(".sajtrad").querySelector("div");
@@ -122,9 +118,14 @@
   var panel = panelen();
   sajtrad.insertBefore(knapp, sajtrad.querySelector(".temaknapp") || sajtrad.querySelector(".menyknapp"));
   meny.parentNode.insertBefore(panel, meny);
-  knapp.addEventListener("click", function () { vaxla(knapp, panel, panel.hidden); });
+  knapp.addEventListener("click", function () {
+    vaxla(knapp, panel, panel.hidden);
+    if (!panel.hidden) panel.querySelector("input").focus();
+  });
+  // Escape stänger bara fältet; sajter.js ska inte också stänga menyn och flytta fokus dit.
   panel.addEventListener("keydown", function (h) {
     if (h.key !== "Escape") return;
+    h.stopPropagation();
     vaxla(knapp, panel, false);
     knapp.focus();
   });
