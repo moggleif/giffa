@@ -44,3 +44,8 @@ Projektägaren tog bort raden *Namnet: …* med källan under varje namn i
 avsnittet *Ärenden med mer uppmärksamhet*: den stod i vägen. Källan står
 kvar i `uppmarksammade.csv`, och en tidningsartikel som gav ett namn står
 under ärendet i *I media och debatt*, märkt med en tidningsikon.
+
+## Ändring 2026-11-19
+
+Sökrutan på sidan *Sök* ersattes av knappen *Sök* i sajtraden, som söker i
+allt på ärendena ([beslut 0018](0018-sok-i-sajtraden.md)).

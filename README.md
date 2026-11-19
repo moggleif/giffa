@@ -18,15 +18,16 @@ som är beslutat, en historik över det som är klart, kommunstyrelsens
 kommande sammanträde punkt för punkt inför partiernas gruppmöte (det
 föregående, märkt så, tills nästa kallelse finns), med
 orterna varje punkt rör och ärendena i Giffå med samma
-diarienummer, en sökning på rubrik,
-namn och ort, vad som bevakas och en sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
+diarienummer, vad som bevakas och en sida för varje ärende. Listorna visar en tidslinje och kort, på mobilen bara
 korten. Fastighetsbeteckningar, platser, gator och detaljplaner i ett ärende
 länkar till kommunens karta. Varje pågående plan visar på kortet och sin sida var den står i plan- och
 bygglagens process och vilka steg som kommer. Ärendets sida har länkar direkt till handlingarna
 under de steg där underlaget finns och, för förslag med innehåll, förslaget i korthet.
 Utan val syns allt; den som vill väljer en ort direkt, eller först en
 förening för att bara se dess orter, bakom knappen *Ort:*, och valet står
-i adressen och följer med mellan sidorna. Överst står en sajtrad till
+i adressen och följer med mellan sidorna. Knappen *Sök* i sajtraden
+söker medan man skriver i allt på ärendena och i punkterna på KS-mötet, och
+sidan *Sök* listar alla ärenden. Överst står en sajtrad till
 projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kungsbackakommun/),
 [Kungsbacka i siffror](https://moggleif.github.io/politik/) och
 [Region Halland](https://moggleif.github.io/regionhalland/), som
