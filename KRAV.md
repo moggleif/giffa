@@ -315,10 +315,11 @@ ord finns, utan hänsyn till stora och små bokstäver; poster där alla ord
 finns i det som söks först står först, och de andra märks *nämns i
 texten*. Varje sajt och grupp har en rubrik, gruppen med antalet; orden är
 markerade i rubrikerna, och högst tjugo träffar per grupp står direkt,
-resten bakom en knapp *Visa alla*. En sajt vars index inte gick att
-hämta sägs med en rad. Finns ingen träff står det. Escape eller ett nytt
+resten bakom en knapp *Visa alla*, som lämnar fokus på den första av de
+nya. En sajt vars index inte gick att hämta, eller inte har formatet, sägs
+med en rad. Finns ingen träff står det. Escape eller ett nytt
 tryck på knappen fäller ihop fältet. På en sida som ber om det är fältet
-utfällt från början. Ingenting skickas till någon annan värd.
+utfällt från början, och indexen hämtas när man börjar skriva. Ingenting skickas till någon annan värd.
 
 På Giffå söks ärendena i rubriken, orterna, organet, diarienumret och
 namnen ur `bevakning/uppmarksammade.csv` först, och i texten – ingressen,

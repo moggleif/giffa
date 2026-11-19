@@ -152,6 +152,7 @@ test("tjugo träffar per grupp, resten bakom en knapp", async () => {
   visa.skicka("click");
   assert.strictEqual(panel.querySelectorAll("li").length, 25);
   assert.strictEqual(panel.querySelector(".visa-alla"), null);
+  assert.strictEqual(El.fokus.textContent, "Stockalid § 21");
 });
 
 test("på en annan sajt står den först, och Giffås länkar får inget urval", async () => {
@@ -180,10 +181,29 @@ test("Escape fäller ihop fältet och lämnar fokus på knappen", () => {
   assert.ok(stoppad, "menyns Escape i sajter.js ska inte också köras");
 });
 
-test("på sidan Sök är fältet utfällt från början, utan att ta fokus", () => {
+test("på sidan Sök är fältet utfällt från början, utan att ta fokus, och hämtar när man skriver", async () => {
   El.fokus = null;
-  const { panel, knapp } = sida({ oppen: true });
+  const { panel, knapp, skriv, hamtat } = sida({ oppen: true });
   assert.deepStrictEqual([panel.hidden, knapp.getAttribute("aria-expanded"), El.fokus], [false, "true", null]);
+  await vanta();
+  assert.deepStrictEqual(hamtat, []);
+  await skriv("st");
+  await skriv("stockalid");
+  assert.strictEqual(hamtat.length, 3);
+  assert.strictEqual(status(panel), "29 träffar");
+});
+
+test("ett index utan grupper räknas som ett som inte gick att hämta", async () => {
+  INDEX["https://moggleif.github.io/regionhalland/sok.json"] = { poster: [] };
+  try {
+    const { knapp, panel, skriv } = sida();
+    knapp.skicka("click");
+    await skriv("stockalid");
+    assert.deepStrictEqual(rader(panel), ["Gick inte att söka i regionhalland."]);
+    assert.strictEqual(status(panel), "29 träffar");
+  } finally {
+    delete INDEX["https://moggleif.github.io/regionhalland/sok.json"];
+  }
 });
 
 test("ett index som inte gick att hämta sägs, och nästa utfällning försöker igen", async () => {

@@ -34,7 +34,9 @@ kommande sammanträde, protokollen i datapoolerna och sidorna i
   har också `orter` och `kallas`, och Giffås index `foreningar`, för
   urvalet (K22).
 - **En sökning söker i alla sajterna** och visar dem en i taget, den
-  visade först. Indexen hämtas först när fältet fälls ut, alla på en gång.
+  visade först. Indexen hämtas först när fältet fälls ut, alla på en gång,
+  och på en sida där fältet är utfällt från början när man börjar skriva.
+  Ett index utan `grupper` räknas som ett som inte gick att hämta.
   Inget skickas till någon annan värd.
 - **Träff i det som söks först står först**; de som bara står i texten
   märks *nämns i texten*. Varje ord ska finnas; ingen stavningstolerans.
