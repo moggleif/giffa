@@ -471,7 +471,7 @@ en ny rad när de inte får plats bredvid varandra.
 Bara en undermeny är öppen åt gången, och Escape eller ett klick utanför
 stänger den. Undermenyn med den visade sidan är markerad, liksom sidan. På
 en skärm högst 640 punkter bred är sajtraden en enda rad: den visade sajten,
-knappen för mörkt tema (K36) och knappen *Meny*, som fäller ut menyn med de andra sajterna sist under
+på Giffå knappen *Sök* (K28), knappen för mörkt tema (K36) och knappen *Meny*, som fäller ut menyn med de andra sajterna sist under
 *Projektets andra sajter*. Utan skriptet står sajtens meny som en lista
 med sajtens namn först och ingen sajtrad.
 
