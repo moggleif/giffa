@@ -27,6 +27,7 @@ from webbplats.ksmotet import ks_motet
 from webbplats.mall import Sajt
 from webbplats.sidor import LISTOR, lista, startsida
 from webbplats.sok import soksida
+from webbplats.sokindex import sokindex
 from webbplats.uppmarksammat import Namn, namn_per_arende
 from webbplats.uppmarksammat import las as las_namnen
 
@@ -79,12 +80,14 @@ def bygg(rot: Path, ut: Path, repo: str, pool: Path) -> None:
     arenden, namnen = med_namn(rot, las_arenden(rot, sajt.orter))
     runda = underlag.senaste_runda(las(rot, "bevakning/rundor.csv"))
     kallor = underlag.kallor(las(rot, "KALLOR.md"))
+    motet = kommande(pool, byggd.date())
     shutil.copytree(rot / "docs", ut, dirs_exist_ok=True)
     sidor = {
         "index.html": startsida(sajt, arenden, runda, namnen),
         "sok.html": soksida(sajt, arenden),
         "bevakar.html": bevakar(sajt, platser, kallor),
-        KS_MOTET: ks_motet(sajt, kommande(pool, byggd.date()), arenden, platser),
+        KS_MOTET: ks_motet(sajt, motet, arenden, platser),
+        "sok.json": sokindex(sajt, arenden, motet),
     }
     sidor |= {listan[0]: lista(sajt, arenden, listan, namnen) for listan in LISTOR}
     sidor |= {a.sida: arendesida(sajt, a) for a in arenden}

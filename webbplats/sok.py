@@ -1,7 +1,8 @@
-"""Krav: K28 i KRAV.md. Test: tests/test_sok.py och tests/test_sok.js.
+"""Krav: K28 i KRAV.md, beslut 0018. Test: tests/test_sok.py.
 
-Sidan Sök: alla ärenden i en lista med det man kan söka på i data-sok, och
-rutan som docs/sok.js filtrerar med. Utan skript står hela listan.
+Sidan Sök: alla ärenden i en lista. Med skript fäller docs/sokruta.js ut
+sökfältet överst (data-sok-oppen); utan skript går listan att söka i med
+webbläsarens egen sökning.
 """
 
 from html import escape
@@ -13,21 +14,12 @@ from webbplats.mall import Sajt, sida
 
 def soksida(sajt: Sajt, arenden: list[Arende]) -> str:
     poster = "".join(post(a) for a in arenden)
-    innehall = (
-        "<p>Sök bland alla ärenden på rubriken, namnen de kallas, orten eller organet.</p>"
-        '<p class="sok" hidden><label for="sok">Sök</label> '
-        '<input id="sok" type="search" autocomplete="off"></p>'
-        f'<ul class="sokning">{poster}</ul>'
-        '<p class="ingen-traff" hidden>Inga ärenden matchar sökningen.</p>'
-        '<script src="sok.js"></script>'
-    )
-    return sida(sajt, "sok.html", "Sök", innehall)
+    return sida(sajt, "sok.html", "Sök", f'<ul class="sokning" data-sok-oppen>{poster}</ul>')
 
 
 def post(arende: Arende) -> str:
     falt = arende.falt
-    sokbart = " ".join((falt["rubrik"], *arende.kallas, *arende.orter, falt["organ"])).lower()
     return (
-        f'<li data-sok="{escape(sokbart)}"><a href="{arende.sida}">{escape(falt["rubrik"])}</a> '
+        f'<li><a href="{arende.sida}">{escape(falt["rubrik"])}</a> '
         f"<small>{escape(', '.join(arende.orter))} · {falt['status']}</small>{namn_rad(arende)}</li>"
     )

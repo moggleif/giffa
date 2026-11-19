@@ -1,4 +1,4 @@
-"""K28: sidan Sök listar alla ärenden med det som går att söka på."""
+"""K28: sidan Sök listar alla ärenden, med sökfältet utfällt överst."""
 
 import unittest
 from dataclasses import replace
@@ -8,18 +8,16 @@ from webbplats.sok import soksida
 
 
 class Soksidan(unittest.TestCase):
-    def test_alla_arenden_med_rubrik_namn_orter_och_organ_i_sma_bokstaver(self):
+    def test_alla_arenden_med_orter_status_och_namn(self):
         arenden = [replace(arende("pågår", "a"), kallas=("Stråket i Åsa",)), arende("klart", "b")]
         html = soksida(SAJT, arenden)
-        self.assertIn('data-sok="ny förskola stråket i åsa åsa fjärås nämnden"', html)
-        self.assertIn('data-sok="ny förskola åsa fjärås nämnden"', html)
-        self.assertIn('<a href="arende/b.html">Ny förskola</a>', html)
+        self.assertIn('<li><a href="arende/b.html">Ny förskola</a> <small>Åsa, Fjärås · klart</small>', html)
         self.assertIn('<p class="kallas">Uppmärksammat som <span class="etikett">Stråket i Åsa</span></p>', html)
 
-    def test_rutan_ar_dold_tills_skriptet_visar_den(self):
+    def test_faltet_falls_ut_av_skriptet(self):
         html = soksida(SAJT, [arende("pågår")])
-        self.assertIn('<p class="sok" hidden><label for="sok">Sök</label>', html)
-        self.assertIn('<script src="sok.js"></script>', html)
+        self.assertIn('<ul class="sokning" data-sok-oppen>', html)
+        self.assertIn('<script src="sokruta.js" defer></script>', html)
         self.assertIn('<a href="sok.html" aria-current="page">Sök</a>', html)
 
 

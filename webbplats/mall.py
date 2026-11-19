@@ -51,7 +51,10 @@ def sida(sajt: Sajt, adress: str, rubrik: str, innehall: str) -> str:
 <script src="{rot}tema.js"></script>
 <link rel="stylesheet" href="{rot}sajter.css">
 <link rel="stylesheet" href="{rot}stil.css">
+<link rel="stylesheet" href="{rot}sok.css">
 <script src="{rot}sajter.js" defer></script>
+<script src="{rot}sokning.js" defer></script>
+<script src="{rot}sokruta.js" defer></script>
 </head>
 <body>
 <a class="hoppa" href="#innehall">Hoppa till innehållet</a>
