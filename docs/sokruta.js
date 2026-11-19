@@ -1,20 +1,26 @@
 // Krav: K28 i KRAV.md, beslut 0018. Test: tests/test_sokruta.js.
-// Knappen Sök i sajtraden, som sajter.js just lagt till, fäller ut sökfältet under raden.
-// Sökindexet sok.json hämtas första gången, och träffarna ritas medan man skriver: ärendena
-// i urvalet i adressen och punkterna på KS-mötet, var för sig. Escape eller knappen fäller
-// ihop fältet. På sidan Sök (data-sok-oppen) är fältet utfällt från början.
+// Knappen Sök i sajtraden fäller ut sökfältet under raden. sajter.js laddar skriptet när
+// sajtraden finns. Första gången hämtas varje sajts sok.json, där sajtradens länk pekar, och
+// träffarna ritas medan man skriver: sajt för sajt, den här först, och grupp för grupp.
+// Urvalet i adressen gäller Giffås ärenden. Escape eller knappen fäller ihop fältet. På en
+// sida med data-sok-oppen, som Giffås sida Sök, är fältet utfällt från början.
 (function () {
   var MINST = 2;
-  var skript = document.currentScript.getAttribute("src");
-  var rot = skript.slice(0, skript.lastIndexOf("/") + 1);
-  var index = null;
-  var laddning = null;
+  var VISAS = 20;
 
   function element(tagg, attribut, text) {
     var e = document.createElement(tagg);
     Object.keys(attribut).forEach(function (namn) { e.setAttribute(namn, attribut[namn]); });
     if (text) e.textContent = text;
     return e;
+  }
+
+  function sajterna() {
+    var lankar = document.querySelector(".sajtrad").querySelectorAll("a");
+    lankar = Array.prototype.slice.call(lankar);
+    return lankar.map(function (a) {
+      return { namn: a.textContent, adress: a.getAttribute("href"), denna: a.getAttribute("aria-current") !== null };
+    }).sort(function (a, b) { return Number(b.denna) - Number(a.denna); });
   }
 
   function markerad(lank, text, ord) {
@@ -24,110 +30,138 @@
     return lank;
   }
 
-  function rad(traff, adress, om, ord) {
+  // Ett ärende på Giffå behåller urvalet i adressen när man står på Giffå.
+  function rad(traff, sajt, ord) {
+    var post = traff.post;
+    var adress = new URL(post.adress, sajt.adress + "sok.json").href;
+    var namn = Sokning.namnen(post, ord).map(function (n) { return "uppmärksammat som " + n; });
+    var om = post.om.concat(namn, traff.iTexten ? ["nämns i texten"] : []);
     var li = element("li", {});
-    li.appendChild(markerad(element("a", { href: adress }), traff.post.rubrik, ord));
-    li.appendChild(element("small", {}, om.concat(traff.iTexten ? ["nämns i texten"] : []).join(" · ")));
+    if (post.orter && sajt.denna) adress += location.search;
+    li.appendChild(markerad(element("a", { href: adress }), post.rubrik, ord));
+    li.appendChild(element("small", {}, om.join(" · ")));
     return li;
   }
 
-  function arenderad(traff, ord) {
-    var a = traff.post;
-    var namn = Sokning.namnen(a, ord).map(function (n) { return "uppmärksammat som " + n; });
-    return rad(traff, rot + a.adress + location.search, [a.orter.join(", "), a.status].concat(namn), ord);
-  }
-
-  function punktrad(traff, ord) {
-    var p = traff.post;
-    return rad(traff, rot + p.adress, ["Punkt " + p.nummer].concat(p.dnr ? ["Dnr " + p.dnr] : []), ord);
-  }
-
-  function grupp(resultat, rubrik, traffar, ritaRad) {
-    if (!traffar.length) return;
-    resultat.appendChild(element("h2", {}, rubrik + " (" + traffar.length + ")"));
-    var ul = resultat.appendChild(element("ul", {}));
+  function lista(ul, traffar, ritaRad) {
     traffar.forEach(function (t) { ul.appendChild(ritaRad(t)); });
   }
 
-  function urvalet() {
-    var fraga = new URLSearchParams(location.search);
-    return Sokning.urvalet(index.foreningar, fraga.get("forening"), fraga.get("ort"));
-  }
-
-  function visa(panel, status, antal) {
-    status.textContent = antal ? antal + (antal === 1 ? " träff" : " träffar") : "Inga träffar.";
-    status.className = antal ? "dold" : "";
-    panel.querySelector(".sokresultat").hidden = !antal;
-  }
-
-  function rita(panel, fraga) {
-    var resultat = panel.querySelector(".sokresultat");
-    var status = panel.querySelector("[role=status]");
-    var ord = Sokning.orden(fraga);
-    resultat.textContent = "";
-    status.textContent = "";
-    if (ord.join("").length < MINST) return;
-    var urval = urvalet();
-    var arenden = Sokning.traffar(Sokning.iUrvalet(index.arenden, urval), ord);
-    var punkter = index.motet ? Sokning.traffar(index.motet.punkter, ord) : [];
-    var rubrik = urval ? "Ärenden i " + urval.namn : "Ärenden";
-    grupp(resultat, rubrik, arenden, function (t) { return arenderad(t, ord); });
-    if (index.motet) grupp(resultat, index.motet.rubrik, punkter, function (t) { return punktrad(t, ord); });
-    visa(panel, status, arenden.length + punkter.length);
-  }
-
-  function ladda() {
-    laddning = laddning || fetch(rot + "sok.json").then(function (svar) {
-      if (!svar.ok) throw new Error("sok.json: " + svar.status);
-      return svar.json();
-    }).then(function (laddat) { index = laddat; });
-    return laddning;
-  }
-
-  function sok(panel, falt) {
-    ladda().then(function () { rita(panel, falt.value); }, function () {
-      laddning = null;
-      panel.querySelector("[role=status]").textContent = "Sökningen gick inte att ladda.";
+  // De första träffarna står direkt och resten bakom en knapp, så att ett vanligt ord inte
+  // ritar tusentals.
+  function grupp(ruta, rubrik, traffar, ritaRad) {
+    ruta.appendChild(element("h3", {}, rubrik + " (" + traffar.length + ")"));
+    var ul = ruta.appendChild(element("ul", {}));
+    lista(ul, traffar.slice(0, VISAS), ritaRad);
+    if (traffar.length <= VISAS) return;
+    var knapp = element("button", { type: "button", "class": "visa-alla" }, "Visa alla " + traffar.length);
+    ruta.appendChild(knapp);
+    knapp.addEventListener("click", function () {
+      lista(ul, traffar.slice(VISAS), ritaRad);
+      knapp.parentNode.removeChild(knapp);
     });
   }
 
-  function panelen() {
+  function urvalet(index) {
+    var fraga = new URLSearchParams(location.search);
+    if (!index.foreningar) return null;
+    return Sokning.urvalet(index.foreningar, fraga.get("forening"), fraga.get("ort"));
+  }
+
+  function grupperna(sajt, ord) {
+    var urval = urvalet(sajt.index);
+    return sajt.index.grupper.map(function (g) {
+      var traffar = Sokning.traffar(Sokning.iUrvalet(g.poster, urval), ord);
+      var iUrval = urval && g.poster.some(function (p) { return p.orter; });
+      return { rubrik: iUrval ? g.rubrik + " i " + urval.namn : g.rubrik, traffar: traffar };
+    }).filter(function (g) { return g.traffar.length; });
+  }
+
+  // En sajt vars index inte gick att hämta, eller inte hämtats än, sägs med en rad.
+  function ritaSajt(resultat, sajt, ord) {
+    if (!sajt.index) {
+      var text = sajt.fel ? "Gick inte att söka i " + sajt.namn + "." : "Söker i " + sajt.namn + " …";
+      resultat.appendChild(element("p", { "class": "sokrad" }, text));
+      return 0;
+    }
+    var grupper = grupperna(sajt, ord);
+    if (!grupper.length) return 0;
+    var ritaRad = function (t) { return rad(t, sajt, ord); };
+    resultat.appendChild(element("h2", {}, sajt.namn));
+    grupper.forEach(function (g) { grupp(resultat, g.rubrik, g.traffar, ritaRad); });
+    return grupper.reduce(function (summa, g) { return summa + g.traffar.length; }, 0);
+  }
+
+  function rita(panel, sajter) {
+    var resultat = panel.querySelector(".sokresultat");
+    var status = panel.querySelector("[role=status]");
+    var ord = Sokning.orden(panel.querySelector("input").value);
+    resultat.textContent = "";
+    status.textContent = "";
+    if (ord.join("").length < MINST) return;
+    var antal = sajter.reduce(function (summa, sajt) { return summa + ritaSajt(resultat, sajt, ord); }, 0);
+    var klara = sajter.every(function (sajt) { return sajt.index || sajt.fel; });
+    if (antal) status.textContent = antal + (antal === 1 ? " träff" : " träffar");
+    else if (klara) status.textContent = "Inga träffar.";
+    status.className = antal ? "dold" : "";
+  }
+
+  function ladda(panel, sajter) {
+    sajter.forEach(function (sajt) {
+      if (sajt.index || sajt.laddas) return;
+      sajt.laddas = true;
+      sajt.fel = false;
+      fetch(sajt.adress + "sok.json").then(function (svar) {
+        if (!svar.ok) throw new Error(sajt.adress + "sok.json: " + svar.status);
+        return svar.json();
+      }).then(function (index) { sajt.index = index; }, function () { sajt.fel = true; })
+        .then(function () {
+          sajt.laddas = false;
+          rita(panel, sajter);
+        });
+    });
+  }
+
+  function panelen(sajter) {
     var panel = element("div", { id: "sokpanel", "class": "sokpanel", role: "search" });
     panel.hidden = true;
-    panel.appendChild(element("label", { "for": "sokfalt", "class": "dold" }, "Sök på Giffå"));
+    panel.appendChild(element("label", { "for": "sokfalt", "class": "dold" }, "Sök på sajterna"));
     var falt = panel.appendChild(element("input", {
-      id: "sokfalt", type: "search", autocomplete: "off", placeholder: "Sök på Giffå"
+      id: "sokfalt", type: "search", autocomplete: "off", placeholder: "Sök på alla sajterna"
     }));
     panel.appendChild(element("p", { role: "status" }));
     panel.appendChild(element("div", { "class": "sokresultat" }));
-    falt.addEventListener("input", function () { sok(panel, falt); });
+    falt.addEventListener("input", function () { rita(panel, sajter); });
     return panel;
   }
 
-  function vaxla(knapp, panel, oppen) {
+  function vaxla(knapp, panel, sajter, oppen) {
     knapp.setAttribute("aria-expanded", String(oppen));
     panel.hidden = !oppen;
-    if (oppen) sok(panel, panel.querySelector("input"));
+    if (!oppen) return;
+    ladda(panel, sajter);
+    rita(panel, sajter);
   }
 
+  var sajter = sajterna();
   var sajtrad = document.querySelector(".sajtrad").querySelector("div");
   var meny = document.querySelector(".sajtmeny");
   var knapp = element("button", {
     type: "button", "class": "sokknapp", "aria-expanded": "false", "aria-controls": "sokpanel"
   }, "Sök");
-  var panel = panelen();
+  var panel = panelen(sajter);
   sajtrad.insertBefore(knapp, sajtrad.querySelector(".temaknapp") || sajtrad.querySelector(".menyknapp"));
   meny.parentNode.insertBefore(panel, meny);
   knapp.addEventListener("click", function () {
-    vaxla(knapp, panel, panel.hidden);
+    vaxla(knapp, panel, sajter, panel.hidden);
     if (!panel.hidden) panel.querySelector("input").focus();
   });
   // Escape stänger bara fältet; sajter.js ska inte också stänga menyn och flytta fokus dit.
   panel.addEventListener("keydown", function (h) {
     if (h.key !== "Escape") return;
     h.stopPropagation();
-    vaxla(knapp, panel, false);
+    vaxla(knapp, panel, sajter, false);
     knapp.focus();
   });
-  if (document.querySelector("[data-sok-oppen]")) vaxla(knapp, panel, true);
+  if (document.querySelector("[data-sok-oppen]")) vaxla(knapp, panel, sajter, true);
 })();

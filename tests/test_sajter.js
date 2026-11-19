@@ -52,9 +52,13 @@ function sida(sokvag, poster = [lank(), undermeny([lank({ "aria-current": "page"
   const meny = new El("nav", { class: "sajtmeny" }, [new El("a", { class: "sajtnamn" }), new El("ul", {}, poster)]);
   const hoppa = new El("a", { class: "hoppa" });
   const kropp = new El("body", {}, [hoppa, meny, new El("main")]);
-  const document = Object.assign(kropp, { createElement: (tagg) => new El(tagg), documentElement: { dataset: {} } });
+  const head = new El("head");
+  const document = Object.assign(kropp, {
+    createElement: (tagg) => new El(tagg), documentElement: { dataset: {} }, head,
+    currentScript: { src: "https://moggleif.github.io/giffa/sajter.js" },
+  });
   vm.runInNewContext(SKRIPT, { document, location: { pathname: sokvag }, ...webblasare() });
-  return { kropp, meny, hoppa, undermenyer: meny.querySelectorAll("details") };
+  return { kropp, meny, hoppa, head, undermenyer: meny.querySelectorAll("details") };
 }
 
 // Det tema.js och temaknappen behöver av webbläsaren: stöd för light-dark(), läsarens
@@ -83,6 +87,15 @@ test("sajtraden står mellan hopplänken och menyn, med den här sajten markerad
     "https://moggleif.github.io/regionhalland/",
   ]);
   assert.deepStrictEqual(lankar.map((a) => a.getAttribute("aria-current")), ["true", null, null, null]);
+});
+
+test("sökningens stil och skript laddas från samma ställe, skripten i ordning", () => {
+  const { head } = sida("/politik/");
+  assert.deepStrictEqual(head.barn.map((e) => [e.tagg, e.getAttribute("href") || e.getAttribute("src"), e.async]), [
+    ["link", "https://moggleif.github.io/giffa/sok.css", undefined],
+    ["script", "https://moggleif.github.io/giffa/sokning.js", false],
+    ["script", "https://moggleif.github.io/giffa/sokruta.js", false],
+  ]);
 });
 
 test("varningen om AI står överst, före sajtraden, på alla sajter", () => {
@@ -185,7 +198,10 @@ function temasida(installningar) {
   const meny = new El("nav", { class: "sajtmeny" }, [new El("ul", {}, [lank()])]);
   const kropp = new El("body", {}, [meny]);
   const rot = { dataset: {} };
-  const document = Object.assign(kropp, { createElement: (tagg) => new El(tagg), documentElement: rot });
+  const document = Object.assign(kropp, {
+    createElement: (tagg) => new El(tagg), documentElement: rot, head: new El("head"),
+    currentScript: { src: "/giffa/sajter.js" },
+  });
   const miljo = { document, location: { pathname: "/giffa/" }, ...webblasare(installningar) };
   vm.runInNewContext(TEMA, miljo);
   vm.runInNewContext(SKRIPT, miljo);

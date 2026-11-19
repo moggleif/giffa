@@ -26,8 +26,8 @@ under de steg där underlaget finns och, för förslag med innehåll, förslaget
 Utan val syns allt; den som vill väljer en ort direkt, eller först en
 förening för att bara se dess orter, bakom knappen *Ort:*, och valet står
 i adressen och följer med mellan sidorna. Knappen *Sök* i sajtraden
-söker medan man skriver i allt på ärendena och i punkterna på KS-mötet, och
-sidan *Sök* listar alla ärenden. Överst står en sajtrad till
+söker medan man skriver på alla projektets sajter: här i allt på ärendena
+och i punkterna på KS-mötet. Sidan *Sök* listar alla ärenden. Överst står en sajtrad till
 projektets andra sajter, [Kungsbacka kommun](https://moggleif.github.io/kungsbackakommun/),
 [Kungsbacka i siffror](https://moggleif.github.io/politik/) och
 [Region Halland](https://moggleif.github.io/regionhalland/), som

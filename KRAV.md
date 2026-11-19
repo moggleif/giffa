@@ -303,28 +303,31 @@ och för varje ärende under dem. Ett ärende som inte finns, ett tomt fält,
 samma namn och ärende två gånger eller en källa som är en länk men inte en
 https-länk stoppar bygget.
 
-## K28 – Sök i allt på ärendena från sajtraden
+## K28 – Sök på alla projektets sajter från sajtraden
 
-**Givet** en sida på Giffå med skript,
+**Givet** en sida på någon av projektets sajter (K35) med skript,
 **när** man trycker på knappen *Sök* i sajtraden och skriver minst två
 tecken i fältet som fälls ut under raden,
-**så** syns medan man skriver de ärenden där varje ord finns, utan hänsyn
-till stora och små bokstäver, i rubriken, orterna, organet,
-diarienumret, namnen ur `bevakning/uppmarksammade.csv` eller texten:
-ingressen, förslaget i korthet, händelserna och tillfällena att tycka
-till. Ärenden där alla orden finns utanför texten står först; de andra
-märks *nämns i texten*. Under dem står på samma sätt punkterna på
-kommunstyrelsens sammanträde på sidan *KS-mötet* (K34), sökta i
-rubriken, diarienumret, förslaget och sammanfattningen. Varje grupp har
-en rubrik med antalet, orden är markerade i rubrikerna, och ett namn
-ur listan som orden finns i står under ärendet. Valet av förening och
-ort (K22) gäller ärendena, och gruppens rubrik säger då vilket val;
-punkterna på KS-mötet visas utan urval, som sidan. Finns ingen träff
-står det. Escape eller ett nytt tryck på knappen fäller ihop fältet.
-Gick sökningen inte att ladda står det. På sidan *Sök* är fältet
-utfällt från början, och under det står alla ärenden, så att sidan
-också går att använda utan skript. Ingenting skickas till någon annan
-värd: det som söks i byggs med sidan.
+**så** syns medan man skriver träffarna i varje sajts sökindex
+(`sok.json` bredvid sajtens start), sajt för sajt med den visade sajten
+först, och i varje sajt grupp för grupp. En träff är en post där varje
+ord finns, utan hänsyn till stora och små bokstäver; poster där alla ord
+finns i det som söks först står först, och de andra märks *nämns i
+texten*. Varje sajt och grupp har en rubrik, gruppen med antalet; orden är
+markerade i rubrikerna, och högst tjugo träffar per grupp står direkt,
+resten bakom en knapp *Visa alla*. En sajt vars index inte gick att
+hämta sägs med en rad. Finns ingen träff står det. Escape eller ett nytt
+tryck på knappen fäller ihop fältet. På en sida som ber om det är fältet
+utfällt från början. Ingenting skickas till någon annan värd.
+
+På Giffå söks ärendena i rubriken, orterna, organet, diarienumret och
+namnen ur `bevakning/uppmarksammade.csv` först, och i texten – ingressen,
+förslaget i korthet, händelserna och tillfällena att tycka till – sedan;
+ett namn som orden finns i står under ärendet. Valet av förening och ort
+(K22) gäller ärendena, och gruppens rubrik säger då vilket val. Punkterna
+på sidan *KS-mötet* (K34) söks i rubriken och diarienumret först, och i
+förslaget och sammanfattningen sedan. Sidan *Sök* listar alla ärenden,
+så att den också går att använda utan skript, och har fältet utfällt.
 
 ## K29 – Uppmärksammat först i listorna
 
@@ -471,15 +474,14 @@ en ny rad när de inte får plats bredvid varandra.
 Bara en undermeny är öppen åt gången, och Escape eller ett klick utanför
 stänger den. Undermenyn med den visade sidan är markerad, liksom sidan. På
 en skärm högst 640 punkter bred är sajtraden en enda rad: den visade sajten,
-på Giffå knappen *Sök* (K28), knappen för mörkt tema (K36) och knappen *Meny*, som fäller ut menyn med de andra sajterna sist under
+knappen *Sök* (K28), knappen för mörkt tema (K36) och knappen *Meny*, som fäller ut menyn med de andra sajterna sist under
 *Projektets andra sajter*. Utan skriptet står sajtens meny som en lista
 med sajtens namn först och ingen sajtrad.
 
 Giffås startsida har rubriken *Vad händer där du bor?*.
 
 Giffås meny är *Tycka till*, *Pågår*, *Beslutat* (med *Beslutat* och
-*Historik*), *KS-mötet*, *Sök* och *Om*, och sajtraden har knappen *Sök*
-(K28). Valet av förening och ort (K22)
+*Historik*), *KS-mötet*, *Sök* och *Om*. Valet av förening och ort (K22)
 står bakom en knapp *Ort:* med det valda, eller *Alla*, som fäller ut
 knapparna; knappen syns bara med skriptet.
 
@@ -494,8 +496,7 @@ nedtryckt när temat är mörkt. Valet sparas och gäller på alla sajterna,
 också vid nästa besök, från första ritningen; i en webbläsare som
 spärrat lagringen gäller det bara på sidan. Utan val följer temat
 läsarens inställning. På en skärm högst 640 punkter bred står knappen
-mitt på sajtradens enda rad, mitt emellan sajten och knappen *Meny* –
-på Giffå efter knappen *Sök*, närmast *Meny* – och
+på sajtradens enda rad efter knappen *Sök*, närmast *Meny*, och
 raden blir aldrig bredare än skärmen: ett namn som inte får plats
 kortas. På en bredare skärm står knappen längst till höger i sajtraden.
 En webbläsare utan `light-dark()` visar ljust tema och ingen knapp. Alla

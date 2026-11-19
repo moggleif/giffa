@@ -1,9 +1,11 @@
-"""Krav: K28 i KRAV.md, beslut 0018. Test: tests/test_sokindex.py och tests/test_sokning.js.
+"""Krav: K28 i KRAV.md, beslut 0018. Test: tests/test_sokindex.py och tests/test_sokruta.js.
 
-Sökindexet `sok.json` som knappen Sök (docs/sokruta.js) hämtar: för varje
-ärende det som visas i träfflistan, det som söks i först (`traff`) och
-texten (`text`), i små bokstäver; punkterna på KS-mötet på samma sätt;
-och föreningarnas orter, så att urvalet i adressen gäller också här.
+Giffås sökindex `sok.json`, i det format som alla projektets sajter skriver
+sitt i (beslut 0018): grupper med poster, där varje post har det som visas
+(`rubrik`, `adress` från indexets plats, `om`), det som söks i först
+(`traff`) och texten (`text`), i små bokstäver. Ärendena har också orterna
+och namnen i folkmun, och indexet föreningarnas orter, så att urvalet i
+adressen gäller också här.
 """
 
 import json
@@ -17,11 +19,11 @@ from webbplats.motespunkt import rubriken
 
 
 def sokindex(sajt: Sajt, arenden: list[Arende], motet: Motet | None) -> str:
-    index = {
-        "foreningar": sajt.foreningar,
-        "arenden": [arende(a) for a in arenden],
-        "motet": motesposter(motet),
-    }
+    grupper = [{"rubrik": "Ärenden", "poster": [arende(a) for a in arenden]}]
+    if motet is not None and motet.punkter is not None:
+        poster = [punkt(p) for p in motet.punkter]
+        grupper.append({"rubrik": f"KS-mötet {klartext(motet.datum)}", "poster": poster})
+    index = {"foreningar": sajt.foreningar, "grupper": grupper}
     return json.dumps(index, ensure_ascii=False, separators=(",", ":"))
 
 
@@ -32,31 +34,22 @@ def arende(a: Arende) -> dict:
     return {
         "rubrik": falt["rubrik"],
         "adress": a.sida,
+        "om": [", ".join(a.orter), falt["status"]],
         "orter": a.orter,
-        "status": falt["status"],
         "kallas": list(a.kallas),
         "traff": sma(traff),
         "text": sma(text),
     }
 
 
-def motesposter(motet: Motet | None) -> dict | None:
-    if motet is None or motet.punkter is None:
-        return None
-    return {
-        "rubrik": f"KS-mötet {klartext(motet.datum)}",
-        "punkter": [punkt(p) for p in motet.punkter],
-    }
-
-
 def punkt(punkten: Punkten) -> dict:
     p = punkten.punkt
+    nummer = punkten.numren[0]
     return {
         "rubrik": rubriken(punkten),
         "adress": f"{KS_MOTET}#punkt-{p.nummer}",
-        "nummer": p.nummer,
-        "dnr": punkten.numren[0],
-        "traff": sma((rubriken(punkten), punkten.numren[0])),
+        "om": [f"Punkt {p.nummer}", *([f"Dnr {nummer}"] if nummer else [])],
+        "traff": sma((rubriken(punkten), nummer)),
         "text": sma((*(p.forslag or ()), *punkten.sammanfattning)),
     }
 

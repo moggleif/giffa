@@ -24,4 +24,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0015](0015-morkt-tema-i-sajtraden.md) | Mörkt tema för alla sajterna, med en ikonknapp i sajtraden |
 | [0016](0016-tidningarnas-floden.md) | Tidningarnas flöden varje morgon |
 | [0017](0017-varning-om-ai-overst.md) | En varning om AI överst, i den gemensamma menyn |
-| [0018](0018-sok-i-sajtraden.md) | Sök i sajtraden, i allt på ärendena |
+| [0018](0018-sok-i-sajtraden.md) | Sök i sajtraden, på alla projektets sajter |

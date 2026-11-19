@@ -17,7 +17,6 @@ class Soksidan(unittest.TestCase):
     def test_faltet_falls_ut_av_skriptet(self):
         html = soksida(SAJT, [arende("pågår")])
         self.assertIn('<ul class="sokning" data-sok-oppen>', html)
-        self.assertIn('<script src="sokruta.js" defer></script>', html)
         self.assertIn('<a href="sok.html" aria-current="page">Sök</a>', html)
 
 

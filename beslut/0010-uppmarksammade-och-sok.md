@@ -47,5 +47,5 @@ under ärendet i *I media och debatt*, märkt med en tidningsikon.
 
 ## Ändring 2026-11-19
 
-Sökrutan på sidan *Sök* ersattes av knappen *Sök* i sajtraden, som söker i
-allt på ärendena ([beslut 0018](0018-sok-i-sajtraden.md)).
+Sökrutan på sidan *Sök* ersattes av knappen *Sök* i sajtraden, som söker på
+alla projektets sajter ([beslut 0018](0018-sok-i-sajtraden.md)).
