@@ -3,7 +3,7 @@ rubrik: Detaljplan för bostäder och förskola inom Stockalid 1:4 och 1:39
 ort: Åsa
 organ: Kommunstyrelsen
 diarienummer: KS-2021-01226
-status: pågår
+status: beslutat
 ---
 
 Detaljplanen för bostäder och förskola inom Stockalid 1:4 och 1:39 i Kläppa,

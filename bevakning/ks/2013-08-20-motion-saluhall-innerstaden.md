@@ -3,7 +3,7 @@ rubrik: Motion om saluhall i Kungsbacka innerstad
 ort: Kungsbacka stad
 organ: Kommunfullmäktige
 diarienummer: KS13-00085/11
-status: pågår
+status: avbrutet
 ---
 
 Två ledamöter (S) väckte i februari 2013 en motion om en saluhall i
@@ -16,4 +16,5 @@ motionen avslås. Kommunfullmäktiges beslut finns inte i poolen, så utfallet
 
 ## Händelser
 
+- 2013-09-10 · avbrutet · Kommunfullmäktige avslog motionen, eftersom det inte åligger kommunen att köpa in fastigheter för att utveckla dem. · [KF protokoll § 124](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2013/2013-09-10/protokoll.html#sida-14)
 - 2013-08-20 · forslag · Kommunstyrelsen föreslog att kommunfullmäktige avslår motionen, eftersom det inte åligger kommunen att köpa fastigheter för aktiv fastighetsutveckling, till exempel en saluhall. · [KS protokoll § 188](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2013/2013-08-20/protokoll.html#sida-30)

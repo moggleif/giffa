@@ -3,7 +3,7 @@ rubrik: Tempohus Anneberg och eleverna på Älvsåkersskolan
 ort: Anneberg, Älvsåker
 organ: Nämnden för Förskola & Grundskola
 diarienummer: 2021-00235
-status: pågår
+status: beslutat
 ---
 
 De tidsbegränsade hyreskontrakten i Tempohus i Anneberg löpte ut 2021. Där
