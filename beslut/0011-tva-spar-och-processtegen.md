@@ -27,8 +27,7 @@ Projektägaren valde förslag 1–3 och 12 ur analysen.
   som inte går att läsa ut står som okänt. Reglerna står i K33. Stegen
   står som konstanter i `webbplats/stege.py`; en datafil motiveras när
   ett tredje slag behövs.
-- **Hellre märka än gissa.** (Stegens ord, färger och noter ändrades i
-  [beslut 0019](0019-planstegen-i-farg.md).) Ett tidigare steg utan egen händelse står
+- **Hellre märka än gissa.** Ett tidigare steg utan egen händelse står
   som *ingen händelse i källorna* och ett kommande steg utan tillfälle som
   *inget i källorna än*, så att stegen inte påstår något källan inte
   säger, och planernas stege säger att den följer

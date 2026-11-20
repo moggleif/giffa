@@ -352,7 +352,7 @@ yttrande och beslut, där partierna kan ta upp ärendet före
 sammanträdet). Varje spår har ett eget tecken – en pratbubbla för alla,
 två personer för partierna – och en egen färg, och samma tecken och färg
 står vid varje tillfälle och steg: i tidslinjens markering, på korten,
-under *Tycka till nu*, under *På väg upp* och i processtegen. Tidslinjens
+under *Tycka till nu* och under *På väg upp*. Tidslinjens
 ikoner för samråd och granskning har allas färg och för förslag, yttrande
 och information partiernas; beslut, byggs och klart är gröna och
 avbrutet rött, eftersom de säger hur det gick. Tecknet har spårets namn som text för
@@ -401,7 +401,8 @@ beslut eller väntat beslut räknas till antagandet när det säger *anta*,
 ett förslag om att föreslå (*föreslå att*), och till uppdraget när det
 gäller *uppdraget att upprätta*. Steget nu är steget med den senaste
 händelsen, så att en plan som börjat om står på sitt nya steg; nästa steg
-är steget efter det.
+är steget efter det. Också ett uppdrag eller en projektbeställning efter
+ett samråd sätter därför planen tillbaka på uppdraget.
 
 Ett klart steg och steget nu har datumet för den senaste händelsen i
 steget (*klart, …*, *nu, …*). Ett steg före steget nu utan egen händelse

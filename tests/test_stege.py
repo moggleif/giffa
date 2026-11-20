@@ -92,6 +92,8 @@ class Processtegen(unittest.TestCase):
         utan = HANDELSER.replace("- 2026-02-19 · samrad · Samråd. · [P](https://example.org/s)\n", "")
         html = stege(byggt("Detaljplan för T", utan), IDAG)
         self.assertIn('<li class="tidigare"><span aria-hidden="true">✓</span> <strong>Samråd</strong> <small>passerat</small>', html)
+        kallat = utan.replace("## Tycka till\n\n", "## Tycka till\n\n- 2026-12-01 · samrad · Samråd. · [K](https://example.org/k)\n")
+        self.assertIn("<strong>Samråd</strong> <small>passerat</small>", stege(byggt("Detaljplan för T", kallat), IDAG))
 
     def test_okant_lage_star_som_okant(self):
         bara = "## Händelser\n\n- 2023-10-26 · forslag · Nämnden ger uppdrag att genomföra granskning. · [P](https://example.org/p)\n\n"

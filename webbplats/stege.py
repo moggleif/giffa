@@ -1,14 +1,16 @@
 """Krav: K33 i KRAV.md. Test: tests/test_stege.py.
 
 Processtegen för planerna: stegen en detaljplan eller ett planprogram går
-igenom enligt plan- och bygglagen, vilka som är gjorda, var planen står nu
-och vad som kommer härnäst, med färg, tecken och ord för varje läge. Bara det som
-händelserna säger räknas: samråd och granskning på sitt steg, antagandet
-och godkännandet på ett beslut som säger att planen antogs eller
-godkändes, uppdraget på ett förslag eller beslut om uppdrag att upprätta
-planen eller en godkänd projektbeställning. Ett steg före steget nu utan egen händelse är passerat men inte klart,
-och ett kommande steg utan tillfälle sägs inte komma. Kommer inget steg
-fram står läget som okänt i stället för gissat. Andra ärenden har ingen fastslagen process och ingen stege.
+igenom enligt plan- och bygglagen, vilka som är klara, var planen står nu
+och vad som kommer härnäst, med färg, tecken och ord för varje läge. Bara
+det som händelserna säger räknas: samråd och granskning på sitt steg,
+antagandet och godkännandet på ett beslut som säger att planen antogs
+eller godkändes, uppdraget på ett förslag eller beslut om uppdrag att
+upprätta planen eller en godkänd projektbeställning. Ett steg före steget
+nu utan egen händelse är passerat men inte klart, och ett kommande steg
+utan tillfälle sägs inte komma. Kommer inget steg fram står läget som
+okänt i stället för gissat. Andra ärenden har ingen fastslagen process
+och ingen stege.
 """
 
 import re
@@ -92,7 +94,9 @@ def lage(index: int, nu: int | None, steget: Steg, handelser: list[Handelse]) ->
         return "okand"
     if index < nu:
         return "gjord" if any(passar(steget.handelse, h) for h in handelser) else "tidigare"
-    return {0: "nu", 1: "nasta"}.get(index - nu, "kommande")
+    if index == nu:
+        return "nu"
+    return "nasta" if index == nu + 1 else "kommande"
 
 
 def nar(steget: Steg, lage_: str, handelser: list[Handelse], tillfallen: list[Handelse]) -> str:
