@@ -82,7 +82,7 @@ regionens handlingar efter orterna, platserna och de öppna ärendena – i
 regionens också efter kommunens namn – från början av förra rundans
 period och öppnar ett issue per källa med etiketten `runda`
 ([beslut 0003](beslut/0003-manadens-skanning-i-actions.md),
-[beslut 0019](beslut/0019-regionens-handlingar-i-rundan.md)).
+[beslut 0020](beslut/0020-regionens-handlingar-i-rundan.md)).
 Rundan – att föra in träffarna som ärenden – görs sedan av en agent enligt
 faserna i `AGENTS.md`, till exempel genom att be den "köra rundan".
 Sökningen går också att köra lokalt:

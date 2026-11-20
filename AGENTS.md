@@ -63,7 +63,7 @@ beroende motiveras i PR:en. En ändring som tar bort kod är en bra ändring.
 | Hur sidan byggs ur ärendena                     | `webbplats/`, beslut 0002 |
 | Den gemensamma menyn för projektets sajter      | `docs/sajter.js`, beslut 0013 |
 | Sökningen på alla sajterna och indexets format  | `docs/sokruta.js`, beslut 0018 |
-| Hur månadens skanning görs                      | `skanning/`, beslut 0003 och 0019 |
+| Hur månadens skanning görs                      | `skanning/`, beslut 0003 och 0020 |
 | Hur veckans kallelser söks                      | `skanning/`, beslut 0005  |
 | Hur handlingarna läggs intill protokollen       | `handlingslankar/`, beslut 0009 |
 | Hur tidningarnas artiklar hittas                | `tidningar/`, beslut 0016 |

@@ -14,7 +14,7 @@ svar. Läs bara; ändra inget i dem.
 etiketten `runda`: träffarna i kommunens och i regionens dokument från
 början av förra rundans period
 ([beslut 0003](../../../beslut/0003-manadens-skanning-i-actions.md),
-[beslut 0019](../../../beslut/0019-regionens-handlingar-i-rundan.md)).
+[beslut 0020](../../../beslut/0020-regionens-handlingar-i-rundan.md)).
 Finns inget sådant issue för perioden, kör samma sökningar lokalt från
 repots rot:
 

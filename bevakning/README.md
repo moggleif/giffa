@@ -102,10 +102,13 @@ tabellen, och teckenförklaringen på sidan visar samma betydelser
 Stegen och texten ger också processtegen på planernas kort och sidor:
 hur ett antagande, ett uppdrag och ett upphävande känns igen står i K33 i
 [KRAV.md](../KRAV.md). Skriv därför ett antagande som *antog
-detaljplanen*, ett uppdrag som *uppdrag att upprätta* och andra beslut i
-en plan, som exploateringsavtal, utan de orden. Samråd och granskning hör till spåret *för alla*, de andra
-stegen till *partierna* (K30); en `info` det senaste året utan förslag
-eller tillfälle efter står under *På väg upp* (K32).
+detaljplanen*, ett uppdrag som *uppdrag att upprätta* eller *godkände
+projektbeställningen* och andra beslut i en plan, som exploateringsavtal,
+utan de orden.
+
+Samråd och granskning hör till spåret *för alla*, de andra stegen till
+*partierna* (K30); en `info` det senaste året utan förslag eller
+tillfälle efter står under *På väg upp* (K32).
 
 **Tycka till** är valfritt: kommande tillfällen att påverka, i samma
 format som händelserna. Datumet är sista dagen för synpunkter eller

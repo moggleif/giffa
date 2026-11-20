@@ -25,4 +25,5 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0016](0016-tidningarnas-floden.md) | Tidningarnas flöden varje morgon |
 | [0017](0017-varning-om-ai-overst.md) | En varning om AI överst, i den gemensamma menyn |
 | [0018](0018-sok-i-sajtraden.md) | Sök i sajtraden, på alla projektets sajter |
-| [0019](0019-regionens-handlingar-i-rundan.md) | Regionens handlingar i rundan, med samma skanning |
+| [0019](0019-planstegen-i-farg.md) | Planstegen i färg: klart, nu, nästa |
+| [0020](0020-regionens-handlingar-i-rundan.md) | Regionens handlingar i rundan, med samma skanning |
