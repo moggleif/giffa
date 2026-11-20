@@ -1,14 +1,16 @@
 """Krav: K33 i KRAV.md. Test: tests/test_stege.py.
 
 Processtegen för planerna: stegen en detaljplan eller ett planprogram går
-igenom enligt plan- och bygglagen, vilka som är gjorda, var planen står nu
-och vad som kommer, med spåret för varje steg (K30). Bara det som
-händelserna säger räknas: samråd och granskning på sitt steg, antagandet
-och godkännandet på ett beslut som säger att planen antogs eller
-godkändes, uppdraget på ett förslag eller beslut om uppdrag att upprätta
-planen. Ett steg före steget nu utan egen händelse sägs inte vara gjort,
-och ett kommande steg utan tillfälle sägs inte komma. Kommer inget steg
-fram står läget som okänt i stället för gissat. Andra ärenden har ingen fastslagen process och ingen stege.
+igenom enligt plan- och bygglagen, vilka som är klara, var planen står nu
+och vad som kommer härnäst, med färg, tecken och ord för varje läge. Bara
+det som händelserna säger räknas: samråd och granskning på sitt steg,
+antagandet och godkännandet på ett beslut som säger att planen antogs
+eller godkändes, uppdraget på ett förslag eller beslut om uppdrag att
+upprätta planen eller en godkänd projektbeställning. Ett steg före steget
+nu utan egen händelse är passerat men inte klart, och ett kommande steg
+utan tillfälle sägs inte komma. Kommer inget steg fram står läget som
+okänt i stället för gissat. Andra ärenden har ingen fastslagen process
+och ingen stege.
 """
 
 import re
@@ -19,39 +21,34 @@ from typing import NamedTuple
 from webbplats.arende import Arende, Handelse
 from webbplats.datum import tid
 from webbplats.paverka import PBL, kommande
-from webbplats.spar import tecken
 
 
 class Steg(NamedTuple):
     namn: str
-    spar: str
     handelse: tuple[str, str]
     tillfalle: tuple[str, str]
 
 
 FATTAT = "beslut|vantas"
 UPPDRAG = Steg(
-    "Uppdrag", "partiet", ("forslag|beslut", r"uppdrag att upprätta|bad \w+ upprätta"), (FATTAT, r"uppdraget att upprätta")
+    "Uppdrag",
+    ("forslag|beslut", r"uppdrag att upprätta|bad \w+ upprätta|godkände projektbeställning"),
+    (FATTAT, r"uppdraget att upprätta"),
 )
-SAMRAD = Steg("Samråd", "alla", ("samrad", ""), ("samrad", ""))
-ANTAGANDE = Steg(
-    "Antagande", "partiet", ("beslut", r"\b(antog|antagit)\b"), (FATTAT, r"^(?!.*föreslå att).*\banta[rs]? (detalj)?planen")
-)
-GODKANNANDE = Steg(
-    "Godkännande", "partiet", ("beslut", r"godkände planprogrammet"), (FATTAT, r"godkänn\w* planprogrammet")
-)
-DETALJPLAN = (UPPDRAG, SAMRAD, Steg("Granskning", "alla", ("granskning", ""), ("granskning", "")), ANTAGANDE)
+SAMRAD = Steg("Samråd", ("samrad", ""), ("samrad", ""))
+ANTAGANDE = Steg("Antagande", ("beslut", r"\b(antog|antagit)\b"), (FATTAT, r"^(?!.*föreslå att).*\banta[rs]? (detalj)?planen"))
+GODKANNANDE = Steg("Godkännande", ("beslut", r"godkände planprogrammet"), (FATTAT, r"godkänn\w* planprogrammet"))
+DETALJPLAN = (UPPDRAG, SAMRAD, Steg("Granskning", ("granskning", ""), ("granskning", "")), ANTAGANDE)
 PLANPROGRAM = (UPPDRAG, SAMRAD, GODKANNANDE)
 SLAG = (
     (r"(ändring av (del av )?|upphävande av (del av )?)?detaljplan", DETALJPLAN),
     (r"planprogram", PLANPROGRAM),
 )
 UPPHAVT = re.compile(r"upphäv\w* (antagandet|detaljplanen|planen|\w+ beslut att anta)")
-OKAND = '<p class="forfarande">Var planen står går inte att läsa ut ur händelserna.</p>'
-FORFARANDE = (
-    '<p class="forfarande">Stegen följer plan- och bygglagens standardförfarande; vid '
-    f'begränsat förfarande blir det ingen granskning. <a href="{PBL}">Plan- och bygglagen 5 kap.</a></p>'
-)
+FORFARANDE = f'<p class="forfarande"><a href="{PBL}">Stegen i plan- och bygglagen</a></p>'
+TECKEN = {"gjord": "✓", "tidigare": "✓", "nu": "●", "nasta": "→", "kommande": "○", "okand": "○"}
+ORD = {"gjord": "klart", "nu": "nu", "nasta": "nästa", "kommande": "kommer", "okand": "kommer"}
+UTAN_DATUM = {"tidigare": "passerat", "nasta": "nästa, inget datum än", "kommande": "inget datum än"}
 
 
 def stege(arende: Arende, idag: date) -> str:
@@ -65,8 +62,9 @@ def stege(arende: Arende, idag: date) -> str:
     tillfallen = kommande(arende, idag)
     lagen = [lage(i, nu, s, handelser) for i, s in enumerate(stegen)]
     poster = "".join(post(s, l, nar(s, l, handelser, tillfallen)) for s, l in zip(stegen, lagen, strict=True))
-    noten = (OKAND if nu is None else "") + upphavd(upphavt, borjat_om) + FORFARANDE
-    return f'<div class="stege"><p>Var planen står</p><ol>{poster}</ol>{noten}</div>'
+    rubrik = "Var planen står" + (": okänt" if nu is None else "")
+    noten = upphavd(upphavt, borjat_om) + FORFARANDE
+    return f'<div class="stege"><p>{rubrik}</p><ol>{poster}</ol>{noten}</div>'
 
 
 def steg_for(arende: Arende) -> tuple[Steg, ...]:
@@ -96,23 +94,25 @@ def lage(index: int, nu: int | None, steget: Steg, handelser: list[Handelse]) ->
         return "okand"
     if index < nu:
         return "gjord" if any(passar(steget.handelse, h) for h in handelser) else "tidigare"
-    return "nu" if index == nu else "kommande"
+    if index == nu:
+        return "nu"
+    return "nasta" if index == nu + 1 else "kommande"
 
 
 def nar(steget: Steg, lage_: str, handelser: list[Handelse], tillfallen: list[Handelse]) -> str:
     kommer = [t.datum for t in tillfallen if passar(steget.tillfalle, t)]
-    if kommer and lage_ != "gjord":
-        return f"{'nu' if lage_ == 'nu' else 'kommer'}, {tid(kommer[0])}"
+    if kommer and lage_ not in ("gjord", "tidigare"):
+        return f"{ORD[lage_]}, {tid(kommer[0])}"
     if lage_ in ("gjord", "nu"):
         senast = max(h.datum for h in handelser if passar(steget.handelse, h))
-        return f"{'gjort' if lage_ == 'gjord' else 'nu'}, {tid(senast)}"
-    return {"tidigare": "ingen händelse i källorna", "kommande": "inget i källorna än"}.get(lage_, "")
+        return f"{ORD[lage_]}, {tid(senast)}"
+    return UTAN_DATUM.get(lage_, "")
 
 
 def post(steget: Steg, lage_: str, text: str) -> str:
     return (
-        f'<li class="{lage_} {steget.spar}">{tecken(steget.spar)}<strong>{escape(steget.namn)}</strong> '
-        f"<small>{text}</small></li>"
+        f'<li class="{lage_}"><span aria-hidden="true">{TECKEN[lage_]}</span> '
+        f"<strong>{escape(steget.namn)}</strong> <small>{text}</small></li>"
     )
 
 
