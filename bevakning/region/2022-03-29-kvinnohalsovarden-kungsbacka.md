@@ -5,8 +5,9 @@ organ: Region Halland, Driftnämnden Ambulans, diagnostik och hälsa
 status: klart
 ---
 
-Kvinnohälsovården i Kungsbacka behövde större lokaler och har flyttat
-till en hyrd lokal på Teknikgatan 12.
+Kvinnohälsovården i Kungsbacka behövde större lokaler. Regionen beslutade
+2022 att hyra en lokal på Teknikgatan 12, och 2026 visades de nya
+lokalerna för nämnden.
 
 ## Händelser
 

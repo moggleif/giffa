@@ -77,12 +77,12 @@ def ej_sokta(rot: Path, namn: str) -> str:
     )
 
 
-def omfattning(ej_sokta: str, grupper: dict, sokta: tuple[date, int], tomma: list[str]) -> str:
+def omfattning(for_hand: str, grupper: dict, sokta: tuple[date, int], tomma: list[str]) -> str:
     fran, antal = sokta
     termerna = ", ".join(f"{len(lista)} {namn}" for namn, lista in grupper.items())
     text = (
         f"Sökte i {antal} dokument med sammanträdesdatum från och med {fran}, början på "
-        f"förra rundans period, efter {termerna}.\n\n{ej_sokta}"
+        f"förra rundans period, efter {termerna}.\n\n{for_hand}"
     )
     if tomma:
         text += f"\n\nUtan text, inte sökta: {', '.join(tomma)}."

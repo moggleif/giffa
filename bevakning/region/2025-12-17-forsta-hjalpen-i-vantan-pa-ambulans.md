@@ -6,7 +6,8 @@ status: pågår
 ---
 
 Räddningstjänsten ger första hjälpen tills ambulansen kommer, enligt ett
-avtal med Region Halland. Avtalet gäller hela kommunen. Kungsbackas
+avtal med Region Halland. Avtalet gäller hela kommunen, och därför står
+alla fyra föreningarnas huvudorter som ärendets orter. Kungsbackas
 räddningstjänst sköts av Räddningstjänsten Storgöteborg, och avtalet
 med den var inte klart när regionen tecknade nya avtal med de andra
 halländska räddningstjänsterna i december 2025.

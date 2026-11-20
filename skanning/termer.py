@@ -16,7 +16,7 @@ from webbplats.arende import tolka
 AVSLUTADE = ("klart", "avbrutet")
 
 
-def termer(rot: Path, kommunnamn: tuple[str, ...] = ()) -> dict[str, list[str]]:
+def termer(rot: Path, kommunnamn: tuple[str, ...]) -> dict[str, list[str]]:
     grupper = {
         "orter": underlag.orter(las(rot, "OMRADE.md")),
         "platsnamn": [p["namn"] for p in underlag.platser(las(rot, "platser.csv"))],
