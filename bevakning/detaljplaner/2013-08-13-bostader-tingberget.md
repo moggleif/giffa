@@ -3,20 +3,20 @@ rubrik: Detaljplan för bostäder vid Tingberget i Kungsbacka stad
 ort: Kungsbacka stad
 organ: Byggnadsnämnden
 diarienummer: 2011-P014
-status: pågår
+status: beslutat
 ---
 
 Detaljplanen ska förtäta bostadsområdet Tingberget i Kungsbacka stads
 västra del (Korpen 8, 9, 10 och 11): påbyggnad av en del av de befintliga
 husen med två våningar och nya hus med parkeringsdäck mot Kungsgatan, med
 respekt för områdets karaktär från tidigt 1960-tal. Kommunstyrelsen godkände
-planprogrammet 2013. Sista steget i poolen är att byggnadsnämnden i
-september 2016 skulle föreslå kommunfullmäktige att anta planen; protokollen
-från det sammanträdet och från fullmäktiges behandling finns inte i poolen,
-så utfallet är okänt.
+planprogrammet 2013. Kommunfullmäktige antog planen 12 september 2017;
+fullmäktiges protokoll finns inte i poolen, men kommunstyrelsens
+tjänsteskrivelse 2022 återger beslutet.
 
 ## Händelser
 
+- 2017-09-12 · beslut · Kommunfullmäktige antog detaljplanen för bostäder vid Tingberget; uppgiften står i kommunstyrelsens tjänsteskrivelse om fastighetsreglering 2022. · [KS handlingar 2022-03-22](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2022/2022-03-22/handlingar.html#sida-294)
 - 2016-09-15 · forslag · På byggnadsnämndens kallelse stod förslaget att godkänna detaljplanen, upprättad i januari 2015 och reviderad i mars och juli 2016, och överlämna den till kommunfullmäktige för antagande. Protokollet finns inte i poolen. · [Byggnadsnämndens kallelse, ärende 6](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2016/2016-09-15/kallelse.html#sida-2)
 - 2016-03-22 · forslag · På arbetsutskottets kallelse stod förslaget att byggnadsnämnden godkänner granskningshandlingen och ställer ut detaljplanen för granskning. Protokollet finns inte i poolen. · [Byggnadsnämndens AU kallelse, ärende 7](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2016/2016-03-22/kallelse.html#sida-2)
 - 2015-02-12 · samrad · Byggnadsnämnden godkände samrådshandlingen och gav förvaltningen i uppdrag att genomföra samråd. Tre av de sju husen skulle kunna byggas på med två våningar och tre nya hus byggas mot Kungsgatan; nya parkeringsplatser skulle ordnas vid Skogskapellet. · [Byggnadsnämnden protokoll § 41](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2015/2015-02-12/protokoll.html#sida-7)

@@ -3,7 +3,7 @@ rubrik: Detaljplan för busshållplats Gottskär, bussvändslinga och del av Got
 ort: Gottskär
 organ: Byggnadsnämnden
 diarienummer: KS-2021-00486, KS-2025-00609, TE-2025-00983, BN-2025-00048, BN-2026-00027
-status: pågår
+status: beslutat
 ---
 
 Uppdraget började 2021 som en utvidgning av parkeringsplatsen Klaraplan med

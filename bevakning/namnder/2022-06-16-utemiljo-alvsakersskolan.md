@@ -3,7 +3,7 @@ rubrik: Utemiljön på Älvsåkersskolan
 ort: Älvsåker
 organ: Nämnden för Förskola & Grundskola
 diarienummer: 2022-00872
-status: pågår
+status: beslutat
 ---
 
 Ett initiativärende (S) efter en skrivelse från en lärare tog upp berget på
