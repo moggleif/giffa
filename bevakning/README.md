@@ -165,8 +165,8 @@ flera namn. Namnen står i filens ordning under *Ärenden med mer uppmärksamhet
 startsidan och först i listorna *Pågår*, *Beslutat* och *Historik* (K29);
 flytta ett namns rader för att flytta namnet och dess ärenden. Namnet visas också, som en färgad
 etikett, på
-ärendets kort, egen sida och i tidslinjen, och går att söka på under
-*Sök*. Källan står bara i filen; en tidningsartikel som gav namnet förs
+ärendets kort, egen sida och i tidslinjen, och går att söka på med
+knappen *Sök* i sajtraden (K28). Källan står bara i filen; en tidningsartikel som gav namnet förs
 också in under ärendet i *I media och debatt*. Ett ärende som inte finns
 stoppar bygget.
 
