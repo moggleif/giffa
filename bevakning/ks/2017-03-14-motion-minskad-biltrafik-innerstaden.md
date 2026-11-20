@@ -10,8 +10,8 @@ Två ledamöter (KB) väckte 2016 en motion om minskad biltrafik i innerstaden;
 motionstexten finns inte i poolen. Kommunstyrelsen föreslog att motionen
 avslås, men skrev att analysen om bättre trafikföring var befogad och att
 kommunen skulle ta ett helhetsgrepp för hela Kungsbacka stad och
-centrumdelarna i arbetet med trafikledsplan och centrum. Kommunfullmäktiges
-protokoll finns inte i poolen, så utfallet är okänt.
+centrumdelarna i arbetet med trafikledsplan och centrum. Kommunfullmäktige
+avslog motionen i april 2017.
 
 ## Händelser
 

@@ -9,8 +9,8 @@ status: beslutat
 En ledamot (S) väckte 2016 en motion om en motionsslinga och en skidbacke i
 Tölö; motionstexten finns inte i poolen. Kommunstyrelsen föreslog att
 motionen anses besvarad med hänvisning till det pågående arbetet med
-planprogram för Nordöstra Kungsbacka. Kommunfullmäktiges protokoll finns
-inte i poolen, så utfallet är okänt.
+planprogram för Nordöstra Kungsbacka, och kommunfullmäktige gjorde så i
+april 2017.
 
 ## Händelser
 

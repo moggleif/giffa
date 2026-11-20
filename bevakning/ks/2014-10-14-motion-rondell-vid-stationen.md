@@ -10,8 +10,8 @@ En ledamot (FP) väckte 2014 en motion om en rondell vid stationen;
 motionstexten finns inte i poolen, och vilken station som avses framgår inte av handlingarna. Kommunstyrelsen föreslog 2017 att
 motionen avslås, men skrev att analysen om bättre trafikföring var befogad
 och att kommunen skulle ta ett helhetsgrepp för hela Kungsbacka stad och
-centrumdelarna i arbetet med trafikledsplan och centrum. Kommunfullmäktiges
-protokoll finns inte i poolen, så utfallet är okänt.
+centrumdelarna i arbetet med trafikledsplan och centrum. Kommunfullmäktige
+avslog motionen i april 2017.
 
 ## Händelser
 

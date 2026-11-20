@@ -11,8 +11,7 @@ Kungsbacka innerstad. Förvaltningen var positiv till stadsutveckling i
 innerstaden men konstaterade att kommunen inte äger någon av fastigheterna i
 innerstadskvarteren och att sådan utveckling normalt prövas genom detaljplan
 eller bygglov på fastighetsägarens initiativ. Kommunstyrelsen föreslog att
-motionen avslås. Kommunfullmäktiges beslut finns inte i poolen, så utfallet
-är okänt.
+motionen avslås, och kommunfullmäktige avslog den i september 2013.
 
 ## Händelser
 
