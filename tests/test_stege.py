@@ -79,7 +79,7 @@ class Processtegen(unittest.TestCase):
             html = stege(byggt("Detaljplan för P", med(f"- 2026-10-20 · beslut · {text} · [P](https://example.org/e)")), IDAG)
             self.assertRegex(html, r'<li class="nu">.+?<strong>Granskning</strong>')
         antog = med("- 2026-10-20 · beslut · Kommunfullmäktige antog detaljplanen. · [P](https://example.org/a)")
-        self.assertRegex(stege(byggt("Detaljplan för P", antog), IDAG), r'<li class="nu">.+?<strong>Antagande</strong>')
+        self.assertRegex(stege(byggt("Detaljplan för P", antog), IDAG), r'<li class="gjord">.+?<strong>Antagande</strong>')
 
     def test_ett_annat_tillfalle_ar_inte_antagandet(self):
         html = stege(byggt("Detaljplan för P", HANDELSER.replace("föreslås anta detaljplanen", "ska besluta om principavtalet")), IDAG)
@@ -105,6 +105,20 @@ class Processtegen(unittest.TestCase):
             [("okand", "○", "Uppdrag", 'kommer, <time datetime="2026-11-19">19 november 2026</time>'), ("okand", "○", "Samråd", "")],
         )
 
+    def test_en_antagen_plan_ar_klar_och_visar_vad_som_hant_sedan(self):
+        antog = med(
+            "- 2026-10-01 · forslag · KSAU föreslog ny part i exploateringsavtalet. · [E](https://example.org/e)\n"
+            "- 2026-09-15 · info · Detaljplanen fick laga kraft. · [L](https://example.org/l)\n"
+            "- 2026-08-01 · beslut · Byggnadsnämnden antog detaljplanen. · [A](https://example.org/a)",
+            HANDELSER.split("## Tycka till")[0],
+        )
+        html = stege(byggt("Detaljplan för K", antog), IDAG)
+        self.assertEqual(steg(html)[-1], ("gjord", "✓", "Antagande", 'klart, <time datetime="2026-08-01">1 augusti 2026</time>'))
+        self.assertIn('<p>Var planen står: antagen, laga kraft <time datetime="2026-09-15">15 september 2026</time></p>', html)
+        self.assertIn('<strong>Senast, <time datetime="2026-10-01">1 oktober 2026</time>:</strong> KSAU föreslog ny part i exploateringsavtalet.', html)
+        html = stege(byggt("Detaljplan för K", antog + "## Tycka till\n\n- 2026-11-24 · vantas · KS väntas besluta om partsbytet. · [K](https://example.org/k)\n\n"), IDAG)
+        self.assertIn('<strong>Härnäst, <time datetime="2026-11-24">24 november 2026</time>:</strong> KS väntas besluta om partsbytet.', html)
+
     def test_ett_upphavt_antagande(self):
         upphavt = med(
             "- 2026-09-01 · info · Domen överklagades; den upphävde planen. · [O](https://example.org/o)\n"
@@ -114,6 +128,7 @@ class Processtegen(unittest.TestCase):
         html = stege(byggt("Detaljplan för U", upphavt), IDAG)
         self.assertIn('<time datetime="2026-08-15">15 augusti 2026</time>: Länsstyrelsen upphävde antagandet.', html)
         self.assertIn("Stegen visar planen fram till upphävandet.", html)
+        self.assertNotIn("Var planen står: antagen", html)
         self.assertRegex(html, r'<li class="nu">.+?<strong>Antagande</strong>')
         omstart = med("- 2026-10-01 · granskning · Ny granskning. · [G](https://example.org/n)", upphavt)
         html = stege(byggt("Detaljplan för U", omstart), IDAG)

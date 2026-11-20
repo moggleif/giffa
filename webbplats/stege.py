@@ -9,8 +9,9 @@ eller godkändes, uppdraget på ett förslag eller beslut om uppdrag att
 upprätta planen eller en godkänd projektbeställning. Ett steg före steget
 nu utan egen händelse är passerat men inte klart, och ett kommande steg
 utan tillfälle sägs inte komma. Kommer inget steg fram står läget som
-okänt i stället för gissat. Andra ärenden har ingen fastslagen process
-och ingen stege.
+okänt i stället för gissat. En plan som nått sitt sista steg är klar, och
+då visas vad som händer i ärendet efter planen. Andra ärenden har ingen
+fastslagen process och ingen stege.
 """
 
 import re
@@ -49,6 +50,8 @@ FORFARANDE = f'<p class="forfarande"><a href="{PBL}">Stegen i plan- och bygglage
 TECKEN = {"gjord": "✓", "tidigare": "✓", "nu": "●", "nasta": "→", "kommande": "○", "okand": "○"}
 ORD = {"gjord": "klart", "nu": "nu", "nasta": "nästa", "kommande": "kommer", "okand": "kommer"}
 UTAN_DATUM = {"tidigare": "passerat", "nasta": "nästa, inget datum än", "kommande": "inget datum än"}
+KLAR = {"Antagande": "antagen", "Godkännande": "godkänd"}
+LAGA_KRAFT = re.compile(r"(fick|vann|fått|vunnit) laga kraft", re.IGNORECASE)
 
 
 def stege(arende: Arende, idag: date) -> str:
@@ -61,9 +64,14 @@ def stege(arende: Arende, idag: date) -> str:
     nu = steget_nu(handelser, stegen)
     tillfallen = kommande(arende, idag)
     lagen = [lage(i, nu, s, handelser) for i, s in enumerate(stegen)]
+    klar = lagen[-1] == "nu" and not (upphavt and not borjat_om)
+    if klar:
+        lagen[-1] = "gjord"
     poster = "".join(post(s, l, nar(s, l, handelser, tillfallen)) for s, l in zip(stegen, lagen, strict=True))
-    rubrik = "Var planen står" + (": okänt" if nu is None else "")
-    noten = upphavd(upphavt, borjat_om) + FORFARANDE
+    rubrik, sedan = ("Var planen står" + (": okänt" if nu is None else ""), "")
+    if klar:
+        rubrik, sedan = klar_plan(stegen[-1], handelser, tillfallen)
+    noten = sedan + upphavd(upphavt, borjat_om) + FORFARANDE
     return f'<div class="stege"><p>{rubrik}</p><ol>{poster}</ol>{noten}</div>'
 
 
@@ -123,4 +131,29 @@ def upphavd(upphavt: Handelse | None, borjat_om: bool) -> str:
     return (
         f'<p class="forfarande">{tid(upphavt.datum)}: {escape(upphavt.text)} '
         f'<a href="{escape(upphavt.lank)}">{escape(upphavt.kalla)}</a> Stegen visar {sedan}.</p>'
+    )
+
+
+def klar_plan(sista: Steg, handelser: list[Handelse], tillfallen: list[Handelse]) -> tuple[str, str]:
+    slut = max(h.datum for h in handelser if passar(sista.handelse, h))
+    rubrik = f"Var planen står: {KLAR[sista.namn]}{laga_kraft(handelser, slut)}"
+    return rubrik, efter_planen(handelser, slut, tillfallen)
+
+
+def laga_kraft(handelser: list[Handelse], slut: date) -> str:
+    traffar = [h.datum for h in handelser if h.datum >= slut and LAGA_KRAFT.search(h.text)]
+    return f", laga kraft {tid(min(traffar))}" if traffar else ""
+
+
+def efter_planen(handelser: list[Handelse], slut: date, tillfallen: list[Handelse]) -> str:
+    senare = [h for h in handelser if h.datum > slut and not LAGA_KRAFT.search(h.text)]
+    if tillfallen:
+        rubrik, handelse = "Härnäst", tillfallen[0]
+    elif senare:
+        rubrik, handelse = "Senast", max(senare, key=lambda h: h.datum)
+    else:
+        return ""
+    return (
+        f'<p class="efter-planen"><strong>{rubrik}, {tid(handelse.datum)}:</strong> {escape(handelse.text)} '
+        f'<a href="{escape(handelse.lank)}">{escape(handelse.kalla)}</a></p>'
     )

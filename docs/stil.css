@@ -152,8 +152,14 @@ ul.pa-vag-upp small { color: var(--dampad); }
 .stege li.nasta > span { color: var(--accent); }
 .stege li.kommande, .stege li.okand { border-style: dashed; }
 .stege li.kommande > span, .stege li.okand > span { color: var(--dampad); }
+.stege .efter-planen { margin: 0.4rem 0 0; padding: 0.3rem 0.7rem; border-radius: 6px; max-width: 40rem;
+                      background: var(--accent); color: var(--bakgrund); }
+.stege .efter-planen a, .stege .efter-planen time { color: var(--bakgrund); }
 .stege .forfarande { font-size: 0.85rem; color: var(--dampad); margin: 0.3rem 0 0; }
-.kort .stege .forfarande { display: none; }
+.kort .stege .efter-planen { margin: 0.4rem 0 0; padding: 0.3rem 0.7rem; border-radius: 6px; max-width: 40rem;
+                      background: var(--accent); color: var(--bakgrund); }
+.stege .efter-planen a, .stege .efter-planen time { color: var(--bakgrund); }
+.stege .forfarande { display: none; }
 .kort .stege li { padding: 0 0.4rem; border-width: 1px; font-size: 0.9rem; }
 .kort .stege li small { display: inline; }
 div.varning { background: var(--varning); border: 2px solid var(--alla); border-left-width: 8px;

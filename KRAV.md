@@ -413,6 +413,14 @@ senare steg som *inget datum än*. Säger ingen händelse vilket steg planen
 står på är rubriken *Var planen står: okänt* och stegen visas neutrala,
 med de datum som finns för kommande tillfällen.
 
+När planen nått sitt sista steg, antagandet eller godkännandet, är det
+steget klart och rubriken *Var planen står: antagen* (eller *godkänd*),
+med *laga kraft* och datum när en händelse från och med det steget säger
+att planen fått eller vunnit laga kraft. Under stegen står då vad som
+händer med ärendet efter planen: *Härnäst:* nästa kommande tillfälle,
+eller annars *Senast:* den senaste händelsen efter steget som inte gäller
+laga kraften, med datum och källa.
+
 Säger en information att antagandet eller planen upphävts räknas bara det
 som hänt efter det första upphävandet, om något av det är ett steg;
 annars visas planen fram till upphävandet. Upphävandet står med datum och
