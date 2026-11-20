@@ -63,7 +63,7 @@ beslut/      Beslut som är svåra att ändra.
 KRAV.md      Vad bevakningen ska göra.
 webbplats/   Bygger sidan ur bevakning/, OMRADE.md, platser.csv och KALLOR.md.
 docs/        Sidans stil och skript, som kopieras med i bygget.
-skanning/    Söker igenom kommunhandlingar inför månadens runda.
+skanning/    Söker igenom kommunens och regionens handlingar inför rundan.
 handlingslankar/ Lägger handlingarna intill protokollen i ärendena.
 tidningar/   Läser tidningarnas flöden efter artiklar om orterna.
 tests/       Testerna för bygget, skanningen, handlingslänkarna och tidningarna.
@@ -77,23 +77,27 @@ Ett ärende att följa läggs upp som ett issue med mallen *Bevaka ett ärende*.
 
 ## Månadens runda
 
-Den första i varje månad söker `skanning.yml` igenom kommunhandlingar efter
-orterna, platserna och de öppna ärendena från början av förra rundans
-period och öppnar ett
-issue med etiketten `runda` ([beslut 0003](beslut/0003-manadens-skanning-i-actions.md)).
+Den första i varje månad söker `skanning.yml` igenom kommunens och
+regionens handlingar efter orterna, platserna och de öppna ärendena – i
+regionens också efter kommunens namn – från början av förra rundans
+period och öppnar ett issue per källa med etiketten `runda`
+([beslut 0003](beslut/0003-manadens-skanning-i-actions.md),
+[beslut 0020](beslut/0020-regionens-handlingar-i-rundan.md)).
 Rundan – att föra in träffarna som ärenden – görs sedan av en agent enligt
 faserna i `AGENTS.md`, till exempel genom att be den "köra rundan".
 Sökningen går också att köra lokalt:
 
 ```
-python3 -m skanning <kommunhandlingar>/data/kungsbacka https://moggleif.github.io/kungsbackakommun
+python3 -m skanning <kungsbackakommun>/data/kungsbacka https://moggleif.github.io/kungsbackakommun
+python3 -m skanning --kommunnamn Kungsbacka --kommunnamn Kungsbackas \
+  <regionhalland>/data/regionhalland https://moggleif.github.io/regionhalland
 ```
 
 ## Veckans kallelser
 
-Varje måndag söker `kallelser.yml` igenom kallelserna och handlingarna till
-kommande sammanträden på samma sätt och öppnar ett issue med etiketten
-`kallelser` när något träffar ([beslut 0005](beslut/0005-veckans-kallelser.md)).
+Varje måndag söker `kallelser.yml` igenom kommunens och regionens
+kallelser och handlingar till kommande sammanträden på samma sätt och
+öppnar ett issue per källa med etiketten `kallelser` när något träffar ([beslut 0005](beslut/0005-veckans-kallelser.md)).
 Det som rör ett bevakat ärende förs in under *Tycka till*, så att det syns
 på sidan före mötet. Lokalt: `python3 -m skanning --kommande …`.
 

@@ -533,3 +533,19 @@ AI ur offentliga uppgifter från kommunen, regionen och statliga
 myndigheter. Fel kan förekomma, så kontrollera mot källan.* Raden går inte att stänga. Den följer temat (K36), och på en
 skärm 320 punkter bred bryts texten så att sidan aldrig blir bredare än
 skärmen. Triangeln läses inte upp; raden är märkt som en notering.
+
+## K39 – Regionens handlingar i rundan och på sidan
+
+**Givet** Region Hallands kallelser, protokoll och bilagor som text i
+`moggleif/regionhalland`, med samma format som kommunens,
+**när** månadens skanning (K11) eller veckans kallelser (K13) körs,
+**så** söks regionens handlingar på samma sätt som kommunens, efter samma
+termer och dessutom kommunens namn, *Kungsbacka* och *Kungsbackas*, som
+hela ord. Varje källa får sitt eget issue, med källans namn i rubriken,
+och bilagorna ligger hopfällda med handlingarna. Ett ärende som regionen
+driver – vård, kollektivtrafik, vägar i den regionala planen,
+folkhögskolan – ligger i `bevakning/region/` med regionens organ som
+`organ`, och dess händelser och tillfällen att tycka till länkar
+regionens protokoll och kallelser på regionens webbplats. När en region-
+nämnd yttrar sig över ett ärende som kommunen driver, som en detaljplan,
+står yttrandet som en händelse i det ärendet.

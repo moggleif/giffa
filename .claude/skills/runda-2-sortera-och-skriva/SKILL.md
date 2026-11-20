@@ -11,12 +11,14 @@ Skapa en gren innan något skrivs.
    (samma diarienummer, plan eller fastighet)? Då är den en ny händelse
    där. Annars blir den ett nytt ärende.
 2. **Skriv** enligt formatet i `bevakning/README.md`. Ett nytt ärende blir
-   en fil i källans mapp; en ny händelse läggs överst, med datum och länk,
+   en fil i källans mapp – regionens egna ärenden i `bevakning/region/`,
+   regionens yttrande över en detaljplan i planens ärende – och en ny
+   händelse läggs överst, med datum och länk,
    och `status` uppdateras när händelsen ändrar den. Länka handlingarna
    som steget bygger på efter `Handlingar: `, och skriv *Förslaget i
    korthet* när ett planförslag eller program kommer ut (K25).
-3. **Tycka till.** Gå igenom *Kommande sammanträden* i månadens issue och
-   kallelserna som har kommit. Ska ett bevakat ärende upp, eller pågår ett
+3. **Tycka till.** Gå igenom *Kommande sammanträden* i månadens issues och
+   kallelserna som har kommit, kommunens och regionens. Ska ett bevakat ärende upp, eller pågår ett
    samråd eller en granskning, skriv det under *Tycka till* i ärendet med
    datum och källa. Har ett arbetsutskott föreslagit ett beslut som inte
    står i någon kallelse än, skriv det som `vantas` med organets nästa

@@ -2,7 +2,8 @@
 
 | Källa | Vad den ger | Adress |
 | ----- | ----------- | ------ |
-| Kommunens politiska handlingar | Kallelser, handlingar och protokoll från KF, KS, KSAU och nämnderna, som text. Huvudkällan. | https://github.com/moggleif/kommunhandlingar |
+| Kommunens politiska handlingar | Kallelser, handlingar och protokoll från KF, KS, KSAU och nämnderna, som text. Huvudkällan. | https://github.com/moggleif/kungsbackakommun |
+| Region Hallands politiska handlingar | Kallelser, protokoll och bilagor från regionfullmäktige, regionstyrelsen och driftnämnderna, som text: vård, tandvård, kollektivtrafik, regionala vägar, kultur och regionens yttranden över kommunens planer | https://github.com/moggleif/regionhalland |
 | Kungsbacka kommuns webbplats | Nyheter, pågående detaljplaner, samråd och granskningar | https://www.kungsbacka.se |
 | Kungsbackas karta | Detaljplaner, bygglov och planområden på karta | https://karta.kungsbacka.se |
 | Norra Halland | Lokaltidning; rubriker om orterna | https://www.norrahalland.se |

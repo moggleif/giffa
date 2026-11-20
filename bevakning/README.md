@@ -9,6 +9,7 @@ bevakning/namnder/         Nämnderna
 bevakning/bygglov/         Bygglov
 bevakning/detaljplaner/    Detaljplaner
 bevakning/kungsbacka-se/   Övrigt från kungsbacka.se
+bevakning/region/          Region Halland: vård, kollektivtrafik, regionala vägar, kultur
 ```
 
 Filen heter `ÅÅÅÅ-MM-DD-kort-beskrivning.md` efter datumet på ärendets
@@ -77,7 +78,12 @@ eller *plan* blir länkar på samma sätt (K24); skriv dem som i källan.
 **Händelserna** står nyast först, en per rad: datum, steg, en mening om
 vad som hände och källan som länk, åtskilda med ` · `. Länka till handlingens sida på
 [kommunhandlingars webbplats](https://moggleif.github.io/kungsbackakommun/)
-med `#sida-N` när den finns där; i `.md` på GitHub fungerar ankaret inte. Stegen ger ikonen i
+med `#sida-N` när den finns där; i `.md` på GitHub fungerar ankaret inte.
+Regionens protokoll och kallelser länkas på samma sätt på
+[regionens webbplats](https://moggleif.github.io/regionhalland/), och en
+bilaga, som bara visas med sin härkomst där, till texten i
+[moggleif/regionhalland](https://github.com/moggleif/regionhalland) (K39).
+Regionens yttrande över en detaljplan är en händelse i planens ärende. Stegen ger ikonen i
 tabellen, och teckenförklaringen på sidan visar samma betydelser
 (`BETYDER` i `webbplats/ikoner.py`, som ett test håller lika med tabellen):
 

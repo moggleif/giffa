@@ -1,8 +1,8 @@
-"""Krav: K11 och K13 i KRAV.md. Test: tests/test_skanning.py.
+"""Krav: K11, K13 och K39 i KRAV.md. Test: tests/test_skanning.py.
 
 Träffarna som Markdown för månadens och veckans issue: en rad per dokument med datum,
-organ, sidorna, en länk till den första på kommunhandlingars webbplats och
-termerna. Protokoll och kallelser står först; handlingarna, där en
+organ, sidorna, en länk till den första på källans webbplats och
+termerna. Protokoll och kallelser står först; handlingarna och bilagorna, där en
 lång bilaga kan ge träffar på hundratals sidor, ligger hopfällda sist i
 varje avsnitt. Ingen text ur handlingarna återges, eftersom den kan innehålla
 personnamn. Rapporten kortas så att den ryms i ett issue.
@@ -22,7 +22,7 @@ def rapport(traffar: list[Traff], period: tuple[date, date], omfattning: str, ba
     i_perioden = [t for t in traffar if t.datum <= till]
     kommande = [t for t in traffar if t.datum > till]
     return (
-        f"## Träffar i kommunhandlingar {fran} – {till}\n\n{omfattning}\n\n"
+        f"## Träffar i {bas.rsplit('/', 1)[-1]} {fran} – {till}\n\n{omfattning}\n\n"
         + avsnitt("I perioden", i_perioden, bas)
         + avsnitt(f"Kommande sammanträden, efter {till}", kommande, bas)
     )
@@ -47,7 +47,7 @@ def avsnitt(rubrik: str, traffar: list[Traff], bas: str) -> str:
 
 
 def ar_handlingar(dokument: str) -> bool:
-    return dokument.rsplit("/", 1)[-1].startswith("handlingar")
+    return not dokument.rsplit("/", 1)[-1].startswith(("protokoll", "kallelse"))
 
 
 def hopfalld(dokumenten: list[str], traffar: list[Traff], bas: str) -> str:
