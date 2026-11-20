@@ -1,4 +1,4 @@
-"""K33: processtegen för planerna, med spåret för varje steg och bara det händelserna säger."""
+"""K33: processtegen för planerna, med läget för varje steg och bara det händelserna säger."""
 
 import re
 import unittest
@@ -33,7 +33,7 @@ def med(rad: str, handelser: str = HANDELSER) -> str:
 
 
 def steg(html: str) -> list[tuple[str, str, str, str]]:
-    return re.findall(r'<li class="(\w+) (\w+)">.*?<strong>(\w+)</strong> <small>(.*?)</small>', html)
+    return re.findall(r'<li class="(\w+)"><span aria-hidden="true">(.)</span> <strong>(\w+)</strong> <small>(.*?)</small>', html)
 
 
 class Processtegen(unittest.TestCase):
@@ -41,13 +41,27 @@ class Processtegen(unittest.TestCase):
         self.assertEqual(
             steg(stege(byggt("Detaljplan för bostäder"), IDAG)),
             [
-                ("gjord", "partiet", "Uppdrag", 'gjort, <time datetime="2025-01-16">16 januari 2025</time>'),
-                ("gjord", "alla", "Samråd", 'gjort, <time datetime="2026-02-19">19 februari 2026</time>'),
-                ("nu", "alla", "Granskning", 'nu, <time datetime="2026-05-26">26 maj 2026</time>'),
-                ("kommande", "partiet", "Antagande", 'kommer, <time datetime="2026-11-17">17 november 2026</time>'),
+                ("gjord", "✓", "Uppdrag", 'klart, <time datetime="2025-01-16">16 januari 2025</time>'),
+                ("gjord", "✓", "Samråd", 'klart, <time datetime="2026-02-19">19 februari 2026</time>'),
+                ("nu", "●", "Granskning", 'nu, <time datetime="2026-05-26">26 maj 2026</time>'),
+                ("nasta", "→", "Antagande", 'nästa, <time datetime="2026-11-17">17 november 2026</time>'),
             ],
         )
-        self.assertIn("standardförfarande", stege(byggt("Detaljplan för bostäder"), IDAG))
+        html = stege(byggt("Detaljplan för bostäder"), IDAG)
+        self.assertIn("<p>Var planen står</p>", html)
+        self.assertIn("Stegen i plan- och bygglagen</a>", html)
+
+    def test_nasta_steg_och_senare_steg(self):
+        bara = "## Händelser\n\n- 2025-08-26 · forslag · Kommunstyrelsen godkände projektbeställning gällande planprogrammet. · [P](https://example.org/p)\n\n"
+        self.assertEqual(
+            [(s[0], s[1], s[3]) for s in steg(stege(byggt("Detaljplan för N", bara), IDAG))],
+            [
+                ("nu", "●", 'nu, <time datetime="2025-08-26">26 augusti 2025</time>'),
+                ("nasta", "→", "nästa, inget datum än"),
+                ("kommande", "○", "inget datum än"),
+                ("kommande", "○", "inget datum än"),
+            ],
+        )
 
     def test_planprogram_andring_och_ovrigt(self):
         program = steg(stege(byggt("Planprogram för X"), IDAG))
@@ -63,31 +77,30 @@ class Processtegen(unittest.TestCase):
             "Nämnden överlämnade planen till fullmäktige för antagande.",
         ):
             html = stege(byggt("Detaljplan för P", med(f"- 2026-10-20 · beslut · {text} · [P](https://example.org/e)")), IDAG)
-            self.assertRegex(html, r'<li class="nu alla">.+?<strong>Granskning</strong>')
+            self.assertRegex(html, r'<li class="nu">.+?<strong>Granskning</strong>')
         antog = med("- 2026-10-20 · beslut · Kommunfullmäktige antog detaljplanen. · [P](https://example.org/a)")
-        self.assertRegex(stege(byggt("Detaljplan för P", antog), IDAG), r'<li class="nu partiet">.+?<strong>Antagande</strong>')
+        self.assertRegex(stege(byggt("Detaljplan för P", antog), IDAG), r'<li class="nu">.+?<strong>Antagande</strong>')
 
     def test_ett_annat_tillfalle_ar_inte_antagandet(self):
         html = stege(byggt("Detaljplan för P", HANDELSER.replace("föreslås anta detaljplanen", "ska besluta om principavtalet")), IDAG)
-        self.assertIn("<strong>Antagande</strong> <small>inget i källorna än</small>", html)
+        self.assertIn("<strong>Antagande</strong> <small>nästa, inget datum än</small>", html)
         foreslag = HANDELSER.replace("Nämnden föreslås anta", "Utskottet föreslås föreslå att nämnden antar")
         html = stege(byggt("Detaljplan för P", foreslag), IDAG)
-        self.assertIn("<strong>Antagande</strong> <small>inget i källorna än</small>", html)
+        self.assertIn("<strong>Antagande</strong> <small>nästa, inget datum än</small>", html)
 
     def test_ett_steg_utan_egen_handelse_sags_inte_vara_gjort(self):
         utan = HANDELSER.replace("- 2026-02-19 · samrad · Samråd. · [P](https://example.org/s)\n", "")
         html = stege(byggt("Detaljplan för T", utan), IDAG)
-        self.assertIn('<li class="tidigare alla">', html)
-        self.assertIn("<strong>Samråd</strong> <small>ingen händelse i källorna</small>", html)
+        self.assertIn('<li class="tidigare"><span aria-hidden="true">✓</span> <strong>Samråd</strong> <small>passerat</small>', html)
 
     def test_okant_lage_star_som_okant(self):
         bara = "## Händelser\n\n- 2023-10-26 · forslag · Nämnden ger uppdrag att genomföra granskning. · [P](https://example.org/p)\n\n"
         bara += "## Tycka till\n\n- 2026-11-19 · beslut · Nämnden ska besluta om uppdraget att upprätta planen. · [K](https://example.org/k)\n\n"
         html = stege(byggt("Detaljplan för V", bara), IDAG)
-        self.assertIn("Var planen står går inte att läsa ut ur händelserna.", html)
+        self.assertIn("<p>Var planen står: okänt</p>", html)
         self.assertEqual(
-            [(s[0], s[2], s[3]) for s in steg(html)][:2],
-            [("okand", "Uppdrag", 'kommer, <time datetime="2026-11-19">19 november 2026</time>'), ("okand", "Samråd", "")],
+            [(s[0], s[1], s[2], s[3]) for s in steg(html)][:2],
+            [("okand", "○", "Uppdrag", 'kommer, <time datetime="2026-11-19">19 november 2026</time>'), ("okand", "○", "Samråd", "")],
         )
 
     def test_ett_upphavt_antagande(self):
@@ -99,11 +112,11 @@ class Processtegen(unittest.TestCase):
         html = stege(byggt("Detaljplan för U", upphavt), IDAG)
         self.assertIn('<time datetime="2026-08-15">15 augusti 2026</time>: Länsstyrelsen upphävde antagandet.', html)
         self.assertIn("Stegen visar planen fram till upphävandet.", html)
-        self.assertRegex(html, r'<li class="nu partiet">.+?<strong>Antagande</strong>')
+        self.assertRegex(html, r'<li class="nu">.+?<strong>Antagande</strong>')
         omstart = med("- 2026-10-01 · granskning · Ny granskning. · [G](https://example.org/n)", upphavt)
         html = stege(byggt("Detaljplan för U", omstart), IDAG)
         self.assertIn("Stegen visar det som hänt sedan dess.", html)
-        self.assertRegex(html, r'<li class="nu alla">.+?<strong>Granskning</strong>')
+        self.assertRegex(html, r'<li class="nu">.+?<strong>Granskning</strong>')
 
     def test_bara_pagaende(self):
         self.assertEqual(stege(byggt("Detaljplan för B", status="beslutat"), IDAG), "")

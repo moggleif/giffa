@@ -9,13 +9,13 @@
   --dampad: light-dark(#5b6475, #a8b0bd); --lyft: light-dark(#8e2459, #f29bc5);
   --alla: light-dark(#8a5a00, #e6b552); --partiet: light-dark(#2f4fa0, #a3b8f2);
   --klart: light-dark(#1a6b2a, #72d083); --avbrutet: light-dark(#b00020, #ff8a94);
-  --varning: light-dark(#fff1c2, #3b3014);
+  --varning: light-dark(#fff1c2, #3b3014); --klartyta: light-dark(#e4f3e7, #17301e);
   --sajtaccent: var(--accent); --sajtbredd: 72rem; --sajtkant: 0; }
 @supports not (color: light-dark(black, white)) {
   :root { color-scheme: light; --text: #1a1a1a; --bakgrund: #fff; --accent: #1d5d73;
     --band: #e3eef2; --yta: #f5f6f8; --linje: #d9dde5; --dampad: #5b6475; --lyft: #8e2459;
     --alla: #8a5a00; --partiet: #2f4fa0; --klart: #1a6b2a; --avbrutet: #b00020;
-    --varning: #fff1c2; }
+    --varning: #fff1c2; --klartyta: #e4f3e7; }
 }
 html { font-size: 112.5%; }
 body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 0 auto;
@@ -141,13 +141,17 @@ ul.pa-vag-upp small { color: var(--dampad); }
 .stege > p:first-child { margin: 0; font-weight: 600; }
 .stege ol { list-style: none; margin: 0.3rem 0 0; padding: 0; display: flex; flex-wrap: wrap;
             gap: 0.4rem; }
-.stege li { padding: 0.2rem 0.6rem; border-radius: 6px; border: 2px solid var(--linje); }
+.stege li { padding: 0.25rem 0.7rem; border-radius: 6px; border: 2px solid var(--linje); }
+.stege li > span { display: inline-block; width: 1.1em; font-weight: 700; }
 .stege li small { display: block; color: var(--dampad); }
-.stege li.gjord { background: var(--yta); }
-.stege li.nu.alla { border-color: var(--alla); }
-.stege li.nu.partiet { border-color: var(--partiet); }
-.stege li.kommande { border-style: dashed; }
-.stege li.okand, .stege li.tidigare { border-style: dotted; }
+.stege li.gjord, .stege li.tidigare { background: var(--klartyta); border-color: var(--klart); }
+.stege li.gjord > span, .stege li.tidigare > span { color: var(--klart); }
+.stege li.nu { background: var(--accent); border-color: var(--accent); color: var(--bakgrund); }
+.stege li.nu small, .stege li.nu time { color: var(--bakgrund); }
+.stege li.nasta { border: 2px dashed var(--accent); background: var(--band); }
+.stege li.nasta > span { color: var(--accent); }
+.stege li.kommande, .stege li.okand { border-style: dashed; }
+.stege li.kommande > span, .stege li.okand > span { color: var(--dampad); }
 .stege .forfarande { font-size: 0.85rem; color: var(--dampad); margin: 0.3rem 0 0; }
 .kort .stege .forfarande { display: none; }
 .kort .stege li { padding: 0 0.4rem; border-width: 1px; font-size: 0.9rem; }
