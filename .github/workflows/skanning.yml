@@ -1,7 +1,9 @@
-# Månadens skanning (K11, beslut 0003): söker igenom kommunhandlingar efter
-# orterna, platserna och de öppna ärendenas diarienummer från början av förra
-# rundans period och öppnar ett issue med träffarna, som rundan utgår från.
-# Hela rapporten sparas som artefakt; issuet hoppas över om dagens redan finns.
+# Månadens skanning (K11, K39, beslut 0003 och 0019): söker igenom kommunens
+# och regionens handlingar efter orterna, platserna och de öppna ärendenas
+# diarienummer – i regionens också efter kommunens namn – från början av förra
+# rundans period och öppnar ett issue per källa med träffarna, som rundan
+# utgår från. Hela rapporten sparas som artefakt; issuet hoppas över om
+# dagens redan finns.
 name: Skanning
 
 on:
@@ -16,29 +18,39 @@ permissions:
 jobs:
   skanna:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - kalla: kungsbackakommun
+            data: data/kungsbacka
+            flaggor: ""
+          - kalla: regionhalland
+            data: data/regionhalland
+            flaggor: --kommunnamn Kungsbacka --kommunnamn Kungsbackas
     steps:
       - uses: actions/checkout@v7
-      - name: Hämta årets och fjolårets handlingar ur kommunhandlingar
+      - name: Hämta årets och fjolårets handlingar ur ${{ matrix.kalla }}
         run: |
           ar=$(date +%Y)
           git clone --depth 1 --filter=blob:none --no-checkout \
-            https://github.com/moggleif/kommunhandlingar.git "$RUNNER_TEMP/kh"
-          git -C "$RUNNER_TEMP/kh" sparse-checkout set --no-cone \
-            "data/kungsbacka/*/$ar/" "data/kungsbacka/*/$((ar - 1))/"
-          git -C "$RUNNER_TEMP/kh" checkout
+            "https://github.com/moggleif/${{ matrix.kalla }}.git" "$RUNNER_TEMP/kalla"
+          git -C "$RUNNER_TEMP/kalla" sparse-checkout set --no-cone \
+            "${{ matrix.data }}/*/$ar/" "${{ matrix.data }}/*/$((ar - 1))/"
+          git -C "$RUNNER_TEMP/kalla" checkout
       - name: Sök
         run: |
-          python3 -m skanning "$RUNNER_TEMP/kh/data/kungsbacka" \
-            https://moggleif.github.io/kungsbackakommun > "$RUNNER_TEMP/traffar.md"
+          python3 -m skanning ${{ matrix.flaggor }} "$RUNNER_TEMP/kalla/${{ matrix.data }}" \
+            "https://moggleif.github.io/${{ matrix.kalla }}" > "$RUNNER_TEMP/traffar.md"
       - uses: actions/upload-artifact@v7
         with:
-          name: traffar
+          name: traffar-${{ matrix.kalla }}
           path: ${{ runner.temp }}/traffar.md
       - name: Öppna dagens issue
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          titel="Underlag för bevakningsrunda: träffar till och med $(date +%F)"
+          titel="Underlag för bevakningsrunda: träffar i ${{ matrix.kalla }} till och med $(date +%F)"
           gh label create runda --force --description "Underlag för månadens bevakningsrunda"
           if gh issue list --label runda --state all --search "in:title \"$titel\"" \
             --json title --jq '.[].title' | grep -qxF "$titel"; then

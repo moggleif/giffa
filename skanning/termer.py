@@ -1,7 +1,8 @@
 """Krav: K11 i KRAV.md. Test: tests/test_skanning.py.
 
-Söktermerna: orterna ur OMRADE.md, platsernas namn ur platser.csv och
-diarienumren i de ärenden som inte är avslutade. Ett mellanslag i en term
+Söktermerna: orterna ur OMRADE.md, platsernas namn ur platser.csv,
+diarienumren i de ärenden som inte är avslutade och, i regionens
+handlingar, kommunens namn (K39). Ett mellanslag i en term
 matchar också radbrott, och ett diarienummer skrivet med mellanslag efter
 prefixet (BN 2024-00196) räknas.
 """
@@ -15,12 +16,13 @@ from webbplats.arende import tolka
 AVSLUTADE = ("klart", "avbrutet")
 
 
-def termer(rot: Path) -> dict[str, list[str]]:
-    return {
+def termer(rot: Path, kommunnamn: tuple[str, ...] = ()) -> dict[str, list[str]]:
+    grupper = {
         "orter": underlag.orter(las(rot, "OMRADE.md")),
         "platsnamn": [p["namn"] for p in underlag.platser(las(rot, "platser.csv"))],
         "diarienummer": diarienummer(rot),
     }
+    return grupper | ({"kommunnamn": list(kommunnamn)} if kommunnamn else {})
 
 
 def las(rot: Path, namn: str) -> str:
