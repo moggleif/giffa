@@ -37,7 +37,11 @@ UPPDRAG = Steg(
     (FATTAT, r"uppdraget att upprätta"),
 )
 SAMRAD = Steg("Samråd", ("samrad", ""), ("samrad", ""))
-ANTAGANDE = Steg("Antagande", ("beslut", r"\b(antog|antagit)\b"), (FATTAT, r"^(?!.*föreslå att).*\banta[rs]? (detalj)?planen"))
+ANTAGANDE = Steg(
+    "Antagande",
+    ("beslut", r"(?<!inte )\b(antog|antagit) (den |det )?(ändringen av |reviderade |ändrade )?(del av )?\w*plan"),
+    (FATTAT, r"^(?!.*föreslå att).*\banta[rs]? (detalj)?planen"),
+)
 GODKANNANDE = Steg("Godkännande", ("beslut", r"godkände planprogrammet"), (FATTAT, r"godkänn\w* planprogrammet"))
 DETALJPLAN = (UPPDRAG, SAMRAD, Steg("Granskning", ("granskning", ""), ("granskning", "")), ANTAGANDE)
 PLANPROGRAM = (UPPDRAG, SAMRAD, GODKANNANDE)
@@ -51,7 +55,8 @@ TECKEN = {"gjord": "✓", "tidigare": "✓", "nu": "●", "nasta": "→", "komma
 ORD = {"gjord": "klart", "nu": "nu", "nasta": "nästa", "kommande": "kommer", "okand": "kommer"}
 UTAN_DATUM = {"tidigare": "passerat", "nasta": "nästa, inget datum än", "kommande": "inget datum än"}
 KLAR = {"Antagande": "antagen", "Godkännande": "godkänd"}
-LAGA_KRAFT = re.compile(r"(fick|vann|fått|vunnit) laga kraft", re.IGNORECASE)
+LAGA_KRAFT = re.compile(r"(?<!inte )(fick|vann|fått|vunnit) laga kraft", re.IGNORECASE)
+OVERKLAGAD = re.compile(r"överklagandet av antagandet", re.IGNORECASE)
 
 
 def stege(arende: Arende, idag: date) -> str:
@@ -136,13 +141,17 @@ def upphavd(upphavt: Handelse | None, borjat_om: bool) -> str:
 
 def klar_plan(sista: Steg, handelser: list[Handelse], tillfallen: list[Handelse]) -> tuple[str, str]:
     slut = max(h.datum for h in handelser if passar(sista.handelse, h))
-    rubrik = f"Var planen står: {KLAR[sista.namn]}{laga_kraft(handelser, slut)}"
+    rubrik = f"Var planen står: {KLAR[sista.namn]}{laga_kraft(handelser, slut) or overklagad(handelser, slut)}"
     return rubrik, efter_planen(handelser, slut, tillfallen)
 
 
 def laga_kraft(handelser: list[Handelse], slut: date) -> str:
     traffar = [h.datum for h in handelser if h.datum >= slut and LAGA_KRAFT.search(h.text)]
     return f", laga kraft {tid(min(traffar))}" if traffar else ""
+
+
+def overklagad(handelser: list[Handelse], slut: date) -> str:
+    return ", överklagad" if any(h.datum > slut and OVERKLAGAD.search(h.text) for h in handelser) else ""
 
 
 def efter_planen(handelser: list[Handelse], slut: date, tillfallen: list[Handelse]) -> str:

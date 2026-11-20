@@ -75,6 +75,9 @@ class Processtegen(unittest.TestCase):
         for text in (
             "KS godkände exploateringsavtalet som krävs innan nämnden kan anta planen.",
             "Nämnden överlämnade planen till fullmäktige för antagande.",
+            "Kommunfullmäktige antog exploateringsavtalet för detaljplanen.",
+            "Byggnadsnämnden antog ett yttrande om överklagandet av planen.",
+            "Byggnadsnämnden har ännu inte antagit detaljplanen.",
         ):
             html = stege(byggt("Detaljplan för P", med(f"- 2026-10-20 · beslut · {text} · [P](https://example.org/e)")), IDAG)
             self.assertRegex(html, r'<li class="nu">.+?<strong>Granskning</strong>')

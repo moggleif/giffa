@@ -394,7 +394,9 @@ neutrala med ○, i ljust och mörkt tema. Bara det händelserna säger
 räknas: ett samråd och en granskning på sitt steg, ett uppdrag på ett
 förslag eller beslut som säger *uppdrag att upprätta* (eller *bad …
 upprätta*) eller *godkände projektbeställning*, ett antagande på ett
-beslut som säger *antog* eller *antagit*, ett godkännande på ett beslut
+beslut som säger att planen antogs (*antog detaljplanen*, *antog
+ändringen av detaljplan …*, *antog det reviderade planförslaget*), inte
+ett avtal eller yttrande och inte *inte antagit*, ett godkännande på ett beslut
 som säger *godkände planprogrammet*. Ett kommande tillfälle med steget
 beslut eller väntat beslut räknas till antagandet när det säger *anta*,
 *antar* eller *antas* följt av *planen* eller *detaljplanen* och inte är
@@ -416,8 +418,9 @@ med de datum som finns för kommande tillfällen.
 När planen nått sitt sista steg, antagandet eller godkännandet, är det
 steget klart och rubriken *Var planen står: antagen* (eller *godkänd*),
 med *laga kraft* och datum när en händelse från och med det steget säger
-att planen fått eller vunnit laga kraft. Under stegen står då vad som
-händer med ärendet efter planen: *Härnäst:* nästa kommande tillfälle,
+att planen fått eller vunnit laga kraft, och annars med *överklagad* när
+en senare händelse nämner *överklagandet av antagandet*. Under stegen står då vad som
+händer med ärendet efter planen: *Härnäst:* nästa kommande tillfälle i ärendet, vad det än gäller,
 eller annars *Senast:* den senaste händelsen efter steget som inte gäller
 laga kraften, med datum och källa.
 
