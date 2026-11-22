@@ -23,6 +23,7 @@ Avtalen har diarienummer KS-2019-00257 och avstämningen KS-2024-00163.
 
 ## Händelser
 
+- 2026-11-17 · forslag · Kommunstyrelsens arbetsutskott föreslog att kommunstyrelsen förlänger principavtalet och tilläggsavtalet med KB Stejla Anneberg med två år, till 31 december 2028; enligt protokollet planeras detaljplanen att antas till sommaren 2027. · [KSAU protokoll § 360](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-17/protokoll.html#sida-11) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-17/handlingar.html#sida-62)
 - 2026-10-13 · info · Kommunstyrelsens arbetsutskott stämde av avtalen kopplade till detaljplanen för Annebergs centrum. · [KSAU protokoll § 319](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-10-13/protokoll.html#sida-20)
 - 2026-04-28 · info · Kommunstyrelsens arbetsutskott stämde av detaljplanen; bland annat diskuterades utmaningar i planarbetet och osäkerheter i genomförandet. · [KSAU protokoll § 152](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-04-28/protokoll.html#sida-12)
 - 2026-04-21 · beslut · Kommunstyrelsen förlängde principavtalet och markanvisningen för Annebergs centrum med två år, till 26 maj 2028. · [KS protokoll § 88](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-04-21/protokoll.html#sida-15) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-04-21/handlingar.html#sida-51)
@@ -35,4 +36,4 @@ Avtalen har diarienummer KS-2019-00257 och avstämningen KS-2024-00163.
 
 ## Tycka till
 
-- 2026-11-17 · beslut · Kommunstyrelsens arbetsutskott ska föreslå att kommunstyrelsen förlänger principavtalet och tilläggsavtalet med KB Stejla Anneberg med två år, till 31 december 2028; enligt tjänsteskrivelsen planeras detaljplanen att antas sommaren 2027. · [KSAU kallelse, punkt 7](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-17/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-17/handlingar.html#sida-62)
+- 2026-12-15 · vantas · Kommunstyrelsen väntas besluta om förlängningen av avtalen; arbetsutskottet har föreslagit beslutet, och datumet är kommunstyrelsens nästa sammanträde efter 24 november. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)

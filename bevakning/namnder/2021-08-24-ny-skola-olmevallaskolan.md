@@ -15,6 +15,7 @@ skuggar grannfastigheten.
 
 ## Händelser
 
+- 2026-11-19 · forslag · Bygglovet för nybyggnad av skola på Åsa 5:246 stod på kallelsen till byggnadsnämnden, med arbetsutskottets förslag att bevilja det med villkoret att de förorenade delarna saneras; protokollet fanns inte i kommunhandlingar än. · [Byggnadsnämnden kallelse, punkt 13](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2026/2026-11-19/kallelse.html#sida-5)
 - 2026-10-13 · forslag · Byggnadsnämndens arbetsutskott föreslog att byggnadsnämnden beviljar bygglov för nybyggnad av skola på Åsa 5:246. · [Byggnadsnämndens AU protokoll § 170](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-au/2026/2026-10-13/protokoll-byggnadsnamndens-arbetsutskott-protokoll-2026-10-13-155-156-158-171.html#sida-53)
 - 2026-01-22 · info · Byggnadsnämnden informerades om kommande bygglovsansökan för Ölmevallaskolan. · [Byggnadsnämnden protokoll § 4](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2026/2026-01-22/protokoll-byggnadsnamndens-protokoll-2026-01-22-1-11-13-19.html#sida-8)
 - 2025-12-11 · beslut · Byggnadsnämnden godkände granskningsutlåtandet och antog detaljplanen för skola inom del av Åsa 5:246. · [Byggnadsnämnden protokoll § 213](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2025/2025-12-11/protokoll-byggnadsnamndens-protokoll-2025-12-11-198-215-217-220.html#sida-25) · Handlingar: [Solstudie](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg-projekt/2025/2025-11-17/handlingar-olmevallaskolan-i-asa-solstudie.html)
@@ -34,9 +35,6 @@ skuggar grannfastigheten.
 - 2022-05-18 · beslut · Nämnden för Förskola & Grundskola beslutade att den nya skolan i Åsa får namnet Ölmevallaskolan. · [Förskola & Grundskola protokoll § 80](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2022/2022-05-18/protokoll-forskola-grundskola-namnd-2022-05-18-71-80-82-88.html#sida-14)
 - 2021-08-24 · beslut · Kommunstyrelsen gav kommundirektören i uppdrag att pröva lokalisering av ny skola i Åsa inom fastigheterna Åsa 5:246 och Åsa 5:219. · [KS protokoll § 206](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2021/2021-08-24/protokoll.html#sida-18) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2021/2021-08-24/handlingar.html#sida-264)
 
-## Tycka till
-
-- 2026-11-19 · beslut · Byggnadsnämnden ska besluta om bygglov för nybyggnad av skola på Åsa 5:246, med villkoret att de förorenade delarna av fastigheten saneras; arbetsutskottet har föreslagit att bygglovet beviljas. · [Byggnadsnämnden kallelse, punkt 13](https://moggleif.github.io/kungsbackakommun/kungsbacka/bygg/2026/2026-11-19/kallelse.html#sida-5)
 
 ## I media och debatt
 

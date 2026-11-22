@@ -28,7 +28,7 @@ ett principavtal med exploatören.
 
 ## Tycka till
 
-- 2026-11-24 · vantas · Principavtalet väntas upp i kommunstyrelsen. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
+- 2026-11-24 · beslut · Kommunstyrelsen ska besluta om principavtalet med Vallda 20:3 Fastigheter AB. · [KS kallelse, punkt 10](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/kallelse.html#sida-3) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/handlingar.html#sida-76)
 
 ## I media och debatt
 
