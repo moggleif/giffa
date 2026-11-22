@@ -140,7 +140,8 @@ på en gång.
   PR-texten.
 - **Committa efter varje fas** som ger ett stabilt resultat.
 - **Gren, inte `main`**, utan undantag. Allt når `main` genom en PR, och
-  ingen PR mergas av en agent.
+  ingen PR mergas av en agent, utom den schemalagda söndagsrundans när
+  den är grön ([beslut 0021](beslut/0021-sondagsrundan-mergas-automatiskt.md)).
 
 ## Klart betyder det här
 

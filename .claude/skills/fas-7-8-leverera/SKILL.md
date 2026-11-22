@@ -22,6 +22,8 @@ description: Fas 7–8 i Giffå. Använd när granskningen är klar, för att pr
 
 - Vänta tills alla kontroller är gröna. Faller något: hitta orsaken och
   rätta på grenen.
-- Merge görs av en människa.
+- Merge görs av en människa. Undantaget är den schemalagda söndagsrundan,
+  som slår på automerge när inget blockerande är kvar och mergas när CI är
+  grönt ([beslut 0021](../../../beslut/0021-sondagsrundan-mergas-automatiskt.md)).
 - Efter merge publicerar `pages.yml` sidan; kontrollera att körningen gick
   igenom.

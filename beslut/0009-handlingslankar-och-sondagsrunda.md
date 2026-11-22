@@ -28,7 +28,9 @@ Två delar, båda på söndagen:
 Projektägarens beställning av söndagsrundan är dess fas 0: period, källor
 och orter följer av `bevakning/rundor.csv`, `KALLOR.md` och `OMRADE.md`,
 och rundan väntar inte på en ny bekräftelse. Kontrollpunkten i fas 7 står
-kvar: ingen av dem mergar, och projektägaren godkänner PR:en.
+kvar: ingen av dem mergar, och projektägaren godkänner PR:en. (Ändrat:
+söndagsrundans PR mergas automatiskt när den är grön, se
+[beslut 0021](0021-sondagsrundan-mergas-automatiskt.md).)
 
 ## Konsekvenser
 

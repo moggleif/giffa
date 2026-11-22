@@ -27,3 +27,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0018](0018-sok-i-sajtraden.md) | Sök i sajtraden, på alla projektets sajter |
 | [0019](0019-planstegen-i-farg.md) | Planstegen i färg: klart, nu, nästa |
 | [0020](0020-regionens-handlingar-i-rundan.md) | Regionens handlingar i rundan, med samma skanning |
+| [0021](0021-sondagsrundan-mergas-automatiskt.md) | Söndagsrundan mergas automatiskt när den är grön |
