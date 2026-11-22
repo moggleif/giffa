@@ -131,7 +131,9 @@ på en gång.
 - **Kontrollpunkter:** i fas 0 presenteras tolkningen av uppdraget och i
   fas 7 det färdiga arbetet; båda väntar på en människas bekräftelse.
   Den schemalagda söndagsrundan räknar projektägarens beställning som
-  fas 0 ([beslut 0009](beslut/0009-handlingslankar-och-sondagsrunda.md)).
+  fas 0 ([beslut 0009](beslut/0009-handlingslankar-och-sondagsrunda.md))
+  och, när granskningen inte har något blockerande kvar, också som fas 7
+  ([beslut 0021](beslut/0021-sondagsrundan-mergas-automatiskt.md)).
   Mellan dem körs faserna utan avstämningar.
 - **Fas 6 görs av någon annan än den som skrev ändringen** – i praktiken
   granskningsagenten, som börjar utan sammanhang. Ett **blockerande** fynd

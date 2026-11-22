@@ -20,6 +20,12 @@ också en runda som någon ber om för hand, mergas av en människa.
 ## Konsekvenser
 
 - Repot måste tillåta automerge (inställningen *Allow auto-merge*).
+  GitHub väntar bara på de kontroller som `main` kräver; är Kontroll
+  (`kontroll.yml`) inte ett krav mergas PR:en direkt. Kontroll bör därför
+  vara ett krav för merge till `main`.
+- Rundan bygger ibland på handlingslänkarnas gren. Vid squash-merge blir
+  handlingslänkarnas PR kvar öppen ([beslut 0009](0009-handlingslankar-och-sondagsrunda.md)),
+  så rundan mergar med en vanlig merge.
 - Sammanfattningen av rundan skickas fortfarande till projektägaren, som
   kan rätta i efterhand med en ny PR.
 - Har granskningen blockerande fynd som inte gick att rätta öppnas PR:en
