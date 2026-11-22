@@ -25,10 +25,6 @@ Genomförandetiden beräknas till cirka sju år från hösten 2027.
 - 2025-05-14 · forslag · Nämnden gav förvaltningen i uppdrag att utreda en långsiktig skolorganisation i Onsala, utifrån att verksamheten på Iserås pausas och byggnationen av ny Iseråsskola stoppas tills vidare, vid behov av en skola färre i Onsala. · [Förskola & Grundskola protokoll § 53](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2025/2025-05-14/protokoll.html#sida-10) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2025/2025-05-14/handlingar.html#sida-32)
 - 2024-10-16 · forslag · Nämnden ansåg att ett initiativ från (S) om översyn av Onsalas skolor och förskolor var besvarat, med hänvisning till att arbetet redan pågår. · [Förskola & Grundskola protokoll § 101](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2024/2024-10-16/protokoll.html#sida-11)
 
-## Tycka till
-
-- 2026-12-09 · vantas · Utredningen bordlades 11 november; datumet är nämndens nästa sammanträde, och om ärendet kommer upp då syns först i kallelsen. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
-
 ## I media och debatt
 
 - 2026-10-15 · [Förslag: Lägg ner Iseråsskolan och flera förskolor i Onsala](https://www.svt.se/nyheter/lokalt/halland/forslag-lagg-ner-iserasskolan-och-flera-forskolor-i-onsala) · SVT Halland

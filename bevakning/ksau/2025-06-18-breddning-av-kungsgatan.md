@@ -2,7 +2,7 @@
 rubrik: Detaljplan för breddning av Kungsgatan, delen Varlavägen–Onsalavägen
 ort: Kungsbacka stad
 organ: Kommunstyrelsen
-diarienummer: KS-2025-00533
+diarienummer: KS-2025-00533, TE-2025-00385
 status: pågår
 ---
 
