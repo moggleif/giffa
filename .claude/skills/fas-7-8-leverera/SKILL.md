@@ -9,7 +9,9 @@ description: Fas 7–8 i Giffå. Använd när granskningen är klar, för att pr
 
 1. Kontrollera att granskningens fynd finns och att inget blockerande är
    kvar.
-2. Presentera det färdiga arbetet och **vänta på bekräftelse**.
+2. Presentera det färdiga arbetet och **vänta på bekräftelse**. Den
+   schemalagda söndagsrundan väntar inte, när inget blockerande är kvar
+   ([beslut 0021](../../../beslut/0021-sondagsrundan-mergas-automatiskt.md)).
 3. Uppdatera grenen mot senaste `main` och kör all verifiering igen.
 4. Öppna en PR med mallen: kort rubrik i imperativ (under 70 tecken), vad
    som ändrats, granskningens fynd och hur vart och ett hanterades, och
@@ -22,6 +24,8 @@ description: Fas 7–8 i Giffå. Använd när granskningen är klar, för att pr
 
 - Vänta tills alla kontroller är gröna. Faller något: hitta orsaken och
   rätta på grenen.
-- Merge görs av en människa.
+- Merge görs av en människa. Undantaget är den schemalagda söndagsrundan,
+  som slår på automerge när inget blockerande är kvar och mergas när CI är
+  grönt ([beslut 0021](../../../beslut/0021-sondagsrundan-mergas-automatiskt.md)).
 - Efter merge publicerar `pages.yml` sidan; kontrollera att körningen gick
   igenom.
