@@ -18,6 +18,7 @@ Genomförandetiden beräknas till cirka sju år från hösten 2027.
 
 ## Händelser
 
+- 2026-11-11 · info · Nämnden för Förskola & Grundskola bordlade utredningen om den långsiktiga skolorganisationen i Onsala. · [FG protokoll § 112](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/protokoll.html#sida-10) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-16), [Utredningen](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-18)
 - 2026-10-22 · info · Arbetsutskottet överlämnade utredningen till nämnden utan eget förslag till beslut. · [Förskola & Grundskola AU protokoll § 115](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg-au/2026/2026-10-22/protokoll.html#sida-26) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg-au/2026/2026-10-22/handlingar.html#sida-251)
 - 2026-02-19 · info · Nämnden för Service informerades om det pågående arbetet. · [Service protokoll § 14](https://moggleif.github.io/kungsbackakommun/kungsbacka/service/2026/2026-02-19/protokoll.html#sida-8)
 - 2026-02-18 · info · Nämnden fick en första lägesbild: åtta kommunala förskolor med 430 barn och fyra kommunala grundskolor med cirka 1 400 elever. · [Förskola & Grundskola protokoll § 17](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-02-18/protokoll.html#sida-6) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-02-18/handlingar.html#sida-13)
@@ -26,7 +27,7 @@ Genomförandetiden beräknas till cirka sju år från hösten 2027.
 
 ## Tycka till
 
-- 2026-11-11 · beslut · Nämnden för Förskola & Grundskola ska besluta om bland annat att Iseråsskolan avvecklas när Fjordskolans och Presseskolans om- och tillbyggnader är klara. · [Kallelse Förskola & Grundskola 2026-11-11](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-16), [Utredningen](https://moggleif.github.io/kungsbackakommun/kungsbacka/fg/2026/2026-11-11/handlingar.html#sida-18)
+- 2026-12-09 · vantas · Utredningen bordlades 11 november; datumet är nämndens nästa sammanträde, och om ärendet kommer upp då syns först i kallelsen. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
 
 ## I media och debatt
 

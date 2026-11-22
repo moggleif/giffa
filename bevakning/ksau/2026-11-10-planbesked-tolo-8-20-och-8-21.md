@@ -16,4 +16,8 @@ Tölö 8:x till Tölö.
 
 ## Händelser
 
-- 2026-11-10 · forslag · Planbeskedet stod på kallelsen till kommunstyrelsens arbetsutskott, med förslag om att kommunen inleder en detaljplanläggning för bostäder och tar fram en projektbeställning. · [KSAU kallelse, punkt 12](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-10/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-10/handlingar.html#sida-300)
+- 2026-11-10 · forslag · Kommunstyrelsens arbetsutskott föreslog att kommunen inleder en detaljplanläggning för bostäder och tar fram en projektbeställning, med tillägget att besöksparkeringen för vård- och omsorgsboendet särskilt ska beaktas. · [KSAU protokoll § 349](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-10/protokoll.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-10/handlingar.html#sida-300)
+
+## Tycka till
+
+- 2026-11-24 · beslut · Kommunstyrelsen ska besluta om planbeskedet för bostäder inom Tölö 8:20 och del av Tölö 8:21. · [KS kallelse, punkt 11](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/kallelse.html#sida-3) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/handlingar.html#sida-91)

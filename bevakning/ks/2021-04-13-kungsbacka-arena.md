@@ -26,7 +26,7 @@ handlingarna skriver Kungsbacka stad.
 
 ## Tycka till
 
-- 2026-11-24 · vantas · Kommunstyrelsen väntas besluta om finansieringen av hyresgästanpassningarna; arbetsutskottet har föreslagit beslutet, och datumet är kommunstyrelsens nästa sammanträde. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
+- 2026-11-24 · beslut · Kommunstyrelsen ska besluta om att hyresgästanpassningarna i arenans kommersiella lokaler finansieras med 20 miljoner kronor ur investeringsmedel för oförutsedda behov 2027. · [KS kallelse, punkt 6](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/kallelse.html#sida-2) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/handlingar.html#sida-38)
 
 ## I media och debatt
 

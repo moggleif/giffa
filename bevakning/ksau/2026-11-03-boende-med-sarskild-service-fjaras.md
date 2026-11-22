@@ -16,4 +16,4 @@ beräknas till 2029.
 
 ## Tycka till
 
-- 2026-11-24 · vantas · Kommunstyrelsen väntas besluta om uppstarten av projektet; arbetsutskottet har föreslagit beslutet, och datumet är kommunstyrelsens nästa sammanträde. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
+- 2026-11-24 · beslut · Kommunstyrelsen ska besluta om uppstart av projektet, med ett inhyrt boende i stället för egen byggnation. · [KS kallelse, punkt 8](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/kallelse.html#sida-3) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2026/2026-11-24/handlingar.html#sida-60)

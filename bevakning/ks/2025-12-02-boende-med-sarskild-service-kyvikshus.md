@@ -2,7 +2,7 @@
 rubrik: Boende med särskild service i Kyvikshus och nedläggningen av mötesplatsen på Kyviksvägen
 ort: Kullavik
 organ: Kommunstyrelsen
-diarienummer: KS-2025-00830, KS-2026-00177
+diarienummer: KS-2025-00830, KS-2026-00177, KS-2026-00713
 status: pågår
 ---
 
@@ -13,15 +13,21 @@ för inflyttning i början av 2027. Enligt en fråga i kommunfullmäktige i mars
 som mötesplats för äldre, och där ovanvåningen bebos av hyresgäster över 70
 år. Enligt kommunens delårsrapport 2026 projekterar Eksta Bostads AB en
 ombyggnad av Kyvikshus till en gruppbostad med sex lägenheter, med byggstart
-planerad till senhösten 2026. Kommunstyrelsens beslut nämner inte Kyvikshus,
-så kopplingen mellan "lokalen i Kullavik" och Kyvikshus är osäker.
-Uppgifterna om antalet platser skiljer sig mellan handlingarna.
+planerad till senhösten 2026. Kommunstyrelsens
+arbetsutskott skrev i november 2026 att projektet gäller Kyvikshus i
+Kullavik, och föreslog att antalet boendeplatser minskas från åtta till sex
+så att snickeriet och mötesplatsen för seniorer kan vara kvar.
 
 ## Händelser
 
+- 2026-11-17 · forslag · Kommunstyrelsens arbetsutskott föreslog att projektet i Kyvikshus i Kullavik minskas från åtta till sex boendeplatser, så att snickeriet och mötesplatsen för seniorer kan vara kvar, och att en engångsdriftskostnad på 100 000 kronor finansieras ur löpnummer 1410. · [KSAU protokoll § 359](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-17/protokoll.html#sida-10) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2026/2026-11-17/handlingar.html#sida-53)
 - 2026-11-03 · info · I kommunens delårsrapport 2026, som kommunfullmäktige behandlar, står att Eksta projekterar ombyggnad av Kyvikshus till en gruppbostad med sex lägenheter med byggstart senhösten 2026. · [KF handlingar, delårsrapport 2026](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2026/2026-11-03/handlingar.html#sida-40)
 - 2026-04-14 · info · Nämnden för Services ordförande besvarade frågan om nedstängningen av Kyviksvägens mötesplats i kommunfullmäktige. · [KF protokoll § 52](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2026/2026-04-14/protokoll.html#sida-22) · Handlingar: [Handlingarna i ärendet](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2026/2026-04-14/handlingar.html#sida-224)
 - 2026-03-03 · info · Kommunfullmäktige godkände att en fråga om nedstängningen av Kyviksvägens mötesplats ställs till nämnden för Services ordförande. · [KF protokoll § 35](https://moggleif.github.io/kungsbackakommun/kungsbacka/kf/2026/2026-03-03/protokoll.html#sida-38)
 - 2025-12-16 · beslut · Kommunstyrelsen godkände uppstart av projekt för boende med särskild service i en lokal i Kullavik, med åtta platser för inflyttning i början av 2027 (att lokalen är Kyvikshus är osäkert). · [KS protokoll § 267](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2025/2025-12-16/protokoll.html#sida-25) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks/2025/2025-12-16/handlingar.html#sida-352)
 - 2025-12-09 · forslag · Kommunstyrelsens arbetsutskott föreslog att projektet startas. · [KSAU protokoll § 376](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2025/2025-12-09/protokoll.html#sida-13) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2025/2025-12-09/handlingar.html#sida-213)
 - 2025-12-02 · info · Kommunstyrelsens arbetsutskott bordlade ärendet. · [KSAU protokoll § 358](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2025/2025-12-02/protokoll.html#sida-16) · Handlingar: [Tjänsteskrivelse](https://moggleif.github.io/kungsbackakommun/kungsbacka/ks-au/2025/2025-12-02/handlingar.html#sida-76)
+
+## Tycka till
+
+- 2026-12-15 · vantas · Kommunstyrelsen väntas besluta om den ändrade omfattningen; arbetsutskottet har föreslagit beslutet, och datumet är kommunstyrelsens nästa sammanträde efter 24 november. · [Kommunhandlingars kalender](https://github.com/moggleif/kommunhandlingar/blob/main/kalender/kungsbacka.csv)
