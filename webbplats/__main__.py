@@ -76,9 +76,10 @@ def las(rot: Path, namn: str) -> str:
 
 
 def bygg(rot: Path, ut: Path, repo: str, pool: Path) -> None:
+    sidorna = sidor(rot, repo, pool, datetime.now(ZoneInfo("Europe/Stockholm")))
     shutil.copytree(rot / "docs", ut, dirs_exist_ok=True)
     (ut / "arende").mkdir(exist_ok=True)
-    for namn, text in sidor(rot, repo, pool, datetime.now(ZoneInfo("Europe/Stockholm"))).items():
+    for namn, text in sidorna.items():
         (ut / namn).write_text(text, encoding="utf-8")
 
 
@@ -97,6 +98,7 @@ def sidor(rot: Path, repo: str, pool: Path, byggd: datetime) -> dict[str, str]:
     }
     sidorna |= {listan[0]: lista(sajt, arenden, listan, namnen) for listan in LISTOR}
     return sidorna | {a.sida: arendesida(sajt, a) for a in arenden}
+
 
 if __name__ == "__main__":
     bygg(Path.cwd(), Path(sys.argv[1]), sys.argv[2].rstrip("/"), Path(sys.argv[3]))

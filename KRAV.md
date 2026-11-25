@@ -572,4 +572,5 @@ tecken med filerna i `tests/facit/`; en sida som skiljer sig, saknas
 eller tillkommit fäller testet. Är ändringen avsedd skrivs facit om med
 `python3 -m tests.test_facit --skriv-om`, och diffen följer med i samma
 ändring. Ärendena i `bevakning/` ingår inte, så en runda ändrar inte
-facit.
+facit; KS-mötet och sökindexet byggs dock med kungsbackakommuns kod, så
+en ändring där fäller facit också här.

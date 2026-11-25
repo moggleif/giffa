@@ -6,7 +6,7 @@ diarienummer: KS-2026-00001
 status: pågår
 ---
 
-Planen gäller fastigheten Åsa 5:156 norr om Åsaskolan.
+Planen gäller fastigheten Åsa 5:156 norr om Åsaskolan, längs Gamla Kungsbackavägen, och ersätter delar av detaljplan D12 och D14. Hede Bruk 2:3 och 2:4 ingår också.
 
 ## Förslaget i korthet
 

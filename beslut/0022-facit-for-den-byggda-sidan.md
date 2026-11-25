@@ -31,6 +31,9 @@ hade gått över gränsen för parametrar.
   ändringen gör med sidan.
 - KS-mötet byggs med kungsbackakommuns kod, som Kontroll hämtar från
   `main` där ([beslut 0012](0012-ks-motet-ur-datapoolens-kod.md)). Ändrar
-  den koden vad sidan visar faller facit för `ks-motet.html` i nästa PR
-  här, och facit skrivs om då.
-- Rundorna ändrar bara `bevakning/` och rör inte facit.
+  den koden vad sidan visar faller facit för `ks-motet.html` och
+  `sok.json` i nästa PR här, vilken PR det än är. Är det söndagsrundans
+  mergas den inte automatiskt ([beslut 0021](0021-sondagsrundan-mergas-automatiskt.md))
+  utan väntar på projektägaren; facit skrivs då om i en egen PR, inte i
+  rundan, och rundan körs om.
+- Rundorna ändrar bara `bevakning/`, så de ändrar inte facit själva.
