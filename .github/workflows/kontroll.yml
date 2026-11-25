@@ -1,5 +1,6 @@
 # Testerna och ett bygge av sidan på varje PR och ändring på main
-# (K10, beslut 0002). Ett ärende som inte följer formatet stoppar här.
+# (K10, beslut 0002). Ett ärende som inte följer formatet stoppar här,
+# och en sida som skiljer sig från facit i tests/facit/ (K40, beslut 0022).
 # KS-mötet byggs med kommunhandlingars kod (K34, beslut 0012).
 name: Kontroll
 

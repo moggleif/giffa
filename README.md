@@ -54,6 +54,11 @@ python3 -m unittest discover -s tests -t .
 node --test tests/*.js
 ```
 
+Testerna jämför också varje byggd sida med facit i `tests/facit/`, byggt
+ur en fryst rot i `tests/fixtures/sajt/` ([beslut 0022](beslut/0022-facit-for-den-byggda-sidan.md)).
+Är en ändring av sidan avsedd skrivs facit om med
+`python3 -m tests.test_facit --skriv-om`, och diffen följer med.
+
 ## Struktur
 
 ```
@@ -66,7 +71,7 @@ docs/        Sidans stil och skript, som kopieras med i bygget.
 skanning/    Söker igenom kommunens och regionens handlingar inför rundan.
 handlingslankar/ Lägger handlingarna intill protokollen i ärendena.
 tidningar/   Läser tidningarnas flöden efter artiklar om orterna.
-tests/       Testerna för bygget, skanningen, handlingslänkarna och tidningarna.
+tests/       Testerna och facit för bygget, skanningen, handlingslänkarna och tidningarna.
 KALLOR.md    Varifrån uppgifterna hämtas.
 kunskap/     Bakgrund om orterna och om sidans läsare, med källor.
 OMRADE.md    Föreningarna och vilka orter som hör till var och en.
