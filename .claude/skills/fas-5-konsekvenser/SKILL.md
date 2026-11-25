@@ -14,7 +14,9 @@ description: Fas 5 i Giffå. Använd när implementationen är klar, för att hi
 3. Kontrollera att varje krav har en namngiven verifiering och att
    hänvisningarna stämmer.
 4. Kör **all** verifiering som finns i `.github/workflows/` – gissa inte
-   vilken som berörs. Rätta grundorsaken till varje fel.
+   vilken som berörs. Rätta grundorsaken till varje fel. Faller facit
+   (K40) och var ändringen av sidan avsedd: skriv om det med
+   `python3 -m tests.test_facit --skriv-om` och läs diffen.
 
 ## Utdata – krävs innan fas 6
 

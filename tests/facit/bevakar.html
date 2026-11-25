@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vad vi bevakar – Giffå</title>
+<script src="tema.js"></script>
+<link rel="stylesheet" href="sajter.css">
+<link rel="stylesheet" href="stil.css">
+<script src="sajter.js" defer></script>
+</head>
+<body>
+<a class="hoppa" href="#innehall">Hoppa till innehållet</a>
+<nav class="sajtmeny" aria-label="Webbplatsen"><a class="sajtnamn" href="index.html">Giffå</a><ul><li><a href="index.html#tycka-till">Tycka till</a></li><li><a href="pagar.html">Pågår</a></li><li><details><summary>Beslutat</summary><ul><li><a href="beslutat.html">Beslutat</a></li><li><a href="historik.html">Historik</a></li></ul></details></li><li><a href="ks-motet.html" data-utan-urval>KS-mötet</a></li><li><a href="sok.html">Sök</a></li><li><a href="bevakar.html" aria-current="page">Om</a></li></ul></nav>
+<main id="innehall" tabindex="-1">
+<h1>Vad vi bevakar</h1>
+<p>En bevakningsrunda görs en gång i månaden. Den söker igenom källorna nedan efter orterna och efter namnen på platserna, eftersom en handling ofta bara nämner skolan, planen eller fastigheten. Det som hittas förs in som ärenden; det som är nytt sedan förra rundan står överst på startsidan.</p><h2>Föreningarna och orterna</h2><h3>Förening Åsa</h3><p>Åsa, Fjärås, Frillesås</p><h3>Förening Onsala</h3><p>Onsala</p><p>Vad som räknas till varje förening står i <a href="https://github.com/agare/giffa/blob/main/OMRADE.md">OMRADE.md</a>.</p><h2>Källorna</h2><div class="tabell"><table><thead><tr><th>Källa</th><th>Vad den ger</th><th>Adress</th></tr></thead><tbody><tr><th scope="row">Kommunens handlingar</th><td>Huvudkällan</td><td><a href="https://github.com/agare/kommunhandlingar">https://github.com/agare/kommunhandlingar</a></td></tr><tr><th scope="row">Lokaltidningen</th><td>Rubriker</td><td><a href="https://tidning.example">https://tidning.example</a></td></tr></tbody></table></div><p>Hur varje källa får hämtas står i <a href="https://github.com/agare/giffa/blob/main/KALLOR.md">KALLOR.md</a>.</p><h2>Platserna</h2><p>2 platser ur <a href="https://github.com/agare/giffa/blob/main/platser.csv">platser.csv</a>, med antalet handlingar i kommunhandlingar som nämner dem.</p><div class="tabell"><table><thead><tr><th>Plats</th><th>Typ</th><th>Ort</th><th>Anteckning</th><th>Handlingar</th></tr></thead><tbody><tr><th scope="row">Fjärås IP</th><td>idrott</td><td>Fjärås</td><td></td><td class="tal">0</td></tr><tr><th scope="row"><a href="https://e/x">Åsaskolan</a></th><td>grundskola</td><td>Åsa</td><td></td><td class="tal">1</td></tr></tbody></table></div>
+</main>
+<footer><p>Källkod, ärenden och källor: <a href="https://github.com/agare/giffa">https://github.com/agare/giffa</a>. Sidan byggdes <time datetime="2026-11-20">20 november 2026</time> klockan 10.00.</p></footer>
+<script src="urval.js"></script>
+</body>
+</html>

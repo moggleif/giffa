@@ -28,3 +28,4 @@ efterhand; ett nytt beslut ersätter det och länkar till det gamla.
 | [0019](0019-planstegen-i-farg.md) | Planstegen i färg: klart, nu, nästa |
 | [0020](0020-regionens-handlingar-i-rundan.md) | Regionens handlingar i rundan, med samma skanning |
 | [0021](0021-sondagsrundan-mergas-automatiskt.md) | Söndagsrundan mergas automatiskt när den är grön |
+| [0022](0022-facit-for-den-byggda-sidan.md) | Facit för den byggda sidan, med fryst klocka |

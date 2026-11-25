@@ -560,3 +560,17 @@ folkhögskolan – ligger i `bevakning/region/` med regionens organ som
 regionens protokoll och kallelser på regionens webbplats. När en region-
 nämnd yttrar sig över ett ärende som kommunen driver, som en detaljplan,
 står yttrandet som en händelse i det ärendet.
+
+## K40 – Den byggda sidan har ett facit
+
+**Givet** en fryst rot med ärenden som täcker sidans grenar
+(`tests/fixtures/sajt/`), den frysta poolen för KS-mötet
+(`tests/fixtures/pool/`) och en fryst byggtid,
+**när** testerna körs, lokalt eller i Kontroll,
+**så** byggs varje sida och `sok.json` ur dem och jämförs tecken för
+tecken med filerna i `tests/facit/`; en sida som skiljer sig, saknas
+eller tillkommit fäller testet. Är ändringen avsedd skrivs facit om med
+`python3 -m tests.test_facit --skriv-om`, och diffen följer med i samma
+ändring. Ärendena i `bevakning/` ingår inte, så en runda ändrar inte
+facit; KS-mötet och sökindexet byggs dock med kungsbackakommuns kod, så
+en ändring där fäller facit också här.
